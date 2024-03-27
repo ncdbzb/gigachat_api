@@ -1,4 +1,4 @@
-from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
 from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 
