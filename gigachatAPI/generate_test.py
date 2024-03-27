@@ -1,19 +1,18 @@
 import os
 import time
-from typing import Any
 from random import sample
 from langchain.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config_data import *
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.prompts.create_prompts import create_prompt
 from gigachatAPI.process_files.split_long_elements import change_chunk_size
-from gigachatAPI.utils.output_parser import parse_output
+from gigachatAPI.utils.output_parser import get_questions_dict
 from gigachatAPI.utils.help_methods import get_tokens, len_yaml
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
 from gigachatAPI.logs.logs import logger_info
 
 
-async def generate_test(filename: str, cur_que_num: int) -> str:
+async def generate_test(filename: str, cur_que_num: int) -> dict:
     config: Config = await load_config()
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False)
@@ -44,7 +43,7 @@ async def generate_test(filename: str, cur_que_num: int) -> str:
             split_docs = await change_chunk_size(split_docs, chunk_size=(document_length // cur_que_num - 100))
             logger_info.debug(f'Кол-во частей после перерасчета: {len(split_docs)}')
         else:
-            return 'Слишком много вопросов или слишком маленький документ для такого количества вопросов!'
+            return {'error': 'Слишком много вопросов или слишком маленький документ для такого количества вопросов!'}
     final_result = ''
     token_result = 0
     gigachat_start_time = time.time()
@@ -65,7 +64,9 @@ async def generate_test(filename: str, cur_que_num: int) -> str:
         logger_info.info(f'Токенов потрачено: {tokens}\n')
         logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
         logger_info.info(f'Общее время: {time.time() - start_time} секунд')
-        return final_result
+
+        parsed_result = await get_questions_dict(final_result)
+        return parsed_result
     # else:
     #     final_result = ''
     #     iterations = 0
