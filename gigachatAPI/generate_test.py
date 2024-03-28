@@ -46,18 +46,20 @@ async def generate_test(filename: str, cur_que_num: int) -> dict:
             return {'error': 'Слишком много вопросов или слишком маленький документ для такого количества вопросов!'}
     final_result = ''
     token_result = 0
+    final_result_dict = {}
     gigachat_start_time = time.time()
     while True:
-        for doc_part in sample(split_docs, cur_que_num):
+        for doc_num, doc_part in enumerate(sample(split_docs, cur_que_num), start=1):
             result = await chain.ainvoke({"text": doc_part})
-            final_result += result.content + '\n'
+            result_dict = await get_questions_dict(result.content + '\n', doc_num)
+            final_result_dict.update(result_dict)
             token_result += len(doc_part.page_content)
         # final_result, cur_que_num = await parse_output(final_result, cur_que_num, total_que_num)
         # if cur_que_num:
         #     logger_info.debug(f'Успешно сгенерировано {total_que_num - cur_que_num} вопросов')
         #     logger_info.debug(f'Генерирую еще {cur_que_num} вопросов\n')
         #     continue
-        logger_info.debug(f'Успешно сгенерировано {total_que_num - cur_que_num} вопросов')
+        logger_info.debug(f'Успешно сгенерировано {total_que_num} вопросов')
         tokens = await get_tokens(len(final_result),
                                   total_que_num * await len_yaml(gen_que_with_answ_prompt_path),
                                   token_result)
@@ -65,8 +67,7 @@ async def generate_test(filename: str, cur_que_num: int) -> dict:
         logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
         logger_info.info(f'Общее время: {time.time() - start_time} секунд')
 
-        parsed_result = await get_questions_dict(final_result)
-        return parsed_result
+        return final_result_dict
     # else:
     #     final_result = ''
     #     iterations = 0
