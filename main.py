@@ -32,17 +32,15 @@ async def handle_doc(request):
 async def handle_test(request):
     data = await request.json()
     print("Received data:", data)
-    result = await generate_test(data['filename'], data['que_num'])
-    print("Responsed data:", result)
-    return web.json_response({"result": result})
+    result = await generate_test(data['filename'])
+    return web.json_response(result)
 
 
 async def handle_questions(request):
     data = await request.json()
     print("Received data:", data)
-    result = await get_answer(data['filename'], [data['question']])
-    print("Responsed data:", result)
-    return web.json_response({"result": result})
+    result = await get_answer(data['filename'], data['question'])
+    return web.json_response(result)
 
 
 async def main():
@@ -53,7 +51,7 @@ async def main():
 
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 8080)
+    site = web.TCPSite(runner, '0.0.0.0', 8001)
     await site.start()
 
     print("gigachatAPI started")

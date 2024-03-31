@@ -10,65 +10,61 @@ from gigachatAPI.logs.logs import logger_info
 
 async def get_answer(
         filename: str,
-        question_list: list[str],
-) -> str:
+        que: str,
+) -> dict:
     config: Config = await load_config()
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False)
 
     start_time = time.time()
 
-    logger_info.info(f'Всего вопросов: {len(question_list)}')
+    question_start_time = time.time()
 
-    tokens_result = 0
-    final_res = ''
-    for q_num, que in enumerate(question_list, start=1):
-        dita_length = 0
-        question_start_time = time.time()
+    vectordb = await get_chroma(filename)
 
-        vectordb = await get_chroma(filename)
+    sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
+    # rel_scores = [d[1] for d in await vectordb.asimilarity_search_with_relevance_scores(que, k=6)]
 
-        docs_with_scores = vectordb.similarity_search_with_score(que, k=6)
-        scores = [d[1] for d in docs_with_scores]
+    logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')
+    logger_info.info(f'Similarity scores для выбранных документов: {sim_scores}')
+    # logger_info.info(f'Relevance scores для выбранных документов: {rel_scores}')
 
-        logger_info.info(f'Время работы Chroma для вопроса №{q_num}: {time.time() - question_start_time} секунд')
-        logger_info.info(f'Similarity scores для релевантных документов: {scores}')
+    chain = RetrievalQA.from_chain_type(
+        llm=giga,
+        retriever=vectordb.as_retriever(
+            # search_type="similarity_score_threshold",
+            search_kwargs={"k": 6}
+        ),
+        return_source_documents=True,
+        # verbose=True,
+        chain_type_kwargs={
+            # "verbose": True,
+            "prompt": custom_rag_prompt
+        }
+    )
 
-        # chain = RetrievalQA.from_chain_type(
-        #     llm=giga,
-        #     retriever=vectordb.as_retriever(
-        #         # search_type="similarity",
-        #         # search_kwargs={"k": 1}
-        #     )
-        # )
-        chain = RetrievalQA.from_chain_type(
-            llm=giga,
-            # chain_type="stuff",
-            retriever=vectordb.as_retriever(
-                # search_type="similarity",
-                search_kwargs={"k": 6}
-            ),
-            # verbose=True,
-            chain_type_kwargs={
-                # "verbose": True,
-                "prompt": custom_rag_prompt
-            }
-        )
-        gigachat_start_time = time.time()
+    gigachat_start_time = time.time()
+    qa_chain = await chain.ainvoke({"query": que})
+    answer, source_documents = qa_chain['result'], qa_chain['source_documents']
 
-        qa_chain = await chain.ainvoke({"query": que})
-        result = qa_chain['result']
+    tokens = sum(map(lambda x: x.tokens, await giga.atokens_count(
+        [i.page_content for i in source_documents] + [custom_rag_prompt.template, que, answer]
+    )))
 
-        logger_info.info(f'Время работы GigaChat для вопроса №{q_num}: {time.time() - gigachat_start_time} секунд')
+    logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
+    logger_info.info(f'Токенов потрачено: {tokens}')
+    lead_time = time.time() - start_time
+    logger_info.info(f'Общее время: {lead_time}')
 
-        final_res += f'Вопрос {q_num}: {que}\nОтвет: {result}\n\n'
+    result = {
+        "result": {
+            "question": que,
+            "answer": answer
+        },
+        "prompt_path": 'gigachatAPI/prompts/prompt_templates/qna_new.py',
+        "tokens": tokens,
+        "lead_time": round(lead_time, 3),
+        "metrics": sim_scores
+    }
 
-        tokens = await get_tokens(dita_length, len(result))
-        tokens_result += tokens
-
-        logger_info.info(f'Потраченные Токены для вопроса №{q_num}: {tokens}')
-        logger_info.info(f'Общее время для вопроса №{q_num}: {time.time() - question_start_time} секунд\n')
-    logger_info.info(f'Общее количество потраченных Токенов: {tokens_result}')
-    logger_info.info(f'Общее время: {time.time() - start_time}')
-
-    return final_res
+    return result

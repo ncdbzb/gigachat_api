@@ -1,18 +1,18 @@
 import os
 import time
-from random import sample
+from random import choice
 from langchain.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config_data import *
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.prompts.create_prompts import create_prompt
-from gigachatAPI.process_files.split_long_elements import change_chunk_size
 from gigachatAPI.utils.output_parser import get_questions_dict
-from gigachatAPI.utils.help_methods import get_tokens, len_yaml
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
 from gigachatAPI.logs.logs import logger_info
 
 
-async def generate_test(filename: str, cur_que_num: int) -> dict:
+async def generate_test(
+        filename: str
+) -> dict:
     config: Config = await load_config()
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False)
@@ -24,67 +24,35 @@ async def generate_test(filename: str, cur_que_num: int) -> dict:
 
     data_process_time = time.time() - start_time
 
-    prompt = await create_prompt(gen_que_with_answ_prompt_path, gen_que_usr_prompt_path)
+    prompt = await create_prompt(gen_que_with_answ_prompt_path)
 
     chain = prompt | giga
 
     document_length = sum(len(i.page_content) for i in split_docs)
     max_part_doc_len = max(len(i.page_content) for i in split_docs)
 
-    total_que_num = cur_que_num
-
-    logger_info.info(f'Вопросов нужно: {total_que_num} | Общая длина загруженного документа: {document_length}')
-    logger_info.debug(f'Кол-во частей документа: {len(split_docs)} | Максимальная длина части документа: {max_part_doc_len}\n')
+    logger_info.info(f'Общая длина загруженного документа: {document_length}')
     logger_info.info(f'Время обработки данных: {data_process_time} секунд\n')
 
-    # if document_length > 39000:
-    if len(split_docs) < cur_que_num:
-        if document_length // cur_que_num >= 1000:
-            split_docs = await change_chunk_size(split_docs, chunk_size=(document_length // cur_que_num - 100))
-            logger_info.debug(f'Кол-во частей после перерасчета: {len(split_docs)}')
-        else:
-            return {'error': 'Слишком много вопросов или слишком маленький документ для такого количества вопросов!'}
-    final_result = ''
-    token_result = 0
-    final_result_dict = {}
     gigachat_start_time = time.time()
-    while True:
-        for doc_num, doc_part in enumerate(sample(split_docs, cur_que_num), start=1):
-            result = await chain.ainvoke({"text": doc_part})
-            result_dict = await get_questions_dict(result.content + '\n', doc_num)
-            final_result_dict.update(result_dict)
-            token_result += len(doc_part.page_content)
-        # final_result, cur_que_num = await parse_output(final_result, cur_que_num, total_que_num)
-        # if cur_que_num:
-        #     logger_info.debug(f'Успешно сгенерировано {total_que_num - cur_que_num} вопросов')
-        #     logger_info.debug(f'Генерирую еще {cur_que_num} вопросов\n')
-        #     continue
-        logger_info.debug(f'Успешно сгенерировано {total_que_num} вопросов')
-        tokens = await get_tokens(len(final_result),
-                                  total_que_num * await len_yaml(gen_que_with_answ_prompt_path),
-                                  token_result)
-        logger_info.info(f'Токенов потрачено: {tokens}\n')
-        logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
-        logger_info.info(f'Общее время: {time.time() - start_time} секунд')
 
-        return final_result_dict
-    # else:
-    #     final_result = ''
-    #     iterations = 0
-    #     gigachat_start_time = time.time()
-    #     while True:
-    #         iterations += 1
-    #         final_result += await chain.ainvoke({"text": split_docs})
-    #         final_result, cur_que_num = await parse_output(final_result, cur_que_num, total_que_num)
-    #         if cur_que_num:
-    #             logger_info.debug(f'Успешно сгенерировано {total_que_num - cur_que_num} вопросов')
-    #             logger_info.debug(f'Генерирую еще {cur_que_num} вопросов\n')
-    #             continue
-    #         logger_info.debug(f'Успешно сгенерировано {total_que_num - cur_que_num} вопросов')
-    #         tokens = await get_tokens(len(final_result),
-    #                                   iterations * await len_yaml(gen_que_sys_prompt_path),
-    #                                   iterations * document_length)
-    #         logger_info.info(f'Токенов потрачено: {tokens}\n\n')
-    #         logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
-    #         logger_info.info(f'Общее время: {time.time() - start_time} секунд')
-    #         return final_result
+    doc_part = choice(split_docs)
+    result = await chain.ainvoke({"text": doc_part})
+    questions_dict = await get_questions_dict(result.content + '\n')
+
+    tokens = result.response_metadata['token_usage'].total_tokens
+
+    logger_info.debug(f'Вопрос успешно сгенерирован')
+    logger_info.info(f'Токенов потрачено: {tokens}\n')
+    logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
+    lead_time = time.time() - start_time
+    logger_info.info(f'Общее время: {lead_time} секунд')
+
+    result_dict = {
+        "result": questions_dict,
+        "prompt_path": gen_que_with_answ_prompt_path,
+        "tokens": tokens,
+        "lead_time": round(lead_time, 3)
+    }
+
+    return result_dict

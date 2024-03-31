@@ -17,7 +17,7 @@ async def parse_output(text: str, current_que_number: int = 0, total_que_number:
         return result, 0
 
 
-async def get_questions_dict(test: str, doc_num: int) -> dict[str: str]:
+async def get_questions_dict(test: str) -> dict[str: str]:
     splittt = list(filter(None, test.split('\n')))
     splitt = list(filter(None, map(lambda x: x.strip(), splittt)))
     result = {}
@@ -51,7 +51,7 @@ async def get_questions_dict(test: str, doc_num: int) -> dict[str: str]:
             result["right answer"] = answer
         else:
             raise ValueError("Invalid format: 'Ответ:' not found")
-        return {f'result_{doc_num}': result}
+        return {f'result': result}
     except ValueError as e:
         print(e)
-        return {f'error_{doc_num}': test}
+        return {f'error': test}
