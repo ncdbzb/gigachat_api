@@ -6,11 +6,6 @@ COPY requirements.txt .
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --upgrade gigachain
-RUN pip install --upgrade gigachat
-RUN pip install --upgrade chromadb
-RUN pip install --upgrade gigachain_core
-RUN pip install -U gigachain-community 
 
 COPY . .
 
