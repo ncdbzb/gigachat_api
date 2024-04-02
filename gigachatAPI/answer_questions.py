@@ -4,7 +4,8 @@ from langchain.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.chromadb.chromadb_handler import get_chroma
 from gigachatAPI.prompts.prompt_templates.qna_new import custom_rag_prompt
-from gigachatAPI.utils.help_methods import get_tokens
+from gigachatAPI.sentence_bleu.sentence_bleu import get_bleu_score
+from gigachatAPI.sentence_bleu.bleu_config import ques_for_check
 from gigachatAPI.logs.logs import logger_info
 
 
@@ -56,6 +57,14 @@ async def get_answer(
     lead_time = time.time() - start_time
     logger_info.info(f'Общее время: {lead_time}')
 
+    metrics_dict = {"similarity_scores": sim_scores}
+
+    prepared_question = que.lower().replace(' ', '')
+    if prepared_question in ques_for_check:
+        bleu_score = get_bleu_score(answer, prepared_question)
+        metrics_dict.update({"bleu_score": bleu_score})
+        logger_info.info(f'bleu score ответа: {bleu_score}')
+
     result = {
         "result": {
             "question": que,
@@ -64,7 +73,7 @@ async def get_answer(
         "prompt_path": 'gigachatAPI/prompts/prompt_templates/qna_new.py',
         "tokens": tokens,
         "lead_time": round(lead_time, 3),
-        "metrics": sim_scores
+        "metrics": metrics_dict
     }
 
     return result
