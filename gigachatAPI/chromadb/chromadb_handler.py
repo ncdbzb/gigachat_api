@@ -11,9 +11,9 @@ async def initialize_chroma(split_docs: list[Document], filename: str) -> None:
     config: Config = await load_config()
     embiddigs = GigaChatEmbeddings(credentials=config.GIGA_CREDENTIALS,
                                    verify_ssl_certs=False)
-    Chroma.afrom_documents(documents=split_docs,
-                           embedding=embiddigs,
-                           persist_directory=persist_directory)
+    await Chroma.afrom_documents(documents=split_docs,
+                                 embedding=embiddigs,
+                                 persist_directory=persist_directory)
     print(f'chroma initialized at {persist_directory}\n')
     return
 

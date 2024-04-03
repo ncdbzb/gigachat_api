@@ -23,7 +23,7 @@ async def get_answer(
 
     vectordb = await get_chroma(filename)
 
-    sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
+    sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=4)]
     # rel_scores = [d[1] for d in await vectordb.asimilarity_search_with_relevance_scores(que, k=6)]
 
     logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')
@@ -34,7 +34,7 @@ async def get_answer(
         llm=giga,
         retriever=vectordb.as_retriever(
             # search_type="similarity_score_threshold",
-            search_kwargs={"k": 6}
+            search_kwargs={"k": 4}
         ),
         return_source_documents=True,
         # verbose=True,
