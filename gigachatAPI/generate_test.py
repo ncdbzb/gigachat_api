@@ -36,21 +36,23 @@ async def generate_test(
 
     gigachat_start_time = time.time()
 
-    doc_part = choice(split_docs)
-
     questions_dict = {}
+    tokens = 0
     for _ in range(5):
+        doc_part = choice(split_docs)
         result = await chain.ainvoke({"text": doc_part})
+        tokens += result.response_metadata['token_usage'].total_tokens 
         questions_dict = await get_questions_dict(result.content + '\n')
         if 'result' in questions_dict.keys():
             break
         logger_info.debug(f'Ошибка! Генериурю тест заново...')
 
-    tokens = result.response_metadata['token_usage'].total_tokens
+    
 
     logger_info.debug(f'Тест успешно сгенерирован')
     logger_info.info(f'Токенов потрачено: {tokens}\n')
-    logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
+    gigachat_time = time.time() - gigachat_start_time
+    logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
     lead_time = time.time() - start_time
     logger_info.info(f'Общее время: {lead_time} секунд')
 
@@ -58,7 +60,8 @@ async def generate_test(
         "result": questions_dict,
         "prompt_path": gen_que_with_answ_prompt_path,
         "tokens": tokens,
-        "lead_time": round(lead_time, 3)
+        "total_time": round(lead_time, 3),
+        "gigachat_time": round(gigachat_time, 3)
     }
 
     return result_dict

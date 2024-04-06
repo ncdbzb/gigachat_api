@@ -9,6 +9,7 @@ from gigachatAPI.generate_test import generate_test
 from gigachatAPI.process_files.process_paths import process_and_take_path
 from gigachatAPI.chromadb.chromadb_handler import initialize_chroma
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
+from gigachatAPI.utils.delete_doc import delete_doc
 
 
 async def handle_doc(request):
@@ -29,6 +30,12 @@ async def handle_doc(request):
     return web.json_response({"result": "File was received"})
 
 
+async def handle_delete_doc(request):
+    data = await request.json()
+    doc_name = data['doc_name']
+    await delete_doc(doc_name)
+    return web.json_response({"result": "Doc was deleted"})
+
 async def handle_test(request):
     data = await request.json()
     print("Received data:", data)
@@ -48,6 +55,8 @@ async def main():
     app.router.add_post('/process_data', handle_test)
     app.router.add_post('/process_questions', handle_questions)
     app.router.add_post('/process_doc', handle_doc)
+    app.router.add_post('/process_delete_doc', handle_delete_doc)
+
 
     runner = web.AppRunner(app)
     await runner.setup()

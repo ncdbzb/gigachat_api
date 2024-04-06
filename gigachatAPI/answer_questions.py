@@ -23,7 +23,7 @@ async def get_answer(
 
     vectordb = await get_chroma(filename)
 
-    sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=4)]
+    sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
     # rel_scores = [d[1] for d in await vectordb.asimilarity_search_with_relevance_scores(que, k=6)]
 
     logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')
@@ -34,7 +34,7 @@ async def get_answer(
         llm=giga,
         retriever=vectordb.as_retriever(
             # search_type="similarity_score_threshold",
-            search_kwargs={"k": 4}
+            search_kwargs={"k": 6}
         ),
         return_source_documents=True,
         # verbose=True,
@@ -52,7 +52,8 @@ async def get_answer(
         [i.page_content for i in source_documents] + [custom_rag_prompt.template, que, answer]
     )))
 
-    logger_info.info(f'Время работы GigaChat: {time.time() - gigachat_start_time} секунд')
+    gigachat_time = time.time() - gigachat_start_time
+    logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
     logger_info.info(f'Токенов потрачено: {tokens}')
     lead_time = time.time() - start_time
     logger_info.info(f'Общее время: {lead_time}')
@@ -72,7 +73,8 @@ async def get_answer(
         },
         "prompt_path": 'gigachatAPI/prompts/prompt_templates/qna_new.py',
         "tokens": tokens,
-        "lead_time": round(lead_time, 3),
+        "total_time": round(lead_time, 3),
+        "gigachat_time": round(gigachat_time, 3),
         "metrics": metrics_dict
     }
 

@@ -51,7 +51,9 @@ async def get_questions_dict(test: str) -> dict[str: str]:
             result["right answer"] = answer
         else:
             raise ValueError("Invalid format: 'Ответ:' not found")
-        return {f'result': result}
+        if len(set([result["1 option"], result['2 option'], result['3 option'], result['4 option']])) != 4:
+            raise ValueError("Not all values unique")
+        return {f'result': result}     
     except ValueError as e:
         print(e)
         return {f'error': test}
