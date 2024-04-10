@@ -1,6 +1,6 @@
 import os
 import time
-from random import choice
+from random import sample
 from langchain.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config_data import *
 from gigachatAPI.config_data.config import load_config, Config
@@ -38,18 +38,20 @@ async def generate_test(
 
     questions_dict = {}
     tokens = 0
-    for _ in range(5):
-        doc_part = choice(split_docs)
+    elems_num = 5 if len(split_docs) >= 5 else len(split_docs)
+    for doc_part in sample(split_docs, elems_num): 
         result = await chain.ainvoke({"text": doc_part})
         tokens += result.response_metadata['token_usage'].total_tokens 
         questions_dict = await get_questions_dict(result.content + '\n')
         if 'result' in questions_dict.keys():
+            logger_info.debug(f'Тест успешно сгенерирован')
             break
         logger_info.debug(f'Ошибка! Генериурю тест заново...')
 
     
 
-    logger_info.debug(f'Тест успешно сгенерирован')
+    if 'error' in questions_dict.keys():
+        logger_info.debug(f'Тест сгенерирован с ошибкой')
     logger_info.info(f'Токенов потрачено: {tokens}\n')
     gigachat_time = time.time() - gigachat_start_time
     logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
