@@ -26,8 +26,7 @@ async def get_answer(
     sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
     # rel_scores = [d[1] for d in await vectordb.asimilarity_search_with_relevance_scores(que, k=6)]
 
-    logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')
-    logger_info.info(f'Similarity scores для выбранных документов: {sim_scores}')
+    logger_info.debug(f'Время работы Chroma: {time.time() - question_start_time} секунд')
     # logger_info.info(f'Relevance scores для выбранных документов: {rel_scores}')
 
     chain = RetrievalQA.from_chain_type(
@@ -53,18 +52,24 @@ async def get_answer(
     )))
 
     gigachat_time = time.time() - gigachat_start_time
-    logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
-    logger_info.info(f'Токенов потрачено: {tokens}')
+    logger_info.debug(f'Время работы GigaChat: {gigachat_time} секунд')
+    logger_info.debug(f'Токенов потрачено: {tokens}')
     lead_time = time.time() - start_time
-    logger_info.info(f'Общее время: {lead_time}')
+    logger_info.debug(f'Общее время: {lead_time}')
 
     metrics_dict = {"similarity_scores": sim_scores}
+
+    logger_info.info(f'Вопрос: {que}')
+    logger_info.info(f'Ответ: {answer}')
+    logger_info.info(f'Similarity scores для выбранных документов: {sim_scores}')
 
     prepared_question = que.lower().replace(' ', '')
     if prepared_question in ques_for_check:
         bleu_score = get_bleu_score(answer, prepared_question)
         metrics_dict.update({"bleu_score": bleu_score})
         logger_info.info(f'bleu score ответа: {bleu_score}')
+
+    logger_info.info('\n\n')
 
     result = {
         "result": {

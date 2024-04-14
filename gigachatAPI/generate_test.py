@@ -31,8 +31,8 @@ async def generate_test(
     document_length = sum(len(i.page_content) for i in split_docs)
     max_part_doc_len = max(len(i.page_content) for i in split_docs)
 
-    logger_info.info(f'Общая длина загруженного документа: {document_length}')
-    logger_info.info(f'Время обработки данных: {data_process_time} секунд\n')
+    logger_info.debug(f'Общая длина загруженного документа: {document_length}')
+    logger_info.debug(f'Время обработки данных: {data_process_time} секунд\n')
 
     gigachat_start_time = time.time()
 
@@ -48,15 +48,13 @@ async def generate_test(
             break
         logger_info.debug(f'Ошибка! Генериурю тест заново...')
 
-    
-
     if 'error' in questions_dict.keys():
         logger_info.debug(f'Тест сгенерирован с ошибкой')
-    logger_info.info(f'Токенов потрачено: {tokens}\n')
+    logger_info.debug(f'Токенов потрачено: {tokens}\n')
     gigachat_time = time.time() - gigachat_start_time
-    logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
+    logger_info.debug(f'Время работы GigaChat: {gigachat_time} секунд')
     lead_time = time.time() - start_time
-    logger_info.info(f'Общее время: {lead_time} секунд')
+    logger_info.debug(f'Общее время: {lead_time} секунд')
 
     result_dict = {
         "result": questions_dict,
