@@ -29,7 +29,7 @@ async def get_dita_docs(
     if chunk_size:
         very_long_string = ''.join(await asyncio.gather(*(extract_text_from_xml(path) for path in path_list_larger)))
         document = [Document(page_content=very_long_string)]
-        docs = (CharacterTextSplitter(separator='\n', chunk_size=chunk_size, chunk_overlap=0)
+        docs = (CharacterTextSplitter(separator=' ', chunk_size=chunk_size, chunk_overlap=0)
                 .split_documents(document))
     else:
         result_list = await asyncio.gather(*(extract_text_from_xml(path) for path in path_list_larger))
@@ -62,4 +62,7 @@ async def extract_text_from_xml(xml_file_path: str) -> str:
         return extracted_text
 
     text = get_text(root)
-    return text
+
+    clean_text = ' '.join(text.split())
+    
+    return clean_text

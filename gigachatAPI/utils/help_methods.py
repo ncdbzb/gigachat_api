@@ -26,3 +26,16 @@ async def len_yaml(path_yaml: str) -> int:
         dict_data = yaml.safe_load(fh)
         result = sum(map(len, filter(None, dict_data.values())))
         return result
+    
+
+async def get_actual_doc_list():
+    data_dir = "gigachatAPI/data"
+
+    all_items = os.listdir(data_dir)
+
+    filtered_dirs = [
+        item for item in all_items
+        if os.path.isdir(os.path.join(data_dir, item)) and item != "chroma"
+    ]
+
+    return filtered_dirs

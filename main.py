@@ -10,6 +10,7 @@ from gigachatAPI.process_files.process_paths import process_and_take_path
 from gigachatAPI.chromadb.chromadb_handler import initialize_chroma
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
 from gigachatAPI.utils.delete_doc import delete_doc
+from gigachatAPI.utils.help_methods import get_actual_doc_list
 
 
 async def handle_doc(request):
@@ -50,12 +51,18 @@ async def handle_questions(request):
     return web.json_response(result)
 
 
+async def handle_get_actual_doc_list(request):
+    result = await get_actual_doc_list()
+    return web.json_response(result)
+
+
 async def main():
     app = web.Application(client_max_size=100*1024*1024)
     app.router.add_post('/process_data', handle_test)
     app.router.add_post('/process_questions', handle_questions)
     app.router.add_post('/process_doc', handle_doc)
     app.router.add_post('/process_delete_doc', handle_delete_doc)
+    app.router.add_post('/process_get_actual_doc_list', handle_get_actual_doc_list)
 
 
     runner = web.AppRunner(app)
