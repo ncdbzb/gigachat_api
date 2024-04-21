@@ -2,9 +2,8 @@ import os
 import time
 from random import sample
 from langchain.chat_models.gigachat import GigaChat
-from gigachatAPI.config_data.config_data import *
 from gigachatAPI.config_data.config import load_config, Config
-from gigachatAPI.prompts.create_prompts import create_prompt
+from gigachatAPI.prompts.create_prompts import gen_que_prompt
 from gigachatAPI.utils.output_parser import get_questions_dict
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
 from gigachatAPI.logs.logs import logger_info
@@ -24,12 +23,9 @@ async def generate_test(
 
     data_process_time = time.time() - start_time
 
-    prompt = await create_prompt(gen_que_with_answ_prompt_path)
-
-    chain = prompt | giga
+    chain = gen_que_prompt | giga
 
     document_length = sum(len(i.page_content) for i in split_docs)
-    max_part_doc_len = max(len(i.page_content) for i in split_docs)
 
     logger_info.debug(f'Общая длина загруженного документа: {document_length}')
     logger_info.debug(f'Время обработки данных: {data_process_time} секунд\n')
@@ -58,7 +54,7 @@ async def generate_test(
 
     result_dict = {
         "result": questions_dict,
-        "prompt_path": gen_que_with_answ_prompt_path,
+        "prompt_path": 'gigachatAPI/prompts/prompt_templates/gen_que.py',
         "tokens": tokens,
         "total_time": round(lead_time, 3),
         "gigachat_time": round(gigachat_time, 3)

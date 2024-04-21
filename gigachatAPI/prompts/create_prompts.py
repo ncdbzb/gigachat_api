@@ -1,24 +1,16 @@
-from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate, load_prompt
+from langchain.prompts import PromptTemplate
+from gigachatAPI.prompts.prompt_templates.qna_new import template as qna_template
+from gigachatAPI.prompts.prompt_templates.gen_que import template as gen_que_template
 
 
-async def create_prompt(path_system: str, path_user: str = '') -> ChatPromptTemplate:
-    if path_user:
-        return ChatPromptTemplate.from_messages(
-            [
-                SystemMessagePromptTemplate(
-                    prompt=load_prompt(path_system)
-                ),
-                HumanMessagePromptTemplate(
-                    prompt=load_prompt(path_user)
-                )
-            ]
-        )
-    return ChatPromptTemplate.from_messages(
-        [
-            SystemMessagePromptTemplate(
-                prompt=load_prompt(path_system)
-            )
-        ]
+def create_prompt(template: str) -> PromptTemplate:
+    prompt = PromptTemplate(
+        template=template,
+        input_variables=["question", "context"]
     )
+    return prompt
 
 
+qna_prompt = create_prompt(qna_template)
+
+gen_que_prompt = create_prompt(gen_que_template)
