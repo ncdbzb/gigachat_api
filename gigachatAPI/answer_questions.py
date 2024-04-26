@@ -23,6 +23,8 @@ async def get_answer(
 
     vectordb = await get_chroma(filename)
 
+    logger_info.info(f'Название документации: {filename}')
+
     sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
     # rel_scores = [d[1] for d in await vectordb.asimilarity_search_with_relevance_scores(que, k=6)]
 
