@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="administration">
+    <glossterm>Администрирование</glossterm>
+    <glossdef>Пункт главного меню, который содержит страницы <cite keyref="general"/>, <cite
+            keyref="proxy"/>, <cite keyref="autentification"/>, <cite keyref="user_groups"/>, <cite
+            keyref="user_roles"/>, <cite keyref="users"/>, <cite keyref="ways_of_notification"/>,
+            <cite keyref="scripts"/>, <cite keyref="queue"/>. Раздел доступен только пользователям с
+        ролью «Администратор». </glossdef>
+</glossentry>

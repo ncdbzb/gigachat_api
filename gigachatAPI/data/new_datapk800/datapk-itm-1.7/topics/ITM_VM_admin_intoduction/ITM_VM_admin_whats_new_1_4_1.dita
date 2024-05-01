@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_qhn_wxw_g5b">
+    <title>Что нового?</title>
+    <body>
+        <p>В версии 1.4.0.1 исправлена ошибка, при которой не отправлялись события о проблемах в
+            SIEM.</p>
+        <p>Обновления в текущей версии документации:<ul id="ul_ahq_ktv_ktb">
+            <li>Обновлены документы:<ul id="ul_hwf_dgy_xtb">
+                <li><xref
+                    href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_server_install.dita"
+                /></li>
+                <li><xref href="../ITM_M_troubleshooting/itm_m_net_conflict.dita"/></li>
+                <li><xref href="../ITM_M_troubleshooting/troubleshooting.dita"/></li>
+                <li><xref
+                    href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_redos_installation.dita"
+                /></li>
+            </ul></li>
+            <li>Добавлены документы:<ul id="ul_png_h3n_5tb">
+                        <li><xref href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_update_version.dita"/></li>
+                <li><xref
+                    href="../ITM_M_troubleshooting/security_profile_itm_vm.dita"
+                /></li>
+            </ul></li>
+        </ul></p>
+    </body>
+</topic>

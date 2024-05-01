@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="itmm_db_user">
+    <glossterm>ITMM_DB_USER</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/itmm_db_user_info.dita#ReusableComponent_t1w_mhs_4sb/p_u1w_mhs_4sb"/>
+        <p><b>Значение по умолчанию:</b> postgres</p>
+    </glossdef>
+</glossentry>

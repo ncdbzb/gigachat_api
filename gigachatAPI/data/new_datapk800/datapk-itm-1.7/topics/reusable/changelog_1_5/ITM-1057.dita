@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_qzs_tn2_qvb">
+    <title></title>
+    <body><p id="p_szs_tn2_qvb">Удалена переменная  ITMM_JWT_EXPIRATION_MINUTES (время жизни токена авторизации).</p></body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="safe_installation_actions_certif">
+    <title>Действия по безопасной установке комплекса</title>
+    <body>
+        <p>В этом подразделе:</p>
+        <ul id="ul_uzm_55j_5wb">
+            <li><xref href="RedOS_installation/certif_installation_redos.dita"/></li>
+            <li><xref href="datapk_synchro/datapk_synchro.dita"/></li>
+            <li><xref href="../datapk_itm_k_astra_linux.dita"/></li>
+            <li><xref href="../../certification/control_sum.dita"/></li>
+            <li><xref href="../../certification/control_sum_exec_files.dita"/></li>
+            <li><xref href="first_configuration/first_configuration.dita"/></li>
+            <li><xref href="agent_installation/agents_installation.dita"/></li>
+            <li><xref href="agentless_config/agentless_config.dita"/></li>
+        </ul>
+    </body>
+</topic>

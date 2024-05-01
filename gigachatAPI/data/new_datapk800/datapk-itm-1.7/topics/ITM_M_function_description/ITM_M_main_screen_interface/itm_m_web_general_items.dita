@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_web_general_items">
+    <title>Общие элементы веб-интерфейса</title>
+    <body>
+        <section>
+            <title>Кнопка «Отменить»</title>
+            <p>Во всех редактируемых экранных формах веб-интерфейса при нажатии на кнопку «Отменить»
+                форма закрывается без сохранения данных. В случае наличия несохраненных данных в
+                форме выводится предупреждение.</p>
+            <fig id="fig_lhc_gnh_btb">
+                <title>Предупреждение о наличии несохраненных изменений</title>
+                <image href="../../../images/ITM_M_screens/ITM_M_changes_not_saved.png"
+                    id="image_mhc_gnh_btb"/>
+            </fig>
+            <p>В редактируемых экранных формах нажатие на кнопку <image
+                    href="../../../images/ITM_M_icons/ITM_M_cross.png" id="image_mcy_dqd_4rb"/>
+                соответствует действию нажатия на кнопку «Отменить». Это значит, что при нажатии на
+                    <image href="../../../images/ITM_M_icons/ITM_M_cross.png" id="image_g15_ppc_nzb"
+                /> редактируемая форма также закрывается без сохранения данных, при этом в случае
+                наличия несохраненных данных в форме выводится предупреждение. </p>
+        </section>
+        <section>
+            <title>Сортировка значений в таблицах</title>
+            <p>В таблицах реализована возможность сортировки записей по определенным столбцам.<div
+                conref="../../reusable/notes/sort_table.dita#ReusableComponent_hsm_nsb_qrb/div_jsm_nsb_qrb"
+            /></p>
+        </section>
+        </body>
+</topic>

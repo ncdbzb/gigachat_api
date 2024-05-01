@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="itm_m_page_it_services">
+    <glossterm>ИТ-услуги</glossterm>
+    <glossdef>Страница со списком ИТ-услуг, мониторинг которых осуществляет подключенный сервер
+            <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> или zabbix. В качестве ИТ-услуг для мониторинга могут
+        подключаться различные системно-значимые ИТ-сервисы, каналы связи, сервисы ИБ и т.д. <fig>
+            <title>Страница «ИТ-услуги»</title>
+            <image href="../../../images/ITM_M_screens/itm_m_it_services.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

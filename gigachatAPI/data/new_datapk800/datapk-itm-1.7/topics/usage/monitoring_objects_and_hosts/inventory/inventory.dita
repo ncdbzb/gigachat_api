@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="inventory">
+    <title>Инвентаризация</title>
+    <body>
+        <p>В <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> можно хранить инвентарные данные сетевых устройств: тип,
+            серийный номер, MAC-адрес, местоположение и т. д.</p>
+        <p>Раздел бокового меню <cite keyref="inventory"/> предназначен для просмотра инвентарных
+            данных. Пользователь может настроить автоматический сбор инвентарных данных узла сети
+            или заполнить данные вручную при настройке узла сети.</p>
+        <p>В этом разделе:</p>
+        <p>
+            <ul id="ul_rwm_mwp_5wb">
+                <li><xref href="inventory_data_review.dita"/></li>
+                <li><xref href="inventory_data_collect.dita"/></li>
+                <li><xref href="auto_mode_keys.dita"/></li>
+            </ul>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка и настройка агентов</title>
+    <topicref href="itm_a_agent_installation_windows.dita"/>
+    <topicref href="itm_a_agent_configuration_windows.dita"/>
+    <topicref href="itm_a_agent_installation_windows_2000.dita"/>
+    <topicref href="itm_a_agent_installation_centos_7.dita"/>
+    <topicref href="itm_a_agent_installation_debian.dita"/>
+</map>

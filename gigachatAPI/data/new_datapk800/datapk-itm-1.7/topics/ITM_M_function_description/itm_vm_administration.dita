@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_vm_administration">
+    <title>Администрирование</title>
+    <body>
+        <p>Раздел доступен только пользователям с ролью «Администратор». </p>
+        <p>В этом разделе:<ul id="ul_knt_d4g_hzb">
+                <li><xref href="itm_vm_audit_log.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

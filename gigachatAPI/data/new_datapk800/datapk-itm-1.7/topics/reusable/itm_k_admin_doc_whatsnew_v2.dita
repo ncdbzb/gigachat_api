@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_k_admin_doc_whatsnew_v2">
+    <title>Обновления документации</title>
+    <body>
+        <p>Обновления в текущей версии документации:</p>
+        <ul id="ul_j5f_mzx_5zb">
+            <li>Добавлены разделы:<ul id="ul_k5f_mzx_5zb">
+                    <li><xref
+                            href="../requirements/safe_installation/first_configuration/itm_m_connect_web.dita"
+                        /></li>
+                    <li><xref href="datapkitm_k_certif.dita"/></li>
+                    <li><xref href="../requirements/itmm_root_cert.dita"/></li>
+                    <li><xref href="../requirements/datapk_itmm_cert_key_web_interface.dita"/></li>
+                    <li><xref href="../requirements/itmm_cert_admin.dita"/></li>
+                </ul></li>
+            <li>Добавлены способы устранения нештатных ситуаций:<ul id="ul_l5f_mzx_5zb">
+                    <li><xref
+                            href="../emergency_actions/unavailable_agents/invalid_syntax_itm_k.dita"
+                        />.</li>
+                    <li><xref
+                            href="../emergency_actions/actions_after_problems/encoding_err_template_import.dita"
+                        /></li>
+                </ul></li>
+            <li>Изменены разделы:<ul id="ul_m5f_mzx_5zb">
+                    <li><xref
+                            href="../requirements/safe_installation/first_configuration/import_templates.dita"
+                        /></li>
+                    <li><xref href="../reference_info/datapk_itm_versions.dita"/></li>
+                    <li><xref href="../emergency_actions/DB_backup_and_restore/data_backup.dita"
+                        /></li>
+                    <li><xref
+                            href="../emergency_actions/DB_backup_and_restore/unloading_jatoba.dita"
+                        /></li>
+                    <li><xref href="../emergency_actions/DB_backup_and_restore/recovery_jatoba.dita"
+                        /></li>
+                </ul></li>
+            <li>Исключены разделы:<ul id="ul_n5f_mzx_5zb">
+                    <li>«Создание резервной копии всех БД и файлов журналов БД Jatoba»</li>
+                    <li>«Восстановление резервной копии всех БД и файлов журналов БД Jatoba»</li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

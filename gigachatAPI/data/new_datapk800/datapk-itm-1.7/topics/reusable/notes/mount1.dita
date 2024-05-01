@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_o2t_l1p_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_q2t_l1p_psb">
+                <cmd>Создайте директорию, в которую будет примонтирован новый том:</cmd>
+                <info><codeblock>mkdir /storage</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

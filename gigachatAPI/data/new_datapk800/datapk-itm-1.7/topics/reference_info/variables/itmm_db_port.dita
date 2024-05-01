@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="itmm_db_port">
+    <glossterm>ITMM_DB_PORT</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/itmm_db_port_info.dita#ReusableComponent_imf_chs_4sb/p_jmf_chs_4sb"/>
+        <p><b>Значение по умолчанию:</b> 5432</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="udv_add_templates_to_host_0">
+    <title>Присоединение шаблонов для мониторинга параметров функционирования серверов ITM-M и
+        ITM-RM</title>
+    <taskbody
+        conref="../../../reusable/notes/add_templates_to_host_info.dita#ReusableComponent_ajr_qpl_1xb/taskbody_djr_qpl_1xb"/>
+</task>

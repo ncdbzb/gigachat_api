@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="background_image">
+    <title>Загрузка фонового изображения для карты сети</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для загрузки фонового изображения:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="administration"/> → <cite keyref="general"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку в верхнем левом углу и выберите «Изображения» в выпадающем
+                    списке.</cmd>
+                <stepresult>Откроется страница <cite keyref="adm_general_img"/>.</stepresult>
+            </step>
+            <step>
+                <cmd>Выберите тип «Фон» в верхнем правом углу.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Создать фон» в верхнем правом углу.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне введите имя фонового изображения.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Выберите файл».</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне выберите нужный вам файл и нажмите на кнопку
+                    «Открыть».</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Добавить».</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

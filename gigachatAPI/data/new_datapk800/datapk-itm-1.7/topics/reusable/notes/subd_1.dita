@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_b4p_qvt_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_c4p_qvt_psb">
+                <cmd>Создайте директорию для хранения базы данных на отдельном томе:</cmd>
+                <info><codeblock>mkdir /storage/base</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

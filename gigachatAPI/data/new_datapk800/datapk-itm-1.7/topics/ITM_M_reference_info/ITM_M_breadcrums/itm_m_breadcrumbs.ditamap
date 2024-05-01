@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-VM страницы интерфейса</title>
+    <topicref href="itm_m_page_info_panel.dita" keys="itm_m_page_info_panel"/>
+    <topicref href="itm_m_page_server_monitoring.dita" keys="itm_m_page_server_monitoring"/>
+    <topicref href="itm_m_page_object_monitoring.dita" keys="itm_m_page_object_monitoring"/>
+    <topicref href="itm_m_page_it_services.dita" keys="itm_m_page_it_services"/>
+    <topicref href="itm_m_page_problems.dita" keys="itm_m_page_problems"/>
+    <topicref href="itm_vm_page_admin.dita" keys="itm_vm_page_admin" collection-type="sequence">
+        <topicref href="itm_m_page_audit.dita" keys="itm_m_page_audit"/>
+    </topicref>
+    <topicref href="itm_m_page_configuration.dita" keys="itm_m_page_configuration" collection-type="sequence">
+        <topicref href="itm_m_page_config_general.dita" keys="itm_m_page_config_general"/>
+        <topicref href="itm_m_page_config_users.dita" keys="itm_m_page_config_users"/>
+        <topicref href="itm_m_config_ldap.dita" keys="itm_m_config_ldap"/>
+        <topicref href="itm_m_pages_notification_rules.dita" keys="itm_m_pages_notification_rules"/>
+    </topicref>
+</map>

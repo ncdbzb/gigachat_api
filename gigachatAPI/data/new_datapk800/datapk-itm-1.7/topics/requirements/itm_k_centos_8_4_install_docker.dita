@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="id_3">
+    <title>Установка iptables и Docker</title>
+    <taskbody><steps>
+      <step>
+        <cmd>Установите сервис iptables:</cmd>
+        <info>
+          <codeblock>yum install iptables-services</codeblock>
+        </info>
+      </step>
+      <step>
+        <cmd>Отключите встроенную утилиту для работы с межсетевым экраном firewalld:</cmd>
+        <info>
+          <codeblock>systemctl disable --now firewalld</codeblock>
+        </info>
+        <info>
+          <p> утилита для работы с фаерволом - firewalld</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Включите и добавьте межсетевой экран в автозагрузку:</cmd>
+        <info>
+          <codeblock>systemctl enable iptables --now</codeblock>
+        </info>
+      </step>
+        <step>
+        <note>Если docker был установлен до установки сервиса iptables, нужно выполнить команду
+            <codeph>systemctl restart docker</codeph> при выключенных контейнерах для добавления
+          правил docker в iptables.</note>
+          <cmd>Добавьте репозиторий docker:</cmd>
+          <info>
+            <codeblock>dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo</codeblock>
+          </info>
+        </step>
+        <step>
+        <cmd>Установите docker:</cmd>
+        <info>
+          <codeblock>dnf install docker-ce --allowerasing</codeblock>
+        </info>
+      </step>
+        <step>
+        <cmd>Запустите службу docker:</cmd>
+        <info>
+          <codeblock>systemctl start docker   </codeblock>
+        </info>
+      </step>
+      <step>
+        <cmd>Добавьте службу docker в автозагрузку:</cmd>
+        <info>
+          <codeblock>systemctl enable --now docker</codeblock>
+        </info>
+      </step>
+      <step>
+        <cmd>Проверьте состояние службы docker:</cmd>
+        <info>
+          <codeblock>systemctl status docker</codeblock>
+        </info>
+      </step>
+      <step>
+        <cmd>Установите docker-compose: </cmd>
+        <info>
+          <codeblock>wget https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m) 
+cd /root
+mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose</codeblock>
+        </info>
+      </step>
+      <step>
+        <cmd>Проверьте версию docker-compose:</cmd>
+        <info>
+          <codeblock> docker-compose –-version</codeblock>
+          <fig>
+            <title>Проверка версии docker-compose</title>
+            <image href="../../images/centos_install/centos_docker_version.png"/>
+          </fig>
+        </info>
+      </step>
+      </steps></taskbody>
+  </task>

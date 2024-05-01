@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_htg_jzy_l5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_itg_jzy_l5b">
+                <cmd>Отредактируйте файл <codeph>postgresql.conf</codeph>. Для этого: </cmd>
+                <substeps id="substeps_wqb_t4y_l5b">
+                    <substep>
+                        <cmd>перейдите в режим редактирования файла <codeph>postgresql.conf</codeph>:</cmd>
+                        <info><codeblock>vi /var/lib/jatoba/1/data/postgresql.conf</codeblock></info>
+                    </substep>
+                    <substep>
+                        <cmd>измените значение переменной <codeph>listen_addresses</codeph> в разделе «CONNECTIONS AND AUTHENTICATION», чтобы оно соответствовало представленному ниже: </cmd>
+                        <info><codeblock>listen_addresses = '127.0.0.1,172.17.77.1'</codeblock>Где<ul id="ul_s32_rqy_l5b"><li>127.0.0.1 — локальный IP-адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>;</li><li>172.17.77.1 — новый IP-адрес подсети docker0.</li></ul></info>
+                    </substep>
+                    <substep conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>перезапустите СУБД для применения настроек:</cmd>
+                        <info><codeblock>systemctl restart jatoba-1*</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

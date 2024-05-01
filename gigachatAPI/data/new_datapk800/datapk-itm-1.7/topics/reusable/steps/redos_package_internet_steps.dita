@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mrp_525_4xb">
+    <title></title>
+    <taskbody><steps id="steps_orp_525_4xb"><step><cmd>Установите docker и docker-compose:</cmd><info><codeblock>yum install docker-ce docker-compose</codeblock></info></step><step conref="../notes/move_docker_compose.dita#ReusableComponent_wxw_pt3_jtb/step_yxw_pt3_jtb"><cmd/></step><step conref="../notes/extra_package_step2.dita#ReusableComponent_w3q_wx2_krb/step_x3q_wx2_krb"><cmd/></step><step conref="../notes/enable_now_docker.dita#ReusableComponent_ghz_kdh_zsb/step_ihz_kdh_zsb"><cmd/></step><step>
+                <cmd>Установите пакеты для сбора данных по протоколу <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    /> и обработки данных по протоколу <ph
+                        conref="../protocol_names/ICMP.dita#ReusableComponent_rk1_vpf_4yb/ph_sk1_vpf_4yb"
+                    />:</cmd>
+                <info>
+                    <codeblock>yum install net-snmp net-snmp-utils fping</codeblock>
+                </info>
+            </step></steps></taskbody>
+</task>

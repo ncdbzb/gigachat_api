@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="encoding_err_template_import">
+    <title>Ошибка при импорте шаблона вида «&lt;...> Query failed: ERROR: value too long for type
+        character varying(255) &lt;...>»</title>
+    <troublebody>
+        <condition>
+            <p></p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Ошибка возникает, когда <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                        /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_k"/></ph> установлен на сервере
+                    с ОС Astra Linux, если при создании БД не была указана кодировка UTF-8, а была
+                    оставлена кодировка по умолчанию.</p>
+                <fig id="fig_s3m_r4f_1zb">
+                    <title>Ошибка при импортировании</title>
+                    <image href="../../../images/ITM_K_troubleshooting/encoding_error.png"/>
+                </fig>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty></responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Перейдите в режим командной строки ОС, на которой установлен сервер <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph>. </cmd>
+                    </step>
+                    <step>
+                        <cmd>Повысьте права пользователя до <codeph>root</codeph>:</cmd>
+                        <info>
+                            <codeblock>sudo su</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в директорию <codeph>/opt/itm-k</codeph>:</cmd>
+                        <info>
+                            <codeblock>cd /opt/itm-k</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Остановите контейнеры:</cmd>
+                        <info>
+                            <codeblock>docker-compose down</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Создайте резервную копию БД &lt;datapkitm>*:</cmd>
+                        <info>
+                            <codeblock>pg_dump -U postgres -W datapkitm > /tmp/datapkitm.dump -p 10265 -h 127.0.0.1</codeblock>
+                        </info>
+                        <stepresult>В директории <codeph>/tmp/</codeph> появится резервная копия БД
+                                <codeph>datapkitm.dump</codeph>.</stepresult>
+                    </step>
+                    <step>
+                        <cmd>Удалите БД с неподходящей кодировкой:</cmd>
+                        <info>
+                            <codeblock>psql -p 10265 -h 127.0.0.1 -U postgres postgres
+DROP DATABASE datapkitm;</codeblock>
+                            <fig id="fig_c51_ypf_1zb">
+                                <title>Результат удаления БД</title>
+                                <image href="../../../images/ITM_K_troubleshooting/drop_database_result.png"/>
+                            </fig>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Создайте БД с кодировкой UTF-8:</cmd>
+                        <info>
+                            <codeblock>CREATE DATABASE datapkitm WITH OWNER 'datapkitm' ENCODING 'UTF8' LC_COLLATE = 'ru_RU.UTF-8' LC_CTYPE = 'ru_RU.UTF-8' TEMPLATE template0;</codeblock>
+                            <fig id="fig_mjm_dqf_1zb">
+                                <title>Результат создания БД с кодировкой UTF-8</title>
+                                <image href="../../../images/ITM_K_troubleshooting/create_database__from_backup_utf8.png"/>
+                            </fig>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Восстановите БД из резервной копии:</cmd>
+                        <info>
+                            <codeblock>psql -U postgres -W datapkitm &lt; /tmp/datapkitm.dump -p 10265 -h 127.0.0.1</codeblock>
+                            <fig id="fig_ozl_qqf_1zb">
+                                <title>Восстановление БД из резервной копии</title>
+                                <image href="../../../images/ITM_K_troubleshooting/database_backup_recover.png"/>
+                            </fig>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь, что кодировка БД сохранилась.</cmd>
+                        <info>
+                            <codeblock>psql -p 10265 -h 127.0.0.1 -U postgres postgres
+\l</codeblock>
+                            <fig id="fig_z2n_ssf_1zb">
+                                <title>БД с нужной кодировкой в списке</title>
+                                <image href="../../../images/ITM_K_troubleshooting/database_check.png"/>
+                            </fig>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Запустите контейнеры из директории <codeph>/opt/itm-k</codeph>:</cmd>
+                        <info>
+                            <codeblock>docker-compose up -d</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в веб-интерфейс <ph outputclass="udvpdf"><term
+                                    keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_k"/></ph>. </cmd>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь в наличии шаблонов и связанных с ними данных, а также в
+                            возможности импорта шаблона, при котором появлялась ошибка.</cmd>
+                        <info>
+                            <fig id="fig_o5q_btf_1zb">
+                                <title>Список шаблонов в веб-интерфейсе</title>
+                                <image
+                                    href="../../../images/ITM_K_troubleshooting/templates_list.png"
+                                />
+                            </fig>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

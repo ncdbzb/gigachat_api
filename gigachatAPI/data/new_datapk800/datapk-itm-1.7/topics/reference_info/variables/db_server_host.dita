@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="db_server_host">
+    <glossterm>DB_SERVER_HOST</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/db_server_host_info.dita#ReusableComponent_vdq_p12_trb/p_wdq_p12_trb"/>
+        <p><b>Значение в конфигурации ITM-K при
+            поставке:</b><codeph>host.docker.internal</codeph></p>
+    </glossdef>
+</glossentry>

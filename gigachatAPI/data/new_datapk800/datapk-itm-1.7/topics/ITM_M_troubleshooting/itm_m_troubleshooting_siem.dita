@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="itm_m_troubleshooting_siem">
+    <title>Ошибка интеграции с SIEM</title>
+    <troublebody>
+        <condition>
+            <p>Происходит перезапуск контейнера itm_m_siem_connector. В логах текст «Для интеграции
+                с SIEM не переданы обязательные переменные окружения <cmdname
+                    keyref="siem_syslog_host"/> и <cmdname keyref="itmm_ip_address"/>».</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Отсутствие переменных <cmdname keyref="siem_syslog_host"/> и <cmdname
+                        keyref="itmm_ip_address"/> в файле <codeph>.env</codeph> при включенной
+                    интеграции с SIEM.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty></responsibleParty>
+                <steps>
+                    <step>
+                        <cmd
+                            conref="../reusable/notes/siem_step1.dita#ReusableComponent_aqv_wqy_xrb/cmd_bqv_wqy_xrb"
+                        />
+                    </step>
+                    <step>
+                        <cmd
+                            conref="../reusable/notes/siem_step2.dita#ReusableComponent_qyt_yqy_xrb/cmd_ryt_yqy_xrb"
+                        />
+                        <info><codeblock>vi /opt/itm-vm/.env</codeblock></info>
+                    </step>
+                    <step>
+                        <cmd>Проверьте наличие в файле переменных <cmdname keyref="siem_syslog_host"
+                            /> и <cmdname keyref="itmm_ip_address"/>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>В случае отсутствия переменных <cmdname keyref="siem_syslog_host"/> и
+                                <cmdname keyref="itmm_ip_address"/> добавьте их в файл.</cmd>
+                        <stepxmp>
+                            <codeblock><cmdname keyref="siem_syslog_host"/>=127.0.0.1
+<cmdname keyref="itmm_ip_address"/>=10.51.30.99                          </codeblock>
+                        </stepxmp>
+                    </step>
+                    <step>
+                        <cmd>Cохраните файл и выйдите из режима редактирования: </cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="udv_itm_m">
+    <title>Настройка шифрования между UDV-ITM-M и агентами</title>
+    <shortdesc></shortdesc>
+    
+            <taskbody
+                conref="../reusable/notes/udv_encryption_agents_info.dita#ReusableComponent_hnv_dyf_1xb/taskbody_jnv_dyf_1xb"/>
+            
+</task>

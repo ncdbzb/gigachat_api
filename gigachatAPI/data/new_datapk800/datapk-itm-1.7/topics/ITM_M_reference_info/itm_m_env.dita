@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_env">
+    <title>Переменные файла .env</title>
+    <body>
+        <p>Файл <codeph>.env</codeph> содержит переменные окружения.</p>
+        
+        
+            <table frame="all" rowsep="1" colsep="1" id="table_dsw_b5j_xsb">
+                <title>Переменные для корректной работы ITM-VM</title>
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <colspec colname="c4" colnum="4" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Название переменной</entry>
+                            <entry>Описание</entry>
+                            <entry>Обязательность</entry>
+                            <entry>Значение по умолчанию (жирным) или пример</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                    <row>
+                        <entry><cmdname keyref="compose_file"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/compose_file_info.dita#ReusableComponent_z13_vmw_zrb/p_ab3_vmw_zrb"
+                            />
+                        </entry>
+                        <entry>Да</entry>
+                        <entry><b>docker-compose.release.yaml</b></entry>
+                    </row>
+                        <row>
+                            <entry><cmdname keyref="itmm_log_level"/></entry>
+                            <entry>Выбор уровня детализированности логов, может принимать одно из
+                            перечисленных значений:<ul id="ul_mqy_55w_pzb">
+                                <li>ERROR — логирование ошибок.</li>
+                                <li>WARN — логирование ошибок и предупреждений.</li>
+                                <li>INFO — логирование ошибок, предупреждений и сообщений.</li>
+                                <li>DEBUG — логирование всех событий при отладке.</li>
+                                <li>TRACE — логирование всех событий. <note type="caution">Не
+                                        рекомендуется использовать значение TRACE, так как это
+                                        существенно уменьшает производительность приложения.</note>
+                                </li>
+                            </ul></entry>
+                            <entry>Да</entry>
+                            <entry><b>INFO</b></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        
+       
+            <table frame="all" colsep="1" rowsep="1">
+                <title>Переменные для настройки Jatoba</title>
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <colspec colname="c4" colnum="4" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Название переменной</entry>
+                            <entry>Описание</entry>
+                            <entry>Обязательность</entry>
+                            <entry>Значение по умолчанию (жирным) или пример</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><cmdname keyref="itmm_db_host"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/itmm_db_host_info.dita#ReusableComponent_cnc_pfs_4sb/p_enc_pfs_4sb"
+                                />
+                            </entry>
+                            <entry>Да</entry>
+                            <entry><b>host.docker.internal</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="itmm_db_port"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/itmm_db_port_info.dita#ReusableComponent_imf_chs_4sb/p_jmf_chs_4sb"
+                                />
+                            </entry>
+                            <entry>Да</entry>
+                            <entry><b>10265</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="itmm_db_user"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/itmm_db_user_info.dita#ReusableComponent_t1w_mhs_4sb/p_u1w_mhs_4sb"
+                                />
+                            </entry>
+                            <entry>Да</entry>
+                            <entry><b>itmm_user</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="itmm_db_password"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/itmm_db_password_info.dita#ReusableComponent_btx_phs_4sb/p_dtx_phs_4sb"
+                                />
+                            </entry>
+                            <entry>Да</entry>
+                            <entry><b>password</b></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        
+        
+            <table frame="all" colsep="1" rowsep="1">
+                <title>Переменные для настройки <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></title>
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <colspec colname="c4" colnum="4" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Название переменной</entry>
+                            <entry>Описание</entry>
+                            <entry>Обязательность</entry>
+                            <entry>Значение по умолчанию (жирным) или пример</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                    <row>
+                        <entry><cmdname keyref="itmm_front_ssl_port"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/itmm_front_ssl_port_info.dita#ReusableComponent_wlz_wyj_xsb/p_xlz_wyj_xsb"
+                            />
+                        </entry>
+                        <entry>Нет</entry>
+                        <entry><b>443</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="itmm_front_port"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/itmm_front_port_info.dita#ReusableComponent_l4n_5c3_2tb/p_n4n_5c3_2tb"
+                            />
+                        </entry>
+                        <entry>Нет</entry>
+                        <entry><b>80</b></entry>
+                    </row>
+                </tbody>
+                </tgroup>
+            </table>
+        
+        <table frame="all" colsep="1" rowsep="1">
+            <title>Переменные для настройки сетей</title>
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <colspec colname="c4" colnum="4" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Название переменной</entry>
+                        <entry>Описание</entry>
+                        <entry>Обязательность</entry>
+                        <entry>Значение по умолчанию (жирным) или пример</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><cmdname keyref="itmm_network"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/itmm_network_info.dita#ReusableComponent_t45_npw_zrb/p_u45_npw_zrb"
+                            />
+                        </entry>
+                        <entry>Да</entry>
+                        <entry><b>172.15.0.0/24</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="itmm_network_gateway"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/itmm_network_gateway_info.dita#ReusableComponent_xdj_zqw_zrb/p_a2j_zqw_zrb"
+                            />
+                        </entry>
+                        <entry>Да</entry>
+                        <entry><b>172.15.0.1</b></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

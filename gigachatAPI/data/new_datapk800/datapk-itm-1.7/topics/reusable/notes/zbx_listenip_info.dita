@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_cgc_dc2_trb">
+    <title>zbx_listenip_info</title>
+    <body><div id="p_dgc_dc2_trb"><p>Все IP-адреса, которые должен слушать траппер. При использовании нескольких IP-адресов они
+                перечисляются через запятую без пробелов.<div
+                    conref="zbx_listenip_note.dita#ReusableComponent_ghf_bmm_trb/div_hhf_bmm_trb"
+                /></p></div>
+    </body>
+</topic>

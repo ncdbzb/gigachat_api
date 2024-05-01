@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_szq_cqh_psb">
+    <title></title>
+    <body><p id="p_tzq_cqh_psb">В качестве причин конфликта подсети контейнеров рассмотрены следующие:<ul id="ul_btt_wph_psb"><li>Адрес подсети контейнеров уже используется в вашей инфраструктуре.</li>
+                <li>Адрес подсети docker0 используется в вашей инфраструктуре.</li></ul></p></body>
+</topic>

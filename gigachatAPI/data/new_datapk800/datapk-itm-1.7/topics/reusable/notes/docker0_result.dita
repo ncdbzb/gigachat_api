@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jch_swy_l5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult id="stepresult_kch_swy_l5b">Подсеть docker0 примет значение, равное добавленному в
+                    файл.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

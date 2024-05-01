@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_snmp">
+    <title>Настройка ОМ для безагентного сбора по протоколу SNMP</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_gqf_wwn_y5b">
+                <li><xref href="itm_a_agentless_snmp.dita"/></li>
+                <li><xref href="itm_a_agentless_centos_snmpv2.dita"/></li>
+                <li><xref href="itm_a_agentless_centos_snmpv3.dita"/></li>
+                <li><xref
+                        href="itm_a_snmp_windows_10_windows_7.dita"
+                    /></li>
+                <li><xref href="itm_a_agentless_win_server_2012_snmp.dita"/></li>
+                <li><xref href="itm_a_agentless_win2000_snmp.dita"/></li>
+                <li><xref href="itm_a_agentless_win_xp_snmp.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

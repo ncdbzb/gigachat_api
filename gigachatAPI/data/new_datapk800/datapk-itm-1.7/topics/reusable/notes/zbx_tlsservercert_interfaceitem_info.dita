@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_mmy_45k_trb">
+    <title>ZBX_TLSSERVERCERTHOST INTERFACEITEM
+        info</title>
+    <body><div id="div_nmy_45k_trb"><p>Разрешенный атрибут subject сертификата сервера.</p></div></body>
+</topic>

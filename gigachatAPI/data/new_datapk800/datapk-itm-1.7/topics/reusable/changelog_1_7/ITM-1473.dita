@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ipf_ck1_fzb">
+    <title></title>
+    <body><div id="div_lpf_ck1_fzb">Добавлена возможность отображения в карточке <abbreviated-form
+                keyref="monitoring_object"/> внешних ссылок, добавленных в качестве значения полей
+            «URL A», «URL B», «URL C» в инвентарных данных <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> или Zabbix</div></body>
+</topic>

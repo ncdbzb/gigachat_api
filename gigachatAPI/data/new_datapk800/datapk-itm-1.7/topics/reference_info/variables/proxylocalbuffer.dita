@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="proxylocalbuffer">
+    <glossterm>PRXY_LOCBUFFER</glossterm>
+    <glossdef>
+        <p>Количество часов, в течение которого сервер агентов <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> будет локально хранить
+            данные, даже если они уже синхронизированы с сервером. Этот параметр можно использовать,
+            если локальные данные используются сторонними приложениями.</p>
+        <p><b>Разрешенный диапазон:</b> 0-720</p>
+        <p><b>Значение по умолчанию:</b> 0</p>
+    </glossdef>
+</glossentry>

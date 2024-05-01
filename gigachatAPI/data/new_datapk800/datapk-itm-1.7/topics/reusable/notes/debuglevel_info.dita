@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_f5k_1hj_2tb">
+    <title/>
+    <body><p id="p_g5k_1hj_2tb">Задает уровень журналирования: <ul><li>0 — основная информация о запуске и остановке процессов Zabbix;</li><li>1 — критичная информация;</li><li>2 — информация об ошибках; </li><li>3 — предупреждения; </li><li>4 — для отладки (записывается очень много информации);</li><li>5 — расширенная отладка (записывается еще больше информации).</li></ul></p></body>
+</topic>

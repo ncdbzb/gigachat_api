@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Страницы интерфейса</title>
+    <topicref href="monitoring.dita" keys="monitoring" collection-type="sequence">
+        <topicref href="panel.dita" keys="panel"/>
+        <topicref href="problems.dita" keys="problems" collection-type="sequence">
+            <topicref href="event_details.dita" keys="event_details"/>
+        </topicref>
+        <topicref href="hosts.dita" keys="hosts"/>
+        <topicref href="overview.dita" keys="overview" collection-type="sequence">
+            <topicref href="overview_data.dita" keys="overview_data"/>
+            <topicref href="overview_trigger.dita" keys="overview_trigger"/>
+        </topicref>
+        <topicref href="latest_data.dita" keys="latest_data"/>
+        <topicref href="complex_screens.dita" keys="complex_screens"/>
+        <topicref href="net_maps.dita" keys="net_maps"/>
+        <topicref href="detection.dita" keys="detection"/>
+        <topicref href="services.dita" keys="services"/>
+    </topicref>
+    <topicref href="inventory.dita" keys="inventory" collection-type="sequence">
+        <topicref href="overview_inventory.dita" keys="overview_inventory"/>
+        <topicref href="hosts_inventory.dita" keys="hosts_inventory"/>
+    </topicref>
+    <topicref href="reports.dita" keys="reports" collection-type="sequence">
+        <topicref href="system_info.dita" keys="system_info"/>
+        <topicref href="availability_report.dita" keys="availability_report"/>
+        <topicref href="100_most_active_triggers.dita" keys="100_most_active_triggers"/>
+        <topicref href="audit.dita" keys="audit"/>
+        <topicref href="action_log.dita" keys="action_log"/>
+        <topicref href="notifications.dita" keys="notifications"/>
+    </topicref>
+    <topicref href="configuration.dita" keys="configuration" collection-type="sequence">
+        <topicref href="host_groups.dita" keys="host_groups"/>
+        <topicref href="templates.dita" keys="templates"/>
+        <topicref href="hosts_configuration.dita" keys="hosts_configuration" collection-type="sequence">
+            <topicref href="itm_k_config_hosts_card.dita" keys="itm_k_config_hosts_card"/>
+        </topicref>
+        <topicref href="service.dita" keys="service"/>
+        <topicref href="actions.dita" keys="actions" collection-type="sequence">
+            <topicref href="config_actions_trigger.dita" keys="config_actions_trigger"/>
+            <topicref href="config_actions_detection.dita" keys="config_actions_detection"/>
+            <topicref href="config_actions_autoreg.dita" keys="config_actions_autoreg"/>
+            <topicref href="config_actions_internal.dita" keys="config_actions_internal"/>
+        </topicref>
+        <topicref href="event_correlation.dita" keys="event_correlation"/>
+        <topicref href="detection_configuration.dita" keys="detection_configuration"/>
+        <topicref href="services_configuration.dita" keys="services_configuration"/>
+    </topicref>
+    <topicref href="administration.dita" keys="administration" collection-type="sequence">
+        <topicref href="general.dita" keys="general" collection-type="sequence">
+            <topicref href="web_interface.dita" keys="web_interface"/>
+            <topicref href="general_autoregistation.dita" keys="general_autoregistation"/>
+            <topicref href="clear_history.dita" keys="clear_history"/>
+            <topicref href="adm_general_img.dita" keys="adm_general_img"/>
+            <topicref href="adm_general_icon_connect.dita" keys="adm_general_icon_connect"/>
+            <topicref href="adm_general_regexp.dita" keys="adm_general_regexp"/>
+            <topicref href="adm_general_macros.dita" keys="adm_general_macros"/>
+            <topicref href="adm_general_value_mapping.dita" keys="adm_general_value_mapping"/>
+            <topicref href="trigger_options.dita" keys="trigger_options"/>
+            <topicref href="modules.dita" keys="modules"/>
+            <topicref href="adm_general_others.dita" keys="adm_general_others"/>
+        </topicref>
+        <topicref href="proxy.dita" keys="proxy"/>
+        <topicref href="autentification.dita" keys="autentification"/>
+        <topicref href="user_groups.dita" keys="user_groups" collection-type="sequence">
+            <topicref href="adm_general_card_guests_group.dita" keys="adm_general_card_guests_group"
+            />
+        </topicref>
+        <topicref href="user_roles.dita" keys="user_roles"/>
+        <topicref href="users.dita" keys="users" collection-type="sequence">
+            <topicref href="itm_k_adm_users_user_card.dita" keys="itm_k_adm_users_user_card"/>
+        </topicref>
+        <topicref href="ways_of_notification.dita" keys="ways_of_notification"/>
+        <topicref href="scripts.dita" keys="scripts"/>
+        <topicref href="queue.dita" keys="queue" collection-type="sequence">
+            <topicref href="queue_overview.dita" keys="queue_overview"/>
+            <topicref href="queue_proxy_overview.dita" keys="queue_proxy_overview"/>
+            <topicref href="queue_details.dita" keys="queue_details"/>
+        </topicref>
+    </topicref>
+    <topicref href="support.dita" keys="support"/>
+    <topicref href="user_configuration.dita" keys="user_configuration"/>
+</map>

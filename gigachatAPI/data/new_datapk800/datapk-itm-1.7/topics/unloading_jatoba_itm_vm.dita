@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="unloading_jatoba_itm_vm">
+    <title>Создание резервной копии базы данных Jatoba/PostgreSQL</title>
+    <taskbody conref="../topics/reusable/db_backup_restore/unloading_jatoba_info.dita#ReusableComponent_g21_mz4_fyb/steps_h21_mz4_fyb">
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

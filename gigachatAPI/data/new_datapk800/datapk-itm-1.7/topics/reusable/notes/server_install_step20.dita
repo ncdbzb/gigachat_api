@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_grs_13f_krb">
+    <title>Включение межсетевого экрана и добавление его в автозагрузку</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Включите межсетевой экран и добавьте его в автозагрузку:</cmd>
+                <info>
+                    <codeblock>systemctl enable iptables --now</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

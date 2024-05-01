@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hyb_v2t_1tb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_jyb_v2t_1tb">
+                <cmd>Добавьте пользователя zabbix, от имени которого запускается агент, в группу docker:</cmd>
+                <info><codeblock>usermod -a -G docker zabbix</codeblock><note>Если вы добавили пользователя в группу после настройки и запуска агента, перезапустите службу
+                    агента для применения настроек.</note></info>
+            </step>  
+        </steps>     
+    </taskbody>
+</task>

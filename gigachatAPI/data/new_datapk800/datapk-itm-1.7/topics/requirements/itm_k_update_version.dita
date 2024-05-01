@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_k_update_version">
+    <title>Обновление DATAPK ITM-K с версии 1.4.0.0 или 1.5.0.0 до версии 1.6.0.0</title>
+    <taskbody>
+        <context><p>Для обновления сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+            outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                ><term keyref="datapk_itm_k"/></ph> с версии 1.4.0.0 или 1.5.0.0 до версии
+            1.6.0.0:</p></context><steps>
+                <step>
+                    <cmd>Перейдите в рабочую директорию <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                keyref="datapk_itm_k"/></ph>: </cmd>
+                    <info>
+                        <codeblock>cd /opt/datapkitm</codeblock>
+                    </info>
+                </step><step conref="../reusable/steps/install_itm_k_stop_server.dita#ReusableComponent_dfj_fwc_vvb/step_efj_fwc_vvb"><cmd/></step><step conref="../reusable/steps/install_itm_k_check_datapkitm.dita#ReusableComponent_cd3_hwc_vvb/step_dd3_hwc_vvb"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_k_change_env.dita#ReusableComponent_egl_jwc_vvb/step_fgl_jwc_vvb"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_k_create_itm-k.dita#ReusableComponent_z5g_lwc_vvb/step_avg_lwc_vvb"><cmd/></step><step conref="../reusable/steps/install_itm_k_load_files.dita#ReusableComponent_hbc_nwc_vvb/itm_k_download_archive"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_k_cd_itm-k.dita#ReusableComponent_yjt_4wc_vvb/step_zjt_4wc_vvb"><cmd/></step><step conref="../reusable/steps/install_itm_k_docker_load.dita#ReusableComponent_rwt_qwc_vvb/step_swt_qwc_vvb"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_k_copy_files.dita#ReusableComponent_w1d_twc_vvb/step_x1d_twc_vvb"><cmd/></step><step conref="../reusable/steps/install_itm_k_docker_ps.dita#ReusableComponent_gcq_vwc_vvb/step_hcq_vwc_vvb"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_k_docker_stop.dita#ReusableComponent_esp_xwc_vvb/step_fsp_xwc_vvb"><cmd/></step>
+                <step id="iptables_configuration">
+                    <cmd>При обновлении с версии 1.4.0.0 выполните настройку iptables. Для этого:</cmd>
+                    <substeps id="substeps_t3p_hf1_dxb">
+                        <substep>
+                            <cmd>Если вы используете ОС Centos, установите пакет
+                                iptables-services:</cmd>
+                            <info>
+                                <codeblock>yum install iptables-services</codeblock>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>Если вы не вносили дополнительные изменения в правила iptables (сверх
+                                рекомендованных при установке), данный пункт можно пропустить. Если
+                                изменения были, нужно перенести их в файл <codeph>iptables</codeph>. Для
+                                этого:</cmd>
+                            <info>
+                                <ol id="ol_whb_dg1_dxb">
+                                    <li>Сохраните в файл правила iptables, примененные в системе. Для
+                                        этого выполните
+                                        команду:<codeblock>iptables-save > iptables.bkp</codeblock>В
+                                        результате все правила будут сохранены в файл
+                                        <codeph>iptables.bkp</codeph> в текущей директории.</li>
+                                    <li>Найдите добавленные вами правила и перенесите их из файла
+                                        <codeph>iptables.bkp</codeph> в файл
+                                        <codeph>iptables</codeph> из комплекта поставки. Учитывайте,
+                                        что нестандартные правила должны добавляться в соответствующую
+                                        цепочку iptables и находиться в соответствующей позиции.
+                                        <p><b>Пример:</b> Если ранее было добавлено
+                                            нестандартное правило <codeph>-A INPUT -p tcp -m tcp --dport
+                                                25 -j ACCEPT</codeph>, открывающее порт для пересылки
+                                            сообщений по протоколу SMTP, то такое правило должно
+                                            находиться между строчками <codeph>-A INPUT -m state --state
+                                                RELATED,ESTABLISHED -j ACCEPT</codeph> и <codeph>-A
+                                                    INPUT -p tcp -j REJECT --reject-with
+                                                    tcp-reset</codeph>.</p></li>
+                                </ol>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>Замените файл <codeph>/etc/sysconfig/iptables</codeph> на файл
+                                <codeph>iptables</codeph> из комплекта поставки:</cmd>
+                            <info>
+                                <codeblock>mv iptables /etc/sysconfig/</codeblock>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>Отредактируйте файл <codeph>iptables</codeph>: </cmd>
+                            <info>
+                                <ol id="ol_qmd_mg1_dxb">
+                                    <li>Откройте файл для редактирования с помощью
+                                        команды:<codeblock>vi /etc/sysconfig/iptables</codeblock></li>
+                                    <li>Закройте доступ из неиспользуемых подсетей, применяемых в
+                                        docker-контейнерах других компонентов. Для этого закомментируйте
+                                        строки <codeph>-A INPUT -s 172.15.0.0/24 -j ACCEPT</codeph>
+                                        (номер 15) и <codeph>-A INPUT -s 172.16.240.0/24 -j
+                                            ACCEPT</codeph> (номер 21).<note>Включить отображение
+                                                номеров строк в файле можно с помощью следующих действий:
+                                                <ol id="ol_hph_cbc_5vb">
+                                                    <li>Нажмите клавишу «Esc», чтобы перейти в командный
+                                                        режим. </li>
+                                                    <li>Введите <codeph>:set number</codeph> или
+                                                        <codeph>:set nu</codeph> и нажмите «Enter».</li>
+                                                    <li>Нажмите клавишу «i», чтобы перевести редактор в
+                                                        режим ввода текста.</li>
+                                                    <li>После закрытия файла нумерация строк отключится
+                                                        автоматически. Чтобы отключить абсолютные номера
+                                                        строк на время редактирования файла, перейдите в
+                                                        командный режим и выполните команду <codeph>:set
+                                                            nonumber</codeph> или <codeph>:set
+                                                                nonu</codeph>.</li>
+                                                </ol></note></li>
+                                    <li>Если требуется мониторинг сервера с помощью <ph
+                                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                            outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                                outputclass="html"><term keyref="datapk_itm_k"/></ph> или по
+                                        протоколу SNMP, раскомментируйте строки <codeph>#-A INPUT -p tcp
+                                            -m tcp --dport 10050 -j ACCEPT</codeph> (номер 51) и
+                                        <codeph>#-A INPUT -p udp -m udp --dport 161 -j
+                                            ACCEPT</codeph> (номер 48) соответственно.</li>
+                                    <li>Сохраните файл и выйдите из режима
+                                        редактирования:<codeblock>:wq</codeblock></li>
+                                </ol>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>Проверьте владельца файла и права доступа командой: </cmd>
+                            <info><codeblock>ls -l /etc/sysconfig/iptables</codeblock>Владелец и права
+                                должны совпадать с указанными на скриншоте: <fig id="fig_bbs_vg1_dxb">
+                                    <title>Владелец и права файла iptables</title>
+                                    <image
+                                        href="../../images/iptables_update/iptables_host_rights.png"
+                                        id="image_cbs_vg1_dxb"/>
+                                </fig><p>В противном случае выполните команду:
+                                </p><codeblock>chown root:root /etc/sysconfig/iptables &amp;&amp; chmod 600 /etc/sysconfig/iptables</codeblock>
+                                Проверьте, что владелец и права теперь соответствуют указанным на
+                                скриншоте. </info>
+                        </substep>
+                        <substep>
+                            <cmd>Чтобы применить новые правила межсетевого экрана, перезапустите службы
+                                iptables и docker, выполнив команды:</cmd>
+                            <info>
+                                <codeblock>systemctl restart iptables.service
+systemctl restart docker.service</codeblock>
+                            </info>
+                        </substep>
+                    </substeps>
+                </step><step><cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd><substeps id="substeps_ipt_msc_vvb"><substep><cmd>Перейдите в режим редактирования службы СУБД:</cmd><info><codeblock>systemctl edit jatoba-*.service</codeblock></info></substep><substep><cmd>Если файл не пуст, перейдите к пункту <xref href="#itm_k_update_version/check_jatoba"/>.</cmd></substep><substep><cmd>Добавьте блок [Unit]:</cmd><info><codeblock>[Unit]
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service</codeblock></info></substep><substep><cmd>Если база данных хранится на отдельном томе, добавьте после блока [Unit] блок [Service]:</cmd><info><codeblock>[Service]
+Environment=PGDATA=/storage/base</codeblock><p>Где <codeph>/storage/base</codeph> — путь к базе данных, который был настроен на шаге 
+                            <ph outputclass="certif_hide"><xref href="../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita#itm_k_subd_config/itm_k_set_dir_bd"/></ph>
+                            <ph outputclass="certif"><xref href="../requirements/itm_k_subd_config_certif.dita#itm_k_subd_config_certif/itm_k_set_dir_bd"/></ph>
+                            раздела <ph outputclass="certif_hide"><xref href="../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita"/></ph>
+                            <ph outputclass="certif"><xref href="../requirements/itm_k_subd_config_certif.dita"/></ph>
+                            .</p></info></substep><substep><cmd>Для применения изменений в настройках службы СУБД выполните команду:</cmd><info><codeblock>systemctl daemon-reload</codeblock></info></substep></substeps></step>
+                <step id="check_jatoba">
+                                <cmd>Проверьте состояние службы Jatoba:</cmd>
+                                <info>
+                                    <codeblock>systemctl status jatoba-*</codeblock>
+                                </info>
+                            </step><step conref="../reusable/steps/install_itm_k_start_jatoba.dita#ReusableComponent_bm1_qxc_vvb/step_dm1_qxc_vvb"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_k_ldap.dita#ReusableComponent_sfy_rxc_vvb/step_ufy_rxc_vvb"><cmd/></step>
+                <step conref="../reusable/steps/install_itm_docker_run.dita#ReusableComponent_rkn_5xc_vvb/step_tkn_5xc_vvb"><cmd/></step><step>
+                                <cmd>Измените настройки синхронизации с <ph outputclass="udvpdf"><term
+                                    keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                                        keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                                            keyref="datapk_itm_vm"/></ph>, если ранее они выполнялись для <ph
+                                                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                                        outputclass="html"><term keyref="datapk_itm_k"/></ph> предыдущей
+                                    версии:</cmd>
+                                <substeps id="substeps_a1q_cjw_gwb">
+                                    <substep>
+                                        <cmd>Перейдите в веб-интерфейс <ph outputclass="udvpdf"><term
+                                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                                keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                                    keyref="datapk_itm_k"/></ph>. </cmd>
+                                    </substep>
+                                    <substep>
+                                        <cmd>Перейдите на страницу <cite keyref="administration"/> → <cite
+                                            keyref="user_roles"/>.</cmd>
+                                    </substep>
+                                    <substep>
+                                        <cmd>Нажмите на имя роли «Sync-itm-m role».</cmd>
+                                        <stepresult>Откроется страница редактирования роли.</stepresult>
+                                    </substep>
+                                    <substep>
+                                        <cmd>В выпадающем меню «Тип пользователя» измените значение на
+                                            «Супер-администратор».</cmd>
+                                    </substep>
+                                    <substep>
+                                        <cmd>В разделе «Доступ к Веб элементам» → «Настройка» активируйте чекбокс
+                                            «Услуги».</cmd>
+                                    </substep>
+                                    <substep>
+                                        <cmd>В разделе «Доступ к API» → «Методы API» добавьте в список разрешений
+                                            метод *.get и удалите другие методы.</cmd>
+                                        <info>
+                                            <fig>
+                                                <title>Настройка списка разрешений</title>
+                                                <image
+                                                    href="../../images/ITM-K_synchro/synchro_add_method_get.png"
+                                                />
+                                            </fig>
+                                        </info>
+                                    </substep>
+                                    <substep>
+                                        <cmd>Нажмите на кнопку «Обновить» для сохранения изменений.</cmd>
+                                    </substep>
+                                </substeps>
+                            </step>
+                <step>
+                    <cmd>Установите агент версии 2 согласно инструкции <xref
+                        href="../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita"
+                    /> (за исключением п. <xref
+                        href="../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita#agent_installation_centos_7/firewall_iptables"
+                    />, так как межсетевой экран был настроен ранее в п. <xref
+                        href="#itm_k_update_version/iptables_configuration"
+                    /> текущей инструкции).</cmd>
+                    <info>В файле конфигурации агента <codeph>/etc/zabbix/zabbix_agent2.conf</codeph>
+                        установите параметр <codeph><cmdname keyref="server"/>=172.16.239.0/24</codeph>
+                        (адрес подсети контейнеров <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                        /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_k"/></ph>).</info>
+                </step>
+                <step>
+                    <cmd>Измените настройки мониторинга сервера, на котором установлен <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                            outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph>. Для этого: </cmd>
+                    <substeps id="substeps_dd1_wl1_dxb">
+                        <substep>
+                            <cmd>Перейдите в веб-интерфейс <ph outputclass="udvpdf"><term
+                                keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm_k"/></ph>.  </cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                                keyref="hosts"/>.</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Найдите объект мониторинга — сервер <ph outputclass="udvpdf"><term
+                                keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm_k"/></ph>, в столбце «интерфейс» у него будет
+                                указано «zabbix-agent: 10050».</cmd>
+                            <info>
+                                <fig>
+                                    <title>Cервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                    /></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                                    /></ph> в списке объектов мониторинга</title>
+                                    <image href="../../images/ITM_K_requirements/itm_k_update_find_om.png"/>
+                                </fig>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>Нажмите на имя объекта мониторинга, чтобы перейти к его
+                                настройкам.</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Измените настройки интерфейса объекта мониторинга:</cmd>
+                            <info>
+                                <ul id="ul_r4f_fn1_dxb">
+                                    <li>Введите в поле «IP адрес» значение <codeph>172.17.0.1</codeph>
+                                        (адрес сервера в подсети docker).</li>
+                                    <li>Введите в поле «DNS» значение
+                                        <codeph>host.docker.internal</codeph>.</li>
+                                </ul>
+                            </info>
+                            <info>
+                                <fig>
+                                    <title>Изменение настроек интерфейса <abbreviated-form keyref="monitoring_object"/></title>
+                                    <image href="../../images/ITM_K_requirements/itm_k_update_config_om.png"/>
+                                </fig>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>Нажмите на кнопку «Обновить» для сохранения настроек <abbreviated-form
+                                keyref="monitoring_object"/>. </cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Убедитесь, что <abbreviated-form keyref="monitoring_object"/> стал
+                                доступен. </cmd>
+                        </substep>
+                    </substeps>
+                </step>
+                <step
+                    conref="../reusable/steps/install_itm_delete_dir.dita#ReusableComponent_kzp_wxc_vvb/step_lzp_wxc_vvb">
+                    <cmd/>
+                </step>
+            <step>
+                <cmd>Удалите файл <codeph>.agent.env</codeph> из директории
+                        <codeph>/opt/itm-k/env</codeph>: </cmd>
+                <info>
+                    <codeblock>rm -rf /opt/itm-k/env/.agent.env</codeblock>
+                </info>
+            </step>
+            <step
+                conref="../reusable/steps/patch_file.dita#ReusableComponent_v4z_ypy_nxb/step_w4z_ypy_nxb">
+                <cmd/>
+            </step></steps>
+        <postreq id="postreq_v1j_kpp_3xb">
+            <note>Если обновленный сервер мониторинга <ph
+                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                    /></ph> был подключен к серверу <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph>, то <ph outputclass="udvpdf"
+                            ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                                /></ph> не обнаружит, что версия сервера мониторинга изменилась, и продолжит делать
+                запросы, соответствующие старой версии сервера мониторинга. Для корректной работы
+                необходимо на <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_vm"/></ph> удалить сервер мониторинга <ph
+                            outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                                /></ph> и добавить его заново. При этом все данные, связанные с сервером
+                мониторинга, будут удалены и появятся только при повторном добавлении этого
+                сервера.
+            </note>
+        </postreq>
+    </taskbody>
+</task>

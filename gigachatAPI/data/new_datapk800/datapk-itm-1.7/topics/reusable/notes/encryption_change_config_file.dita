@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_prh_fb3_bsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_qrh_fb3_bsb">
+                <cmd>Перейдите в режим редактирования файла конфигурации прокси-сервера.</cmd>
+                <stepxmp>Для файла конфигурации по умолчанию <codeph
+                    conref="../filepath/etc_zabbix_zabbix_proxy_conf.dita#ReusableComponent_drh_dy2_1sb/codeph_frh_dy2_1sb"
+                /> это можно сделать
+                    командой:<codeblock>vi /etc/zabbix/zabbix_proxy.conf</codeblock></stepxmp>
+            </step>
+        </steps>
+        </taskbody>
+</task>

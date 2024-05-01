@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_config_look_user">
+    <title>Просмотр свойств учетной записи пользователя</title>
+    <body>
+        <p>При клике на учетную запись в списке пользователей появляется окно просмотра свойств
+            учетной записи пользователя. В окне выводятся все свойства учетной записи пользователя в
+            режиме «на чтение».</p>
+        <fig>
+            <title>Свойства учетной записи</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_user_info.png"/>
+        </fig>
+    </body>
+</topic>

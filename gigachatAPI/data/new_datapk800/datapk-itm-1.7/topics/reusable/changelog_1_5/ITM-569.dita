@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_tdr_4sc_2vb">
+    <title></title>
+    <body><p id="p_vdr_4sc_2vb">Исправлен внешний вид заголовка на странице <ph outputclass="html"><cite
+                    keyref="itm_m_config_ldap"/></ph><ph outputclass="onlypdf">«LDAP»</ph>.</p></body>
+</topic>

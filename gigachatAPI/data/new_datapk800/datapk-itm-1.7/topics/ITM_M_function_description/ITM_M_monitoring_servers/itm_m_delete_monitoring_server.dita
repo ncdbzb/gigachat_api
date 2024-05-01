@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_delete_monitoring_server">
+    <title>Удаление подключенного сервера мониторинга</title>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Перейдите в раздел <cite keyref="itm_m_page_server_monitoring"/>.</cmd>
+            </step>
+            <step
+                conref="../../reusable/notes/config_monitoring_server.dita#ReusableComponent_cng_gq4_prb/step_dng_gq4_prb">
+                <cmd/>
+               
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Удалить» <image
+                        href="../../../images/ITM_M_icons/delete_server.png" id="image_y1r_r12_vsb"
+                    /> для удаления сервера мониторинга.</cmd>
+                <stepresult>Появится модальное окно «Удаление сервера».</stepresult>
+            </step>
+            <step>
+                <cmd>Нажмите «Удалить» для подтверждения действия.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Удаление сервера»</title>
+                        <image href="../../../images/ITM_M_screens/ITM_M_delete_server_approve.png"/>
+                    </fig>
+                </info>
+                <stepresult>При удалении сервера мониторинга из системы удаляются связанные с ним
+                        <abbreviated-form keyref="monitoring_object"/> и проблемы этих
+                        <abbreviated-form keyref="monitoring_object"/>.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="problem_zbx_proxyconfigfrequency">
+    <title>Недоступен узел сети, подключенный через прокси</title>
+    <shortdesc></shortdesc>
+    <troublebody><condition>
+            <p>В веб-интерфейсе сервера мониторинга индикатор статуса доступности узла сети,
+                подключенного через сервер <ph outputclass="udvpdf">удаленного мониторинга</ph><ph
+                    outputclass="onlypdf">агентов</ph><ph outputclass="html">агентов</ph>, имеет
+                красный цвет. </p>
+        </condition>
+        <troubleSolution>
+            <cause id="cause_xbr_1wb_qvb">
+                <title>Причина 1</title>
+                <p>Ошибка в настройках объекта мониторинга или свойств его подключения.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd>Проверьте настройки <abbreviated-form keyref="monitoring_object"/> и
+                            параметры подключения к серверу мониторинга. Подробнее см. в разделе
+                                <xref
+                                href="../../usage/monitoring_objects_and_hosts/host_configuration.dita"
+                            />.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_shp_lmv_pvb">
+                <title>Причина 2</title>
+                <p>Параметры конфигурации еще не переданы из сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и
+                    не применены сервером <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph>.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty><div>
+                    <p>Дождитесь применения измененной конфигурации на сервере <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph>.</p>
+                        <p>По умолчанию, сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>
+                            передает обновления конфигурации на подключенные к нему серверы <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_a"/></ph> каждые 900
+                            секунд.</p>
+                    </div><div><b>Совет</b></div><div>
+                        <p>На этапах пусконаладки может потребоваться более частое обновление
+                            конфигураций на серверах <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph>. Для этого
+                            измените значение переменной <cmdname keyref="zbx_proxyconfig_frequency"
+                            /> в файле <codeph>env/.srv.env</codeph>:</p>
+                    </div></responsibleParty>
+                <steps>
+            <step>
+                        <cmd>Перейдите в режим командной строки сервера мониторинга. </cmd>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в директорию <codeph>/opt/itm-k</codeph>:</cmd>
+                        <info>
+                            <codeblock>cd /opt/itm-k </codeblock>
+                        </info>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/docker_compose_down.dita#ReusableComponent_nqz_233_zrb/step_oqz_233_zrb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Откройте файл конфигурации сервера с помощью команды:</cmd>
+                        <info>
+                            <pre>vi env/.srv.env</pre>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Уменьшите значение переменной <cmdname
+                                keyref="zbx_proxyconfig_frequency"/>. </cmd>
+                        <info>
+                            <note>Диапазон допустимых значений — 1-604800 секунд. Подробнее см. в
+                                разделе <xref
+                                    href="../../ITM_K_reference_info/var_tables/var_env_srv.dita"
+                                />.</note>
+                        </info>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/exit_wq.dita#ReusableComponent_vrx_hh3_zrb/step_wrx_hh3_zrb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Запустите контейнеры:</cmd>
+                        <info>
+                            <codeblock>docker-compose up -d</codeblock>
+                            <note>По окончании пусконаладочных работ установите значение переменной
+                                в соответствии с проектным решением.</note>
+                        </info>
+                    </step>
+                    
+        </steps></remedy>
+        
+        </troubleSolution></troublebody>
+</troubleshooting>

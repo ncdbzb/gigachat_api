@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_distributive_content">
+    <title>Состав и содержание дистрибутивного носителя данных</title>
+    <body>
+        <p>
+            <div>
+                <p>В состав дистрибутивного носителя данных входят следующие компоненты:</p>
+                <ul id="ul_jbh_qs2_krb">
+                    <li><codeph>1.4_to_1.5.sh</codeph> — скрипт для обновления версии <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>; </li>
+                    <li>архив с дистрибутивом <codeph
+                            conref="../../reusable/filepath/datapk_itm_m_x_x_x_x_tar_gz.dita#ReusableComponent_ikx_4zf_krb/ph_jkx_4zf_krb"
+                        />;</li>
+                    <li>конфигурационный файл <codeph
+                            conref="../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                        /> — содержит список docker-контейнеров с сервисами и их настройками;</li>
+                    <li><codeph>env_prod_generator.sh</codeph>  — скрипт для генерации и настройки
+                        env-файлов;</li>
+                    <li><codeph>iptables</codeph> — файл с предварительно настроенными правилами
+                        межсетевого экрана iptables.</li>
+                </ul>
+            </div>
+        </p>
+        <p>Дистрибутивный носитель также может содержать следующие компоненты:</p>
+        <ul id="ul_iqx_wrq_qxb">
+            <li><codeph>dependencies.zip</codeph> — архив c дополнительными пакетами.</li>
+        </ul>
+    </body>
+</topic>

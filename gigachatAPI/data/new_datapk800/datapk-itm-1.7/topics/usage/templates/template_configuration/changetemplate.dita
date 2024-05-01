@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="changetemplate">
+    <title>Редактирование шаблона</title>
+    <taskbody>
+        <context>Для редактирования шаблона:</context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                        keyref="templates"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на имя нужного шаблона в списке шаблонов.</cmd>
+                <stepresult>Откроется вкладка «Шаблоны».
+                    <fig>
+                        <title>Вкладка «Шаблоны»</title>
+                        <image href="../../../../images/ITM_K_usage/itm_k_templates_add_change.png"/>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Для редактирования парметров шаблона:</cmd>
+                <substeps id="substeps_zll_ybl_hsb">
+                    <substep>
+                        <cmd
+                            conref="../../../reusable/notes/change_parameters.dita#ReusableComponent_zhz_ywp_jsb/cmd_a3z_ywp_jsb"
+                        />
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../../reusable/notes/press_refresh.dita#ReusableComponent_nfv_kbc_jsb/cmd_ofv_kbc_jsb"
+                        />
+                    </substep>
+                </substeps>
+            </step>
+            
+            <step>
+                <cmd>Для отсоединения присоединенного шаблона:</cmd>
+                <substeps id="substeps_jqd_gdl_hsb">
+                    <substep>
+                        <cmd>Перейдите на вкладку «Присоединенные шаблоны».</cmd>
+                        <info>
+                            <fig>
+                                <title>Вкладка «Присоединенные шаблоны»</title>
+                                <image href="../../../../images/ITM_K_usage/itm_k_templates_connect_change.png"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на одну из двух кнопок напротив имени присоединенного
+                            шаблона:</cmd>
+                        <info>
+                            <ul>
+                                <li>Отсоединить — отсоединить шаблон, но оставить его элементы
+                                    данных, триггеры и графики присоединенными к основному шаблону и
+                                    использующим его узлам сети. Сбор данных при этом продолжается.
+                                        <note>При повторном прикреплении шаблона к основному шаблону
+                                        элементы данных с одинаковым ключом будут заменены на те,
+                                        что находятся в присоединенном шаблоне. </note></li>
+                                <li>Отсоединить и очистить — отсоединить шаблон и удалить все его
+                                    элементы данных, триггеры и графики у основного шаблона и
+                                    использующих его узлов сети. <note type="attention">При нажатии
+                                        на кнопку «Отсоединить и очистить» удаляется история узлов
+                                        сети, использующих этот шаблон, на страницах <cite
+                                            keyref="latest_data"/>, <cite keyref="problems"/>.
+                                        Повторное подключение шаблона позволяет собирать информацию
+                                        с момента подключения, но не возвращает удаленную историю.
+                                    </note></li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../../reusable/notes/press_refresh.dita#ReusableComponent_nfv_kbc_jsb/cmd_ofv_kbc_jsb"
+                        />
+                    </substep>
+                </substeps>
+            </step>
+            
+            <step>
+                <cmd>Для редактирования тегов шаблона:</cmd>
+                <substeps id="substeps_v13_h2l_hsb">
+                    <substep>
+                        <cmd>Перейдите на вкладку «Теги».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для добавления тега:</cmd>
+                        <info>
+                            <ol id="ol_uj5_lw2_ftb">
+                                <li>Заполните поля «Имя» и «Значение».</li>
+                                <li>Нажмите на кнопку «Добавить». </li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для изменения тега отредактируйте поля «Имя» и «Значение».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для удаления тега нажмите на кнопку «Удалить» в строке с тегом.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../../reusable/notes/press_refresh.dita#ReusableComponent_nfv_kbc_jsb/cmd_ofv_kbc_jsb"
+                        />
+                    </substep>
+                </substeps>
+            </step>
+            
+            <step>
+                <cmd>Для редактирования макросов шаблона:</cmd>
+                <substeps id="substeps_dd2_2fl_hsb">
+                    <substep>
+                        <cmd>Перейдите на вкладку «Макросы».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для добавления макроса:</cmd>
+                        <info>
+                            <ol id="ol_wsv_fx2_ftb">
+                                <li>Заполните поля «Макрос», «Значение» и «Описание».</li>
+                                <li>Нажмите на кнопку «Добавить».</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для удаления макроса нажмите на кнопку «Удалить» в строке с
+                            макросом.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../../reusable/notes/press_refresh.dita#ReusableComponent_nfv_kbc_jsb/cmd_ofv_kbc_jsb"
+                        />
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd> Для редактирования объектов шаблона:</cmd>
+                <substeps id="substeps_btd_fwt_fvb">
+                    <substep>
+                        <cmd>В строке с нужным шаблоном нажмите на тип объекта, который нужно
+                            отредактировать.</cmd>
+                        <stepxmp>Например, «Элементы данных».</stepxmp>
+                        <stepresult>Откроется список объектов выбранного типа, добавленных в
+                            шаблон.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на имя объекта, который хотите отредактировать.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Измените нужные вам параметры.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Обновить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="sshkeylocation">
+    <glossterm>SSHKeyLocation</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/sshkeylocation_info.dita#ReusableComponent_f4b_bdb_5tb/p_g4b_bdb_5tb"
+        />
+    </glossdef>
+</glossentry>

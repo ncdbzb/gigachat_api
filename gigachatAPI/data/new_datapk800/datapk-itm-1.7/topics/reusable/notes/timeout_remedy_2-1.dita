@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zwm_ps1_5tb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_axm_ps1_5tb">
+                <cmd>Убедитесь, что превышено время ожидания ответа от узла сети. Для этого введите команду:</cmd>
+                <substeps id="substeps_dmd_cyz_msb">
+                    <substep>
+                        <cmd>Для <ph
+                                conref="../../reusable/protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"
+                            />:</cmd>
+                        <info>
+                            <codeblock>snmpwalk -v 2c -c [имя сообщества] [IP-адрес узла сети]</codeblock>
+                        </info>
+                        <stepresult>
+                            <fig>
+                                <title>Результат работы команды</title>
+                                <image href="../../../images/ITM_K_troubleshooting/timeout_1.png"/>
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Для <ph
+                                conref="../../reusable/protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"
+                            />:</cmd>
+                        <info><codeblock>snmpwalk -v3 -a [MD5|SHA] -A [пароль аутентификации] -x [DES|AES] -X [пароль шифрования] -l authPriv -u [имя пользователя] [IP-адрес]</codeblock>
+                            Где <ul id="ul_hdp_xzh_nsb">
+                                <li>[MD5|SHA] — протокол аутентификации (MD5 или SHA);</li>
+                                <li>[DES|AES] — протокол шифрования (DES или AES).</li>
+                            </ul></info>
+                        <stepresult>
+                            <fig>
+                                <title>Результат работы команды</title>
+                                <image href="../../../images/ITM_K_troubleshooting/timeout_2.png"/>
+                            </fig>
+                        </stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

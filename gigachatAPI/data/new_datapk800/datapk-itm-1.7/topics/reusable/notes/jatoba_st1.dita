@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cqd_yb5_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_dqd_yb5_tsb">
+            <cmd>Создайте каталог для файлов установки СУБД Jatoba командой:</cmd>
+            <info><codeblock>mkdir /opt/jatoba</codeblock></info>
+        </step>
+        </steps>
+    </taskbody>
+</task>

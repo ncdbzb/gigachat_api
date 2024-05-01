@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="events">
+    <title>События</title>
+    <body>
+                <p><ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                                        ><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                                        ><term keyref="datapk_itm_k"/></ph> осуществляет логирование
+                        и отображение событий в зависимости от источника и их типа. Типы
+                        событий:</p>
+                <ul id="ul_edj_f4q_hrb">
+                        <li>События на <term keyref="triggers">триггеры</term>. Генерируются всякий
+                                раз, когда <term keyref="triggers">триггер</term> меняет свое
+                                состояние (ОК→ПРОБЛЕМА→ОК). Подробнее см. в разделе <xref
+                                        href="event_generation_for_triggers/event_generation_for_triggers.dita"
+                                />.</li>
+                        <li>События на обнаружение. Генерируются при обнаружении узлов сети или
+                                сервисов. Подробнее см. в разделе <xref
+                                        href="other_event_sources/detection_events.dita"/>.</li>
+                        <li>События на авторегистрацию. Генерируются, когда активные агенты
+                                автоматически регистрируются сервером. Подробнее см. в разделе <xref
+                                        href="other_event_sources/agents_autoregistration_events.dita"
+                                />.</li>
+                        <li>Внутренние события. Генерируются, когда элементы данных или правила
+                                низкоуровневого обнаружения становятся не поддерживаемыми или <term
+                                        keyref="triggers">триггер</term> переходит в состояние
+                                        <i>неизвестно</i>. Подробнее см. в разделе <xref
+                                        href="other_event_sources/internal_events.dita"/>.</li>
+                        <li>События аудита действий, выполненных автоматически при обнаружении узла
+                                сети. Подробнее см. в разделе <xref href="actions_audit_hosts.dita"
+                                />.</li>
+                        <li>События безопасности. Подробнее см. в разделе <xref
+                                        href="actions_audit_web.dita"/>.</li>
+                </ul>
+                <p>События имеют временную метку и могут быть основой для действий — например, для
+                        отправки оповещений по почте.</p>
+                <p>В этом разделе:<ul id="ul_e5v_gg2_xyb">
+                                <li><xref
+                                                href="event_generation_for_triggers/event_generation_for_triggers.dita"
+                                                /><ul id="ul_o3d_scq_grb">
+                                                <li><xref
+                                                  href="event_generation_for_triggers/problem_events.dita"
+                                                  /></li>
+                                                <li><xref
+                                                  href="event_generation_for_triggers/OK_events.dita"
+                                                  /></li>
+                                                <li><xref
+                                                  href="event_generation_for_triggers/problem_close_manual.dita"
+                                                  /></li>
+                                                <li><xref
+                                                  href="event_generation_for_triggers/problem_close_configuration.dita"
+                                                  /></li>
+                                        </ul></li>
+                                <li><xref href="other_event_sources/detection_events.dita"/></li>
+                                <li><xref
+                                                href="other_event_sources/agents_autoregistration_events.dita"
+                                        /></li>
+                                <li><xref href="other_event_sources/internal_events.dita"/></li>
+                                <li><xref href="event_object.dita"/></li>
+                                <li><xref href="actions_audit_hosts.dita"/></li>
+                                <li><xref href="actions_audit_web.dita"/></li>
+                                <li><xref href="messages_safety_web.dita"/></li>
+                        </ul></p>
+    </body>
+</topic>

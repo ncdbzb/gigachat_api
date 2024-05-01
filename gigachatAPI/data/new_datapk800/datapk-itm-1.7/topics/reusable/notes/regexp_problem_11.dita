@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_m5c_2dh_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_n5c_2dh_wrb">
+            <cmd>Настройте параметры фильтра:</cmd>
+            <substeps>
+                <substep>
+                    <cmd>Введите макрос для фильтра.</cmd>
+                </substep>
+                <substep>
+                    <cmd>Выберите, будет ли фильтр искать совпадающие элементы.</cmd>
+                </substep>
+                <substep>
+                    <cmd>Введите @[Название категории, содержащей новое регулярное выражение].</cmd>
+                </substep>
+            </substeps>
+            <stepxmp>Например, «{#IFNAME} совпадает @Сетевые интерфейсы для обнаружения».</stepxmp>
+            <info>
+                <fig id="fig_add_regexp_filter_2_19">
+                    <title>Настройка параметров фильтра</title>
+                    <image href="../../../images/first_configuration/add_regexp_filter_2_19.png"/>
+                </fig>
+            </info>
+        </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_gml_vmk_trb">
+    <title>zbx_activeservers_info</title>
+    <body><div id="div_hml_vmk_trb">
+            <p>Разрешенные серверы для соединений с контейнером агента. При использовании нескольких
+                серверов они перечисляются через запятую без пробелов.</p>
+            <p>
+                <div
+                    conref="zbx_activeservers_note.dita#ReusableComponent_cpj_rzl_trb/div_dpj_rzl_trb"
+                />
+            </p>
+        </div></body>
+</topic>

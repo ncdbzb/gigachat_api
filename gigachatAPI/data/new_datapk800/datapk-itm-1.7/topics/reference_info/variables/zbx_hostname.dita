@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_hostname">
+    <glossterm>ZBX_HOSTNAME</glossterm>
+    <glossdef><div
+            conref="../../reusable/notes/zbx_hostname_info.dita#ReusableComponent_vkv_rnk_trb/div_wkv_rnk_trb"/>
+        <b>Значение в конфигурации ITM-K при поставке:</b>"Zabbix server"</glossdef>
+</glossentry>

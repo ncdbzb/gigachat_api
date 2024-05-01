@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_wvb_qkj_2tb">
+    <title></title>
+    <body>
+        <p id="p_xvb_qkj_2tb">Размер кэша индекса истории, в байтах. Размер разделяемой памяти для
+            индексации данных записываемой истории в кэш истории. Кэшу индекса необходимо около 100
+            байт на кэширование одного элемента данных. </p>
+    </body>
+</topic>

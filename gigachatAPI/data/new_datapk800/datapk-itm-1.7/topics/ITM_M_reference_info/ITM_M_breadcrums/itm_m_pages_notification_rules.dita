@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="itm_m_pages_notification_rules">
+    <glossterm>Правила оповещений</glossterm>
+    <glossdef>Подраздел меню <cite keyref="itm_m_page_configuration"/>, содержащий список правил
+        оповещений. <fig>
+            <title>Правила оповещений</title>
+            <image href="../../../images/ITM_M_screens/ITM_VM_notification_rules.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

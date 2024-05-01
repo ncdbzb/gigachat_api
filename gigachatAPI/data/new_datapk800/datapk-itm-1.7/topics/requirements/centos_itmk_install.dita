@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="centos_itmk_install">
+    <title>Установка DATAPK ITM-K на ОС Centos 8</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_mkf_njj_z5b">
+                <li><xref href="itm_k_install_centos_8.4_2105.dita"/></li>
+                <li><xref href="itm_k_install_postgresql_v14.dita"/></li>
+                <li><xref href="itm_k_centos_8_4_install_docker.dita"/></li>
+                <li><xref href="centos_package_internet.dita"/></li>
+                <li><xref href="selinux.dita"/></li>
+                <li><xref href="datapk_itm_k_centos_8_4_2105.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

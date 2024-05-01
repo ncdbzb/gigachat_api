@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publishing-template>
+    <name>udv_test_template</name>
+    <description>test</description>
+    <webhelp>
+        <preview-image file="oxygen-tiles.png"/>
+        <parameters>
+            <parameter name="webhelp.show.main.page.tiles" value="yes"/>
+            <parameter name="webhelp.show.main.page.toc" value="no"/>
+            <parameter name="webhelp.top.menu.depth" value="3"/>
+        </parameters>
+        <resources>
+            <css file="oxygen.css"/>
+            <css file="notes.css"/>
+            <fileset>
+                <include name="resources/**/*"/>
+                <exclude name="resources/**/*.svn"/>
+                <exclude name="resources/**/*.git"/>
+            </fileset>
+        </resources>
+        <online-preview-url>https://www.oxygenxml.com/samples/DITA-WebHelp-Responsive/tiles/oxygen/</online-preview-url>
+        <tags>
+            <tag type="layout">tiles</tag>
+            <tag type="color">blue</tag>
+            <tag type="color">light</tag>
+        </tags>
+    </webhelp>
+    <pdf>
+        <preview-image file="oxygen.png"/>
+        <tags>
+            <tag type="color">light</tag>
+        </tags>
+        <parameters>
+            <parameter name="args.css" value="${cfd}\css\udv_pdf.css"/>
+            <parameter name="args.css.param.numbering" value="deep-chapter-scope-no-page-reset"/>
+            <parameter name="figure.title.placement" value="bottom"/>
+        </parameters>
+        <resources>
+            <css file="oxygen-print.css"/>
+			<css file="itm_template.css"/>
+			<css file="itm_template_pdf.css"/>
+            <css file="notes.css"/>
+        </resources>
+    </pdf>
+</publishing-template>

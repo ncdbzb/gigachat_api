@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itmm_cert_key_web_interface">
+    <title>Выпуск сертификата и ключа для доступа к веб-интерфейсу UDV-ITM-M</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Задайте локальную переменную <codeph>hn</codeph>, равную сетевому имени
+                        <abbreviated-form keyref="udv_itm_k"/>: </cmd>
+                <info>
+                    <codeblock>hn=$(cat /etc/hostname)</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте файл формата <codeph>.pem</codeph>, который будет содержать в себе
+                        <codeph>local_ca.key</codeph>:</cmd>
+                <info><codeblock>openssl req -x509 -new -nodes -key /opt/itm-k/env/nginx/certs/local_ca.key -sha256 \
+-days 3650 -subj "/C=RU/L=UDV/O=[CompanyName]/OU=CLITM/CN=$hn" \
+-out /opt/itm-k/env/nginx/certs/local_ca.pem</codeblock>В этой команде параметр
+                    [CompanyName] — название эксплуатирующей организации.</info>
+                <stepxmp>Для эксплуатирующей организации CyberLympha команда будет выглядеть
+                    следующим образом:
+                    <codeblock>openssl req -x509 -new -nodes -key /opt/itm-k/env/nginx/certs/local_ca.key -sha256 \
+-days 3650 -subj "/C=RU/L=UDV/O=CyberLympha/OU=CLITM/CN=$hn" \
+-out /opt/itm-k/env/nginx/certs/local_ca.pem</codeblock></stepxmp>
+                <info>Введите пароль ключа <codeph>local_ca.key</codeph>.</info>
+            </step>
+            <step>
+                <cmd>Сгенерируйте ключ для сертификата доступа к веб-интерфейсу <abbreviated-form
+                        keyref="udv_itm_k"/>:</cmd>
+                <info>
+                    <codeblock>openssl genrsa -out /opt/itm-k/env/nginx/certs/nginx.key 2048</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте файл запроса на генерацию сертификата командой:</cmd>
+                <info><codeblock>openssl req -new -key /opt/itm-k/env/nginx/certs/nginx.key \
+-subj "/C=RU/L=UDV/O=[CompanyName]/OU=CLITM/CN=$hn" -out /opt/itm-k/env/nginx/certs/local.csr</codeblock>В
+                    этой команде параметр [CompanyName] — название эксплуатирующей
+                    организации.</info>
+                <stepxmp>Для эксплуатирующей организации CyberLympha команда будет выглядеть
+                    следующим образом:
+                    <codeblock>openssl req -new -key /opt/itm-k/env/nginx/certs/nginx.key \
+-subj "/C=RU/L=UDV/O=CyberLympha/OU=CLITM/CN=$hn" -out /opt/itm-k/env/nginx/certs/local.csr</codeblock></stepxmp>
+            </step>
+            <step>
+                <cmd>Создайте файл с параметрами, которые будут использоваться при генерации
+                    сертификата:</cmd>
+                <info>
+                    <codeblock>echo -e "basicConstraints=CA:FALSE\nsubjectAltName = @alt_names\n\n[alt_names]\nDNS.1 = $hn" > /opt/itm-k/env/nginx/certs/local.ext</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Сгенерируйте сертификат для доступа к веб-интерфейсу <abbreviated-form
+                        keyref="udv_itm_k"/>: </cmd>
+                <info>
+                    <codeblock>openssl x509 -req -in /opt/itm-k/env/nginx/certs/local.csr -CA /opt/itm-k/env/nginx/certs/local_ca.crt \
+-CAkey /opt/itm-k/env/nginx/certs/local_ca.key -CAcreateserial -out /opt/itm-k/env/nginx/certs/nginx.crt \
+-days 3650 -sha256 -extfile /opt/itm-k/env/nginx/certs/local.ext</codeblock>
+                </info>
+                <info>Введите пароль ключа <codeph>local_ca.key</codeph>.</info>
+            </step>
+            <step>
+                <cmd>Удалите лишние файлы:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-k/env/nginx/certs &amp;&amp; rm -f local.csr local.ext local_ca.pem local_ca.srl</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Измените права на ключ сертификата:</cmd>
+                <info>
+                    <codeblock>chmod 644 /opt/itm-k/env/nginx/certs/nginx.key</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Запустите <abbreviated-form keyref="udv_itm_k"/>: </cmd>
+                <info>
+                    <codeblock>cd /opt/itm-k &amp;&amp; docker-compose up -d</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,106 @@
+.nopdf {
+	display: none;
+}
+@font-face {
+    font-family: Montserrat; /* Имя шрифта */
+    src: url(resources/fonts/Montserrat.ttf); /* Путь к файлу со шрифтом */
+   }
+
+/*Версия!*/
+*[class ~= "front-page/front-page-title"]:after(1) 
+{
+    display:block;
+	white-space:pre;
+   
+	color:grey;
+	font-family: "Montserrat";
+	font-size:20px;
+    text-align:left;
+	padding-top:10px;
+}
+
+*[class ~= "front-page/front-page-title"]{
+	 
+ 
+ color:white!important;
+  font-size:20pt;
+  margin-left:13px;
+  font-family:"Montserrat";
+  line-height: 1.2;
+  text-align: justify; 
+  
+}
+/*************************************************/
+*[class ~= "front-page/front-page-title"]{
+ 
+ padding-bottom:10px;
+ 
+ /*Для УЦСБ*/
+ 
+ padding-top:330px;	
+ padding-left:68px;
+
+ /*Для CL*/
+ 
+ /*padding-top:600px;	
+ padding-left:4px;*/
+ 
+ /*для UDV*/
+/*  	padding-left:30px;
+	padding-top:220px;
+*/
+ 
+  padding-right:50px;
+  line-height: 1.2;
+  font-size:30px;
+  font-family: "Montserrat";
+  color:white!important;
+  text-align:left;
+}
+/*Заголовки*/
+
+*[class ~= "front-page/front-page-title"] .booktitlealt {
+    display:block;
+	/*Для УЦСБ и UDV*/
+	color:white;
+	/*Для CL*/
+	/*color: #142d46;*/
+	
+	font-size:30px;
+    text-align:left;
+	font-family:"Montserrat";
+	margin-top:10px;
+}
+
+.html{
+	display: none;
+}
+/*Для УЦСБ*/
+
+.udvpdf{
+	display: none;
+}
+.onlypdf{
+	display: inline;
+}
+
+/*Для UDV */
+/*  
+.udvpdf{
+	display: inline;
+}
+
+.onlypdf{
+	display: none;
+}
+*/
+/*Настройка отступов для списков в ячейках таблиц*/
+td > ol > li, td > ul > li {
+	padding-left:1px;
+	margin-left:15px;
+}
+/*Настройка отступов для списков внутри списков в ячейках таблиц*/
+ td > ol > li > ul > li, td > ul > li > ul > li {
+	padding-left:1px;
+	margin-left:10px;
+ }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_config_change_user">
+    <title>Управление учетной записью пользователя</title>
+    <taskbody>
+        <context>
+            <p>Управление учетными записями пользователей может осуществляться на странице <cite
+                    keyref="itm_m_page_configuration"/> → <cite keyref="itm_m_page_config_users"/>.
+                Возможности для управления учетной записью пользователя:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Изменение учетной записи. Доступно только пользователям с ролью
+                    «Администратор». Для изменения:</cmd>
+                <substeps id="substeps_jtw_ytf_ptb">
+                    <substep>
+                        <cmd>Выполните одно из действий:</cmd>
+                        <info>
+                            <ul id="ol_lrv_vzw_3xb">
+                                <li>Для изменения своей учетной записи нажмите на кнопку <image
+                                        href="../../../images/ITM_M_icons/itmm_user.png"
+                                        id="image_shn_b1x_3xb"/> («Перейти в профиль пользователя»)
+                                    в нижнем левом углу главного меню.</li>
+                                <li>Для изменения учетной записи другого пользователя нажмите на
+                                    кнопку «Изменить» в окне просмотра свойств для этого
+                                    пользователя или на кнопку <image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                                        id="image_wjr_l1x_3xb"/> в строке с учетной записью.</li>
+                            </ul>
+                        </info>
+                        <stepresult>Появится окно «Изменение свойств пользователя».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените необходимые вам значения полей.</cmd>
+                        <info>При этом осуществляется проверка значений в полях формы и, в случае
+                            ошибок, выводится информация об ошибках рядом с каждым полем.</info>
+                        <info>
+                            <fig>
+                                <title>Изменение свойств учетной записи пользователя</title>
+                                <image href="../../../images/ITM_M_screens/ITM_M_change_user.png"/>
+                            </fig>
+                            <p/>
+                            <fig id="fig_zmv_b5f_ptb">
+                                <title>Изменение свойств учетной записи пользователя LDAP</title>
+                                <image
+                                    href="../../../images/ITM_M_screens/ITM_M_change_user_LDAP.png"
+                                    id="image_anv_b5f_ptb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Сохранить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Блокировка пользователя. Для блокировки:</cmd>
+                <substeps id="substeps_klp_35f_ptb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Изменить» в окне просмотра свойств или на кнопку
+                                <image href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                                id="image_nv2_lvf_ptb"/> в строке с учетной записью.</cmd>
+                        <stepresult>Появится окно «Изменение свойств пользователя».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Заблокировать пользователя» <image
+                                href="../../../images/ITM_M_icons/itmm_block.png"
+                                id="image_p4m_y5f_ptb"/> ;</cmd>
+                        <stepresult>Статус учетной записи сменится на «Заблокирован». Открытые
+                            сессии заблокированного пользователя будут удалены. При попытке
+                            авторизации появится сообщение об ошибке «Пользователь
+                            заблокирован».</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Разблокировка пользователя. Для разблокировки:</cmd>
+                <substeps id="substeps_xww_r43_bvb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Изменить» в окне просмотра свойств или на кнопку
+                                <image href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                                id="image_isj_s43_bvb"/> в строке с учетной записью.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Разблокировать пользователя» <image
+                                href="../../../images/ITM_M_icons/itmm_unblock.png"
+                                id="image_ifj_543_bvb"/> ;</cmd>
+                        <stepresult>Статус учетной записи сменится на «Активен». Станет доступна
+                            авторизация с использованием этой учетной записи.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Удаление пользователя. Для удаления:</cmd>
+                <substeps id="substeps_q4m_4vf_ptb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Изменить» в окне просмотра свойств или на кнопку
+                                <image href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                                id="image_ex5_4vf_ptb"/> в строке с учетной записью.</cmd>
+                        <stepresult>Появится окно «Изменение свойств пользователя».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Удалить». </cmd>
+                        <info>После нажатия на кнопку выводится окно подтверждения удаления учетной
+                            записи. <fig id="fig_ssv_tvf_ptb">
+                                <title>Окно подтверждения удаления учетной записи</title>
+                                <image href="../../../images/ITM_M_screens/ITM_M_delete_user.png"
+                                    id="image_tsv_tvf_ptb"/>
+                            </fig></info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Удалить» в окне подтверждения.</cmd>
+                        <stepresult>Учетная запись будет удалена, при этом открытые сессии
+                            пользователя будут завершены.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

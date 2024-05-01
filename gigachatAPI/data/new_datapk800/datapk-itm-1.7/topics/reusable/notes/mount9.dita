@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zjf_x2p_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_akf_x2p_psb">
+                <cmd>Просмотрите файловые системы и UUID в системе одним из следующих способов:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>с помощью команды <codeph>lsblk -f</codeph>:</cmd>
+                        <stepresult><fig><title>Результат работы команды lsblk -f</title><image href="../../../images/ITM-M_2tomes/mount_lsblk.png"/></fig></stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>с помощью команды <codeph>blkid</codeph>:</cmd>
+                        <stepresult><fig><title>Результат работы команды blkid</title><image href="../../../images/ITM-M_2tomes/mount_blkid.png"/></fig></stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

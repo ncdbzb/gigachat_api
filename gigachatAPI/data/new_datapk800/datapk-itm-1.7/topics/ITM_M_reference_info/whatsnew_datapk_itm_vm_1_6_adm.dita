@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="whatsnew_datapk_itm_vm_1_6_adm">
+    <title>Что нового?</title>
+    <body>
+        <p>Основные изменения в ПО сервера <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+        /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+            outputclass="html"><term keyref="datapk_itm_vm"/></ph> v. 1.6.0:</p>
+        <p>
+            <ul id="ul_ucn_bbr_qxb">
+                <li>Новый раздел «Журнал событий», в журнале фиксируются:<ul id="ul_y5c_dbr_qxb">
+                        <li>события о подключении, изменении подключения и удаления подключения
+                            сервера мониторинга к <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                            /></ph>;</li>
+                        <li>события, связанные с учетными записями пользователей <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_vm"/></ph>;</li>
+                        <li>события, связанные с информацией и сервере <ph outputclass="udvpdf"
+                                    ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_vm"/></ph>;</li>
+                        <li>события о проблемах с подключенные серверов мониторинга.</li>
+                    </ul></li>
+            </ul>
+            <ul id="ul_wcn_bbr_qxb">
+                <li>Раздел «Панель информации»:<ul id="ul_n4k_nbr_qxb">
+                        <li>новые графики: общее количество объектов мониторинга по
+                            проблемности;</li>
+                        <li>выбор серверов мониторинга (филиал и ТО) для просмотре данных на
+                            графиках.</li>
+                    </ul></li>
+            </ul>
+            <ul id="ul_ycn_bbr_qxb">
+                <li>Настройки:<ul id="ul_w2m_4br_qxb">
+                        <li>возможность полностью удалять ранее добавленные настройки подключения к
+                            LDAP и SMTP-серверам;</li>
+                        <li>отключение email-оповещений;</li>
+                        <li>настройка периода хранения журнала событий.</li>
+                    </ul></li>
+            </ul>
+            <ul id="ul_adn_bbr_qxb">
+                <li>Общие улучшения интерфейса и детализации информации в других разделах.</li>
+            </ul>
+        </p>
+        <p>Более подробная информация об изменениях указана в таблице ниже.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_jn1_qwx_z5b">
+                <title>Изменения <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> в версии
+                    1.6.0.0</title>
+                <tgroup cols="3">
+                    <colspec colname="c3" colnum="1" colwidth="1*"/>
+                    <colspec colname="c1" colnum="2" colwidth="1*"/>
+                    <colspec colname="c2" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Категория</entry>
+                            <entry>Изменения в продукте</entry>
+                            <entry>Разделы документации</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row id="ITM-757_ITM-881_ITM-931_ITM-759_ITM-778_ITM-779">
+                            <entry>Совместимость</entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/changelog_1_6/ITM-1027.dita#ITM_1027/p_ITM_1027"
+                                />
+                            </entry>
+                            <entry><xref href="itmvm_datapkitm_versions.dita"/></entry>
+                        </row>
+                        <row>
+                            <entry>Серверы мониторинга</entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/changelog_1_6/ITM-1232.dita#ITM_1232/p_ITM-1232"
+                                />
+                            </entry>
+                            <entry><xref href="../ITM_M_troubleshooting/troubleshooting.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Скрипты, переменные</entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/changelog_1_6/ITM-1250.dita#ReusableComponent_glg_wfd_lxb/p_hlg_wfd_lxb"
+                                />
+                            </entry>
+                            <entry><xref href="../ITM_M_reference_info/itm_m_env.dita"/></entry>
+                        </row>
+                        <row>
+                            <entry>SIEM</entry>
+                            <entry>
+                                <div
+                                    conref="../reusable/changelog_1_6/ITM-1199.dita#ReusableComponent_c3j_lwc_nxb/div_e3j_lwc_nxb"
+                                />
+                            </entry>
+                            <entry><xref href="../ITM_M_reference_info/siem_objects.dita"/></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

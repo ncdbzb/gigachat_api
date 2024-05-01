@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xsd_hvn_y5b">
+    <title></title>
+    <body id="body_ysd_hvn_y5b">
+        <p>Настройте права доступа на чтение для группы (community) public <ph
+                conref="../protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+            />v1, <ph conref="../protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"/> или 
+            <ph conref="../protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"/> в зависимости от версии, поддерживаемой оборудованием. В
+            качестве имени community, вместо public можно использовать другое значение, в
+            зависимости от настроек оборудования.</p>
+        <p>Если данное устройство подключено к DATAPK, то синхронизатор будет брать уже заведенное в
+            DATAPK имя community и передавать его для сбора данных в <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. Во избежание
+            расхождений в настройках рекомендуется использовать имя community, которое было заведено
+            в DATAPK для сбора данных по <ph
+                conref="../protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"/>.
+            Если для данного устройства в DATAPK сбор данных осуществлялся по <ph conref="../protocol_names/SSH.dita#ReusableComponent_ujf_ttf_4yb/ph_vjf_ttf_4yb"/>, то в <ph
+                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                /></ph> можно использовать любое имя community.</p>
+        <p>Подробная настройка <term keyref="monitoring_object">объектов мониторинга</term> в веб-интерфейсе описана в разделе 
+            <xref href="../../usage/monitoring_objects_and_hosts/monitoring_objects_hosts.dita">«Объекты мониторинга. Узлы сети»</xref>.</p>
+    </body>
+</topic>

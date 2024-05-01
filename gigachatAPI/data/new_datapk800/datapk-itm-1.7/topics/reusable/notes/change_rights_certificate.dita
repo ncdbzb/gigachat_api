@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hxw_mst_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step>
+            <cmd/>
+            <substeps>
+                <substep id="step_ixw_mst_tsb">
+                    <cmd>В случае установки на РЕД ОС 7.3 измените права на ключ сертификата:</cmd>
+                    <info>
+                        <codeblock>chmod 644 env/nginx/certs/nginx.key</codeblock>
+                    </info>
+                </substep>
+            </substeps>           
+        </step>
+        </steps>
+    </taskbody>
+</task>

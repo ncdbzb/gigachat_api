@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lhp_jt5_tvb">
+    <title></title>
+    <taskbody>
+        <steps id="steps_ohp_jt5_tvb"><step><cmd>Включите контейнеры docker:</cmd><info><codeblock>docker-compose up -d</codeblock><note>На данном этапе в контейнере zabbix-server может быть ошибка «DB_SERVER_HOST: 172.16.238.1 &lt;...> PostgreSQL server is not available. Waiting 5 seconds...».</note></info></step><step><cmd>Проверьте порты базы данных командой:</cmd><info><codeblock>lsof -i -P -n</codeblock></info><stepresult>в списке, полученном в результате работы команды, не будет сокета для 172.16.238.1.</stepresult></step><step><cmd>Перезапустите СУБД:</cmd><info><codeblock>systemctl restart jatoba-1</codeblock></info><stepresult>Будет добавлен сокет для 172.16.238.1.</stepresult></step></steps></taskbody>
+</task>

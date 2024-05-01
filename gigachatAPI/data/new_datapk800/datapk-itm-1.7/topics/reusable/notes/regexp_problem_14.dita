@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_oyv_qq1_xrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_pyv_qq1_xrb">
+                <cmd>Выберите правило, в которое были добавлены регулярные выражения.</cmd>
+                <stepxmp>«Обнаружение сетевого интерфейса».</stepxmp>
+                <stepresult>Произойдет переход к настройкам правила. 
+                    <fig id="fig_l1x_gwr_vrb">
+                        <title>Настройки правила обнаружения</title>
+                        <image href="../../../images/first_configuration/regexp_detection_rules.png" />
+                    </fig>
+                </stepresult>
+            </step>
+        </steps>  
+    </taskbody>
+</task>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_grp_svk_trb">
+    <title>ZBX_TLSPSKFILE info</title>
+    <body><div id="div_hrp_svk_trb"><p>Абсолютный путь к файлу, который содержит pre-shared ключ агента. Значение переменной
+                используется для зашифрованных соединений с сервером.</p></div></body>
+</topic>

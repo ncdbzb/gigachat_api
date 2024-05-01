@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="unavailable_agents">
+    <title>Действия при недоступности агентов</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_s3y_3b1_gsb">
+                <li><xref href="agent_dropped_access_permissions.dita"/></li>
+                <li><xref href="connection_refused.dita"/></li>
+                <li><xref href="connection_reset_by_peer.dita"/></li>
+                <li><xref href="cannot_connect_to_timeout.dita"/></li>
+                <li><xref href="itm_k_interrupted_sys_call.dita"/></li>
+                <li><xref href="invalid_syntax_itm_k.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

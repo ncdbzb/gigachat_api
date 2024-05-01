@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_bdd_stt_hvb">
+    <title></title>
+    <body><note id="note_cdd_stt_hvb">Закомментированные переменные (перед которыми стоит символ «#»)
+            используются системой со значениями по умолчанию, указанными в таблице. Чтобы изменить
+            значение переменной, необходимо ее раскомментировать, убрав символ «#».</note></body>
+</topic>

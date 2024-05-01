@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="trigger_stop">
+    <title>Отключение триггера</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для отключения триггера:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Для всех <abbreviated-form keyref="monitoring_object"/>:</cmd>
+                <substeps id="substeps_hyq_dkl_hvb">
+                    <substep>
+                        <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite keyref="templates"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на имя шаблона, для которого нужно отключить триггер.</cmd>
+                        <stepresult>Откроется страница редактирования шаблона.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Триггеры». </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В строке с нужным триггером в столбце «Состояние» нажмите на
+                            «Активировано» для изменения статуса на противоположный.</cmd>
+                        <stepresult>Состояние триггера сменится на «Деактивировано».</stepresult>
+                    </substep>
+                </substeps>
+                <stepresult>Отключенный триггер перестанет срабатывать для всех <abbreviated-form
+                        keyref="monitoring_object"/>, использующих измененный шаблон.</stepresult>
+            </step>
+            <step>
+                <cmd>Для одного или нескольких <abbreviated-form keyref="monitoring_object"/>:</cmd>
+                <substeps id="substeps_jyr_skl_hvb">
+                    <substep>
+                        <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                                keyref="hosts"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на имя узла сети, для которого нужно отключить триггер.</cmd>
+                        <stepresult>Откроется страница редактирования узла сети.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Триггеры». </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В строке с нужным триггером в столбце «Состояние» нажмите на
+                            «Активировано» для изменения статуса на противоположный.</cmd>
+                        <stepresult>Состояние триггера сменится на «Деактивировано».</stepresult>
+                    </substep>
+                </substeps>
+                <stepresult>Отключенный триггер перестанет срабатывать для измененного узла
+                    сети.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

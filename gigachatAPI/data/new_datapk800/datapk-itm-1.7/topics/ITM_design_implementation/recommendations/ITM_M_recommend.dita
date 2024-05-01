@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ITM_M_recommend">
+    <title>Подготовка к внедрению и внедрение сервера визуализации и управления ITM-VM</title>
+
+    <taskbody>
+        <context>Состав работ по подготовке к внедрению и внедрению сервера визуализации и
+            управления DATAPK ITM-VM:</context>
+        <steps>
+            <step>
+                <cmd>Проектирование решения.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Выбор сетевого размещения сервера с учетом сетевой доступности к
+                            серверам DATAPK ITM-K и смежным системам.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выбор оптимальной аппаратной и программной конфигурации серверов с
+                            учетом количества подключаемых серверов DATAPK ITM-K и количества
+                            ОМ.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Монтаж и настройка:</cmd>
+                <substeps id="substeps_n3d_w2z_ctb">
+                    <substep>
+                        <cmd>Монтаж и пусконаладка сервера.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Настройка сетевого окружения для обеспечения сетевой доступности к
+                            серверам DATAPK ITM-K и смежным
+                            системам.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Подключение серверов DATAPK ITM-K.</cmd>
+            </step>
+            <step>
+                <cmd>Настройка интеграций со смежными системами.</cmd>
+            </step>
+        </steps>
+        <postreq>Описание операций по настройкам приведено в Руководствах по эксплуатации.</postreq>
+    </taskbody>
+</task>

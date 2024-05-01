@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ghz_kdh_zsb">
+    <title></title>
+    <taskbody>
+    <steps>
+        <step id="step_ihz_kdh_zsb">
+            <cmd>Запустите docker и добавьте службу в автозагрузку:</cmd>
+            <info><codeblock>systemctl enable --now docker</codeblock></info>
+        </step>
+    </steps>    
+    </taskbody>
+</task>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации DATAPK ITM-K</mainbooktitle>
+    </booktitle>
+    <bookmeta>
+        <bookrights>
+            <copyrfirst><year>2021</year></copyrfirst>
+            <copyrlast><year>2023</year></copyrlast>
+            <bookowner><organization>ООО «СайберЛимфа»</organization></bookowner>
+        </bookrights>
+    </bookmeta>
+    <chapter href="topics/reference_info/glossary/topics_glossary.dita" />
+    <chapter href="topics/introduction/itm_k_whats_new.dita" collection-type="sequence">
+        <topicref href="topics/introduction/itm_k_whatsnew_doc.dita"/>
+    </chapter>
+    <chapter href="topics/introduction/introduction.dita" collection-type="sequence">
+        <mapref href="topics/introduction/introduction.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/certification/certification_datapk_itm_k.dita" collection-type="sequence">
+        <topicref href="topics/certification/certification_datapk_itm_k.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/requirements_main_itm_k.dita" collection-type="sequence">
+        <topicref href="topics/requirements/requirements_main.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/usage/usage.dita" collection-type="sequence">
+        <mapref href="topics/usage/usage.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/emergency_actions/DB_backup_and_restore/DB_backup_and_restore.dita" collection-type="sequence">
+        <topicref href="topics/emergency_actions/DB_backup_and_restore/data_backup.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/emergency_actions/emergency_actions.dita" collection-type="sequence">
+        <mapref href="topics/emergency_actions/emergency_actions.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_K_reference_info/itm_k_reference_info.dita" collection-type="sequence">
+        <topicref href="topics/ITM_K_reference_info/itm_k_reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/itm_k_changelog.dita"/>
+</bookmap>

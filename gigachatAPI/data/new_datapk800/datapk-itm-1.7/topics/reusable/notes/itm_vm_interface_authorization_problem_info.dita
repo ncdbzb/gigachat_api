@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_s5g_qvc_zwb">
+    <title></title>
+    <body id="body_t5g_qvc_zwb"><p>В этом разделе рассматриваются следующие нештатные ситуации, при которых не удается зайти в веб-интерфейс <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> с корректными учетными данными:<ul id="ul_fm3_b43_5wb"><li><xref href="../../ITM_M_troubleshooting/itm_vm_cant_autorize_secret_key.dita"/></li><li><xref href="../../ITM_M_troubleshooting/ITM-M_web_interface_unavailable.dita"/></li><li><xref href="../../ITM_M_troubleshooting/security_profile_itm_vm.dita"/></li></ul></p></body>
+</topic>

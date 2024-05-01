@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Untitled">
+    <title>Создание учетной записи локального пользователя</title>
+    
+    <taskbody>
+        <context>Для создания учетной записи пользователя:</context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_page_config_users"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Добавить пользователя» над списком пользователей.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне выберите вариант «Создать локального пользователя».</cmd>
+            </step>
+            <step>
+                <cmd>Заполните следующие поля:</cmd>
+                <info>
+                    <ul id="ul_z4v_cvl_4tb">
+                        <li>«Логин»;</li>
+                        <li>«Пароль»; <note
+                                conref="../../reusable/notes/password_politics.dita#ReusableComponent_qnm_kvf_rvb/note_rnm_kvf_rvb"
+                            />
+                            <note
+                                conref="../../reusable/notes/password_note.dita#ReusableComponent_bbx_sy3_qrb/note_ebx_sy3_qrb"
+                            />
+                        </li>
+                       
+                        <li>«Подтверждение пароля»;</li>
+                        <li>«Роль пользователя».<note>Подробнее см. в разделе <xref
+                                    href="../../ITM_M_reference_info/itmm_roles.dita"/>.</note></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>При необходимости заполните поля:</cmd>
+                <info>
+                    <ul>
+                        <li>«ФИО»; </li>
+                        <li>«Email»;</li>
+                        <li>«Подразделение».</li>
+                    </ul>
+                    <fig id="fig_l34_gvl_4tb">
+                        <title>Добавление локального пользователя</title>
+                        <image href="../../../images/ITM_M_screens/ITM_M_add_user.png"
+                            id="image_m34_gvl_4tb"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Сохранить». </cmd>
+                <info>При вводе данных и нажатии на кнопку «Сохранить» выполняется проверка
+                    корректности значений в полях формы и, в случае ошибок, выводятся ошибки рядом с
+                    каждым полем.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

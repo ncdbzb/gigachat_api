@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_c4m_trb_5tb">
+    <title></title>
+    <body><p id="p_d4m_trb_5tb">Разделяемая память для хранения данных VMware. Можно использовать внутренние
+            проверки VMware — zabbix[vmware,buffer,…] для мониторинга использования кэша VMware.
+            Разделяемая память не выделяется, если экземпляры VMware коллекторов настроены на
+            запуск.</p></body>
+</topic>

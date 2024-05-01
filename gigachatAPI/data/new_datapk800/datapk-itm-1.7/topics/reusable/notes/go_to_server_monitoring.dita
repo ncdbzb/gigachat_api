@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jf4_nh2_vsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_kf4_nh2_vsb">Перейдите на страницу <cite keyref="itm_m_page_server_monitoring"/>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

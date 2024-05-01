@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gcq_vwc_vvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_hcq_vwc_vvb">
+                <cmd>Убедитесь, что контейнеры выключены:</cmd>
+                <info><codeblock>docker ps</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

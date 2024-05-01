@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lrk_xhz_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_mrk_xhz_tsb">
+            <cmd>Настройте лицензию Jatoba. Для этого:</cmd>
+            <substeps id="substeps_oyf_dcz_tsb"><substep>
+                        <cmd>Откройте файл <codeph
+                                conref="../filepath/postgresql_conf.dita#ReusableComponent_jvp_3wd_yrb/codeph_mvp_3wd_yrb"
+                            />:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/postgresql.conf</codeblock>
+                            <note
+                                conref="note_direction.dita#ReusableComponent_cdt_f2t_4sb/note_ddt_f2t_4sb"
+                            />
+                        </info>
+                    </substep>
+                
+                <substep>
+                        <cmd>В конце конфигурационного файла, в разделе «LICENSER OPTION AND
+                            PARAMETRS» отредактируйте и раскомментируйте строки, убрав символ
+                            «#»:</cmd>
+                        <info>
+                            <codeblock>lic_product_name = 'Jatoba'
+lic_file_path = '/usr/jatoba-1/bin/jatoba.cer'
+lic_server_addr = 'https://license.gaz-is.ru'</codeblock>
+                        </info>
+                    </substep>
+                <substep conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                    <cmd/>
+                </substep>
+            </substeps>
+        </step>
+        </steps>
+    </taskbody>
+</task>

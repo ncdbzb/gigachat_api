@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="astra_linux_install">
+    <title>Установка ОС Astra Linux</title>
+    <taskbody>
+        <context>
+            <p>Для установки операционной системы Astra Linux:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Подключите ISO-образ операционной системы. </cmd>
+                <stepresult>окно установки откроется автоматически или по нажатию любой клавиши. </stepresult>
+            </step>
+            <step>
+                <cmd>Выберите язык «Русский» и пункт меню «Установка» и нажмите клавишу «Enter». </cmd>
+                <info>
+                    <fig>
+                        <title>Окно установки</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_installation_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Лицензия».</stepresult>
+            </step>
+            <step>
+                <cmd>Прочитайте лицензионное соглашение и нажмите «Да», чтобы согласиться с
+                    условиями использования.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Лицензия»</title>
+                        <image href="../../images/ITM_K_requirements/Astra/astra_license_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Настройка клавиатуры».</stepresult>
+            </step>
+            <step>
+                <cmd>Установите способ переключения раскладки «Alt+Shift» и нажмите клавишу «Enter»
+                    для применения настроек.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Настройка клавиатуры»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_keyboard_config_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Настройка сети».</stepresult>
+            </step>
+            <step>
+                <cmd>Введите имя компьютера и нажмите «Продолжить».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Настройка сети»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_net_configuration_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Настройка учетных записей пользователей и
+                    паролей»</stepresult>
+            </step>
+            <step>
+                <cmd>В окне «Настройка учетных записей пользователей и паролей»:</cmd>
+                <substeps id="substeps_knx_kwd_2xb">
+                    <substep>
+                        <cmd>Введите имя учетной записи администратора «datapkitm» и нажмите
+                            «Продолжить». </cmd>
+                        <info>
+                            <fig>
+                                <title>Окно «Настройка учётных записей пользователей и
+                                    паролей»</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_login_config_window.png"
+                                    id="image_xch_mwd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Введите пароль для нового администратора и нажмите «Продолжить».</cmd>
+                        <info>
+                            <fig>
+                                <title>Окно ввода пароля</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_password_config_window.png"
+                                    id="image_bdr_4wd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Подтвердите пароль и нажмите «Продолжить».</cmd>
+                        <info>
+                            <fig>
+                                <title>Окно подтверждения пароля</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_password_2_config_window.png"
+                                    id="image_p5t_qwd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>появится окно «Настройка времени».</stepresult>
+            </step>
+            <step>
+                <cmd>Выберите необходимый часовой пояс и нажмите клавишу «Enter».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Настройка времени»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_time_configuration_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Разметка дисков».</stepresult>
+            </step>
+            <step>
+                <cmd>В окне «Разметка дисков»:</cmd>
+                <substeps id="substeps_qz5_vwd_2xb">
+                    <substep>
+                        <cmd>Выберите пункт «Авто — использовать весь диск и настроить LVM» и
+                            нажмите клавишу «Enter».</cmd>
+                        <info>
+                            <fig>
+                                <title>Метод разметки дисков</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_method_disk_lvm.png"
+                                    id="image_xzy_wwd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Выберите диск, на который необходимо установить ОС, и нажмите клавишу
+                            «Enter».</cmd>
+                        <info>
+                            <fig>
+                                <title>Выбор диска для разметки</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_choose_disk.png"
+                                    id="image_c1x_1xd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>В качестве схемы разметки выберите «Все файлы в одном разделе», так как
+                                <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph> не использует
+                            раздел <codeph>/home</codeph> для хранения информации. Нажмите клавишу
+                            «Enter». </cmd>
+                        <info>
+                            <fig>
+                                <title>Выбор схемы разметки дисков</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_choose_disk_shema.png"
+                                    id="image_wlm_dxd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Да» для подтверждения изменений и записи информации
+                            на диск.</cmd>
+                        <info>
+                            <fig>
+                                <title>Подтверждение изменений разметки дисков</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_confirm_disk_changes.png"
+                                    id="image_szg_hxd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Ознакомьтесь с применяемыми настройками. Для подтверждения выбора
+                            нажмите кнопку «Закончить разметку и записать изменения на диск».</cmd>
+                        <info>
+                            <fig>
+                                <title>Просмотр разметки дисков</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_look_disk.png"
+                                    id="image_tzr_xxd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите «Да» для повторного подтверждения изменений.</cmd>
+                        <info>
+                            <fig>
+                                <title>Запись изменений на диск</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_write_changes_disk.png"
+                                    id="image_ptn_zxd_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>появится окно «Установка базовой системы».</stepresult>
+            </step>
+            <step>
+                <cmd>Выберите ядро операционной системы, которое будет установлено. </cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Установка базовой системы»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_basic_system_installation_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Выбор программного обеспечения».</stepresult>
+            </step>
+            <step>
+                <cmd>С помощью клавиши «Пробел» отметьте устанавливаемое программное обеспечение и
+                    нажмите «Продолжить».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Выбор программного обеспечения»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_choose_software_window.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно «Дополнительные настройки ОС».</stepresult>
+            </step>
+            <step>
+                <cmd>Выберите необходимый уровень защищенности устанавливаемой системы.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Дополнительные настройки ОС»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_os_extra_settings_window.png"
+                        />
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В окне «[!!] Дополнительные настройки ОС» выбирать параметры не нужно. Нажмите
+                    на кнопку «Продолжить».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «[!!] Дополнительные настройки ОС»</title>
+                        <image href="../../images/ITM_K_requirements/Astra/astra_os_extra_settings_window2.png"/>
+                    </fig>
+                </info>
+                <stepresult>откроется окно «Установка системного загрузчика GRUB на жесткий
+                    диск».</stepresult>
+            </step>
+            <step>
+                <cmd>В окне «Установка системного загрузчика GRUB на жесткий диск»: </cmd>
+                <substeps id="substeps_umf_cd2_2xb">
+                    <substep>
+                        <cmd>Нажмите «Да», чтобы подтвердить установку GRUB в главную загрузочную
+                            запись.</cmd>
+                        <info>
+                            <fig>
+                                <title>Окно «Установка системного загрузчика GRUB на жесткий
+                                    диск»</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_grub_installation_window.png"
+                                    id="image_gg3_dd2_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Введите пароль для системного загрузчика GRUB и нажмите
+                            «Продолжить».</cmd>
+                        <info>
+                            <fig>
+                                <title>Ввод пароля для GRUB</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_grub_password.png"
+                                    id="image_s5q_2d2_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Подтвердите пароль для загрузчика GRUB и нажмите «Продолжить».</cmd>
+                        <info>
+                            <fig>
+                                <title>Подтверждение пароля для GRUB</title>
+                                <image
+                                    href="../../images/ITM_K_requirements/Astra/astra_grub_password2.png"
+                                    id="image_cq4_gd2_2xb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>появится окно «Завершение установки».</stepresult>
+            </step>
+            <step>
+                <cmd>Нажмите «Продолжить» для перезагрузки системы.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Завершение установки»</title>
+                        <image
+                            href="../../images/ITM_K_requirements/Astra/astra_finish_installation.png"
+                        />
+                    </fig>
+                </info>
+                <stepresult>появится окно входа в систему.</stepresult>
+            </step>
+            <step>
+                <cmd>Введите имя пользователя и пароль для учетной записи.</cmd>
+                <info>
+                    <fig>
+                        <title>Первый вход в систему</title>
+                        <image href="../../images/ITM_K_requirements/Astra/astra_first_login.png"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

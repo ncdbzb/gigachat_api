@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ghf_bmm_trb">
+    <title>zbx_listenip_note</title>
+    <body><div id="div_hhf_bmm_trb"><note>Если значение переменной не указано, траппер будет слушать все сетевые
+        интерфейсы.</note></div></body>
+</topic>

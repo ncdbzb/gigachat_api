@@ -3,17 +3,21 @@ import nltk.translate.bleu_score as bleu
 import warnings
 
 
-from gigachatAPI.sentence_bleu.bleu_config import references
-
-
-def get_bleu_score(candidate: str, prepared_question: str):
+def get_bleu_score(candidate_question: str, right_answer: str) -> float:
+    """
+    Выводит степень схожести проверяемого ответа с заведомо правильным ответом 
+    
+    :param candidate_question: Ответ, который нужно проверить
+    :param right_answer: Правильный ответ
+    :return: blue score
+    """
     try:
         nltk.data.find('tokenizers/punkt')
     except LookupError:
         nltk.download('punkt')
 
-    hyp = candidate.split()
-    ref = references[prepared_question].split()
+    hyp = candidate_question.split()
+    ref = right_answer.split()
 
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")

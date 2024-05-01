@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_njh_wsk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_pjh_wsk_tsb">
+                <cmd>Перейдите в директорию <codeph conref="../filepath/opt_jatoba.dita#ReusableComponent_it1_32s_hrb/codeph_jt1_32s_hrb"/>:</cmd>
+                <info><codeblock>cd /opt/jatoba</codeblock></info>
+            </step>
+        </steps>  
+    </taskbody>
+</task>

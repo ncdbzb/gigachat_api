@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installation_server_datapk_itm_k">
+    <title>Установка сервера консолидации ПК DATAPK ITM-K</title>
+    <taskbody>
+        <context>Для установки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</context>
+        <steps>
+            <step>
+                <cmd>Перейдите в режим командной строки операционной системы, на которой будет
+                    установлен сервер консолидации.</cmd>
+            </step>
+            <step>
+                <cmd>Создайте директорию для установки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                <info><codeblock>mkdir /opt/datapkitm</codeblock></info>
+            </step>
+           
+            <step>
+                <cmd>Скопируйте следующие файлы в директорию <codeph
+                        conref="../../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                    />:</cmd>
+                <info>
+                    <ul id="ul_uzp_cwm_frb">
+                        <li>каталог <codeph>env</codeph> вместе с содержимым;</li>
+                        <li><codeph
+                                conref="../../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                            />;</li>
+                        <li><codeph
+                                conref="../../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                            />;</li>
+                        <li><codeph
+                                conref="../../../reusable/filepath/datapk_itm_k_vl_2_0_0_tar_gzl.dita#ReusableComponent_aqs_gfs_hrb/codeph_bqs_gfs_hrb"
+                            />.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию <codeph
+                        conref="../../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                    />:</cmd>
+                <info>
+                    <codeblock>cd /opt/datapkitm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Загрузите образы в операционную систему, на которой установлен сервер
+                    консолидации:</cmd>
+                <info>
+                    <codeblock>docker load -i datapk_itm-k_[версия_сервера_консолидации].tar.gz</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd
+                    conref="../../../reusable/notes/db_start.dita#ReusableComponent_hpx_kmm_k5b/cmd_kpx_kmm_k5b"/>
+                <substeps>
+                    <substep
+                        conref="../../../reusable/notes/db_su_postgres.dita#ReusableComponent_j41_nmm_k5b/substep_l41_nmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_psql.dita#ReusableComponent_dt3_pmm_k5b/substep_ft3_pmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_change_password.dita#ReusableComponent_df3_tmm_k5b/substep_ff3_tmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_create_user.dita#ReusableComponent_ww1_vmm_k5b/substep_zw1_vmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_check_user.dita#ReusableComponent_z14_wmm_k5b/substep_bb4_wmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_create_db.dita#ReusableComponent_vlf_ymm_k5b/substep_ylf_ymm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_check_db.dita#ReusableComponent_cqc_1nm_k5b/substep_eqc_1nm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_q.dita#ReusableComponent_vfh_cnm_k5b/substep_yfh_cnm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/db_postgres_exit.dita#ReusableComponent_ut2_z4m_k5b/substep_wt2_z4m_k5b">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что адрес подсети контейнеров <cmdname keyref="itm_k_subnet"/> не
+                    используется в вашей инфраструктуре. Для этого:</cmd>
+                <substeps id="substeps_h45_5yl_ysb">
+                    <substep>
+                        <cmd>откройте для редактирования файл
+                            <codeph>/opt/datapkitm/.env</codeph>:</cmd>
+                        <info>
+                            <codeblock>vi /opt/datapkitm/.env</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>найдите и при необходимости измените значение переменной <cmdname
+                                keyref="itm_k_subnet"/>.</cmd>
+                        <info><note>Подробнее про переменную см. в разделе <xref
+                                    href="../../../ITM_K_reference_info/var_tables/env.dita"
+                                />.</note></info>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd
+                    conref="../../../reusable/notes/postgresql_cmd.dita#ReusableComponent_b4x_bhk_tsb/cmd_c4x_bhk_tsb"/>
+                <substeps>
+                    <substep
+                        conref="../../../reusable/notes/postgresql_1.dita#ReusableComponent_oxl_dhk_tsb/substep_qxl_dhk_tsb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>исправьте значения переменных, чтобы они соответствовали представленным
+                            ниже:</cmd>
+                        <info><codeblock>listen_addresses = '127.0.0.1,172.17.0.1'
+port = 10265                          </codeblock>где
+                                <ul id="ul_hc4_fg5_wsb">
+                                <li>127.0.0.1 — локальный IP-адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>;</li>
+                                <li>172.17.0.1 — IP-адрес подсети docker0.</li>
+                            </ul><note>IP-адреса должны быть перечислены через запятую без пробелов. </note>
+                            <note type="tip">Если IP-адрес подсети docker0 уже используется в вашей
+                                инфраструктуре, его нужно изменить. Подробнее см. в разделе <xref
+                                    href="../../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita"
+                                />.</note>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/postgresql_3.dita#ReusableComponent_zwt_hjk_tsb/substep_axt_hjk_tsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что часовой пояс веб-сервера в файле <codeph
+                        conref="../../../reusable/filepath/web_env.dita#ReusableComponent_llr_sfs_hrb/ph_mlr_sfs_hrb"
+                    /> соответствует текущему. Для этого:</cmd>
+                <substeps id="substeps_yv2_fvx_xrb">
+                    <substep>
+                        <cmd>перейдите в режим редактирования файла <codeph
+                                conref="../../../reusable/filepath/web_env.dita#ReusableComponent_llr_sfs_hrb/ph_mlr_sfs_hrb"
+                            />:</cmd>
+                        <info>
+                            <codeblock>vi /opt/datapkitm/env/.web.env</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>найдите переменную <cmdname keyref="php_tz"/>;</cmd>
+                        <info>
+                            <note>По умолчанию значение переменной
+                                <codeph><cmdname keyref="php_tz"/>=Asia/Yekaterinburg</codeph>.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>если значение переменной не соответствует текущему часовому поясу,
+                            измените его;</cmd>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            
+            <step>
+                <cmd>Измените значения переменных файла <codeph>.srv.env</codeph> для оптимизации
+                    работы сервера. Для этого:</cmd>
+                <substeps id="substeps_s52_v1j_jsb">
+                    <substep>
+                        <cmd>перейдите в режим редактирования файла <codeph>.srv.env</codeph>:</cmd>
+                        <info>
+                            <codeblock>vi /opt/datapkitm/env/.srv.env</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>раскомментируйте следующие переменные, убрав символ «#» в начале
+                            строки, и измените их значения:</cmd>
+                        <info>
+                            <ul id="ul_btk_fbj_jsb">
+                                <li><codeph><cmdname keyref="zbx_startpollers"/>=15</codeph> — количество экземпляров
+                                    пре-форков поллеров.</li>
+                                <li><codeph><cmdname keyref="zbx_startpollers_unreachable"/>=10</codeph> — количество
+                                    экземпляров пре-форков поллеров для недоступных узлов сети,
+                                    включая IPMI и Java.</li>
+                                <li><codeph><cmdname keyref="zbx_timeout"/>=10</codeph> — максимальное время ожидания
+                                    ответа от агента, SNMP устройства или внешней проверки в
+                                    секундах.</li>
+                                <li><codeph><cmdname keyref="zbx_startproxypollers"/>=5</codeph> — количество
+                                    экземпляров пре-форков поллеров для работы с пассивными
+                                    серверами агентов.</li>
+                                <li><codeph><cmdname keyref="zbx_proxyconfig_frequency"/>=3600</codeph> — период
+                                    отправки данных конфигурации с сервера консолидации <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>
+                                    на сервер агентов <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> в секундах.</li>
+                                <li><codeph><cmdname keyref="zbx_proxydata_frequency"/>=60</codeph> — период запроса
+                                    данных истории с сервера агентов <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> сервером
+                                    консолидации <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> в секундах.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            
+            <step>
+                <cmd>Измените значения переменных файла <codeph
+                        conref="../../../reusable/filepath/db_env.dita#ReusableComponent_owk_gvd_yrb/codeph_qwk_gvd_yrb"
+                /> для корректного обращения <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> к базе данных. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>перейдите в режим редактирования файла <codeph
+                                conref="../../../reusable/filepath/db_env.dita#ReusableComponent_owk_gvd_yrb/codeph_qwk_gvd_yrb"
+                            />:</cmd>
+                        <info>
+                            <codeblock>vi /opt/datapkitm/env/.db.env</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>измените значения следующих переменных:</cmd>
+                        <info>
+                            <ul>
+                                <li><cmdname keyref="db_server_port"/> — порт СУБД, должен совпадать
+                                    с значением переменной port в файле <codeph
+                                        conref="../../../reusable/filepath/var_lib_jatoba_l_data_postgresql_conf.dita#ReusableComponent_omb_ygs_hrb/codeph_pmb_ygs_hrb"
+                                    />. </li>
+                                <li><cmdname keyref="postgres_user"/> — имя пользователя базы данных
+                                    (например, datapkitm).</li>
+                                <li><cmdname keyref="postgres_password"/> — пароль пользователя.</li>
+                                <li><cmdname keyref="postgres_db"/> — имя базы данных (например,
+                                    datapkitm).</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Настройте разрешения по подключению docker-контейнера и пользователей к базам
+                    данных. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>войдите в режим редактирования файла <codeph
+                                conref="../../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                            /> с помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>при необходимости измените настройки ограничений на подключение
+                            локальных и удаленных пользователей к базам данных:</cmd>
+                        <info>
+                            <ul>
+                                <li><ph
+                                        conref="../../../reusable/notes/find_ipv4_connections.dita#ReusableComponent_cqj_z5c_1sb/ph_fqj_z5c_1sb"
+                                    /></li>
+                                <li><ph
+                                        conref="../../../reusable/notes/db_config_ip.dita#ReusableComponent_r3c_2xc_1sb/ph_s3c_2xc_1sb"/>
+                                    <div
+                                        conref="../../../reusable/notes/db_config_ip1.dita#ReusableComponent_cd2_hxc_1sb/div_dd2_hxc_1sb"
+                                    /></li>
+                            </ul>
+                        </info>
+                    </substep>
+                    
+                    <substep>
+                        <cmd>добавьте следующую строку в раздел «# IPv4 local connections:»</cmd>
+                        <info>
+                            <codeblock>host [имя БД] [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]</codeblock>
+                        </info>
+                        <stepxmp>для базы данных <codeph>datapkitm</codeph>, пользователя БД
+                                <codeph>datapkitm</codeph>, IP-адреса подсети контейнера сервера
+                            консолидации по умолчанию 172.16.239.0/24 и метода аутентификации
+                                <codeph>md5</codeph> строка будет выглядеть следующим образом:
+                            <codeblock>host datapkitm datapkitm 172.16.239.0/24 md5</codeblock></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Закомментируйте строки во всех разделах, кроме «# IPv4 local
+                            connections:» и измените <codeph>ident</codeph> на <codeph>md5</codeph>
+                            в строке <codeph>host all all 127.0.0.1/32 ident</codeph>.</cmd>
+                        <info>
+                            <fig id="fig_safe_installation_redOS_2_7">
+                                <title>Содержимое файла <codeph
+                                        conref="../../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                                    /></title>
+                                <image
+                                    href="../../../../images/safe_installation/pg_hba_conf_ipv4.png"
+                                />
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>При необходимости настройте другие пользовательские значения переменных в файле
+                        <codeph>/opt/datapkitm/.env</codeph> и в конфигурационных файлах из
+                    директории <codeph><ph
+                            conref="../../../reusable/filepath/opt_datapkitm_env.dita#ReusableComponent_dzr_2jf_3rb/ph_ezr_2jf_3rb"
+                        />.</codeph></cmd>
+                <info>
+                    <note>Рекомендуемые и возможные значения переменных приведены в разделе <xref
+                            href="../../../ITM_K_reference_info/var_tables/var_tables.dita"
+                        />.</note>
+                </info>
+            </step>
+            <step
+                conref="../../../reusable/notes/systemctl_restart_jatoba.dita#ReusableComponent_pcm_bqk_1tb/step_tcm_bqk_1tb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Последовательно добавьте в iptables правила, разрешающие использование портов
+                    для приема данных с агентов:</cmd>
+                <info>
+                    <codeblock>iptables -A INPUT -p tcp --dport 10050 -j ACCEPT
+iptables -A INPUT -p tcp --dport 10051 -j ACCEPT</codeblock>
+                </info>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step17.dita#ReusableComponent_qmy_thf_krb/step_rmy_thf_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step18.dita#ReusableComponent_pvm_vhf_krb/step_qvm_vhf_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь в корректности произведенных настроек межсетевого экрана:</cmd>
+                <info><codeblock>iptables -nL</codeblock>   
+                </info>
+                <stepresult>Будут отображены настроенные правила межсетевого экрана. <fig
+                        id="fig_safe_installation_redOS_2_8">
+                        <title>Настроенная цепочка INPUT в межсетевом экране</title>
+                        <image
+                            href="../../../../images/safe_installation/chain_input.png"/>
+                    </fig></stepresult> 
+            </step>
+            <step
+                conref="../../../reusable/notes/iptables_delete_rule.dita#ReusableComponent_qv4_1y2_fsb/step_rv4_1y2_fsb">
+                <cmd/>
+            </step>
+            
+            
+            <step
+                conref="../../../reusable/notes/server_install_step20.dita#ReusableComponent_grs_13f_krb/step_hrs_13f_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step21.dita#ReusableComponent_inr_c3f_krb/step_jnr_c3f_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Сгенерируйте сертификат для входа в веб-интерфейс:</cmd>
+                <info>
+                    <codeblock>domain=127.0.0.1;
+mkdir -p env/nginx/certs;
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout env/nginx/certs/nginx.key -out env/nginx/certs/nginx.crt -subj "/C=RU/CN=$domain/O=USSC"</codeblock>
+                    <p>Где в значении переменной <cmdname keyref="domain"/> нужно указать IP-адрес
+                        сервера вместо значения 127.0.0.1.</p>
+                </info>
+            </step>
+            <step
+                conref="../../../reusable/notes/change_rights_certificate.dita#ReusableComponent_hxw_mst_tsb/step_ixw_mst_tsb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь в корректности значения переменной <cmdname keyref="hostname"
+                    />:</cmd>
+                <substeps id="substeps_tgr_yzn_ytb">
+                    <substep>
+                        <cmd>Выполните команду <codeph>echo <cmdname keyref="hostname"/></codeph>.
+                            Вывод команды должен совпадать с сетевым именем <term
+                                keyref="datapk_itm_k"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните команду <codeph>export</codeph>. Убедитесь, что переменная
+                                <cmdname keyref="hostname"/> присутствует в выводе.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Если переменная отсутствует, то:</cmd>
+                        <info>
+                            <ol id="ol_uy3_l14_ytb">
+                                <li>откройте файл <codeph>/etc/profile</codeph>:
+                                    <codeblock>vi /etc/profile </codeblock></li>
+                                <li>в открывшемся файле допишите строку <codeph>echo <cmdname
+                                            keyref="hostname"/>.</codeph></li>
+                                <li>сохраните файл и выйдите из режима редактирования:
+                                    <codeblock>:wq</codeblock>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step id="step_j5c_gwy_l5b">
+                <cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd>
+                <substeps id="substeps_ysv_2kx_l5b">
+                    <substep
+                        conref="../../../reusable/notes/subd_edit_start.dita#ReusableComponent_ztx_l12_m5b/substep_a5x_l12_m5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/subd_unit.dita#ReusableComponent_kb5_412_m5b/substep_mb5_412_m5b">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>Если база данных хранится на отдельном томе, добавьте после блока
+                            [Unit] блок [Service]:</cmd>
+                        <info><codeblock>[Service]
+Environment=PGDATA=/storage/base                            </codeblock>Где
+                                <codeph>/storage/base</codeph> — путь к базе данных, который был
+                            настроен на шаге <xref
+                                href="../../../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita#itm_k_subd_config/itm_k_set_dir_bd"
+                            /> раздела <xref
+                                href="../../../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita"
+                            />.</info>
+                    </substep>
+                    <substep
+                        conref="../../../reusable/notes/subd_save_changes.dita#ReusableComponent_bk5_r12_m5b/substep_ck5_r12_m5b">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Выполните проверку целостности неизменных исполняемых файлов с использованием
+                    скрипта согласно пункту 14.1.7 документа «УЦЛК.468244.26 30. Формуляр». Порядок
+                    проверки согласно Формуляру:</cmd>
+                <substeps id="substeps_bmr_j3q_ssb">
+                    <substep>
+                        <cmd>Перейдите в рабочую директорию ПК <abbreviated-form keyref="datapk_itm"
+                        />.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Назначьте скрипту <codeph>itm_create_executable_files.sh</codeph> права
+                            на исполнение при помощи команды:</cmd>
+                        <info>
+                            <codeblock>chmod +x itm_create_executable_files.sh</codeblock>
+                            <note>Скрипт <codeph>itm_create_executable_files.sh</codeph>
+                                предназначен для получения копии исполняемых файлов из развернутых
+                                docker-контейнеров ПК <abbreviated-form keyref="datapk_itm"
+                                />.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните запуск скрипта:</cmd>
+                        <info><codeblock>./itm_create_executable_files.sh -o ./execfiles</codeblock>
+                            где execfiles — директория, в которую будет записан результат
+                            (директории с названиями модулей-контейнеров ПК DATAPK, содержащие
+                            только исполняемые файлы).
+                        </info>
+                        
+                    </substep>
+                    <substep>
+                        <cmd>Выполните расчет контрольных сумм файлов дистрибутива и неизменных установленных файлов с использованием ПО «ФИКС-UNIX» согласно инструкции в «УЦЛК.468244.26 30. Формуляр».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Сравните полученные контрольные суммы с эталонными,  приведенными в документе «УЦЛК.468244.26 30. Формуляр».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+    
+    
+    
+    
+    
+</task>

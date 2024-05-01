@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_zhb_vbk_trb">
+    <title>ZBX_DB_CIPHER_LIST_info</title>
+    <body><div id="div_a3b_vbk_trb"><p>Список TLS шифров. Формат списка шифров должен соответствовать стандарту OpenSSL.</p></div></body>
+</topic>

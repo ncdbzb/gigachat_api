@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="mib">
+    <title>Настройка использования дополнительных MIB-файлов</title>
+    <taskbody>
+        <context>
+            <p>Для использования дополнительных MIB-файлов:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите в директорию, где установлен <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>.</cmd>
+            </step>
+            <step>
+                <cmd>Остановите контейнеры docker:</cmd>
+                <info><codeblock>docker-compose down</codeblock></info>
+            </step>
+            <step>
+                <cmd>Откройте файл <codeph>docker-compose.release.yaml</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Проверьте наличие в файле строк
+                        <codeph>./env/mibs:/var/lib/zabbix/mibs:ro</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>В случае отсутствия этой строки замените файл
+                        <codeph>docker-compose.release.yaml</codeph> на новый.</cmd>
+                <info>
+                    <note>Новый файл можно скачать из nextcloud.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте директорию <codeph>env/mibs</codeph> в случае ее отсутствия в рабочей
+                    директории <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. </cmd>
+            </step>
+            <step>
+                <cmd>Поместите в директорию <codeph>env/mibs</codeph> новые MIB-файлы.</cmd>
+            </step>
+            <step>
+                <cmd>При необходимости установите зависимые MIB-файлы. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Просмотрите список зависимостей в разделе IMPORTS добавленного
+                            MIB-файла.</cmd>
+                        <info>
+                            <note>Список зависимостей MIB-файла содержит другие MIB-файлы, которые
+                                нужны ему для корректной работы.</note>
+                        </info>
+                        <stepxmp>
+                            <fig>
+                                <title>Раздел IMPORTS MIB-файла</title>
+                                <image href="../../images/ITM_K_requirements/mib_imports.png"/>
+                            </fig>
+                        </stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>При наличии в списке зависимостей других MIB-файлов добавьте их в
+                            директорию <codeph>env/mibs</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Запустите контейнеры:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте работоспособность MIB-файлов:</cmd>
+                <info>
+                    <codeblock>snmpwalk -v2c -c public -m ' ./env/mibs/Avaya.mib' 192.168.1.2</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

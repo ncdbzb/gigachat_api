@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rkn_5xc_vvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_tkn_5xc_vvb">
+                <cmd>Запустите docker-контейнеры:</cmd>
+                <info><codeblock>docker-compose up -d</codeblock></info>
+            </step>
+        </steps>      
+    </taskbody>
+</task>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_starttimers">
+    <glossterm>ZBX_STARTTIMERS</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/zbx_starttimers_info.dita#ReusableComponent_j4j_mj2_trb/div_l4j_mj2_trb"/>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>1</p>
+        <p><b>Разрешенный диапазон значений:</b>1-1000</p>
+    </glossdef>
+</glossentry>

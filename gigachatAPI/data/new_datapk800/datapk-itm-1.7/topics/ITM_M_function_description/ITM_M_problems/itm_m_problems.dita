@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_problems">
+    <title>Проблемы объектов мониторинга</title>
+    <body>
+        <p>Раздел <cite keyref="itm_m_page_problems"/> отображает информацию обо всех проблемах
+            объектов мониторинга со всех серверов уровней филиалов <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и
+            Zabbix и серверов уровня технологических комплексов <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph>.
+            Сервер <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> получает от серверов мониторинга 
+            <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и Zabbix данные обо всех проблемах <abbreviated-form
+                keyref="monitoring_object"/> периодически по расписанию. </p>
+        <p>В этом разделе:<ul id="ul_hfh_ph3_lrb">
+                <li><xref href="itm_m_problem_OM_list.dita"/></li>
+                <li><xref href="problem_info.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

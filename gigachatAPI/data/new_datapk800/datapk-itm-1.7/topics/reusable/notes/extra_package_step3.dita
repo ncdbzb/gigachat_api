@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ryt_xx2_krb">
+    <title>шаг добавить докер в автозагрузку</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Запустите docker:</cmd>
+                <info>
+                    <codeblock>systemctl start docker</codeblock>
+                </info>
+            </step>
+            
+        </steps>
+    </taskbody>
+</task>

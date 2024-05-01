@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_wp1_lpz_czb">
+    <title></title>
+    <body><div id="div_aq1_lpz_czb">На страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                keyref="itm_m_page_config_general"/> добавлена возможность настройки параметров:<ul
+                id="ul_ldn_y4z_czb">
+                <li>Период хранения истории проблем <abbreviated-form keyref="monitoring_object"/>,
+                    дней;</li>
+                <li>Период хранения истории синхронизаций, дней.</li>
+            </ul><p>Исключены переменные <cmdname>ITMM_PROBLEM_AGE_IN_DAYS</cmdname> и
+                    <cmdname>ITMM_SYNC_HISTORY_LIFETIME_IN_DAYS</cmdname>, которые раньше отвечали
+                за настройку этих параметров</p>
+        </div></body>
+</topic>
