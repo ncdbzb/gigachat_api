@@ -26,38 +26,38 @@ async def get_answer(
     logger_info.info(f'Название документации: {filename}')
 
     sim_scores = [d[1] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
-    docs = [d[0] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
+    # docs = [d[0] for d in await vectordb.asimilarity_search_with_score(que, k=6)]
     # rel_scores = [d[1] for d in await vectordb.asimilarity_search_with_relevance_scores(que, k=6)]
 
     logger_info.debug(f'Время работы Chroma: {time.time() - question_start_time} секунд')
     # logger_info.info(f'Relevance scores для выбранных документов: {rel_scores}')
 
-    # chain = RetrievalQA.from_chain_type(
-    #     llm=giga,
-    #     retriever=vectordb.as_retriever(
-    #         # search_type="similarity_score_threshold",
-    #         search_kwargs={"k": 6}
-    #     ),
-    #     return_source_documents=True,
-    #     # verbose=True,
-    #     chain_type_kwargs={
-    #         # "verbose": True,
-    #         "prompt": qna_prompt
-    #     }
-    # )
+    chain = RetrievalQA.from_chain_type(
+        llm=giga,
+        retriever=vectordb.as_retriever(
+            # search_type="similarity_score_threshold",
+            search_kwargs={"k": 6}
+        ),
+        return_source_documents=True,
+        # verbose=True,
+        chain_type_kwargs={
+            # "verbose": True,
+            "prompt": qna_prompt
+        }
+    )
 
     gigachat_start_time = time.time()
-    # qa_chain = await chain.ainvoke({"query": que})
-    # answer, source_documents = qa_chain['result'], qa_chain['source_documents']
+    qa_chain = await chain.ainvoke({"query": que})
+    answer, source_documents = qa_chain['result'], qa_chain['source_documents']
 
-    # tokens = sum(map(lambda x: x.tokens, await giga.atokens_count(
-    #     [i.page_content for i in source_documents] + [qna_prompt.template, que, answer]
-    # )))
+    tokens = sum(map(lambda x: x.tokens, await giga.atokens_count(
+        [i.page_content for i in source_documents] + [qna_prompt.template, que, answer]
+    )))
 
-    response = await giga.ainvoke(qna_prompt.format(question=que, context=docs))
-    answer = response.content
+    # response = await giga.ainvoke(qna_prompt.format(question=que, context=docs))
+    # answer = response.content
 
-    tokens = response.response_metadata['token_usage'].total_tokens
+    # tokens = response.response_metadata['token_usage'].total_tokens
 
     gigachat_time = time.time() - gigachat_start_time
     logger_info.debug(f'Время работы GigaChat: {gigachat_time} секунд')
