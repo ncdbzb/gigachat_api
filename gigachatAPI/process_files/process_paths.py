@@ -24,3 +24,27 @@ async def process_and_take_path(filename: str, file_path: str) -> str:
     else:
         file_path = f'gigachatAPI/data/{filename}'
     return file_path
+
+
+async def get_partial_path(full_path: str, filename: str) -> str:
+    """
+    Обрезает путь, оставляя только файлы из архива технической документации
+    :param full_path: Полный путь
+    :param filename: Имя файла
+    :return: Обрезанный путь
+    """
+    start_index = full_path.find(filename)
+
+    if start_index == -1:
+        raise ValueError(f'No such filename: {filename} in data directory')
+
+    start_index += len(filename)
+
+    next_separator_index = full_path.find('/', start_index)
+    if next_separator_index == -1:
+        next_separator_index = full_path.find('\\', start_index)
+        if next_separator_index == -1:
+            raise ValueError(f'No such filename: {filename} in data directory')
+
+    partial_path = full_path[next_separator_index + 1:]
+    return partial_path

@@ -1,7 +1,7 @@
 import os
 import time
 from random import sample
-from langchain.chat_models.gigachat import GigaChat
+from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.prompts.create_prompts import gen_que_prompt
 from gigachatAPI.utils.output_parser import get_questions_dict

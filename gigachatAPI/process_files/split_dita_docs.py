@@ -11,9 +11,12 @@ from gigachatAPI.utils.help_methods import get_doc_length
 
 
 async def get_dita_docs(
-    dita_path: str, chunk_size: int = 0,
-    min_doc_length: int = 0, max_doc_length: int = 0
-) -> list[Document]:
+    dita_path: str,
+    chunk_size: int = 0,
+    min_doc_length: int = 0,
+    max_doc_length: int = 0,
+    with_xml_paths: bool = False
+) -> list[Document] | list[tuple[str, str]]:
 
     async def get_dita_paths(directory_path: str) -> dict[str | bytes, int]:
         dit = {}
@@ -27,12 +30,16 @@ async def get_dita_docs(
     path_list_larger = [i for i, j in dita_dict.items() if j > min_doc_length]
 
     if chunk_size:
-        very_long_string = ''.join(await asyncio.gather(*(extract_text_from_xml(path) for path in path_list_larger)))
+        very_long_string = ''.join(await asyncio.gather(*(extract_text_from_xml(path, with_xml_paths)
+                                                          for path in path_list_larger)))
         document = [Document(page_content=very_long_string)]
         docs = (CharacterTextSplitter(separator=' ', chunk_size=chunk_size, chunk_overlap=0)
                 .split_documents(document))
+    elif with_xml_paths:
+        list_with_paths: list[tuple[str, str]] = list(await asyncio.gather(*(extract_text_from_xml(path, with_xml_paths)
+                                                                             for path in path_list_larger)))
     else:
-        result_list = await asyncio.gather(*(extract_text_from_xml(path) for path in path_list_larger))
+        result_list = await asyncio.gather(*(extract_text_from_xml(path, with_xml_paths) for path in path_list_larger))
 
         docs = [
             Document(
@@ -45,11 +52,12 @@ async def get_dita_docs(
         max_part_doc_len = max(len(i.page_content) for i in docs)
         if max_part_doc_len > max_doc_length:
             docs = await split_long_elements(docs, max_doc_length)
-
+    if with_xml_paths:
+        return list_with_paths
     return docs
 
 
-async def extract_text_from_xml(xml_file_path: str) -> str:
+async def extract_text_from_xml(xml_file_path: str, with_xml_paths: bool) -> str | tuple[str, str]:
     tree = Et.parse(xml_file_path)
     root = tree.getroot()
 
@@ -64,5 +72,8 @@ async def extract_text_from_xml(xml_file_path: str) -> str:
     text = get_text(root)
 
     clean_text = ' '.join(text.split())
-    
-    return clean_text
+
+    if with_xml_paths:
+        return xml_file_path, clean_text
+    else:
+        return clean_text
