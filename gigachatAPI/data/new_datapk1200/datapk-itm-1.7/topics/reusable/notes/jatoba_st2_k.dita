@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xrq_cgz_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_zrq_cgz_tsb"><cmd>Проверьте наличие пакетов из списка ниже с помощью приведенных команд (и в случае отсутствия какого-либо пакета установите его оффлайн, скачав установочный файл в локальную ОС и передав его на ОС, в которой будет выполняться установка ПК <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>):</cmd><info><codeblock id="codeblock_omc_whz_hrb">rpm -qa | grep gdal-libs
+rpm -qa | grep geos
+rpm -qa | grep hdf5
+rpm -qa | grep libicu-devel
+rpm -qa | grep proj
+rpm -qa | grep perl
+rpm -qa | grep libxslt
+rpm -qa | grep xerces-c
+rpm -qa | grep openssl-libs
+rpm -qa | grep libcurl 
+rpm -qa | grep python2-libs
+rpm -qa | grep python3-libs
+rpm -qa | grep json-c</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

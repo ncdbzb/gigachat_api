@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_changelog">
+    <title>Полный список изменений в новой версии DATAPK ITM-VM</title>
+    <body>
+        <p>На странице представлен полный список изменений <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+        /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+            outputclass="html"><term keyref="datapk_itm_vm"/></ph> версии 1.7.0.0 (по задачам, для внутреннего использования).</p>
+        <table id="itm_m_changelog" frame="all" colsep="1" rowsep="1">
+            <tgroup cols="3">
+                <colspec colnum="1" colname="col1" colwidth="25%"/>
+                <colspec colnum="2" colname="col2" colwidth="15%"/>
+                <colspec colnum="3" colname="col4" colwidth="60%"/>
+                <thead>
+                    <row>
+                        <entry>Раздел</entry>
+                        <entry>Тип</entry>
+                        <entry>Описание изменений</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row id="ITM-1554">
+                        <entry>ИТ-услуги</entry>
+                        <entry>Ошибка</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1554.dita#ReusableComponent_rw3_3y2_xyb/ph_tw3_3y2_xyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1592">
+                        <entry>Серверы мониторинга</entry>
+                        <entry>Ошибка</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1592.dita#ReusableComponent_aqp_b3z_xyb/div_bqp_b3z_xyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-986">
+                        <entry>Серверы мониторинга</entry>
+                        <entry>Ошибка</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-986.dita#ReusableComponent_oj4_lmz_xyb/div_pj4_lmz_xyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1720">
+                        <entry>Скрипты, переменные</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1720.dita#ReusableComponent_ofr_521_yyb/div_pfr_521_yyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1550">
+                        <entry>Внешний вид</entry>
+                        <entry>Ошибка</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1550.dita#ReusableComponent_v1n_y5f_yyb/div_w1n_y5f_yyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1309">
+                        <entry>Отчет о проблемах</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Изменен шаблон письма с отчетом о проблемах:<ul id="ul_xfs_x3c_zyb">
+                                    <li>Добавлены столбцы с нумерацией строк и состоянием
+                                        проблемы.</li>
+                                    <li>Добавлена строка с информацией об общем количестве событий и
+                                        о количестве нерешенных проблем</li>
+                                </ul></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1662">
+                        <entry>Отчет о проблемах</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлено наименование оповещения в текст письма с отчетом о
+                                проблемах</div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1755">
+                        <entry>Роли пользователей</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="../topics/reusable/changelog_1_7/ITM-1755.dita#ReusableComponent_j2r_xgd_zyb/div_k2r_xgd_zyb"
+                            />
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Роли пользователей</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1747.dita#ReusableComponent_vks_r4d_zyb/div_wks_r4d_zyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-865">
+                        <entry>Email-оповещения, внешний вид</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-865.dita#ReusableComponent_q1f_jbk_zyb/div_s1f_jbk_zyb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1880">
+                        <entry>Переменные, основные настройки</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1880.dita#ReusableComponent_wp1_lpz_czb/div_aq1_lpz_czb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1302">
+                        <entry>Серверы мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1302.dita#ReusableComponent_pyh_hw1_dzb/div_qyh_hw1_dzb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-2395">
+                        <entry>Серверы мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлено автоматическое обновление до новой версии сервера <ph
+                                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                    outputclass="html"><term keyref="datapk_itm_k"/></ph>,
+                                подключенного к <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                    /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                                    /></ph>. После обновления сбор данных с <ph outputclass="udvpdf"
+                                        ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                                        ><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                                        ><term keyref="datapk_itm_k"/></ph> продолжится</div>
+                        </entry>
+                    </row>
+                    <row id="ITM-2775">
+                        <entry>Серверы мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлено автоматическое обновление до новой версии сервера Zabbix,
+                                подключенного к <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                    /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                                    /></ph>. После обновления сбор данных с Zabbix продолжится</div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1798">
+                        <entry>Серверы мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1798.dita#ReusableComponent_uxh_c5g_dzb/div_vxh_c5g_dzb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="DOC-2587">
+                        <entry>Проблемы, серверы мониторинга, объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-803.dita#ReusableComponent_tmk_tc1_fzb/div_vmk_tc1_fzb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1473">
+                        <entry>Объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1473.dita#ReusableComponent_ipf_ck1_fzb/div_lpf_ck1_fzb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1252">
+                        <entry>Объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>На странице <cite keyref="itm_m_page_object_monitoring"/>:<ul
+                                    id="ul_srf_j5f_fzb">
+                                    <li>исключено дерево филиалов и <abbreviated-form keyref="to"/>,
+                                        теперь по умолчанию в списке отображаются все
+                                            <abbreviated-form keyref="monitoring_object"/>;</li>
+                                    <li>добавлена возможность фильтрации <abbreviated-form
+                                            keyref="monitoring_object"/> по филиалу и
+                                            <abbreviated-form keyref="to"/></li>
+                                </ul></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1014">
+                        <entry>Объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлен столбец «Тип <abbreviated-form keyref="monitoring_object"
+                                />» в таблицу на странице <cite
+                                    keyref="itm_m_page_object_monitoring"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1376">
+                        <entry>Объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>Добавлен столбец «Ссылки» в таблицу на странице <cite
+                                keyref="itm_m_page_object_monitoring"/></entry>
+                    </row>
+                    <row id="ITM-1886">
+                        <entry>Объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлен счетчик количества <abbreviated-form
+                                    keyref="monitoring_object"/> на странице <cite
+                                    keyref="itm_m_page_object_monitoring"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1349">
+                        <entry>Объекты мониторинга</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлена возможность просмотра всех проблем выбранного
+                                    <abbreviated-form keyref="monitoring_object"/> при нажатии на
+                                значение в столбце «Проблемы» на странице <cite
+                                    keyref="itm_m_page_object_monitoring"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1362">
+                        <entry>Проблемы</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Изменен счетчик записей на странице <cite
+                                    keyref="itm_m_page_problems"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1310">
+                        <entry>Проблемы</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлена возможность сортировки по длительности проблем на
+                                странице <cite keyref="itm_m_page_problems"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-520">
+                        <entry>Проблемы</entry>
+                        <entry>Задача</entry>
+                        <entry>Добавлена возможность фильтрации списка по состоянию проблем на
+                            странице <cite keyref="itm_m_page_problems"/></entry>
+                    </row>
+                    <row id="ITM-1290">
+                        <entry>Проблемы</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлена возможность фильтрации списка по объектам мониторинга на
+                                странице <cite keyref="itm_m_page_problems"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1609">
+                        <entry>Проблемы</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div>Добавлена возможность поиска  <abbreviated-form
+                                    keyref="monitoring_object"/> в фильтре «Объект» на странице
+                                    <cite keyref="itm_m_page_problems"/></div>
+                        </entry>
+                    </row>
+                    <row id="ITM-1859">
+                        <entry>Оповещения</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1859.dita#ReusableComponent_jqd_2gw_fzb/div_lqd_2gw_fzb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1431">
+                        <entry>Администрирование, журнал событий</entry>
+                        <entry>Задача</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1431.dita#ReusableComponent_qvr_vtg_hzb/div_rvr_vtg_hzb"
+                            />
+                        </entry>
+                    </row>
+                    <row id="ITM-1885">
+                        <entry>Объекты мониторинга, внешний вид</entry>
+                        <entry>Ошибка</entry>
+                        <entry>
+                            <div
+                                conref="reusable/changelog_1_7/ITM-1885.dita#ReusableComponent_pj3_npl_hzb/div_qj3_npl_hzb"
+                            />
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

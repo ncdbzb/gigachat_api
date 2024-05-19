@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_yxh_pxw_pvb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_zxh_pxw_pvb"><cmd>Сгенерируйте env-файл и настройте переменные. Для этого:</cmd><substeps><substep><cmd>Назначьте права на выполнение скрипта:</cmd><info><codeblock>chmod +x env_prod_generator.sh</codeblock></info></substep><substep><cmd>Запустите скрипт:</cmd><info><codeblock>./env_prod_generator.sh</codeblock></info><stepresult>Откроется всплывающее окно для настройки переменных. <fig><title>Окно настройки переменных .env</title><image href="../../../images/ITM_M_prepare_work/itm_m_env_generator.png"/></fig> </stepresult></substep><substep><cmd>Выполните настройку переменных:</cmd><info><ul><li>Чтобы перейти к настройке блока переменных, нажмите клавишу «Y».</li>
+                            <li>Чтобы пропустить блок настроек и перейти к следующему блоку
+                                переменных, нажмите клавишу «n». </li><li>Чтобы изменить переменную, введите новое значение и нажмите клавишу «Enter».</li><li>Чтобы оставить значение переменной по умолчанию, которое указано в квадратных скобках, нажмите клавишу «Enter».</li></ul>
+        <note type="attention"><ul><li>В случае установки <abbreviated-form keyref="datapk_itm_vm"/> и <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> на один сервер отредактируйте следующие параметры из блока «переменные для ITMM»: <ul><li>порт для подключения к веб-интерфейсу — 8080;</li><li>SSL порт для подключения к веб-интерфейсу — 8443.</li></ul></li><li>Если при запуске контейнеров <abbreviated-form keyref="datapk_itm_vm"/> указать корректный IP-адрес syslog-сервера спустя некоторое время, то на корректный IP-адрес будут отправлены только те события, которые возникнут после установки нового значения переменной <cmdname>SIEM_SYSLOG_HOST</cmdname>.</li></ul></note>
+        <note>Если IP-адрес подсети контейнеров уже используется в вашей инфраструктуре, его нужно
+            изменить. Подробнее см. в разделе  <xref
+                href="../../ITM_M_troubleshooting/itm_m_net_conflict.dita"
+            /> <xref
+                href="../../ITM_M_troubleshooting/itm_m_net_conflict.dita#itm_m_net_conflict/docker_net"
+            />.</note>
+    
+    </info><stepresult>В директории <codeph>/opt/itm-vm</codeph> появится файл <codeph>.env</codeph> с
+                        настроенными переменными и файл <codeph>.itmm_password_secret_key</codeph> c
+                        ключом для шифрования и дешифрования паролей, хранящихся в базе
+                        данных.</stepresult></substep>
+                <substep>
+                    <cmd>Для более подробной настройки .env-файла или для правки ранее введенных
+                        переменных:</cmd>
+                    <info>
+                        <ol>
+                            <li>Откройте для редактирования файл
+                                <codeph>.env</codeph>:<codeblock>vi .env</codeblock></li>
+                            <li>Настройте переменные. <note>Рекомендуемые и возможные значения
+                                    переменных приведены в разделе <xref
+                                        href="../../ITM_M_reference_info/itm_m_env.dita"
+                                />.</note></li>
+                            <li>Сохраните изменения и закройте файл:<codeblock>:wq</codeblock></li>
+                        </ol>
+                    </info>
+                </substep></substeps>
+            <info>
+                <note>Скрипт <codeph>env_prod_generator.sh</codeph> предназначен только для создания
+                    нового файла <codeph>.env</codeph>, не для редактирования существующего.</note>
+            </info></step>
+        </steps>
+    </taskbody>
+</task>

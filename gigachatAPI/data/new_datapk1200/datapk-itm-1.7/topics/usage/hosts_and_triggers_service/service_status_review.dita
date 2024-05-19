@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="service_status_review">
+    <title>Просмотр состояния обслуживания</title>
+    <body>
+        <section id="section_od4_j5p_pyb">
+            <title>Отображение узлов сети в обслуживании</title>
+            <p>Если узел сети находится в обслуживании, то рядом с его названием отображается иконка
+                    <image href="../../../images/buttons/maintenance.png" id="image_bbh_twp_pyb"/>
+                на страницах:<ul id="ul_cbh_twp_pyb">
+                    <li><cite keyref="monitoring"/> → <cite keyref="panel"/>;</li>
+                    <li><cite keyref="monitoring"/> → <cite keyref="problems"/>;</li>
+                    <li><cite keyref="configuration"/> → <cite keyref="hosts_configuration"/>;</li>
+                    <li><cite keyref="inventory"/> → <cite keyref="hosts_inventory"/> для выбранного
+                        узла сети на вкладке «Обзор».</li>
+                </ul></p>
+            <p>Если узел сети в обслуживании добавлен на карту сетей, на этой карте у него будет
+                оранжевый фон и надпись «В обслуживании».<fig id="fig_h1k_qjq_pyb">
+                    <title>Узел сети в обслуживании на карте сетей</title>
+                    <image href="../../../images/net_maps/maintenance_map_example.png"
+                        id="image_axm_vjq_pyb"/>
+                </fig></p>
+            <p>Детали обслуживания отображаются при наведении курсора мыши на иконку <image
+                    href="../../../images/buttons/maintenance.png" id="image_dbh_twp_pyb"/>.<fig
+                    id="fig_tdq_1xp_pyb">
+                    <title>Детали обслуживания </title>
+                    <image href="../../../images/hosts_triggers_service/about_problem_3_7.png"
+                        id="image_udq_1xp_pyb"/>
+                </fig></p>
+        </section>
+        <section id="section_hfs_twp_pyb">
+            <title>Отображение подавленных проблем</title>
+            <p>Обычно проблемы с узлов сети в обслуживании подавляются, то есть не отображаются в
+                веб-интерфейсе. </p>
+            <p>Чтобы отображать проблемы с узлов сети в обслуживании, установите чекбокс
+                «Подавленные проблемы». Включить отображение подавленных проблем можно на следующих
+                    страницах:<ul id="ul_t2t_mkq_pyb">
+                    <li><cite keyref="monitoring"/> → <cite keyref="problems"/>;</li>
+                    <li><cite keyref="monitoring"/> → <cite keyref="overview"/>;</li>
+                    <li><cite keyref="monitoring"/> → <cite keyref="panel"/> при настройке виджетов
+                        «Узлы сети с проблемами», «Проблемы», «Проблемы по важности», «Обзор
+                        триггеров»;</li>
+                    <li>на вкладке «Сообщения» на странице <cite keyref="user_configuration"/>. В
+                        этом случае подавленные проблемы будут отображаться в глобальных
+                            оповещениях.<note>Глобальное оповещение — всплывающее окно с информацией
+                            о только что произошедшей проблеме, которое появляется вне зависимости
+                            от того, на какой странице веб-интерфейса находится
+                        пользователь.</note></li>
+                </ul></p>
+            <p>Подавленные проблемы также отображаются на странице <cite keyref="monitoring"/> →
+                    <cite keyref="net_maps"/> при настройке на карте элемента с типом «Триггер»,
+                если для выбранного триггера включено отображение подавленных проблем.</p>
+            <p>Рядом с подавленными проблеми отображается иконка <image
+                    href="../../../images/buttons/icon_suppressed.png" id="image_sdq_1xp_pyb"/>. При
+                наведении курсора мыши на иконку <image
+                    href="../../../images/buttons/icon_suppressed.png" id="image_ydk_3mq_pyb"/>
+                отображаются детальные сведения о проблеме. <fig id="fig_fhr_3mq_pyb">
+                    <title>Детальные сведения о подавленной проблеме</title>
+                    <image href="../../../images/hosts_triggers_service/suppressed_problem.png"/>
+                </fig>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DB_syncer">
+    <glossterm>DB Syncer</glossterm>
+    <glossdef>
+            DB Syncer – процесс, используемый для передачи данных из кэшей <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> в БД.
+            Если время от времени эти процессы используют большое количество ресурсов ОС, это
+            означает, что на <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> отправляется большой объем данных. Чаще всего подобное
+        происходит, когда <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> теряет связь с <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> и при
+            повторном подключении один или несколько прокси отправляют все собранные данные на
+            сервер.
+    </glossdef>
+</glossentry>

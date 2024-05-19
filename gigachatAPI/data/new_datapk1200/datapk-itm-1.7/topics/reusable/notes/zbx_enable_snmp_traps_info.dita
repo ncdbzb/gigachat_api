@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_nb2_4n2_trb">
+    <title>zbx_enable_snmp_traps_info</title>
+    <body><div id="div_ob2_4n2_trb">
+            <p>Включение функции <ph
+                                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                />-трапов.</p>
+            <div
+                conref="zbx_enable_snmp_traps_note.dita#ReusableComponent_nwf_h3r_trb/div_owf_h3r_trb"/>
+        </div></body>
+</topic>

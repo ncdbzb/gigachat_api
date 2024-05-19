@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE troubleshooting  PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_rwz_4r1_5tb">
+    <title></title>
+    <troublebody>
+        <troubleSolution>
+            <cause id="cause_uwz_4r1_5tb"><title>Причина 2</title><p>Превышено время ожидания ответа от узла сети.</p></cause>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

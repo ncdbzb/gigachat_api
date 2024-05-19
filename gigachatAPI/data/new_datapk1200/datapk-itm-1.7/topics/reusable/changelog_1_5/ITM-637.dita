@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_uyt_rsk_1vb">
+    <title></title>
+    <body><p id="p_vyt_rsk_1vb">Исправлена ошибка, при которой история синхронизации не очищалась. 
+        Для исправления в файл <codeph>.env</codeph> добавлена переменная <cmdname keyref="itmm_sync_history_lifetime_in_days"/>, 
+        отвечающая за длительность хранения истории синхронизации. </p></body>
+</topic>

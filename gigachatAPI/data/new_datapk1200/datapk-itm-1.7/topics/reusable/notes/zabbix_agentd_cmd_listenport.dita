@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_qjb_wrz_hsb">
+    <title></title>
+    <body><ul>
+        <li id="li_rjb_wrz_hsb">Раскомментируйте строку с переменной <cmdname keyref="listenport"/>. 
+            Для этого уберите символ «#» в начале строки.</li>
+    </ul>
+    </body>
+</topic>

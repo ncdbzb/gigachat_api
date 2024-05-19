@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ers_prk_trb">
+    <title>zbx_loadmodule0_info</title>
+    <body><div id="div_frs_prk_trb"><p>Загружаемые модули. При загрузке нескольких модулей значения перечисляются через запятую без
+                пробелов.</p>
+        <note> Переменная работает с томами <codeph>/var/lib/zabbix/modules</codeph>.</note>
+    </div></body>
+</topic>

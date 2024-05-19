@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_g5c_gwy_l5b">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_j5c_gwy_l5b"><cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd><substeps id="substeps_ysv_2kx_l5b"><substep><cmd>Перейдите в режим редактирования службы СУБД: </cmd><info><codeblock>systemctl edit jatoba-1.service</codeblock></info></substep><substep><cmd>Добавьте блок [Unit]:</cmd><info><codeblock>[Unit]
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service</codeblock></info></substep><substep><cmd>Если база данных хранится на отдельном томе, добавьте после блока [Unit] блок [Service]:</cmd><info><codeblock>[Service]
+Environment=PGDATA=/storage/base                            </codeblock>Где
+                            <codeph>/storage/base</codeph> — путь к базе данных, который был
+                        настроен на шаге <xref
+                            href="../../ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.dita#subd_config/create_dir"
+                        /> раздела <xref
+                            href="../../ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.dita#subd_config"
+                        />.</info></substep><substep><cmd>Для применения изменений в настройках службы СУБД выполните команду:</cmd><info><codeblock>systemctl daemon-reload</codeblock></info></substep></substeps>
+        </step>
+        </steps>
+    </taskbody>
+</task>

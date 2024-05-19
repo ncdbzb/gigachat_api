@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_z4l_hwn_y5b">
+    <title></title>
+    <taskbody id="taskbody_apl_hwn_y5b"><context>Для проверки корректности настройки <ph
+                conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+            /> на <abbreviated-form keyref="OS"/> Windows вы можете отправить тестовый запрос как
+            локально, так и удаленно. Для этого:</context><steps><step><cmd conref="../notes/win_r.dita#ReusableComponent_cfb_lp5_3sb/cmd_efb_lp5_3sb"/><stepresult conref="../notes/stepresult_window_run.dita#ReusableComponent_svq_r4c_jsb/stepresult_uvq_r4c_jsb"/></step><step><cmd>Введите wbemtest и нажмите Enter.</cmd><info><fig><title>Окно «Выполнить»</title><image href="../../../images/ITM_K_requirements/run_wbemtest.png"/></fig></info><stepresult>Появится окно «Тестер инструментария управления Windows».</stepresult></step><step><cmd>Нажмите «Подключить».</cmd><info><fig><title>Окно «Тестер инструментария управления Windows»</title><image href="../../../images/ITM_K_requirements/tester_win_instruments.png"/></fig></info><stepresult>Появится окно «Подключение».</stepresult></step><step><cmd>В зависимости от типа подключения выберите пространство имен:</cmd><info><ul id="ul_jy5_dgv_3sb"><li><codeph>root\CIMV2</codeph> для локального подключения;</li><li><codeph>\\[целевой IP-адрес]\root\CIMV2</codeph> для удаленного подключения.</li></ul></info></step><step><cmd>Нажмите «Подключить».</cmd><info><fig><title>Окно «Подключение»</title><image href="../../../images/ITM_K_requirements/window_connection.png"/></fig></info><stepresult> Появится окно «Тестер инструментария управления Windows» с заданным пространством имен.</stepresult></step><step><cmd>Выберите «Запрос».</cmd><info><fig><title>Окно «Тестер инструментария управления Windows» с заданным пространством имен</title><image href="../../../images/ITM_K_requirements/window_request.png"/></fig></info><stepresult>Появится окно «Запрос».</stepresult></step><step><cmd>Введите тестовый запрос списка пользователей:</cmd><info><codeblock>Select Caption,Description,Disabled,FullName,LocalAccount,Lockout,PasswordChangeable,PasswordExpires,PasswordRequired,SID from Win32_UserAccount</codeblock></info></step><step><cmd>Нажмите «Применить».</cmd><info><fig><title>Окно «Запрос»</title><image href="../../../images/ITM_K_requirements/win_request_apply.png"/></fig></info>
+                    <stepresult>В случае успешного выполнения запроса откроется окно «Результат
+                        запроса» со списком обнаруженных объектов, иначе будет выведено сообщение об
+                        ошибке. <fig>
+                            <title>Результат запроса</title>
+                            <image href="../../../images/ITM_K_requirements/WMI_result.png"/>
+                        </fig>
+                    </stepresult></step>
+                <step>
+                    <cmd>Для просмотра более подробной информации об объекте нажмите на его имя в
+                        списке. </cmd>
+                    <stepresult>Откроется окно с информацией об объекте.
+                        <fig>
+                            <title>Подробная информация о найденном объекте</title>
+                            <image href="../../../images/ITM_K_requirements/WMI_result_details.png"/>
+                        </fig>
+                    </stepresult>
+                </step></steps><postreq><note>Работоспособность <ph
+                    conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                /> можно проверить также в режиме командной строки с помощью команды
+                    <codeph>wmic</codeph>. Например, <codeph>wmic process list brief</codeph> для
+                локальной проверки или <codeph>wmic /user:"Administrator" /password:"P@ssw0rd"
+                    /node:"192.168.243.23" process list brief</codeph> для удаленной
+                проверки.</note></postreq>
+    </taskbody>
+</task>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itmk_config_notifications">
+    <title>Настройка оповещений</title>
+    <shortdesc></shortdesc>
+    
+    <taskbody>
+      
+        <context>
+            <p>Оповещения позволяют получать уведомления об обнаруженных проблемах на указанную
+                почту. Для настройки оповещения:</p>
+        </context>
+        
+        <steps>
+           
+            <stepsection>Настройте <ph
+                    conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                />-сервер:</stepsection>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="administration"/> → <cite
+                        keyref="ways_of_notification"/>.</cmd>
+            </step>
+            <step>
+                <cmd>В списке способов выберите имя «Email» и кликните по нему. </cmd>
+            </step>
+            <step>
+                <cmd>Настройте следующие параметры:</cmd>
+                <substeps id="substeps_rqy_fhs_qtb">
+                    <substep>
+                        <cmd><ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            /> сервер — имя <ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            /> сервера.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd><ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            /> helo — значение, полученное в результате работы команды <ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            /> helo, обычно имя домена.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd><ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            /> email — адрес почтового ящика, от чьего имени будут отправлены
+                            сообщения.</cmd>
+                    </substep>
+                    <substep id="safe_connect_protocol">
+                        <cmd>Безопасность подключения — выберите один из протоколов шифрования для
+                            подключения:</cmd>
+                        <info>
+                            <ul id="ul_wqs_3sr_qtb">
+                                <li>Нет — шифрование и опция CURLOPT_USE_SSL не используются;</li>
+                                <li>STARTTLS — используется опция CURLOPT_USE_SSL со значением
+                                    CURLUSESSL_ALL, доступно подключение только с использованием
+                                    шифрования;</li>
+                                <li>SSL/TLS — использование опции CURLOPT_USE_SSL опционально.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Аутентификация — выберите способ аутентификации в соответствии с
+                            настройками <ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            /> сервера:</cmd>
+                        <info>
+                            <ul id="ul_bqt_zfq_stb">
+                                <li>Нет — аутентификация не требуется.</li>
+                                <li>Имя пользователя и пароль — для аутентификации нужно ввести в
+                                    соответствующие поля имя пользователя и пароль, относящееся к
+                                    почтовому ящику.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig>
+                        <title>Настройка способа оповещений</title>
+                        <image href="../../images/ITM_K_requirements/itmk_notification.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Если вы выбрали протокол подключения STARTTLS или SSL/TLS на шаге <xref href="#itmk_config_notifications/safe_connect_protocol"/>, настройте
+                    следующие параметры:</cmd>
+                <substeps id="substeps_gx1_1y1_s5b">
+                    <substep>
+                        <cmd>Проверка SSL узла — установите чекбокс для проверки подлинности
+                            SSL-сертификата <ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            />-сервера. Для проверки используется опция curl CURLOPT_SSL_VERIFYPEER.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Проверка SSL хоста — установите чекбокс для проверки того, что имя
+                            SSL-сертификата совпадает с именем <ph
+                                conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            />-сервера. Для проверки используется опция curl CURLOPT_SSL_VERIFYHOST.
+                        </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Обновить».</cmd>
+            </step>
+            <step>
+                <cmd>Убедитесь, что оповещения настроены корректно. Для этого:</cmd>
+                <substeps id="substeps_l4f_rsr_qtb">
+                    <substep>
+                        <cmd>Перейдите на страницу <cite keyref="ways_of_notification"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на действие «Тест» в строке со способом оповещений
+                            «Email».</cmd>
+                        <stepresult>Откроется окно тестирования способа оповещения.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В открывшемся окне введите свой Email в поле «Отправлять на», укажите
+                            тему и текст сообщения.</cmd>
+                        <info>
+                            <fig>
+                                <title>Окно тестирования способа оповещения</title>
+                                <image href="../../images/ITM_K_requirements/test_notification.png"
+                                />
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Тест».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что тестовое сообщение доставлено на Email, указанный ранее
+                            в поле «Отправлять на».</cmd>
+                        <info>
+                            <note type="tip">В случае неудачной отправки убедитесь в отсутствии
+                                опечаток во время выполнения предыдущих шагов или проверьте
+                                настройки <ph
+                                    conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                                />-сервера совместно с системным администратором. </note>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <stepsection>Настройте <ph
+                    conref="../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                />-клиент:</stepsection>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="administration"/> → <cite keyref="users"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Выберите из списка пользователя для привязки Email-адреса получателя оповещений.</cmd>
+            </step>
+            <step>
+                <cmd>Перейдите в карточку выбранного пользователя, на вкладку «Оповещения».</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Добавить».</cmd>
+                <stepresult>Откроется окно «Оповещения».</stepresult>
+            </step>
+            <step>
+                <cmd>В открывшемся окне настройте следующие параметры:</cmd>
+                <substeps id="substeps_o5r_1cs_qtb">
+                    <substep>
+                        <cmd>Тип — «email».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Отправлять на — Email получателя сообщения.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Когда активен — диапазон времени отправки сообщений в формате 1-7,
+                            ЧЧ:ММ-ЧЧ:ММ.</cmd>
+                        <info>
+                            <note type="tip">Цифрами 1-7 обозначаются дни недели с понедельника по
+                                воскресенье.</note>
+                        </info>
+                        <stepxmp>Значение <b>1-5, 09:00-18:00</b> означает, что сообщения будут
+                            отправляться с понедельника по пятницу с 9 до 18 часов.</stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Использовать, если важность — установите чекбоксы рядом с теми уровнями
+                            важности проблем, для которых нужно получать оповещения.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что установлен чекбокс напротив опции «Активировано».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Добавить».</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig>
+                        <title>Настройка оповещения</title>
+                        <image href="../../images/ITM_K_requirements/itmk_notification_user.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Обновить».</cmd>
+            </step>
+            <step>
+                <cmd>Убедитесь, что получатели сообщений о проблемах указаны корректно, при
+                    необходимости измените настройки. Для этого:</cmd>
+                <substeps id="substeps_ncb_pds_qtb">
+                    <substep>
+                        <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                                keyref="actions"/> → <cite keyref="config_actions_trigger"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Откройте карточку правила «Оповещения о проблемах группе
+                            администраторов».</cmd>
+                    </substep>
+                    <substep id="check_notifications">
+                        <cmd>Перейдите на вкладку «Операции» в раздел «Операции».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что в разделе «Операции» в шаге 1 указано действие отправки
+                            сообщений нужной вам группе или пользователю.</cmd>
+                        <info>
+                            <note>По умолчанию в разделе «Операции» в шаге 1 указано действие
+                                «Отправить сообщение группам пользователей: Администраторы».
+                                Оставьте это значение, если пользователи, которым вы настроили
+                                Email-адреса, находятся в группе «Администраторы».</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Чтобы изменить группу получателей сообщений:</cmd>
+                        <info>
+                            <ol id="ol_xs5_dcq_stb">
+                                <li>Нажмите на кнопку «Изменить» в строке с шагом 1 в разделе
+                                    «Операции».</li>
+                                <li>В открывшемся окне перейдите в раздел «Отправлять группам
+                                    пользователей».</li>
+                                <li>Нажмите  «Удалить» напрортив указанной там группы.</li>
+                                <li>Нажмите «Добавить».</li>
+                                <li>В открывшемся окне выберите группы получателей сообщений.</li>
+                                <li>Для применения настроек нажмите на кнопку «Обновить».</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Чтобы отправлять сообщения пользователю без привязки к группе:</cmd>
+                        <info>
+                            <ol id="ol_yr3_x2p_stb">
+                                <li>Нажмите на кнопку «Изменить» в строке с шагом 1 в разделе
+                                    «Операции».</li>
+                                <li>В открывшемся окне перейдите в раздел «Отправлять
+                                    пользователям».</li>
+                                <li>Нажмите «Добавить».</li>
+                                <li>В открывшемся окне выберите получателей сообщений.</li>
+                                <li>Для применения настроек нажмите на кнопку «Обновить».</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Действие». </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что установлен чекбокс «Активировано». </cmd>
+                    </substep>
+                    <substep id="check_notifications_end">
+                        <cmd>Нажмите на кнопку «Обновить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Если необходимо получать оповещения о внутренних действиях, выполните следующие
+                    действия:</cmd>
+                <substeps id="substeps_ttv_z2s_qtb">
+                    <substep>
+                        <cmd>В левом верхнем углу страницы выберите раздел «Внутренние действия».
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Откройте карточку правила, для которого нужно настроить
+                            оповещения.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Повторите операции, описанные в шагах <xref
+                                href="itmk_config_notifications.dita#itmk_config_notifications/check_notifications"
+                                />-<xref
+                                href="itmk_config_notifications.dita#itmk_config_notifications/check_notifications_end"
+                            />.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        
+    </taskbody>
+    
+</task>

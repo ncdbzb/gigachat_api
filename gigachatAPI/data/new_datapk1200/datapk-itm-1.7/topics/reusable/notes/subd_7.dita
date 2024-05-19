@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dcl_vvt_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_ecl_vvt_psb">
+            <cmd>Проинициализируйте установленную версию. Для этого:</cmd>
+            <substeps id="substeps_unn_1vt_psb">
+                <substep>
+                    <cmd>Перейдите в директорию расположения исполняемых файлов СУБД:</cmd>
+                    <info><codeblock>cd /usr/jatoba-*/bin</codeblock></info>
+                </substep>
+                <substep>
+                    <cmd>Выполните команду инициализации СУБД: </cmd>
+                    <info><codeblock>./jatoba-setup initdb jatoba-*</codeblock>
+                        <note type="attention">После инициализации СУБД основной каталог с конфигурационными файлами располагается в <codeph>/storage/base</codeph>.</note>
+                    </info>
+                </substep>
+            </substeps>
+        </step>
+        </steps>
+    </taskbody>
+</task>

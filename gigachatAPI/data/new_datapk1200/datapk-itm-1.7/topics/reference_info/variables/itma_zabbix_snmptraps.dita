@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="itma_zabbix_snmptraps">
+    <glossterm>ITMA_ZABBIX_SNMPTRAPS</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/itma_zabbix_snmptraps_info.dita#ReusableComponent_vwz_mfz_qvb/p_wwz_mfz_qvb"
+        />
+    </glossdef>
+</glossentry>

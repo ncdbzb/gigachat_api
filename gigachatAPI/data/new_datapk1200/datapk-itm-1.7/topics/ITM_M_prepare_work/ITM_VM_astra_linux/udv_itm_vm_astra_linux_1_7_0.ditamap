@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка UDV-ITM-VM на ОС Astra Linux 1.7</title>
+    <topicref href="configuring_repositories.dita"/>
+    <topicref href="postgresql_v11.dita"/>
+    <topicref href="configuring_postgresql.dita"/>
+    <topicref href="docker_astra.dita"/>
+    <topicref href="configuring_iptables.dita"/>
+    <topicref href="hostname.dita"/>
+    <topicref href="installing_itm_vm_astra.dita"/>
+</map>

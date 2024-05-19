@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agent_installation_windows">
+    <title>Установка агентов версии 1 или 2 на ОС Windows 7+</title>
+    <taskbody
+        conref="../../reusable/agents/agent_win_7_install.dita#ReusableComponent_fvp_fks_x5b/taskbody_gvp_fks_x5b"/>
+</task>

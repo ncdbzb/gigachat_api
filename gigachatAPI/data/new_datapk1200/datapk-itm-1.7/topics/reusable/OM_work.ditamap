@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Работа с объектами мониторинга</title>
+    <topicref href="../usage/monitoring_objects_and_hosts/hosts_detection.dita">
+        <topicref href="../usage/monitoring_objects_and_hosts/OM_auto_detection.dita"/>
+        <topicref href="../usage/monitoring_objects_and_hosts/itm_k_config_actions_detection.dita"/>
+    </topicref>
+    <topicref href="../requirements/safe_installation/datapk_synchro/datapk_synchro_info.dita"/>
+    <topicref href="../usage/monitoring_objects_and_hosts/host_import.dita"/>
+    <topicref href="../usage/monitoring_objects_and_hosts/hosts_creation.dita"/>
+    <topicref href="../usage/monitoring_objects_and_hosts/host_configuration.dita"/>
+    <topicref href="../usage/monitoring_objects_and_hosts/hosts_delete.dita"/>
+</map>

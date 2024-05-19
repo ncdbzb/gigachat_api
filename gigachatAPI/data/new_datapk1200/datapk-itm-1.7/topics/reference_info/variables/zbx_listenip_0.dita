@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_listenip_0">
+    <glossterm>ZBX_LISTENIP</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/zbx_listenip0_info.dita#ReusableComponent_skp_dnk_trb/div_vkp_dnk_trb"
+        />
+    </glossdef>
+</glossentry>

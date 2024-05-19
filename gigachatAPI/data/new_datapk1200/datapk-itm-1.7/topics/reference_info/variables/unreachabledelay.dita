@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="unreachabledelay">
+    <glossterm>ZBX_UNREACHABLEDELAY</glossterm>
+    <glossdef>
+        <p>Период проверки узла сети на доступность в период его <xref
+                href="https://www.zabbix.com/documentation/5.2/ru/manual/appendix/items/unreachability#%D0%BD%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B8%D0%B6%D0%B8%D0%BC%D1%8B%D0%B9-%D1%83%D0%B7%D0%B5%D0%BB-%D1%81%D0%B5%D1%82%D0%B8"
+                format="html" scope="external">недостижимости</xref>, в секундах.</p>
+    </glossdef>
+</glossentry>

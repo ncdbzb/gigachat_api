@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ww1_vmm_k5b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_zw1_vmm_k5b">
+                        <cmd>создайте пользователя с именем <codeph>datapkitm</codeph> и необходимым паролем:</cmd>
+                        <info><codeblock>CREATE USER datapkitm WITH PASSWORD '[пароль служебного пользователя]';</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

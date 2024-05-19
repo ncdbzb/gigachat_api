@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_vm_connect_web">
+    <title>Подключение к веб-интерфейсу</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для подключения к веб-интерфейсу <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm_vm"/></ph>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>В браузере в адресной строке введите IP-адрес <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>. </cmd>
+                <stepresult>отобразится окно входа в веб-интерфейс <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>. <fig>
+                        <title>Окно авторизации</title>
+                        <image href="../../../images/ITM_M_prepare_work/itm_m_autorization.png"
+                            id="image_cnk_myj_z5b"/>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>В окне входа введите логин и пароль учетной записи.</cmd>
+                <info outputclass="admin">Для встроенной учетной записи по умолчанию заданы логин <b>itm</b> и пароль
+                        <b>P@ssw0rd1234</b>. При первой настройке комплекса необходимо изменить
+                    логин и пароль встроенной учетной записи.</info>
+              
+                <info>
+                    <note type="attention">При вводе неправильного логина или пароля 5 раз IP-адрес,
+                        с которого пользователь пытается авторизоваться, блокируется на 5
+                        минут.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Войти».</cmd>
+                <stepresult>выполнен вход на главную страницу веб-интерфейса <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph>.</stepresult>
+            </step>
+        </steps>
+        <postreq id="postreq_xlr_zzd_zyb">
+            <note type="tip">Чтобы завершить сеанс работы в веб-интерфейсе <ph outputclass="udvpdf"
+                        ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_vm"/></ph>, нажмите на кнопку <image
+                    href="../../../images/ITM_M_icons/ITM_M_close_session.png"
+                    id="image_dkd_212_zyb"/> («Выйти») в нижней части главного меню.</note>
+        </postreq>
+    </taskbody>
+</task>

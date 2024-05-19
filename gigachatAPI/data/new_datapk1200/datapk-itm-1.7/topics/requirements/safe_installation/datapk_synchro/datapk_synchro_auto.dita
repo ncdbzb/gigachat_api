@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="datapk_synchro_auto">
+    <title>Настройка автоматической синхронизации</title>
+    <taskbody
+        conref="../../../reusable/synchro_datapk/datapk_synchro_auto_info.dita#ReusableComponent_nv3_j4k_syb/taskbody_pv3_j4k_syb"/>
+</task>

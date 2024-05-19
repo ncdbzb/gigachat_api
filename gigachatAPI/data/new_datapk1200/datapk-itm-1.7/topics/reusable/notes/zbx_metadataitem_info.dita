@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_o3p_s4k_trb">
+    <title>zbx_metadataitem_info</title>
+    <body>
+        <div id="div_p3p_s4k_trb">
+            <p>Элемент данных агента, использующийся для получения метаданных узла сети, которые
+                используются только в процессе автоматической регистрации узлов сети (активный
+                агент). Необязательный параметр. Поддерживаются:</p>
+            <ul id="ul_pd2_zcm_trb">
+                <li> UserParameters,</li>
+                <li> псевдонимы,</li>
+                <li> system.run[] независимо от значения EnableRemoteCommands. </li>
+            </ul>
+            <div conref="zbx_metadataitem_note.dita#ReusableComponent_cdb_2dm_trb/div_ddb_2dm_trb"/>
+        </div>
+    </body>
+</topic>

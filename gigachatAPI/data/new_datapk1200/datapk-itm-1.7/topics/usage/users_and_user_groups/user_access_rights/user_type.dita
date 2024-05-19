@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="user_type">
+    <title>Тип пользователя</title>
+    <body>
+        <p>Тип пользователя определяет права доступа к разделам главного меню и к данным групп узлов
+            сети. Пользователи не могут менять тип самим себе. <table id="table_srr_v5z_frb"
+                frame="all" colsep="1" rowsep="1">
+                <title>Типы пользователей в <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph></title>
+                <tgroup cols="2">
+                    <colspec colnum="1" colname="col1" colwidth="1*"/>
+                    <colspec colnum="2" colname="col2" colwidth="3.31*"/>
+                    <thead>
+                        <row>
+                            <entry>Тип пользователя</entry>
+                            <entry>Описание</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Пользователь</entry>
+                            <entry>Имеет доступ к разделам главного меню <cite keyref="monitoring"
+                                />, <cite keyref="inventory"/> и <cite keyref="reports"/>. По
+                                умолчанию не имеет прав доступа к каким-либо группам узлов сети.
+                                Права доступа к группе узлов сети должны быть заданы явно.</entry>
+                        </row>
+                        <row>
+                            <entry>Администратор</entry>
+                            <entry>Имеет доступ к разделам главного меню <cite keyref="monitoring"
+                                />, <cite keyref="inventory"/>, <cite keyref="reports"/> и <cite
+                                    keyref="configuration"/>. По умолчанию не имеет прав доступа к
+                                каким-либо группам узлов сети. Права доступа к группе узлов сети
+                                должны быть заданы явно.</entry>
+                        </row>
+                        <row>
+                            <entry>Супер-администратор</entry>
+                            <entry>Имеет доступ ко всем разделам главного меню: <cite
+                                    keyref="monitoring"/>, <cite keyref="inventory"/>, <cite
+                                    keyref="reports"/>, <cite keyref="configuration"/> и <cite
+                                    keyref="administration"/>. Имеет права на чтение и запись всех
+                                групп узлов сети. Запрет доступа к каким-либо группам узлов сети не
+                                влияет на права доступа Супер-администратора.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></p>
+    </body>
+</topic>

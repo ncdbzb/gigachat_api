@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_s4b_2yt_ywb">
+    <title></title>
+    <body><p id="p_t4b_2yt_ywb">Задает ключу элемента данных алиас — имя, которое можно использовать для замены длинных и сложных ключей. Один и тот же параметр Alias можно использовать для нескольких ключей. Также несколько разных параметров Alias могут ссылаться на один и тот же ключ. Разрешено указывать несколько параметров с одинаковым ключем Alias. Алиасы можно использовать в параметрах <cmdname keyref="hostmetadataitem"/>, но нельзя использовать в параметрах <cmdname keyref="hostnameitem"/>.</p></body>
+</topic>

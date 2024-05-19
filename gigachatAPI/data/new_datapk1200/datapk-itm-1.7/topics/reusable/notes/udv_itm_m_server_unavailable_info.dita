@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_rz5_gsf_1xb">
+    <title></title>
+    <troublebody id="troublebody_tz5_gsf_1xb">
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Страница в веб-интерфейсе была активна, когда произошло отключение контейнера zabbix-server.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd conref="database_error_step1.dita#ReusableComponent_fzz_cty_hrb/cmd_gzz_cty_hrb"/>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в рабочий каталог <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf">
+                            <term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>
+                            и просмотрите состояние docker-контейнеров (по умолчанию путь к рабочей директории 
+                            <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                            <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> — 
+                            <codeph conref="../filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"/>).</cmd>
+                        <itemgroup>Для этого выполните команды:
+                                <codeblock>cd /[путь к рабочей директории <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>] docker ps</codeblock><note>Все
+                                контейнеры в полученном списке должны быть в состоянии
+                                    <codeph>up</codeph> (колонка «Status»). Среди контейнеров в
+                                списке должен присутствовать zabbix-server. </note>
+                        </itemgroup>
+                    </step>
+                    <step>
+                        <cmd>Если какие-либо контейнеры не запущены или имеют статус «Restarting», то остановите работу контейнеров без удаления данных следующей 
+                            командой: </cmd><info><codeblock>docker-compose down</codeblock></info></step><step><cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+                            </step>
+                    <step>
+                        <cmd>Проверьте и, в случае необходимости, откорректируйте файлы
+                                <codeph>.[имя модуля].env</codeph>,
+                                <codeph>docker-compose.yaml</codeph>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Запустите работу контейнеров командой: </cmd>
+                        <info><codeblock>docker-compose up -d</codeblock></info>
+                    </step>
+                    <step>
+                        <cmd>Проверьте состояние docker-контейнеров с помощью команды:</cmd>
+                        <info><codeblock>docker ps</codeblock></info>
+                        <info><note conref="container_up.dita#ReusableComponent_csq_y3s_rrb/note_esq_y3s_rrb" id="note_k1r_qss_rrb"/></info>
+                    </step>
+                    <step>
+                        <cmd>Если среди docker-контейнеров не появился zabbix-server, запустите его с помощью команды:</cmd>
+                                    <info><codeblock>docker-compose up -d zabbix-server</codeblock></info>
+                                </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

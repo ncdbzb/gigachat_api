@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_dyw_ksk_trb">
+    <title>zbx_tlsaccept_info</title>
+    <body><div id="div_eyw_ksk_trb">Виды принимаемых входящих подключений. Значение переменной используется
+            пассивными проверками. Можно указывать несколько значений, разделенных запятой:<ul
+               >
+                <li><codeph>unencrypted</codeph> — принимать подключения без шифрования (по
+                    умолчанию);</li>
+                <li><codeph>psk</codeph> — принимать подключения с TLS и pre-shared ключом
+                    (PSK);</li>
+                <li><codeph>cert</codeph> — принимать подключения с TLS и сертификатом.</li>
+            </ul></div></body>
+</topic>

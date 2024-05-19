@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_wyt_wp2_trb">
+    <title>zbx_historyindexcache_size_info</title>
+    <body><div id="p_xyt_wp2_trb">Размер разделяемой памяти (кэша) для индексации данных записываемой истории в кэш истории.<p>
+                <div
+                    conref="zbx_historyindexcache_size_note.dita#ReusableComponent_nj5_3jr_trb/div_oj5_3jr_trb"
+                />
+            </p></div></body>
+</topic>

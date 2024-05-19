@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка сервера агентов DATAPK ITM-A</title>
+    <topicref href="agent_install/itm_a_ntp.dita"/>
+    <topicref href="agent_install/itm_a_extra_package_redos7_3.dita"/>
+    <topicref href="agent_install/itm_a_redos_package_internet.dita"/>
+    <topicref href="agent_install/itm_a_2_tomes.dita" collection-type="sequence">
+        <topicref href="agent_install/itm_a_mount.dita"/>
+        <topicref href="agent_install/itm_a_config_subd.dita"/>
+    </topicref>
+    <topicref href="itm_a_install_agent_server_jatoba.dita"/>
+    <topicref href="itm_a_agent_install.dita"/>
+    <topicref href="agent_install/datapk_itm_a_1_2_1_3.dita"/>
+    <topicref href="agent_install/itm_a_update_to_1_3_1.dita"/>
+    <topicref href="agent_install/itm_a_agents_installation.dita" collection-type="sequence">
+        <topicref href="agent_install/itm_a_agents_installation.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="agent_install/itm_a_agentless.dita" collection-type="sequence">
+        <topicref href="agent_install/itm_a_agentless.ditamap" format="ditamap"/>
+    </topicref>
+</map>

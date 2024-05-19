@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ITM_algorithm_add_OM">
+    <title>Алгоритм подключения объектов мониторинга к серверу мониторинга ITM-K</title>
+    <body>
+        <fig id="ITM_algorithm">
+            <title>Подключение объектов мониторинга к серверу мониторинга ITM-K</title>
+            <image href="../../../images/ITM_design_implementation/ITM_algorithm_add_OM.png" />
+        </fig>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+    </body>
+</topic>

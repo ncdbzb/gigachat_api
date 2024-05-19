@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="LDAP_clear">
+    <title>Очистка настроек LDAP</title>
+    <taskbody><context>
+        <p>В <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_vm"/></ph> можно очистить параметры подключения к <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                />. Это может понадобиться для очистки параметров тестового контура, перемещения
+                сервера в другой сегмент и т.п. Для очистки настроек:</p>
+    </context>
+        <steps id="steps_gl4_y1y_2xb">
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_config_ldap"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Установите переключатель «Включить <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    />» в верхней части страницы в положение «Выключено».</cmd>
+                <stepresult>кнопка «Очистить настройки» станет активна.<fig id="fig_jrh_dby_2xb">
+                        <title>Кнопка «Очистить настройки» при выключенном переключателе
+                            LDAP.</title>
+                        <image href="../../../images/ITM_M_screens/LDAP_clear_button.png"/>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Очистить настройки».</cmd>
+                <stepresult>появится окно подтверждения.</stepresult>
+            </step>
+            <step>
+                <cmd>В открывшемся окне нажмите на кнопку «Подтвердить». </cmd>
+                <info>
+                    <fig id="fig_pct_fly_2xb">
+                        <title>Окно подтверждения очистки настрек</title>
+                        <image href="../../../images/ITM_M_screens/LDAP_clear_window.png"/>
+                    </fig>
+                </info>
+                <stepresult>после подтверждения параметры подключения <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    /> полностью очистятся.</stepresult>
+            </step>
+        </steps></taskbody>
+</task>

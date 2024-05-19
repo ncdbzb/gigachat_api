@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qbm_ktc_jsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_rbm_ktc_jsb">
+                        <cmd>Нажмите «Да».</cmd>
+                        <info>
+                            <fig>
+                                <title>Окно подтверждения</title>
+                                <image href="../../../images/ITM_K_requirements/regedit_approve.png"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Редактор реестра».</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

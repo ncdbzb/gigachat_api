@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ajr_qpl_1xb">
+    <title></title>
+    <taskbody id="taskbody_djr_qpl_1xb"><context>Для корректного сбора данных с <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и подключенных к нему серверов <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> присоедините созданные ранее шаблоны:</context><steps><step><cmd>Перейдите в меню <cite keyref="configuration"/> → <cite keyref="hosts_configuration"/>.</cmd></step><step><cmd>Выберите узел сети datapkitm server.</cmd><stepresult>Откроется страница «Узлы сети».</stepresult></step><step><cmd>Перейдите во вкладку «Шаблоны».</cmd></step>
+            <step>
+                <cmd>Нажмите кнопку «Выбрать».</cmd>
+                <stepresult>Откроется окно выбора шаблонов.</stepresult>
+            </step><step>
+                <cmd>Установите чекбокс возле следующих шаблонов:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>«Сервер консолидации ITM-K» для узла сети сервера <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph> или «Сервер
+                            сбора ITM-A» для узла сети сервера <ph outputclass="udvpdf"><term
+                                    keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_a"/></ph>;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>«Linux агентный сбор».</cmd>
+                    </substep>
+                </substeps>
+            </step><step>
+                <cmd>Нажмите на кнопку «Обновить».</cmd>
+                <info>
+                    <fig id="fig_add_templates_2_16">
+                        <title> Добавление шаблонов узлу сети </title>
+                        <image href="../../../images/first_configuration/self-monitoring.png"
+                            id="add_templates_2_16"/>
+                    </fig>
+                </info>
+            </step></steps></taskbody>
+</task>

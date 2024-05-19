@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mfl_gvc_cvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_ofl_gvc_cvb">
+                        <cmd>Отмените выбор всех чекбоксов, кроме следующих: </cmd>
+                        <info><ul id="ul_r1l_rkx_bvb">
+                            <li>«Группы узлов сети» в разделе «Доступ к Веб элементам» → «Настройка»;</li>
+                            <li>«Узлы сети» в разделе «Доступ к Веб элементам» → «Настройка»; 
+                                <fig>
+                                    <title>Чекбоксы «Группы узлов сети» и «Узлы сети»</title>
+                                    <image href="../../../images/ITM-K_synchro/synchro_checkbox_config.png"/>
+                                </fig> 
+                            </li>
+                            <li>«Активировано» в разделе «Доступ к API». 
+                                <fig>
+                                    <title>Чекбокс «Активировано»</title>
+                                    <image href="../../../images/ITM-K_synchro/synchro_checkbox_api.png"/>
+                                </fig> 
+                            </li>
+                        </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+      
+    </taskbody>
+</task>

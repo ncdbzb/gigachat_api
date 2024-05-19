@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_dqp_lql_trb">
+    <title>ZBX_MAXINPUTTIME note</title>
+    <body><div id="div_eqp_lql_trb">Рекомендуется установить значение данной переменной, чтобы исключить
+            слишком долгое выполнение скриптов.</div></body>
+</topic>

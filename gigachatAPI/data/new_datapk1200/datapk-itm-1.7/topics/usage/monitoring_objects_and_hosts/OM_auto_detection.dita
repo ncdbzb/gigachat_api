@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="OM_auto_detection">
+    <title>Настройка автоматического обнаружения ОМ</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <note
+                conref="../../reusable/notes/autodetection.dita#ReusableComponent_fxr_fgn_ytb/note_gxr_fgn_ytb"
+            />Для настройки автоматической регистрации:</context>
+        <steps>
+            <step>
+                <cmd>В конфигурационном файле <abbreviated-form keyref="monitoring_object"/> укажите
+                    IP-адрес сервера, к которому планируется подключить <abbreviated-form
+                        keyref="monitoring_object"/>, и порт для подключений сервера. Подробнее см.
+                    в <ph outputclass="pdfonly">Руководстве администратора <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> в разделе «Установка и
+                        настройка агентов»</ph>
+                    <ph outputclass="html">разделе <xref
+                            href="../../requirements/safe_installation/agent_installation/agents_installation.dita"
+                        /></ph>.</cmd>
+            </step>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite keyref="detection"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Создать правило обнаружения» в правом верхнем углу.</cmd>
+                <stepresult>Откроется страница «Правила обнаружения».
+                <fig>
+                    <title>Cтраница «Правила обнаружения»</title>
+                    <image href="../../../images/ITM_K_usage/itm_k_detection_rule.png"/>
+                </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Задайте следующие параметры:</cmd>
+                <substeps id="substeps_e1x_11g_ytb">
+                    <substep>
+                        <cmd>Имя — название правила обнаружения.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Обнаружение через прокси — позволяет выбрать, будет ли поиск
+                                <abbreviated-form keyref="monitoring_object"/> осуществляться через
+                            прокси.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Диапазон IP-адресов — IP-адреса, которые <abbreviated-form
+                                keyref="datapk_itm_k"/> будет сканировать для поиска
+                                <abbreviated-form keyref="monitoring_object"/>.</cmd>
+                        <info>Доступны следующие форматы:<ul id="ul_ebm_h1g_ytb">
+                                <li><b>Один IP:</b> 192.168.1.33</li>
+                                <li><b>Диапазон IP-адресов:</b> 192.168.1-10.1-255</li>
+                                <li><b>Маска IPv4 и IPv6:</b> 192.168.4.0/24. Поддерживаемые маски
+                                    IP: /16 — /30 для IPv4 адресов и /112 — /128 для IPv6
+                                    адресов</li>
+                                <li><b>Список:</b> 192.168.1.1-255, 192.168.2.1-100, 192.168.2.200,
+                                    192.168.4.0/24</li>
+                            </ul></info>
+                    </substep>
+                    <substep>
+                        <cmd>Интервал обновления — период активного сканирования IP-адресов.</cmd>
+                        <info>
+                            <p>Формат: 1х, где x — суффикс времени. </p>
+                            <p>Доступные суффиксы:</p>
+                            <ul id="ul_t2c_dvg_ytb">
+                                <li><b>s</b> — секунды;</li>
+                                <li><b>m</b> — минуты;</li>
+                                <li><b>h</b> — часы;</li>
+                                <li><b>d</b> — дни;</li>
+                                <li><b>w</b> — недели.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Проверки — позволяют выбрать сетевой сервис в качестве типа проверки и
+                            задать диапазон портов.</cmd>
+                        <info>Используются для поиска узлов сети. Доступны следующие проверки: <ph
+                                conref="../../reusable/protocol_names/SSH.dita#ReusableComponent_ujf_ttf_4yb/ph_vjf_ttf_4yb"
+                            />, <ph conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"/>, <ph
+                                conref="../../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/FTP.dita#ReusableComponent_czr_lsf_4yb/ph_dzr_lsf_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/HTTP.dita#ReusableComponent_qbp_fzf_4yb/ph_rbp_fzf_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/HTTPS.dita#ReusableComponent_l2g_xwf_4yb/ph_m2g_xwf_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/POP.dita#ReusableComponent_avx_vnf_4yb/ph_bvx_vnf_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/NNTP.dita#ReusableComponent_bdq_c4f_4yb/ph_cdq_c4f_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/IMAP.dita#ReusableComponent_ez1_m4f_4yb/ph_fz1_m4f_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/TCP.dita#ReusableComponent_s2p_3gl_4yb/ph_t2p_3gl_4yb"
+                            />, <ph
+                                conref="../../reusable/protocol_names/Telnet.dita#ReusableComponent_rsc_w4f_4yb/ph_tsc_w4f_4yb"
+                            />, Zabbix agent, <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />v1 agent, <ph
+                                conref="../../reusable/protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"
+                            /> agent, <ph
+                                conref="../../reusable/protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"
+                            /> agent, <ph
+                                conref="../../reusable/protocol_names/ICMP.dita#ReusableComponent_rk1_vpf_4yb/ph_sk1_vpf_4yb"
+                            /> ping.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Критерий уникальности устройства — параметр, по которому определается,
+                            является ли обнаруженный узел сети уникальным.</cmd>
+                        <info>Критерием уникальности может быть:<ul id="ul_ifj_1rl_ytb">
+                                <li>IP-адрес;</li>
+                                <li>Проверка типа <ph
+                                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                    />;</li>
+                                <li>Проверка типа Zabbix агент.</li>
+                            </ul></info>
+                    </substep>
+                    <substep>
+                        <cmd>Имя узла сети.</cmd>
+                        <info>В качестве имени узла сети могут использоваться:<ul
+                                id="ul_hmh_ywl_ytb">
+                                <li>DNS имя;</li>
+                                <li>IP адрес;</li>
+                                <li>Проверка типа <ph
+                                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                    />;</li>
+                                <li>Проверка типа Zabbix агент.</li>
+                            </ul></info>
+                    </substep>
+                    <substep>
+                        <cmd>Видимое имя — имя, которое будет отображаться в веб-интерфейсе.</cmd>
+                        <info>В качестве видимого имени узла сети могут использоваться:<ul
+                                id="ul_ypw_zxl_ytb">
+                                <li>Имя узла сети — совпадает со значением поля «Имя»;</li>
+                                <li>DNS имя;</li>
+                                <li>IP адрес;</li>
+                                <li>Проверка типа <ph
+                                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                    />;</li>
+                                <li>Проверка типа Zabbix агент.</li>
+                            </ul></info>
+                    </substep>
+                    <substep>
+                        <cmd>Активировано — установите чекбокс, чтобы активировать правило
+                            обнаружения.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Добавить».</cmd>
+                <stepresult>обнаруженные узлы сети появятся на странице <cite keyref="monitoring"/>
+                    → <cite keyref="detection"/>.</stepresult>
+            </step>
+            <step>
+                <cmd>При необходимости настройте действия для обнаруженных узлов сети согласно
+                    инструкции <xref href="itm_k_config_actions_detection.dita"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Отключите автоматические проверки после обнаружения всех <abbreviated-form
+                        keyref="monitoring_object"/> во избежание лишней нагрузки на сеть.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

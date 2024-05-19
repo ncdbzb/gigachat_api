@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>var_itm_vm_user</title>
+    <topicref href="variables/itmm_sync_history_lifetime_in_days.dita" keys="itmm_sync_history_lifetime_in_days"/>
+    <topicref href="variables/domain.dita" keys="domain"/>
+</map>

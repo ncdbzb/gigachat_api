@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="monitoring_objects_list">
+    <title>Список объектов мониторинга</title>
+    <body>
+        <p>Список выводится при нажатии в боковом меню на раздел <cite
+                keyref="itm_m_page_object_monitoring"/>. </p>
+        <p><fig id="fig_znv_mqh_fzb">
+                <title>Список объектов мониторинга</title>
+                <div outputclass="html"><image
+                        href="../../../images/ITM_M_screens/ITM_M_OM_screen.png"
+                        id="image_a4v_mqh_fzb"/></div>
+                <div outputclass="onlypdf"><image
+                        href="../../../images/ITM_M_screens/ITM_M_OM_screen.png"
+                        id="image_b4v_mqh_fzb"/></div>
+            <div outputclass="udvpdf"><image
+                href="../../../images/udv_itm_vm_pages/UDV_ITMVM_OM_screen.png"
+                /></div>
+            </fig>Над списком <abbreviated-form keyref="monitoring_object"/> выводится название
+            «Объекты мониторинга». </p>
+        <p>Рядом с названием отображаются:<ul id="ul_avb_vrm_fzb">
+                <li>Счетчик объектов мониторинга. Если никакие фильтры не применены, счетчик
+                    показывает общее количество <abbreviated-form keyref="monitoring_object"/>. Если
+                    применены какие-либо фильтры, счетчик показывает количество отфильтрованных
+                        <abbreviated-form keyref="monitoring_object"/>/общее количество
+                        <abbreviated-form keyref="monitoring_object"/>.</li>
+                <li>Кнопка обновления данных на странице <image
+                        href="../../../images/ITM_M_icons/itmm_refresh_problems.png"
+                        id="image_p2r_vcw_wsb"/>. Через 1 минуту рядом с кнопкой появляется счетчик
+                    времени с момента обновления страницы. Время отображается только в минутах.</li>
+            </ul></p>
+        <p>Список объектов мониторинга можно отфильтровать или отсортировать.</p>
+        <note type="attention">При обновлении страницы в браузере или переходе на другую страницу
+            выбранные фильтры и сортировка будут сброшены. При обновлении страницы с помощью кнопки
+                <image href="../../../images/ITM_M_icons/itmm_refresh_problems.png"
+                id="image_agq_dtq_2xb"/> («Обновить данные») фильтры и сортировка не
+            сбрасываются.</note>
+        <section>
+            <title>Фильтры</title>
+            <p>Ниже строки с названием находится фильтр «Филиал/<abbreviated-form keyref="to"/>»,
+                который позволяет отобразить все <abbreviated-form keyref="monitoring_object"/>
+                выбранных филиалов или <abbreviated-form keyref="to"/>. При нажатии на поле фильтра
+                появляется выпадающий список c имеющимися филиалами и <abbreviated-form keyref="to"
+                />. <fig id="fig_ghr_3rg_fzb">
+                    <title>Фильтр «Филиал/ТK»</title>
+                    <image href="../../../images/ITM_M_screens/ITM_M_filial_filter.png"
+                        id="image_jj3_23f_tzb"/>
+                </fig></p>
+            <p>При выборе филиала входящие в него <abbreviated-form keyref="to"/> не выбираются
+                автоматически. Выбор <abbreviated-form keyref="to"/> доступен независимо от того,
+                выбран ли филиал, к которому он относится. Если у филиала 5 или больше вложенных
+                    <abbreviated-form keyref="to"/>, становятся доступны кнопки:<ul
+                    id="ul_zww_55g_fzb">
+                    <li>«Выделить все» — нажмите, чтобы выбрать все <abbreviated-form keyref="to"/>,
+                        входящие в филиал.</li>
+                    <li>«Снять выделение» — нажмите, чтобы отменить выбор всех <abbreviated-form
+                            keyref="to"/>, входящих в филиал.</li>
+                </ul>В списках фильтров можно выбрать одно или несколько значений. <ul
+                    id="ul_sfj_4hf_tzb">
+                    <li>Чтобы закрыть список и применить фильтр, после выбора всех нужных значений
+                        кликните вне области фильтра. </li>
+                    <li>Чтобы отменить выбор конкретного значения, еще раз кликните по этому
+                        значению в выпадающем списке. </li>
+                    <li>Чтобы сбросить примененный фильтр целиком, нажмите на кнопку <image
+                            href="../../../images/ITM_M_icons/itmm_filter_clear.png"
+                            id="image_bzn_ctq_2xb"/> в области фильтра. </li>
+                    <li>Чтобы сбросить сразу все выбранные фильтры, нажмите на кнопку <image
+                            href="../../../images/ITM_M_icons/clear_all_filter.png"
+                            id="image_mvj_kkd_nzb"/> справа от фильтра.</li>
+                </ul></p>
+        </section>
+        <section>
+            <title>Сортировка</title>
+            <p>По умолчанию <abbreviated-form keyref="monitoring_object"/> отсортированы по
+                возрастанию по следующим столбцам:<ul id="ul_rdp_jny_lzb">
+                    <li>Филиал;</li>
+                    <li><abbreviated-form keyref="to"/> (внутри филиала);</li>
+                    <li>Наименование (внутри <abbreviated-form keyref="to"/>/филиала).</li>
+                </ul>Можно отсортировать <abbreviated-form keyref="monitoring_object"/> вручную по
+                наименованию или филиалу.</p>
+        </section>
+        <section>
+            <title>Свойства объектов мониторинга</title>
+            <p>Для просмотра полного списка <abbreviated-form keyref="monitoring_object"/>
+                используется вертикальная прокрутка списка справа.</p>
+            <p>В списке отображаются следующие свойства объектов мониторинга: </p>
+            <ul id="ul_plc_n3l_krb">
+                <li>Наименование (отображаемое имя <abbreviated-form keyref="monitoring_object"
+                    />).</li>
+                <li>Мониторинг — индикатор статуса объекта мониторинга. Возможные значения:<ul
+                        id="ul_qlc_n3l_krb">
+                        <li><image href="../../../images/ITM_M_icons/ITM_M_monitoring.png"
+                                id="image_qn1_y3g_prb"/> Активирован — активирован и доступен по
+                            одному из каналов мониторинга. Статус «Активирован» не отображается при
+                            использовании мониторинга по протоколу <ph
+                                conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                            />.</li>
+                        <li><image href="../../../images/ITM_M_icons/ITM_M_icon_unavailable.png"
+                                id="image_ydg_z3g_prb"/> Недоступен — объект мониторинга недоступен
+                            ни по одному из каналов мониторинга</li>
+                        <li><image href="../../../images/ITM_M_icons/ITM_M_icon_notactive.png"
+                                id="image_bfs_z3g_prb"/> Деактивирован — объект мониторинга
+                            деактивирован администратором сервера мониторинга.</li>
+                    </ul></li>
+                <li>Филиал — наименование сервера мониторинга, к которому подключен
+                        <abbreviated-form keyref="monitoring_object"/>. При нажатии на значение
+                    этого столбца открывается окно «Свойства сервера мониторинга». Подробнее см. в
+                    разделе <xref href="../ITM_M_monitoring_servers/itm_m_info_added_server.dita"
+                    />.</li>
+                <li><abbreviated-form keyref="to"/> — наименование сервера <ph outputclass="html"
+                        >агентов</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="udvpdf"
+                        >удаленного мониторинга</ph>, к которому подключен <abbreviated-form
+                        keyref="monitoring_object"/>. При нажатии на значение этого столбца
+                    открывается окно «Свойства сервера агента». Подробнее см. в разделе <xref
+                        href="agent_server_info.dita"/>.</li>
+                <li>Проблемы — количество проблем <abbreviated-form keyref="monitoring_object"/>.
+                    При нажатии на количество проблем появится всплывающее окно со списком проблем.
+                        <fig id="fig_arw_r3f_tzb">
+                        <title>Окно со списком проблем ОМ</title>
+                        <image href="../../../images/ITM_M_screens/OM_problem_window.png"
+                            id="image_brw_r3f_tzb"/>
+                    </fig>Проблемы в списке отсортированы по уровню критичности, сверху расположены
+                    наиболее важные. В списке отображается не более 5 проблем. <p>Внизу окна
+                        находится ссылка «Открыть полный список проблем». При нажатии на ссылку в
+                        новой вкладке откроется страница <cite keyref="itm_m_page_problems"/> с
+                        фильтрацией по выбранному <abbreviated-form keyref="monitoring_object"/> и
+                        состоянию («Требует решения»). Отфильтрованные проблемы также будут
+                        отсортированы по важности по убыванию.</p><p>Чтобы закрыть окно со списком
+                        проблем, нажмите на кнопку <image
+                            href="../../../images/ITM_M_icons/new_cross.png" id="image_os3_lts_lzb"
+                        />.</p></li>
+                <li>АСУ ТП — соответствует значению тега asu_tp. Поле не заполняется, если тег
+                    отсутствует.</li>
+                <li>IP-адрес — IP-адрес интерфейса <abbreviated-form keyref="monitoring_object"/>,
+                    по которому осуществляется мониторинг.</li>
+                <li>ОС — операционная система <abbreviated-form keyref="monitoring_object"/>.</li>
+                <li><abbreviated-form keyref="tech_support"/> — <term keyref="tech_support"/>
+                    <abbreviated-form keyref="monitoring_object"/>. <p>Если <abbreviated-form
+                            keyref="monitoring_object"/> находится в состоянии технического
+                            обслуживания:<ul id="ul_gk4_skp_zsb">
+                            <li>поле содержит дату начала технического обслуживания
+                                    <abbreviated-form keyref="monitoring_object"/>;</li>
+                            <li>все значения строки этого <abbreviated-form
+                                    keyref="monitoring_object"/> серого цвета. </li>
+                        </ul></p><p>Если <abbreviated-form keyref="monitoring_object"/> не находится
+                        в состоянии технического обслуживания:<ul id="ul_z4y_blp_zsb">
+                            <li>поле не заполняется;</li>
+                            <li>все значения строки этого <abbreviated-form
+                                    keyref="monitoring_object"/> черного цвета. </li>
+                        </ul></p></li>
+                <li>Тип <abbreviated-form keyref="monitoring_object"/> — тип объекта мониторинга,
+                    указанный в инвентарных данных <abbreviated-form keyref="monitoring_object"/>.
+                        <note id="note_qj4_vtw_nrb">Поле Тип ОМ соответствует типу ОЗ в
+                        DATAPK.</note></li>
+                <li>Обновлен — дата и время последнего успешного обновления статуса
+                        <abbreviated-form keyref="monitoring_object"/> или полных данных об
+                        <abbreviated-form keyref="monitoring_object"/>.</li>
+                <li>Ссылки — если на сервере мониторинга <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph> или Zabbix в разделе инвентарных данных
+                    заполнено хотя бы одно из полей «URL A», «URL B», «URL C», то в этом разделе
+                    отобразится кнопка <image href="../../../images/ITM_M_icons/ITM-VM_link.png"
+                        id="image_pb3_vyg_fzb"/>. При нажатии на кнопку <image
+                        href="../../../images/ITM_M_icons/ITM-VM_link.png" id="image_zbp_bbh_fzb"/>
+                    откроется окно со списком ссылок.<fig id="fig_h3w_fzg_fzb">
+                        <title>Окно, содержащее ссылку из поля «URL A»</title>
+                        <image href="../../../images/ITM_M_screens/ITM-VM_link.png"
+                            id="image_crw_r3f_tzb"/>
+                    </fig>При нажатии на ссылку указанный веб-сайт откроется в новой вкладке
+                    браузера.</li>
+            </ul>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_en1_tws_rrb">
+    <title/>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step>
+                        <cmd id="cmd_fn1_tws_rrb">Дождитесь остановки работы всех контейнеров (3-5
+                            минут).</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>var_itm_a_db_env</title>
+    <topicref href="variables/db_server_host.dita" keys="db_server_host"/>
+    <topicref href="variables/db_server_port.dita" keys="db_server_port"/>
+    <topicref href="variables/postgres_user.dita" keys="postgres_user"/>
+    <topicref href="variables/postgres_password.dita" keys="postgres_password"/>
+    <topicref href="variables/postgres_db.dita" keys="postgres_db"/>
+</map>

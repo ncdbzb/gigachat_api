@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="agent_env">
+    <title>Рекомендации по использованию переменных файла .agent.env</title>
+    <body>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_ut4_2sl_trb">
+                <title>Рекомендации по использованию переменных файла .agent.env</title>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Переменные</entry>
+                            <entry>Рекомендации по использованию</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><cmdname keyref="zbx_alias"/></entry>
+                            <entry>
+                                <div
+                                    conref="../../reusable/notes/zbx_alias_note.dita#ReusableComponent_whm_xfm_trb/div_xhm_xfm_trb"/>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

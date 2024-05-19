@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="complex_screens">
+    <glossterm>Комплексные экраны</glossterm>
+    <glossdef>Подраздел мониторинга, который содержит список существующих комплексных экранов —
+        таблиц, позволяющих группировать информацию из различных источников для быстрого обзора
+        данных на одном экране. <fig>
+            <title>Страница «Комплексные экраны»</title>
+            <div outputclass="html"><image href="../../../images/Pages/monitoring_complex_screens.png"/></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/monitoring_complex_screens.png"/></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_monitoring_complex_screens.png"/></div>
+        </fig></glossdef>
+    <!--<related-links>
+        <link href="../../usage/complex_screens/complex_screens.dita"/>
+        <link href="../../usage/complex_screens/create_complex_screen.dita"/>
+        <link href="../../usage/complex_screens/complex_screen_add_items.dita"/>
+        <link href="../../usage/complex_screens/complex_screen_dynamic_items.dita"/>
+        
+    </related-links>-->
+</glossentry>

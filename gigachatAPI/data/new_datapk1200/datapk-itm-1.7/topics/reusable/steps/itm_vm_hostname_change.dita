@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vlq_qbc_qvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_wlq_qbc_qvb">
+                <cmd>Убедитесь, что имя сервера и переменная <cmdname keyref="hostname"/> соответствуют нужным вам значениям.</cmd>
+                <info>Актуальное имя сервера отображается в приглашении командной строки. Посмотреть переменную окружения <cmdname keyref="hostname"/> можно с помощью команды <codeph>echo $HOSTNAME</codeph>. При необходимости изменения имени сервера см. раздел <xref href="../../ITM_M_troubleshooting/itm_vm_hostname_change.dita"/>.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

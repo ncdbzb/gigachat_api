@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="error_first_start_udv_itm_vm">
+    <title>Ошибка при первичном запуске UDV-ITM-VM</title>
+    <troublebody
+        conref="../reusable/notes/ITM_VM_pg_hba_error_info.dita#ReusableComponent_fwm_kvc_zwb/troublebody_gwm_kvc_zwb"/>
+</troubleshooting>

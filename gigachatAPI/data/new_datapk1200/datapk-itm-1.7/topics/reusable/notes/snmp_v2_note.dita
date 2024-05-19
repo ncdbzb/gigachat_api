@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ptr_4km_rvb">
+    <title></title>
+    <body>
+        <note id="note_ttr_4km_rvb">Для <abbreviated-form keyref="monitoring_object"/> с этой ОС настройка происходит с помощью протокола SNMP v2.</note>
+    </body>
+</topic>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cc5_zgf_krb">
+    <title>server_install_step1</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Создайте директорию для установки <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-k</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

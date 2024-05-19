@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ldap_change_users">
+    <title>Настройка атрибутов пользователей LDAP или LDAPS</title>
+    <taskbody>
+        <context>
+            <p>В разделе «Атрибуты пользователей» необходимо указать базу поиска. Другие атрибуты
+                будут автоматически заполнены корректными значениями после редактирования и
+                сохранения настроек подключения к <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                /> или <ph conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"/>, но при необходимости их можно изменить.</p>
+            <note>Редактирование атрибутов пользователей <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                /> или <ph
+                    conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                /> доступно, только когда указаны настройки подключения <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                /> или <ph
+                    conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                />.</note>
+            <p>Для изменения атрибутов пользователей <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                /> или <ph
+                    conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                />: </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_config_ldap"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку <image
+                        href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                        id="image_i2n_1vl_t5b"/> рядом с заголовком «Атрибуты пользователей».</cmd>
+                <stepresult>атрибуты станут доступны для редактирования.</stepresult>
+            </step>
+            <step>
+                <cmd>В выпадающем списке BaseDN выберите базу поиска — объект каталога, в котором
+                    производится поиск учетных записей пользователей. База поиска указывается в
+                    формате <codeph>CN=имя_объекта,DC=класс_объекта_домена</codeph>. </cmd>
+                <stepxmp>База поиска <codeph>CN=TestObject,DC=example,DC=ru</codeph> означает, что
+                    поиск будет произведен в объекте с именем <codeph>TestObject</codeph> в домене
+                        <codeph>example.ru</codeph>.</stepxmp>
+            </step>
+            <step>
+                <cmd>При необходимости отредактируйте другие атрибуты пользователей:</cmd>
+                <substeps id="substeps_a1g_vgb_ntb">
+                    <substep>
+                        <cmd>Фильтр пользователей — критерий, по которому выбирается объект из базы
+                            поиска. Фильтр влияет на то, какие записи попадут в список
+                            пользователей. Примеры доступных фильтров: </cmd>
+                        <info>
+                            <ul id="ol_hdz_4cl_t5b">
+                                <li>вывод списка всех включенных пользователей текущего домена.
+                                    Используется как значение по умолчанию в поле «Фильтр
+                                    пользователей»:<codeblock>(&amp;(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</codeblock></li>
+                                <li>вывод списка пользователей конкретного подразделения и
+                                    конкретной группы:
+                                    <codeblock>(&amp;(objectCategory=person)(memberOf=cn=TestGroup,ou=TestOU,dc=company,dc=local))</codeblock>
+                                    Где: <ul id="ul_vyy_bdl_t5b">
+                                        <li><codeph>OU</codeph> — подразделение;</li>
+                                        <li><codeph>DC</codeph> — домен-контроллер;</li>
+                                        <li><codeph>TestGroup</codeph> — наименование группы;</li>
+                                        <li><codeph>TestOU</codeph> — наименование подразделения; </li>
+                                        <li><codeph>company</codeph> — наименование поддомена, где
+                                            находится подразделение <codeph>TestOU</codeph>;</li>
+                                        <li><codeph>local</codeph> — наименование домена, где
+                                            находится поддомен <codeph>company</codeph>.</li>
+                                    </ul></li>
+                                <li>вывод списка пользователей из разных подразделений и групп:
+                                    <codeblock>(&amp;(objectCategory=person)(|(memberOf=cn=TestGroup,ou=TestOU,dc=company,dc=local)(memberOf=cn=TestGroup2,ou=TestOU2,dc=company,dc=local)))</codeblock>
+                                    Где: <ul id="ul_hgv_kdl_t5b">
+                                        <li><codeph>OU</codeph> — подразделение;</li>
+                                        <li><codeph>DC</codeph> — домен-контроллер;</li>
+                                        <li><codeph>TestGroup</codeph> и <codeph>TestGroup2</codeph>
+                                            — наименование Группы1 и Группы2;</li>
+                                        <li><codeph>TestOU</codeph> и <codeph>TestOU2</codeph> —
+                                            наименование Подразделения1 и Подразделения2;</li>
+                                        <li><codeph>company</codeph> — наименование поддомена, где
+                                            находятся подразделения <codeph>TestOU</codeph> и
+                                                <codeph>TestOU2</codeph>;</li>
+                                        <li><codeph>local</codeph> — наименование домена, где
+                                            находится поддомен <codeph>company</codeph>.</li>
+                                    </ul></li>
+                                <li>вывод списка групп, имя которых начинается с «Test»:
+                                    <codeblock>(&amp;(objectCategory=group)(cn=Test*)) </codeblock>
+                                </li>
+                                <li>вывод списка пользователей, которые находятся в подразделении с
+                                    несколькими уровнями
+                                    вложенности:<codeblock>&amp;(objectCategory=person)(memberOf=cn=test_inside,ou=Inside_deep,ou=Inside,ou=TestOU,dc=company,dc=local))</codeblock>
+                                        Где:<ul id="ul_jqx_h2l_t5b">
+                                        <li><codeph>OU</codeph> — подразделение;</li>
+                                        <li><codeph>DC</codeph> — домен-контроллер;</li>
+                                        <li><codeph>test_inside</codeph> — наименование группы; </li>
+                                        <li><codeph>Inside_deep</codeph>, <codeph>Inside</codeph>,
+                                                <codeph>TestOU</codeph> — каталоги, которые
+                                            составляют путь к подразделению, где находится группа
+                                                <codeph>test_inside</codeph>;<note>В фильтре
+                                                каталоги указываются в обратном порядке, начиная с
+                                                  <codeph>Inside_deep</codeph>. Путь, который они
+                                                составляют —
+                                                  <codeph>TestOU/Inside/Inside_deep</codeph>.</note></li>
+                                        <li><codeph>company</codeph> — наименование поддомена, где
+                                            находится подразделение
+                                                <codeph>TestOU/Inside/Inside_deep</codeph>;</li>
+                                        <li><codeph>local</codeph> — наименование домена, где
+                                            находится поддомен <codeph>company</codeph>.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Атрибут логина — поле, где хранится логин пользователя;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Атрибут ФИО — поле, где хранится ФИО пользователя; </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Атрибут почты — поле, где хранится адрес электронной почты
+                            пользователя; </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning">Параметры полей «Атрибут логина», «Атрибут ФИО», «Атрибут
+                        почты» определяются автоматически. Изменение этих значений может
+                        потребоваться только в случае, если схема атрибутов пользователей в каталоге
+                        подключенного сервера <ph
+                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                        /> отличается от стандартной, что проявляется в некорректных значениях в
+                        столбцах «Логин», «Полное имя» и «E-mail» списка пользователей. </note>
+                </info>
+                <info>
+                    <fig id="fig_mjx_dkl_t5b">
+                        <title>Редактирование атрибутов пользователей</title>
+                        <image href="../../../images/ITM_M_screens/ITM_M_change_LDAP_2.png"
+                            id="image_njx_dkl_t5b"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Сохранить» для применения изменений.</cmd>
+            </step>
+            <step>
+                <cmd>Просмотрите список пользователей <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    />, чтобы убедиться в корректности интеграционной схемы атрибутов пользователей
+                    и ее соответствии схеме атрибутов пользователей в каталоге подключенного сервера
+                        <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    />. Для этого:</cmd>
+                <substeps id="substeps_dv1_lcr_xsb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Посмотреть список пользователей».</cmd>
+                        <stepresult>откроется окно со списком пользователей <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            />. <fig id="fig_fq5_mcb_ntb">
+                                <title>Список пользователей LDAP</title>
+                                <image href="../../../images/ITM_M_screens/ITM_M_LDAP_userlist.png"
+                                    id="image_gq5_mcb_ntb"/>
+                            </fig></stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Просмотрите список пользователей. Для каждого пользователя указаны
+                            логин, полное имя и e-mail.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для поиска конкретной записи введите начальные символы или полное
+                            название одного из параметров в строку поиска и нажмите на кнопку
+                                «<image href="../../../images/ITM_M_icons/ITM_M_icon_search.png"
+                                id="image_cdf_nrl_t5b"/>».</cmd>
+                        <stepresult>в окне появятся записи, соответствующие критерию
+                            поиска.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Закрыть».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+          
+        </steps>
+        <postreq>После завершения настроек добавьте учетную запись <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> для входа в веб-интерфейс <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                outputclass="html"><term keyref="datapk_itm_vm"/></ph>. Подробнее см. в разделе
+                <xref href="../ITM_M_configurations/itm_m_config_create_ldap_user.dita"/>.</postreq>
+    </taskbody>
+</task>

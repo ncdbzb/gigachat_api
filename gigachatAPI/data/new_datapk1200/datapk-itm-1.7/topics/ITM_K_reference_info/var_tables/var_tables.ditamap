@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>var_tables</title>
+    <topicref href="var_env_srv.dita" collection-type="sequence">
+        <topicref href="recommendation_env_srv.dita"/>
+    </topicref>
+    <topicref href="var_env_db_pgsql.dita" collection-type="sequence">
+        <topicref href="recommendations_env_db_pgsql.dita"/>
+    </topicref>
+    <topicref href="var_env_web.dita" collection-type="sequence">
+        <topicref href="recommendations_env_web.dita"/>
+    </topicref>
+    <topicref href="env.dita" collection-type="sequence">
+        <topicref href="env_recommend.dita"/>
+    </topicref>
+    <topicref href="zabbix_agentd_conf.dita"/>
+</map>

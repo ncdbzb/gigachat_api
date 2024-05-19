@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_et5_lms_x5b">
+    <title></title>
+    <body>
+        <p id="p_gt5_lms_x5b">Для мониторинга узла сети необходимо установить на нем агента. Для
+            установки агентов используйте подходящий установочный файл, в зависимости от типа ОС. </p>
+    </body>
+</topic>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="overcommit_memory_itm_m">
+    <title>Ошибка вида «WARNING overcommit_memory is set to 0! Background save may fail under low
+        memory condition.&lt;...>»</title>
+    <troublebody>
+        <condition>
+            <p>В логах контейнера itm_m_redis содержится сообщение об ошибке «WARNING
+                overcommit_memory is set to 0! Background save may fail under low memory condition.
+                To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot
+                or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.».</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Значение <codeph>vm.overcommit_memory=0</codeph>, из-за чего при недостатке
+                    памяти может не работать автосохранение в фоновом режиме.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd
+                            conref="../reusable/notes/overcommit_memory_cmd.dita#ReusableComponent_shm_15v_wsb/cmd_uhm_15v_wsb"/>
+                        <substeps id="substeps_yfq_5v5_wsb">
+                            <substep
+                                conref="../reusable/notes/overcommit_memory_open_file.dita#ReusableComponent_ih4_d5v_wsb/substep_jh4_d5v_wsb">
+                                <cmd/>
+                            </substep>
+                            <substep
+                                conref="../reusable/notes/overcommit_memory_change.dita#ReusableComponent_xkx_g5v_wsb/substep_ykx_g5v_wsb">
+                                <cmd/>
+                            </substep>
+                            <substep
+                                conref="../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                                <cmd/>
+                            </substep>
+                            <substep>
+                                <cmd>Перезагрузите сервер для применения изменений.</cmd>
+                            </substep>
+                        </substeps>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution></troublebody>
+</troubleshooting>

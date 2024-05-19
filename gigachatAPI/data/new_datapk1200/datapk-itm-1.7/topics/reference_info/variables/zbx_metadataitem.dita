@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_metadataitem">
+    <glossterm>ZBX_METADATAITEM</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/zbx_metadataitem_info.dita#ReusableComponent_o3p_s4k_trb/div_p3p_s4k_trb"
+        />
+    </glossdef>
+</glossentry>

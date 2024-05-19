@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_a1n_mrn_nrb">
+    <title>jatoba_lisence_move</title>
+    <taskbody>
+        <steps>
+            <step id="step_b1n_mrn_nrb">
+                <cmd>Установите полученный в результате активации файл лицензии в директории данных,
+                    которой по умолчанию является <codeph
+                        conref="../filepath/var_lib_jatoba_l_data.dita#ReusableComponent_nqt_m2s_hrb/codeph_oqt_m2s_hrb"
+                    />:</cmd>
+                <info>
+                    <codeblock>chown postgres.postgres /var/lib/jatoba/1/data/jatoba.cer
+ls -la /var/lib/jatoba/1/data/jatoba.cer</codeblock>
+                    <note
+                        conref="note_direction.dita#ReusableComponent_cdt_f2t_4sb/note_ddt_f2t_4sb"/>
+                    <fig>
+                        <title>Перемещение файла-лицензии в каталог данных</title>
+                        <image
+                            href="../../../images/safe_installation/safe_installation_redOS_2_4.png"
+                            />
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

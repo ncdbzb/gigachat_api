@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_unm_r4r_trb">
+    <title>ZBX_MAXHOUSEKEEPER DELETE note</title>
+    <body><div id="div_vnm_r4r_trb">
+        <note><p>Если значение данной переменной равно 0, ограничений на число удаляемых строк нет.</p>
+        <p>Значение данной переменной применяется только для удаления данных истории и динамики
+            изменений уже удаленных элементов данных.</p></note>
+    </div></body>
+</topic>

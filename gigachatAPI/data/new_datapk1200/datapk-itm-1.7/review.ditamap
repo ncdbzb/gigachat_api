@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Review</title>
+    <topicref href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="topics/usage/templates/templates.dita">
+        <topicref href="topics/usage/templates/itm_k_templates.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="topics/usage/triggers/triggers.dita">
+        <topicref href="topics/usage/triggers/itm_k_triggers.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="topics/usage/events/events.dita">
+        <topicref href="topics/usage/events/itm_k_events.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="topics/ITM_K_reference_info/itm_k_reference_info.dita">
+        <topicref href="topics/ITM_K_reference_info/itm_k_reference_info.ditamap" format="ditamap"/>
+    </topicref>
+</map>

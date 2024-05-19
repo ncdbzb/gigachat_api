@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_synchro">
+    <title>Настройка синхронизации с DATAPK</title>
+    <body
+        conref="../../../reusable/synchro_datapk/synchro_datapk_info.dita#ReusableComponent_jkc_fmk_syb/body_kkc_fmk_syb"/>
+</topic>

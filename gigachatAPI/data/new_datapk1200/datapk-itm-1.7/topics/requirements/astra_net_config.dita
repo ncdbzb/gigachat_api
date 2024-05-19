@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="astra_net_config">
+    <title>Настройка сети</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Проверьте имена интерфейсов в системе с помощью команды:</cmd>
+                <info>
+                    <codeblock>ip ad</codeblock>
+                    <fig>
+                        <title>Список сетевых интерфейсов в системе</title>
+                        <image href="../../images/ITM_K_requirements/Astra/astra_config_interfaces_list.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Отредактируйте конфигурационный файл с настройкой сетевых интерфейсов:</cmd>
+                <substeps id="substeps_x5h_r1c_gxb">
+                    <substep>
+                        <cmd>Откройте файл для редактирования: </cmd>
+                        <info>
+                            <codeblock>nano /etc/network/interfaces</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Введите следующий текст для настройки основного сетевого
+                            интерфейса:</cmd>
+                        <info>
+                            <codeblock>auto eth0
+iface eth0 inet static
+address 192.168.243.5/24
+gateway 192.168.243.1
+dns-nameservers 192.168.12.6</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните изменения и закройте файл.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Создайте конфигурационный файл с указанием DNS-серверов: </cmd>
+                <info>
+                    <codeblock>nano /etc/resolv.conf</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Введите DNS-адрес сервера вашей локальной сети. </cmd>
+                <stepxmp>nameserver 192.168.12.6 </stepxmp>
+            </step>
+            <step>
+                <cmd>Сохраните изменения и закройте файл <codeph>resolv.conf</codeph>. </cmd>
+            </step>
+            <step>
+                <cmd>Для применения сетевых настроек перезапустите службу:</cmd>
+                <info>
+                    <codeblock>service networking restart</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

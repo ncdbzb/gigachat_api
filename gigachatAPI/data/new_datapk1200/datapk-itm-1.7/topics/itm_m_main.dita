@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_main">
+    <title>Руководство по эксплуатации DATAPK ITM-VM</title>
+    <body>
+        <p><term keyref="datapk_itm_vm"/> — сервер визуализации и управления. </p>
+        <p>Применяется для:<ul id="ul_rbz_m1d_qvb">
+                <li>сбора данных с серверов мониторинга (консолидации);</li>
+                <li>предоставления высокоуровневой информации о состоянии ИТ-ресурсов предприятия
+                    пользователям и смежным системам.</li>
+            </ul></p>
+    </body>
+</topic>

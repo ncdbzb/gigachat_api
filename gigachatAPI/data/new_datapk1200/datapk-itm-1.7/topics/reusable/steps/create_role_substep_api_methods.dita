@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_psh_3vc_cvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_rsh_3vc_cvb"><cmd>Установите список разрешений в разделе «Доступ к API» → «Методы API»:</cmd>
+                        <info><ol id="ol_fyk_cmx_bvb"><li>Выберите опцию «Список разрешений».</li><li>Добавьте в список следующие методы: <ul id="ul_bfw_qmx_bvb">
+                                        <li>*.get;</li>
+                                        <li>host.create;</li>
+                                        <li>host.update;</li>
+                                        <li>hostinterface.update;</li>
+                                        <li>hostinterface.create.</li>
+                                    </ul></li></ol>
+                            <fig><title>Добавление методов API</title>
+                                <image href="../../../images/ITM-K_synchro/synchro_add_methods.png"/></fig></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>    
+    </taskbody>
+</task>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="universal_template_for_moxa_eds_switches">
+    <title>Подготовка к использованию шаблона «Коммутатор MOXA серии EDS.yaml»</title>
+    <abstract>
+        <p>В зависимости от модели коммутатора MOXA EDS внутри MIB будут различаться OID, отвечающие
+            за номер модели. С другими элементами иерархия идентичная и не различается в зависимости
+            от модели. </p>
+        <fig>
+            <title>Проверка корректности значения OID и вывод значения</title>
+            <image href="../../../../images/ITM_K_usage/example_of_a_problem.png"/>
+        </fig>
+        <p>Список пар модель — OID:</p>
+        <ul>
+            <li>EDS-510E — 8691.7.84</li>
+            <li>EDS-G512E — 8691.7.70</li>
+            <li>EDS-528E — 8691.7.142</li>
+        </ul>
+        <p>Макрос <codeph>{$MOXA_SWITCH_MODEL}</codeph> обеспечивает универсальность шаблона.</p>
+    </abstract>
+    <taskbody>
+        <context>
+            <p>Для корректной работы шаблона <codeph>Коммутатор MOXA серии EDS.yaml</codeph> выполните следующие
+                действия:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite keyref="hosts_configuration"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на имя необходимого <abbreviated-form keyref="monitoring_object"/>.</cmd>
+                <stepresult>Откроется страница «Узлы сети».</stepresult>
+            </step>
+            <step>
+                <cmd>Перейдите на вкладку «Макросы».</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите «Макросы узла сети и унаследованные».</cmd>
+            </step>
+            <step>
+                <cmd>Напротив макроса <codeph>{$MOXA_SWITCH_MODEL}</codeph> нажмите <uicontrol>Изменить</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>В поле «Эффективное значение» введите требуемое значение. Есть два способа
+                    узнать требуемое значение:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Вариант 1:</cmd>
+                        <info>
+                            <ol>
+                                <li>На сайте производителя МОХА откройте страницу с подходящей моделью коммутатора.</li>
+                                <li>Перейдите на вкладку «Документация и ПО».</li>
+                                <li>Нажмите на кнопку «Скачать» возле «SNMP MIB-файл для [модель коммутатора]».</li>
+                                <li>Найдите строку <codeph>industrialEthernet</codeph> в файле.
+                                    <fig>
+                                        <title>Пример строки <codeph>industrialEthernet</codeph></title>
+                                        <image href="../../../../images/ITM_K_usage/str84.png"/>
+                                    </fig>
+                                </li>
+                                <li>Для поля «Эффективное значение» возьмите число, идущее после <b>8691.7.</b></li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Вариант 2:</cmd>
+                        <info>
+                            <ol>
+                                <li>На компьютере с OC Linux и установленными пакетами net-snmp запустите команду:
+                                    <codeblock>snmpgetnext -v2c -c moxa-EDS-510E 10.51.202.38:5161 .1.3.6.1.4.1.8691.7</codeblock>
+                                    где moxa-EDS-510E - имя snmp community, а 10.51.202.38:5161 - IP-адрес:порт опрашиваемого устройства
+                                </li>
+                                <li>Для поля «Эффективное значение» возьмите число, идущее после <b>8691.7.</b>
+                                    <fig>
+                                        <title>Результат команды</title>
+                                        <image href="../../../../images/ITM_K_usage/The_result_of_the_command.png"/>
+                                    </fig>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Обновить».</cmd>
+                <stepresult>У <abbreviated-form keyref="monitoring_object"/> появится «Макрос узла сети».<fig>
+                        <title>Макрос узла сети</title>
+                        <image
+                            href="../../../../images/ITM_K_usage/the_macro_of_the_network_node.png"
+                        />
+                    </fig></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_m4h_qbf_rrb">
+    <title/>
+    <troublebody>
+        <troubleSolution>
+            <cause>
+                <p><codeph id="codeph_n4h_qbf_rrb">wmi.pw</codeph></p>
+            </cause>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="docker_astra">
+    <title>Установка Docker</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Установите docker:</cmd>
+                <info>
+                    <codeblock>apt install docker.io curl docker-compose</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Предоставьте пользователю право работать с контейнерами без <codeph>sudo</codeph>:</cmd>
+                <info>
+                    <codeblock>sudo usermod -aG docker $USER</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Запустите docker и добавьте службу в автозагрузку:</cmd>
+                <info>
+                    <codeblock>systemctl enable --now docker</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте состояние службы docker</cmd>
+                <info>
+                    <codeblock>systemctl status docker</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

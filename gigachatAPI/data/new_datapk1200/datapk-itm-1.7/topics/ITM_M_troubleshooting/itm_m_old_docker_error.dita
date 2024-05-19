@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="itm_m_old_docker_error">
+    <title>Не запускаются контейнеры docker</title>
+    <troublebody>
+        <condition>
+            <p>В командной строке при попытке запуска контейнеров docker появляются сообщения об
+                ошибке вида: «for &lt;имя сервиса> cannot create container for service &lt;имя
+                сервиса>: invalid IP address &lt;...>».</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Устаревшая версия docker.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty></responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Обновите docker до версии 20. Для этого выполните действия, описанные в
+                            разделе <xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_extra_package_install_redos_7_3.dita"
+                            />.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

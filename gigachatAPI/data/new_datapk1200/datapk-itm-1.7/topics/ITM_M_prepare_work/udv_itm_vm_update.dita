@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="udv_itm_vm_update">
+    <title>Обновление UDV-ITM-VM с версии 1.4.0.0 до версии 1.7.0.0</title>
+    <shortdesc></shortdesc>
+     <taskbody>
+        <context>
+            <p>Для обновления сервера <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_vm"/></ph> с версии 1.4.0.0 до версии 1.7.0.0:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите в рабочую директорию <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/datapkitm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Остановите работу сервера:</cmd>
+                <info>
+                    <codeblock>docker-compose down</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Если на данном сервере также запущен <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, выключите его. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>перейдите в рабочую директорию <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>: </cmd>
+                        <info>
+                            <codeblock>cd /opt/itm-k</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>остановите работу сервера:</cmd>
+                        <info>
+                            <codeblock>docker-compose down</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Создайте директорию для новой версии <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>: </cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step id="itm_vm_download_archive">
+                <cmd>Загрузите в директорию<codeph>/opt/itm-vm</codeph> на сервере <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> следующие файлы из
+                    каталога с обновленным дистрибутивом:</cmd>
+                <substeps id="substeps_hzp_rfp_btb">
+                    <substep>
+                        <cmd><ph outputclass="onlypdf"
+                                ><codeph>ussc_itm-vm_1.7.0.0.tar.gz</codeph></ph><ph
+                                outputclass="udvpdf"
+                                ><codeph>udv_itm-vm_1.7.0.0.tar.gz</codeph></ph><ph
+                                outputclass="html"
+                            ><codeph>udv_itm-vm_1.7.0.0.tar.gz</codeph></ph>;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>docker-compose.release.yaml</codeph>;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>iptables</codeph>;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>upgrade_from_1.4.sh</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию, куда были перемещены файлы с обновленным дистрибутивом
+                    <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>: </cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите обновленные образы командой:</cmd>
+                <info>
+                    <codeblock>docker load -i udv_itm-vm_1.7.0.0.tar.gz</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте данные из рабочей директории <codeph>/opt/datapkitm</codeph> в новую
+                    директорию <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <codeblock>cp -r /opt/datapkitm/.env /opt/datapkitm/env /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Подготовьте скрипт для миграции данных между версиями к запуску, дав ему
+                    необходимые права:</cmd>
+                <info>
+                    <codeblock>chmod +x ./upgrade_from_1.4.sh</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что служба СУБД запущена:</cmd>
+                <info>
+                    <codeblock>systemctl status jatoba-1</codeblock>
+                </info>
+                <stepresult>Cлужба запущена корректно, выводится статус active running.<fig
+                        id="fig_kpg_1dg_tvb">
+                        <title>Результат работы команды systemctl status jatoba-1</title>
+                        <image href="../../images/ITM_M_prepare_work/check_iptables_itm_m.png"
+                            id="image_lpg_1dg_tvb"/>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Убедитесь, что база данных принимает подключение под суперпользователем
+                        <codeph>postgres</codeph>. Для этого: </cmd>
+                <substeps id="substeps_ytl_ldg_tvb">
+                    <substep>
+                        <cmd>Введите команды:</cmd>
+                        <info>
+                            <codeblock>su postgres
+psql -U postgres -h 127.0.0.1 -p [порт, указанный в .env]</codeblock>
+                        </info>
+                        <stepresult>
+                            <fig>
+                                <image href="../../images/ITM_M_prepare_work/itm_m_postgres.png"/>
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Покиньте терминал:</cmd>
+                        <info>
+                            <codeblock>\q</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для выхода из пользователя <codeph>postgres</codeph> введите
+                                <codeph>exit</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что в файле <codeph>pg_hba.conf</codeph> разрешено подключение для
+                    пользователя postgres из подсети контейнеров docker. Подсеть контейнеров docker
+                    указана в файле <codeph>.env</codeph> как значение переменной <cmdname
+                        keyref="itmm_network"/>. Для данной проверки выполните команды:</cmd>
+                <info>
+                    <codeblock>cat .env | grep ITMM_NETWORK
+cat /var/lib/jatoba/1/data/pg_hba.conf | grep [значение переменной ITMM_NETWORK_GATEWAY]</codeblock>
+                </info>
+                <info>
+                    <note type="attention">при использовании двух томов замените директорию файла на
+                            <codeph>/storage/base</codeph>.</note>
+                </info>
+                <stepresult>
+                    <fig>
+                        <image href="../../images/ITM_M_prepare_work/itmm_network_check.png"/>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Если в выводе команды <codeph>cat /var/lib/jatoba/1/data/pg_hba.conf | grep
+                        [значение переменной ITMM_NETWORK_GATEWAY]</codeph> отсутствует упоминание
+                    пользователя postgres, то необходимо добавить доступ. Для этого:</cmd>
+                <substeps id="substeps_u5v_v2g_tvb">
+                    <substep>
+                        <cmd>Откройте файл <codeph>pg_hba.conf</codeph> для редактирования: </cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте в файл строку:</cmd>
+                        <info>
+                            <codeblock>host all postgres [значение переменной ITMM_NETWORK_GATEWAY]/24  md5</codeblock>
+                        </info>
+                        <stepresult>
+                            <fig>
+                                <image
+                                    href="../../images/ITM_M_prepare_work/itmm_network_gateway_check.png"
+                                />
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезапустите службу СУБД с помощью команды:</cmd>
+                        <info>
+                            <codeblock>systemctl restart jatoba-1</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Запустите скрипт <codeph>upgrade_from_1.4.sh</codeph> одним из способов: </cmd>
+                <info><codeblock>bash upgrade_from_1.4.sh</codeblock>или<codeblock>./upgrade_from_1.4.sh</codeblock></info>
+                <stepresult>В директории <codeph>/opt/itm-vm</codeph> появится файл
+                        <codeph>.env</codeph> с настроенными переменными и файл
+                        <codeph>.itmm_password_secret_key</codeph> c ключом для шифрования и
+                    дешифрования паролей, хранящихся в базе данных. <fig>
+                        <title>Содержимое директории /opt/itm-vm</title>
+                        <image href="../../images/ITM_M_prepare_work/itm_vm_dir_content.png"/>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Закройте доступ для пользователя postgres, который был выдан ранее, и
+                    предоставьте доступ для вновь созданного пользователя itmm_user. Для
+                    этого:</cmd>
+                <substeps id="substeps_gqm_sgg_tvb">
+                    <substep>
+                        <cmd>Откройте файл <codeph>pg_hba.conf</codeph> для редактирования:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите строку:</cmd>
+                        <info>
+                            <codeblock>host all postgres 172.15.0.1/24 md5</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Приведите строки с указанием подсети контейнеров и подсети docker0 к следующему виду:</cmd>
+                        <info>
+                            <codeblock>host all itmm_user 172.15.0.1/24 md5
+host all itmm_user 172.17.0.1/24 md5                            </codeblock>
+                        </info>
+                        <stepresult>
+                            <fig>
+                                <image href="../../images/ITM_M_prepare_work/ipv4_connections.png"/>
+                            </fig>
+                            <note>Если есть необходимость не указывать значение
+                                <codeph>all</codeph>, то перечислите все имена баз данных через
+                                запятую без использования пробела — <codeph>itmm</codeph>,
+                                    <codeph>user_service</codeph>, <codeph>notifier_service</codeph>
+                                и <codeph>event_sender</codeph>.</note>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезапустите службу СУБД с помощью команды:</cmd>
+                        <info>
+                            <codeblock>systemctl restart jatoba-1</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Удалите из файла <codeph>.env</codeph> переменные, которые теперь будут
+                    настраиваться в веб-интерфейсе. </cmd>
+                <info>
+                    <note type="tip">Если вы изменяли значения переменных на отличные от значений по
+                        умолчанию, зафиксируйте их перед изменением файла
+                        <codeph>.env</codeph>.</note>
+                </info>
+                <substeps id="substeps_arw_whg_tvb">
+                    <substep>
+                        <cmd>Откройте файл для редактирования:</cmd>
+                        <info>
+                            <codeblock>vi .env</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменные для настройки Redis: </cmd>
+                        <info>
+                            <codeblock>#----------Настройка Redis----------
+#REDIS_PORT=6379
+#REDIS_ADDRESS=redis-server</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите неиспользуемую переменную
+                                <codeph>ITMM_JWT_EXPIRATION_MINUTES=720</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменную «Срок хранения проблем»: </cmd>
+                        <info><codeblock>ITMM_PROBLEM_AGE_IN_DAYS=180</codeblock></info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменную для обозначения часового пояса
+                            <codeph>TZ=</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменные для настройки интеграции с SIEM:</cmd>
+                        <info>
+                            <codeblock>SIEM_INTEGRATION=true
+SIEM_SYSLOG_HOST=127.0.0.1
+SIEM_SYSLOG_PORT=514
+SIEM_SYSLOG_PROTOCOL=TCP
+ITMM_IP_ADDRESS=</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd>
+                <substeps id="substeps_cyd_djg_tvb">
+                    <substep>
+                        <cmd>Перейдите в режим редактирования службы СУБД:</cmd>
+                        <info>
+                            <codeblock>systemctl edit jatoba-1.service</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Если файл не пуст, перейдите к пункту <xref href="#udv_itm_vm_update/install_iptables"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте блок [Unit]:</cmd>
+                        <info>
+                            <codeblock>[Unit]
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Если база данных хранится на отдельном томе, добавьте после блока [Unit] блок [Service]:</cmd>
+                        <info><codeblock>[Service]
+Environment=PGDATA=/storage/base</codeblock>Где
+                                <codeph>/storage/base</codeph> — путь к базе данных, который был
+                            настроен на шаге <xref
+                                href="ITM_M_data_program_download/2tomes/subd_config.dita#subd_config/create_dir"/> раздела <xref
+                                    href="ITM_M_data_program_download/2tomes/subd_config.dita"/>.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Для применения изменений в настройках службы СУБД выполните команду:</cmd>
+                        <info>
+                            <codeblock>systemctl daemon-reload</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step id="install_iptables">
+                <cmd>Если вы используете ОС Centos, установите пакет iptables-services: </cmd>
+                <info>
+                    <codeblock>yum install iptables-services</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что контейнеры выключены:</cmd>
+                <info>
+                    <codeblock>docker ps</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Остановите службу docker:</cmd>
+                <info>
+                    <codeblock>systemctl stop docker </codeblock>
+                </info>
+                <info>
+                    <note>Сообщение «Warning: Stopping docker.service, but it can still be activated
+                        by: docker.socket» не является ошибкой и на дальнейшую работу не
+                        влияет.</note>
+                </info>
+            </step>
+            <step
+                conref="../reusable/steps/iptables_change_newfile.dita#ReusableComponent_bty_nb2_tvb/step_fty_nb2_tvb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/steps/iptables_change_file_to_new.dita#ReusableComponent_iyt_qb2_tvb/step_jyt_qb2_tvb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Отредактируйте файл <codeph>iptables</codeph>: </cmd>
+                <substeps id="substeps_rsd_wbl_tvb">
+                    <substep>
+                        <cmd>Откройте файл для редактирования с помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /etc/sysconfig/iptables</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Закройте доступ из неиспользуемых подсетей, применяемых в
+                            docker-контейнерах других компонентов. Для этого закомментируйте
+                            следующие строки в зависимости от компонента.</cmd>
+                        <info>
+                            <ul id="ul_jtt_tyt_tvb">
+                                <li>ITM-VM: <codeph>-A INPUT -s 172.15.0.0/24 -j ACCEPT</codeph>
+                                    (строка номер 15);</li>
+                                <li>ITM-K: <codeph>-A INPUT -s 172.16.239.0/24 -j ACCEPT</codeph>
+                                    (строка номер 18);</li>
+                                <li>ITM-A: <codeph>-A INPUT -s 172.16.240.0/24 -j ACCEPT</codeph>
+                                    (строка номер 21).</li>
+                            </ul>
+                        </info>
+                        <info>
+                            <note>Включить отображение номеров строк в файле можно с помощью
+                                следующих действий: <ol id="ol_o2z_kcl_tvb">
+                                    <li>Нажмите клавишу «Esc», чтобы перейти в командный режим. </li>
+                                    <li>Введите <codeph>:set number</codeph> или <codeph>:set
+                                            nu</codeph> и нажмите «Enter».</li>
+                                    <li>Нажмите клавишу «i», чтобы перевести редактор в режим ввода
+                                        текста.</li>
+                                    <li>После закрытия файла нумерация строк отключится
+                                        автоматически. Чтобы отключить абсолютные номера строк на
+                                        время редактирования файла, перейдите в командный режим и
+                                        выполните команду <codeph>:set nonumber</codeph> или
+                                            <codeph>:set nonu</codeph>.</li>
+                                </ol></note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>При установке <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и 
+                            <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> на одну машину откройте дополнительные
+                            порты web-интерфейса. Для этого раскомментируйте строки <codeph>#-A
+                                INPUT -p tcp -m tcp --dport 8080 -j ACCEPT</codeph> (номер 38) и
+                                <codeph>#-A INPUT -p tcp -m tcp --dport 8443 -j ACCEPT</codeph>
+                            (номер 39).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Закомментируйте строки <codeph>-A INPUT -p tcp -m tcp --dport 10051 -j
+                                ACCEPT</codeph> (номер 42) и <codeph>-A INPUT -p udp -m udp --dport
+                                162 -j ACCEPT</codeph> (номер 45) (порты для приема
+                            zabbix-соединений и snmp traps).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Если требуется мониторинг сервера с помощью <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> или по протоколу snmp, раскомментируйте строки <codeph>#-A INPUT -p
+                                tcp -m tcp --dport 10050 -j ACCEPT</codeph> (номер 51) и <codeph>#-A
+                                INPUT -p udp -m udp --dport 161 -j ACCEPT</codeph> (номер 48)
+                            соответственно.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../reusable/steps/iptables_check_host_rights.dita#ReusableComponent_dxh_yzy_svb/step_exh_yzy_svb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/steps/restart_docker_iptables.dita#ReusableComponent_f5c_t12_tvb/step_h5c_t12_tvb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Проверьте настройку выделения памяти <codeph>vm.overcommit.memory</codeph>. Для
+                    этого: </cmd>
+                <substeps id="substeps_l4y_fng_tvb">
+                    <substep>
+                        <cmd>Откройте для редактирования файл <codeph>/etc/sysctl.conf</codeph>: </cmd>
+                        <info>
+                            <codeblock>vi /etc/sysctl.conf</codeblock>
+                        </info>
+                        <info>
+                            <note type="tip">В случае отсутствия файла <codeph>/etc/sysctl.conf</codeph> используйте эту же команду для создания файла и перехода в режим редактирования.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте в содержимое файла следующее значение:</cmd>
+                        <info>
+                            <codeblock>vm.overcommit_memory=1</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезагрузите сервер для применения изменений.</cmd>
+                        <info>
+                            <note type="tip">Вы можете перезагрузить сервер сразу либо после
+                                выполнения команды запуска контейнеров <codeph>docker-compose up
+                                    -d</codeph>.</note>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что имя сервера и переменная <cmdname keyref="hostname"/>
+                    соответствуют нужным вам значениям.</cmd>
+                <info>Актуальное имя сервера отображается в приглашении командной строки. Посмотреть
+                    переменную окружения <cmdname keyref="hostname"/> можно с помощью команды
+                        <codeph>echo <cmdname keyref="hostname"/></codeph>. При необходимости
+                    изменения имени сервера см. раздел <xref
+                        href="../ITM_M_troubleshooting/itm_vm_hostname_change.dita"/>.</info>
+            </step>
+            <step>
+                <cmd>Перезапустите службу СУБД с помощью команды:</cmd>
+                <info>
+                    <codeblock>systemctl restart jatoba-1</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Запустите контейнеры:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте результат обновления. Для этого перейдите в веб-интерфейс <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> по ранее
+                    использовавшемуся адресу.</cmd>
+            </step>
+            <step>
+                <cmd>В случае установки <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> и 
+                    <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> на один сервер: </cmd>
+                <substeps id="substeps_qdc_x2l_tvb">
+                    <substep>
+                        <cmd>перейдите в рабочую директорию <ph outputclass="udvpdf"><term
+                                    keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_k"/></ph>:</cmd>
+                        <info>
+                            <codeblock>cd /opt/itm-k</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите контейнеры:</cmd>
+                        <info>
+                            <codeblock>docker-compose up -d</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Если обновление прошло успешно, удалите директорию с предыдущей версией <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> 1.4: </cmd>
+                <info>
+                    <codeblock>rm -rf /opt/datapkitm/</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Настройте в веб-интерфейсе следующие параметры, если в <ph outputclass="udvpdf"
+                            ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph> версии 1.4.0.0 меняли их значения в файле
+                        <codeph>.env</codeph>:</cmd>
+                <info>
+                    <ul id="ul_unp_g4p_wzb">
+                        <li>Настройка интеграции с SIEM. Подробнее см. в Руководстве по эксплуатации
+                                <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_vm"/></ph> в разделе
+                            «Настройка интеграции с SIEM».</li>
+                        <li>Период хранения истории проблем. Подробнее см. в Руководстве по
+                            эксплуатации <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> в
+                            разделе «Изменение основных свойств сервера».</li>
+                        <li>Период хранения истории синхронизаций. Подробнее см. в Руководстве по
+                            эксплуатации <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> в
+                            разделе «Изменение основных свойств сервера».</li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

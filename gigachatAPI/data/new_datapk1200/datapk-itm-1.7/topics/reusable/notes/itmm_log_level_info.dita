@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fn1_mnw_zrb">
+    <title></title>
+    <body><p id="p_gn1_mnw_zrb">Выбор уровня детализированности логов, может принимать одно из перечисленных значений:<ul><li>ERROR — логирование ошибок.</li><li>WARN — логирование ошибок и предупреждений.</li><li>INFO — логирование ошибок, предупреждений и сообщений.</li><li>DEBUG — логирование всех событий при отладке.</li><li>TRACE — логирование всех событий. <note type="caution">Не рекомендуется использовать значение TRACE, так как это существенно уменьшает производительность приложения.</note></li></ul> </p></body>
+</topic>

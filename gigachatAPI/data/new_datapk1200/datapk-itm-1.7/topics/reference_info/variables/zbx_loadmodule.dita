@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_loadmodule">
+    <glossterm>ZBX_LOADMODULE</glossterm>
+    <glossdef><div
+            conref="../../reusable/notes/zbx_loadmodule_info.dita#ReusableComponent_wnf_nv2_trb/div_xnf_nv2_trb"/>
+        <b>Значение в конфигурации ITM-K при поставке:</b>"dummy1.so, dummy2.so, dummy10.so" <div
+            conref="../../reusable/notes/zbx_loadmodule_note.dita#ReusableComponent_ggg_hsr_trb/div_hgg_hsr_trb"
+        /></glossdef>
+</glossentry>

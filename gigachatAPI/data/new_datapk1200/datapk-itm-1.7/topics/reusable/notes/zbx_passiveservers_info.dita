@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_oxg_dmk_trb">
+    <title>zbx_passiveservers_info</title>
+    <body><div id="div_pxg_dmk_trb">
+            <p>Разрешенные серверы для соединений с контейнером агента. При использовании нескольких
+                серверов они перечисляются через запятую без пробелов.</p>
+        </div></body>
+</topic>

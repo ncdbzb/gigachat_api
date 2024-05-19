@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_vm_subd_config">
+    <title>Установка и настройка СУБД Jatoba</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Настройте СУБД Jatoba для работы с сервером визуализации и управления <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_vm"/></ph>. Для этого:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Установите СУБД Jatoba в соответствии с документацией разработчика Jatoba.
+                    Перед установкой СУБД Jatoba необходимо заказать пакет установки и лицензионный
+                    ключ у поставщика ПО Jatoba.  </cmd>
+            </step>
+            <step>
+                <cmd>Измените пароль пользователя базы данных и добавьте нового пользователя. Для
+                    этого:</cmd>
+                <substeps id="substeps_dtx_fr2_czb">
+                    <substep>
+                        <cmd>Перейдите в режим командной строки операционной системы, на которой
+                            установлен сервер визуализации и управления.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Войдите в интерактивный терминал для работы с postgresql под
+                            пользователем <codeph>postgres</codeph>:</cmd>
+                        <info>
+                            <codeblock>sudo -u postgres psql</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Измените пароль пользователя <codeph>postgres</codeph>, так как по
+                            умолчанию пароль не задан:</cmd>
+                        <info>
+                            <codeblock>ALTER USER postgres WITH PASSWORD '[пароль]';</codeblock>
+                        </info>
+                        <info>
+                            <note
+                                conref="../../reusable/notes/security_policy.dita#ReusableComponent_ygg_vlm_k5b/note_bhg_vlm_k5b"/>
+                            <note type="attention">При использовании функционала модуля парольной политики
+                                «securityprofile» в составе СУБД Jatoba, его настройку следует
+                                осуществлять в соответствии с документацией от разработчика. Имейте
+                                в виду, что при использовании модуля парольной политики
+                                «securityprofile» после каждой перезагрузки сервера необходимо
+                                повторно инициализировать модуль «securityprofile» путем перезапуска
+                                службы. </note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Создайте пользователя с именем <codeph>itmm_user</codeph> и необходимым
+                            паролем:</cmd>
+                        <info>
+                            <codeblock>create user [имя_пользователя] with createdb password '[пароль]';</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что пользователь создан:</cmd>
+                        <info>
+                            <codeblock>\du</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Покиньте терминал:</cmd>
+                        <info>
+                            <codeblock>\q</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/notes/postgresql_cmd.dita#ReusableComponent_b4x_bhk_tsb/cmd_c4x_bhk_tsb"/>
+                <substeps id="substeps_lcq_jjk_gxb">
+                    <substep
+                        conref="../../reusable/notes/postgresql_1.dita#ReusableComponent_oxl_dhk_tsb/substep_qxl_dhk_tsb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>Исправьте значения переменных, чтобы они соответствовали представленным
+                            ниже:</cmd>
+                        <info><codeblock>listen_addresses = '127.0.0.1,172.17.0.1'
+port = 10265
+shared_buffers = 8GB                         </codeblock>Где
+                                <ul id="ul_hc4_fg5_wsb">
+                                <li>127.0.0.1 — локальный IP-адрес сервера <ph outputclass="udvpdf"
+                                            ><term keyref="udv_itm_k"/></ph><ph
+                                        outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                        outputclass="html"><term keyref="datapk_itm_k"/></ph>;</li>
+                                <li>172.17.0.1 — IP-адрес подсети docker0;</li>
+                                <li>8GB — 25% от общего объема оперативной памяти сервера.</li>
+                            </ul><note>IP-адреса должны быть перечислены через запятую без пробелов.
+                                </note><note type="tip">Если IP-адрес подсети docker0 уже
+                                используется в вашей инфраструктуре, его нужно изменить. Подробнее
+                                см. в разделе <xref
+                                    href="../../ITM_M_troubleshooting/itm_m_net_conflict.dita#itm_m_net_conflict"/>
+                                <xref
+                                    href="../../ITM_M_troubleshooting/itm_m_net_conflict.dita#itm_m_net_conflict/docker0"
+                                />.</note></info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/postgresql_3.dita#ReusableComponent_zwt_hjk_tsb/substep_axt_hjk_tsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Настройте разрешения по подключению docker-контейнера и пользователей к базам
+                    данных. Для этого:</cmd>
+                <substeps id="substeps_mcq_jjk_gxb">
+                    <substep
+                        conref="../../reusable/notes/open_pg_hba_substep.dita#ReusableComponent_d2g_2qw_gtb/substep_h2g_2qw_gtb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd><ph
+                                conref="../../reusable/notes/find_ipv4_connections.dita#ReusableComponent_cqj_z5c_1sb/ph_fqj_z5c_1sb"
+                            /></cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Измените <codeph>ident</codeph> на <codeph>md5</codeph> в строке
+                                <codeph>host all all 127.0.0.1/32 ident</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Измените настройки ограничений на подключение локальных и удаленных
+                            пользователей к базам данных. Для этого добавьте следующие строки в
+                            раздел «# IPv4 local connections:»</cmd>
+                        <info>
+                            <codeblock>host all [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]
+host all [имя пользователя БД] [IP-адрес подсети docker0/маска в формате CIDR] [метод аутентификации]</codeblock>
+                            <p>Где:</p>
+                            <ul id="ul_cl3_nhm_mxb">
+                                <li><codeph>all</codeph> — значение, позволяющее подключиться к
+                                    нескольким БД;</li>
+                                <li>[имя пользователя БД] — ранее созданный пользователь БД,
+                                    которому разрешен доступ к БД;</li>
+                                <li>[IP-адрес docker-сети/маска в формате CIDR] — IP-адрес для
+                                    удаленного подключения, зависит от переменной <cmdname
+                                        keyref="itmm_network"/> в файле
+                                        <codeph>/opt/itm-vm/.env</codeph>;</li>
+                                <li>[IP-адрес подсети docker0/маска в формате CIDR] — IP-адрес
+                                    подсети docker0 для удаленного подключения, по умолчанию имеет
+                                    значение <codeph>172.17.0.1/24</codeph>.</li>
+                            </ul>
+                            <note>Отступ между колонками в одной строке выполняется клавишей
+                                «Tab».</note>
+                        </info>
+                        <stepxmp>для пользователя БД <codeph>itmm_user</codeph>, IP-адреса подсети
+                            контейнера сервера визуализации и управления по умолчанию
+                                <codeph>172.15.0.1/24</codeph>, IP-адреса подсети docker0 по
+                            умолчанию <codeph>172.17.0.1/24</codeph> и метода аутентификации
+                                <codeph>md5</codeph> строки будет выглядеть следующим образом:
+                            <codeblock>host    all       all             127.0.0.1/32            md5
+host    all       itmm_user       172.17.0.0/24           md5
+host    all       itmm_user       172.15.0.0/24           md5</codeblock></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Закомментируйте строки во всех разделах, кроме «# IPv4 local
+                            connections:».</cmd>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Перейдите в режим редактирования службы СУБД:</cmd>
+                        <info>
+                            <codeblock>systemctl edit jatoba-*.service</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте блок [Unit]:</cmd>
+                        <info>
+                            <codeblock>[Unit]
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Если база данных хранится на отдельном томе, добавьте после блока
+                            [Unit] блок [Service]:</cmd>
+                        <info>
+                            <codeblock>[Service]
+Environment=PGDATA=/storage/base </codeblock>
+                            <p>Где <codeph>/storage/base</codeph> — путь к базе данных, который был
+                                настроен на шаге <xref
+                                    href="../../ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.dita#subd_config/create_dir"
+                                /> раздела <xref
+                                    href="../../ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.dita#subd_config"
+                                />.</p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для применения изменений в настройках службы СУБД выполните
+                            команду:</cmd>
+                        <info>
+                            <codeblock>systemctl daemon-reload</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../../reusable/notes/systemctl_restart_jatoba.dita#ReusableComponent_pcm_bqk_1tb/step_tcm_bqk_1tb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="synchronization_delay_seconds">
+    <glossterm>SYNCHRONIZATION_DELAY_SECONDS</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/synchronization_delay_seconds_info.dita#ReusableComponent_ewb_gck_xsb/p_fwb_gck_xsb"/>
+        
+        <p><b>Значение по умолчанию:</b> 60</p>
+    </glossdef>
+</glossentry>

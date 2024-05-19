@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_snmp_windows_10_windows_7">
+    <title>Настройка ОМ с ОС Windows и 10 Windows 7</title>
+    <body>
+        <p>
+            <note id="note_ttr_4km_rvb">Для <abbreviated-form keyref="monitoring_object"/> с этой ОС
+                настройка происходит с помощью протокола <ph
+                    conref="../../reusable/protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"
+                />.</note>
+        </p>
+        <section id="section_irj_fj4_rvb">
+            <title>Настройка SNMP службы </title>
+            <p>
+                <note>Для настройки ОМ должна быть установлена служба <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />. Подробнее про установку см. в разделе <xref
+                        href="#itm_a_snmp_windows_10_windows_7/snmp"/>.</note>
+            </p>
+            <ol id="ol_jrj_fj4_rvb">
+                <li>Для настройки найдите соответствующие службы в консоли управления службами. Для
+                        этого:<ol id="ol_cpy_5d4_rvb">
+                        <li>Зайдите в панель управления.</li>
+                        <li>Перейдите в раздел «Администрирование».</li>
+                        <li>В открывшемся окне нажмите на кнопку «Управление компьютером».</li>
+                    </ol></li>
+                <li>Выполните более детальную настройку <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    /> агента. Для этого:<ol id="ol_tfh_xd4_rvb">
+                        <li>Нажмите правой кнопкой мыши на «Служба <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />» и выберите «Свойства».<p>Результат шага: Откроется окно «Служба <ph
+                                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                />».</p></li>
+                        <li>В открывшемся окне откройте вкладку «Безопасность».</li>
+                        <li>Нажмите на кнопку «Добавить» в разделе «Приемлемые имена
+                                сообществ».<p>Результат шага: Откроется окно «Настройка службы <ph
+                                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                />».</p></li>
+                        <li>В открывшемся окне: <ol id="ol_hpj_b24_rvb">
+                                <li>выберите права сообщества;<note>Рекомендуемое значение — READ
+                                        ONLY.</note></li>
+                                <li>введите имя сообщества;</li>
+                                <li>нажмите на кнопку «Добавить».</li>
+                            </ol><fig id="fig_krj_fj4_rvb">
+                                <title>Окно настройки SNMP</title>
+                                <image
+                                    href="../../../images/agentless_installation/SNMP_service.png"
+                                    id="image_yff_cfm_y5b"/>
+                            </fig></li>
+                        <li>Для сохранения текущих настроек нажмите на кнопку «Применить».</li>
+                    </ol>
+                </li>
+                <li>Перезапустите службу <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />.</li>
+            </ol>
+        </section>
+        <section id="snmp">
+            <title>Установка SNMP службы</title>
+            <p><b>Способ установки 1: </b></p>
+            <ol id="ol_lrj_fj4_rvb">
+                <li>Зайдите в панель управления. </li>
+                <li>Перейдите в раздел «Программы и компоненты». </li>
+                <li>В открывшемся окне нажмите на иконку «Включение или отключение компонентов
+                        Windows».<p>Результат шага: Откроется окно «Компоненты Windows».</p></li>
+                <li>В открывшемся окне установите чекбокс напротив компонента «<ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />-протокол» и нажмите «ОК».<fig id="fig_mrj_fj4_rvb">
+                        <title>Окно установки SNMP</title>
+                        <image href="../../../images/agentless_installation/install_SNMP.png"
+                            id="image_qz3_q24_rvb"/>
+                    </fig><p>Результат шага: После окончания установки компонента окна установки
+                        закроются автоматически. </p></li>
+            </ol>
+            <p><b>Способ установки 2:</b></p>
+            <note>Для данного метода установки нужен выход в интернет.</note>
+            <ol id="ol_nrj_fj4_rvb">
+                <li>Запустите PowerShell от имени администратора. Для этого:<ol id="ol_z1c_z24_rvb">
+                        <li>Нажмите Win+X.</li>
+                        <li>Выберите «Windows PowerShell (администратор)».</li>
+                    </ol><fig id="fig_orj_fj4_rvb">
+                        <title>Запуск PowerShell</title>
+                        <image
+                            href="../../../images/agentless_installation/win10_power_shell.png"
+                            id="image_cxt_1f4_rvb"/>
+                    </fig></li>
+                <li>Проверьте наличие <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-клиента:<codeblock>Get-WindowsCapability -Online -Name "*SNMP*"</codeblock><fig
+                        id="fig_prj_fj4_rvb">
+                        <title>Проверка наличия SNMP-клиента</title>
+                        <image href="../../../images/agentless_installation/win10_check_snmp.png"
+                            id="image_zwz_cf4_rvb"/>
+                    </fig></li>
+                <li>Установите <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-клиент:<codeblock>Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"</codeblock><fig
+                        id="fig_qrj_fj4_rvb">
+                        <title>Установка SNMP-клиента</title>
+                        <image href="../../../images/agentless_installation/win10_install_snmp.png"
+                            id="image_kmk_2f4_rvb"/>
+                    </fig></li>
+                <li>Установите дополнительный компонент для <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-клиента:<codeblock>Add-WindowsCapability -Online -Name "WMI-SNMP-Provider.Client~~~~0.0.1.0"</codeblock><fig
+                        id="fig_rrj_fj4_rvb">
+                        <title>Установка дополнительного компонента для SNMP-клиента</title>
+                        <image
+                            href="../../../images/agentless_installation/win10_extra_component.png"
+                            id="image_byt_ff4_rvb"/>
+                    </fig></li>
+                <li>Убедитесь, что <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />-клиент и дополнительный компонент
+                        установлены:<codeblock>Get-WindowsCapability -Online -Name "*SNMP*"</codeblock><fig
+                        id="fig_srj_fj4_rvb">
+                        <title>Проверка установки SNMP-клиента и дополнительного компонента</title>
+                        <image href="../../../images/agentless_installation/win10_check.png"
+                            id="image_t3g_hf4_rvb"/>
+                    </fig></li>
+                <li>Перезагрузите компьютер.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

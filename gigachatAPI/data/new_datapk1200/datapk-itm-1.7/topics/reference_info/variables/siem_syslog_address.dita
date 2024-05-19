@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="siem_syslog_address">
+    <glossterm>SIEM_SYSLOG_ADDRESS</glossterm>
+    <glossdef>
+        <ph
+            conref="../../reusable/notes/siem_syslog_address_def.dita#ReusableComponent_wtk_1qd_yrb/ph_xtk_1qd_yrb"
+        /></glossdef>
+</glossentry>

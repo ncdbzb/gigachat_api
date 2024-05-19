@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="OM_datapk_synchro_logs">
+    <title>Просмотр логов синхронизации</title>
+    <shortdesc></shortdesc>
+    <taskbody conref="../../../reusable/synchro_datapk/datapk_synchro_logs_info.dita#ReusableComponent_qjd_bqk_syb/taskbody_ujd_bqk_syb"/>
+</task>

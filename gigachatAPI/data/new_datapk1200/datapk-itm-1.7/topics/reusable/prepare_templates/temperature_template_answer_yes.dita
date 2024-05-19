@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dck_dkd_gzb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_eck_dkd_gzb">
+                <cmd>Ответьте «YES» на вопросы, которые появляются в процессе поиска.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

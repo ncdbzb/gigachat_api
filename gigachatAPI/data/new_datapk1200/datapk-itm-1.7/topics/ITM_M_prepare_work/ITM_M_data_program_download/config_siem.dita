@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="config_siem">
+    <title>Настройка интеграции с SIEM</title>
+    <taskbody>
+        <context>
+            <p>Для интеграции с SIEM нужно задать несколько переменных окружения. Для этого:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd
+                    conref="../../reusable/notes/siem_step1.dita#ReusableComponent_aqv_wqy_xrb/cmd_bqv_wqy_xrb"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/notes/siem_step2.dita#ReusableComponent_qyt_yqy_xrb/cmd_ryt_yqy_xrb"
+                />
+                <info><codeblock>vi /opt/itm-vm/.env</codeblock></info>
+            </step>
+            <step>
+                <cmd>Проверьте и при необходимости измените значение переменной <cmdname
+                        keyref="siem_integration"/>:</cmd>
+                <info>
+                    <ul id="ul_l4r_m12_yrb">
+                        <li><codeph><cmdname keyref="siem_integration"/>=true</codeph> — включает интеграцию с
+                            SIEM;</li>
+                        <li><codeph><cmdname keyref="siem_integration"/>=false</codeph> — отключает интеграцию с
+                            SIEM.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Задайте следующие переменные окружения:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd><cmdname keyref="siem_syslog_host"/> — <ph
+                                conref="../../reusable/notes/siem_syslog_address_def.dita#ReusableComponent_wtk_1qd_yrb/ph_xtk_1qd_yrb"
+                            />.</cmd>
+                        <stepxmp><codeph><cmdname keyref="siem_syslog_host"/>=127.0.0.1</codeph></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd><cmdname keyref="itmm_ip_address"/> — <ph
+                                conref="../../reusable/notes/itmm_ip_address_def.dita#ReusableComponent_uzs_fqd_yrb/ph_vzs_fqd_yrb"
+                            /></cmd>
+                        <stepxmp><codeph><cmdname keyref="itmm_ip_address"
+                            />=10.51.30.99</codeph></stepxmp>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>При необходимости задайте переменные окружения:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd><cmdname keyref="siem_syslog_port"/> — <ph
+                                conref="../../reusable/notes/siem_syslog_port_def.dita#ReusableComponent_vt2_qqd_yrb/ph_wt2_qqd_yrb"
+                            />.</cmd>
+                        <stepxmp><codeph><cmdname keyref="siem_syslog_port"/>=514</codeph></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd><cmdname keyref="siem_syslog_protocol"/> — <ph
+                                conref="../../reusable/notes/siem_syslog_protocol_def.dita#ReusableComponent_bxr_sqd_yrb/ph_cxr_sqd_yrb"
+                            />. </cmd>
+                        <stepxmp><codeph><cmdname keyref="siem_syslog_protocol"/>=TCP</codeph></stepxmp>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                <info><codeblock>:wq</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

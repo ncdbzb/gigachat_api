@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="dbname">
+    <glossterm>DBName</glossterm>
+    <glossdef>Имя базы данных.
+    <note type="warning">Не рекомендуется использовать ту же базу данных, что и сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</note>
+    </glossdef>
+</glossentry>

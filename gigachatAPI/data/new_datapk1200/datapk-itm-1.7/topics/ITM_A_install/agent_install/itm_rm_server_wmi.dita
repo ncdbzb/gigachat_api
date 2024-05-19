@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_rm_server_wmi">
+    <title>Настройка сервера ITM-RM для безагентного мониторинга по протоколу WMI</title>
+    <shortdesc
+        conref="../../reusable/agentless/server_wmi_descr.dita#ReusableComponent_knf_1wn_y5b/shortdesc_lnf_1wn_y5b"/>
+    <taskbody>
+        <context>
+            <p>Для настройки возможности безагентного сбора данных с <abbreviated-form
+                keyref="monitoring_object"/> по протоколу WMI:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите в режим командной строки сервера консолидации <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_a"/></ph>, который будет
+                    собирать данные с <abbreviated-form keyref="monitoring_object"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Войдите в режим редактирования файла <codeph>wmi.pw</codeph>:</cmd>
+                <info>
+                    <codeblock>vi /opt/itm-rm/env/wmi_cred/wmi.pw</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Введите учетные данные <abbreviated-form keyref="monitoring_object"/> по
+                    следующему шаблону:</cmd>
+                <substeps id="substeps_sgx_4by_jvb">
+                    <substep>
+                        <cmd>В квадратные скобки «[]» введите имя <abbreviated-form
+                            keyref="monitoring_object"/> (hostname).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В переменную username введите логин <abbreviated-form
+                            keyref="monitoring_object"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В переменную password введите пароль <abbreviated-form
+                            keyref="monitoring_object"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В переменную domain введите домен, под которой происходит подключение к
+                            <abbreviated-form keyref="monitoring_object"/>. Если это локальная
+                            учетная запись, то в качестве домена введите имя <abbreviated-form
+                                keyref="monitoring_object"/>.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="tip">При полном совпадении данных учетных записей в одном домене вы
+                        можете добавить их в блок [DEFAULT].</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Сохраните конфигурационный файл и выйдите из режима редактирования:</cmd>
+                <info>
+                    <codeblock>:wq</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

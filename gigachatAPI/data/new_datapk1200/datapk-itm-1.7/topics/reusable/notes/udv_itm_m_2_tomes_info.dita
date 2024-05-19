@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_is2_kdg_1xb">
+    <title></title>
+    <body>
+        <div id="div_ks2_kdg_1xb">
+            <p>Этот раздел описывает последовательность действий для установки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> для случая, когда на сервере используются два тома — первый том для операционной системы, второй том для базы данных.</p>
+            
+           <p>Если вы планируете использовать только один том, перейдите в следующий раздел.</p>
+            
+            <p>Все нижеописанные действия на сервере производятся после настройки RAID на дисках и
+                установки операционной системы в соответствии с разделами <ph outputclass="onlypdf"
+                        ><xref
+                        href="../../requirements/safe_installation/RedOS_installation/installation_redos.dita"
+                    /></ph><ph outputclass="html"><xref
+                        href="../../requirements/safe_installation/RedOS_installation/installation_redos.dita"
+                    /></ph><ph outputclass="udvpdf"><xref
+                        href="../../requirements/safe_installation/RedOS_installation/udv_install_itm_m_redos.dita"
+                    /></ph>
+                <ph outputclass="certif"><xref
+                        href="../../requirements/safe_installation/RedOS_installation/certif_installation_redos.dita"
+                    /></ph>, <xref
+                    href="../../requirements/safe_installation/RedOS_installation/ntp.dita"/> и <ph
+                    outputclass="onlypdf"><xref
+                        href="../../requirements/safe_installation/RedOS_installation/extra_pack_installation_redos7_3.dita"
+                        /><ph outputclass="udvpdf"><xref
+                            href="../../requirements/safe_installation/RedOS_installation/udv_installation_redos.dita"
+                        /></ph><ph outputclass="html"><xref
+                            href="../../requirements/safe_installation/RedOS_installation/udv_installation_redos.dita"
+                        /></ph>.</ph>
+            </p></div></body>
+</topic>

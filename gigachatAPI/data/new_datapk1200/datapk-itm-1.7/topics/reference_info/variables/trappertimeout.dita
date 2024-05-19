@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="trappertimeout">
+    <glossterm>ZBX_TRAPPERIMEOUT</glossterm>
+    <glossdef>
+        <p>Время в секундах, которое траппер может потратить на обработку новых данных.</p>
+    </glossdef>
+</glossentry>

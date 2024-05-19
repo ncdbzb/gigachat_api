@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="services">
+    <glossterm>Услуги</glossterm>
+    <glossdef>Подраздел мониторинга для отображения иерархического представления объектов мониторинга.<fig>
+            <title>Страница «Услуги»</title>
+            <div outputclass="html"><image href="../../../images/Pages/monitoring_services.png"/></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/monitoring_services.png"/></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_monitoring_services.png"/></div>
+        </fig></glossdef>
+    <!--<related-links>
+        <link href="../../usage/service_monitoring/service_monitoring.dita"/>
+        <link href="../../usage/service_monitoring/service_configuration.dita"/>
+    </related-links>-->
+</glossentry>

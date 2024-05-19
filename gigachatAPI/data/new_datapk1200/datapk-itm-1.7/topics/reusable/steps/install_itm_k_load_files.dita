@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hbc_nwc_vvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="itm_k_download_archive"><cmd>Загрузите на сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> следующие файлы из каталога с обновленным дистрибутивом:</cmd><substeps id="substeps_cxx_x44_btb"><substep>
+                        <cmd><codeph>datapk_itm-k_v1.6.0.0.tar.gz</codeph></cmd>
+                    </substep><substep><cmd><codeph>docker-compose.release.yaml</codeph></cmd></substep><substep>
+                <cmd><codeph>iptables</codeph></cmd>
+            </substep></substeps></step>
+        </steps>
+    </taskbody>
+</task>

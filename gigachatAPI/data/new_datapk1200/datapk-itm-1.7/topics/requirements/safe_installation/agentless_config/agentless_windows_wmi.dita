@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agentless_windows_wmi">
+    <title>Настройка ОМ с ОС Windows для безагентного мониторинга по протоколу WMI</title>
+    <taskbody
+        conref="../../../reusable/agentless/win_wmi.dita#ReusableComponent_d1b_fwn_y5b/taskbody_h1b_fwn_y5b"/>
+</task>

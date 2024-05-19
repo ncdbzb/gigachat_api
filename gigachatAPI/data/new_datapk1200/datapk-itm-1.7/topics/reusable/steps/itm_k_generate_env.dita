@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gr5_kby_qvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_hr5_kby_qvb"><cmd>Создайте env-файлы и настройте значения переменных. Для этого:</cmd><substeps id="substeps_a1s_bzx_qvb"><substep>
+                        <cmd>Перейдите в директорию <codeph>/opt/itm-k</codeph>:</cmd>
+                        <info>
+                            <codeblock>cd /opt/itm-k</codeblock>
+                        </info>
+                    </substep><substep><cmd>Назначьте скрипту <codeph>env_generator.sh</codeph> полные права доступа:</cmd><info><codeblock>chmod +x env_generator.sh</codeblock></info></substep><substep><cmd>Запустите скрипт:</cmd><info><codeblock>./env_generator.sh</codeblock></info><stepresult>Откроется всплывающее окно для настройки переменных.</stepresult></substep><substep><cmd>Выполните настройку переменных:</cmd><info><ul id="ul_lvc_1by_qvb"><li>Чтобы изменить переменную, введите новое значение и нажмите клавишу «Enter».</li><li>Чтобы оставить значение переменной по умолчанию, которое указано в квадратных скобках, нажмите
+                                    клавишу «Enter».</li>
+                <li>Чтобы ответить на вопрос «да», нажмите клавишу «y».</li>
+                <li>Чтобы ответить на вопрос «нет», нажмите клавишу «n».</li></ul>
+                <note>Если IP-адрес подсети контейнеров уже используется в вашей
+                    инфраструктуре, его нужно изменить. Подробнее см. в разделе <xref
+                        href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita"/>
+                    <xref
+                        href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita#itm_k_net_conflict/cause1"
+                    />.</note></info>
+                <stepresult>В директории <codeph>/opt/itm-k</codeph> появится файл
+                                <codeph>.env</codeph> и каталог <codeph>env</codeph> с настроенными
+                            переменными.</stepresult></substep>
+                <substep>
+                    <cmd>Для более подробной настройки переменных .env-файла или для правки ранее
+                        введенных переменных:</cmd>
+                    <info>
+                        <ol id="ol_kxm_sgb_5vb">
+                            <li>Откройте для редактирования файл
+                                <codeph>.env</codeph>:<codeblock>vi .env</codeblock></li>
+                            <li>Настройте переменные.<note>Рекомендуемые и возможные значения
+                                переменных приведены в разделе <xref
+                                    href="../../ITM_K_reference_info/var_tables/var_tables.dita"
+                                />.</note></li>
+                            <li>Сохраните изменения и закройте файл:<codeblock>:wq</codeblock></li>
+                        </ol>
+                    </info>
+                </substep></substeps>
+                <info>
+                    <note>Скрипт <codeph>env_generator.sh</codeph> предназначен только для создания
+                        новых env-файлов, не для редактирования существующих.</note>
+                </info></step> 
+        </steps>
+        </taskbody>
+</task>

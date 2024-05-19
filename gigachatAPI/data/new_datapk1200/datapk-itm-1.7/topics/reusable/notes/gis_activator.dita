@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xmw_2tk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_zmw_2tk_tsb">
+                <cmd>Установите пакет-активатор от производителя с помощью команды:</cmd>
+                <info><codeblock>rpm -Uvh gis-activator11-1.1.0-0.x86_64.rpm</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

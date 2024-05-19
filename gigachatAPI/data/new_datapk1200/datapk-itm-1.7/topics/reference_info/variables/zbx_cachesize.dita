@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_cachesize">
+    <glossterm>ZBX_CACHESIZE</glossterm>
+    <glossdef>
+        
+        <p><div
+                conref="../../reusable/notes/zbx_cachesize_info.dita#ReusableComponent_ekm_ycb_5rb/div_fkm_ycb_5rb"
+                /><b>Значение в конфигурации ITM-K при поставке:</b>8M</p>
+        <p><b>Разрешенный диапазон значений:</b>128K-8G</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nk5_1ny_hsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_pk5_1ny_hsb"><cmd>Войдите в режим редактирования файла:</cmd>
+                        <info><codeblock>vi /etc/zabbix/[имя файла]</codeblock>Где [имя файла] —
+                            <codeph>zabbix_agentd.conf</codeph> для агента версии 1 и
+                            <codeph>zabbix_agentd2.conf</codeph> для агента версии 2.</info></substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

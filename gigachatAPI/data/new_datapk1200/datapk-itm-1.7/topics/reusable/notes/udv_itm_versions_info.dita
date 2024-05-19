@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_wxq_mmf_1xb">
+    <title></title>
+    <body id="body_yxq_mmf_1xb"><p>В таблице указаны поддерживаемые версии компонентов решения для <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph> v. 1.6.0.</p><p><table frame="all" rowsep="1" colsep="1" id="table_n3n_2bq_lvb"><title>Совместимость компонентов решения для <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph></title><tgroup cols="2"><colspec colname="c2" colnum="1" colwidth="1*"/><colspec colname="c3" colnum="2" colwidth="1*"/><thead><row><entry>Компонент решения</entry><entry>Версия ПО</entry></row></thead><tbody><row><entry>Источник данных об <abbreviated-form keyref="monitoring_object"/></entry><entry>DATAPK <b>v. 1.19*</b>, включая сертифицированную <b>1.19.0.2-fstec*</b>; 1.18; 1.17; 1.16</entry></row><row><entry>Cервер <ph outputclass="html">агентов</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="udvpdf">удаленного мониторинга</ph></entry><entry><ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> <b>v. 1.3*</b>; 1.2; 1.1</entry></row><row><entry>Операционная система</entry><entry><ul id="ul_oxj_ywq_nvb"><li>РЕД ОС <b>v. 7.3*</b>; 7.2</li><li>CentOS v. 8.4</li><li>Astra Linux Special Edition (Смоленск) v. 1.7; 1.6</li></ul></entry></row><row><entry>СУБД</entry><entry><ul id="ul_z1k_1xq_nvb"><li>Jatoba <b>v. 4.5*</b>; 1.14</li><li>PostgreSQL v. 14</li></ul></entry></row><row><entry>Виртуализация</entry><entry>Docker v. 20</entry></row></tbody></tgroup></table></p><p>Где * — рекомендованная версия, обеспечивающая весь доступный функционал и стабильность работы.</p>
+    </body>
+</topic>

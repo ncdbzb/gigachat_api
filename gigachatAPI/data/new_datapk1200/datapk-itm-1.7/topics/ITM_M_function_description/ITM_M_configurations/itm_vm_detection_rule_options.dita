@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_vm_detection_rule_options">
+    <title>Управление правилами оповещений</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Управление правилами оповещений осуществляется на странице <cite
+                    keyref="itm_m_page_configuration"/> → <cite
+                    keyref="itm_m_pages_notification_rules"/>. Доступны следующие возможности:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Просмотр правила оповещений. Для просмотра:</cmd>
+                <substeps id="substeps_f1g_4kc_gvb">
+                    <substep>
+                        <cmd>Нажмите на строку с правилом в списке.</cmd>
+                        <stepresult>Откроется всплывающее окно просмотра свойств правила оповещений. <fig>
+                                <title>Окно «Правило оповещений»</title>
+                                <image
+                                    href="../../../images/ITM_M_screens/ITM_VM_detection_rule_watch.png"
+                                />
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Закрыть» для завершения просмотра. </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Редактирование правила оповещений. Для редактирования:</cmd>
+                <substeps id="substeps_fmj_klc_gvb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Изменить» в окне просмотра свойств правила
+                            оповещений или на кнопку <image
+                                href="../../../images/ITM_M_icons/ITM_M_change_rule.png"
+                                id="image_ugh_cmc_gvb"/>в строке с правилом. </cmd>
+                        <stepresult>Откроется всплывающее окно «Изменение правила оповещений». <fig>
+                                <title>Окно «Изменение правила оповещений»</title>
+                                <image
+                                    href="../../../images/ITM_M_screens/ITM_VM_detection_rule_change.png"
+                                />
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените необходимые вам свойства.</cmd>
+                        <info><note>Если рядом с одним из филиалов в полее «Объект» отображается надпись «сервер удален», этот
+                                филиал был удален из списка подключенных серверов мониторинга
+                                (подробнее см. в разделе <xref
+                                    href="../ITM_M_monitoring_servers/itm_m_delete_monitoring_server.dita"
+                                />). Такой филиал можно удалить из списка объектов, но нельзя
+                                добавить туда. Удаление филиала из списка подключенных серверов
+                                мониторинга не влияет на статус правила.</note></info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Сохранить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Включение правила оповещений. Для включения:</cmd>
+                <substeps id="substeps_c1l_bnc_gvb">
+                    <substep>
+                        <cmd>Нажмите на кнопку <image
+                                href="../../../images/ITM_M_icons/ITM_VM_start_rule.png"
+                                id="image_kcz_pnc_gvb"/>.</cmd>
+                        <stepresult>Статус правила сменится на «Активно», оповещения будут
+                            отправляться в соответствии с настройками правила.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Выключение правила оповещений. Для выключения:</cmd>
+                <substeps id="substeps_dlj_vnc_gvb">
+                    <substep>
+                        <cmd>Нажмите на кнопку <image
+                                href="../../../images/ITM_M_icons/ITM_M_stop_rule.png"
+                                id="image_scj_wnc_gvb"/>.</cmd>
+                        <stepresult>Статус правила сменится на «Неактивно», оповещения перестанут
+                            отправляться.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Удаление правила оповещений. Для удаления:</cmd>
+                <substeps id="substeps_d3z_znc_gvb">
+                    <substep>
+                        <cmd>Нажмите на кнопку <image
+                                href="../../../images/ITM_M_icons/ITM_M_delete_rule.png"
+                                id="image_bhz_c4c_gvb"/> в строке с правилом.</cmd>
+                        <stepresult>Появится всплывающее окно «Удаление правила оповещения». <fig>
+                                <title>Окно «Удаление правила оповещения»</title>
+                                <image
+                                    href="../../../images/ITM_M_screens/ITM_VM_detection_rule_delete.png"
+                                />
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Удалить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_itm_general_info">
+    <title>Общие требования</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_cvq_nld_syb">
+                <li><xref href="udv_itm_general_function.dita"/></li>
+                <li><xref href="udv_itm_general_functions.dita"/></li>
+                <li><xref href="udv_itm_architecture.dita"/><ul id="ul_elf_vld_syb">
+                        <li><xref href="udv_itm_vm.dita"/></li>
+                        <li><xref href="udv_itm_k.dita"/></li>
+                        <li><xref href="udv_itm_a.dita"/></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

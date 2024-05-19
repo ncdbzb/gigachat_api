@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_umh_glk_trb">
+    <title>zbx_server_host_0_info</title>
+    <body><div id="div_vmh_glk_trb"><p>Содержит значение IP-адреса или DNS-имя сервера, с которого агент будет принимать подключения. Не
+                учитывается, если <cmdname keyref="zbx_startagents"/> = 0.</p></div></body>
+</topic>

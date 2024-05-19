@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_a_win_wmi">
+    <title>Настройка ОМ с ОС Windows для безагентного мониторинга по протоколу WMI</title>
+    <taskbody>
+        <context id="context_els_w1n_tvb"><note>Протокол <ph
+                    conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                /> для мониторинга функционирования <abbreviated-form keyref="monitoring_object"/>
+                рекомендуется использовать только при отсутствии возможности мониторинга по
+                протоколу <ph
+                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                />.</note><note><abbreviated-form keyref="monitoring_object"/>, на котором ранее был
+                настроен сбор по <ph
+                    conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                /> для DATAPK, не требует дополнительной настройки <ph
+                    conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                /> для <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_a"/></ph>.</note>Для настройки безагентного сбора
+            на <abbreviated-form keyref="OS"/> Windows с помощью протокола <ph
+                conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+            />:</context>
+        <steps>
+            <step>
+                <cmd>Зайдите в интерфейс объекта мониторинга.</cmd>
+            </step>
+            <step>
+                <cmd>Добавьте пользователя для безагентного сбора по протоколу <ph
+                        conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                    />. Для этого:</cmd>
+                <substeps id="substeps_oxk_n15_3sb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите compmgmt.msc и нажмите Enter.</cmd>
+                        <stepresult>Появится окно «Управление компьютером». <fig
+                                id="fig_yg1_hbn_tvb">
+                                <title>Окно «Управление компьютером»</title>
+                                <image href="../../../images/ITM_K_requirements/rule_computer.png"
+                                    id="image_zg1_hbn_tvb"/>
+                            </fig></stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В левой части окна перейдите в директорию Служебные программы →
+                            Локальные пользователи → Пользователи.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В центральной части окна нажмите правой кнопкой мыши и выберите «Новый
+                            пользователь».</cmd>
+                        <info>
+                            <fig id="fig_ah1_hbn_tvb">
+                                <title>Процесс создания нового пользователя</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/rule_computer_new_user.png"
+                                    id="image_bh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно создания нового пользователя.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите логин в поле «Пользователь».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Введите и подтвердите пароль.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Снимите чекбокс «Требовать смены пароля при следующем входе в
+                            систему».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Создать».</cmd>
+                        <info>
+                            <fig id="fig_oq3_y4c_jsb">
+                                <title>Окно создания нового пользователя</title>
+                                <image href="../../../images/ITM_K_requirements/new_user.png"
+                                    id="image_pq3_y4c_jsb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Установите необходимые права созданному пользователю. Для этого:</cmd>
+                <substeps id="substeps_ch1_hbn_tvb">
+                    <substep>
+                        <cmd>В окне «Управление компьютером» установите курсор на Службы и
+                            приложения → Управляющий элемент <ph
+                                conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                            />.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите правую кнопку мыши и выберите «Свойства».</cmd>
+                        <info>
+                            <fig id="fig_dh1_hbn_tvb">
+                                <title>Выбор свойств управляющего элемента WMI</title>
+                                <image href="../../../images/ITM_K_requirements/wmi_element.png"
+                                    id="image_eh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Свойства. Управляющий элемент <ph
+                                conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                            />».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Безопасность».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выберите пространство Root и нажмите кнопку «Безопасность» в нижней
+                            правой части окна.</cmd>
+                        <info>
+                            <fig id="fig_fh1_hbn_tvb">
+                                <title>Окно «Свойства. Управляющий элемент WMI», вкладка
+                                    «Безопасность»</title>
+                                <image href="../../../images/ITM_K_requirements/wmi_safety.png"
+                                    id="image_gh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Безопасность для Root».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте в список созданного пользователя и установите ему разрешения
+                            «Выполнение методов», «Включить учетную запись», «Включить
+                            удаленно».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Применить».</cmd>
+                        <info>
+                            <fig id="fig_hh1_hbn_tvb">
+                                <title>Окно «Безопасность для Root»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/safety_for_root_apply.png"
+                                    id="image_ih1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Разрешите передавать трафик по протоколу <ph
+                        conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                    /> через стандартный межсетевой экран (брандмауэр). Для этого:</cmd>
+                <substeps id="substeps_jh1_hbn_tvb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите cmd и нажмите Enter.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В зависимости от языка системы введите:</cmd>
+                        <info>
+                            <ul id="ul_xy2_dd5_3sb">
+                                <li>Если в системе установлен русский язык:
+                                    <codeblock>netsh advfirewall firewall set rule group="инструментарий управления windows (wmi)" new enable=yes</codeblock></li>
+                                <li>Если в системе установлен английский язык:
+                                    <codeblock>netsh advfirewall firewall set rule group="windows management instrumentation (wmi)" new enable=yes</codeblock></li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="tip">При наличии другого межсетевого экрана настройте его так, чтобы
+                        он не блокировал трафик по протоколу <ph
+                            conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                        />.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Отключите контроль учетных записей пользователя. Для этого:</cmd>
+                <substeps id="substeps_kh1_hbn_tvb">
+                    <substep>
+                        <cmd>Перейдите в раздел «Учетные записи пользователей» панели
+                            управления.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выберите пункт «Изменение параметров контроля учетных записей».</cmd>
+                        <info>
+                            <fig id="fig_lh1_hbn_tvb">
+                                <title>Раздел «Учетные записи пользователей»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/users_change_parameters.png"
+                                    id="image_mh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Параметры управления учетными записями
+                            пользователей».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Установите значение «Никогда не уведомлять».</cmd>
+                        <info>
+                            <fig id="fig_nh1_hbn_tvb">
+                                <title>Окно «Параметры управления учетными записями
+                                    пользователей»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/users_no_notifications.png"
+                                    id="image_oh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите regedit и нажмите Enter.</cmd>
+                        <stepresult>Появится окно подтверждения.</stepresult>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/regedit_approve_window.dita#ReusableComponent_qbm_ktc_jsb/substep_rbm_ktc_jsb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>В левой части окна перейдите в директорию
+                                <codeph>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</codeph>.</cmd>
+                        <info>
+                            <fig id="fig_ph1_hbn_tvb">
+                                <title>Окно «Редактор реестра»</title>
+                                <image href="../../../images/ITM_K_requirements/regedit.png"
+                                    id="image_qh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>В правой части окна дважды нажмите левой кнопкой мыши на имя элемента
+                                <codeph>LocalAccountTokenFilterPolicy</codeph>.</cmd>
+                        <stepresult>Появится окно «Изменение параметра».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd> Измените значение <codeph>LocalAccountTokenFilterPolicy</codeph> на 1
+                            (тип DWORD). </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК».</cmd>
+                        <info>
+                            <fig id="fig_fkt_rrc_jsb">
+                                <title>Окно «Изменение параметра»</title>
+                                <image href="../../../images/ITM_K_requirements/regedit_change.png"
+                                    id="image_gkt_rrc_jsb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезагрузите операционную систему и войдите в систему с настроенной
+                            для сбора учетной записью.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Добавьте <ph outputclass="html"><abbreviated-form keyref="datapk_itm"/></ph>
+                    <ph outputclass="onlypdf"><abbreviated-form keyref="datapk_itm"/></ph>
+                    <ph outputclass="udvpdf"><abbreviated-form keyref="udv_itm"/></ph>
+                    в список доверенных узлов. Для
+                    этого:</cmd>
+                <substeps id="substeps_rh1_hbn_tvb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите powershell и нажмите Ctrl + Shift + Enter для запуска от имени
+                            администратора.</cmd>
+                        <stepresult>Появится окно powershell.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите в директорию client:</cmd>
+                        <info>
+                            <codeblock>cd wsman:\localhost\client</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте <ph outputclass="html"><abbreviated-form keyref="datapk_itm"
+                                /></ph>
+                            <ph outputclass="onlypdf"><abbreviated-form keyref="datapk_itm"/></ph>
+                            <ph outputclass="udvpdf"><abbreviated-form keyref="udv_itm"/></ph> в
+                            список доверенных:</cmd>
+                        <info>
+                            <codeblock>set-item trustedhosts [сетевое имя <ph outputclass="html"><abbreviated-form keyref="datapk_itm"/></ph> <ph outputclass="onlypdf"><abbreviated-form keyref="datapk_itm"/></ph> <ph outputclass="udvpdf"><abbreviated-form keyref="udv_itm"/></ph>]</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Разрешите вызовы DCOM:</cmd>
+                <substeps id="substeps_sh1_hbn_tvb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите DCOMCNFG и нажмите Enter.</cmd>
+                        <stepresult>Появится окно «Службы компонентов».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Найдите пункт «Службы компонентов» и нажмите на него.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В центральной части окна перейдите в директорию Компьютеры → Мой
+                            компьютер.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Нажмите правой кнопкой мыши на надпись «Мой компьютер» и выберите в
+                            контекстном меню «Свойства».</cmd>
+                        <info>
+                            <fig id="fig_th1_hbn_tvb">
+                                <title>Окно «Службы компонентов»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/component_services_2.png"
+                                    id="image_uh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Свойства: Мой компьютер».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Безопасность COM».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В разделе «Права доступа» выберите «Изменить ограничения».</cmd>
+                        <info>
+                            <fig id="fig_vh1_hbn_tvb">
+                                <title>Окно «Свойства: Мой компьютер», вкладка
+                                    «Безопасность»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/properties_my_pc_safety.png"
+                                    id="image_wh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Права доступа». </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте созданного пользователя и установите ему разрешения «Локальный
+                            доступ» и «Удаленный доступ».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК».</cmd>
+                        <info>
+                            <fig id="fig_xvg_ssc_jsb">
+                                <title>Окно «Права доступа»</title>
+                                <image href="../../../images/ITM_K_requirements/add_user_ok.png"
+                                    id="image_yvg_ssc_jsb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>В разделе «Разрешения на запуск и активацию» окна «Свойства: Мой
+                            компьютер» выберите «Изменить ограничения».</cmd>
+                        <stepresult>Появится окно «Разрешение на запуск и активацию».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте созданного пользователя и установите ему разрешения «Локальный
+                            запуск», «Удаленный запуск», «Локальная активация» и «Удаленная
+                            активация».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК».</cmd>
+                        <info>
+                            <fig id="fig_mdh_5sc_jsb">
+                                <title>Окно «Разрешение на запуск и активацию»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/run_activate_permission_1.png"
+                                    id="image_ndh_5sc_jsb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что на вкладке «Свойства по умолчанию» установлен чекбокс
+                            «Разрешить использование DCOM на этом компьютере».</cmd>
+                        <info>
+                            <fig id="fig_xh1_hbn_tvb">
+                                <title>Вкладка «Свойства по умолчанию»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/default_properties.png"
+                                    id="image_yh1_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Применить».</cmd>
+                        <stepresult>Появится окно подтверждения выбора.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Да».</cmd>
+                        <info>
+                            <fig id="fig_zh1_hbn_tvb">
+                                <title>Окно подтверждения выбора</title>
+                                <image href="../../../images/ITM_K_requirements/DCOM_approve.png"
+                                    id="image_a31_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Вернитесь в окно «Службы компонентов».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В директории Мой компьютер → Настройка DCOM выберите Windows Management
+                            and Instrumentation.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите правую кнопку мыши и выберите «Свойства».</cmd>
+                        <info>
+                            <fig id="fig_b31_hbn_tvb">
+                                <title>Выбор свойств Windows Management and Instrumentation</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/win_management_instruments.png"
+                                    id="image_c31_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Свойства: Windows Management and
+                            Instrumentation».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Безопасность».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что для всех разрешений установлен пункт «Настроить» и
+                            созданному пользователю даны все разрешающие права.</cmd>
+                        <info>
+                            <fig id="fig_d31_hbn_tvb">
+                                <title>Вкладка «Безопасность» окна «Свойства: Windows Management and
+                                    Instrumentation»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/win_management_safety.png"
+                                    id="image_e31_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК».</cmd>
+                        
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Настройте CIMOM. Для этого:</cmd>
+                <substeps id="substeps_f31_hbn_tvb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите regedit и нажмите Enter.</cmd>
+                        <stepresult>Появится окно подтверждения.</stepresult>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/regedit_approve_window.dita#ReusableComponent_qbm_ktc_jsb/substep_rbm_ktc_jsb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>В левой части окна перейдите в директорию
+                                <codeph>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM</codeph>.</cmd>
+                        <info>
+                            <fig id="fig_g31_hbn_tvb">
+                                <title>Окно «Реестр изменений»</title>
+                                <image href="../../../images/ITM_K_requirements/regedit_cimom.png"
+                                    id="image_h31_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>В правой части окна дважды нажмите левой кнопкой мыши на имя элемента
+                                <codeph>AllowAnonymousCallback</codeph>.</cmd>
+                        <stepresult>Появится окно «Изменение параметра».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените значение <codeph>AllowAnonymousCallback</codeph> на 1 (тип
+                            DWORD).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК».</cmd>
+                            
+                        <info>
+                            <fig id="fig_clr_dyc_jsb">
+                                <title>Окно «Изменение параметра»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/regedit_allow_anon_callback.png"
+                                    id="image_dlr_dyc_jsb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что созданному пользователю предоставлен доступ к компьютеру из
+                    сети. Для этого:</cmd>
+                <substeps id="substeps_oh1_f35_3sb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите gpedit.msc и нажмите Enter.</cmd>
+                        <stepresult>Появится окно «Редактор групповой локальной
+                            политики».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В левой части окна перейдите в директорию Конфигурация компьютера →
+                            Конфигурация Windows → Параметры безопасности → Локальные политики →
+                            Назначение прав пользователя.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Найдите в списке политику «Доступ к компьютеру из сети» и дважды
+                            нажмите на нее левой кнопкой мыши.</cmd>
+                        <info>
+                            <fig id="fig_i31_hbn_tvb">
+                                <title>Окно «Редактор локальной групповой политики»</title>
+                                <image href="../../../images/ITM_K_requirements/access_pc_net.png"
+                                    id="image_j31_hbn_tvb"/>
+                            </fig>
+                        </info>
+                        <stepresult>Появится окно «Свойства: доступ к компьютеру из сети». <fig
+                                id="fig_k31_hbn_tvb">
+                                <title>Окно «Свойства: доступ к компьютеру из сети»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/properties_access_pc_net.png"
+                                    id="image_l31_hbn_tvb"/>
+                            </fig></stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что созданный пользователь присутствует в списке. Если
+                            пользователя там нет, добавьте его.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что служба «Инструментарий управления Windows» запущена
+                    автоматически. Для этого:</cmd>
+                <substeps id="substeps_hrw_m35_3sb">
+                    <substep>
+                        <cmd>Нажмите Win+R.</cmd>
+                        <stepresult>Появится окно «Выполнить».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите services.msc и нажмите Enter.</cmd>
+                        <stepresult>Появится окно «Службы».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Найдите в списке службу «Инструментарий управления Windows».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что в состояние службы «Работает», а тип запуска
+                            «Автоматически».</cmd>
+                        <info>
+                            <fig id="fig_m31_hbn_tvb">
+                                <title>Окно «Службы»</title>
+                                <image
+                                    href="../../../images/ITM_K_requirements/services_instruments.png"
+                                    id="image_n31_hbn_tvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Перезагрузите операционную систему объекта мониторинга.</cmd>
+            </step>
+        </steps>
+        <postreq id="postreq_lrm_2dn_tvb">
+            <note>Подробная настройка <term keyref="monitoring_object">объектов мониторинга</term> в
+                веб-интерфейсе описана в Руководстве по эксплуатации <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph> в разделе «Объекты мониторинга. Узлы
+                сети».</note>
+        </postreq>
+    </taskbody>
+</task>

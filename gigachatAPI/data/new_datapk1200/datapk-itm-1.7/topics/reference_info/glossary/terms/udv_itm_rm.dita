@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="udv_itm_rm">
+    <glossterm>UDV-ITM-RM</glossterm>
+    <glossdef>UDV-ITM-RM — сервер удаленного мониторинга. <p>Применяется для:</p><ul
+            id="ul_ul5_qkc_gyb">
+            <li>сбора данных о производительности с подключенных объектов мониторинга;</li>
+            <li>передачи собранных данных на сервер мониторинга. </li>
+        </ul>*В ранних версиях использовалось название Сервер агентов (прокси-сервер),
+        ITM-A.</glossdef>
+</glossentry>

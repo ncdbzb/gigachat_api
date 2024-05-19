@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ITM_VM_user_whats_new">
+    <title>Что нового?</title>
+    <body>
+        <p>В версии 1.4.0.1 исправлена ошибка, при которой не отправлялись события о проблемах в
+            SIEM.</p>
+        <p>Обновления в текущей версии документации:<ul id="ul_ahq_ktv_ktb">
+                <li>Обновлены документы:<ul id="ul_hwf_dgy_xtb">
+                        <li><xref
+                                href="../ITM_M_function_description/ITM_M_configurations/ldap_change_config.dita"
+                            /></li>
+                        <li><xref
+                                href="../ITM_M_function_description/ITM_M_configurations/ldap.dita"
+                            /></li>
+                    </ul></li>
+                <li>Добавлены документы:<ul id="ul_png_h3n_5tb">
+                        <li><xref
+                                href="../ITM_M_function_description/ITM_M_configurations/ldap_windows_server.dita"
+                            /></li>
+                        <li><xref
+                                href="../ITM_M_function_description/ITM_M_configurations/ldap_connect.dita"
+                            /></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

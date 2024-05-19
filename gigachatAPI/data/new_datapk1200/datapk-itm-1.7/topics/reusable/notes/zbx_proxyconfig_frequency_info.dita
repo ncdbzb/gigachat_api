@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_g3v_552_trb">
+    <title>zbx_proxyconfig_frequency_info</title>
+    <body><div id="div_h3v_552_trb"><p>Период отправки данных конфигурации с сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm_k"/></ph> на сервер <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_a"/></ph> в секундах.</p>
+        <note>Используется только с сервером <ph outputclass="udvpdf"><term keyref="udv_itm_rm"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm_a"/></ph>, который работает в
+                пассивном режиме.</note>
+    </div></body>
+</topic>

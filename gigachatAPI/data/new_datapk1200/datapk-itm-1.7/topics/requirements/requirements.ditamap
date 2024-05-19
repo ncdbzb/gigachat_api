@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка и настройка комплекса</title>
+    <topicref href="safe_installation/safe_installation_actions.dita">
+        <topicref href="safe_installation/RedOS_installation/installation_redos.dita">
+            <topicref href="safe_installation/RedOS_installation/ntp.dita"/>
+            <topicref href="safe_installation/RedOS_installation/extra_pack_installation.dita"/>
+            <topicref href="safe_installation/RedOS_installation/itm_k_2tomes.dita">
+                <topicref href="safe_installation/RedOS_installation/itm_k_mount.dita"/>
+                <topicref href="safe_installation/RedOS_installation/itm_k_subd_config.dita"/>
+            </topicref>
+            <topicref href="safe_installation/RedOS_installation/jatoba.dita"/>
+            <topicref
+                href="safe_installation/RedOS_installation/installation_server_datapk_itm_k.dita"
+            />
+        </topicref>
+        <topicref href="safe_installation/datapk_synchro/datapk_synchro.dita">
+            <topicref href="safe_installation/datapk_synchro/datapk_synchro_one_time.dita"/>
+            <topicref href="safe_installation/datapk_synchro/datapk_synchro_auto.dita"/>
+            <topicref href="safe_installation/datapk_synchro/datapk_synchro_logs.dita"/>
+        </topicref>
+        <topicref href="safe_installation/first_configuration/first_configuration.dita">
+            <topicref href="safe_installation/first_configuration/user_configurations_safe.dita"/>
+            <topicref href="safe_installation/first_configuration/import_templates.dita"/>
+            <topicref href="safe_installation/first_configuration/add_templates_to_host.dita"/>
+            <topicref href="safe_installation/first_configuration/create_regexp.dita"/>
+            <topicref href="safe_installation/first_configuration/synchro_configuration_web.dita"/>
+        </topicref>
+        <topicref href="safe_installation/agent_installation/agents_installation.dita">
+            <topicref href="safe_installation/agent_installation/agent_installation_windows.dita"/>
+            <topicref href="safe_installation/agent_installation/agent_configuration_windows.dita"/>
+            <topicref href="safe_installation/agent_installation/agent_installation_centos_7.dita"/>
+            <topicref href="safe_installation/agent_installation/agent_installation_debian.dita"/>
+        </topicref>
+        <topicref href="safe_installation/agentless_config/agentless_config.dita">
+            <topicref href="safe_installation/agentless_config/agentless_snmp_config.dita"/>
+            <topicref href="safe_installation/agentless_config/agentless_snmp.dita"/>
+            <topicref href="safe_installation/agentless_config/agent_installation_centos_snmp.dita"/>
+            <topicref href="safe_installation/agentless_config/agentless_consolidation.dita"/>
+            <topicref href="safe_installation/agentless_config/agentless_windows_wmi.dita"/>
+            <topicref href="safe_installation/agentless_config/check_wmi.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="safe_environment_config.dita"/>
+    <topicref href="mib.dita"/>
+    <topicref href="encryption_config.dita">
+        <topicref href="encryption_passive_proxy.dita"/>
+        <topicref href="config_encryption_datapk_itm_k_agents.dita"/>
+    </topicref>
+</map>

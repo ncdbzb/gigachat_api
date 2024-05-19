@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-VM Подготовка к работе</title>
+    <topicref href="ITM_M_distributive_content/itm_m_distributive_content.dita"/>
+    <topicref href="ITM_M_data_program_download/itm_m_redos_installation.dita" collection-type="sequence">
+        <topicref href="ITM_M_data_program_download/itm_m_ntp.dita"/>
+        <topicref href="ITM_M_data_program_download/itm_m_extra_package_install_redos_7_3.dita"/>
+        <topicref href="ITM_M_data_program_download/itm_vm_redos_package_internet.dita"/>
+        <topicref href="ITM_M_data_program_download/2tomes/2tomes.dita" collection-type="sequence">
+            <topicref href="ITM_M_data_program_download/2tomes/mount.dita"/>
+            <topicref href="ITM_M_data_program_download/2tomes/subd_config.dita"/>
+        </topicref>
+        <topicref href="ITM_M_data_program_download/itm_vm_subd_config.dita"/>
+        <topicref href="ITM_M_data_program_download/itm_m_iptables_config.dita"/>
+        <topicref href="ITM_M_data_program_download/itm_m_server_install.dita"/>
+    </topicref>
+    <topicref href="ITM_M_data_program_download/datapk_itm_vm_centos_8_4_2105.dita" collection-type="sequence">
+        <topicref href="ITM_M_data_program_download/datapk_itm_vm_centos_8_4_2105.ditamap"
+            format="ditamap"/>
+    </topicref>
+    <topicref href="ITM_M_data_program_download/itm_vm_update_1_4_to_1_6_.dita"/>
+    <topicref href="ITM_M_data_program_download/itm_vm_update_version.dita"/>
+    <topicref href="ITM_M_data_program_download/datapkitm_vm_certif.dita">
+        <topicref href="itmvm_root_cert.dita"/>
+        <topicref href="datapkitm_vm_certif_key.dita"/>
+        <topicref href="itmvm_cert_admin.dita"/>
+    </topicref>
+    <topicref href="ITM_M_data_program_download/config_siem.dita"/>
+    <topicref href="ITM_M_data_program_download/itm_vm_connect_web.dita"/>
+</map>

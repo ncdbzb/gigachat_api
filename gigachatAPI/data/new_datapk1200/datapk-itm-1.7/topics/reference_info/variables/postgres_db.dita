@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="postgres_db">
+    <glossterm>POSTGRES_DB</glossterm>
+    <glossdef><p
+            conref="../../reusable/notes/postgres_db_info.dita#ReusableComponent_jyv_rb2_trb/p_kyv_rb2_trb"
+            /><b>Значение в конфигурации ITM-K при поставке:</b>itmk_db</glossdef>
+</glossentry>

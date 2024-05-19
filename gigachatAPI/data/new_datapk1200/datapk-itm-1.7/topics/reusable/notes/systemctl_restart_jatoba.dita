@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_pcm_bqk_1tb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_tcm_bqk_1tb">
+                <cmd>Для применения настроек в файлах конфигурации перезапустите СУБД с помощью команды:</cmd>
+                <info>
+                    <codeblock>systemctl restart jatoba-*</codeblock><note> После перезапуска СУБД и применения настроек из файла <codeph
+                            conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                        />, команда для входа в режим редактирования базы данных изменится. Она
+                        будет иметь следующий вид:
+                        <codeblock>sudo -u postgres psql -p 10265 -h 127.0.0.1 -U [имя пользователя] [имя базы]</codeblock>
+                        Где: <ul>
+                            <li><codeph>-u postgres</codeph> — пользователь ОС;</li>
+                            <li><codeph>-p 10265</codeph> — порт, через который будет произведено
+                                подключение к базе данных;</li>
+                            <li><codeph>-h 127.0.0.1</codeph> — подключение к хосту 127.0.0.1;</li>
+                            <li><codeph>-U [имя пользователя]</codeph> — подключение от имени
+                                указанного пользователя.</li>
+                        </ul></note></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

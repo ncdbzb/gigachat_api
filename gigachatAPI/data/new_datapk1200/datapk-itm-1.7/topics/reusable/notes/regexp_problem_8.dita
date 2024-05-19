@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_icl_rch_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_jcl_rch_wrb">Перейдите на вкладку «Фильтры».</cmd>
+            </step>
+        </steps>    
+    </taskbody>
+</task>

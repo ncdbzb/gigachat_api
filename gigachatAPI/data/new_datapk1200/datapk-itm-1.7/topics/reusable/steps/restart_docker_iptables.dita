@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_f5c_t12_tvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_h5c_t12_tvb">
+                <cmd>Чтобы применить новые правила межсетевого экрана, перезапустите службы iptables и docker, выполнив команды:</cmd>
+                <info><codeblock>systemctl restart iptables.service</codeblock><codeblock>systemctl restart docker.service</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

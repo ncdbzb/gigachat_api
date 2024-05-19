@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>var_itm_vm_admin</title>
+    <topicref href="variables/compose_file.dita" keys="compose_file"/>
+    <topicref href="variables/itmm_log_level.dita" keys="itmm_log_level"/>
+    <topicref href="variables/itmm_db_host.dita" keys="itmm_db_host"/>
+    <topicref href="variables/itmm_db_password.dita" keys="itmm_db_password"/>
+    <topicref href="variables/itmm_db_port.dita" keys="itmm_db_port"/>
+    <topicref href="variables/itmm_db_user.dita" keys="itmm_db_user"/>
+    <topicref href="variables/redis_address.dita" keys="redis_address"/>
+    <topicref href="variables/redis_port.dita" keys="redis_port"/>
+    <topicref href="variables/itmm_front_port.dita" keys="itmm_front_port"/>
+    <topicref href="variables/itmm_front_ssl_port.dita" keys="itmm_front_ssl_port"/>
+    <topicref href="variables/siem_integration.dita" keys="siem_integration"/>
+    <topicref href="variables/siem_syslog_host.dita" keys="siem_syslog_host"/>
+    <topicref href="variables/siem_syslog_address.dita" keys="siem_syslog_address"/>
+    <topicref href="variables/siem_syslog_port.dita" keys="siem_syslog_port"/>
+    <topicref href="variables/siem_syslog_protocol.dita" keys="siem_syslog_protocol"/>
+    <topicref href="variables/itmm_network.dita" keys="itmm_network"/>
+    <topicref href="variables/itmm_network_gateway.dita" keys="itmm_network_gateway"/>
+    <topicref href="variables/itmm_password_secret_key.dita" keys="itmm_password_secret_key"/>
+    <topicref href="variables/hostname.dita" keys="hostname"/>
+    <topicref href="variables/domain.dita" keys="domain"/>
+    <topicref href="variables/itmm_ip_address.dita" keys="itmm_ip_address"/>
+</map>

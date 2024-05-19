@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_itm_m_troubleshooting">
+    <title>Нештатные ситуации и способы их устранения</title>
+    <body>
+        <div
+            conref="../reusable/tech_support_info_intro.dita#ReusableComponent_cnq_xct_mwb/div_enq_xct_mwb"
+        />
+        <ul conref="../reusable/tech_support_info.dita#tech_support_info/ul_upt_fb4_mwb"
+            id="ul_l2v_v3t_mwb">
+            <li/>
+        </ul>
+        <p>Дополнительно может потребоваться следующая информация:<ul id="ul_ew2_3b4_mwb">
+            <li>полная техническая информация о системе и логи (используйте скрипт сбора
+                детальной информации о системе, подробнее см. в разделе <xref
+                    href="log_script_itm_k.dita"/>);</li>
+            <li>свободное место на корневом разделе диска; <note type="tip">используйте команду
+                <codeph>df -h /</codeph>.</note>
+            </li>
+            <li>свободная оперативная память, текущий список процессов; <note type="tip"
+                >используйте команду <codeph>htop</codeph>.</note>
+            </li>
+            <li>значение Load Average;</li>
+            <li>загрузка диска. <note type="tip">используйте команду
+                <codeph>iotop</codeph>.</note>
+            </li>
+        </ul>В этом разделе:</p>
+        <ul>
+            <li><xref href="udv_actions_after_problems.dita"/></li>
+            <li><xref href="unavailable_agents/unavailable_agents.dita"/>
+            </li>
+            <li><xref href="log_script_itm_k.dita"/></li>
+            <li><xref href="itm_k_hostname_change.dita"/></li>
+            
+        </ul>
+    </body>
+</topic>

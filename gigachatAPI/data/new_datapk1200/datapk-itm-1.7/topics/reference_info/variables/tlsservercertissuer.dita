@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="tlsservercertissuer">
+    <glossterm>TLSServerCertIssuer</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/tlsservercertissuer_info.dita#ReusableComponent_i4v_44b_5tb/p_j4v_44b_5tb"
+        />
+    </glossdef>
+</glossentry>

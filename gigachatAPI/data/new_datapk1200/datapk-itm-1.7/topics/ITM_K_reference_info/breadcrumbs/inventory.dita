@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="inventory">
+    <glossterm>Инвентаризация</glossterm>
+    <glossdef>Пункт главного меню, содержащий страницы <cite keyref="overview_inventory"/> и <cite
+            keyref="hosts_inventory"/>.</glossdef>
+    <!--<related-links>
+        <link keyref="overview_inventory"/>
+        <link keyref="hosts_inventory"/>
+    </related-links>-->
+</glossentry>

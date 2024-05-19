@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="host_import">
+    <title>Импорт узлов сети</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для импорта узлов сети:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                        keyref="hosts_configuration"/>.</cmd>
+            </step>
+            <step>
+                <cmd>В верхнем правом углу страницы нажмите на кнопку «Импорт».</cmd>
+                <stepresult>Откроется страница «Импорт».</stepresult>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Выберите файл».</cmd>
+            </step>
+            <step>
+                <cmd>Выберите в окне проводника файл с нужным узлом сети.</cmd>
+            </step>
+            <step>
+                <cmd>Подтвердите выбор.</cmd>
+            </step>
+            <step>
+                <cmd>Установите чекбоксы напротив элемента «Узлы сети».</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите кнопку «Импорт» в нижней части страницы.</cmd>
+                <stepresult>Появится окно, сообщающее об успешности или обнаруженных проблемах импорта.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

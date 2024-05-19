@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_kgb_zjc_jsb">
+    <title></title>
+    <body><note type="attention" id="note_lgb_zjc_jsb">Данное правило должно быть добавлено в цепочку INPUT до правила, запрещающего входящие пакеты: <codeblock>REJECT all -- 0.0.0.0/0    reject-with icmp-host-prohibited</codeblock>В обратном случае правила не сработают. </note></body>
+</topic>

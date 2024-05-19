@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agentless_consolidation">
+    <title>Настройка сервера для безагентного мониторинга по протоколу WMI</title>
+    <shortdesc
+        conref="../../../reusable/agentless/server_wmi_descr.dita#ReusableComponent_knf_1wn_y5b/shortdesc_lnf_1wn_y5b"/>
+    <taskbody
+        conref="../../../reusable/agentless/server_wmi_body.dita#ReusableComponent_fpn_cwn_y5b/taskbody_gpn_cwn_y5b"/>
+</task>
