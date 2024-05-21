@@ -6,8 +6,7 @@ from gigachatAPI.utils.path_to_doc.tf_idf_search import tf_idf_search
 async def get_path_to_doc(source_documents: list, filename: str, answer: str) -> str:
     docs_with_paths = await get_dita_docs(f'gigachatAPI/data/{filename}', with_xml_paths=True)
 
-    most_relevant_source_document = (await tf_idf_search(list(map(
-        lambda x: x.page_content, source_documents)), answer))[1]
+    most_relevant_source_document = (await tf_idf_search(source_documents, answer))[1]
 
     file_id = (await tf_idf_search([i[1] for i in docs_with_paths], most_relevant_source_document))[0]
 

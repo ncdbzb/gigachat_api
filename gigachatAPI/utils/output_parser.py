@@ -29,6 +29,8 @@ async def get_questions_dict(test: str) -> dict[str: str]:
             answer = splitt[5].split(": ")[1]
             if answer[0].isdigit():
                 answer = answer.split('. ')[1]
+            if answer not in result.values():
+                raise ValueError("Invalid format: Answer does not mathc any of the options")
             result["right answer"] = answer
         else:
             raise ValueError("Invalid format: 'Ответ:' not found")

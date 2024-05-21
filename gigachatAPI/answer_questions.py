@@ -1,12 +1,12 @@
 import time
-# from langchain.chains import RetrievalQA
+from langchain.chains.retrieval_qa.base import RetrievalQA
 from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.chromadb.chromadb_handler import get_chroma
 from gigachatAPI.prompts.create_prompts import qna_prompt
 from gigachatAPI.sentence_bleu.sentence_bleu import get_bleu_score
 from gigachatAPI.sentence_bleu.bleu_config import ques_for_check, references
-from gigachatAPI.logs.logs import logger_info
+from gigachatAPI.logs.logs import logger_info, logger_context
 from gigachatAPI.utils.path_to_doc.path_to_doc import get_path_to_doc
 
 
@@ -25,35 +25,35 @@ async def get_answer(
 
     vectordb = await get_chroma(filename)
 
-    logger_info.info(f'Название документации: {filename}')
+    logger_info.info(f'Вопрос по документации: {filename}')
 
     docs_with_scores = await vectordb.asimilarity_search_with_score(que, k=6)
     sim_scores = [d[1] for d in docs_with_scores]
-    docs = [d[0] for d in docs_with_scores]
-    # logger_info.debug(f'Контекст: {docs}')
+    docs = [d[0].page_content for d in docs_with_scores]
+    logger_context.debug(f'Контекст: {docs}')
 
     logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')
 
-    # chain = RetrievalQA.from_chain_type(
-    #     llm=giga,
-    #     retriever=vectordb.as_retriever(
-    #         # search_type="similarity_score_threshold",
-    #         search_kwargs={"k": 9}
-    #     ),
-    #     return_source_documents=True,
-    #     # verbose=True,
-    #     chain_type_kwargs={
-    #         # "verbose": True,
-    #         "prompt": qna_prompt
-    #     }
-    # )
+    chain = RetrievalQA.from_chain_type(
+        llm=giga,
+        retriever=vectordb.as_retriever(
+            # search_type="similarity_score_threshold",
+            search_kwargs={"k": 6}
+        ),
+        return_source_documents=True,
+        # verbose=True,
+        chain_type_kwargs={
+            # "verbose": True,
+            "prompt": qna_prompt
+        }
+    )
 
     gigachat_start_time = time.time()
-    # qa_chain = await chain.ainvoke({"query": que})
-    # answer, source_documents = qa_chain['result'], qa_chain['source_documents']
+    qa_chain = await chain.ainvoke({"query": que})
+    answer, source_documents = qa_chain['result'], qa_chain['source_documents']
 
-    response = await giga.ainvoke(qna_prompt.format(question=que, context=docs))
-    answer = response.content
+    # response = await giga.ainvoke(qna_prompt.format(question=que, context=docs))
+    # answer = response.content
 
     gigachat_time = time.time() - gigachat_start_time
 
@@ -65,11 +65,11 @@ async def get_answer(
         else:
             return_path_to_file = False
 
-    # tokens = sum(map(lambda x: x.tokens, await giga.atokens_count(
-    #     [i.page_content for i in source_documents] + [qna_prompt.template, que, answer]
-    # )))
+    tokens = sum(map(lambda x: x.tokens, await giga.atokens_count(
+        [i.page_content for i in source_documents] + [qna_prompt.template, que, answer]
+    )))
 
-    tokens = response.response_metadata['token_usage'].total_tokens
+    # tokens = response.response_metadata['token_usage'].total_tokens
 
     logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
     
