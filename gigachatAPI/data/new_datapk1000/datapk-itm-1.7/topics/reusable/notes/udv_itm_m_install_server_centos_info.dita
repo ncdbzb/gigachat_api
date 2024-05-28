@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_yg3_mzf_1xb">
+    <title></title>
+    <taskbody id="taskbody_bh3_mzf_1xb"><context><note conref="itm_vm_itm_k_reuse.dita#ReusableComponent_jgq_bqw_bvb/note_mgq_bqw_bvb"/><p>Для установки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</p></context><steps><step>
+                    <cmd>Перейдите в режим командной строки операционной системы, на которой будет
+                        установлен сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+                </step><step><cmd>Создайте директорию для установки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd><info><codeblock>mkdir /opt/itm-k</codeblock></info></step><step><cmd>Скопируйте следующие файлы в директорию <codeph>/opt/itm-k</codeph>:</cmd><info><ul id="ul_uzp_cwm_frb"><li><codeph>env_generator.sh</codeph></li><li><codeph>docker-compose.release.yaml</codeph></li><li><codeph>datapk_itm-k_[версия_сервера_консолидации].tar.gz</codeph></li><li><codeph>iptables</codeph></li><li><codeph>db_config.sh</codeph></li></ul></info></step><step><cmd>Перейдите в директорию <codeph>/opt/itm-k</codeph>:</cmd><info><codeblock>cd /opt/itm-k</codeblock></info></step><step>
+                    <cmd>Загрузите образы в операционную систему, на которой установлен сервер <ph
+                            outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                            outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                    <info>
+                        <codeblock>docker load -i datapk_itm-k_[версия_сервера_консолидации].tar.gz</codeblock>
+                    </info>
+                    <info>
+                        <fig id="fig_jvx_y3j_z5b">
+                            <title>Загрузка образов</title>
+                            <image href="../../../images/centos_install/centos_download_image.png"/>
+                        </fig>
+                    </info>
+                </step><step>
+                <cmd>Настройте разрешения по подключению docker-контейнера и пользователей к базам
+                    данных. Для этого:</cmd>
+                <substeps id="substeps_cxq_lvs_cxb">
+                    <substep>
+                        <cmd>Войдите в режим редактирования файла <codeph
+                                conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                            /> с помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/pgsql/14/data/pg_hba.conf</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что в файле присутствует правило:</cmd>
+                        <info><codeblock>local    all    all    trust</codeblock>Если этого правила
+                            нет, добавьте его в файл. Это правило должно располагаться выше всех
+                            остальных правил.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте следующую строку в раздел «# IPv4 local connections:»</cmd>
+                        <info>
+                            <codeblock>host [имя БД] [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]</codeblock>
+                        </info>
+                        <stepxmp>для базы данных <codeph>datapkitm</codeph>, пользователя БД
+                                <codeph>datapkitm</codeph>, IP-адреса подсети контейнера сервера <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph> по умолчанию
+                            172.16.239.0/24 и метода аутентификации <codeph>md5</codeph> строка
+                            будет выглядеть следующим образом:
+                            <codeblock>host datapkitm datapkitm 172.16.239.0/24 md5</codeblock></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Закомментируйте строки во всех разделах, кроме «# IPv4 local
+                            connections:» и измените <codeph>ident</codeph> на <codeph>md5</codeph>
+                            в строке <codeph>host all all 127.0.0.1/32 ident</codeph>.</cmd>
+                        <info>
+                            <fig id="fig_mmf_tvs_cxb">
+                                <title>Содержимое файла <codeph
+                                        conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                                    /></title>
+                                <image href="../../../images/centos_install/centos_pg_hba.png"
+                                    id="image_nmf_tvs_cxb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step><step><cmd>Для применения настроек в файлах конфигурации перезапустите СУБД:</cmd><info><codeblock>systemctl restart postgresql-14</codeblock></info><info><note> после перезапуска СУБД и автоматического применения настроек из файла <codeph>pg_hba.conf</codeph>, команда для входа в режим редактирования базы данных изменится. Она будет иметь следующий вид: <codeblock>psql -p 10265 -h 127.0.0.1 -U [имя пользователя] [имя базы]</codeblock> Где <codeph>-p 10265</codeph> — порт, через который будет произведено подключение к базе данных; <codeph>-h 127.0.0.1</codeph> — подключение к хосту 127.0.0.1; <codeph>-U [имя пользователя]</codeph> — подключение от имени указанного пользователя. </note></info></step><step>
+                <cmd>Создайте базу данных, пользователя и пароль для него.</cmd>
+                <choices id="choices_ahc_dss_cxb">
+                    <choice><b>Способ 1:</b> Выполните настройку с помощью скрипта
+                            <codeph>db_config.sh</codeph>, который будет выложен вместе с
+                        дистрибутивом. Для этого:<ol id="ol_hcd_nss_cxb">
+                            <li>Перейдите в директорию
+                                <codeph>/opt/itm-k</codeph>:<codeblock>cd /opt/itm-k</codeblock></li>
+                            <li>Назначьте скрипту <codeph>db_config.sh</codeph> полные права
+                                доступа:<codeblock>chmod +x db_config.sh</codeblock></li>
+                            <li>Запустите скрипт
+                                <codeph>db_config.sh</codeph>:<codeblock>./db_config.sh</codeblock></li>
+                        </ol></choice>
+                    <choice><b>Способ 2:</b> Выполните настройку вручную. Для этого:<ol
+                            id="ol_xl3_fss_cxb">
+                            <li>Измените текущего пользователя на
+                                <codeph>postgres</codeph>:<codeblock>su postgres</codeblock></li>
+                            <li>Войдите в интерактивный терминал для работы с
+                                postgresql:<codeblock>psql</codeblock></li>
+                            <li>Измените пароль пользователя <codeph>postgres</codeph> в базе данных:<codeblock>ALTER USER postgres WITH PASSWORD '[пароль]';</codeblock>
+                                <note
+                                    conref="../../reusable/notes/security_policy.dita#ReusableComponent_ygg_vlm_k5b/note_bhg_vlm_k5b"/>
+                                <note
+                                    conref="../../reusable/notes/securityprofile.dita#ReusableComponent_xhx_jlm_k5b/note_a3x_jlm_k5b"
+                                />
+                            </li>
+                            <li>Создайте пользователя с именем <codeph>datapkitm</codeph> и
+                                необходимым
+                                паролем:<codeblock>CREATE USER datapkitm WITH PASSWORD '[пароль служебного пользователя]';</codeblock></li>
+                            <li>Убедитесь, что пользователь создан:<codeblock>\du</codeblock></li>
+                            <li>Создайте базу данных datapkitm, в качестве распорядителя которой
+                                указан пользователь
+                                datapkitm:<codeblock>CREATE DATABASE datapkitm OWNER datapkitm;</codeblock></li>
+                            <li> Убедитесь, что база данных datapkitm создана:<codeblock>\l</codeblock>
+                                <fig>
+                                    <title>Список созданных БД</title>
+                                    <image href="../../../images/centos_install/centos_check_db.png"
+                                        id="image_ith_kws_cxb"/>
+                                </fig></li>
+                            <li>Покиньте терминал:<codeblock>\q</codeblock></li>
+                            <li>Для выхода из пользователя <codeph>postgres</codeph> введите
+                                    <codeph>exit</codeph>.</li>
+                        </ol></choice>
+                </choices>
+            </step><step><cmd conref="postgresql_cmd.dita#ReusableComponent_b4x_bhk_tsb/cmd_c4x_bhk_tsb"/><substeps id="substeps_lxh_n43_z5b"><substep><cmd>перейдите в режим редактирования файла <codeph>postgresql.conf</codeph>: </cmd><info><codeblock>vi /var/lib/pgsql/14/data/postgresql.conf</codeblock></info></substep><substep><cmd>исправьте значения переменных, чтобы они соответствовали представленным ниже:</cmd><info><codeblock>listen_addresses = '127.0.0.1,172.17.0.1'
+port = 10265
+shared_buffers = 8GB                    </codeblock>Где
+                                    <ul id="ul_hc4_fg5_wsb">
+                                    <li>127.0.0.1 — локальный IP-адрес сервера <ph
+                                            outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                            outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                            /></ph><ph outputclass="html"><term
+                                                keyref="datapk_itm_k"/></ph>;</li>
+                                    <li>172.17.0.1 — IP-адрес подсети docker0;</li>
+                                    <li>8GB — 25% от общего объема оперативной памяти сервера.</li>
+                                </ul><note>IP-адреса должны быть перечислены через запятую без
+                                    пробелов. </note><note type="tip">Если IP-адрес подсети docker0
+                                    уже используется в вашей инфраструктуре, его нужно изменить.
+                                    Подробнее см. в разделе <xref
+                                        href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita"/>
+                                    <xref
+                                        href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita#itm_k_net_conflict/cause2"
+                                    />.</note></info></substep><substep conref="postgresql_3.dita#ReusableComponent_zwt_hjk_tsb/substep_axt_hjk_tsb"><cmd/></substep><substep conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb"><cmd/></substep></substeps></step>
+            <step>
+                <cmd>Измените метод аутентификации для всех баз данных и пользователей в файле
+                        <codeph
+                        conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                    />. Для этого: </cmd>
+                <substeps id="substeps_oss_1wz_cxb">
+                    <substep>
+                        <cmd>Войдите в режим редактирования файла <codeph
+                                conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                            /> с помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                        </info>
+                        <info>
+                            <note type="attention">При использовании двух томов замените директорию
+                                файла на /storage/base.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Замените правило <codeph>local all all trust</codeph> на <codeph>local
+                                all all md5</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезапустите СУБД с помощью команды: </cmd>
+                        <info>
+                            <codeblock>systemctl restart postgresql-14</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step><step conref="../steps/itm_k_generate_env.dita#ReusableComponent_gr5_kby_qvb/step_hr5_kby_qvb"><cmd/></step><step><cmd>Проверьте статус СУБД:</cmd><info><codeblock>systemctl status postgresql-14</codeblock><fig><title>Проверка статуса СУБД</title><image href="../../../images/centos_install/centos_status_db.png"/></fig></info></step>
+        <step id="iptables_start"><cmd>Установите пакет iptables-services:</cmd><info><codeblock>yum install iptables-services</codeblock></info></step><step conref="../steps/iptables_change_file.dita#ReusableComponent_i13_szy_svb/step_m13_szy_svb"><cmd/></step><step conref="../steps/iptables_change_file_itm_k.dita#ReusableComponent_m22_vzy_svb/step_n22_vzy_svb"><cmd/></step><step conref="../steps/iptables_check_host_rights.dita#ReusableComponent_dxh_yzy_svb/step_exh_yzy_svb"><cmd/></step>
+        <step id="iptables_finish" conref="../steps/iptables_start.dita#ReusableComponent_nmh_zzy_svb/step_pmh_zzy_svb"><cmd/></step><step><cmd>Перейдите в каталог, содержащий compose-файлы:</cmd><info><codeblock>cd /opt/itm-k</codeblock></info></step><step><cmd> Подготовьте сертификаты для входа в веб-интерфейс:</cmd><info><note conref="itm_k_vm_cert.dita#ReusableComponent_ws5_rmy_qwb/note_xs5_rmy_qwb"/></info><substeps id="substeps_e15_mjy_qwb"><substep conref="server_install_step22.dita#ReusableComponent_jgs_h3f_krb/step_kgs_h3f_krb"><cmd/></substep><substep conref="../steps/change_cert_rights.dita#ReusableComponent_mxq_nly_qwb/substep_nxq_nly_qwb"><cmd/></substep></substeps></step><step conref="../steps/itm_k_hostname_change.dita#ReusableComponent_m5k_3bc_qvb/step_n5k_3bc_qvb"><cmd/></step><step><cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd><substeps id="substeps_zwl_zdj_z5b"><substep><cmd>Перейдите в режим редактирования службы СУБД:</cmd><info><codeblock>systemctl edit postgresql-14.service</codeblock></info></substep><substep><cmd>Добавьте блок [Unit]:</cmd><info><codeblock>[Unit]
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service</codeblock><fig><title>Добавление блока Unit</title><image href="../../../images/centos_install/centos_unit.png"/></fig></info></substep><substep><cmd>Если база данных хранится на отдельном томе, добавьте после блока [Unit] блок [Service]:</cmd><info><codeblock>[Service]
+    Environment=PGDATA=/storage/base </codeblock>Где <codeph>/storage/base</codeph> — путь к базе данных, который был настроен на шаге <xref href="../../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita#itm_k_subd_config/itm_k_set_dir_bd"/> раздела <xref href="../../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita"/>.</info></substep><substep><cmd>Для применения изменений в настройках службы СУБД выполните команду:</cmd><info><codeblock>systemctl daemon-reload</codeblock></info></substep></substeps></step><step conref="server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb"><cmd/></step><step><cmd>Для входа в веб-интерфейс в адресной строке введите IP-адрес <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd><info><fig><title>Окно авторизации <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph></title><image href="../../../images/Pages/itm_log_in.png"/></fig></info></step><step><cmd>Введите логин и пароль по умолчанию (datapkitm/datapkitm).</cmd><stepresult>Откроется стартовая страница веб-интерфейса <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. </stepresult></step>
+        <step>
+                <cmd>Установите на сервер агент версии 2 согласно инструкции <xref
+                        href="../../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita"
+                    /> (за исключением п. <xref
+                        href="../../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita#agent_installation_centos_7/firewall_iptables"
+                    />, так как межсетевой экран уже был настроен ранее в п. <xref
+                        href="../../reusable/notes/udv_itm_m_install_server_centos_info.dita#ReusableComponent_yg3_mzf_1xb/iptables_start"
+                        />-<xref
+                        href="../../reusable/notes/udv_itm_m_install_server_centos_info.dita#ReusableComponent_yg3_mzf_1xb/iptables_finish"
+                    /> текущей инструкции). </cmd>
+                <info>В файле конфигурации агента <codeph>/etc/zabbix/zabbix_agent2.conf</codeph>
+                    установите параметр <codeph><cmdname keyref="server_0"
+                        />=172.16.239.0/24</codeph> (адрес подсети контейнеров <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph>).</info>
+            </step>           
+    </steps></taskbody>
+</task>

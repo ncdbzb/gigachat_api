@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zth_dc5_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_a5h_dc5_tsb">
+            <cmd>Запустите активатор СУБД с помощью команды ниже и следуйте его дальнейшим инструкциям:</cmd>
+            <info>
+                <codeblock>./jactivator</codeblock>
+            </info>
+        </step>
+        </steps>
+    </taskbody>
+</task>

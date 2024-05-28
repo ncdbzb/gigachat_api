@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="user_groups">
+    <title>Группы пользователей</title>
+    <body>
+        <p>Группы пользователей позволяют объединять пользователей и назначать им права доступа к
+            данным групп узлов сети. Группировка пользователей необходима, чтобы разграничить доступ
+            к информации, так как в <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> можно назначить права доступа к
+            данным групп узлов сети только группе пользователей, не индивидуальному пользователю. </p>
+        <p>Пользователь может входить в любое количество групп. Эти группы могут иметь различные
+            права доступа к узлам сети.</p>
+        <p>Рассмотрим, как доступ к узлу сети Х будет меняться в различных ситуациях для
+            пользователей, которые состоят в группах А и В.</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_wsx_tkj_nyb">
+            <title>Примеры доступа к узлу сети Х для групп пользователей A и B</title>
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="newCol3" colnum="3" colwidth="1*"/>
+                <colspec colname="newCol4" colnum="4" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry/>
+                        <entry namest="c2" nameend="newCol4">Права доступа к узлу сети X</entry>
+                    </row>
+                    <row>
+                        <entry>Группы, где состоит узел сети X</entry>
+                        <entry>Доступ к группам узлов сети для группы пользователей A</entry>
+                        <entry>Доступ к группам узлов сети для группы пользователей B</entry>
+                        <entry>Доступ к узлу сети X для пользователя, который состоит в группах A и
+                            B</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Группа 1</entry>
+                        <entry>Чтение</entry>
+                        <entry>Чтение-запись</entry>
+                        <entry>Чтение-запись</entry>
+                    </row>
+                    <row>
+                        <entry>Группа 1, Группа 2</entry>
+                        <entry>
+                            <ul id="ul_zvj_dmj_nyb">
+                                <li>Группа 1: Чтение</li>
+                                <li>Группа 2: Запрещено</li>
+                            </ul>
+                        </entry>
+                        <entry>
+                            <ul id="ul_i2x_2mj_nyb">
+                                <li>Группа 1: Чтение-запись</li>
+                                <li>Группа 2: Запрещено</li>
+                            </ul>
+                        </entry>
+                        <entry>Нет</entry>
+                    </row>
+                    <row>
+                        <entry>Группа 1</entry>
+                        <entry>Нет</entry>
+                        <entry>Чтение-запись</entry>
+                        <entry>Чтение-запись</entry>
+                    </row>
+                    <row>
+                        <entry>Группа 1</entry>
+                        <entry>Запрещено</entry>
+                        <entry>Чтение-запись</entry>
+                        <entry>Нет</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref href="create_user_group.dita"/></li>
+            </ul>
+        </p>
+    </body>
+</topic>

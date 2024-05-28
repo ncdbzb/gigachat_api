@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_oj4_lmz_xyb">
+    <title></title>
+    <body><div id="div_pj4_lmz_xyb">Исправлена ошибка, при которой можно было добавить несколько одинаковых серверов при повторном нажатии кнопки «Подключить» в окне «Подключение сервера мониторинга» на странице <cite keyref="itm_m_page_server_monitoring"/></div></body>
+</topic>

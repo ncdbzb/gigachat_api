@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_senderfrequency">
+    <glossterm>ZBX_SENDERFREQUENCY</glossterm>
+    <glossdef>
+        <div>
+            <div
+                conref="../../reusable/notes/zbx_senderfrequency_info.dita#ReusableComponent_tnd_ncb_5rb/div_und_ncb_5rb"
+            />
+        </div>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>30</p>
+        <p><b>Разрешенный диапазон значений:</b>5-3600</p>
+    </glossdef>
+</glossentry>

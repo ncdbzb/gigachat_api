@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rcz_2dm_mxb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_vcz_2dm_mxb">
+                        <cmd>Войдите в интерактивный терминал СУБД [используемая СУБД]:</cmd>
+                        <info>
+                            <codeblock>sudo -u postgres psql</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        </taskbody>
+</task>

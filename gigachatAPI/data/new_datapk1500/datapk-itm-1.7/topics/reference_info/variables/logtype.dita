@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="logtype">
+    <glossterm>LogType</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/logtype_info.dita#ReusableComponent_uzd_hy1_5tb/div_vzd_hy1_5tb"
+        />
+    </glossdef>
+</glossentry>

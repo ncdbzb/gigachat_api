@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="historycachesize">
+    <glossterm>ZBX_HISTORYCACHESIZE</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/historyCacheSize_info.dita#ReusableComponent_hpq_fkj_2tb/p_lpq_fkj_2tb"/>
+        <p><b>Значение по умолчанию:</b> 16M</p>
+        <p><b>Диапазон возможных значений:</b> 128K-2G</p>
+    </glossdef>
+</glossentry>

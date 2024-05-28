@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_a_agentless_centos_snmpv3">
+    <title>Настройка безагентного сбора на ОМ с ОС Centos с помощью протокола SNMPv3</title>
+    <taskbody>
+       
+                    <context id="context_pvp_vgx_3wb">
+                        <p>Для настройки безагентного сбора данных на <abbreviated-form
+                    keyref="monitoring_object"/> с <abbreviated-form keyref="OS"/> Centos с помощью
+                протокола <ph
+                    conref="../../reusable/protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"
+                />:</p>
+                    </context>
+                    <steps>
+                        <step>
+                            <cmd>Перейдите в режим командной строки <abbreviated-form
+                                    keyref="monitoring_object"/>.</cmd>
+                        </step>
+                        <step>
+                            <cmd>Остановите сервис snmpd:</cmd>
+                            <info>
+                                <codeblock>systemctl stop snmpd</codeblock>
+                            </info>
+                        </step>
+                        <step id="create_user">
+                            <cmd>Создайте пользователя с помощью команды:</cmd>
+                            <info><codeblock>net-snmp-create-v3-user [-ro] [-A authpass] [-a MD5|SHA] [-X privpass] [-x DES|AES] [username]</codeblock>Где:<ul
+                                    id="ol_w4w_lhq_lvb">
+                                    <li>-ro — read-only, права только для чтения;</li>
+                                    <li>authpass — пароль аутентификации;</li>
+                                    <li>-a — протокол аутентификации MD5 или SHA;</li>
+                                    <li>privpass — приватный ключ;</li>
+                                    <li>-x — протокол безопасности DES или AES;</li>
+                                    <li>username — пользователь.</li>
+                                </ul></info>
+                            <stepxmp>Для пользователя с паролем аутентификации P@ssw0rd, протоколом
+                                аутентификации SHA, приватным ключом p@SSW0RD, протоколом
+                                безопасности AES и именем datapkitmv3 команда будет выглядеть
+                                следующим
+                                    образом:<codeblock>net-snmp-create-v3-user -ro -A P@ssw0rd -a SHA -X p@SSW0RD -x AES datapkitmv3</codeblock><fig
+                                    id="fig_cgg_vdr_lvb">
+                                    <title>Создание пользователя</title>
+                                    <image
+                                        href="../../../images/ITM_K_requirements/create_user_snmpv3.png"
+                                        id="image_dgg_vdr_lvb"/>
+                                </fig></stepxmp>
+                            <stepresult>Данные о пользователе будут записаны в файл
+                                    <codeph>/etc/snmp/snmpd.conf</codeph>, а данные о приватном
+                                ключе — в файл
+                                <codeph>/var/lib/net-snmp/snmpd.conf</codeph>.</stepresult>
+                        </step>
+                        <step>
+                            <cmd>Запустите службу snmpd и добавьте ее в автозагрузку:</cmd>
+                            <info>
+                                <codeblock>systemctl enable snmpd --now</codeblock>
+                            </info>
+                        </step>
+                        <step>
+                            <cmd>Убедитесь в корректности настроек межсетевого экрана:</cmd>
+                            <info>
+                                <codeblock>iptables -nL</codeblock>
+                            </info>
+                        </step>
+                        <step>
+                <cmd>Если в цепочке INPUT отсутствует правило, разрешающее использование порта
+                        161/<ph
+                        conref="../../reusable/protocol_names/UDP.dita#ReusableComponent_nmm_qgg_4yb/ph_pmm_qgg_4yb"
+                    />, выполните следующие действия: </cmd>
+                <substeps id="substeps_qpb_w31_5tb">
+                    <substep>
+                        <cmd>Остановите работу контейнеров:</cmd>
+                        <info>
+                            <codeblock>docker-compose down</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте правило, разрешающее использование порта 161/<ph
+                                conref="../../reusable/protocol_names/UDP.dita#ReusableComponent_nmm_qgg_4yb/ph_pmm_qgg_4yb"
+                            />, для корректной отправки информации по протоколу <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />: </cmd>
+                        <info>
+                            <codeblock>iptables -I INPUT [номер строки] -m state --state NEW -p udp --dport 161 -j ACCEPT</codeblock>
+                            <note
+                                conref="../../reusable/notes/accept_before_reject_note.dita#ReusableComponent_kgb_zjc_jsb/note_lgb_zjc_jsb"
+                            />
+                        </info>
+                        <stepxmp> Чтобы добавить правило 5 строкой, используйте команду:
+                            <codeblock>iptables -I INPUT 5 -m state --state NEW -p udp --dport 161 -j ACCEPT </codeblock></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните правила межсетевого экрана командой:</cmd>
+                        <info>
+                            <codeblock>service iptables save</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите работу контейнеров:</cmd>
+                        <info>
+                            <codeblock>docker-compose up -d</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+                        <step>
+                <cmd>В командной строке узла сети отправьте запрос к <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />-агенту с помощью утилиты snmpwalk для проверки сделанных настроек:</cmd>
+                <info><codeblock>snmpwalk -v3 [-a MD5|SHA] [-A authpass] [-x DES|AES] [-X privpass] [-l noAuthNoPriv|authNoPriv|authPriv] [-u username] [IP-address] | more</codeblock>Где:<ul
+                        id="ul_p55_zjq_lvb">
+                        <li>-v3 — версия <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />;</li>
+                        <li>-a — протокол аутентификации MD5 или SHA;</li>
+                        <li>authpass — пароль аутентификации;</li>
+                        <li>-x — протокол безопасности DES или AES;</li>
+                        <li>privpass — приватный ключ;</li>
+                        <li>-l — уровень безопасности noAuthNoPriv, authNoPriv или authPriv;</li>
+                        <li>username — пользователь;</li>
+                        <li>IP-address — IP-адрес узла сети. Укажите 127.0.0.1, чтобы узел сети
+                            отправил запрос сам себе.</li>
+                    </ul></info>
+                <stepxmp>Для пользователя с протоколом аутентификации SHA, паролем аутентификации
+                    P@ssw0rd, протоколом безопасности AES, приватным ключом p@SSW0RD, уровень
+                    безопасности authPriv и именем datapkitmv3 команда будет выглядеть следующим
+                        образом:<codeblock>snmpwalk -v3 -a SHA -A P@ssw0rd -x AES -X p@SSW0RD -l authPriv -u datapkitmv3 127.0.0.1 | more</codeblock><fig
+                        id="fig_i2d_r2r_lvb">
+                        <title>Результат работы утилиты snmpwalk</title>
+                        <image href="../../../images/ITM_K_requirements/snmpwalk_v3.png"
+                            id="image_icv_2nq_lvb"/>
+                    </fig></stepxmp>
+            </step>
+                        <step>
+                            <cmd>Создайте <abbreviated-form keyref="monitoring_object"/>:</cmd>
+                            <substeps id="substeps_tj2_jnq_lvb">
+                                <substep>
+                        <cmd>В веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>
+                            перейдите на страницу <ph outputclass="html"><cite
+                                    keyref="configuration"/></ph><ph outputclass="onlypdf"
+                                        >Настройка</ph><ph outputclass="udvpdf"
+                                            >Настройка</ph> → <ph outputclass="html"><cite
+                                    keyref="hosts_configuration"/></ph><ph outputclass="onlypdf"
+                                        >Узлы сети</ph>
+                            <ph outputclass="udvpdf">Узлы сети</ph>.</cmd>
+                    </substep>
+                                <substep>
+                                    <cmd>Нажмите на имя узла сети, для которого производится
+                                        настройка сбора данных.</cmd>
+                                    <stepresult>Откроется страница с подробной информацией об узле
+                                        сети.</stepresult>
+                                </substep>
+                                <substep>
+                        <cmd>На вкладке «Узел сети» в разделе «Интерфейсы» нажмите на кнопку
+                            «Добавить» и выберите <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />.</cmd>
+                    </substep>
+                                <substep>
+                        <cmd>В появившихся полях введите параметры, которые использовались при
+                            создании пользователя <ph
+                                conref="../../reusable/protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"
+                            /> на шаге <xref
+                                href="itm_a_agentless_centos_snmpv3.dita#itm_a_agentless_centos_snmpv3/create_user"
+                            />:</cmd>
+                        <info><ul id="ul_y4y_44q_lvb">
+                                <li>Версия <ph
+                                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                    /> — <ph
+                                        conref="../../reusable/protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"
+                                    />;</li>
+                                <li>Имя безопасности — datapkitmv3; </li>
+                                <li>Уровень безопасности — authPriv.</li>
+                            </ul>После выбора уровня безопасности authPriv заполните следующие
+                            появившиеся параметры:<ul id="ul_rvp_vgx_3wb">
+                                <li>Протокол аутентификации — SHA;</li>
+                                <li>Пароль аутентификации — P@ssw0rd;</li>
+                                <li>Протокол безопасности — AES;</li>
+                                <li>Ключевая фраза безопасности — p@SSW0RD.</li>
+                            </ul></info>
+                    </substep>
+                                <substep>
+                                    <cmd>Если нужно отредактировать параметры:</cmd>
+                                    <info>
+                                        <ol id="ol_lpd_fwq_lvb">
+                                            <li>На вкладке «Узел сети» в разделе «Интерфейсы»
+                                    нажмите на кнопку «Раскрыть» (« <image
+                                        href="../../../images/buttons/itm_k_icon_down.png"
+                                        id="image_obm_gwq_lvb"/> ») рядом с «<ph
+                                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                    />».</li>
+                                            <li>Отредактируйте параметры. Имя пользователя, пароль и
+                                                ключ указаны в полях «Имя безопасности», «Пароль
+                                                аутентификации» и «Ключевая фраза
+                                                безопасности».</li>
+                                        </ol>
+                                    </info>
+                                </substep>
+                                <substep>
+                                    <cmd>Добавьте к <abbreviated-form keyref="monitoring_object"/>
+                                        шаблоны:</cmd>
+                                    <info>
+                                        <ol id="ol_bfw_xwq_lvb">
+                                            <li>Перейдите на вкладку «Шаблоны».</li>
+                                            <li>Нажмите на кнопку «Выбрать» напротив поля
+                                                «Присоединение новых шаблонов». <p>Результат шага:
+                                                  Появится список доступных шаблонов.</p>
+                                            </li>
+                                            <li>Установите чекбокс рядом с тем шаблоном, который
+                                    необходимо добавить. <p>Например, Linux <ph
+                                            conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                        />.</p></li>
+                                            <li>Нажмите на кнопку «Выбрать» для добавления
+                                                шаблона.</li>
+                                        </ol>
+                                    </info>
+                                </substep>
+                                <substep>
+                                    <cmd>Нажмите на кнопку «Добавить» для сохранения
+                                        изменений.</cmd>
+                                    <info>
+                                        <note>Если нужно сохранить параметры после редактирования,
+                                            нажмите на кнопку «Обновить».</note>
+                                    </info>
+                                </substep>
+                            </substeps>
+                        </step>
+                    </steps>
+    </taskbody>
+</task>

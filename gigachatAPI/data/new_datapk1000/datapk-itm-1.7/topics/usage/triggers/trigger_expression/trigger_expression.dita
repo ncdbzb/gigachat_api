@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="trigger_expression">
+    <title>Выражение триггера</title>
+    <body>
+        <p>Используемые в триггерах выражения являются очень гибкими. Можно использовать их для
+            создания сложных логических тестов, учитывая статистику по мониторингу.</p>
+        <p>Простое полезное выражение может выглядеть примерно так:</p>
+        <codeblock>{&lt;сервер>:&lt;ключ>.&lt;функция>(&lt;параметр>)}&lt;оператор>&lt;константа></codeblock>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref href="trigger_function_parametres.dita"/></li>
+                <li><xref href="trigger_operators.dita"/></li>
+                <li><xref href="trigger_cashing.dita"/></li>
+                <li><xref href="triggers_unsupported_items.dita"/></li>
+            </ul>
+        </p>
+    </body>
+</topic>

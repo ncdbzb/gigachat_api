@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_vm_siem_config">
+    <title>Настройка интеграции с SIEM</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для настройки интеграции сервера <abbreviated-form keyref="udv_itm_vm"/> с SIEM:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_page_config_general"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Установите переключатель «Включить интеграцию» в положение «Включено».</cmd>
+                <stepresult>кнопка <image href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                        id="image_rv2_scz_2xb"/> станет активна.</stepresult>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку <image
+                        href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                        id="image_zn1_4yl_1tb"/> рядом с заголовком «Параметры интеграции с
+                    SIEM».</cmd>
+                <stepresult>поля станут доступны для редактирования.</stepresult>
+            </step>
+            <step>
+                <cmd>Измените параметры интеграции с SIEM.</cmd>
+                <info>
+                    <fig id="fig_p4w_q4t_4zb">
+                        <title>Редактирование параметров интеграции с SIEM</title>
+                        <image href="../../../images/ITM_M_screens/siem_config_change.png"/>
+                    </fig>
+                    <note>Описание всех параметров см. в разделе «Параметры интеграции с SIEM» на
+                        странице <xref href="itm_m_config_general.dita#itm_m_config_general"
+                        />.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Сохранить».</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

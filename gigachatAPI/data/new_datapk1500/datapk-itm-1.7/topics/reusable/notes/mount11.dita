@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gyb_c2p_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_hyb_c2p_psb">
+                <cmd>Смонтируйте системы, указанные в fstab, без перезагрузки, с помощью команды:</cmd>
+                <info><codeblock>mount -a</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

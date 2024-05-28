@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ut2_z4m_k5b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_wt2_z4m_k5b">
+                        <cmd>Для выхода из пользователя <codeph>postgres</codeph> введите
+                                <codeph>exit</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

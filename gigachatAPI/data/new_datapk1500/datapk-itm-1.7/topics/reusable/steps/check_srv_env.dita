@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_kgh_1rt_hvb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_mgh_1rt_hvb">
+            <cmd>Убедитесь, что значения переменных файла <codeph>.srv.env</codeph> соответствуют
+                проектному решению для вашей системы. Значение переменных по умолчанию указаны в
+                таблице <xref href="../../ITM_K_reference_info/var_tables/var_env_srv.dita"/>. При
+                необходимости изменения переменных выполните следующие шаги:</cmd>
+            <substeps id="substeps_s52_v1j_jsb">
+                <substep>
+                    <cmd>перейдите в режим редактирования файла <codeph>.srv.env</codeph>:</cmd>
+                    <info>
+                        <codeblock>vi /opt/itm-k/env/.srv.env</codeblock>
+                    </info>
+                </substep>
+                <substep>
+                    <cmd>при необходимости изменения раскомментируйте переменные, убрав символ «#» в
+                        начале строки, и отредактируйте их значения; </cmd>
+                </substep>
+                <substep
+                    conref="../notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                    <cmd/>
+                </substep>
+            </substeps>
+        </step>
+        </steps>
+    </taskbody>
+</task>

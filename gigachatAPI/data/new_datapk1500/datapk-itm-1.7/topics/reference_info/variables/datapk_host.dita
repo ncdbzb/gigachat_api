@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="datapk_host">
+    <glossterm>DATAPK_HOST</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/datapk_host_info.dita#ReusableComponent_qc1_4dk_xsb/p_rc1_4dk_xsb"/>
+        <p>Указываемое значение должно иметь синтаксис вида https://172.17.0.1</p>
+        <p><b>Значение по умолчанию:</b> https://127.0.0.1
+        </p>
+    </glossdef>
+</glossentry>

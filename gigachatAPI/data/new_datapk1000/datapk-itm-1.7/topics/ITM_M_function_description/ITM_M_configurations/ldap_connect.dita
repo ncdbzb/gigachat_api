@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ldap_connect">
+    <title>Подключение к LDAP или LDAPS</title>
+    <taskbody>
+        <context>
+            <p>Для настройки подключения к <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                /> или <ph
+                    conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                />:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_config_ldap"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Установите переключатель «Включить <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    />» в верхней части страницы в положение «Включено».</cmd>
+            </step>
+            <step>
+                <cmd>Настройте подключение к <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    /> или <ph
+                        conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                    /> (<ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    /> over SSL). Для этого:</cmd>
+                <substeps id="substeps_lnx_ch5_rvb">
+                    <substep>
+                        <cmd>Нажмите на кнопку <image
+                                href="../../../images/ITM_M_icons/ITM_M_icon_change.png"
+                                id="image_hmw_cbr_xsb"/> рядом с заголовком «Настройки
+                            подключения».</cmd>
+                        <stepresult>поля станут доступны для редактирования.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Отредактируйте поля с параметрами подключения:</cmd>
+                        <info>
+                            <ul id="ul_alh_hh5_rvb">
+                                <li>Сервер — введите DNS-имя или IP-адрес сервера <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    />;</li>
+                                <li>Порт — введите значение 389 для настройки <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    /> или 636 для настройки <ph
+                                        conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                                    />;</li>
+                                <li>Пользователь — введите логин пользователя для подключения к <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        />-каталогу;<note type="tip">Рекомендуется создать отдельный
+                                        аккаунт <ph
+                                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        /> (пользователя <ph
+                                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        />), чтобы подключаться к <ph
+                                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        />-серверу с минимальными привилегиями в <ph
+                                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        />, вместо использования реальных аккаунтов пользователей.
+                                        Такой подход более безопасный и не потребует изменения
+                                        пароля, если пользователь изменит свой пароль на <ph
+                                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        />-сервере.</note></li>
+                                <li>Пароль — введите пароль пользователя для подключения к <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    />-каталогу.</li>
+                            </ul>
+                            <fig id="fig_blh_hh5_rvb">
+                                <title>Редактирование настроек подключения для LDAPS</title>
+                                <image href="../../../images/ITM_M_screens/ITM_M_change_LDAP_1.png"
+                                    id="image_fwr_lmc_xsb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Измените положение переключателя «Использовать SSL»:</cmd>
+                        <info>
+                            <ul id="ul_f2h_vv1_ntb">
+                                <li>включите протокол SSL для настройки <ph
+                                        conref="../../reusable/protocol_names/LDAPS.dita#ReusableComponent_s5r_jn4_pyb/ph_t5r_jn4_pyb"
+                                    />;</li>
+                                <li>отключите протокол SSL для настройки <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    />.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Подключить».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Возможные ошибки: «Невозможно подключиться к серверу <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            />», «Не правильный логин или пароль». В случае ошибок необходимо
+                            убедиться в корректности введенных данных для подключения. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>После успешного подключения к серверу <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            />, система автоматически получит список пользователей каталога <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            /> и определит используемую схему атрибутов пользователей. Убедитесь в
+                            корректности атрибутов пользователей следующим образом:</cmd>
+                        <info>
+                            <ol id="ol_o3s_pn1_svb">
+                                <li>Нажмите на кнопку «Посмотреть список пользователей».<p>Результат
+                                        шага: откроется окно со списком пользователей <ph
+                                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                        />.</p><fig>
+                                        <title>Список пользователей LDAP</title>
+                                        <image
+                                            href="../../../images/ITM_M_screens/ITM_M_LDAP_userlist.png"
+                                            id="image_gq5_mcb_ntb"/>
+                                    </fig></li>
+                                <li>Найдите строку, где значение в поле «Атрибут логина»
+                                    соответствует логину известной вам учетной записи (например,
+                                    учетной записи, используемой для подключения к каталогу).</li>
+                                <li>Убедитесь, что значения атрибутов «Полное имя» и «E-mail»
+                                    соответствуют данной учетной записи.</li>
+                                <li>Если значения атрибутов в таблице корректные, то интеграция с
+                                    сервером <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    /> осуществлена успешно, нажмите на кнопку «Закрыть».</li>
+                                <li>Если значения атрибутов в таблице некорректные, то интеграция с
+                                    сервером <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    /> осуществлена не успешно и требуется настройка схемы атрибутов
+                                    пользователей. Настройка схемы может быть выполнена в
+                                    соответствии с <xref
+                                        href="../../ITM_M_function_description/ITM_M_configurations/ldap_change_users.dita"
+                                    />.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

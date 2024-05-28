@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="datapk_version">
+    <glossterm>DATAPK_VERSION</glossterm>
+    <glossdef>
+        <p><ph
+                conref="../../reusable/notes/datapk_version_info.dita#ReusableComponent_ydc_cfk_xsb/ph_zdc_cfk_xsb"
+            />
+        </p>
+        <note>синхронизация работает начиная с 16 версии API DATAPK.</note>
+    </glossdef>
+</glossentry>

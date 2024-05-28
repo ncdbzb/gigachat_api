@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fxt_dly_svb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_gxt_dly_svb">
+                <cmd>Выполните команду для просмотра текущих правил iptables на данном комплексе: </cmd>
+                <info><codeblock>iptables -nvL</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

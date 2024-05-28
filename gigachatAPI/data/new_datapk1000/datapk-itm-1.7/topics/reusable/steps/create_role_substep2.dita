@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rtf_1vc_cvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_stf_1vc_cvb">
+                        <cmd>Нажмите на кнопку «Создать роль пользователей» в верхнем правом углу. </cmd>
+                        <stepresult>Откроется страница «Роль пользователей».</stepresult>
+                    </substep> 
+                </substeps>
+            </step>
+        </steps>     
+    </taskbody>
+</task>

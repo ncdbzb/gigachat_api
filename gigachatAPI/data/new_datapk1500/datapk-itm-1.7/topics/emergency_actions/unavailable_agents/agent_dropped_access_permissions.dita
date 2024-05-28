@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="received_empty_response_from_zabbix_agent_at_192_168_243_2_assuming_that_agent_dropped_connection_because_of_access_permissions">
+    <title>Ошибка вида «Received empty response from Zabbix Agent at &lt;...>. Assuming that agent
+        dropped connection because of access permissions»</title>
+    <troublebody>
+        <condition>
+            <p>В веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> индикатор статуса доступности агента имеет красный
+                цвет: <image href="../../../images/first_configuration/zbx_red.png"
+                    id="image_uvn_11t_fsb"/>. При наведении курсора на индикатор появляется
+                всплывающая подказка с ошибкой вида «Received empty response from Zabbix Agent at
+                &lt;...>. Assuming that agent dropped connection because of access permissions».</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Некорректный IP-адрес сервера <ph outputclass="html">консолидации</ph><ph
+                        outputclass="onlypdf">консолидации</ph><ph outputclass="udvpdf"
+                        >мониторинга</ph>, к которому подключен агент, в файле конфигурации агента в
+                    переменной <cmdname keyref="server"/>.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения для агентов Linux</title>
+                <steps>
+                    <step
+                        conref="../../reusable/notes/go_to_agent_console.dita#ReusableComponent_thz_35z_fsb/step_uhz_35z_fsb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Откройте файл конфигурации агента для редактирования:</cmd>
+                        <info>
+                            <codeblock>vi /etc/zabbix/zabbix_agentd.conf</codeblock>
+                        </info>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/check_server_ip.dita#ReusableComponent_rws_m5z_fsb/step_sws_m5z_fsb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/exit_wq.dita#ReusableComponent_vrx_hh3_zrb/step_wrx_hh3_zrb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Перезапустите службу агента:</cmd>
+                        <info><codeblock>systemctl restart zabbix-agent</codeblock></info>
+                    </step>
+                </steps>
+            </remedy>
+            <remedy>
+                <title>Способ устранения для агентов Windows</title>
+                <steps>
+                    <step>
+                        <cmd>Перейдите в директорию, куда был установлен агент. По умолчанию это
+                            директория <codeph>C:\Program Files\Zabbix agent</codeph>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Откройте с помощью текстового редактора файл <codeph>zabbix_agentd.conf</codeph>.</cmd>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/check_server_ip.dita#ReusableComponent_rws_m5z_fsb/step_sws_m5z_fsb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Сохраните изменения.</cmd>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/zabbix_agent_restart.dita#ReusableComponent_bqs_x5z_fsb/step_cqs_x5z_fsb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

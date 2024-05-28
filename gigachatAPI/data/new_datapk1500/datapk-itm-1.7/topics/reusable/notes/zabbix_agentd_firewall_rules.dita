@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_c5j_xny_hsb">
+    <title/>
+    <taskbody>
+        <steps>
+        <step id="step_e5j_xny_hsb">
+            <cmd>Если в системе используется межсетевой экран, добавьте в него правила для открытия порта агента и примените их.</cmd>
+            <substeps id="substeps_pbv_sky_hsb">
+                <substep><cmd>Если используется межсетевой экран firewall-cmd:</cmd>
+                    <info>
+                        <ol id="ol_pzr_xky_hsb">
+                            <li>Остановите работу
+                                контейнеров:<codeblock>docker-compose down</codeblock></li>
+                            <li>Добавьте правило: <codeblock>firewall-cmd --permanent --zone=public --add-port=10050/tcp</codeblock></li>
+                            <li>Примените правило:<codeblock>firewall-cmd –reload</codeblock></li>
+                            <li>Убедитесь в корректности
+                                настройки:<codeblock>firewall-cmd --permanent --list-all</codeblock></li>
+                            <li>Запустите работу
+                                контейнеров:<codeblock>docker-compose up -d</codeblock></li>
+                           
+                        </ol>
+                    </info>
+                </substep>
+                <substep><cmd>Если используется межсетевой экран iptables:</cmd>
+                    <info>
+                        <ol id="ol_ebc_mly_hsb">
+                            <li>Остановите работу
+                                контейнеров:<codeblock>docker-compose down</codeblock></li>
+                            <li>Добавьте правило:
+                                    <codeblock>iptables -I INPUT [номер строки] -p tcp --dport 10050 -j ACCEPT </codeblock><note conref="accept_before_reject_note.dita#ReusableComponent_kgb_zjc_jsb/note_lgb_zjc_jsb"/></li>
+                            <li>Примените правило:<codeblock>service iptables save</codeblock></li>
+                            <li>Убедитесь в корректности
+                                настройки:<codeblock>iptables -nL</codeblock></li>
+                            <li>Запустите работу
+                                контейнеров:<codeblock>docker-compose up -d</codeblock></li>
+                           
+                        </ol>
+                    </info></substep>
+            </substeps>
+        </step>
+        </steps>
+    </taskbody>
+</task>

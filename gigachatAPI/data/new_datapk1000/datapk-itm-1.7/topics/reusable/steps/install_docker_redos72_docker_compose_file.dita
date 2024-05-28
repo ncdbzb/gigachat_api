@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_as4_5fn_hwb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_es4_5fn_hwb"><cmd>Переместите файл docker-compose:</cmd><info><codeblock>mv docker/docker-compose /usr/local/bin/</codeblock></info></step>
+        </steps>
+        </taskbody>
+</task>

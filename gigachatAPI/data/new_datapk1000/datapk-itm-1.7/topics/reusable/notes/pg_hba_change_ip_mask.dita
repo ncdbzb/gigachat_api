@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_y2t_24y_l5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_z2t_24y_l5b">
+                        <cmd>измените IP-адрес и маску подсети контейнеров Docker в разделе «# IPv4 local connections:» в строке вида:</cmd>
+                        <info><codeblock>host [имя БД] [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

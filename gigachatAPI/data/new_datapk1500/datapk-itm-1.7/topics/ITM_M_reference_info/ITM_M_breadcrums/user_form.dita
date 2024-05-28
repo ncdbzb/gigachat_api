@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="user_form">
+    <glossterm>Окно добавления пользователя</glossterm>
+    <glossdef>Перейти к окну добавления пользователя можно на странице <cite
+            keyref="itm_m_page_config_users"/> при нажатии на кнопку «Добавить пользователя». В окне
+        необходимо выбрать один из вариантов создания пользователя: <ul id="ul_esh_qpy_xtb">
+            <li>«Создать локального пользователя»<ul id="ul_jt1_wpy_xtb">
+                    <li>этот вариант установлен по умолчанию при открытии формы создания
+                        пользователя;</li>
+                    <li>если выбран этот вариант, то отображаются поля окна создания локального
+                        пользователя. </li>
+                </ul><fig>
+                    <title>Добавление локального пользователя</title>
+                    <image href="../../../images/ITM_M_screens/ITM_M_add_user.png"
+                        id="image_m34_gvl_4tb"/>
+                </fig>
+            </li>
+            <li>«Создать пользователя из LDAP»<ul id="ul_a1b_ypy_xtb">
+                    <li>если выбран этот вариант, то отображаются поля формы создания пользователя
+                        из LDAP;</li>
+                    <li>этот пункт активен только если включен режим интеграции с LDAP.</li>
+                </ul><fig>
+                    <title>Добавление пользователя из LDAP</title>
+                    <image href="../../../images/ITM_M_screens/ITM_M_add_LDAPuser.png"
+                        id="image_xpt_dsx_xtb"/>
+                </fig>
+            </li>
+        </ul></glossdef>
+</glossentry>

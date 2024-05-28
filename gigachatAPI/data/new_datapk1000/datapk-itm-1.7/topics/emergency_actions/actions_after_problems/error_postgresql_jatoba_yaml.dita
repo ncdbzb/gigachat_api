@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="error_postgresql_jatoba_yaml">
+    <title>Ошибка сбора данных в шаблоне Postgresql (Jatoba).yaml</title>
+    <troublebody>
+        <condition>
+            <p>При использовании шаблона <codeph>Postgresql (Jatoba).yaml</codeph> возникает ошибка
+                вида «Connection failed: failed to connect to `host=localhost user=postgres
+                database=postgres`: server error (ВАЖНО: пользователь "postgres" не прошёл проверку
+                подлинности (по паролю) (SQLSTATE 28P01)).»<fig id="fig_n2w_54x_51c">
+                    <image
+                        href="../../../images/ITM_K_troubleshooting/error_postgresql_template.png"
+                        id="image_i4y_v4x_51c"/>
+                </fig></p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Не выполнены настройки, необходимые для корректной работы шаблона
+                        <codeph>Postgresql (Jatoba).yaml</codeph>.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty></responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Выполните настройки для корректной работы шаблона по инструкции <xref
+                                href="../../requirements/safe_installation/first_configuration/template_prepare_psql.dita"
+                            />.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ltx_rfm_1xb">
+    <title></title>
+    <body id="body_ntx_rfm_1xb"><p>Сервер <ph outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
+                    >агентов</ph><ph outputclass="html">агентов</ph>
+                <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_a"/></ph> предназначен для сбора данных о
+                производительности и доступности от имени <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph> сервера. Применение сервера <ph
+                    outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
+                    >агентов</ph><ph outputclass="html">агентов</ph> позволяет организовать
+                территориально распределенную систему мониторинга и при этом снизить нагрузку на
+                сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_k"/></ph>.</p>
+        <p>Сервер <ph outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
+                >агентов</ph><ph outputclass="html">агентов</ph> можно использовать для сбора данных
+            в локальном масштабе от имени централизованного <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> сервера, а затем
+            отправлять данные на сервер <ph outputclass="udvpdf">мониторинга</ph><ph
+                outputclass="onlypdf">консолидации</ph><ph outputclass="html">консолидации</ph>.</p>
+        <p>Сервер <ph outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
+                >агентов</ph><ph outputclass="html">агентов</ph> не имеет веб-интерфейса и
+            используется только вместе с <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_k"/></ph>.</p><p>Сервер <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_a"/></ph> целесообразно использовать для:</p><ul id="ul_zg5_ck1_grb"><li>мониторинга объектов на территориально удаленных площадках;</li><li>мониторинга объектов на площадках с каналами передачи данных невысокой надежности или пропускной способности;</li><li>снижения нагрузки на сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> при мониторинге большого количества устройств.</li></ul><p>Сервер <ph outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
+                >агентов</ph><ph outputclass="html">агентов</ph> требует только одно <ph
+                conref="../../reusable/protocol_names/TCP.dita#ReusableComponent_s2p_3gl_4yb/ph_t2p_3gl_4yb"
+            />-соединение к серверу <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_k"/></ph>, поэтому потребуется настроить только одно правило
+            в брандмауэре.</p>
+        <p>
+            <note type="attention"><ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_a"/></ph> и <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph> должны использовать разные базы данных. Если
+                    <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_a"/></ph> использует ту же базу данных, что <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph>, то конфигурация будет испорчена.</note>
+        </p><p>Перед отправкой данные хранятся на сервере <ph outputclass="udvpdf">удаленного
+                мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                >агентов</ph> в течение периода, указанного в переменной <cmdname
+                keyref="proxyofflinebuffer"/>, по умолчанию период равен 1 часу.</p><note type="attention">Если сервер <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_a"/></ph> передает собранные данные серверу <ph
+                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                /></ph>, но на сервере <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_k"/></ph> данные не обновляются, уменьшите значение
+            переменной <cmdname keyref="zbx_cacheupdate_frequency"/>.</note><table id="table_ah5_ck1_grb" frame="all" colsep="1" rowsep="1"><title>Возможности сервера <ph outputclass="udvpdf">удаленного мониторинга</ph><ph
+                        outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                    >агентов</ph></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="1.11*"/><colspec colnum="2" colname="col2" colwidth="1*"/><thead><row><entry>Функция</entry><entry>Поддержка сервера <ph outputclass="udvpdf">удаленного мониторинга</ph><ph
+                                    outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                                    >агентов</ph></entry></row></thead><tbody><row><entry>Проверки через <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                                        <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> агент
+                                    </entry><entry>Да</entry></row><row><entry>Проверки через <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> агент (активный)</entry><entry>Да<note>Чтобы агент запрашивал активные проверки у сервера <ph outputclass="udvpdf"
+                                    >удаленного мониторинга</ph>
+                                <ph outputclass="onlypdf">агентов</ph>
+                                <ph outputclass="html">агентов</ph>, а не у сервера <ph
+                                    outputclass="udvpdf">мониторинга</ph><ph outputclass="onlypdf"
+                                    >консолидации</ph><ph outputclass="html">консолидации</ph>,
+                                IP-адрес прокси должен быть указан в параметре <b>ServerActive</b>
+                                        файла конфигурации агента.</note></entry></row><row><entry>Простые проверки</entry><entry>Да</entry></row><row><entry>Элементы данных <term keyref="trapper">траппера</term></entry><entry>Да</entry></row><row><entry><ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            /> проверки</entry><entry>Да</entry></row><row><entry><ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            /> трапы</entry><entry>Да</entry></row><row><entry><ph conref="../../reusable/protocol_names/IPMI.dita#ReusableComponent_obb_zhf_4yb/ph_pbb_zhf_4yb"/> проверки</entry><entry>Да</entry></row><row><entry><ph conref="../protocol_names/JMX.dita#ReusableComponent_bmr_lbg_4yb/ph_cmr_lbg_4yb"/>
+                            проверки</entry><entry>Да</entry></row><row><entry>Мониторинг файлов журналов</entry><entry>Да</entry></row><row><entry>Внутренние проверки</entry><entry>Да</entry></row><row><entry>Проверки через <ph
+                                conref="../protocol_names/SSH.dita#ReusableComponent_ujf_ttf_4yb/ph_vjf_ttf_4yb"
+                            /></entry><entry>Да</entry></row><row><entry>Проверки через <ph
+                                conref="../protocol_names/Telnet.dita#ReusableComponent_rsc_w4f_4yb/ph_tsc_w4f_4yb"
+                            /></entry><entry>Да</entry></row><row><entry>Внешние проверки</entry><entry>Да</entry></row><row><entry>Зависимые элементы данных</entry><entry>Да<note>Предобработка значений элементов данных на стороне <ph outputclass="udvpdf"><term
+                                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm_k"/></ph> сервера необходима для
+                                извлечения требуемого значения с данных мастер элемента
+                                данных.</note></entry></row><row><entry>Встроенный веб-мониторинг</entry><entry>Да</entry></row><row><entry>Обнаружение сети</entry><entry>Да</entry></row><row><entry>Низкоуровневое обнаружение</entry><entry>Да</entry></row><row><entry>Удаленные команды</entry><entry>Да</entry></row><row><entry>Вычисление <term keyref="triggers">триггеров</term></entry><entry>Нет</entry></row><row><entry>Обработка событий</entry><entry>Нет</entry></row><row><entry>Корреляция событий</entry><entry>Нет</entry></row><row><entry>Отправка оповещений</entry><entry>Нет</entry></row><row><entry>Предобработка значений элементов данных</entry><entry>Нет</entry></row></tbody></tgroup></table>
+    </body></topic>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_vff_cbk_trb">
+    <title>ZBX_DB_CA_FILE_info</title>
+    <body><div id="div_wff_cbk_trb"><p>Полный путь к файлу, содержащему сертификаты центра сертификации верхнего уровня для проверки
+                сертификата базы данных.</p></div></body>
+</topic>

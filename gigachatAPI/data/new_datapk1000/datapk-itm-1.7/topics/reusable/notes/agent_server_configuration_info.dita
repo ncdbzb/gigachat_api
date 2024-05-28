@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_sxw_5fm_1xb">
+    <title/>
+    <body>
+        <section id="section_active_proxy">
+            <title>Добавление активного сервера удаленного мониторинга</title>
+            <p>Для добавления активного сервера <ph outputclass="udvpdf">удаленного
+                    мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                    >агентов</ph> в веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm_k"/></ph>:</p>
+            <ol>
+                <li>Перейдите в раздел боковой панели <cite keyref="administration"
+                        >«Администрирование»</cite> → <cite keyref="proxy">«Прокси»</cite>.</li>
+                <li> Нажмите на кнопку «Создать прокси». </li>
+                <li>Настройте атрибуты сервера <ph outputclass="udvpdf">удаленного
+                        мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                        >агентов</ph>:<ul id="ul_knz_rrk_lyb">
+                        <li>Имя прокси — Имя сервера <ph outputclass="udvpdf">удаленного
+                                мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph
+                                outputclass="html">агентов</ph>, должно совпадать со значенем
+                            переменной <cmdname keyref="hostname"/> в файле конфигурации сервера <ph
+                                outputclass="udvpdf">удаленного мониторинга</ph><ph
+                                outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                                >агентов</ph>;</li>
+                        <li>Режим прокси — <b>Активный</b>;<note type="attention">При использовании
+                                активного сервера <ph outputclass="udvpdf">удаленного
+                                    мониторинга</ph>
+                                <ph outputclass="onlypdf">агентов</ph>
+                                <ph outputclass="html">агентов</ph> в режиме подключения «Без
+                                шифрования» данные конфигурации могут стать доступны лицам, имеющим
+                                доступ к порту траппера сервера <ph outputclass="udvpdf"><term
+                                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm_k"/></ph>. </note></li>
+                        <li>Адрес прокси — IP-адрес сервера <ph outputclass="udvpdf">удаленного
+                                мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph
+                                outputclass="html">агентов</ph>;</li>
+                        <li>Описание.</li>
+                    </ul></li>
+                <li>Нажмите на кнопку «Добавить».</li>
+                <li>Укажите узлы сети, которые будут наблюдаться через сервер <ph
+                        outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
+                        >агентов</ph><ph outputclass="html">агентов</ph> в диалоге настройки узла сети.<note>
+                        <p>Подробнее см. в разделе <xref
+                                href="../../usage/monitoring_objects_and_hosts/host_configuration.dita"
+                            /> шаг <xref
+                                href="../../usage/monitoring_objects_and_hosts/host_configuration.dita#host_configuration/change_host_parameters"
+                            />. Настройка доступна через массовое обновление узлов сети.</p>
+                    </note></li>
+            </ol>
+        </section>
+        <section id="section_passive_proxy">
+            <title>Добавление пассивного сервера удаленного мониторинга</title>
+            <p>Для добавления пассивного сервера <ph outputclass="udvpdf">удаленного
+                    мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                    >агентов</ph> в веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm_k"/></ph>:</p>
+            
+        <ol id="ol_ovv_1sk_lyb">
+            <li>Перейдите в раздел боковой панели <cite keyref="administration"
+                    >«Администрирование»</cite> → <cite keyref="proxy">«Прокси»</cite>.</li>
+            <li> Нажмите на кнопку «Создать прокси». </li>
+            <li>Настройте атрибуты сервера <ph outputclass="udvpdf">удаленного мониторинга</ph><ph
+                    outputclass="onlypdf">агентов</ph><ph outputclass="html">агентов</ph>:<ul
+                    id="ul_m2h_dsk_lyb">
+                    <li>Имя прокси — Имя сервера <ph outputclass="udvpdf">удаленного
+                            мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph
+                            outputclass="html">агентов</ph>, должно совпадать со значенем переменной
+                            <cmdname keyref="hostname"/> в файле конфигурации сервера <ph
+                            outputclass="udvpdf">удаленного мониторинга</ph><ph
+                            outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                        >агентов</ph>;</li>
+                    <li>Режим прокси — <b>Пассивный</b>.</li>
+                </ul></li>
+            <li>Настройте данные сервера <ph outputclass="udvpdf">удаленного мониторинга</ph><ph
+                    outputclass="onlypdf">агентов</ph><ph outputclass="html">агентов</ph> в разделе
+                    «Интерфейс»:<ul id="ul_p1n_csk_lyb">
+                    <li>IP адрес;</li>
+                    <li>DNS имя;</li>
+                    <li>Подключаться через —выберите способ подключения:<ul id="ul_q1n_csk_lyb">
+                            <li><b>IP</b> — подключение к серверу <ph outputclass="udvpdf"
+                                    >удаленного мониторинга</ph><ph outputclass="onlypdf"
+                                    >агентов</ph><ph outputclass="html">агентов</ph> по IP-адресу
+                                (рекомендуется);</li>
+                            <li><b>DNS</b> — подключение к серверу <ph outputclass="udvpdf"
+                                    >удаленного мониторинга</ph><ph outputclass="onlypdf"
+                                    >агентов</ph><ph outputclass="html">агентов</ph> по DNS
+                                имени.</li>
+                        </ul></li>
+                    <li>Порт — <ph
+                                conref="../../reusable/protocol_names/TCP.dita#ReusableComponent_s2p_3gl_4yb/ph_t2p_3gl_4yb"
+                            /> или <ph
+                                conref="../../reusable/protocol_names/UDP.dita#ReusableComponent_nmm_qgg_4yb/ph_pmm_qgg_4yb"
+                            /> порт;</li>
+                    <li>Описание.</li>
+                </ul></li>
+            <li>Настройте шифрование соединений с сервером <ph outputclass="udvpdf">удаленного
+                    мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                    >агентов</ph>:<ul id="ul_clg_3sk_lyb">
+                    <li>Подробнее про настройку с использованием PSK см. в разделе <ph
+                                outputclass="html"><xref
+                                    href="../../requirements/encryption_passive_proxy.dita"/> или
+                                    <xref href="../../requirements/itm_k_itm_a_encryption_1_3.dita"
+                                /></ph><ph outputclass="onlypdf">«Настройка шифрования между <ph
+                                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                    outputclass="html"><term keyref="datapk_itm_k"/></ph> и <ph
+                                    outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                                    outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph
+                                    outputclass="html"><term keyref="datapk_itm_a"/></ph>» в
+                                Руководстве администратора <term keyref="datapk_itm_k"/></ph>. </li>
+                    <li>Для подключения сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                            /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_k"/></ph> к пассивному
+                        серверу <ph outputclass="udvpdf">удаленного мониторинга</ph>
+                        <ph outputclass="onlypdf">агентов</ph>
+                        <ph outputclass="html">агентов</ph> с использованием сертификата заполните
+                            поля:<ul id="ul_dlg_3sk_lyb">
+                            <li>Издатель — разрешенный издатель сертификата. Необязательное поле.
+                                Предназначено для использования в случае, если <ph
+                                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                    outputclass="html"><term keyref="datapk_itm_k"/></ph> использует
+                                сертификаты от нескольких центров сертификации. </li>
+                            <li>Субъект — разрешенный субъект сертификата. Если поле пустое, тогда
+                                принимается любой сертификат, подписанный настроенным центром
+                                сертификации.</li>
+                        </ul>
+                        <note type="attention">Сертификат должен быть действителен и подписан
+                            центром сертификации.</note>
+                    </li>
+                </ul>
+            </li>
+            <li>Нажмите на кнопку «Добавить».</li>
+            <li>Укажите узлы сети, которые будут наблюдаться через сервер <ph outputclass="udvpdf"
+                    >удаленного мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph
+                    outputclass="html">агентов</ph> в диалоге настройки узла сети.<note>
+                    <p>Подробнее см. в разделе <xref
+                            href="../../usage/monitoring_objects_and_hosts/host_configuration.dita"
+                        /> шаг <xref
+                            href="../../usage/monitoring_objects_and_hosts/host_configuration.dita#host_configuration/change_host_parameters"
+                        />. Настройка доступна через массовое обновление узлов сети.</p>
+                </note></li>
+        </ol>
+        </section>
+    </body>
+</topic>

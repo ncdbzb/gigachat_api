@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="whatsnew_itm_vm_user_1_6">
+    <title>Что нового?</title>
+    <body>
+        <p>Основные изменения, касающиеся администрирования ПО сервера <ph outputclass="udvpdf"
+                    ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                /></ph> версии 1.7.0.0:</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_jn1_qwx_z5b">
+                <title>Изменения <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> версии
+                    1.7.0.0</title>
+                <tgroup cols="3">
+                    <colspec colname="c3" colnum="1" colwidth="1*"/>
+                    <colspec colname="c1" colnum="2" colwidth="1*"/>
+                    <colspec colname="c2" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Категория</entry>
+                            <entry>Изменения в продукте</entry>
+                            <entry>Разделы документации</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                    <row>
+                        <entry>Роли пользователей</entry>
+                        <entry>
+                            <ol id="ol_rvf_p4q_pzb">
+                                <li>Для авторизованных пользователей исключена возможность перехода
+                                    на страницу авторизации без завершения текущей сессии.</li>
+                                <li>
+                                    Для роли «Пользователь» добавлены
+                                        следующие возможности:<ul id="ul_i4z_mgd_zyb">
+                                            <li>просмотр списка и карточек пользователей на странице
+                                                  <cite keyref="itm_m_page_configuration"/> → <cite
+                                                  keyref="itm_m_page_config_users"/>;</li>
+                                            <li>просмотр списка и карточек правил оповещений на
+                                                странице <cite keyref="itm_m_page_configuration"/> →
+                                                  <cite keyref="itm_m_pages_notification_rules"
+                                                />;</li>
+                                            <li>создание, изменение, включение, выключение и
+                                                удаление собственных правил оповещений на странице
+                                                  <cite keyref="itm_m_page_configuration"/> → <cite
+                                                  keyref="itm_m_pages_notification_rules"/></li>
+                                        </ul>
+                                </li>
+                            </ol>
+                        </entry>
+                        <entry><xref href="../ITM_M_reference_info/itmm_roles.dita"/></entry>
+                    </row>
+                    <row>
+                        <entry>Скрипты, переменные</entry>
+                        <entry>
+                            <div
+                                conref="../reusable/changelog_1_7/ITM-1720.dita#ReusableComponent_ofr_521_yyb/div_pfr_521_yyb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                    </row>
+                    <row>
+                        <entry>Переменные, основные настройки</entry>
+                        <entry>
+                            <div>Исключены переменные <cmdname>ITMM_PROBLEM_AGE_IN_DAYS</cmdname> и
+                                    <cmdname>ITMM_SYNC_HISTORY_LIFETIME_IN_DAYS</cmdname>, которые
+                                раньше отвечали за настройку этих параметров </div>
+                        </entry>
+                        <entry><xref href="../ITM_M_reference_info/itm_m_env.dita"/></entry>
+                    </row>
+                    <row>
+                        <entry>Оповещения</entry>
+                        <entry>
+                            <div
+                                conref="../reusable/changelog_1_7/ITM-1859.dita#ReusableComponent_jqd_2gw_fzb/div_lqd_2gw_fzb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                    </row>
+                    <row>
+                        <entry>Синхронизация</entry>
+                        <entry>Исправлена ошибка синхронизации метаданных</entry>
+                        <entry>—</entry>
+                    </row>
+                    <row>
+                        <entry>SIEM</entry>
+                        <entry>Изменено событие о неуспешном входе в систему: если указанный при
+                            попытке входа пользователь не существует, информация об этом
+                            записывается в поле details объекта user_action</entry>
+                        <entry><xref href="../ITM_M_reference_info/siem_objects.dita"/></entry>
+                    </row>
+                </tbody>
+                </tgroup>
+            </table>
+    </body>
+</topic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_startescalators">
+    <glossterm>ZBX_STARTESCALATORS</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/zbx_startescalators_info.dita#ReusableComponent_nrw_rj2_trb/div_orw_rj2_trb"/>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>1</p>
+        <p><b>Разрешенный диапазон значений:</b>1-100</p>
+    </glossdef>
+</glossentry>

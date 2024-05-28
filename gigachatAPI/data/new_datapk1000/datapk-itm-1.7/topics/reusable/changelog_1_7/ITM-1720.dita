@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ofr_521_yyb">
+    <title></title>
+    <body><div id="div_pfr_521_yyb">Скрипт генерации переменных больше не генерирует неиспользуемую переменную
+                <cmdname>TZ</cmdname>. Значение часового пояса устанавливается автоматически на
+            основе данных из ОС</div></body>
+</topic>

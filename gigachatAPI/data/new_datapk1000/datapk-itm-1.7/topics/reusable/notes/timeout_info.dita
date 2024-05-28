@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_qw2_f3z_ttb">
+    <title></title>
+    <body><div><ph id="ph_tw2_f3z_ttb">Период в секундах, в течение которого ожидается ответа от агента, <ph
+                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                /> устройства или внешней проверки.</ph></div>
+    </body>
+</topic>

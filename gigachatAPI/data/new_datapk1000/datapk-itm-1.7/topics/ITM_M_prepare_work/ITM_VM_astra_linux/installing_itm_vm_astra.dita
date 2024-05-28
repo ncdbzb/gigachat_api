@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installing_itm_vm_astra">
+    <title>Установка сервера визуализации и управления UDV-ITM-VM на ОС Astra Linux 1.7</title>
+    <taskbody>
+        <context><note conref="../../reusable/notes/itm_vm_itm_k_reuse.dita#ReusableComponent_jgq_bqw_bvb/note_mgq_bqw_bvb"/>Для установки <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>:</context>
+        <steps>
+            <step>
+                <cmd>Перейдите в режим командной строки операционной системы, на которой будет
+                    установлен сервер визуализации и управления.</cmd>
+            </step>
+            <step>
+                <cmd>Создайте директорию для установки <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте следующие файлы в директорию <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <ol>
+                        <li>udv_itm-vm_1.7.0.0.tar.gz</li>
+                        <li>docker-compose.release.yaml</li>
+                        <li>env_generator.sh</li>
+                    </ol>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Загрузите образы в операционную систему, на которой установлен сервер визуализации и управления:</cmd>
+                <info>
+                    <codeblock>docker load i udv_itm-vm_1.7.0.0.tar.gz</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте env-файлы и настройте значения переменных:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Запустите скрипт <codeph>env_generator.sh</codeph></cmd>
+                        <info>
+                            <codeblock>bash env_generator.sh</codeblock>
+                        </info>
+                        <stepresult>Откроется всплывающее окно для настройки переменных.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните настройку переменных:</cmd>
+                        <info>
+                            <ul>
+                                <li>Чтобы изменить переменную, введите новое значение и нажмите клавишу
+                                    «Enter».</li>
+                                <li>Чтобы оставить значение переменной по умолчанию, которое указано в
+                                    квадратных скобках, нажмите клавишу «Enter».</li>
+                                <li>Чтобы ответить на вопрос «да», нажмите клавишу «y».</li>
+                                <li>Чтобы ответить на вопрос «нет», нажмите клавишу «n».</li>
+                            </ul>
+                            <note type="attention">
+                                Вместо пользователя БД <codeph>itmm_user</codeph> укажите <codeph>datapkitm</codeph>.
+                            </note>
+                            <note>
+                                <ul id="ul_djs_r3z_szb">
+                                    <li>Если IP-адрес подсети контейнеров уже используется в вашей
+                                        инфраструктуре, его нужно изменить. Подробнее см. в разделе
+                                        <xref
+                                            href="../../ITM_M_troubleshooting/itm_m_net_conflict.dita"/>
+                                        <xref
+                                            href="../../ITM_M_troubleshooting/itm_m_net_conflict.dita#itm_m_net_conflict/docker0"
+                                        />.</li>
+                                    <li>При установке <ph outputclass="udvpdf"><term
+                                        keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"
+                                            ><term keyref="datapk_itm_vm"/></ph><ph
+                                                outputclass="html"><term keyref="datapk_itm_vm"/></ph> и
+                                        <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                                        /></ph><ph outputclass="onlypdf"><term
+                                            keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                                                ><term keyref="datapk_itm_k"/></ph> на один сервер
+                                        для <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                        /></ph><ph outputclass="onlypdf"><term
+                                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"
+                                                ><term keyref="datapk_itm_vm"/></ph> рекомендуется
+                                        указать порт для подключения к веб-интерфейсу 8080 и SSL
+                                        порт для подключения к веб-интерфейсу 8443.</li>
+                                </ul>
+                            </note>
+                        </info>
+                        <stepresult>В директории <codeph>/opt/itm-vm</codeph> появятся файлы
+                            <codeph>.env</codeph> и <codeph>.itmm_password_secret_key</codeph> с
+                            настроенными переменными.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Для более подробной настройки переменных файла <codeph>.env</codeph> или для правки ранее введенных переменных:</cmd>
+                        <info>
+                            <ol>
+                                <li>Войдите в режим редактирования файла <codeph>.env</codeph>:
+                                    <codeblock>vi .env</codeblock>
+                                </li>
+                                <li>Настройте переменные.
+                                    <note>Рекомендуемые и возможные значения переменных приведены в разделе <xref href="../../ITM_M_reference_info/itm_m_env.dita"/>.
+                                    </note>
+                                </li>
+                                <li>Сохраните изменения и выйдите из режима редактирования файла:
+                                    <codeblock>:wq</codeblock>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Создайте сертификаты:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Создайте директорию для сертификатов:</cmd>
+                        <info>
+                            <codeblock>mkdir -p /opt/itm-vm/env/nginx/certs</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Назначьте права созданной директории:</cmd>
+                        <info>
+                            <codeblock>chmod -R 755 /opt/itm-vm/env/nginx/certs</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Задайте системные переменные по очереди:</cmd>
+                        <info>
+                            <codeblock>HOST_FQDN='&lt;сетевое имя Комплекса>'
+OWNER='&lt;Название организации, эксплуатирующей ITM>'</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>В директории <codeph>/opt/itm-vm/env/nginx/certs</codeph> создайте файл <codeph>config.txt</codeph>:</cmd>
+                        <info>
+                            <codeblock>cd /opt/itm-vm/env/nginx/certs</codeblock>
+                            <codeblock>> config.txt</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запишите данные для создания сертификатов в файл <codeph>config.txt</codeph> с помощью команды:</cmd>
+                        <info>
+                            <codeblock>printf "[dn]\nCN=${HOST_FQDN}\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:${HOST_FQDN}\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth" > /opt/itm-vm/env/nginx/certs/config.txt</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Создайте сертификат по команде:</cmd>
+                        <info>
+                            <codeblock>openssl req -x509 -out /opt/itm-vm/env/nginx/certs/nginx.crt \
+-keyout /opt/itm-vm/env/nginx/certs/nginx.key -days 3650 \
+-newkey rsa:2048 -nodes -sha256 -subj "/CN=${HOST_FQDN}/O=${OWNER}" \
+-extensions EXT -config /opt/itm-vm/env/nginx/certs/config.txt</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите файл <codeph>config.txt</codeph>:</cmd>
+                        <info>
+                            <codeblock>rm -f /opt/itm-vm/env/nginx/certs/config.txt</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Поменяйте права на сертификаты:</cmd>
+                        <info>
+                            <codeblock>chmod 644 /opt/itm-vm/env/nginx/certs/nginx.*</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Запустите контейнеры из директории <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                    <note> Если после развертывания контейнеров в них появляется ошибка: <codeph>error
+                        obtaining MAC configuration for user</codeph>, то решить ее можно изменив параметр
+                        <codeph>ac_ignore_maclabel</codeph> в файле <codeph>postgresql.conf</codeph>:
+                        <ol>
+                            <li>Остановите контейнеры:
+                                <codeblock>docker-compose down</codeblock>
+                            </li>
+                            <li>Войдите в режим редактирования файла <codeph>postgresql.conf</codeph>:
+                                <codeblock>nano /etc/postgresql/[версия субд]/main/postgresql.conf</codeblock>
+                            </li>
+                            <li>Найдите параметр <codeph>ac_ignore_maclabel</codeph> и измените значение на <codeph>true</codeph>.</li>
+                            <li>Сохраните изменения и выйдите из режима редактирования файла.</li>
+                            <li>Перезагрузите сервис postgresql:
+                                <codeblock>systemctl restart postgresql</codeblock>
+                            </li>
+                            <li>Запустите контейнеры:
+                                <codeblock>docker-compose up -d</codeblock>
+                            </li>
+                        </ol>
+                    </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Для входа в веб-интерфейс в адресной строке введите IP-адрес <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_vm"/></ph>.</cmd>
+                <info>
+                    <note
+                    conref="../../reusable/notes/itm_vm_itm_k_addr.dita#ReusableComponent_onl_fnw_bvb/note_qnl_fnw_bvb"
+                />Для первичной настройки в окне авторизации введите логин и пароль учетной
+                    записи по умолчанию:<ul id="ul_hkt_yzh_qrb">
+                        <li>логин: <b>datapkitm</b>;</li>
+                        <li>пароль: <b>datapkitm</b>. </li>
+                    </ul><fig id="fig_bnk_myj_z5b">
+                        <title>Окно авторизации ITM-VM</title>
+                        <image href="../../../images/ITM_M_prepare_work/itm_m_autorization.png"
+                            id="image_cnk_myj_z5b"/>
+                    </fig>
+                    <note type="attention">При первой настройке комплекса необходимо изменить пароль
+                        встроенной учетной записи.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

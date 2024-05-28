@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="configuration">
+    <glossterm>Настройка</glossterm>
+    <glossdef>Пункт главного меню, который содержит разделы 
+        <cite keyref="host_groups"/>,
+        <cite keyref="templates"/>,
+        <cite keyref="hosts_configuration"/>,
+        <cite keyref="itm_k_config_hosts_card"/>,
+        <cite keyref="service"/>,
+        <cite keyref="actions"/>,
+        <cite keyref="config_actions_trigger"/>,
+        <cite keyref="event_correlation"/>,
+        <cite keyref="detection_configuration"/>,
+        <cite keyref="services_configuration"/>.
+        
+    </glossdef>
+    <!--<related-links>
+        <link href="host_groups.dita"/>
+        <link href="templates.dita"/>
+        <link href="hosts_configuration.dita"/>
+        <link href="itm_k_config_hosts_card.dita"/>
+        <link href="service.dita"/>
+        <link href="actions.dita"/>
+        <link href="config_actions_trigger.dita"/>
+        <link href="event_correlation.dita"/>
+        <link href="detection_configuration.dita"/>
+        <link href="services_configuration.dita"/> 
+    </related-links>-->
+</glossentry>

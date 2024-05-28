@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_opp_cv1_5tb">
+    <title></title>
+    <body><div id="div_ppp_cv1_5tb"><p>Модули, которые загружаются во время старта и используются для расширения возможностей сервера. Модули должны находиться в папке указанной в параметре LoadModulePath. Допускается добавлять несколько параметров LoadModule.</p></div></body>
+</topic>

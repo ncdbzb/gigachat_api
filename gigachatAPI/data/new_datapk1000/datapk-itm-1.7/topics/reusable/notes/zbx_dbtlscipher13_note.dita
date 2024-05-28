@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_nqt_tdf_trb">
+    <title>ZBX_DBTLSCIPHER13_note</title>
+    <body><div id="note_oqt_tdf_trb"><note>Поддерживается только для MySQL, начиная с версии 8.0.16.</note></div></body>
+</topic>

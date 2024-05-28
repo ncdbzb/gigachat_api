@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_iyx_q5n_y5b">
+    <title></title>
+    <taskbody id="taskbody_jyx_q5n_y5b"><context><note id="note_ttr_4km_rvb">Для <abbreviated-form keyref="monitoring_object"/> с этой ОС
+                        настройка происходит с помощью протокола SNMP v2.</note>Настройка SNMP v2 на
+                    Windows XP настраивается одинаково, независимо от версии service pack (SP1, SP2,
+                    SP3). Для настройки:</context><steps><step conref="../steps/panel_adm.dita#ReusableComponent_zwz_zyf_y5b/step_axz_zyf_y5b"><cmd/></step><step conref="../steps/progrem_install_delete.dita#ReusableComponent_vgg_2zf_y5b/step_ygg_2zf_y5b"><cmd/></step><step><cmd>В открывшемся окне нажмите на кнопку «Установка компонентов Windows».</cmd><info><fig><title>Окно «Установка и удаление программ»</title><image href="../../../images/agentless_installation/winXP_program_install_delete.png"/></fig></info><stepresult>Откроется окно «Мастер компонентов Windows».</stepresult></step><step><cmd>В открывшемся окне выберите компонент «Средства управления и наблюдения» в конце списка. </cmd><info><fig id="fig_xvy_jt2_y5b"><title>Установка компонента</title><image href="../../../images/agentless_installation/winXP_master_component.png"/></fig></info></step><step><cmd>Нажмите на кнопку «Состав».</cmd><stepresult>Откроется окно с содержимым компонента «Средства управления и наблюдения». </stepresult></step>
+                <step>
+                    <cmd>В открывшемся окне установите чекбоксы рядом с необходимыми
+                        компонентами.</cmd>
+                </step><step>
+                    <cmd>Нажмите на кнопку «ОК». </cmd>
+                    <info>
+                        <fig id="fig_hmt_yzf_y5b">
+                            <title>Окно «Средства управления и наблюдения»</title>
+                            <image href="../../../images/agentless_installation/winXP_control.png"
+                                id="image_imt_yzf_y5b"/>
+                        </fig>
+                    </info>
+                </step><step><cmd>Нажмите «Далее» в окне «Мастер компонентов Windows». </cmd><stepresult>Начнется установка компонента. <fig id="fig_jmt_yzf_y5b"><title>Установка компонента</title><image href="../../../images/agentless_installation/winXP_install_component.png"/></fig> <note>В процессе установки вам понадобится вставить диск с дистрибутивом Windows в CD-ROM.</note> </stepresult></step><step>
+                    <cmd>После установки найдите соответствующие службы в панели управления. Для
+                        этого:</cmd>
+                    <substeps id="substeps_dhz_lv2_y5b">
+                        <substep>
+                            <cmd>Зайдите в панель управления. </cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Перейдите в раздел «Администрирование».</cmd>
+                            <info>
+                                <fig id="fig_nsf_vbg_y5b">
+                                    <title>Панель управления</title>
+                                    <image
+                                        href="../../../images/agentless_installation/winXP_panel_adm.png"
+                                        id="image_osf_vbg_y5b"/>
+                                </fig>
+                            </info>
+                            <stepresult>Откроется окно «Администрирование».</stepresult>
+                        </substep>
+                        <substep>
+                            <cmd>В открывшемся окне нажмите на кнопку «Управление
+                                компьютером».</cmd>
+                            <info>
+                                <fig id="fig_psf_vbg_y5b">
+                                    <title>Управление компьютером</title>
+                                    <image
+                                        href="../../../images/agentless_installation/winXP_computer_adm.png"
+                                        id="image_qsf_vbg_y5b"/>
+                                </fig>
+                            </info>
+                        </substep>
+                        <substep>
+                            <cmd>В разделе «Службы и приложения» перейдите в раздел «Службы» и
+                                найдите в списке «Служба SNMP».</cmd>
+                            <info>
+                                <fig id="fig_rsf_vbg_y5b">
+                                    <title>Раздел «Службы»</title>
+                                    <image
+                                        href="../../../images/agentless_installation/winXP_find_snmp.png"
+                                        id="image_ssf_vbg_y5b"/>
+                                </fig>
+                            </info>
+                        </substep>
+                    </substeps>
+                </step><step><cmd>Выполните более детальную настройку SNMP агента. Для этого: </cmd><substeps id="substeps_zcx_g1f_y5b"><substep><cmd>Нажмите правой кнопкой мыши на «Служба SNMP» и выберите «Свойства».</cmd><stepresult>Откроется окно «Служба SNMP».</stepresult></substep><substep><cmd>В открывшемся окне откройте вкладку «Безопасность».</cmd></substep><substep><cmd>Нажмите на кнопку «Добавить» в разделе «Приемлемые имена сообществ».</cmd><info><fig><title>Служба SNMP</title><image href="../../../images/agentless_installation/winXP_snmp_service.png"/></fig></info><stepresult>Откроется окно «Настройка службы SNMP».</stepresult></substep><substep><cmd>В открывшемся окне: </cmd><info><ol id="ol_fy5_v2f_y5b"><li>выберите права сообщества;<note>Рекомендуемое значение — READ ONLY.</note></li><li>введите имя сообщества;</li><li>нажмите на кнопку «Добавить».</li></ol></info><info><fig><title>Настройка службы SNMP</title><image href="../../../images/agentless_installation/winXP_snmp_config.png"/></fig></info></substep><substep><cmd>Нажмите на кнопку «Применить» в окне «Служба SNMP».</cmd></substep></substeps></step>
+                <step>
+                    <cmd>Перезапустите службу SNMP.</cmd>
+                </step>
+                    </steps>
+    </taskbody>
+</task>

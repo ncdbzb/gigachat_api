@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="hostnameitem">
+    <glossterm>HostnameItem</glossterm>
+    <glossdef><p
+            conref="../../reusable/notes/hostnameitem_info.dita#ReusableComponent_qq5_clj_2tb/p_sq5_clj_2tb"
+            /><b>Значение по умолчанию:</b> system.hostname</glossdef>
+</glossentry>

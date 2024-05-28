@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ixn_hh5_4zb">
+    <title></title>
+    <body><div id="div_jxn_hh5_4zb">В карточке <abbreviated-form keyref="monitoring_object"/>:<ul id="ul_xgq_wg5_4zb"><li>параметр «Состояние» переименован в «Статус»;</li><li>добавлены параметры «Обновление статуса» и «Обновление свойств ОМ»;</li><li>исключен параметр «Дата обновления»</li></ul></div></body>
+</topic>

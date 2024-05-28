@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_llw_rrl_trb">
+    <title>ZBX_HOSTINTERFACE_note</title>
+    <body><div id="div_mlw_rrl_trb"><note>Если значение данной переменной не определено, используется значение
+        переменной <cmdname keyref="zbx_hostinterface_item"/>.</note></div></body>
+</topic>

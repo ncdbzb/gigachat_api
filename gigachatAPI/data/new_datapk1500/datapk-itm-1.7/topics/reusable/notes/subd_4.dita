@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_q2x_svt_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_r2x_svt_psb">
+            <cmd>Просмотрите содержимое файла с помощью команды:</cmd>
+            <info><codeblock>cat /etc/systemd/system/jatoba-*.service.d/override.conf</codeblock></info>
+        </step>
+        </steps>
+    </taskbody>
+</task>

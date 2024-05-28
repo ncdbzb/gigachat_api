@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_config_create_ldap_user">
+    <title>Создание учетной записи пользователя LDAP</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p><note>Пользователь сможет входить в веб-интерфейс <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph> с учетной записью <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    /> только после выполнения настроек, описанных в разделах <xref
+                        href="ldap_connect.dita"/> и <xref href="ldap_change_users.dita"
+                />.</note>Для создания учетной записи пользователя <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                />:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_page_config_users"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Добавить пользователя» над списком пользователей.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне выберите вариант «Создать пользователя из <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    />».</cmd>
+                <info>
+                    <note>Этот вариант активен, только если включен режим интеграции с <ph
+                            conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                        />. </note>
+                </info>
+                <stepresult>В окне «Добавление пользователя» отобразятся поля формы создания
+                    пользователя из <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                        />.<fig id="fig_jqy_kxy_xtb">
+                        <title>Добавление пользователя из LDAP</title>
+                        <image href="../../../images/ITM_M_screens/ITM_M_add_LDAPuser.png"
+                            id="image_xpt_dsx_xtb"/>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Выберите пользователя из <ph
+                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                    />. Для этого:</cmd>
+                <substeps id="substeps_dzf_vwl_4tb">
+                    <substep>
+                        <cmd>Нажмите на кнопку <image
+                                href="../../../images/ITM_M_icons/itmm_add.png"
+                                id="image_njk_bxl_4tb"/> в поле «Пользователь из <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            />».</cmd>
+                        <stepresult>Откроется окно «Выбор пользователя <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            />». <fig>
+                                <title>Окно «Выбор пользователя LDAP»</title>
+                                <image
+                                    href="../../../images/ITM_M_screens/ITM_M_choose_ldap_user.png"
+                                />
+                            </fig></stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Выберите пользователя <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            /> из списка. Для этого кликните в любой части выбранной строки. </cmd>
+                        <info>
+                            <note type="tip"> Вы можете воспользоваться поиском по первым символам
+                                логина, полного имени или e-mail или прокруткой списка. Записи в
+                                списке отсортированы по столбцу «Полное имя» по алфавиту.</note>
+                        </info>
+                        <stepresult>Выбранная запись будет выделена цветом.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Продолжить».</cmd>
+                        <stepresult>Окно «Выбор пользователя <ph
+                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                            />» закроется, информация в окне «Добавление пользователя» обновится:
+                                <ul id="ul_kpg_xsy_xtb">
+                                <li>поле «Пользователь из <ph
+                                        conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                    />» будет заполнено значением ФИО выбранного пользователя;</li>
+                                <li>появятся поля:<ul id="ul_ftr_gty_xtb">
+                                        <li>«Логин» — нередактируемое поле, содержит значение логина
+                                            выбранного пользователя из каталога <ph
+                                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                            />;</li>
+                                        <li>«Email» — нередактируемое поле, содержит значение email
+                                            выбранного пользователя из каталога <ph
+                                                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                                            />.</li>
+                                    </ul></li>
+                            </ul></stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Выберите роль пользователя. По умолчанию установлена роль «Пользователь».</cmd>
+                <info>
+                    <note>Подробнее см. в разделе <xref
+                            href="../../ITM_M_reference_info/itmm_roles.dita"/>.</note>
+                    <fig>
+                        <title>Добавление пользователя из LDAP</title>
+                        <image
+                                href="../../../images/ITM_M_screens/ITM_M_add_ldap_user_2.png"
+                                id="image_i2g_xfy_xtb"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Сохранить». </cmd>
+                <info>При вводе данных и нажатии на кнопку «Сохранить» выполняется проверка
+                    корректности значений в полях формы и, в случае ошибок, выводятся ошибки рядом с
+                    каждым полем.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

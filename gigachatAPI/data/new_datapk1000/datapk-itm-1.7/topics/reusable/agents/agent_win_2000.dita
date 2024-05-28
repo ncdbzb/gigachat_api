@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zrt_1ks_x5b">
+    <title></title>
+    <taskbody id="taskbody_bst_1ks_x5b"><context><p>Для мониторинга функционирования АРМ и серверов с ОС Windows 2000 необходимо установить агента
+                    версии 1.8. Для установки агента на Windows 2000:</p></context><steps><step><cmd>Перейдите в режим командной строки операционной системы, на которой происходит установка агента. </cmd></step><step><cmd>Создайте каталог <codeph>zabbix</codeph> в директории <codeph>C:\Program Files</codeph>:</cmd><info><codeblock>md C:\Program Files\zabbix</codeblock></info></step><step><cmd>Перейдите в созданную директорию:</cmd><info><codeblock>cd C:\Program Files\zabbix</codeblock></info></step><step><cmd>Настройте параметры агента. Для этого: </cmd><substeps id="substeps_gs3_fgr_x5b"><substep>
+                        <cmd>Создайте конфигурационный файл с названием
+                                <codeph>zabbix_agentd.conf</codeph>.</cmd>
+                    </substep><substep>
+                        <cmd>Добавьте в него следующие параметры:</cmd>
+                        <info>
+                            <codeblock>Server=[IP-адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>]
+Hostname=[имя компьютера]
+ListenPort=10050
+LogFile=C:\Program Files\zabbix\zabbix_agentd.log
+LogFileSize=10</codeblock>
+                        </info>
+                        <info>
+                            <note type="tip">Чтобы узнать имя компьютера, введите в командной строке
+                                    <codeph>echo %COMPUTERNAME%</codeph>.</note>
+                        </info>
+                        <stepxmp>Для компьютера с IP-адресом <codeph>192.168.243.93</codeph> и
+                            именем <codeph>Win2000</codeph> нужно добавить следующие
+                            строки:<codeblock>Server=192.168.243.93
+Hostname=Win2000
+ListenPort=10050
+LogFile=C:\Program Files\zabbix\zabbix_agentd.log
+LogFileSize=10</codeblock></stepxmp>
+                    </substep></substeps></step><step><cmd>Поместите установочные файлы версии 1.8 <codeph>zabbix_agentd.exe</codeph>, <codeph>zabbix_get.exe</codeph>, <codeph>zabbix_sender.exe</codeph> в текущий каталог <codeph>C:\Program Files\zabbix</codeph>.</cmd></step><step><cmd>В командной строке перейдите в текущий каталог: </cmd><info><codeblock>cd C:\Program Files\zabbix</codeblock></info></step><step><cmd>Установите агента как службу Windows: </cmd><info><codeblock>zabbix_agentd.exe --config "C:\Program Files\zabbix\zabbix_agentd.conf" --install</codeblock></info></step><step><cmd>Запустите агента: </cmd><info><codeblock>zabbix_agentd.exe --config "C:\Program Files\zabbix\zabbix_agentd.conf" --start</codeblock></info><stepresult>Служба агента должна появиться в списке служб Windows.</stepresult></step></steps>
+    </taskbody>
+</task>

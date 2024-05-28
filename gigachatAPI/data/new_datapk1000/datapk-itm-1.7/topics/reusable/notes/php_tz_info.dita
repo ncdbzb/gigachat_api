@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_edk_zfk_trb">
+    <title>PHP_TZ_info</title>
+    <body><div id="div_fdk_zfk_trb"><p>Временная зона, в которой работает веб-сервер <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>.</p></div></body>
+</topic>

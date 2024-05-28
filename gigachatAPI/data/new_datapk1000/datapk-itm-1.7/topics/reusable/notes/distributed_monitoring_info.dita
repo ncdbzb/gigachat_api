@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_dd4_w2m_1xb">
+    <title/>
+    <body>
+        <div id="div_fd4_w2m_1xb">
+            <p><ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph> обеспечивает мониторинг распределенной IT
+                инфраструктуры, используя серверы <ph outputclass="udvpdf">удаленного
+                    мониторинга</ph><ph outputclass="onlypdf">агентов</ph><ph outputclass="html"
+                    >агентов</ph>.</p>
+        </div>
+    </body>
+</topic>

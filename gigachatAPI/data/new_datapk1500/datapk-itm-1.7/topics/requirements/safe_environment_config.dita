@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="safe_environment_config">
+    <title>Настройка безопасности среды функционирования комплекса</title>
+    <taskbody>
+        
+        <context>Для обеспечения безопасного использования комплекса в среде
+            функционирования:</context>
+        <steps>
+            <step>
+                <cmd>Установите пароль на BIOS (UEFI) для предотвращения возможности несанкционированного влияния на <abbreviated-form keyref="OS"/> до ее загрузки.</cmd>
+            </step>
+            <step>
+                <cmd>Используя штатные средства РЕД ОС или ОС Astra Linux, настройте аудит системы.
+                    Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Убедитесь, что служба auditd запущена.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что в файле <codeph>/etc/audit/auditd.conf</codeph> указаны следующие значения:</cmd>
+                        <info>
+                            <codeblock>local_events = yes
+write_logs = yes
+log_file = [Путь к файлу с событиями аудита]</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что межсетевой экран iptables запущен и добавлен в автозагрузку.</cmd>
+            </step>
+            <step>
+                <cmd>Убедитесь, что следующие правила добавлены в iptables:</cmd>
+                <substeps id="substeps_u1b_1fx_zrb">
+                   
+                    <substep>
+                        <cmd>Для работы СУБД Jatoba:</cmd>
+                        <info>
+                            <codeblock>iptables -A INPUT -p tcp --dport 10265 -j ACCEPT</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для выполнения запросов к пассивным агентам на объектах
+                            мониторинга:</cmd>
+                        <info>
+                            <codeblock>iptables -A INPUT -p tcp --dport 10050 -j ACCEPT</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для приема севером сообщений с локального активного агента и с агентов,
+                            установленных на объектах мониторинга:</cmd>
+                        <info>
+                            <codeblock>iptables -A INPUT -p tcp --dport 10051 -j ACCEPT</codeblock>
+                        </info>
+                    </substep>
+                    
+                    <substep
+                        conref="../reusable/notes/iptables1.dita#ReusableComponent_y3s_jld_1sb/substep_z3s_jld_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/iptables2.dita#ReusableComponent_i5l_p4d_1sb/substep_k5l_p4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/iptables3.dita#ReusableComponent_lgk_q4d_1sb/substep_mgk_q4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/iptables4.dita#ReusableComponent_p1g_r4d_1sb/substep_q1g_r4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/iptables5.dita#ReusableComponent_nxf_s4d_1sb/substep_oxf_s4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/iptables6.dita#ReusableComponent_y3d_t4d_1sb/substep_bjd_t4d_1sb">
+                        <cmd/>
+                    </substep>
+                    
+                    
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что в системе установлены актуальные обновления.</cmd>
+            </step>
+            <step>
+                <cmd>Ограничьте список узлов, которым разрешается удаленное подключение к СУБД и к
+                    отдельным базам данных в СУБД. Для этого: </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Перейдите в режим редактирования файла <codeph
+                                conref="../reusable/filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                            />:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                            
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd><ph
+                                conref="../reusable/notes/find_ipv4_connections.dita#ReusableComponent_cqj_z5c_1sb/ph_fqj_z5c_1sb"
+                            /></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><ph
+                                conref="../reusable/notes/db_config_ip.dita#ReusableComponent_r3c_2xc_1sb/ph_s3c_2xc_1sb"
+                            /></cmd>
+                        <info>
+                            <div
+                                conref="../reusable/notes/db_config_ip1.dita#ReusableComponent_cd2_hxc_1sb/div_dd2_hxc_1sb"
+                            />
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь в наличии учетной записи <codeph>datapkitm</codeph> с минимально
+                    необходимыми административными правами для осуществления возможности
+                    администрирования <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+            </step>
+        </steps>
+     
+      </taskbody>
+</task>

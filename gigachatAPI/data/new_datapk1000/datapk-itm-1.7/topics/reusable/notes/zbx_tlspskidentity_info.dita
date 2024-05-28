@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_zxn_hvk_trb">
+    <title>ZBX_TLSPSKIDENTITY_info</title>
+    <body><div id="div_ayn_hvk_trb"><p>Строка-идентификатор pre-shared ключа. Значение переменной используется для зашифрованных
+                соединений с сервером.</p></div></body>
+</topic>

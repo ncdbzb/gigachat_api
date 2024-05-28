@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nbn_g4y_hsb">
+    <title></title>
+    <taskbody><postreq id="postreq_obn_g4y_hsb"><note>Подробная настройка объектов мониторинга в веб-интерфейсе описана в разделе <xref href="../../usage/monitoring_objects_and_hosts/monitoring_objects_hosts.dita">Объекты мониторинга. Узлы сети</xref>.</note></postreq></taskbody>
+</task>

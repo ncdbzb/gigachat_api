@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_h3w_5dh_zsb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_i3w_5dh_zsb">
+            <cmd>Установите пакеты, необходимые для работы docker 20 версии:</cmd>
+            <info><codeblock>yum install yum-utils docker-ce libxcrypt-compat
+curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose</codeblock></info>
+        </step>
+        </steps>
+    </taskbody>
+</task>

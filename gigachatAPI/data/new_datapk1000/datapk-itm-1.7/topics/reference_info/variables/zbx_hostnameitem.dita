@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_hostnameitem">
+    <glossterm>ZBX_HOSTNAMEITEM</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/zbx_hostnameitem_info.dita#ReusableComponent_xyb_ynk_trb/div_yyb_ynk_trb"
+        />
+    </glossdef>
+</glossentry>

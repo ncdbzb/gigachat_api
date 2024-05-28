@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_mpp_1vb_bzb">
+    <title></title>
+    <body><div id="div_npp_1vb_bzb">Для экономии места на диске в шаблонах по умолчанию для элементов данных,
+            которые используют поле «Заполнение инвентарного поля узла сети», добавлено правило
+            предобработки «Отбрасывать не изменившееся с периодическим контролем» со значением
+            1d</div></body>
+</topic>

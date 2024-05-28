@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="agents_installation">
+    <title>Установка и настройка агентов</title>
+    <body>
+        <p
+            conref="../../reusable/agents/agents_general.dita#ReusableComponent_et5_lms_x5b/p_gt5_lms_x5b"/>
+        <p>После установки агента необходимо настроить объект мониторинга. Подробная настройка <term
+                keyref="monitoring_object">объектов мониторинга</term> в веб-интерфейсе описана в
+            руководстве по эксплуатации <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_k"/></ph>.</p>
+        <p>В этом разделе:</p>
+        <ul id="ul_kfl_prg_3rb">
+            <li><xref href="itm_a_agent_installation_windows.dita"/></li>
+            <li><xref href="itm_a_agent_configuration_windows.dita"/></li>
+            <li><xref href="itm_a_agent_installation_windows_2000.dita"/></li>
+            <li><xref href="itm_a_agent_installation_centos_7.dita"/></li>
+            <li><xref href="itm_a_agent_installation_debian.dita"/></li>
+        </ul>
+    </body>
+</topic>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ow3_2l2_trb">
+    <title>zbx_startvmware_collectors_info</title>
+    <body><div id="div_pw3_2l2_trb"><p>Количество экземпляров пре-форков VMware коллекторов.</p></div></body>
+</topic>

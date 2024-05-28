@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_cd2_hxc_1sb">
+    <title/>
+    <body>
+        <div id="div_dd2_hxc_1sb">
+            <codeblock>host [имя_БД1],[имя_БД2],… [пользователь1],[пользователь2],… 
+[диапазон IP-адресов разрешенных серверов в формате «IP/маска»] md5</codeblock><note>Отступ между колонками в одной строке выполняется клавишей «Tab».</note></div>
+    </body>
+</topic>

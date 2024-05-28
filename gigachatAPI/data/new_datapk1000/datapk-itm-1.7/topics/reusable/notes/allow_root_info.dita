@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_gr4_m53_2tb">
+    <title></title>
+    <body><p id="p_hr4_m53_2tb">Разрешение прокси запускаться под «root». Если отключено и прокси запускается из под «root», прокси попробует переключиться на пользователя «zabbix». Не имеет смысла, если прокси запускается под обычным пользователем.<ul id="ul_e5g_353_2tb"><li>0 — не разрешено;</li><li>1 — разрешено. </li></ul>Данный параметр поддерживается с начиная с Zabbix 2.2.0.</p></body>
+</topic>

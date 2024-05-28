@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="_100_most_active_triggers">
+    <glossterm>100 наиболее активных триггеров</glossterm>
+    <glossdef>Подраздел отчетов для просмотра триггеров, которые изменили свои состояния в течение
+        выбранного периода времени. Триггеры отсортированы по количеству изменений состояния от
+        большего к меньшему. <fig>
+            <title>Страница «100 наиболее активных триггеров»</title>
+            <div outputclass="html"><image href="../../../images/Pages/reports_100_most_active_triggers.png"
+                >
+                <alt>Страница «100 наиболее активных триггеров»</alt>
+            </image></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/reports_100_most_active_triggers.png"
+                >
+                <alt>Страница «100 наиболее активных триггеров»</alt>
+            </image></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_reports_100_most_active_triggers.png"
+                >
+                <alt>Страница «100 наиболее активных триггеров»</alt>
+            </image></div>
+        </fig>
+    </glossdef>
+</glossentry>

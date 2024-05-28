@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_detection_rule">
+    <title>Создание правила оповещений</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для создания правила оповещений:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                        keyref="itm_m_pages_notification_rules"/>. </cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Добавить правило» в верхнем левом углу страницы.</cmd>
+                <stepresult>Откроется окно «Создание правила оповещений».</stepresult>
+            </step>
+            <step>
+                <cmd>В открывшемся окне заполните поле «Наименование».</cmd>
+                <info>
+                    <note>Наименование правила обнаружения должно быть уникальным.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Выберите тип правила оповещений:</cmd>
+                <info>
+                    <ul id="ul_fmk_bq1_gvb">
+                        <li>Отправить сразу — оповещение отправляется сразу при обнаружении или
+                            изменении критичности проблемы;</li>
+                        <li>Отправлять списком один раз в сутки — отправляется список проблем за
+                            сутки в заданное время. При выборе этого варианта укажите серверное
+                            время отправки сообщения в формате чч:мм. По умолчанию указано время
+                            07:45.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>При необходимости в выпадающем списке «Объекты» выберите филиалы или входящие в
+                    них <abbreviated-form keyref="to"/>, для <abbreviated-form
+                        keyref="monitoring_object"/> которых будут формироваться оповещения.</cmd>
+                <info>
+                    <note>По умолчанию оповещения формируются для <abbreviated-form
+                            keyref="monitoring_object"/> всех филиалов и входящих в них
+                            <abbreviated-form keyref="to"/>.</note>
+                </info>
+                <info>При выборе филиала входящие в него <abbreviated-form keyref="to"/> не
+                    выбираются автоматически. Выбор <abbreviated-form keyref="to"/> доступен
+                    независимо от того, выбран ли филиал, к которому он относится. Если у филиала 5
+                    или больше вложенных <abbreviated-form keyref="to"/>, становятся доступны
+                        кнопки:<ul id="ul_tz1_kwh_gvb">
+                        <li>«Выделить все» — нажмите, чтобы выбрать все <abbreviated-form
+                                keyref="to"/>, входящие в филиал.</li>
+                        <li>«Снять выделение» — нажмите, чтобы отменить выбор всех <abbreviated-form
+                                keyref="to"/>, входящих в филиал.</li>
+                    </ul></info>
+            </step>
+            <step>
+                <cmd>В выпадающем списке «Важность» выберите уровень важности проблем. Оповещения
+                    будут отправляться для проблем с выбранным и более высокими уровнями важности.
+                    Доступны следующие значения: </cmd>
+                <info>
+                    <ul id="ul_f4q_zhv_fvb">
+                        <li>Критическая — значение по умолчанию;</li>
+                        <li>Высокая;</li>
+                        <li>Средняя;</li>
+                        <li>Предупреждение;</li>
+                        <li>Информационная;</li>
+                        <li>Не классифицировано.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Введите один или несколько адресов электронной почты получателей оповещений в
+                    поле «Email получателей».</cmd>
+            </step>
+            <step>
+                <cmd>При необходимости введите описание правила.</cmd>
+                <info>
+                    <fig id="fig_xxm_pd3_gvb">
+                        <title>Окно создания правила оповещений</title>
+                        <image href="../../../images/ITM_M_screens/ITM_VM_detection_rule_create.png"
+                            id="image_yxm_pd3_gvb"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Сохранить».</cmd>
+                <stepresult><p>При срабатывании правила оповещения будут приходить в следующем формате:</p><p>Тема письма: ITM
+                        [Критичность] [Наименование оповещения] [Имя ОМ]</p><p>[Была создана новая проблема:] или [У проблемы обновлена критичность:] или [Отчет о проблемах
+                        функционирования объектов мониторинга за сутки к [чч:мм (UTC)
+                        дд.мм.гггг]:]</p>
+                    <p>Всего событий — [Количество проблем], нерешенных — [Количество нерешенных
+                        проблем]</p><p>
+                            <table id="table_bv2_l5j_gvb" frame="all" rowsep="1" colsep="1">
+                            <tgroup cols="7">
+                                <colspec colname="newCol2" colnum="1" colwidth="1*"/>
+                                <colspec colname="c1" colnum="2" colwidth="2.4*"/>
+                                <colspec colname="c2" colnum="3" colwidth="1.7*"/>
+                                <colspec colname="c3" colnum="4" colwidth="1.74*"/>
+                                <colspec colname="c4" colnum="5" colwidth="1.74*"/>
+                                <colspec colname="c5" colnum="6" colwidth="1.74*"/>
+                                <colspec colname="newCol7" colnum="7" colwidth="1*"/>
+                                <tbody>
+                                    <row>
+                                        <entry><b>№</b></entry>
+                                        <entry><b>Время появления</b></entry>
+                                        <entry><b>Критичность</b></entry>
+                                        <entry><b>Филиал, ТО</b></entry>
+                                        <entry><b>Объект</b></entry>
+                                        <entry><b>Проблема</b></entry>
+                                        <entry><b>Состояние</b></entry>
+                                    </row>
+                                    <row>
+                                        <entry>[Номер]</entry>
+                                        <entry>[Серверное время в формате гггг-мм-дд чч-мм-сс
+                                            (UTC)]</entry>
+                                        <entry>[Уровень критичности проблемы]</entry>
+                                        <entry>[Наименование филиала] или [Наименование филиала и
+                                            ТО]</entry>
+                                        <entry>[Наименование объекта]</entry>
+                                        <entry>[Наименование проблемы]</entry>
+                                        <entry>«Требует решения» или «Решена [дата и время в формате
+                                            гггг-мм-дд чч-мм-сс (UTC)]»</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p><p>Наименование сервера ITM-VM — [Наименование сервера ITM-VM]</p><p>Оповещение — [ID оповещения], [Наименование оповещения]</p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

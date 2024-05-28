@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xkx_g5v_wsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_ykx_g5v_wsb">
+                        <cmd>Добавьте в содержимое файла следующее значение:</cmd>
+                        <info>
+                            <codeblock>vm.overcommit_memory=1</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

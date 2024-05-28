@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="centos_del_home">
+    <title>centos_del_home</title>
+    <taskbody>
+        <steps>
+            <step id="step_centos_del_home">
+                <cmd>Если в открывшемся окне «Разметка вручную» нет раздела <codeph>/home/</codeph>,
+                    пропустите этот шаг. Если в этом окне есть раздел <codeph>/home/</codeph>,
+                    удалите его. Для этого:</cmd>
+                <substeps id="substeps_x3x_gn3_wwb">
+                    <substep>
+                        <cmd>Выделите раздел <codeph>/home/</codeph>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «-» в нижней части области выбора раздела.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Подтвердите удаление раздела <codeph>/home/</codeph> в появившемся
+                            окне.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note>Раздел <codeph>/home/</codeph> появляется при автоматической разметке
+                        дисков с размером более 50 ГБ. </note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

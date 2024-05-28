@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="udv_itm_m_server_unavailable">
+    <title>UDV-ITM-M сервер недоступен</title>
+    
+            <troublebody
+                conref="../../reusable/notes/udv_itm_m_server_unavailable_info.dita#ReusableComponent_rz5_gsf_1xb/troublebody_tz5_gsf_1xb"/>
+           
+</troubleshooting>

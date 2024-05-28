@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_x35_ncn_rsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_y35_ncn_rsb">
+                <cmd>Просмотрите наименования и идентификаторы подсетей:</cmd>
+                <info><codeblock>docker network ls</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

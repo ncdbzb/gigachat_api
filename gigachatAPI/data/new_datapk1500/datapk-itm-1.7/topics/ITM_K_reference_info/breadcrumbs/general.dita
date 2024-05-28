@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="general">
+    <glossterm>Общие</glossterm>
+    <glossdef>Подраздел администрирования, который содержит страницы для изменения настроек
+        веб-интерфейса <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>: <ph outputclass="html"><cite
+                keyref="web_interface"/></ph><ph outputclass="onlypdf">Веб-интерфейс</ph>, <ph
+            outputclass="html"><cite keyref="general_autoregistation"/></ph><ph
+            outputclass="onlypdf">Авторегистрация</ph>, <ph outputclass="html"><cite
+                keyref="clear_history"/></ph><ph outputclass="onlypdf">Очистка истории</ph>, <ph
+            outputclass="html"><cite keyref="adm_general_img"/></ph><ph outputclass="onlypdf"
+            >Изображения</ph>, <ph outputclass="html"><cite keyref="adm_general_icon_connect"
+            /></ph><ph outputclass="onlypdf">Соответствия иконок</ph>, <ph outputclass="html"><cite
+                keyref="adm_general_regexp"/></ph><ph outputclass="onlypdf">Регулярные
+            выражения</ph>, <ph outputclass="html"><cite keyref="adm_general_macros"/></ph><ph
+            outputclass="onlypdf">Макросы</ph>, <ph outputclass="html"><cite
+                keyref="adm_general_value_mapping"/></ph><ph outputclass="onlypdf">Преобразование
+            значений</ph>, <ph outputclass="html"><cite keyref="trigger_options"/></ph><ph
+            outputclass="onlypdf">Опции отображения триггеров</ph>, <ph outputclass="html"><cite
+                keyref="modules"/></ph><ph outputclass="onlypdf">Модули</ph>, <ph outputclass="html"
+                ><cite keyref="adm_general_others"/></ph><ph outputclass="onlypdf">Прочие</ph>. <fig>
+            <title>Страница «Общие»</title>
+            <div outputclass="html"><image href="../../../images/Pages/administration_general.png">
+                <alt>Страница «Общие»</alt>
+            </image></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/administration_general.png">
+                <alt>Страница «Общие»</alt>
+            </image></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_administration_general.png">
+                <alt>Страница «Общие»</alt>
+            </image></div>
+        </fig>
+    </glossdef>
+    <!--<related-links>
+        <link keyref="web_interface"/>
+        <link keyref="general_autoregistation"/>
+        <link keyref="clear_history"/>
+        <link keyref="adm_general_img"/>
+        <link keyref="adm_general_icon_connect"/>
+        <link keyref="adm_general_regexp"/>
+        <link keyref="adm_general_macros"/>
+        <link keyref="adm_general_value_mapping"/>
+        <link keyref="trigger_options"/>
+        <link keyref="modules"/>
+        <link keyref="adm_general_others"/>
+    </related-links>-->
+</glossentry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_mfr_rwc_zwb">
+    <title></title>
+    <body id="body_nfr_rwc_zwb"><p>Этот раздел описывает последовательность действий для установки <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> для случая, когда на сервере используются два тома — первый том для 
+        операционной системы, второй том для базы данных.</p>
+        <p>Если вы планируете использовать только один том, перейдите в раздел <xref
+                href="../../ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_subd_config.dita"
+            />.</p>
+        <p>Все нижеописанные действия на сервере производятся после настройки RAID на дисках и
+            установки операционной системы в соответствии с разделами <ph outputclass="onlypdf"
+                    ><xref
+                    href="../../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_redos_installation.dita"
+                /></ph>
+            <ph outputclass="udvpdf"><xref
+                    href="../../ITM_M_prepare_work/udv_itm_vm_install_redos_general.dita"/></ph>,
+                <xref href="../../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_ntp.dita"/> и
+                <xref
+                href="../../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_extra_package_install_redos_7_3.dita"
+            />. </p>
+        <p>В этом разделе:
+            <ul id="ul_wqn_v4s_4sb">
+                <li>
+                    <xref href="../../ITM_M_prepare_work/ITM_M_data_program_download/2tomes/mount.dita"/></li>
+                <li><xref href="../../ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.dita"/></li>
+            </ul>
+        </p>
+    </body>
+</topic>

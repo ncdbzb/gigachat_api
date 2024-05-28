@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации</mainbooktitle>
+        <booktitlealt>DATAPK ITM-K версии 1.6</booktitlealt>
+    </booktitle>
+    <bookmeta>
+        <bookrights>
+            <copyrfirst><year>2021</year></copyrfirst>
+            <copyrlast><year>2021</year></copyrlast>
+            <bookowner><organization>ООО «СайберЛимфа»</organization></bookowner>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <booklists>
+            <toc/>
+            <!-- <tablelist/> -->
+        </booklists>       
+    </frontmatter>
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_K_reference_info/itm_k_empty_glossary.dita">
+        <topicref href="topics/reference_info/glossary/glossary.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/introduction/itm_k_whats_new.dita"/>
+    <chapter href="topics/introduction/functional_opportunities.dita"/>
+    <chapter
+        href="topics/requirements/safe_installation/first_configuration/first_configuration.dita">
+        <topicref
+            href="topics/requirements/safe_installation/first_configuration/itm_k_first_configuration.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter
+        href="topics/requirements/safe_installation/first_configuration/itm_k_get_ready_to_collect_data.dita">
+        <topicref
+            href="topics/requirements/safe_installation/first_configuration/itm_k_get_ready_data_collect.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/OM_work.dita">
+        <topicref href="topics/reusable/OM_work.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/OM_collect_data.dita">
+        <topicref href="topics/reusable/OM_collect_data.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/usage/events/events.dita">
+        <topicref href="topics/usage/events/itm_k_events.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/data_monitoring.dita">
+        <topicref href="topics/reusable/data_monitoring.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/usage/hosts_and_triggers_service/hosts_and_triggers_service.dita">
+        <topicref
+            href="topics/usage/hosts_and_triggers_service/itm_k_hosts_triggers_service.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/problem_analysis.dita">
+        <topicref href="topics/problem_analysis.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/config_datapk_itm_k.dita">
+        <topicref href="topics/reusable/config_datapk_itm_k.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reference_info/reference_info.dita">
+        <topicref href="topics/ITM_K_reference_info/breadcrumbs/breadcrumbs.dita">
+            <topicref href="topics/ITM_K_reference_info/breadcrumbs/breadcrumbs.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_K_reference_info/roles/roles.dita"/>
+        <topicref href="topics/ITM_K_reference_info/var_tables/var_tables.dita">
+            <topicref href="topics/ITM_K_reference_info/var_tables/var_tables.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_K_reference_info/rus_templates.dita"/>
+        <topicref href="topics/reference_info/macros.dita"/>
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap"
+        processing-role="resource-only"/>
+</bookmap>

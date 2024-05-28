@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Карты сетей</title>
+    <topicref href="net_map_configuration/public_and_private_maps.dita"/>
+    <topicref href="net_map_configuration/net_map_creation.dita"/>
+    <topicref href="net_map_configuration/net_map_add_items.dita"/>
+    <topicref href="net_map_configuration/control_elements.dita"/>
+    <topicref href="net_map_configuration/background_image.dita"/>
+    <topicref href="net_map_configuration/icons_net_map.dita"/>
+    <topicref href="net_map_configuration/add_config_figures.dita"/>
+    <topicref href="net_map_configuration/control_figures.dita"/>
+</map>

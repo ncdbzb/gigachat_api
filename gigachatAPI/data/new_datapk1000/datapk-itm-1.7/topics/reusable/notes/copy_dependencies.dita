@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xss_tgc_jtb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_yss_tgc_jtb">
+                <cmd>Скопируйте архив <codeph>dependencies.zip</codeph> на компьютер, где будет
+                    установлен <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+                <info>
+                    <note>Архив <codeph>dependencies.zip</codeph> можно получить вместе с
+                        дистрибутивом.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

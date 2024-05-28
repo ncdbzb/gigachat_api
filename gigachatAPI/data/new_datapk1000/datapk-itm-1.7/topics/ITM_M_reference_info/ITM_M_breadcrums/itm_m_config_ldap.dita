@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="itm_m_config_ldap">
+    <glossterm>LDAP</glossterm>
+    <glossdef>Подраздел меню <cite keyref="itm_m_page_configuration"/>, содержащий настройки
+        подключения к <ph conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"/>-серверу. <fig>
+            <title>Настройки подключения к LDAP</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_LDAP_1.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

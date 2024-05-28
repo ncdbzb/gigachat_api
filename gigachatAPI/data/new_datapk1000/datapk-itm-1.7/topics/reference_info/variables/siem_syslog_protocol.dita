@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="siem_syslog_protocol">
+    <glossterm>SIEM_SYSLOG_PROTOCOL</glossterm>
+    <glossdef>
+        <ph
+            conref="../../reusable/notes/siem_syslog_protocol_def.dita#ReusableComponent_bxr_sqd_yrb/ph_cxr_sqd_yrb"
+        /></glossdef>
+</glossentry>

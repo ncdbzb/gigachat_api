@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_k_subd_config_certif">
+    <title>Настройка СУБД</title>
+    <taskbody>
+        <context
+            conref="../reusable/notes/subd_context.dita#ReusableComponent_a3t_pvt_psb/context_rnn_1vt_psb"
+            id="context_ctd_yvt_psb"/><steps>
+            <step id="itm_k_set_dir_bd">
+                <cmd>Создайте директорию для хранения базы данных на отдельном томе:</cmd>
+                <info>
+                    <codeblock>mkdir /storage/base</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите Jatoba по инструкции от производителя до действия установки
+                    пакета-активатора. </cmd>
+            </step>
+            <step
+                conref="../reusable/notes/subd_3.dita#ReusableComponent_ssy_rvt_psb/step_tsy_rvt_psb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/notes/subd_4.dita#ReusableComponent_q2x_svt_psb/step_r2x_svt_psb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/notes/subd_5.dita#ReusableComponent_eqq_tvt_psb/step_fqq_tvt_psb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/notes/subd_6.dita#ReusableComponent_vym_5vt_psb/step_xym_5vt_psb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/notes/subd_7.dita#ReusableComponent_dcl_vvt_psb/step_ecl_vvt_psb">
+                <cmd/>
+            </step>
+            <step
+                conref="../reusable/notes/subd_8.dita#ReusableComponent_zlk_wvt_psb/step_amk_wvt_psb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Продолжите установку пакета-активатора по инструкции от производителя.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

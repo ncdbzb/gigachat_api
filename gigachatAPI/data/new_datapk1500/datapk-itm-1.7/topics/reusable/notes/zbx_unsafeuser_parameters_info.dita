@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_kph_drk_trb">
+    <title>zbx_unsafeuser_parameters_info</title>
+    <body><div id="div_lph_drk_trb"><p>Разрешить все символы, которые можно передать аргументами в пользовательские параметры. Не разрешены следующие символы:</p><p> \ ' " ` * ? [ ] { } ~ $ ! &amp; ; ( ) &lt; > | # @</p><p>Кроме того, не разрешены символы новой строки.</p></div></body>
+</topic>

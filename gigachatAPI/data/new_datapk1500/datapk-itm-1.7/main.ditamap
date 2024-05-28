@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации UDV-ITM v. 1.7</mainbooktitle>
+        <booktitlealt>v. 1.7</booktitlealt>
+    </booktitle>
+    <bookmeta>
+        <bookrights>
+            <copyrfirst><year>2021</year></copyrfirst>
+            <copyrlast><year>2023</year></copyrlast>
+            <bookowner><organization>ООО «СайберЛимфа»</organization></bookowner>
+        </bookrights>
+    </bookmeta>
+    <chapter href="udv_itm_m_main.dita" collection-type="sequence">
+        <topicref href="udv_itm_m_main.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="udv_itm_vm_main.dita" collection-type="sequence">
+        <topicref href="udv_itm_vm_main.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="udv_itm_rm_main.dita" collection-type="sequence">
+        <topicref href="udv_itm_rm_main.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/ITM_design_and_implementation.dita" collection-type="sequence">
+        <topicref href="topics/reusable/udv_itm_design_and_implementation.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap"
+        processing-role="resource-only"/>
+    
+</bookmap>

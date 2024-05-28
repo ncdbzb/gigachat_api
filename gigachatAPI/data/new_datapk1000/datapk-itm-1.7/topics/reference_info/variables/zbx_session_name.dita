@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_session_name">
+    <glossterm>ZBX_SESSION_NAME</glossterm>
+    <glossdef><div
+            conref="../../reusable/notes/zbx_session_name_info.dita#ReusableComponent_e3f_4fk_trb/div_f3f_4fk_trb"/>
+        <b>Значение в конфигурации ITM-K при поставке:</b>zbx_sessionid</glossdef>
+</glossentry>

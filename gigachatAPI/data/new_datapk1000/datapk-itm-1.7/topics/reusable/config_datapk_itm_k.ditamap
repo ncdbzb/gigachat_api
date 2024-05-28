@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Настройка DATAPK ITM_K</title>
+    <topicref href="../usage/users_and_user_groups/users_and_user_groups.dita">
+        <topicref href="../usage/users_and_user_groups/itm_k_users_user_groups.ditamap"
+            format="ditamap"/>
+    </topicref>
+    <topicref href="../requirements/ldaps_config.dita"/>
+    <topicref href="../requirements/ITM-K_LDAP.dita"/>
+</map>

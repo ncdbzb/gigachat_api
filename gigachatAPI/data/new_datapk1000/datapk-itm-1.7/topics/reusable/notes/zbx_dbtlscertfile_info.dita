@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_wlw_m22_trb">
+    <title>zbx_dbltscertfile_info</title>
+    <body><div id="entry_xlw_m22_trb">Полный путь к файлу, содержащему сертификат Zabbix-сервера для
+            аутентификации в базе данных.</div></body>
+</topic>

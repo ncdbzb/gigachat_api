@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_unq_s4l_trb">
+    <title></title>
+    <body><div id="div_vnq_s4l_trb"><note type="warning">Если VaultToken и переменная среды <cmdname keyref="vault_token"/> определены одновременно, возникает ошибка в конфигурации.</note></div></body>
+</topic>

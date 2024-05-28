@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_server_port">
+    <glossterm>ZBX_SERVER_PORT</glossterm>
+    <glossdef><div
+            conref="../../reusable/notes/zbx_server_port_info.dita#ReusableComponent_qwk_4hf_trb/div_rwk_4hf_trb"/>
+        <b>Значение в конфигурации ITM-K при поставке:</b>10051  <div
+            conref="../../reusable/notes/zbx_server_host_note.dita#ReusableComponent_rl3_chl_trb/div_sl3_chl_trb"
+        /></glossdef>
+</glossentry>

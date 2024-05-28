@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="data_backup">
+    <title>Резервное копирование данных</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_dnp_tdk_v5b">
+                <li><xref href="../../emergency_actions/DB_backup_and_restore/files_backup_jatoba.dita"/></li>
+                <li><xref href="../../emergency_actions/DB_backup_and_restore/unloading_jatoba.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="actions_after_problems">
+<title>Действия после сбоев и ошибок эксплуатации средства</title>
+<body id="actions_after_problems">
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref href="web-interface_loading_problem.dita"/></li>
+                <li><xref href="cannot_start_service.dita"/></li>
+                <li><xref href="server_unavailable.dita"/></li>
+                <li><xref href="itm_k_om_name_problem.dita"/></li>
+                <li><xref href="itm_k_net_conflict.dita"/></li>
+                <li><xref href="host_availability_snmp.dita"/></li>
+                <li><xref href="itm_k_regexp_problem.dita"/></li>
+                <li><xref href="big_queue.dita"/></li>
+                <li><xref href="security_profile.dita"/></li>
+                <li><xref href="problem_zbx_proxyconfigfrequency.dita"/></li>
+                <li><xref href="encoding_err_template_import.dita"/></li>
+            </ul>
+        </p>
+    </body>
+</topic>

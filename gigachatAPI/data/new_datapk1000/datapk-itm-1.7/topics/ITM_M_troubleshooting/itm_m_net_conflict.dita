@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="itm_m_net_conflict">
+    <title>Конфликт подсети контейнеров</title>
+    <troublebody>
+        <condition>
+            <p
+                conref="../reusable/notes/net_conflict_causes.dita#ReusableComponent_szq_cqh_psb/p_tzq_cqh_psb"/>
+        </condition>
+        <troubleSolution>
+            <cause id="docker_net"><title>Причина 1</title>
+                <p>Адрес подсети контейнеров уже используется в вашей инфраструктуре.</p></cause>
+            <remedy>
+                <title>Способ устранения </title>
+                <responsibleParty>Для устранения проблемы измените подсеть контейнеров
+                    Docker:</responsibleParty>
+                <steps>
+                    <step
+                        conref="../reusable/notes/container_stop.dita#ReusableComponent_v5l_qws_rrb/step_w5l_qws_rrb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd
+                            conref="../reusable/notes/container_wait.dita#ReusableComponent_en1_tws_rrb/cmd_fn1_tws_rrb"
+                        />
+                    </step>
+                    <step>
+                        <cmd>Проверьте и при необходимости отредактируйте файл <codeph
+                                conref="../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                            />:</cmd>
+                        <substeps id="substeps_wqx_hrl_rsb">
+                            <substep
+                                conref="../reusable/notes/env_config.dita#ReusableComponent_j2d_hrl_rsb/substep_k2d_hrl_rsb">
+                                <cmd/>
+                            </substep>
+                            <substep>
+                                <cmd>Если в файле <codeph
+                                        conref="../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                                    /> не заданы переменные <cmdname keyref="itmm_network"/> и
+                                        <cmdname keyref="itmm_network_gateway"/>, добавьте в файл
+                                    строки:</cmd>
+                                <info><codeblock id="codeblock_cw2_h1t_rrb"><cmdname keyref="itmm_network"/>=XXX.XXX.XXX.XXX/XX
+<cmdname keyref="itmm_network_gateway"/>=XXX.XXX.XXX.XXX</codeblock>
+                                    Где XXX.XXX.XXX.XXX/XX — новая подсеть, XXX.XXX.XXX.XXX — новый
+                                    сетевой шлюз. </info>
+                            </substep>
+                            <substep>
+                                <cmd>Если в файле <codeph
+                                        conref="../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                                    /> уже указаны значения переменных <cmdname
+                                        keyref="itmm_network"/> и <cmdname
+                                        keyref="itmm_network_gateway"/>, задайте им новые
+                                    значения.</cmd>
+                            </substep>
+                            <substep
+                                conref="../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                                <cmd/>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step
+                        conref="../reusable/notes/pg_hba_change.dita#ReusableComponent_ozw_wnh_psb/step_pzw_wnh_psb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../reusable/notes/container_run.dita#ReusableComponent_prv_5ws_rrb/step_qrv_5ws_rrb">
+                        <cmd/>
+                        <info> </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        
+        <troubleSolution>
+            
+            <cause id="docker0"><title>Причина 2</title><p>Адрес подсети docker0 используется в вашей инфраструктуре.</p></cause>
+            <remedy>
+                <title>Способ устранения 1</title>
+                <responsibleParty></responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Остановите и удалите все контейнеры, которые не указаны в
+                                <codeph>docker-compose</codeph> файлах:</cmd>
+                        <info>
+                            <codeblock>docker-compose down --remove-orphans</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Просмотрите список маршрутов одной из команд:</cmd>
+                        <info>
+                            <ul id="ul_zf5_3lh_psb">
+                                <li>
+                                    <codeblock>route -n</codeblock>
+                                    <fig id="fig_ag5_3lh_psb">
+                                        <title>Результат работы команды route -n</title>
+                                        <image
+                                            href="../../images/ITM_K_troubleshooting/route_n.jpg"
+                                            id="image_bg5_3lh_psb"/>
+                                    </fig>
+                                </li>
+                                <li>
+                                    <codeblock>ip r</codeblock>
+                                    <fig id="fig_cg5_3lh_psb">
+                                        <title>Результат работы команды ip r</title>
+                                        <image href="../../images/ITM_K_troubleshooting/ip_r.jpg"
+                                            id="image_dg5_3lh_psb"/>
+                                    </fig>
+                                </li>
+                            </ul>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь, что в списке маршрутов отсутствуют контейнерные подсети,
+                            кроме docker0. Для этого просмотрите список контейнерных подсетей
+                            командой: </cmd>
+                        <info>
+                            <codeblock>docker network ls</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>При наличии в списке других подсетей найдите их идентификаторы сети в
+                            столбце NETWORK ID.</cmd>
+                        <stepxmp><fig id="fig_pr2_qzx_l5b">
+                                <title>Список контейнерных подсетей</title>
+                                <image
+                                    href="../../images/ITM_K_troubleshooting/docker_network_ls.png"
+                                    id="image_qr2_qzx_l5b"/>
+                            </fig> В приведенном выше списке идентификатор сети c именем bridge —
+                            bf34584f056d.</stepxmp>
+                    </step>
+                    <step>
+                        <cmd>При необходимости удалите контейнерные подсети, кроме docker0: </cmd>
+                        <info>
+                            <codeblock>docker network rm [идентификатор подсети]</codeblock>
+                            <note type="attention">Рекомендуется удалять контейнерную подсеть только
+                                в случае проблем с инициализацией.</note>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Создайте файл <codeph>/etc/docker/daemon.json</codeph>.</cmd>
+                    </step>
+                    <step id="set_docker0">
+                        <cmd>Добавьте в файл адрес узла сети и маску сети.</cmd>
+                        <stepxmp>
+                            <codeblock>{
+"bip": "172.17.77.1/24"
+}</codeblock>
+                        </stepxmp>
+                        <stepresult
+                            conref="../reusable/notes/docker0_result.dita#ReusableComponent_jch_swy_l5b/stepresult_kch_swy_l5b"/>
+                    </step>
+                    <step>
+                        <cmd>Перезапустите службу docker:</cmd>
+                        <info>
+                            <codeblock>systemctl restart docker</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Отредактируйте файл <codeph>pg_hba.conf</codeph>. Для этого:</cmd>
+                        <substeps id="substeps_p34_g4y_l5b">
+                            <substep>
+                                <cmd>Перейдите в режим редактирования файла
+                                        <codeph>pg_hba.conf</codeph> с помощью команды:</cmd>
+                                <info>
+                                    <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Измените IP-адрес и маску подсети контейнеров Docker в разделе
+                                    «# IPv4 local connections:» в строке вида:</cmd>
+                                <info>
+                                    <codeblock>host [имя БД] [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]</codeblock>
+                                </info>
+                            </substep>
+                            <substep
+                                conref="../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                                <cmd/>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step id="step_itg_jzy_l5b">
+                        <cmd>Отредактируйте файл <codeph>postgresql.conf</codeph>. Для этого: </cmd>
+                        <substeps id="substeps_wqb_t4y_l5b">
+                            <substep
+                                conref="../reusable/notes/postgresql_open.dita#ReusableComponent_yc4_lc2_m5b/substep_zc4_lc2_m5b">
+                                <cmd/>
+                            </substep>
+                            <substep>
+                                <cmd>Измените значение переменной <codeph>listen_addresses</codeph>
+                                    в разделе «CONNECTIONS AND AUTHENTICATION», чтобы оно
+                                    соответствовало представленному ниже: </cmd>
+                                <info><codeblock>listen_addresses = '127.0.0.1,172.17.77.1'</codeblock>Где:<ul
+                                        id="ul_s32_rqy_l5b">
+                                        <li>127.0.0.1 — локальный IP-адрес сервера <ph
+                                                outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                                /></ph><ph outputclass="onlypdf"><term
+                                                  keyref="datapk_itm_vm"/></ph><ph
+                                                outputclass="html"><term keyref="datapk_itm_vm"
+                                                /></ph>;</li>
+                                        <li>172.17.77.1 — IP-адрес подсети docker0, заданный на шаге
+                                                <xref
+                                                href="itm_m_net_conflict.dita#itm_m_net_conflict/set_docker0"
+                                            />.</li>
+                                    </ul></info>
+                            </substep>
+                            <substep
+                                conref="../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                                <cmd/>
+                            </substep>
+                            <substep
+                                conref="../reusable/notes/postgresql_restart_subd.dita#ReusableComponent_bbx_pzd_m5b/substep_cbx_pzd_m5b">
+                                <cmd/>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step conref="../../topics/reusable/notes/container_run.dita#ReusableComponent_prv_5ws_rrb/step_qrv_5ws_rrb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+            <remedy>
+                <title>Способ устранения 2</title>
+                <responsibleParty>
+                    <note
+                        conref="../reusable/notes/net_conflict_2_att.dita#ReusableComponent_tfy_kcn_rsb/note_vfy_kcn_rsb"/>
+                </responsibleParty>
+                <steps>
+                    <step
+                        conref="../reusable/notes/net_conflict_2_1.dita#ReusableComponent_gfv_lcn_rsb/step_hfv_lcn_rsb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Удалите все Docker-контейнеры, включая запущенные контейнеры:</cmd>
+                        <info>
+                            <codeblock>docker rm -f $(docker ps -a -q)</codeblock>
+                            <note type="attention">При использовании <ph outputclass="udvpdf"><term
+                                        keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                                        keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm_vm"/></ph> версии старше 1.3.1.0 эта
+                                команда приведет к удалению базы данных.</note>
+                        </info>
+                    </step>
+                    <step
+                        conref="../reusable/notes/net_conflict_2_3.dita#ReusableComponent_x35_ncn_rsb/step_y35_ncn_rsb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../reusable/notes/net_conflict_2_4.dita#ReusableComponent_bpn_4cn_rsb/step_cpn_4cn_rsb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../reusable/notes/net_conflict_2_5.dita#ReusableComponent_sfj_qcn_rsb/step_vfj_qcn_rsb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

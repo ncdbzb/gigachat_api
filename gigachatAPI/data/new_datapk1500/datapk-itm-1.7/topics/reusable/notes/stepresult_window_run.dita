@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_svq_r4c_jsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult id="stepresult_uvq_r4c_jsb">Появится окно «Выполнить».</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

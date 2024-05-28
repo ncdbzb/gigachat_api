@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qyc_kqn_pvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_syc_kqn_pvb">
+                <cmd>Назначьте скрипту полные права доступа:</cmd>
+                <info><codeblock>chmod +x logs_collector.sh</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

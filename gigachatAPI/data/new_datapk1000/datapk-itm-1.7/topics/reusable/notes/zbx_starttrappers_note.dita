@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xz5_j4m_trb">
+    <title>zbx_starttrappers_note</title>
+    <body><div id="div_yz5_j4m_trb">По крайней мере один процесс трапперa должен быть запущен для отображения
+            статуса доступности сервера и просмотра очереди в веб-интерфейсе.</div></body>
+</topic>

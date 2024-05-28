@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Нештатные ситуации и способы их устранения</title>
+    <topicref href="actions_after_problems/actions_after_problems.dita" collection-type="sequence">
+        <topicref href="actions_after_problems/web-interface_loading_problem.dita"/>
+        <topicref href="actions_after_problems/cannot_start_service.dita"/>
+        <topicref href="actions_after_problems/server_unavailable.dita"/>
+        <topicref href="actions_after_problems/itm_k_om_name_problem.dita"/>
+        <topicref href="actions_after_problems/itm_k_net_conflict.dita"/>
+        <topicref href="actions_after_problems/host_availability_snmp.dita"/>
+        <topicref href="actions_after_problems/itm_k_regexp_problem.dita"/>
+        <topicref href="actions_after_problems/big_queue.dita"/>
+        <topicref href="actions_after_problems/security_profile.dita"/>
+        <topicref href="actions_after_problems/problem_zbx_proxyconfigfrequency.dita"/>
+        <topicref href="actions_after_problems/encoding_err_template_import.dita"/>
+    </topicref>
+    <topicref href="unavailable_agents/unavailable_agents.dita" collection-type="sequence">
+        <topicref href="unavailable_agents/agent_dropped_access_permissions.dita"/>
+        <topicref href="unavailable_agents/connection_refused.dita"/>
+        <topicref href="unavailable_agents/connection_reset_by_peer.dita"/>
+        <topicref href="unavailable_agents/cannot_connect_to_timeout.dita"/>
+        <topicref href="unavailable_agents/itm_k_interrupted_sys_call.dita"/>
+        <topicref href="unavailable_agents/invalid_syntax_itm_k.dita"/>
+    </topicref>
+    <topicref href="log_script_itm_k.dita"/>
+    <topicref href="itm_k_hostname_change.dita"/>
+</map>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-K Справочная информация</title>
+    <topicref href="breadcrumbs/breadcrumbs.dita" collection-type="sequence">
+        <topicref href="breadcrumbs/breadcrumbs.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../reference_info/datapk_itm_versions.dita"/>
+    <topicref href="../reference_info/datapkitm_k_directories.dita"/>
+    <topicref href="rus_templates.dita" keys="rus_templates"/>
+    <topicref href="roles/roles.dita"/>
+    <topicref href="var_tables/var_tables.dita" collection-type="sequence">
+        <topicref href="var_tables/var_tables.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="datapk_itm_k_antivirus.dita"/>
+    <topicref href="challenges/challenges.dita"/>
+    <topicref href="../reference_info/macros.dita"/>
+    <topicref href="../reference_info/measurement_units.dita"/>
+    <topicref href="../reference_info/item_key_format.dita"/>
+    <topicref href="../reference_info/debug_mode.dita"/>
+</map>

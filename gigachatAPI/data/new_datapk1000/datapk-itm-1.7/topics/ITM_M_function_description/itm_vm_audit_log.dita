@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_dxz_mtx_lxb">
+    <title>Журнал событий</title>
+    <body>
+        <p>Страница <cite keyref="itm_vm_page_admin"/> → <cite keyref="itm_m_page_audit"/> содержит список событий и информацию о них. </p>
+        <p>Над списком событий выводится название «Журнал событий» и кнопка обновления данных на
+            странице <image href="../../images/ITM_M_icons/itmm_refresh_problems.png" id="image_unf_v5x_lxb"/>. Через 1 минуту рядом с кнопкой появляется счетчик времени
+            с момента обновления страницы. Время отображается только в минутах.</p>
+        <p>В списке отображаются следующие типы событий:</p>
+        <ul id="ul_qz5_fhy_lxb">
+            <li>События, связанные с серверами мониторинга.</li>
+            <li>События о проблемах с подключенных серверов мониторинга. Этот тип включает в себя
+                события о создании, изменении критичности или закрытии проблемы.</li>
+            <li>События, связанные с сервером <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>. Этот тип включает в себя
+                события об изменении общих сведений о <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> и события об изменении периода сбора
+                данных.</li>
+            <li>События об учетных записях сервера <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>. Этот тип включает в себя события о создании,
+                изменении, удалении, блокировке и разблокировке пользователя.</li>
+        </ul>
+        <p>В списке отображаются следующие свойства событий:</p>
+        <p>
+            <ul id="ul_itl_gzx_lxb">
+                <li>Время — дата и время создания события (используется часовой пояс сервера
+                    источника события).</li>
+                <li>Важность — уровень критичности события: <ul id="ul_os2_tzx_lxb">
+                        <li><image href="../../images/ITM_M_icons/ITM_M_icon_critical.png"
+                                id="image_lrd_5zx_lxb"/>;</li>
+                        <li><image href="../../images/ITM_M_icons/ITM_M_icon_high.png"
+                                id="image_asr_5zx_lxb"/>; </li>
+                        <li><image href="../../images/ITM_M_icons/ITM_M_icon_middle.png"
+                                id="image_wqj_vzx_lxb"/>; </li>
+                        <li><image href="../../images/ITM_M_icons/ITM_M_icon_warning.png"
+                                id="image_hn4_wzx_lxb"/>;</li>
+                        <li><image href="../../images/ITM_M_icons/ITM_M_icon_information.png"
+                                id="image_elz_wzx_lxb"/>; </li>
+                        <li><image href="../../images/ITM_M_icons/ITM_M_icon_undefined.png"
+                                id="image_swr_xzx_lxb"/>.</li>
+                    </ul></li>
+                <li>Действие — действие пользователя или событие проблемы.</li>
+                <li>Наименование — наименование события, объекта доступа или триггера.</li>
+                <li>Данные — дополнительное описание.</li>
+                <li>Объект — имя объекта мониторинга, с которым связана проблема. Это поле
+                    заполняется только для событий о проблемах.</li>
+                <li>Пользователь — пользователь, совершивший действие. Это поле заполняется только
+                    для действий пользователя.</li>
+                <li>Сервер — IP-адрес сервера источника события.</li>
+            </ul>
+        </p>
+        <fig>
+            <title>Список событий</title>
+            <div outputclass="html"><image href="../../images/ITM_M_screens/itm_m_audit_log.png" id="image_klw_ggy_lxb"/></div>
+            <div outputclass="onlypdf"><image href="../../images/ITM_M_screens/itm_m_audit_log.png"/></div>
+            <div outputclass="udvpdf"><image href="../../images/udv_itm_vm_pages/udv_itm_m_audit_log.png"/></div>
+        </fig>
+        <p>Для просмотра полного списка событий используются вертикальная прокрутка списка
+            справа.</p>
+        <p>По умолчанию события отсортированы по времени: самые новые события отображаются в верху
+            списка.</p>
+    </body>
+</topic>

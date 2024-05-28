@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ITM_design_and_implementation">
+    <title>Руководство по проектированию и внедрению</title>
+    <body>
+        <p>Документ содержит информацию, необходимую для проектирования и планирования внедрений
+            комплексного решения на базе <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>.</p>
+    </body>
+</topic>

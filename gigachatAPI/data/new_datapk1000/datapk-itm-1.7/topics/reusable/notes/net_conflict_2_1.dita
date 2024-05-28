@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gfv_lcn_rsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_hfv_lcn_rsb">
+                <cmd>Удалите все остановленные Docker-контейнеры:</cmd>
+                <info><codeblock>docker container prune -f</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

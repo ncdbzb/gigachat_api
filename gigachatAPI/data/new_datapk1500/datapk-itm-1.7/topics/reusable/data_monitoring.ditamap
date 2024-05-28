@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Мониторинг данных</title>
+    <topicref href="../usage/complex_screens/complex_screens.dita">
+        <topicref href="../usage/complex_screens/itm_k_complex_screens.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../usage/net_maps/net_maps.dita">
+        <topicref href="../usage/net_maps/itm_k_net_maps.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../usage/service_monitoring/service_monitoring.dita">
+        <topicref href="../usage/service_monitoring/itm_k_monitoring_service.ditamap"
+            format="ditamap"/>
+    </topicref>
+</map>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Нештатные ситуации и способы их устранения</title>
+    <topicref href="itm_m_net_conflict.dita"/>
+    <topicref href="itm_m_troubleshooting_siem.dita"/>
+    <topicref href="overcommit_memory_itm_m.dita"/>
+    <topicref href="itm_m_old_docker_error.dita"/>
+    <topicref href="itm_vm_interface_problems.dita"/>
+    <topicref href="itm_vm_interface_authorization_problem.dita"/>
+    <topicref href="itm_vm_hostname_change.dita"/>
+    <topicref href="log_script_itm_vm.dita"/>
+</map>

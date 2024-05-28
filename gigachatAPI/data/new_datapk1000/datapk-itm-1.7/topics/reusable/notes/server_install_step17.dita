@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qmy_thf_krb">
+    <title>server_install_step17</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Последовательно добавьте в iptables правила для корректной работы межсетевого
+                    экрана:</cmd>
+                <substeps>
+                    <substep
+                        conref="iptables1.dita#ReusableComponent_y3s_jld_1sb/substep_z3s_jld_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="iptables2.dita#ReusableComponent_i5l_p4d_1sb/substep_k5l_p4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="iptables4.dita#ReusableComponent_p1g_r4d_1sb/substep_q1g_r4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>для входа в режим редактирования базы данных с помощью команды
+                                <codeph>psql -p 10265 -h 127.0.0.1 -U [имя пользователя] [имя
+                                базы]</codeph>. Это правило нужно для внесения допольнительных
+                            правок после первичной настройки:</cmd>
+                        <info>
+                            <codeblock>iptables -I INPUT 3 -s [IP-адрес docker-сети/маска в формате CIDR] -j ACCEPT</codeblock>
+                        </info>
+                        <stepxmp>
+                            <codeblock>iptables -I INPUT 3 -s 127.0.0.1/32 -j ACCEPT</codeblock>
+                        </stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>для подсетей docker. Если значения подсетей отличаются от стандартных,
+                            можно посмотреть установленное значение в файле <codeph>.env</codeph>.
+                            Выполните по очереди команды:  </cmd>
+                        <info>
+                            <ol>
+                                <li><codeblock>iptables -I INPUT 4 -s [IP-адрес docker-сети/маска в формате CIDR] -j ACCEPT</codeblock>
+                        
+                        <p> Пример:
+                                        <codeblock>iptables -I INPUT 4 -s 172.17.0.0/24 -j ACCEPT</codeblock></p>
+                                </li>
+                                <li>
+                                    <codeblock>iptables -I INPUT 4 -s 172.16.239.0/24 -j ACCEPT</codeblock>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+            
+                    <substep
+                        conref="iptables5.dita#ReusableComponent_nxf_s4d_1sb/substep_oxf_s4d_1sb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="iptables6.dita#ReusableComponent_y3d_t4d_1sb/substep_bjd_t4d_1sb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

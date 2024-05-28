@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jzw_kgz_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_kzw_kgz_tsb">
+                <cmd>Установите все пакеты с помощью команды:</cmd>
+                <info>
+                    <codeblock id="codeblock_xbq_13z_hrb">yum -y install libxslt</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

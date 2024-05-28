@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="itm_k_max_connections_error">
+    <title>Ошибки в логах контейнеров: "connection to database ... failed: [0] Важно: оставшиеся
+        слоты подключений зарезервированы для подключения суперпользователя".</title>
+    
+    <troublebody>
+        <condition>
+            <p>При 1000 и более <abbreviated-form keyref="monitoring_object"/> серверу мониторинга
+                не хватает доступного количества одновременных подключений к серверу базы
+                данных.</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>В файле <codeph>/var/lib/jatoba/1/data/postgresql.conf</codeph> в переменной
+                        <cmdname keyref="max_connections"/> указано недостаточное максимальное
+                    количество одновременных подключений к серверу базы данных. Значение переменной
+                    по умолчанию: <cmdname keyref="max_connections"/> = 100. </p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd>Остановите контейнеры ITM всех уровней, запущенных на данном сервере: </cmd>
+                        <info>
+                            <codeblock>docker-compose down</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Увеличьте максимальное количество одновременных подключений к серверу
+                            базы данных. Для этого: </cmd>
+                        <substeps id="substeps_bn2_jys_vxb">
+                            <substep>
+                                <cmd>Откройте файл конфигурации Jatoba. По умолчанию это файл
+                                        <codeph>/var/lib/jatoba/1/data/postgresql.conf</codeph>: </cmd>
+                                <info>
+                                    <codeblock>vi /var/lib/jatoba/1/data/postgresql.conf</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Найдите строчку с переменной <cmdname keyref="max_connections"
+                                    /> и увеличьте ее значение.</cmd>
+                                <stepxmp>Если по умолчанию установлено значение <cmdname
+                                        keyref="max_connections"/>=100, увеличьте количество
+                                    подключений до 200.</stepxmp>
+                            </substep>
+                            <substep>
+                                <cmd>Сохраните изменения и закройте файл:</cmd>
+                                <info>
+                                    <codeblock>:wq</codeblock>
+                                </info>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step>
+                        <cmd>Перезапустите службу Jatoba:</cmd>
+                        <info>
+                            <codeblock>systemctl restart jatoba-*</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Запустите контейнеры ITM всех уровней, установленных на данном
+                            сервере:</cmd>
+                        <info>
+                            <codeblock>docker-compose up -d</codeblock>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

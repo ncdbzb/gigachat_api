@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации UDV-ITM-VM</mainbooktitle>
+    </booktitle>
+    <bookmeta>
+        <bookrights>
+            <copyrfirst><year>2021</year></copyrfirst>
+            <copyrlast>
+                <year>2023</year>
+            </copyrlast>
+            <bookowner><organization>ООО «СайберЛимфа»</organization></bookowner>
+        </bookrights>
+    </bookmeta>
+    <chapter href="topics/reusable/empty_glossary.dita">
+        <topicref href="topics/reusable/udv_itm_vm_glossary.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_intoduction/itm_vm_whats_new.dita" collection-type="sequence">
+        <topicref href="topics/ITM_M_intoduction/itm_vm_whatsnew_doc.dita"/>
+    </chapter>
+    <chapter href="topics/ITM_M_intoduction/itm_m_introduction.dita" collection-type="sequence">
+        <topicref href="topics/ITM_M_intoduction/itm_m_introduction.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_prepare_work/udv_itm_m_prepare_work.dita" collection-type="sequence">
+        <topicref
+            href="topics/ITM_M_prepare_work/ITM_M_distributive_content/itm_m_distributive_content.dita"/>
+        <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_install_redos_general.dita" collection-type="sequence">
+            <topicref href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_ntp.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_extra_package_install_redos_7_3.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_redos_package_internet.dita"/>
+            <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_install_tom_bd.dita" collection-type="sequence">
+                <topicref
+                    href="topics/ITM_M_prepare_work/ITM_M_data_program_download/2tomes/mount.dita"/>
+                <topicref
+                    href="topics/ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.dita"
+                />
+            </topicref>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_subd_config.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_iptables_config.dita"/>
+            <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_install_redos_server.dita"/>
+        </topicref>
+        <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_centos_8_0.dita" collection-type="sequence">
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_centos_8_4_2105.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_postgresql_v14.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_docker.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_centos_package_internet.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_subd_config_centos.dita"/>
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_iptables_config_centos.dita"/>
+            <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_centos_8_install_server.dita"/>
+        </topicref>
+        <topicref
+            href="topics/ITM_M_prepare_work/ITM_VM_astra_linux/udv_itm_vm_astra_linux_1_7.dita" collection-type="sequence">
+            <topicref
+                href="topics/ITM_M_prepare_work/ITM_VM_astra_linux/udv_itm_vm_astra_linux_1_7_0.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_update.dita"/>
+        <topicref href="topics/ITM_M_prepare_work/udv_itm_vm_update_16_to_17.dita"/>
+        <topicref href="topics/ITM_M_prepare_work/itmvm_cl_certif.dita" collection-type="sequence">
+            <topicref href="topics/ITM_M_prepare_work/itmvm_root_cert.dita"/>
+            <topicref href="topics/ITM_M_prepare_work/itmvm_cert_key_web_interface.dita"/>
+            <topicref href="topics/ITM_M_prepare_work/itmvm_cert_admin.dita"/>
+        </topicref>
+        <topicref href="topics/ITM_M_prepare_work/ITM_M_data_program_download/config_siem.dita"/>
+        <topicref
+            href="topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_connect_web.dita"/>
+    </chapter>
+    <chapter href="topics/ITM_M_function_description/itm_m_function_description.dita"
+        collection-type="sequence">
+        <topicref href="topics/ITM_M_function_description/itm_m_function_description.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/db_backup_and_restore_itm_vm.dita" collection-type="sequence">
+        <topicref href="topics/db_backup_restore_itm_vm.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_troubleshooting/udv_troubleshooting.dita" collection-type="sequence">
+        <topicref href="topics/ITM_M_troubleshooting/itm_m_net_conflict.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/itm_m_troubleshooting_siem.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/overcommit_memory_itm_m.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/itm_m_old_docker_error.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/web_interface_err_udv_itm_vm.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/udv_itm_vm_cannot_run_web_interface.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/itm_vm_hostname_change.dita"/>
+        <topicref href="topics/ITM_M_troubleshooting/log_script_itm_vm.dita"/>
+    </chapter>
+    <chapter href="topics/ITM_M_reference_info/itm_m_reference_info.dita" collection-type="sequence">
+        <topicref href="topics/ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.dita"
+            collection-type="sequence">
+            <topicref href="topics/ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_M_reference_info/udv_itm_vm_versions.dita"/>
+        <topicref href="topics/ITM_M_reference_info/itmm_roles.dita"/>
+        <topicref href="topics/ITM_M_reference_info/udv_itm_vm_directories.dita"/>
+        <topicref href="topics/ITM_M_reference_info/udv_itm_vm_antivirus.dita"/>
+        <topicref href="topics/ITM_M_reference_info/itm_m_env.dita"/>
+        <topicref href="topics/ITM_M_reference_info/itmm_password_secret_key.dita"/>
+        <topicref href="topics/ITM_M_reference_info/siem.dita"/>
+        <topicref href="topics/ITM_M_reference_info/itm_vm_siem_actions.dita"/>
+        <topicref href="topics/ITM_M_reference_info/siem_events.dita" collection-type="sequence">
+            <topicref href="topics/ITM_M_reference_info/siem_objects.dita"/>
+        </topicref>
+        <topicref href="topics/ITM_M_reference_info/itm_vm_iptables.dita"/>
+    </chapter>
+    <chapter href="topics/ITM_M_reference_info/udv_itm_vm_changelog.dita"/>
+</bookmap>

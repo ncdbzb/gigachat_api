@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="agentless_snmp">
+    <title>Настройка АСО </title>
+    <body
+        conref="../../../reusable/agentless/agentless_snmp.dita#ReusableComponent_xsd_hvn_y5b/body_ysd_hvn_y5b"/>
+</topic>

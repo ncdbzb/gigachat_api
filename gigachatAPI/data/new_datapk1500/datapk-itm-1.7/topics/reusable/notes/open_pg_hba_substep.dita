@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_d2g_2qw_gtb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_h2g_2qw_gtb">
+                        <cmd>Войдите в режим редактирования файла <codeph>pg_hba.conf</codeph> с
+                            помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/[jatoba_version]/data/pg_hba.conf</codeblock>
+                            <p>В этой команде <codeph>jatoba_version</codeph> — первая цифра в
+                                версии Jatoba.</p>
+                        </info>
+                        <stepxmp>Для Jatoba версии 4.5 выполните команду:
+                            <codeblock>vi /var/lib/jatoba/4/data/pg_hba.conf</codeblock>
+                        </stepxmp>
+                        <info>
+                            <p>
+                                <note type="attention">При использовании двух томов замените
+                                    директорию файла на <codeph>/storage/base</codeph>.</note>
+                            </p>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_osn_whr_trb">
+    <title>ZBX_VMWARECACHESIZE note</title>
+    <body><div id="div_psn_whr_trb">Можно использовать внутренние проверки VMware для мониторинга использования кэша VMware. Разделяемая память не выделяется, если экземпляры VMware коллекторов не настроены на запуск.</div></body>
+</topic>

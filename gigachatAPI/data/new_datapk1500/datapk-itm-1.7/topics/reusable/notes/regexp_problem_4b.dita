@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zzk_mwg_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_a1l_mwg_wrb">Выберите тип выражения в выпадающем
+                    списке.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

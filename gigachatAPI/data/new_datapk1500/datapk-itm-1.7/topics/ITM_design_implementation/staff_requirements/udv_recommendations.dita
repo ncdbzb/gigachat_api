@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_recommendations">
+    <title>Рекомендации по внедрению комплекса ITM</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_c1t_ytf_jzb">
+                <li><xref href="udv_itm_k_recommend.dita"/></li>
+                <li><xref href="udv_itm_algorithm_add_om.dita"/></li>
+                <li><xref href="udv_itm_vm_recommend.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

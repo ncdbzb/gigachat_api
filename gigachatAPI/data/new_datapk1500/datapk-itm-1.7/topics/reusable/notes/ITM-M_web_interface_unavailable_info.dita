@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_jxy_tvc_zwb">
+    <title></title>
+    <troublebody id="troublebody_mxy_tvc_zwb"><condition><p>При попытке зайти в веб-интерфейс <abbreviated-form keyref="datapk_itm_vm"/> выводится сообщение «Внутренняя ошибка сервера». При вызове окна «инструменты разработчика» через F12 выводятся сообщения о некорректном шлюзе. </p><p>При этом контейнеры не перезапускаются, в контейнере itm_m_user_service ошибка вида: </p><codeblock>"Не удалось подключиться к БД postgresql+asyncpg//postgres:**********@host.docker.internal:10265/user_service - 
+в pg_hba.conf нет записи для компьютера "172.15.0.6", пользователя "itmm_user", базы "user_service", SSL выкл."</codeblock></condition><troubleSolution><cause><title>Причина</title><p>В файле <codeph conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"/> указано следующее значение для подключения: <codeblock>host itmm itmm_user 172.15.0.1/24 md5</codeblock></p><p>Это значение подходит только для одной базы данных, нужно разрешить подключение для нескольких баз данных.</p></cause><remedy><title>Способ устранения</title><responsibleParty/><steps><step conref="container_stop.dita#ReusableComponent_v5l_qws_rrb/step_w5l_qws_rrb"><cmd/></step><step><cmd>Отредактируйте файл <codeph conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"/>:</cmd><substeps id="substeps_vt4_qbl_ctb"><substep><cmd>перейдите в режим редактирования файла:</cmd><info><codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock></info></substep><substep><cmd>найдите строку, вызывающую ошибку:</cmd><info><codeblock>host itmm [имя пользователя БД] 172.15.0.1/24 md5</codeblock></info><stepxmp>для пользователя itmm_user строка будет иметь вид: <codeblock>host itmm itmm_user 172.15.0.1/24 md5</codeblock></stepxmp></substep><substep>
+                                <cmd>отредактируйте строку, чтобы установить подключение к
+                                    нескольким БД:</cmd>
+                                <info>
+                                    <codeblock>host all [имя пользователя БД] 172.15.0.1/24 md5</codeblock>
+                                </info>
+                            </substep><substep conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb"><cmd/></substep></substeps></step><step conref="jatoba_restart.dita#ReusableComponent_wrm_nj3_zrb/step_xrm_nj3_zrb"><cmd/></step><step conref="container_run.dita#ReusableComponent_prv_5ws_rrb/step_qrv_5ws_rrb"><cmd/><info> </info></step></steps></remedy></troubleSolution></troublebody>
+</troubleshooting>

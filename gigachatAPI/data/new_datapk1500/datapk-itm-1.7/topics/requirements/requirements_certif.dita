@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_isx_dhp_ssb">
+    <title>Требования к комплексу и его среде функционирования</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_nbc_gxp_grb">
+            <li><xref href="../certification/hardware_requirements.dita"/></li>
+            <li><xref href="../certification/software_requirements.dita"/></li>
+            <li><xref href="../certification/label_pack_requirements.dita"/></li>
+            <li><xref href="../certification/actions_accept.dita"/></li>
+            <li><xref href="safe_installation/safe_installation_actions_certif.dita"/>
+                <ul id="ul_tdk_1yp_grb">
+                    <li><xref href="safe_installation/RedOS_installation/certif_installation_redos.dita"
+                        /></li>
+                    <li><xref href="safe_installation/datapk_synchro/datapk_synchro.dita"/></li>
+                    <li><xref href="safe_installation/first_configuration/first_configuration.dita"
+                        /></li>
+                    <li><xref href="safe_installation/agent_installation/agents_installation.dita"
+                        /></li>
+                    <li><xref href="safe_installation/agentless_config/agentless_config.dita"/></li>
+                </ul></li>
+            <li><xref href="itm_k_update_1_4_1_5_to_1_6_1.dita"/></li>
+            <li><xref href="itm_k_update_1_6_to_1_6_1.dita"/></li>
+            <li><xref href="../certification/safe_complex_usage.dita"/></li>
+            <li><xref href="safe_environment_config.dita"/></li>
+            <li><xref href="mib.dita"/></li>
+            <li><xref href="encryption_config.dita"/>
+                <ul id="ul_xpl_ndn_bsb">
+                    <li><xref href="encryption_passive_proxy.dita"/></li>
+                    <li><xref href="config_encryption_datapk_itm_k_agents.dita"/></li>
+                </ul></li>
+            <li><xref href="ldaps_config.dita"/></li>
+            <li><xref href="ITM-K_LDAP.dita"/></li>
+            <li><xref href="itmk_config_notifications.dita"/></li>
+        </ul>
+    </body>
+</topic>

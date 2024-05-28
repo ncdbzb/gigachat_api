@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="actions">
+    <glossterm>Действия</glossterm>
+    <glossdef>Подраздел настроек, содержащий страницы 
+    <cite keyref="config_actions_trigger"/>, <cite keyref="config_actions_detection"/>, <cite keyref="config_actions_autoreg"/>, <cite keyref="config_actions_internal"/>.
+    </glossdef>
+</glossentry>

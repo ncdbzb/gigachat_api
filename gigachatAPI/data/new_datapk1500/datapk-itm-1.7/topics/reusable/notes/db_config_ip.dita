@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_r3c_2xc_1sb">
+    <title/>
+    <body>
+        <div>
+            <ph id="ph_s3c_2xc_1sb">Укажите базы данных, ранее созданных пользователей БД, которым
+                разрешен доступ к ним, и IP-адреса для удаленного подключения в следующем
+                формате:</ph>
+        </div>
+    </body>
+</topic>

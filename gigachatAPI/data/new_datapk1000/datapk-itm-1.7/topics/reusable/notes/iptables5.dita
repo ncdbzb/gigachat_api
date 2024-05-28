@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nxf_s4d_1sb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_oxf_s4d_1sb">
+                        <cmd>Для сброса входящих запрещенных соединений:</cmd>
+                        <info>
+                            <codeblock>iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited</codeblock>
+                        </info>
+                    </substep> 
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

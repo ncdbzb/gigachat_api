@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_k_ntp">
+    <title>Настройка синхронизации времени (NTP)</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context
+            conref="../../reusable/notes/ntp_context.dita#ReusableComponent_p3z_qjk_qrb/context_axr_z3k_qrb"
+            id="context_slz_qjk_qrb"/>
+        <steps
+            conref="../../reusable/notes/ntp_steps.dita#ReusableComponent_akb_tjk_qrb/steps_bxr_z3k_qrb"
+            >
+            <step>
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

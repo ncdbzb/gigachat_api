@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ugl_zmr_trb">
+    <title>ZBX_HOUSEKEEPING FREQUENCY note</title>
+    <body><div id="div_vgl_zmr_trb"><note>Чтобы отключить автоматическую очистку истории, установите <cmdname keyref="zbx_housekeeping_frequency"/>=0. В этом случае процедуру очистки истории можно запустить только с помощью опции контроля управления housekeeper_execute, и периодом удаления устаревшей информации является 4-кратный период, начиная с последнего цикла удаления истории, но не менее чем 4 часа и не более 4 дней.</note></div></body>
+</topic>

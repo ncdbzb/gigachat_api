@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zwt_hjk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_axt_hjk_tsb">
+                        <cmd>Убедитесь, что переменные <codeph>log_timezone</codeph> и
+                                <codeph>timezone</codeph> соответствуют текущему часовому
+                            поясу.</cmd>
+                        <stepxmp>корректным значением для Екатеринбурга будет
+                                <codeph>Asia/Yekaterinburg</codeph>.</stepxmp>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

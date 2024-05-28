@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_distributed_monitoring">
+    <title>Распределенный мониторинг</title>
+    <body>
+        <p>
+            <div
+                conref="../../reusable/notes/distributed_monitoring_info.dita#ReusableComponent_dd4_w2m_1xb/div_fd4_w2m_1xb"
+            />
+        </p>
+        <p>В этом разделе:<ul id="ul_ejb_zfm_1xb">
+                <li><xref href="agent_server/udv_agent_server.dita"/></li>
+                <li><xref href="agent_server/udv_agent_server_configuration.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

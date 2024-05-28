@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_gxk_wpk_trb">
+    <title>zbx_buffersize_info</title>
+    <body><div id="div_hxk_wpk_trb"><p>Максимальное количество значений в буфере памяти. Агент будет отправлять все собранные данные серверу при заполнении буфера.</p></div></body>
+</topic>

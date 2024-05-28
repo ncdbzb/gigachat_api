@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка DATAPK ITM-VM на ОС Centos 8</title>
+    <topicref href="itm_vm_centos_8_4_2105.dita"/>
+    <topicref href="itm_vm_postgresql_v14.dita"/>
+    <topicref href="itm_vm_docker.dita"/>
+    <topicref href="itm_vm_centos_package_internet.dita"/>
+    <topicref href="itm_m_subd_config_centos.dita"/>
+    <topicref href="itm_m_iptables_config_centos.dita"/>
+    <topicref href="centos_install_datapk_itm_vm.dita"/>
+</map>

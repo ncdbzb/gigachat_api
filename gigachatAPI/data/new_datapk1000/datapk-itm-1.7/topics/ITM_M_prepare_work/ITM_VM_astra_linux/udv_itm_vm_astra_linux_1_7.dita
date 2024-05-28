@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_itm_vm_astra_linux_1_7">
+    <title>Установка UDV-ITM-VM на ОС Astra Linux 1.7</title>
+    <body>
+        <p>В этом разделе:<ul>
+            <li><xref href="configuring_repositories.dita"/></li>
+            <li><xref href="postgresql_v11.dita"/></li>
+            <li><xref href="configuring_postgresql.dita"/></li>
+            <li><xref href="docker_astra.dita"/></li>
+            <li><xref href="configuring_iptables.dita"/></li>
+            <li><xref href="hostname.dita"/></li>
+            <li><xref href="installing_itm_vm_astra.dita"/></li>
+        </ul></p>
+    </body>
+</topic>

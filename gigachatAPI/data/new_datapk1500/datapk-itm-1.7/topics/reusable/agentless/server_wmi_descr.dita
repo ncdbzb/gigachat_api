@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_knf_1wn_y5b">
+    <title></title>
+    <shortdesc id="shortdesc_lnf_1wn_y5b">Для корректного сбора данных с помощью протокола <ph
+            conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+        /> необходимо настроить сбор данных на сервере <ph outputclass="html">консолидации</ph><ph
+            outputclass="onlypdf">консолидации</ph><ph outputclass="udvpdf">мониторинга</ph>. </shortdesc>
+    <taskbody></taskbody>
+</task>

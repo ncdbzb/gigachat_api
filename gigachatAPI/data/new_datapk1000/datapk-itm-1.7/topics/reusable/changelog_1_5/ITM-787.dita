@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ngh_hmf_mvb">
+    <title></title>
+    <body><p id="p_ogh_hmf_mvb">Добавлена возможность указать 19 версию DATAPK в переменной <cmdname keyref="datapk_version"/>.</p></body>
+</topic>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dfj_fwc_vvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_efj_fwc_vvb">
+                <cmd>Остановите работу сервера:</cmd>
+                <info><codeblock>docker-compose down</codeblock></info>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

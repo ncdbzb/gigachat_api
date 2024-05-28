@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_cqw_rs2_trb">
+    <title>zbx_logslowqueries_info</title>
+    <body><div id="div_dqw_rs2_trb"><p>Максимальная длительность выполнения запросов в базу данных до записи в журнал в
+                миллисекундах.</p><p>0 — не журналировать медленные запросы.</p><note>Эта опция активируется, начиная с DebugLevel=3.</note></div></body>
+</topic>

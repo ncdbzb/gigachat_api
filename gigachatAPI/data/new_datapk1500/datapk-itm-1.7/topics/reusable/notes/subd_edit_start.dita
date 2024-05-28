@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ztx_l12_m5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_a5x_l12_m5b">
+                        <cmd>Перейдите в режим редактирования службы СУБД:</cmd>
+                        <info><codeblock>systemctl edit jatoba-*.service</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

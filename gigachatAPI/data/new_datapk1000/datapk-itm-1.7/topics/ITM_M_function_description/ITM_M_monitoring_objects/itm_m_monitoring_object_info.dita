@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_monitoring_server_info">
+    <title>Просмотр информации об объекте мониторинга</title>
+    <body>
+        <p>Окно просмотра информации об объекте мониторинга появляется:<ul id="ul_ztz_ztz_2zb">
+                <li>при нажатии в любом месте строки конкретного <abbreviated-form
+                        keyref="monitoring_object"/> на странице <cite
+                        keyref="itm_m_page_object_monitoring"/>, кроме значений в столбцах «Филиал»,
+                    «ТК», «Проблемы» и кнопки в столбце «Ссылки»;</li>
+                <li>при нажатии на значение в столбце «Объект» на странице <cite
+                        keyref="itm_m_page_problems"/>.</li>
+            </ul> Все поля окна выводятся в режиме просмотра без возможности изменения.</p>
+        <fig>
+            <title>Окно просмотра информации об объекте мониторинга</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_OM_info2.png"/>
+        </fig>
+        <p>Заголовок окна содержит имя объекта мониторинга.</p>
+        <p>Окно содержит следующие поля:</p>
+        <p>
+            <ul id="ul_jtp_w4w_nrb">
+                <li>ID — идентификатор объекта мониторинга;</li>
+                <li>Наименование — видимое имя объекта мониторинга;</li>
+                <li>Сетевое имя ОМ — сетевое имя объекта мониторинга, соответствует имени узла сети
+                    в <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>; </li>
+                <li>Статус — актуальный статус объекта мониторинга. Соответствует статусу в столбце
+                    «Мониторинг» в списке <abbreviated-form keyref="monitoring_object"/>. Доступные
+                        значения:<ul id="ul_ylz_vqw_nrb">
+                        <li>Активирован;</li>
+                        <li>Недоступен;</li>
+                        <li>Деактивирован.</li>
+                    </ul>Если <abbreviated-form keyref="monitoring_object"/> находится на
+                    техническом обслуживании, информация о дате и времени начала технического
+                    обслуживания будет указана рядом со статусом <abbreviated-form
+                        keyref="monitoring_object"/>.</li>
+                <li>Обновление статуса — дата и время последнего обновления статуса объекта
+                    мониторинга. По умолчанию обновление статуса <abbreviated-form
+                        keyref="monitoring_object"/> происходит каждые 3 минуты;</li>
+                <li>Филиал — название филиала, где находится объект мониторинга;</li>
+                <li>Технологический комплекс — название <abbreviated-form keyref="to"/>, где
+                    находится объект мониторинга;</li>
+                <li>Система — наименование защищаемой <abbreviated-form keyref="asm_tp"/>; <note>В
+                    <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> значение этого поля записано в теге asu_tp. </note></li>
+                <li>Тип ОМ — тип объекта мониторинга, указанный в инвентарных данных
+                        <abbreviated-form keyref="monitoring_object"/>; <note id="note_qj4_vtw_nrb"
+                        >Поле Тип ОМ соответствует типу ОЗ в DATAPK.</note></li>
+                <li>Операционная система — операционная система объекта мониторинга, указанная в
+                    карточке инвентарных данных <abbreviated-form keyref="monitoring_object"/> в
+                    <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>;</li>
+                <li>Способ мониторинга — описывает, каким образом осуществляется мониторинг.
+                    Возможные значения:<ul id="ul_ddg_zbx_nrb">
+                        <li>Агент — получение данных с объектов мониторинга с применением
+                            агентов;</li>
+                        <li><ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            /> — получение данных с объектов мониторинга по протоколу <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />;</li>
+                        <li><ph
+                            conref="../../reusable/protocol_names/JMX.dita#ReusableComponent_bmr_lbg_4yb/ph_cmr_lbg_4yb"
+                            /> — получение данных с объектов мониторинга c использованием технологии
+                            JMX;</li>
+                        <li><ph
+                                conref="../../reusable/protocol_names/IPMI.dita#ReusableComponent_obb_zhf_4yb/ph_pbb_zhf_4yb"
+                            /> — получение данных с объектов мониторинга c использованием технологии
+                                <ph
+                                    conref="../../reusable/protocol_names/IPMI.dita#ReusableComponent_obb_zhf_4yb/ph_pbb_zhf_4yb"
+                            />.</li>
+                    </ul></li>
+                <li>Описание — текстовое описание объекта мониторинга, внесенное на сервере
+                    <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>;</li>
+                <li>Обновление свойств ОМ — дата и время последнего полного обновления информации об
+                    объекте мониторинга. По умолчанию обновление свойств <abbreviated-form
+                        keyref="monitoring_object"/> происходит каждые 480 минут;</li>
+                <li>Внешние ссылки — содержит ссылки, добавленные в качестве значения полей «URL A»,
+                    «URL B», «URL C» в инвентарных данных на сервере мониторинга <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_k"/></ph> или Zabbix. В окне
+                    отображаются только те поля, которые содержат ссылки. Если на сервере
+                    мониторинга не заполнено ни одно из полей «URL A», «URL B», «URL C», то раздел
+                    «Внешние ссылки» не будет отображаться.  </li>
+                <li>Сетевые интерфейсы — содержит список всех интерфейсов, которые есть у объекта
+                    мониторинга. Для каждого интерфейса указан IP-адрес или DNS-имя.</li>
+            </ul>
+        </p>
+    </body>
+</topic>

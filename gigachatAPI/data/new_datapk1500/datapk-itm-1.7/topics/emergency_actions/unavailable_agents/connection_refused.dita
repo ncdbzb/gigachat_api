@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="onnection_refused">
+    <title>Ошибка вида «Get value from agent failed: cannot connect to &lt;...>: [111] Connection
+        refused»</title>
+    <troublebody>
+        <condition>
+            <p>В веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> индикатор статуса доступности агента имеет красный
+                цвет: <image href="../../../images/first_configuration/zbx_red.png"
+                    id="image_tqg_d1t_fsb"/>. При наведении курсора на индикатор появляется
+                всплывающая подказка с ошибкой вида «Get value from agent failed: cannot connect to
+                &lt;...>: [111] Connection refused».</p>
+            <p>В качестве причин проблемы с доступностью агента рассмотрены следующие:<ul
+                id="ul_jnm_grt_fsb">
+                <li>Служба агента не запущена.</li>
+                <li>Мониторинг агента, поддерживающего подключение только через DNS, осуществляется
+                        через IP.</li>
+            </ul></p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина 1</title>
+                <p>Служба агента не запущена.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения для агентов Linux</title>
+                <steps>
+                    <step>
+                        <cmd>Запустите службу агента:</cmd>
+                        <info>
+                            <codeblock>systemctl start zabbix-agent</codeblock>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+            <remedy>
+                <title>Способ устранения для агентов Windows</title>
+                <steps>
+                    <step>
+                        <cmd>Запустите службу агента:</cmd>
+                        <info>
+                            <ol id="ol_snj_khn_fsb">
+                                <li>Одновременно нажмите клавиши Win+R.</li>
+                                <li>Введите команду <codeph>services.msc</codeph>.</li>
+                                <li>Найдите в появившемся окне в списке служб Zabbix Agent и
+                                    выделите строку с ней.</li>
+                                <li>Нажмите правой кнопкой мыши на строке со службой Zabbix
+                                    Agent.</li>
+                                <li>В контекстном меню выберите «Запустить».</li>
+                            </ol>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <title>Причина 2</title>
+                <p>Мониторинг агента, поддерживающего подключение только через DNS, осуществляется
+                    через IP.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd>В веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> перейдите на страницу <cite
+                            keyref="configuration"/>→<cite keyref="hosts_configuration"/>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Нажмите на имя узла сети с ошибкой.</cmd>
+                        <stepresult>Откроется страница редактирования узла сети.</stepresult>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь, что мониторинг агента осуществляется через IP-адрес:</cmd>
+                        <substeps id="substeps_bsw_5vs_fsb">
+                            <substep>
+                                <cmd>заполнено поле «IP-адрес»;</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>выбран режим «Подключиться через IP».</cmd>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step>
+                        <cmd>Заполните поле «DNS имя».</cmd>
+                    </step>
+                    <step>
+                        <cmd>Выберите режим «Подключиться через DNS».</cmd>
+                    </step>
+                    <step>
+                        <cmd>Нажмите на кнопку «Обновить».</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

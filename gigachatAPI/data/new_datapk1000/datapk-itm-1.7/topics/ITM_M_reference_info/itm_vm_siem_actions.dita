@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_vm_siem_actions">
+    <title>Список действий пользователя, о которых отправляются события в SIEM</title>
+    <body>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_fc2_2gd_4vb">
+                <title><b>Cписок действий пользователя в ITM-VM, о которых отправляются события в
+                        SIEM</b></title>
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <colspec colname="c4" colnum="4" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Действие</entry>
+                            <entry>Значение поля resource</entry>
+                            <entry>Значение поля action</entry>
+                            <entry>Примечание</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Создание сервера мониторинга</entry>
+                            <entry>itm_servers</entry>
+                            <entry>0</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Обновление сервера мониторинга</entry>
+                            <entry>itm_servers</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Удаление сервера мониторинга</entry>
+                            <entry>itm_servers</entry>
+                            <entry>2</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Изменение параметров подключения к серверу мониторинга</entry>
+                            <entry>itm_servers</entry>
+                            <entry>2</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Успешная авторизация пользователя</entry>
+                            <entry>login</entry>
+                            <entry>3</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Не успешная авторизация пользователя</entry>
+                            <entry>login</entry>
+                            <entry>7</entry>
+                            <entry>
+                                <p>В поле user — придет ip-адрес клиента.</p>
+                                <p>В случае, если клиент неправильно ввел логин/пароль 5 раз подряд,
+                                    то он его IP-адрес будет заблокирован на 5 минут, в таком случае
+                                    в поле severity придет большее значение, чем для простой не
+                                    успешной авторизации.</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Создание пользователя</entry>
+                            <entry>users</entry>
+                            <entry>0</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Обновление пользователя</entry>
+                            <entry>users</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Блокировка пользователя</entry>
+                            <entry>users</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Разблокировка пользователя</entry>
+                            <entry>users</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Удаление пользователя</entry>
+                            <entry>users</entry>
+                            <entry>2</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Создание правила уведомления</entry>
+                            <entry>notification_rule</entry>
+                            <entry>0</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Обновление правила уведомления</entry>
+                            <entry>notification_rule</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Удаление правила уведомления</entry>
+                            <entry>notification_rule</entry>
+                            <entry>2</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Обновление базовых настроек</entry>
+                            <entry>base_settings</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Обновление настроек периода сбора данных</entry>
+                            <entry>sync_settings</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Обновление длительности сессии</entry>
+                            <entry>session_settings</entry>
+                            <entry>1</entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

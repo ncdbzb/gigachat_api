@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="startjavapollers">
+    <glossterm>ZBX_STARTJAVAPOLLERS</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/startjavapollers_info.dita#ReusableComponent_avn_jkb_5tb/p_bvn_jkb_5tb"
+        />
+    </glossdef>
+</glossentry>

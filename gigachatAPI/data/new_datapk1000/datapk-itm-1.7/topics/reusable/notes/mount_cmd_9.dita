@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_kp2_rqk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_lp2_rqk_tsb">Просмотрите файловые системы и UUID в системе одним из следующих способов:</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

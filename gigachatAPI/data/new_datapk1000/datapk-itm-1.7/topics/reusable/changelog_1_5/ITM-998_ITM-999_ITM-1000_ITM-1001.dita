@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_etm_dbx_nvb">
+    <title></title>
+    <body><p id="p_ftm_dbx_nvb">Добавлена возможность подключения Zabbix v. 5.2, 5.0 и 4.0 в качестве серверов мониторинга.</p></body>
+</topic>

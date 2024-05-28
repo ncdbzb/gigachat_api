@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="itm_a_lsof">
+    <title>Ошибка в логах контейнеров «**** PostgreSQL server is not available.»</title>
+    <troublebody>
+        <condition id="condition_oqc_vg2_vvb">
+            <p><ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_a"/></ph> недоступен, в логах содержится ошибка «****
+                PostgreSQL server is not available. Waiting 5 seconds…».</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина 1</title>
+                <p>Запуск службы docker после службы СУБД.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd>Убедитесь, что причина проблемы в запуске службы docker после службы
+                            СУБД. На это указывают следующие признаки: </cmd>
+                        <substeps>
+                            <substep>
+                                <cmd>При проверке статуса службы СУБД командой <codeph>systemctl
+                                        status jatoba-*</codeph> выясняется, что служба не запущена.
+                                </cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Появляется сообщение «СООБЩЕНИЕ: не удалось привязаться к
+                                    адресу IPv4 "172.16.239.1": Cannot assign requested address
+                                    ПРЕДУПРЕЖДЕНИЕ: не удалось создать принимающий сокет для
+                                    "172.16.239.1"».</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>При запуске команды <codeph>lsof -i -P -n</codeph> в выводе нет
+                                    сокета для 172.16.239.1. </cmd>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step>
+                        <cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd>
+                        <substeps>
+                            <substep>
+                                <cmd>Перейдите в режим редактирования службы СУБД:</cmd>
+                                <info>
+                                    <codeblock>systemctl edit jatoba-*.service</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Добавьте блок [Unit]:</cmd>
+                                <info>
+                                    <codeblock>[Unit]
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Для применения изменений в настройках службы СУБД выполните
+                                    команду:</cmd>
+                                <info>
+                                    <codeblock>systemctl daemon-reload</codeblock>
+                                </info>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step>
+                        <cmd>Проверьте состояние службы Jatoba:</cmd>
+                        <info>
+                            <codeblock>systemctl status jatoba-*</codeblock>
+                        </info>
+                    </step>
+                    <step
+                        conref="../reusable/steps/install_itm_k_start_jatoba.dita#ReusableComponent_bm1_qxc_vvb/step_dm1_qxc_vvb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <title>Причина 2</title>
+                <p>Опечатки в значениях IP-адресов в в файле <codeph>pg_hba.conf</codeph>.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps>
+                    <step>
+                        <cmd conref="../reusable/notes/open_cmd.dita#ReusableComponent_hqh_sg3_zrb/cmd_jqh_sg3_zrb"/>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в режим редактирования файла <codeph>pg_hba.conf</codeph>: </cmd>
+                        <info><codeblock>vi /var/lib/jatoba/[jatoba_version]/data/pg_hba.conf</codeblock>В
+                            этой команде <codeph>jatoba_version</codeph> — первая цифра версии
+                            Jatoba.</info>
+                        <stepxmp>При использовании Jatoba 4.5 выполните
+                            команду:<codeblock>vi /var/lib/jatoba/4/data/pg_hba.conf</codeblock></stepxmp>
+                    </step>
+                    <step>
+                        <cmd>Проверьте и при необходимости исправьте IP-адрес.</cmd>
+                    </step>
+                    <step conref="../reusable/notes/exit_wq.dita#ReusableComponent_vrx_hh3_zrb/step_wrx_hh3_zrb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../reusable/notes/jatoba_restart.dita#ReusableComponent_wrm_nj3_zrb/step_xrm_nj3_zrb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <title>Причина 3</title>
+                <p>Опечатки в значении порта в файле <codeph>postgresql.conf</codeph>.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+          
+                <steps id="steps_msk_zby_nxb">
+                    <step>
+                        <cmd conref="../reusable/notes/open_cmd.dita#ReusableComponent_hqh_sg3_zrb/cmd_jqh_sg3_zrb"/>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в режим редактирования файла
+                            <codeph>postgresql.conf</codeph>:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/[jatoba_version]/data/postgresql.conf</codeblock>
+                        </info>
+                        <info>В этой команде <codeph>jatoba_version</codeph> — первая цифра версии
+                            Jatoba.</info>
+                        <stepxmp>При использовании Jatoba 4.5 выполните
+                            команду:<codeblock>vi /var/lib/jatoba/4/data/postgresql.conf</codeblock></stepxmp>
+                    </step>
+                    <step>
+                        <cmd>Проверьте и при необходимости исправьте значение порта.</cmd>
+                    </step>
+                    <step conref="../reusable/notes/exit_wq.dita#ReusableComponent_vrx_hh3_zrb/step_wrx_hh3_zrb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../reusable/notes/jatoba_restart.dita#ReusableComponent_wrm_nj3_zrb/step_xrm_nj3_zrb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <title>Причина 4</title>
+                <p>Неверные учетные данные для подключения к БД в конфигурационном файле
+                        <codeph>.db.env</codeph>.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps id="steps_hbw_5cy_nxb">
+                    <step>
+                        <cmd conref="../reusable/notes/open_cmd.dita#ReusableComponent_hqh_sg3_zrb/cmd_jqh_sg3_zrb"/>
+                    </step>
+                    <step
+                        conref="../reusable/notes/docker_compose_down.dita#ReusableComponent_nqz_233_zrb/step_oqz_233_zrb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в режим редактирования файла <codeph>.db.env</codeph>:</cmd>
+                        <info>
+                            <codeblock>vi env/.db.env</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Проверьте, что учетные данные в файле <codeph>.db.env</codeph>
+                            совпадают с учетными данными для подключения. При необходимости
+                            исправьте данные.</cmd>
+                    </step>
+                    <step conref="../reusable/notes/exit_wq.dita#ReusableComponent_vrx_hh3_zrb/step_wrx_hh3_zrb">
+                        <cmd/>
+                    </step>
+                    <step conref="../reusable/notes/container_run.dita#ReusableComponent_prv_5ws_rrb/step_qrv_5ws_rrb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+   
+    </troublebody>
+</troubleshooting>

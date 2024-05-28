@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xss_gjh_3vb">
+    <title></title>
+    <body><p id="p_zss_gjh_3vb">Добавлена роль «Оператор просмотра», для которой доступна только работа со страницей <ph outputclass="html"><cite keyref="itm_m_page_info_panel"/></ph><ph outputclass="onlypdf">«Панель информации»</ph>, при этом время пользовательской сессии не ограничено.</p></body>
+</topic>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_centos_itmm_install">
+    <title>Установка UDV-ITM-M на ОС Centos 8</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_swx_sbg_1xb">
+                <li><xref href="itm_k_install_centos_8.4_2105.dita"/></li>
+                <li><xref href="itm_k_install_postgresql_v14.dita"/></li>
+                <li><xref href="itm_k_centos_8_4_install_docker.dita"/></li>
+                <li><xref href="selinux.dita"/></li>
+                <li><xref href="udv_itm_m_install_server_centos.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

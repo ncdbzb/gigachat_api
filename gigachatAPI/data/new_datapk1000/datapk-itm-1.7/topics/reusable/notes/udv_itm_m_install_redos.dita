@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_kxc_vdg_1xb">
+    <title></title>
+        <taskbody id="taskbody_mxc_vdg_1xb">
+            <context id="context_rpj_rrm_1xb"><note
+                    conref="itm_vm_itm_k_reuse.dita#ReusableComponent_jgq_bqw_bvb/note_mgq_bqw_bvb"
+                />Для установки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_k"/></ph>:</context>
+            <steps id="steps_spj_rrm_1xb">
+                <step>
+                    <cmd>Перейдите в режим командной строки операционной системы, на которой будет
+                        установлен сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                            /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+                </step>
+                <step>
+                    <cmd>Создайте директорию для установки <ph outputclass="udvpdf"><term
+                                keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                keyref="datapk_itm_k"/></ph>:</cmd>
+                    <info>
+                        <codeblock>mkdir /opt/itm-k</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Скопируйте следующие файлы в директорию <codeph>/opt/itm-k</codeph>:</cmd>
+                    <info>
+                        <ul id="ul_uzp_cwm_frb">
+                            <li><codeph>env_generator.sh</codeph></li>
+                            <li><codeph
+                                    conref="../filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                                /></li>
+                            <li><codeph
+                                    conref="../filepath/datapk_itm_k_vl_2_0_0_tar_gzl.dita#ReusableComponent_aqs_gfs_hrb/codeph_bqs_gfs_hrb"
+                                /></li>
+                            <li><codeph>iptables</codeph></li>
+                            <li><codeph>db_config.sh</codeph></li>
+                        </ul>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Перейдите в директорию <codeph>/opt/itm-k</codeph>:</cmd>
+                    <info>
+                        <codeblock>cd /opt/itm-k</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Загрузите образы в операционную систему, на которой установлен сервер <ph
+                            outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                            outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                    <info>
+                        <codeblock>docker load -i datapk_itm-k_[версия_сервера_консолидации].tar.gz</codeblock>
+                    </info>
+                </step>
+            <step>
+                <cmd>Настройте разрешения по подключению docker-контейнера и пользователей к базам
+                    данных. Для этого:</cmd>
+                <substeps id="substeps_nfn_tps_cxb">
+                    <substep>
+                        <cmd>Войдите в режим редактирования файла <codeph
+                                conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                            /> с помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                        </info>
+                        <info>
+                            <note type="attention">При использовании двух томов замените директорию
+                                файла на /storage/base.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что в файле присутствует правило:</cmd>
+                        <info>
+                            <codeblock>local    all    all    trust</codeblock>
+                        </info>
+                        <info>Если этого правила нет, добавьте его в файл. Это правило должно
+                            располагаться выше всех остальных правил.</info>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости измените настройки ограничений на подключение
+                            локальных и удаленных пользователей к базам данных:</cmd>
+                        <info>
+                            <ul id="ul_j3g_jqs_cxb">
+                                <li>найдите раздел «# IPv4 local connections:»;</li>
+                                <li>укажите базы данных, ранее созданных пользователей БД, которым
+                                    разрешен доступ к ним, и IP-адреса для удаленного подключения в
+                                    следующем
+                                        формате:<codeblock>host [имя_БД1],[имя_БД2],… [пользователь1],[пользователь2],… 
+[диапазон IP-адресов разрешенных серверов в формате «IP/маска»] md5</codeblock><note>Отступ
+                                        между колонками в одной строке выполняется клавишей
+                                        «Tab».</note></li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте следующую строку в раздел «# IPv4 local connections:»</cmd>
+                        <info>
+                            <codeblock>host [имя БД] [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]</codeblock>
+                        </info>
+                        <stepxmp>для базы данных <codeph>datapkitm</codeph>, пользователя БД
+                                <codeph>datapkitm</codeph>, IP-адреса подсети контейнера сервера <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph> по умолчанию
+                            172.16.239.0/24 и метода аутентификации <codeph>md5</codeph> строка
+                            будет выглядеть следующим образом:
+                            <codeblock>host datapkitm datapkitm 172.16.239.0/24 md5</codeblock></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Закомментируйте строки во всех разделах, кроме «# IPv4 local
+                            connections:» и измените <codeph>ident</codeph> на <codeph>md5</codeph>
+                            в строке <codeph>host all all 127.0.0.1/32 ident</codeph>.</cmd>
+                        <info>
+                            <fig>
+                                <title>Содержимое файла pg_hba.conf</title>
+                                <image href="../../../images/safe_installation/pg_hba_conf_ipv4.png"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+                <step
+                    conref="systemctl_restart_jatoba.dita#ReusableComponent_pcm_bqk_1tb/step_tcm_bqk_1tb">
+                    <cmd/>
+                </step>
+                <step>
+                <cmd>Создайте базу данных, пользователя и пароль для него. </cmd>
+                <choices id="choices_ahc_dss_cxb">
+                    <choice><b>Способ 1:</b> Выполните настройку с помощью скрипта
+                            <codeph>db_config.sh</codeph>, который будет выложен вместе с
+                        дистрибутивом. Для этого:<ol id="ol_hcd_nss_cxb">
+                            <li>Перейдите в директорию
+                                <codeph>/opt/itm-k</codeph>:<codeblock>cd /opt/itm-k</codeblock></li>
+                            <li>Назначьте скрипту <codeph>db_config.sh</codeph> полные права
+                                доступа:<codeblock>chmod +x db_config.sh</codeblock></li>
+                            <li>Запустите скрипт
+                                <codeph>db_config.sh</codeph>:<codeblock>./db_config.sh</codeblock></li>
+                        </ol></choice>
+                    <choice><b>Способ 2:</b> Выполните настройку вручную. Для этого:<ol
+                            id="ol_xl3_fss_cxb">
+                            <li>Измените текущего пользователя на
+                                <codeph>postgres</codeph>:<codeblock>su postgres</codeblock></li>
+                            <li>Войдите в интерактивный терминал для работы с
+                                postgresql:<codeblock>psql</codeblock></li>
+                            <li>Измените пароль пользователя <codeph>postgres</codeph> в базе данных:<codeblock>ALTER USER postgres WITH PASSWORD '[пароль]';</codeblock>
+                                <note
+                                    conref="../../reusable/notes/security_policy.dita#ReusableComponent_ygg_vlm_k5b/note_bhg_vlm_k5b"/>
+                                <note
+                                    conref="../../reusable/notes/securityprofile.dita#ReusableComponent_xhx_jlm_k5b/note_a3x_jlm_k5b"
+                                />
+                            </li>
+                            <li>Создайте пользователя с именем <codeph>datapkitm</codeph> и
+                                необходимым
+                                паролем:<codeblock>CREATE USER datapkitm WITH PASSWORD '[пароль служебного пользователя]';</codeblock></li>
+                            <li>Убедитесь, что пользователь создан:<codeblock>\du</codeblock></li>
+                            <li>Создайте базу данных datapkitm, в качестве распорядителя которой
+                                указан пользователь
+                                datapkitm:<codeblock>CREATE DATABASE datapkitm OWNER datapkitm;</codeblock></li>
+                            <li> Убедитесь, что база данных datapkitm создана:<codeblock>\l</codeblock>
+                                <fig>
+                                    <title>Список созданных БД</title>
+                                    <image href="../../../images/safe_installation/db_check.png"
+                                        id="image_qcg_czx_jvb"/>
+                                </fig></li>
+                            <li>Покиньте терминал:<codeblock>\q</codeblock></li>
+                            <li>Для выхода из пользователя <codeph>postgres</codeph> введите
+                                    <codeph>exit</codeph>.</li>
+                        </ol></choice>
+                </choices>
+            </step>
+                <step>
+                    <cmd conref="postgresql_cmd.dita#ReusableComponent_b4x_bhk_tsb/cmd_c4x_bhk_tsb"/>
+                    <substeps id="substeps_tpj_rrm_1xb">
+                        <substep
+                            conref="postgresql_1.dita#ReusableComponent_oxl_dhk_tsb/substep_qxl_dhk_tsb">
+                            <cmd/>
+                        </substep>
+                        <substep>
+                            <cmd>исправьте значения переменных, чтобы они соответствовали
+                                представленным ниже:</cmd>
+                            <info><codeblock>listen_addresses = '127.0.0.1,172.17.0.1'
+port = 10265
+shared_buffers = 8GB                        </codeblock>Где
+                                    <ul id="ul_hc4_fg5_wsb">
+                                    <li>127.0.0.1 — локальный IP-адрес сервера <ph
+                                            outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                            outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                            /></ph><ph outputclass="html"><term
+                                                keyref="datapk_itm_k"/></ph>;</li>
+                                    <li>172.17.0.1 — IP-адрес подсети docker0;</li>
+                                    <li>8GB — 25% от общего объема оперативной памяти сервера.</li>
+                                </ul><note>IP-адреса должны быть перечислены через запятую без
+                                    пробелов. </note><note type="tip">Если IP-адрес подсети docker0
+                                    уже используется в вашей инфраструктуре, его нужно изменить.
+                                    Подробнее см. в разделе <xref
+                                        href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita"/>
+                                    <xref
+                                        href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita#itm_k_net_conflict/cause2"
+                                    />.</note></info>
+                        </substep>
+                        <substep
+                            conref="postgresql_3.dita#ReusableComponent_zwt_hjk_tsb/substep_axt_hjk_tsb">
+                            <cmd/>
+                        </substep>
+                        <substep
+                            conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                            <cmd/>
+                        </substep>
+                    </substeps>
+                </step>
+            <step>
+                <cmd>Измените метод аутентификации для всех баз данных и пользователей в файле
+                        <codeph
+                        conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                    />. Для этого: </cmd>
+                <substeps id="substeps_unt_5tz_cxb">
+                    <substep>
+                        <cmd>Войдите в режим редактирования файла <codeph
+                                conref="../filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                            /> с помощью команды:</cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                        </info>
+                        <info>
+                            <note type="attention">При использовании двух томов замените директорию
+                                файла на /storage/base.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Замените правило <codeph>local all all trust</codeph> на <codeph>local
+                                all all md5</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезапустите СУБД с помощью команды: </cmd>
+                        <info>
+                            <codeblock>systemctl restart jatoba-*</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+                <step
+                    conref="../steps/itm_k_generate_env.dita#ReusableComponent_gr5_kby_qvb/step_hr5_kby_qvb">
+                    <cmd/>
+                </step>
+                <step id="iptables_start_redos">
+                    <cmd >Замените файл <codeph>/etc/sysconfig/iptables</codeph> на файл
+                            <codeph>iptables</codeph> из комплекта поставки:</cmd>
+                    <info>
+                        <codeblock>mv /opt/itm-k/iptables /etc/sysconfig/</codeblock>
+                    </info>
+                </step>
+                <step
+                    conref="../steps/iptables_change_file_itm_k.dita#ReusableComponent_m22_vzy_svb/step_n22_vzy_svb">
+                    <cmd/>
+                </step>
+                <step
+                    conref="../steps/iptables_check_host_rights.dita#ReusableComponent_dxh_yzy_svb/step_exh_yzy_svb">
+                    <cmd/>
+                </step>
+                <step id="iptables_finish_redos"
+                    conref="../steps/iptables_start.dita#ReusableComponent_nmh_zzy_svb/step_pmh_zzy_svb">
+                    <cmd/>
+                </step>
+                <step>
+                    <cmd>Перейдите в каталог, содержащий compose-файлы:</cmd>
+                    <info>
+                        <codeblock>cd /opt/itm-k</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Подготовьте сертификаты для входа в веб-интерфейс:</cmd>
+                    <info>
+                        <note
+                            conref="itm_k_vm_cert.dita#ReusableComponent_ws5_rmy_qwb/note_xs5_rmy_qwb"
+                        />
+                    </info>
+                    <substeps id="substeps_e15_mjy_qwb">
+                        <substep
+                            conref="server_install_step22.dita#ReusableComponent_jgs_h3f_krb/step_kgs_h3f_krb">
+                            <cmd/>
+                        </substep>
+                        <substep
+                            conref="change_rights_certificate.dita#ReusableComponent_hxw_mst_tsb/step_ixw_mst_tsb">
+                            <cmd/>
+                        </substep>
+                    </substeps>
+                </step>
+                <step
+                    conref="../steps/itm_k_hostname_change.dita#ReusableComponent_m5k_3bc_qvb/step_n5k_3bc_qvb">
+                    <cmd/>
+                </step>
+                <step id="step_j5c_gwy_l5b">
+                    <cmd>Настройте запуск службы СУБД после службы docker. Для этого:</cmd>
+                    <substeps id="substeps_ysv_2kx_l5b">
+                        <substep
+                            conref="subd_edit_start.dita#ReusableComponent_ztx_l12_m5b/substep_a5x_l12_m5b">
+                            <cmd/>
+                        </substep>
+                        <substep
+                            conref="subd_unit.dita#ReusableComponent_kb5_412_m5b/substep_mb5_412_m5b">
+                            <cmd/>
+                        </substep>
+                        <substep>
+                            <cmd>Если база данных хранится на отдельном томе, добавьте после блока
+                                [Unit] блок [Service]:</cmd>
+                            <info><codeblock>[Service]
+    Environment=PGDATA=/storage/base                            </codeblock>Где
+                                    <codeph>/storage/base</codeph> — путь к базе данных, который был
+                                настроен на шаге <xref
+                                    href="../../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita#itm_k_subd_config/itm_k_set_dir_bd"
+                                /> раздела <xref
+                                    href="../../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita"
+                                />.</info>
+                        </substep>
+                        <substep
+                            conref="subd_save_changes.dita#ReusableComponent_bk5_r12_m5b/substep_ck5_r12_m5b">
+                            <cmd/>
+                        </substep>
+                    </substeps>
+                </step>
+                <step
+                    conref="server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb">
+                    <cmd/>
+                </step>
+                <step>
+                    <cmd>Для входа в веб-интерфейс в адресной строке введите IP-адрес <ph
+                            outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                            outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                            outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+                    <info>
+                        <fig id="fig_upj_rrm_1xb">
+                            <title>Окно авторизации <ph outputclass="udvpdf"><term
+                                        keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm_k"/></ph></title>
+                            <image href="../../../images/Pages/itm_log_in.png"
+                                id="image_vpj_rrm_1xb"/>
+                        </fig>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Введите логин и пароль по умолчанию (datapkitm/datapkitm).</cmd>
+                    <stepresult>Откроется стартовая страница веб-интерфейса <ph outputclass="udvpdf"
+                                ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                keyref="datapk_itm_k"/></ph>. </stepresult>
+                </step>
+                <step>
+                <cmd>Установите на сервер агент версии 2 согласно инструкции <xref
+                        href="../../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita"
+                    /> (за исключением п. <xref
+                        href="../../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita#agent_installation_centos_7/firewall_iptables"
+                    />, так как межсетевой экран уже был настроен ранее в п. <xref href="../../reusable/notes/udv_itm_m_install_redos.dita#ReusableComponent_kxc_vdg_1xb/iptables_start_redos"/>-<xref href="../../reusable/notes/udv_itm_m_install_redos.dita#ReusableComponent_kxc_vdg_1xb/iptables_finish_redos"/> текущей инструкции). </cmd>
+                <info>В файле конфигурации агента <codeph>/etc/zabbix/zabbix_agent2.conf</codeph>
+                    установите параметр <codeph><cmdname keyref="server_0"
+                        />=172.16.239.0/24</codeph> (адрес подсети контейнеров <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph>).</info>
+            </step>
+            </steps>
+        </taskbody>   
+</task>

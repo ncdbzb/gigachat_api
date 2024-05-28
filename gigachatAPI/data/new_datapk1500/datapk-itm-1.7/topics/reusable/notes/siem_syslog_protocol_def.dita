@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_bxr_sqd_yrb">
+    <title></title>
+    <body><div><ph id="ph_cxr_sqd_yrb">Протокол, по которому будут отправляться события: <ph
+                    conref="../../reusable/protocol_names/TCP.dita#ReusableComponent_s2p_3gl_4yb/ph_t2p_3gl_4yb"
+                /> или <ph
+                    conref="../../reusable/protocol_names/UDP.dita#ReusableComponent_nmm_qgg_4yb/ph_pmm_qgg_4yb"
+                /></ph></div>
+    </body>
+</topic>

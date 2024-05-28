@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fxr_fgn_ytb">
+    <title></title>
+    <body><note type="attention" id="note_gxr_fgn_ytb">Автоматическое обнаружение <abbreviated-form
+                keyref="monitoring_object"/> рекомендуется использовать в сетях <abbreviated-form
+                keyref="asm_tp"/> только в режиме технического обслуживания. В противном случае
+            возможна потеря информации в сетях передачи данных.</note></body>
+</topic>

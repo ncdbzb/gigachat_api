@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="license_politics">
+    <title>Лицензионная политика</title>
+    <body>
+       
+        <table id="table_i52_pdc_zsb" frame="all" colsep="1" rowsep="1"> 
+            <title>Состав лицензий комплекса DATAPK ITM</title>
+            <tgroup cols="3">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="1.35*"/>
+                <colspec colnum="3" colname="col3" colwidth="3.04*"/>
+                
+                <thead>
+                    <row>
+                        <entry>Код лицензии p/n</entry>
+                        <entry>Наименование</entry>
+                        <entry>Порядок применения</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>DTPK-ITM-M</entry>
+                        <entry>Лицензия на ПК «DATAPK ITM». Сервер
+                            управления</entry>
+                        <entry>
+                            <p>Требуется 1 лицензия для каждого сервера DATAPK ITM-VM уровня
+                                администрации.</p>
+                            <p>Лицензируется функционал управления комплексом и интеграций.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>DTPK-ITM-V</entry>
+                        <entry>Лицензия на ПК «DATAPK ITM». Сервер
+                            анализа и визуализации</entry>
+                        <entry>
+                            <p>Требуется 1 лицензия для каждого сервера DATAPK ITM-VM уровня
+                                администрации.</p>
+                            <p>Лицензируется функционал визуализации сводных данных, аналитики и
+                                оповещений.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>DTPK-ITM-K</entry>
+                        <entry>Лицензия на ПК «DATAPK ITM». Сервер
+                            консолидации</entry>
+                        <entry>
+                            <p>Требуется 1 лицензия для каждого сервера DATAPK ITM-K уровня
+                                филиала.</p>
+                            <p>Лицензируется функционал мониторинга, интеграции с DATAPK и
+                                предоставления интерфейсов для сервера уровня администрации.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>DTPK-ITM-A</entry>
+                        <entry>Лицензия на ПК «DATAPK ITM». Сервер
+                            агентов</entry>
+                        <entry>
+                            <p>Требуется 1 лицензия для каждого сервера DATAPK ITM-A уровня
+                                технологического объекта.</p>
+                            <p>Лицензируется функционал мониторинга и интеграции с сервером уровня
+                                филиала.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>DTPK-ITM-H</entry>
+                        <entry>Лицензия на ПК «DATAPK ITM». 50
+                            узлов</entry>
+                        <entry>
+                            <p>Пакет лицензий мониторинга 50 объектов мониторинга.</p>
+                            <p>Требуется для серверов DATAPK ITM-K или
+                                    DATAPK ITM-A.</p>
+                            <p>Лицензируется функционал агентного или безагентного мониторинга.</p>
+                            <p>Количество узлов в пакетах лицензий должно соответствовать или быть
+                                больше количества фактически подключаемых объектов мониторинга.</p>
+                            <p>Объектами мониторинга считаются активные узлы сети в разделе
+                                Мониторинг → Узлы сети и услуги в разделе Мониторинг → Услуги.</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

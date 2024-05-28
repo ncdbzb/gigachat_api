@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="config_hosts_general">
+    <title>Управление узлами сети</title>
+    <body>
+        <p>В <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                /></ph> можно редактировать или удалять узлы сети, настраивать их инвентарные
+            данные.</p>
+        <p>В этом разделе:<ul id="ul_ym2_b5j_syb">
+                <li><xref href="host_configuration.dita"/></li>
+                <li><xref href="hosts_delete.dita"/></li>
+                <li><xref href="inventory/inventory.dita"/><ul id="ul_blk_d5j_syb">
+                        <li><xref href="inventory/inventory_data_review.dita"/></li>
+                        <li><xref href="inventory/inventory_data_collect.dita"/></li>
+                        <li><xref href="inventory/auto_mode_keys.dita"/></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

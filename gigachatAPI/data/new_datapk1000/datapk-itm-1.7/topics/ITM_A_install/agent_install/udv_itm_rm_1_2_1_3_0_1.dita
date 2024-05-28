@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="udv_itm_rm_1_2_1_3_0_1">
+    <title>Обновление UDV-ITM-RM с версии 1.2 до версии 1.3.0.1</title>
+    <taskbody>
+    <context>
+        <p>Для обновления <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_a"/></ph> с версии 1.2 до версии 1.3.0.1
+                используется скрипт <codeph>conf_to_envs.sh</codeph>. Скрипт также переносит
+                имеющиеся значения переменных из конфигурационного файла в env-файлы и генерирует
+                остальные необходимые для работы env-файлы и переменные. </p>
+        <p>Для обновления:</p>
+    </context>
+    <steps>
+        <step>
+            <cmd>Остановите службу zabbix-proxy:</cmd>
+            <info>
+                <codeblock>systemctl disable --now zabbix-proxy.service</codeblock>
+            </info>
+        </step>
+        <step>
+            <cmd>Установите docker согласно инструкции <xref
+                href="itm_a_extra_package_redos7_3.dita"/>.</cmd>
+        </step>
+        <step>
+                <cmd>Создайте директорию <codeph>/opt/itm-rm</codeph>:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-rm</codeblock>
+                </info>
+            </step>
+        <step>
+                <cmd>Загрузите на сервер <ph outputclass="udvpdf"><term keyref="udv_itm_rm"
+                        /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_a"/></ph> в директорию
+                        <codeph>/opt/itm-rm</codeph> содержимое каталога с обновленным
+                    дистрибутивом:</cmd>
+                <info>
+                    <ul id="ul_dzs_c1x_5vb">
+                        <li><codeph>datapk_itm-a_v1.3.0.1.tar.gz</codeph>;</li>
+                        <li><codeph>docker-compose.release.yaml</codeph>;</li>
+                        <li><codeph>conf_to_envs.sh</codeph>.</li>
+                    </ul>
+                </info>
+            </step>
+        <step>
+                <cmd>Перейдите в директорию <codeph>/opt/itm-rm</codeph>: </cmd>
+                <info>
+                    <codeblock>cd /opt/itm-rm/</codeblock>
+                </info>
+            </step>
+        <step>
+            <cmd>Назначьте права на запуск скрипта:</cmd>
+            <info>
+                <codeblock>chmod +x conf_to_envs.sh</codeblock>
+            </info>
+        </step>
+        <step>
+            <cmd>Запустите скрипт:</cmd>
+            <info>
+                <codeblock>./conf_to_envs.sh</codeblock>
+                <note>Скрипт предназначен для генерации env-файлов с нуля, поэтому в рабочей
+                    директории не должно быть директории <codeph>env</codeph> и файла
+                    <codeph>.env</codeph>. Для работы скрипта также необходимо наличие файла
+                    <codeph>/etc/zabbix/zabbix_proxy.conf</codeph>.</note>
+            </info>
+            <stepresult>Откроется окно для редактирования переменных.</stepresult>
+        </step>
+        <step>
+            <cmd>Настройте переменные, относящиеся к базам данных и подсети Docker:</cmd>
+            <info>
+                <ul id="ul_pbv_5tz_qvb">
+                    <li>Чтобы изменить переменную, введите новое значение и нажмите
+                        «Enter».</li>
+                    <li>Чтобы оставить значение по умолчанию, нажмите «Enter».</li>
+                </ul>
+                <note>Остальные переменные скрипт самостоятельно берет из имеющегося
+                    конфигурационного файла. Подробнее про переменные см. в разделе 
+                    <ph outputclass="html"><xref href="../env_itm_a.dita"/></ph>
+                    <ph outputclass="onlypdf"><xref href="../env_itm_a.dita"/></ph>
+                    <ph outputclass="udvpdf"><xref href="../env_itm_rm.dita"/></ph>.</note>
+            </info>
+        </step>
+        <step>
+            <cmd>Установите docker-образы командой:</cmd>
+            <info>
+                <codeblock>docker load -i datapk_itm-a_v1.3.0.1.tar.gz</codeblock>
+            </info>
+        </step>
+        <step>
+            <cmd>Остановите службу docker:</cmd>
+            <info>
+                <codeblock>systemctl stop docker</codeblock>
+            </info>
+        </step>
+        <step
+            conref="../../reusable/steps/iptables_change_newfile.dita#ReusableComponent_bty_nb2_tvb/step_fty_nb2_tvb">
+            <cmd/>
+        </step>
+        <step
+            conref="../../reusable/steps/iptables_change_file_to_new.dita#ReusableComponent_iyt_qb2_tvb/step_jyt_qb2_tvb">
+            <cmd/>
+        </step>
+        <step
+            conref="../../reusable/steps/iptables_change_file_itm_a.dita#ReusableComponent_us5_s22_tvb/step_ws5_s22_tvb">
+            <cmd/>
+        </step>
+        <step
+            conref="../../reusable/steps/iptables_check_host_rights.dita#ReusableComponent_dxh_yzy_svb/step_exh_yzy_svb">
+            <cmd/>
+        </step>
+        <step
+            conref="../../reusable/steps/restart_docker_iptables.dita#ReusableComponent_f5c_t12_tvb/step_h5c_t12_tvb">
+            <cmd/>
+        </step>
+        <step>
+                <cmd>Запустите docker-контейнеры, выполнив следующую команду из директории
+                        <codeph>/opt/itm-rm/</codeph>, где находятся <codeph>compose</codeph> и
+                        <codeph>env</codeph> файлы компонента:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                </info>
+            </step>
+        <step>
+            <cmd>Убедитесь, что новая версия <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph> работает и собирает данные.</cmd>
+        </step>
+        <step>
+            <cmd>Удалите пакет zabbix-proxy:</cmd>
+            <info>
+                <codeblock>yum remove zabbix-proxy</codeblock>
+            </info>
+        </step>
+    </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="config_actions_detection">
+    <glossterm>Действия обнаружения</glossterm>
+    <glossdef>Страница для создания и настройки действий обнаружения. <fig>
+            <title>Действия обнаружения</title>
+            <image href="../../../images/Pages/actions_detection.png"/>
+        </fig></glossdef>
+</glossentry>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_j5m_qzc_cvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_k5m_qzc_cvb">
+                        <cmd>Нажмите на кнопку «Создать пользователя» в верхнем правом углу.</cmd>
+                        <stepresult>Откроется страница «Пользователи».</stepresult>
+                    </substep> 
+                </substeps>
+            </step>
+        </steps>       
+    </taskbody>
+</task>

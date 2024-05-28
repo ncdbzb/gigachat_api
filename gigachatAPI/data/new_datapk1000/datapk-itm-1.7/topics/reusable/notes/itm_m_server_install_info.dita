@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_usc_wwc_zwb">
+    <title></title>
+    <taskbody id="taskbody_wsc_wwc_zwb">
+        <context id="context_hy1_knw_bvb"><note conref="itm_vm_itm_k_reuse.dita#ReusableComponent_jgq_bqw_bvb/note_mgq_bqw_bvb"/>Для установки <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>:</context><steps>
+            <step>
+                <cmd>Перейдите в режим командной строки операционной системы, на которой будет
+                    установлен сервер визуализации и управления.</cmd>
+            </step>
+            <step>
+                <cmd>Создайте директорию для установки <abbreviated-form keyref="datapk_itm_vm"
+                    />:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-vm</codeblock>
+                </info>
+                <info>
+                    <note
+                        conref="itm_vm_itm_k_diff_dir.dita#ReusableComponent_xcw_l3w_bvb/note_adw_l3w_bvb"
+                    />
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте следующие файлы из комплекта поставки в директорию
+                        <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <ul id="ul_sjv_1jf_krb">
+                        <li><codeph>env_prod_generator.sh</codeph></li>
+                        <li><codeph
+                                conref="../filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                            /></li>
+                        <li><codeph
+                                conref="../filepath/datapk_itm_m_x_x_x_x_tar_gz.dita#ReusableComponent_ikx_4zf_krb/ph_jkx_4zf_krb"
+                            /></li>
+                        <li><codeph>iptables</codeph></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Загрузите образы в операционную систему, на которой установлен сервер
+                    визуализации и управления:</cmd>
+                <info>
+                    <codeblock>docker load -i datapk_itm-vm_[версия_сервера_визуализации_и_управления].tar.gz              </codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/notes/db_start.dita#ReusableComponent_hpx_kmm_k5b/cmd_kpx_kmm_k5b"/>
+                <substeps id="substeps_jcq_jjk_gxb">
+                    <substep
+                        conref="../../reusable/notes/db_su_postgres.dita#ReusableComponent_j41_nmm_k5b/substep_l41_nmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/db_psql.dita#ReusableComponent_dt3_pmm_k5b/substep_ft3_pmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/db_change_password.dita#ReusableComponent_df3_tmm_k5b/substep_ff3_tmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>cоздайте пользователя с именем <codeph>datapkitm</codeph> и необходимым
+                            паролем:</cmd>
+                        <info>
+                            <codeblock>CREATE USER datapkitm WITH PASSWORD '[пароль служебного пользователя]';</codeblock>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/db_check_user.dita#ReusableComponent_z14_wmm_k5b/substep_bb4_wmm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>создайте базу данных <codeph>datapkitm</codeph>, в качестве
+                            распорядителя которой указан пользователь
+                            <codeph>datapkitm</codeph>:</cmd>
+                        <info>
+                            <codeblock>CREATE DATABASE datapkitm OWNER datapkitm;</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>убедитесь, что база данных <codeph>datapkitm</codeph> создана:</cmd>
+                        <info>
+                            <codeblock>\l</codeblock>
+                            <fig id="fig_kcq_jjk_gxb">
+                                <title>Список созданных БД</title>
+                                <image href="../../../images/safe_installation/db_check.png"
+                                    id="image_qcg_czx_jvb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/db_q.dita#ReusableComponent_vfh_cnm_k5b/substep_yfh_cnm_k5b">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/db_postgres_exit.dita#ReusableComponent_ut2_z4m_k5b/substep_wt2_z4m_k5b">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/notes/postgresql_cmd.dita#ReusableComponent_b4x_bhk_tsb/cmd_c4x_bhk_tsb"/>
+                <substeps id="substeps_lcq_jjk_gxb">
+                    <substep
+                        conref="../../reusable/notes/postgresql_1.dita#ReusableComponent_oxl_dhk_tsb/substep_qxl_dhk_tsb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>исправьте значения переменных, чтобы они соответствовали представленным
+                            ниже:</cmd>
+                        <info><codeblock>listen_addresses = '127.0.0.1,172.17.0.1'
+port = 10265
+shared_buffers = 8GB                         </codeblock>Где
+                                <ul id="ul_hc4_fg5_wsb">
+                                <li>127.0.0.1 — локальный IP-адрес сервера DATAPK ITM-K;</li>
+                                <li>172.17.0.1 — IP-адрес подсети docker0;</li>
+                                <li>8GB — 25% от общего объема оперативной памяти сервера.</li>
+                            </ul><note>IP-адреса должны быть перечислены через запятую без пробелов.
+                                </note><note type="tip">Если IP-адрес подсети docker0 уже
+                                используется в вашей инфраструктуре, его нужно изменить. Подробнее
+                                см. в разделе <xref
+                                    href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita"/>
+                                <xref
+                                    href="../../emergency_actions/actions_after_problems/itm_k_net_conflict.dita#itm_k_net_conflict/cause2"
+                                />.</note></info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/postgresql_3.dita#ReusableComponent_zwt_hjk_tsb/substep_axt_hjk_tsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../../reusable/steps/itm_k_generate_env.dita#ReusableComponent_gr5_kby_qvb/step_hr5_kby_qvb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Настройте разрешения по подключению docker-контейнера и пользователей к базам
+                    данных. Для этого:</cmd>
+                <substeps id="substeps_mcq_jjk_gxb">
+                    <substep
+                        conref="../../reusable/notes/open_pg_hba_substep.dita#ReusableComponent_d2g_2qw_gtb/substep_h2g_2qw_gtb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>при необходимости измените настройки ограничений на подключение
+                            локальных и удаленных пользователей к базам данных:</cmd>
+                        <info>
+                            <ul id="ul_ncq_jjk_gxb">
+                                <li><ph
+                                        conref="../../reusable/notes/find_ipv4_connections.dita#ReusableComponent_cqj_z5c_1sb/ph_fqj_z5c_1sb"
+                                    /></li>
+                                <li><ph
+                                        conref="../../reusable/notes/db_config_ip.dita#ReusableComponent_r3c_2xc_1sb/ph_s3c_2xc_1sb"/>
+                                    <div
+                                        conref="../../reusable/notes/db_config_ip1.dita#ReusableComponent_cd2_hxc_1sb/div_dd2_hxc_1sb"
+                                    /></li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>добавьте следующую строку в раздел «# IPv4 local connections:»</cmd>
+                        <info>
+                            <codeblock>host [имя БД] [имя пользователя БД] [IP-адрес docker-сети/маска в формате CIDR] [метод аутентификации]</codeblock>
+                        </info>
+                        <stepxmp>для базы данных <codeph>datapkitm</codeph>, пользователя БД
+                                <codeph>datapkitm</codeph>, IP-адреса подсети контейнера сервера
+                            консолидации по умолчанию 172.16.239.0/24 и метода аутентификации
+                                <codeph>md5</codeph> строка будет выглядеть следующим образом:
+                            <codeblock>host datapkitm datapkitm 172.16.239.0/24 md5</codeblock></stepxmp>
+                    </substep>
+                    <substep>
+                        <cmd>Закомментируйте строки во всех разделах, кроме «# IPv4 local
+                            connections:» и измените <codeph>ident</codeph> на <codeph>md5</codeph>
+                            в строке <codeph>host all all 127.0.0.1/32 ident</codeph>.</cmd>
+                        <info>
+                            <fig id="fig_safe_installation_redOS_2_7">
+                                <title>Содержимое файла <codeph
+                                        conref="../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_gtb_nxd_yrb/codeph_htb_nxd_yrb"
+                                    /></title>
+                                <image href="../../../images/safe_installation/pg_hba_conf_ipv4.png"
+                                    id="image_ocq_jjk_gxb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="systemctl_restart_jatoba.dita#ReusableComponent_pcm_bqk_1tb/step_tcm_bqk_1tb">
+                <cmd/>
+            </step>
+            <step
+                conref="../steps/iptables_change_file.dita#ReusableComponent_i13_szy_svb/step_m13_szy_svb">
+                <cmd/>
+            </step>
+            <step
+                conref="../steps/iptables_change_file_itm_vm.dita#ReusableComponent_djk_tbz_svb/step_ejk_tbz_svb">
+                <cmd/>
+            </step>
+            <step
+                conref="../steps/iptables_check_host_rights.dita#ReusableComponent_dxh_yzy_svb/step_exh_yzy_svb">
+                <cmd/>
+            </step>
+            <step
+                conref="../steps/iptables_start.dita#ReusableComponent_nmh_zzy_svb/step_pmh_zzy_svb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Подготовьте сертификаты для входа в веб-интерфейс:</cmd>
+                <info>
+                    <note conref="itm_k_vm_cert.dita#ReusableComponent_ws5_rmy_qwb/note_xs5_rmy_qwb"
+                    />
+                </info>
+                <substeps id="substeps_e15_mjy_qwb">
+                    <substep
+                        conref="server_install_step22.dita#ReusableComponent_jgs_h3f_krb/step_kgs_h3f_krb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="change_rights_certificate.dita#ReusableComponent_hxw_mst_tsb/step_ixw_mst_tsb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd
+                    conref="overcommit_memory_cmd.dita#ReusableComponent_shm_15v_wsb/cmd_uhm_15v_wsb"/>
+                <substeps id="substeps_yfq_5v5_wsb">
+                    <substep
+                        conref="overcommit_memory_open_file.dita#ReusableComponent_ih4_d5v_wsb/substep_jh4_d5v_wsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="overcommit_memory_change.dita#ReusableComponent_xkx_g5v_wsb/substep_ykx_g5v_wsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>перезагрузите сервер для применения изменений.</cmd>
+                        <info>
+                            <note type="tip">Вы можете перезагрузить сервер сразу либо после
+                                выполнения пункта <xref
+                                    href="../../reusable/notes/itm_m_server_install_info.dita#ReusableComponent_usc_wwc_zwb/itmm_run_docker"
+                                />.</note>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>
+                    <ol id="ol_ldv_swv_wsb">
+                        <li>в логах контейнера itm_m_redis нет ошибки «WARNING overcommit_memory is
+                            set to 0!»;</li>
+                        <li>в файле <codeph>/etc/sysctl.conf</codeph> установлено значение
+                                <codeph>vm.overcommit_memory=1</codeph>;</li>
+                        <li>в файле <codeph>/proc/sys/vm/overcommit_memory</codeph> установлено
+                            значение 1.</li>
+                    </ol>
+                </stepresult>
+            </step>
+            <step
+                conref="../steps/itm_vm_hostname_change.dita#ReusableComponent_vlq_qbc_qvb/step_wlq_qbc_qvb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Перейдите в каталог, содержащий compose-файлы:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step id="itmm_run_docker"
+                conref="server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для входа в веб-интерфейс в адресной строке введите IP-адрес <abbreviated-form
+                        keyref="datapk_itm_vm"/>.</cmd>
+                <info><note
+                        conref="itm_vm_itm_k_addr.dita#ReusableComponent_onl_fnw_bvb/note_qnl_fnw_bvb"
+                    />Для первичной настройки в окне авторизации введите логин и пароль учетной
+                    записи по умолчанию:<ul id="ul_hkt_yzh_qrb">
+                        <li>логин: <b>itm</b>;</li>
+                        <li>пароль: <b>P@ssw0rd1234</b>. </li>
+                    </ul><fig>
+                        <title>Окно авторизации ITM-VM</title>
+                        <image href="../../../images/ITM_M_prepare_work/itm_m_autorization.png"/>
+                    </fig>
+                    <note type="attention">При первой настройке комплекса необходимо изменить логин
+                        и пароль встроенной учетной записи.</note>
+                </info>
+            </step>
+        </steps></taskbody>
+</task>

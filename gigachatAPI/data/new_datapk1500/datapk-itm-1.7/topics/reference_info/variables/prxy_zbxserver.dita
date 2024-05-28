@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="prxy_zbxserver">
+    <glossterm>PRXY_ZBXSERVER</glossterm>
+    <glossdef>
+        <p>Адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> или Zabbix. Входящие соединения
+            будут приниматься только с адресов, указанных в этом списке.</p>
+    </glossdef>
+</glossentry>

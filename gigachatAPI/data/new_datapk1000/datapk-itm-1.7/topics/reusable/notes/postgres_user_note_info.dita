@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_msc_lzk_trb">
+    <title>postgres_user_note_info</title>
+    <body><div id="note_nsc_lzk_trb">Если вы используете СУБД Jatoba, рекомендуется закомментировать данную
+            переменную и использовать переменную POSTGRES_USER_FILE для указания ссылки на файл
+            .POSTGRES_USER, содержащий имя пользователя БД.</div></body>
+</topic>

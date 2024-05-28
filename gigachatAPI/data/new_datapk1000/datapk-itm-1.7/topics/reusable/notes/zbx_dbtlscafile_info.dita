@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fd5_2d2_trb">
+    <title>zbx_dbtlscafile_info</title>
+    <body><div id="p_gd5_2d2_trb"><p>Полный путь к файлу, содержащему сертификаты центра сертификации верхнего уровня для проверки
+                сертификата базы данных.</p></div></body>
+</topic>

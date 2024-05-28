@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapkitm_vm_certif">
+    <title>Выпуск SSL-сертификатов</title>
+    <body>
+        <p>В этом разделе рассмотрен выпуск доверенных сертификатов для доступа к веб-интерфейсу <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_vm"/></ph> по сетевому
+                        имени. </p>
+        <p>Перед выпуском сертификатов остановите <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>
+                        командой:<codeblock>cd /opt/itm-vm &amp;&amp; docker-compose down</codeblock></p>
+        <p>Выпуск сертификатов для <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_vm"/></ph> состоит из
+                        следующих этапов:<ul id="ul_mg2_tlc_pzb">
+                                <li><xref href="../itmvm_root_cert.dita"/></li>
+                                <li><xref href="../datapkitm_vm_certif_key.dita"/>.</li>
+                                <li><xref href="../itmvm_cert_admin.dita"/>.</li>
+                        </ul></p>
+    </body>
+</topic>

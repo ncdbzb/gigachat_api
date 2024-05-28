@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ytw_kpr_trb">
+    <title>ZBX_VALUECACHESIZE note</title>
+    <body><div id="div_ztw_kpr_trb"><p>Не рекомендуется использовать значение 0 , которое отключает кэш значений.</p></div></body>
+</topic>

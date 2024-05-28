@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>udv_glossary</title>
+    <glossref href="terms/asm_tp.dita" keys="asm_tp" print="yes"/>
+    <glossref href="terms/AWP.dita" keys="AWP" print="yes"/>
+    <glossref href="terms/OM_group.dita" keys="OM_group" print="yes"/>
+    <glossref href="terms/data_item_group.dita" keys="data_item_group" print="yes"/>
+    <glossref href="terms/action.dita" keys="action" print="yes"/>
+    <glossref href="terms/prot_obj.dita" keys="prot_obj" print="yes"/>
+    <glossref href="terms/monitoring_object.dita" keys="monitoring_object" print="yes"/>
+    <glossref href="terms/OS.dita" keys="OS" print="yes"/>
+    <glossref href="terms/poller.dita" keys="poller" print="yes"/>
+    <glossref href="terms/pre-fork.dita" keys="pre-fork" print="yes"/>
+    <glossref href="terms/event.dita" keys="event" print="yes"/>
+    <glossref href="terms/sla.dita" keys="sla" print="yes"/>
+    <glossref href="terms/tag.dita" keys="tag" print="yes"/>
+    <glossref href="terms/to.dita" keys="to" print="yes"/>
+    <glossref href="terms/tech_support.dita" keys="tech_support" print="yes"/>
+    <glossref href="terms/trapper.dita" keys="trapper" print="yes"/>
+    <glossref href="terms/triggers.dita" keys="triggers" print="yes"/>
+    <glossref href="terms/template.dita"  keys="template" print="yes"/>
+    <glossref href="terms/key_template.dita" keys="key_template" print="yes"/>
+    <glossref href="terms/data_item.dita" keys="data_item" print="yes"/>  
+    <glossref href="terms/escalation.dita" keys="escalation" print="yes"/>
+    <glossref href="terms/DB_syncer.dita" keys="DB_syncer" print="yes"/>
+    <glossref href="terms/worker.dita" keys="worker" print="yes"/>
+    <glossref href="terms/udv_itm.dita" keys="udv_itm" print="yes"/>
+    <glossref href="terms/udv_itm_k.dita" keys="udv_itm_k" print="yes"/>
+    <glossref href="terms/udv_itm_rm.dita" keys="udv_itm_rm" print="yes"/>
+    <glossref href="terms/udv_itm_vm.dita" keys="udv_itm_vm" print="yes"/>
+</map>

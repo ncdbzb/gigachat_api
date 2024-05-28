@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_whats_new">
+    <title>Что нового?</title>
+    <body>
+        
+        
+        <!-- Для 1.3 -->
+        <p>Основные изменения в ПО сервера <ph outputclass="udvpdf"><term keyref="udv_itm_rm"
+                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph
+                outputclass="html"><term keyref="datapk_itm_a"/></ph> v. 1.3.0.1:</p>
+        <ul id="ul_prw_xmf_tvb">
+            
+            <!-- Для 1.4 -->
+            <li>Проверена совместимость с Jatoba 4.5.</li>
+            <li>В скрипте генерации переменных <codeph>env_generator.sh</codeph>:<ul
+                    id="ul_nfh_rfb_pxb">
+                <li>добавлены переменные для настройки шифрования между <ph outputclass="udvpdf"
+                                ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                keyref="datapk_itm_k"/></ph> и <ph outputclass="udvpdf"><term
+                                keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                                keyref="datapk_itm_a"/></ph>: <cmdname keyref="zbx_tlsconnect"/>,
+                            <cmdname keyref="zbx_tslpskvalue"/>, <cmdname
+                            keyref="zbx_tlspskidentity"/>;</li>
+                    <li>актуализированы значения переменных по умолчанию;</li>
+                <li>удалены переменные <cmdname>ZBX_TLSCAFILE</cmdname>, <cmdname>ZBX_TLSCRLFILE</cmdname>, <cmdname>ZBX_TLSCERTFILE</cmdname>,
+                <cmdname>ZBX_TLSKEYFILE</cmdname>.</li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_jdb_f5k_trb">
+    <title>ZBX_TLSSERVERCERT ISSUER info</title>
+    <body><div id="div_ldb_f5k_trb"><p>Разрешенный атрибут issuer сертификата сервера.</p></div></body>
+</topic>

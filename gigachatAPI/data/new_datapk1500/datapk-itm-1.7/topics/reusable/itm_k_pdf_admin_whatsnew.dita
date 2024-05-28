@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_k_pdf_admin_whatsnew">
+    <title>Что нового?</title>
+    <body>
+        <p>Основные изменения в ПО сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                outputclass="html"><term keyref="datapk_itm_k"/></ph> v.1.7.0.0:</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_vhl_5qw_z5b">
+            <title>Изменения в версии 1.7.0.0</title>
+            <tgroup cols="3">
+                <colspec colname="c3" colnum="1" colwidth="1*"/>
+                <colspec colname="c1" colnum="2" colwidth="1*"/>
+                <colspec colname="c2" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Категория</entry>
+                        <entry>Изменения в продукте</entry>
+                        <entry>Разделы документации</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Шаблоны</entry>
+                        <entry> Изменены следующие шаблоны:<ul id="ul_kbs_xyx_zyb">
+                                <li><codeph>Агент.yaml</codeph> — добавлены инвентарные поля к
+                                    некоторым из собираемых данных.</li>
+                                <li><codeph>Windows агентный сбор.yaml</codeph> — изменена панель
+                                    «Производительность системы», добавлен график для оперативной
+                                    памяти.</li>
+                                <li><codeph>Linux агентный сбор.yaml</codeph> — изменена панель
+                                    «Производительность системы». </li>
+                                <li><codeph>Сетевое универсальное устройство SNMP.yaml</codeph> —
+                                    отредактированы правила предобработки.</li>
+                                <li><codeph>Windows SNMP.yaml</codeph> — добавлены инвентарные поля
+                                    к некоторым из собираемых данных. Исправлено имя макроса в
+                                    присоединенном к <codeph>Windows SNMP.yaml</codeph> шаблоне
+                                        <codeph>SNMP MIB. Ресурсы узла</codeph>.</li>
+                                <li><codeph>Linux SNMP.yaml</codeph> — добавлены инвентарные поля к
+                                    некоторым из собираемых данных.</li>
+                                <li><codeph>Сервер агентов ITM-A.yaml</codeph> — исправлена опечатка
+                                    в имени элемента данных.</li>
+                                <li><codeph>Общий ПЛК.yaml</codeph> — добавлены элементы данных для
+                                    мониторинга узлов с помощью ICMP. </li>
+                                <li><codeph>APC Smart-UPS.yaml</codeph> — отредактированы правила
+                                    предобработки. </li>
+                                <li><codeph>Eltex MES SNMPv2.yaml</codeph> — отредактированы правила
+                                    предобработки. Исправлен мониторинг коммутаторов в стеке</li>
+                            </ul></entry>
+                        <entry><xref href="../ITM_K_reference_info/rus_templates.dita"/>, <xref
+                                href="../requirements/safe_installation/first_configuration/import_templates.dita"
+                            /></entry>
+                    </row>
+                    <row>
+                        <entry>Шаблоны</entry>
+                        <entry>
+                            <div
+                                conref="../reusable/changelog_1_7/ITM-1481.dita#ReusableComponent_kxw_wrc_gzb/div_nxw_wrc_gzb"
+                            />
+                        </entry>
+                        <entry><xref href="../ITM_K_reference_info/rus_templates.dita"/>, <xref
+                                href="../requirements/safe_installation/first_configuration/import_templates.dita"
+                            /></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rqk_nqk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_sqk_nqk_tsb">
+                        <cmd>с помощью команды <codeph>lsblk -f</codeph>:</cmd>
+                        <stepresult>
+                            <fig id="fig_cbv_gqk_tsb">
+                                <title>Результат работы команды lsblk -f</title>
+                                <image href="../../../images/ITM-M_2tomes/mount_lsblk.png" />
+                            </fig>
+                        </stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

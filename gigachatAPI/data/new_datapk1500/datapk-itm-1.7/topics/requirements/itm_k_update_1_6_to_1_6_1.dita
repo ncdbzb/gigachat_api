@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_k_update_1_6_to_1_6_1">
+    <title>Обновление DATAPK ITM-K с версии 1.6.0.0 до версии 1.6.0.1</title>
+    <taskbody>
+        <context>
+            <p>Для обновления сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> с версии 1.6.0.0 до версии 1.6.0.1:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите в рабочую директорию <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>: </cmd>
+                <info>
+                    <codeblock>cd /opt/itm-k</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Остановите работу сервера:</cmd>
+                <info>
+                    <codeblock>docker-compose down</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Переименуйте старую рабочую директорию <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                <info>
+                    <codeblock>mv /opt/itm-k /opt/itm-k-bkp</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте директорию для новой версии <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-k</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Загрузите в директорию <codeph>/opt/itm-k</codeph> на сервере <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> следующие файлы из каталога с обновленным дистрибутивом:</cmd>
+                <info>
+                   <ol>
+                       <li><codeph>datapk_itm-k_v1.6.0.1.tar.gz</codeph>;</li>
+                       <li><codeph>docker-compose.release.yaml</codeph>.</li>
+                   </ol>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию, куда были перемещены файлы с обновленным дистрибутивом
+                        <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-k</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите обновленные образы командой:</cmd>
+                <info>
+                    <codeblock>docker load -i datapk_itm-k_v1.6.0.1.tar.gz</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте данные из старой рабочей директории <codeph>/opt/itm-k-bkp</codeph> в новую директорию <codeph>/opt/itm-k</codeph>:</cmd>
+                <info>
+                    <codeblock>cp -r /opt/itm-k-bkp/.env /opt/itm-k-bkp/env /opt/itm-k</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Запустите контейнеры:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте результат обновления. Для этого перейдите в веб-интерфейс <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> по ранее использовавшемуся адресу.</cmd>
+            </step>
+            <step>
+                <cmd>Если обновление прошло успешно, удалите директорию с предыдущей версией <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                    <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                    <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> 1.6.0.0:</cmd>
+                <info>
+                    <codeblock>rm -rf /opt/itm-k-bkp/</codeblock>
+                </info>
+            </step>
+        </steps>
+        <postreq>
+            <note>Если обновленный сервер мониторинга <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_k"/></ph>
+                <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> был подключен к серверу
+                <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>, то <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> не обнаружит, что версия сервера мониторинга
+                изменилась, и продолжит делать запросы, соответствующие старой версии сервера
+                мониторинга. Для корректной работы необходимо на <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> удалить сервер
+                мониторинга <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph>
+                <ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph>
+                <ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и добавить его заново. При
+                этом все данные, связанные с сервером мониторинга, будут удалены и появятся только
+                при повторном добавлении этого сервера.</note>
+        </postreq>
+    </taskbody>
+    
+</task>

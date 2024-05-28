@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_vm_docker">
+    <title>Установка Docker</title>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Добавьте репозиторий docker:</cmd>
+                <info>
+                    <codeblock>dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите docker:</cmd>
+                <info>
+                    <codeblock>dnf install docker-ce --allowerasing</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Запустите службу docker:</cmd>
+                <info>
+                    <codeblock>systemctl start docker   </codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Добавьте службу docker в автозагрузку:</cmd>
+                <info>
+                    <codeblock>systemctl enable --now docker</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте состояние службы docker:</cmd>
+                <info>
+                    <codeblock>systemctl status docker</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите docker-compose: </cmd>
+                <info>
+                    <codeblock>wget https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m) -O /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте версию docker-compose:</cmd>
+                <info>
+                    <codeblock> docker-compose --version</codeblock>
+                    <fig id="fig_ssj_xmj_z5b">
+                        <title>Проверка версии docker-compose</title>
+                        <image href="../../../images/centos_install/centos_docker_version.png"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

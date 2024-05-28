@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="log_timezone">
+    <glossterm>log_timezone</glossterm>
+    <glossdef>
+        <p>Часовой пояс, который используется в логах.</p>
+    </glossdef>
+</glossentry>

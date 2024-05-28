@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="emergency_actionsudv_actions_after_problems">
+    <title>Действия после сбоев и ошибок эксплуатации средства</title>
+        <body id="actions_after_problems">
+            <p>В этом разделе:</p>
+            <p>
+                <ul id="ul_r21_ftf_1xb">
+                <li/>
+                    <li><xref href="http_request_took_too_long_to_complete.dita"/>;</li>
+                    <li><xref href="cannot_start_service.dita"/></li>
+                    <li><xref href="itm_k_db_error_connection.dita"/></li>
+                    <li><xref href="itm_k_db_error.dita"/></li>
+                    <li><xref href="server_unavailable.dita"/></li>
+                    <li><xref href="itm_k_om_name_problem.dita"/></li>
+                    <li><xref href="itm_k_net_conflict.dita"/></li>
+                    <li><xref href="host_availability_snmp.dita"/></li>
+                    <li><xref href="itm_k_regexp_problem.dita"/></li>
+                    <li><xref href="../../ITM_M_troubleshooting/itm_k_itm_m.dita"/></li>
+                    <li><xref href="big_queue.dita"/></li>
+                    <li><xref href="security_profile.dita"/></li>
+                    <li><xref href="problem_zbx_proxyconfigfrequency.dita"/></li>
+                    <li><xref href="backup_error.dita"/></li>
+                </ul>
+            </p>
+        </body>   
+</topic>

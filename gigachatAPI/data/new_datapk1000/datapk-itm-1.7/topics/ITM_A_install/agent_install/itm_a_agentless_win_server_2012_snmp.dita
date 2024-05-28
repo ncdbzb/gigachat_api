@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_agentless_win_server_2012_snmp">
+    <title>Настройка ОМ с ОС Windows Server 2012 </title>
+    <body>
+        <note id="note_ttr_4km_rvb">Для <abbreviated-form keyref="monitoring_object"/> с этой ОС
+            настройка происходит с помощью протокола <ph
+                conref="../../reusable/protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"
+            />.</note>
+        <section id="section_mt3_ch4_rvb">
+            <title>Настройка ОМ</title>
+            <p>
+                <note>Для настройки ОМ должна быть установлена служба <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />. Подробнее про установку см. в разделе <xref
+                        href="#itm_a_agentless_win_server_2012_snmp/snmp"/>.</note>
+            </p>
+            <ol id="ol_a2j_114_rvb">
+                <li>Найдите соответствующие службы для последующей настройки. Для этого:<ol
+                        id="ol_dt4_114_rvb">
+                        <li>Нажмите Win+R. </li>
+                        <li>В появившемся окне введите services.msc.</li>
+                        <li>Нажмите на кнопку «OK».</li>
+                    </ol><fig id="fig_nt3_ch4_rvb">
+                        <title>Запуск оснастки службы </title>
+                        <image
+                            href="../../../images/agentless_installation/win_server_2012_services_msc.png"
+                            id="image_pdf_jb4_rvb"/>
+                    </fig></li>
+                <li>Для более детальной настройки <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    /> агента:<ol id="ol_qjf_kb4_rvb">
+                        <li>Нажмите правой кнопкой мыши на «<ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            /> Service» и выберите «Properties».<fig id="fig_ot3_ch4_rvb">
+                                <title>Службы</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_services_prop.png"
+                                    id="image_rpq_kb4_rvb"/>
+                            </fig></li>
+                        <li>На вкладке «Security» создайте имя сообщества. Для этого нажмите на
+                            кнопку «Add».<fig id="fig_pt3_ch4_rvb">
+                                <title>Окно «SNMP Service Properties»</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_security.png"
+                                    id="image_c3z_dpg_y5b"/>
+                            </fig></li>
+                        <li>В открывшемся окне:<ol id="ol_j3s_mb4_rvb">
+                                <li>выберите права сообщества;<note>Рекомендуемое значение — READ
+                                        ONLY.</note></li>
+                                <li>введите имя сообщества;</li>
+                                <li>нажмите на кнопку «Add».</li>
+                            </ol><fig id="fig_qt3_ch4_rvb">
+                                <title>Окно «SNMP Service Configuration»</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_snmp_service_config.png"
+                                    id="image_acd_pb4_rvb"/>
+                            </fig></li>
+                        <li>Для применения текущих настроек нажмите на кнопку «Apply».<fig
+                                id="fig_rt3_ch4_rvb">
+                                <title>Окно «SNMP Service Configuration»</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_snmp_service_apply.png"
+                                    id="image_smx_lpg_y5b"/>
+                            </fig></li>
+                    </ol></li>
+                <li>Перезапустите службу <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />.</li>
+            </ol>
+        </section>
+        <section id="snmp">
+            <title>Установка службы SNMP</title>
+            <ol id="ol_st3_ch4_rvb">
+                <li>Зайдите в панель «Server Manager». </li>
+                <li>Перейдите в раздел «Add roles and features».<fig id="fig_tt3_ch4_rvb">
+                        <title>Панель «Server manager»</title>
+                        <image
+                            href="../../../images/agentless_installation/win_server_2012_server_manager.png"
+                            id="image_mvp_kzn_rvb"/>
+                    </fig></li>
+                <li>В открывшемся окне перейдите на вкладку «Server Selection».</li>
+                <li>Выберите сервер, на который будет производится установка компонента <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />.<fig id="fig_ut3_ch4_rvb">
+                        <title>Окно «Add Roles and Features Wizard»</title>
+                        <image
+                            href="../../../images/agentless_installation/win_server_2012_all_roles.png"
+                            id="image_djv_lzn_rvb"/>
+                    </fig></li>
+                <li>Добавьте компонент «<ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    /> Service». Для этого:<ol id="ol_rys_mzn_rvb">
+                        <li>Перейдите на вкладку «Features».</li>
+                        <li>В выведенном списке установите чекбокс «<ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            /> Service».<fig id="fig_i5q_wnn_y5b">
+                                <title>Выбор SNMP service</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_snmp_service.png"
+                                    id="image_j5q_wnn_y5b"/>
+                            </fig></li>
+                        <li>В появившемся окне нажмите на кнопку «Add features».<fig
+                                id="fig_vt3_ch4_rvb">
+                                <title>Добавление компонента</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_add_features.png"
+                                    id="image_cfy_14n_y5b"/>
+                            </fig>Результат шага: Будет установлен чекбокс напротив «<ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            /> Service».</li>
+                        <li>Нажмите на кнопку «Next».<fig id="fig_wt3_ch4_rvb">
+                                <title>Переход у установке SNMP Service</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_next.png"
+                                    id="image_zcc_l4n_y5b"/>
+                            </fig></li>
+                        <li>Для начала загрузки нажмите на кнопку «Install».<fig
+                                id="fig_xt3_ch4_rvb">
+                                <title>Начало установки</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_install.png"
+                                    id="image_twn_n4n_y5b"/>
+                            </fig>Результат шага: Начнется загрузка. <fig id="fig_yt3_ch4_rvb">
+                                <title>Запуск оснастки Службы</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_install_start.png"
+                                    id="image_lkt_44n_y5b"/>
+                            </fig></li>
+                        <li>После завершения загрузки нажмите на кнопку «Close».<fig
+                                id="fig_g2b_q4n_y5b">
+                                <title>Службы</title>
+                                <image
+                                    href="../../../images/agentless_installation/win_server_2012_install_close.png"
+                                    id="image_h2b_q4n_y5b"/>
+                            </fig></li>
+                    </ol></li>
+            </ol>
+        </section>
+    </body>
+</topic>

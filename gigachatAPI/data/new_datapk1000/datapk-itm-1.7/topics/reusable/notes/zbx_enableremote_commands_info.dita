@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_pvt_pjk_trb">
+    <title>ZBX_ENABLEREMOTE COMMANDS info</title>
+    <body><div id="div_qvt_pjk_trb"><p>Разрешает или запрещает удаленные команды с сервера.</p></div></body>
+</topic>

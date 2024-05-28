@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_templates">
+    <title>Импорт шаблонов</title>
+    <taskbody>
+        <context>В комплект поставки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_k"/></ph> входит набор русскоязычных шаблонов для
+            мониторинга, адаптированных для использования в проектах по мониторингу безопасности и
+            контролю ресурсов.<note>Описание набора шаблонов приведено на странице <xref
+                    href="../../../ITM_K_reference_info/rus_templates.dita"/>.</note><p>Для
+                использования шаблонов на русском языке необходимо заменить имеющиеся встроенные
+                шаблоны. <note type="tip">Если после импорта русскоязычных шаблонов потребуется обновить один
+                    или несколько из них, см. порядок действий в разделе <xref
+                        href="../../../usage/templates/template_configuration/itm_k_import_new_templates.dita"
+                    />.</note></p><p>Для замены встроенных шаблонов на русскоязычные:</p></context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite keyref="templates"/>. </cmd>
+            </step>
+            <step>
+                <cmd>Удалите существующие шаблоны. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Для выбора всех шаблонов установите чекбокс в верхней левой ячейке
+                            таблицы, содержащей список загруженных шаблонов.</cmd>
+                        <info>
+                            <fig id="fig_templates_2_14">
+                                <title>Страница Шаблоны</title>
+                                <image
+                                    href="../../../../images/first_configuration/templates_2_14.png"
+                                    id="templates_2_14"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Если шаблоны занимают несколько страниц, повторите этой действие для каждой страницы.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку «Удалить» внизу страницы.</cmd>
+                        <stepresult>Появится окно подтверждения действия.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите «ОК» для подтверждения.</cmd>
+                        <stepresult>Все шаблоны будут удалены.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Загрузите новые шаблоны. Для этого:</cmd>
+                <substeps id="substeps_r33_yrf_3rb">
+                    <substep>
+                        <cmd>В верхнем правом углу страницы <cite keyref="templates"/> нажмите
+                            кнопку «Импорт». </cmd>
+                        <stepresult>Откроется страница «Импорт»</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Выберите файл», найдите в окне проводника
+                                <codeph>Агент.yaml</codeph> и подтвердите выбор.</cmd>
+                        <info>
+                            <fig id="fig_import_template_2_15">
+                                <title>Страница Импорт</title>
+                                <image
+                                    href="../../../../images/first_configuration/import_template_2_15.png"
+                                    id="import_template_2_15"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Установите чекбоксы в колонке «Создать новый» напротив всех элементов,
+                            кроме «Узлы сети».</cmd>
+                        <info>
+                            <note>Чекбоксы в колонках «Обновить существующие» и «Удалить
+                                отсутствующие» можно не устанавливать, так как ранее все шаблоны
+                                были удалены и выбор в данном случае ни на что не повлияет.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку «Импорт» в нижней части страницы.</cmd>
+                        
+                        <stepresult>Появится окно, сообщающее об успешности или обнаруженных проблемах импорта.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Загрузите оставшиеся шаблоны в следующем порядке:</cmd>
+                        <info>
+                            <ul>
+                                <li><codeph>Windows агентный сбор.yaml</codeph>;</li>
+                                <li><codeph>Linux агентный сбор.yaml</codeph>;</li>
+                                <li><codeph>Windows WMI.yaml</codeph>;</li>
+                                <li><codeph>Сетевое универсальное устройство
+                                    SNMP.yaml</codeph>;</li>
+                                <li><codeph>Cisco IOS SNMP.yaml</codeph>;</li>
+                                <li><codeph>Windows SNMP.yaml</codeph>;</li>
+                                <li><codeph>Linux SNMP.yaml</codeph></li>
+                                <li><codeph>Сервер консолидации ITM-K.yaml</codeph>;</li>
+                                <li><codeph>Сервер агентов ITM-A.yaml</codeph>;</li>
+                                <li><codeph>Docker минимальный.yaml</codeph>;</li>
+                                <li><codeph>Datapk.yaml</codeph>;</li>
+                                <li><codeph>Общий ПЛК.yaml</codeph>;</li>
+                                <li><codeph>APC Smart-UPS.yaml</codeph>;</li>
+                                <li><codeph>ИБП Парус Электро.yaml</codeph>;</li>
+                                <li><codeph>Eltex MES Общий.yaml</codeph>;</li>
+                                <li><codeph>Eltex MES5448.yaml</codeph>;</li>
+                                <li><codeph>Postgresql (Jatoba).yaml</codeph>;</li>
+                                <li><codeph>MySQL.yaml</codeph>;</li>
+                                <li><codeph>Температура ЦПУ Linux.yaml</codeph>;</li>
+                                <li><codeph>Сервер Huawei RH5885H V3 (iBMC).yaml</codeph>;</li>
+                                <li><codeph>Управляемый блок розеток Rem-MC.yaml</codeph>;</li>
+                                <li><codeph>Коммутатор MOXA серии EDS.yaml</codeph>.</li>
+                            </ul>
+                            <note
+                                conref="../../../reusable/notes/note_agent2.dita#ReusableComponent_dmd_qrt_1tb/note_emd_qrt_1tb"
+                            />
+                        </info>
+                    </substep>
+                   
+                </substeps>
+            </step>
+            
+            
+        </steps>
+    </taskbody>
+</task>

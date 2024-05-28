@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="work_modes">
+    <title>Режимы работы</title>
+    <body>
+        <p>Для добавления и регистрации <abbreviated-form keyref="monitoring_object"/> в DATAPK
+            ITM-K доступны следующие режимы:</p>
+        <ul id="ul_sth_wtm_frb">
+            <li>Автоматический импорт —  импорт данных об ОМ из программного комплекса DATAPK.
+                Подробнее см. в <xref href="../requirements/safe_installation/datapk_synchro/datapk_synchro.dita"/>.</li>
+            <li>Импорт — импорт данных об <abbreviated-form keyref="monitoring_object"/> из файла
+                вручную на странице <cite keyref="configuration"/>→<cite
+                    keyref="hosts_configuration"/>. Подробнее см. в <xref
+                    href="../usage/monitoring_objects_and_hosts/host_import.dita"/>.</li>
+            <li>Добавление вручную — создание нового <abbreviated-form keyref="monitoring_object"/>
+                на странице <cite keyref="configuration"/>→<cite keyref="hosts_configuration"/>.
+                Подробнее см. в <xref
+                    href="../usage/monitoring_objects_and_hosts/hosts_creation.dita"/>.</li>
+            <li>Автоматическая регистрация <abbreviated-form keyref="monitoring_object"/> —
+                добавление <abbreviated-form keyref="monitoring_object"/>, найденных <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> с
+                помощью заданных правил обнаружения. Подробнее см. в <xref
+                    href="../usage/monitoring_objects_and_hosts/hosts_detection.dita"/>.</li>
+        </ul>
+        <p>В автоматическом режиме регистрации объектов мониторинга применяется активное сканирование
+            заданных IP-адресов либо диапазонов IP-адресов с определенной периодичностью.</p>
+        <p>Обнаружение объектов мониторинга осуществляется путем поиска сетевых сервисов. Доступен
+            поиск сервисов с указанным диапазоном портов.</p>
+        <p>Для активного сканирования объектов мониторинга необходимо настроить правила обнаружения.
+            Доступны следующие статусы правил:</p>
+        <ul id="ul_tth_wtm_frb">
+            <li>правило обнаружения активировано;</li>
+            <li>правило обнаружения деактивировано.</li>
+        </ul>
+        <p>При создании или редактировании объекта мониторинга доступны следующие поля:</p>
+        <ol id="ol_uth_wtm_frb">
+            <li>Имя узла сети — сетевое имя объекта мониторинга;</li>
+            <li>Видимое имя — имя объекта мониторинга, которое отображается в интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>;</li>
+            <li>Группы — принадлежность объекта мониторинга к группе.;</li>
+            <li>Интерфейсы — сетевые интерфейсы объекта мониторинга с указанием: <ul
+                    id="ul_ag4_y13_xrb">
+                    <li>типа интерфейса;</li>
+                    <li>IP-адреса или DNS-имени;</li>
+                    <li>порта.</li>
+                </ul></li>
+            <li>Описание — описание объекта мониторинга;</li>
+            <li>Наблюдение через прокси — включение или отключение использования прокси;</li>
+            <li>Активировано — состояние объекта мониторинга.</li>
+        </ol>
+    </body>
+</topic>

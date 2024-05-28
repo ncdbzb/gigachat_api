@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bbq_cfl_hsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+            <cmd/>
+            <substeps id="substeps_nhk_khk_hsb">
+                <substep>
+                    <cmd>Перейдите на вкладку «Макросы».</cmd>
+                    <info> 
+                        <fig>
+                            <title>Вкладка «Макросы»</title>
+                            <image href="../../../images/ITM_K_usage/itm_k_templates_macros.png"/>
+                        </fig>
+                    </info>
+                </substep>
+                <substep>
+                    <cmd>Введите макрос в поле «Макрос».</cmd>
+                </substep>
+                <substep>
+                    <cmd>Введите значение макроса в поле «Значение».</cmd>
+                </substep>
+                <substep>
+                    <cmd>Выберите тип значения.</cmd>
+                </substep>
+                <substep>
+                    <cmd>При необходимости введите описание макроса.</cmd>
+                </substep>
+                <substep>
+                    <cmd>Нажмите на кнопку «Добавить»: <image href="../../../images/buttons/add_1.png"/>.</cmd>
+                    <stepresult>Строка с макросом будет добавлена в список на вкладке «Макросы».</stepresult>
+                </substep>
+                <substep>
+                    <cmd>Чтобы просмотреть и изменить глобальные макросы и макросы из присоединенных шаблонов, выберите опцию «Унаследованные и макросы из шаблонов».</cmd>
+                </substep>
+            </substeps>
+            </step>    
+        </steps>       
+    </taskbody>
+</task>

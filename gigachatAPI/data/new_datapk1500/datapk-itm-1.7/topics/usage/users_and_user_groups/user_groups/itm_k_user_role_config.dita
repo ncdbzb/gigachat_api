@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_k_user_role_config">
+    <title>Управление ролями пользователей</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Вы можете клонировать, отредактировать или удалить роль. Для этого:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите на страницу <cite keyref="administration"/> → <cite
+                        keyref="user_roles"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на имя роли в списке. </cmd>
+                <stepresult>Откроется страница редактирования роли.</stepresult>
+            </step>
+            <step>
+                <cmd>Для клонирования роли:</cmd>
+                <substeps id="substeps_tlc_wyn_ywb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Клонировать» в нижней части страницы.</cmd>
+                        <stepresult>Откроется страница новой роли с такими же
+                            настройками.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените имя для новой роли.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Добавить» в нижней части страницы.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Для редактирования роли:</cmd>
+                <substeps id="substeps_vqg_3zn_ywb">
+                    <substep>
+                        <cmd>Измените нужные параметры.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Обновить» в нижней части страницы.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Для удаления роли:</cmd>
+                <substeps id="substeps_vd2_4zn_ywb">
+                    <substep>
+                        <cmd>Нажмите на кнопку «Удалить» в нижней части страницы.</cmd>
+                        <stepresult>Откроется окно подтверждения.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В окне подтверждения нажмите на кнопку «ОК».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

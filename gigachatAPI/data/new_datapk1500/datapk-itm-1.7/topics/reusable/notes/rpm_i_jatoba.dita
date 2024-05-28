@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_y4y_zsk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_z4y_zsk_tsb">
+                <cmd>Для установки СУБД введите команду:</cmd>
+                <info><codeblock>rpm -Uvh jatoba1*</codeblock></info>
+            </step>
+        </steps>
+        </taskbody>
+</task>

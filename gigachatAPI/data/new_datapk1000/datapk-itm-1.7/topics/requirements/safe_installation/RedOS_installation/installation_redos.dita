@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="installation_redos">
+    <title>Установка DATAPK ITM-K на ОС РЕД ОС</title>
+    <body>
+        <p>Установите ОС РЕД ОС 7.3 по инструкции от производителя. В процессе установки ОС:</p>
+        <ul
+            conref="../../../reusable/notes/RedOS_installation_steps.dita#ReusableComponent_nhw_ry2_krb/ul_szp_cwm_frb"
+            id="steps-unordered_glz_sy2_krb">
+            <li> </li>
+        </ul>
+        <p>В этом разделе:<ul id="ul_kbr_1st_psb">
+                <li><xref href="ntp.dita"/></li>
+                <li><xref href="extra_pack_installation_redos7_3.dita"/></li>
+                <li><xref href="redos_package_internet.dita"/></li>
+                <li><xref href="itm_k_2tomes.dita"/><ul id="ul_c41_hst_psb">
+                        <li><xref href="itm_k_mount.dita"/></li>
+                        <li><xref href="itm_k_subd_config.dita"/></li>
+                    </ul></li>
+                <li><xref href="installation_server_datapk_itm_k.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

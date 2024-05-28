@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zr5_cdh_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_as5_cdh_wrb">Если у правила уже добавлен хотя бы один фильтр, выберите тип вычисления «И».</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

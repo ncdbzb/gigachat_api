@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_owj_3tc_jsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <stepresult id="stepresult_pwj_3tc_jsb">Появится окно подтверждения.</stepresult>
+            </step>
+        </steps>    
+    </taskbody>
+</task>

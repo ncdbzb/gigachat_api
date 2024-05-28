@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ws5_rmy_qwb">
+    <title></title>
+    <body>
+        <note id="note_xs5_rmy_qwb">При установке <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                outputclass="html"><term keyref="datapk_itm_vm"/></ph> и <ph outputclass="udvpdf"
+                    ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                /></ph> на один сервер необходимо подготовить сертификаты в рабочей директории для
+            каждого из уровней.</note></body>
+</topic>

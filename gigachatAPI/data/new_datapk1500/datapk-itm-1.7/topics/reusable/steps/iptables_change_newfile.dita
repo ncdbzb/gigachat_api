@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bty_nb2_tvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_fty_nb2_tvb"><cmd>Если вы не вносили дополнительные изменения в правила iptables (сверх рекомендованных при установке), данный пункт можно пропустить. Если изменения были, нужно перенести их в файл <codeph>iptables</codeph>. Для этого:</cmd><substeps id="substeps_z3s_5yd_tvb"><substep><cmd>Сохраните в файл правила iptables, примененные в системе. Для этого выполните команду:</cmd><info><codeblock>iptables-save > iptables.bkp</codeblock></info><stepresult>Все правила будут сохранены в файл <codeph>iptables.bkp</codeph> в текущей директории.</stepresult></substep><substep>
+                <cmd>Найдите добавленные вами правила и перенесите их из файла
+                    <codeph>iptables.bkp</codeph> в файл <codeph>iptables</codeph> из
+                    комплекта поставки. Учитывайте, что нестандартные правила должны добавляться
+                    в соответствующую цепочку iptables и находиться в соответствующей позиции. </cmd>
+                <stepxmp>Если ранее было добавлено нестандартное правило <codeph>-A INPUT -p tcp -m
+                                tcp --dport 25 -j ACCEPT</codeph>, открывающее порт для пересылки
+                            сообщений по протоколу <ph
+                                conref="../../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                            />, то такое правило должно находиться между строчками <codeph>-A INPUT
+                                -m state --state RELATED,ESTABLISHED -j ACCEPT</codeph> и <codeph>-A
+                                INPUT -p tcp -j REJECT --reject-with tcp-reset</codeph>.</stepxmp>
+            </substep></substeps></step>
+        </steps>
+        </taskbody>
+</task>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_vkv_rnk_trb">
+    <title>zbx_hostname_info</title>
+    <body><div id="div_wkv_rnk_trb"><p>Уникальное, регистрозависимое имя хоста. Требуется для активных проверок и должно совпадать с
+                именем узла сети, указанном на сервере. </p></div></body>
+</topic>

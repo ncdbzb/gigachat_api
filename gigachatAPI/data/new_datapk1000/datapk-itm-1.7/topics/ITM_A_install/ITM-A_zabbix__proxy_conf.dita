@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ITM_A_zabbix_proxy_conf">
+    <title>Переменные файла .proxy.env</title>
+    <body>
+        <note type="attention">Не рекомендуется менять значения переменных, если это не указано в
+            инструкции. </note>
+        <table frame="all" rowsep="1" colsep="1">
+            <title>Переменные для корректной работы <ph outputclass="udvpdf"><term
+                        keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_vm"/></ph></title>
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" colwidth="1.24*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.65*"/>
+                <colspec colname="newCol4" colnum="3" colwidth="1*"/>
+                <colspec colname="c4" colnum="4" colwidth="1.24*"/>
+                <thead>
+                    <row>
+                        <entry>Название переменной</entry>
+                        <entry>Описание</entry>
+                        <entry>Допустимые значения</entry>
+                        <entry>Значение по умолчанию (жирным) или пример</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><cmdname keyref="proxymode"/></entry>
+                        <entry>Режим работы прокси:<ul id="ul_twk_xcf_dtb">
+                                <li>0 — прокси в активном режиме.</li>
+                                <li>1 — прокси в пассивном режиме.</li>
+                            </ul><note>Рекомендуется использовать пассивный режим
+                            (1).</note></entry>
+                        <entry>0-1</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="prxy_zbxserver"/></entry>
+                        <entry>Адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> или
+                                Zabbix.<p>Входящие соединения будут приниматься только с адресов,
+                                указанных в этом списке.</p></entry>
+                        <entry>Если включена поддержка IPv6, то '127.0.0.1', '::127.0.0.1',
+                            '::ffff:127.0.0.1' обрабатываются одинаково и '::/0' разрешает все IPv4
+                            и IPv6 адреса. '0.0.0.0/0' можно использовать, чтобы разрешить любой
+                            IPv4 адрес.</entry>
+                        <entry><b>172.16.240.1</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="prxy_zbxserverport"/></entry>
+                        <entry>
+                            <p>Порт <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                    outputclass="html"><term keyref="datapk_itm_k"/></ph> или
+                                Zabbix, принимающий соединения. Актуально только для прокси в
+                                активном режиме.</p>
+                        </entry>
+                        <entry>1024-32767</entry>
+                        <entry><b>10051</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="hostname1"/></entry>
+                        <entry>Уникальное регистрозависимое имя прокси. </entry>
+                        <entry>Допустимые символы: цифры, буквы, '.', ' ', '_' и '-'.<p>Максимальная
+                                длина: 64.</p></entry>
+                        <entry><b>zabbix-proxy-docker</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="proxylocalbuffer"/></entry>
+                        <entry>
+                            <p>Количество часов, в течение которого сервер <ph
+                                outputclass="udvpdf">удаленного мониторинга <term keyref="udv_itm_rm"/></ph><ph
+                                    outputclass="onlypdf">агентов <term keyref="datapk_itm_a"/></ph><ph
+                                        outputclass="html">агентов <term keyref="datapk_itm_a"/></ph> будет
+                                локально хранить данные, даже если они уже синхронизированы с
+                                сервером. Этот параметр можно использовать, если локальные данные
+                                используются сторонними приложениями.</p>
+                        </entry>
+                        <entry>0-720</entry>
+                        <entry><b>0</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="proxyofflinebuffer"/></entry>
+                        <entry>Количество часов, в течение которого сервер <ph
+                            outputclass="udvpdf">удаленного мониторинга <term keyref="udv_itm_rm"/></ph><ph
+                                outputclass="onlypdf">агентов <term keyref="datapk_itm_a"/></ph><ph
+                                    outputclass="html">агентов <term keyref="datapk_itm_a"/></ph> будет хранить
+                            собранные непереданные данные в случае, если нет связи с сервером <ph
+                                outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_k"/></ph>. Более старые
+                            данные будут утеряны.</entry>
+                        <entry>1-720</entry>
+                        <entry>
+                            <p><b>1</b></p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="heartbeatfrequency"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/heartbeatFrequency_info.dita#ReusableComponent_wyp_sjj_2tb/p_xyp_sjj_2tb"
+                            />
+                        </entry>
+                        <entry>0-3600</entry>
+                        <entry><b>60</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="configfrequency"/></entry>
+                        <entry>
+                            <p>Частота получения конфигурации с сервера. Актуально только для прокси
+                                в активном режиме. </p>
+                        </entry>
+                        <entry>1-604800</entry>
+                        <entry><b>3600</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="datasenderfrequency"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/datasenderfrequency_info.dita#ReusableComponent_pdb_4gj_2tb/p_qdb_4gj_2tb"
+                            />
+                        </entry>
+                        <entry>1-3600</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="enableremotecommands"/></entry>
+                        <entry>Разрешено ли выполнение удаленных команд с сервера мониторинга:<ul
+                                id="ul_zfj_xff_dtb">
+                                <li>0 — не разрешены;</li>
+                                <li>1 — разрешены.</li>
+                            </ul></entry>
+                        <entry>0-1</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="logremotecommands"/></entry>
+                        <entry>Включение логирования выполняемых shell-команд как предупреждений:<ul
+                                id="ul_flw_jgf_dtb">
+                                <li>0 — отключено;</li>
+                                <li>1 — включено.</li>
+                            </ul></entry>
+                        <entry>0-1</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="sourceip"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/sourceip_info.dita#ReusableComponent_agd_2cb_5tb/p_bgd_2cb_5tb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry><b>0.0.0.0</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="listenport"/></entry>
+                        <entry>Порт, который слушает траппер.</entry>
+                        <entry>1024-32767</entry>
+                        <entry><b>10051</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_dbtlsconnect"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_dbtlsconnect_info.dita#ReusableComponent_fjq_yc2_trb/div_gjq_yc2_trb"
+                            />
+                        </entry>
+                        <entry>required, verify_ca, verify_full</entry>
+                        <entry><b>required</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_dbtlscafile"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_dbtlscafile_info.dita#ReusableComponent_fd5_2d2_trb/p_gd5_2d2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry><b>/run/secrets/root-ca.pem</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_dbtlscertfile"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_dbtlscertfile_info.dita#ReusableComponent_wlw_m22_trb/entry_xlw_m22_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry><b>/run/secrets/client-cert.pem</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_dbtlskeyfile"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/zbx_dbtlskeyfile_info.dita#ReusableComponent_itq_cf2_trb/p_jtq_cf2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry><b>/run/secrets/client-key.pem</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_dbtlscipher"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_dbtlscipher_info.dita#ReusableComponent_slp_lf2_trb/div_tlp_lf2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry>—</entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_dbtlscipher13"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_dbtlscipher13_info.dita#ReusableComponent_iys_rf2_trb/div_kys_rf2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry>—</entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="debuglevel"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/debuglevel_info.dita#ReusableComponent_f5k_1hj_2tb/p_g5k_1hj_2tb"
+                            />
+                        </entry>
+                        <entry>0-5</entry>
+                        <entry><b>3</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="startpollers"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_startpollers_info.dita#ReusableComponent_qcx_5g2_trb/div_scx_5g2_trb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>10</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="startipmipollers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/startipmipollers_info.dita#ReusableComponent_bgq_ckb_5tb/p_dgq_ckb_5tb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>0</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="startpreprocessors"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_startpreprocessors_info.dita#ReusableComponent_brp_nh2_trb/div_crp_nh2_trb"
+                            />
+                        </entry>
+                        <entry> 0-1000</entry>
+                        <entry><b>3</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="startpollersunreachable"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_startpollers_unreachable_info.dita#ReusableComponent_czd_232_trb/div_dzd_232_trb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>10</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="starttrappers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/starttrappers_info.dita#ReusableComponent_xzp_glb_5tb/p_b1q_glb_5tb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>5</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="startpingers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/startpingers_info.dita#ReusableComponent_lyg_rkb_5tb/p_myg_rkb_5tb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>5</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="startdiscoverers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/startdiscoverers_info.dita#ReusableComponent_xx2_jjb_5tb/p_yx2_jjb_5tb"
+                            />
+                        </entry>
+                        <entry>0-250</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="starthttppollers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/starthttppollers_info.dita#ReusableComponent_wn2_vjb_5tb/p_yn2_vjb_5tb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_javagateway_enable"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_javagateway_enable_info.dita#ReusableComponent_xxb_3k2_trb/div_yxb_3k2_trb"
+                            />
+                        </entry>
+                        <entry>true, false</entry>
+                        <entry><b>true</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="javagateway"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/javaGateway_info.dita#ReusableComponent_ars_ymj_2tb/p_drs_ymj_2tb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry><b>zabbix-java-gateway</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="javagatewayport"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/javaGatewayPort_info.dita#ReusableComponent_mx5_nnj_2tb/p_nx5_nnj_2tb"
+                            />
+                        </entry>
+                        <entry>1024-32767</entry>
+                        <entry><b>10052</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="startjavapollers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/startjavapollers_info.dita#ReusableComponent_avn_jkb_5tb/p_bvn_jkb_5tb"
+                            />
+                        </entry>
+                        <entry>0-1000</entry>
+                        <entry><b>5</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="startvmwarecollectors"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/startvmwarecollectors_info.dita#ReusableComponent_z2w_4lb_5tb/p_afw_4lb_5tb"
+                            />
+                        </entry>
+                        <entry>0-250</entry>
+                        <entry><b>0</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="vmwarefrequency"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/vmwarefrequency_info.dita#ReusableComponent_j2c_1sb_5tb/p_k2c_1sb_5tb"
+                            />
+                        </entry>
+                        <entry>10-86400</entry>
+                        <entry><b>60</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="vmwareperffrequency"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/vmwareperffrequency_info.dita#ReusableComponent_bfx_hsb_5tb/p_cfx_hsb_5tb"
+                            />
+                        </entry>
+                        <entry>10-86400</entry>
+                        <entry><b>60</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="vmwarecachesize"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/vmwarecachesize_info.dita#ReusableComponent_c4m_trb_5tb/p_d4m_trb_5tb"
+                            />
+                        </entry>
+                        <entry>256K - 2G</entry>
+                        <entry><b>8M</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="vmwaretimeout"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/vmwaretimeout_info.dita#ReusableComponent_knn_4sb_5tb/p_lnn_4sb_5tb"
+                            />
+                        </entry>
+                        <entry>1-300</entry>
+                        <entry><b>10</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="zbx_enable_snmp_traps"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_enable_snmp_traps_info.dita#ReusableComponent_nb2_4n2_trb/div_ob2_4n2_trb"
+                            />
+                        </entry>
+                        <entry>true или false</entry>
+                        <entry><b>true</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="housekeepingfrequency"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_housekeeping_frequency_info.dita#ReusableComponent_t5d_142_trb/div_u5d_142_trb"
+                            />
+                        </entry>
+                        <entry>1-24</entry>
+                        <entry><b>1</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="cachesize"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/cache_size_info.dita#ReusableComponent_ytr_bv3_2tb/p_ztr_bv3_2tb"
+                            />
+                        </entry>
+                        <entry>128K-8G</entry>
+                        <entry><b>8M</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="startdbsyncers"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/startdbsyncers_info.dita#ReusableComponent_o5s_bjb_5tb/p_p5s_bjb_5tb"
+                            />
+                        </entry>
+                        <entry>1-100</entry>
+                        <entry><b>4</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="historycachesize"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/historyCacheSize_info.dita#ReusableComponent_hpq_fkj_2tb/p_lpq_fkj_2tb"
+                            />
+                        </entry>
+                        <entry>128K-2G</entry>
+                        <entry><b>16M</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="historyindexcachesize"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/historyIndexCacheSize_info.dita#ReusableComponent_wvb_qkj_2tb/p_xvb_qkj_2tb"
+                            />
+                        </entry>
+                        <entry>128K-2G</entry>
+                        <entry><b>4M</b></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="timeout"/></entry>
+                        <entry><ph
+                                conref="../reusable/notes/timeout_info.dita#ReusableComponent_qw2_f3z_ttb/ph_tw2_f3z_ttb"
+                            /></entry>
+                        <entry>1-30</entry>
+                        <entry><b>20</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="trappertimeout"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/tmpdir_info.dita#ReusableComponent_o5f_3pb_5tb/p_p5f_3pb_5tb"
+                            />
+                        </entry>
+                        <entry>1-300</entry>
+                        <entry><b>300</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="unreachableperiod"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/unreachableperiod_info.dita#ReusableComponent_df3_3rb_5tb/p_ef3_3rb_5tb"
+                            />
+                        </entry>
+                        <entry>1-3600</entry>
+                        <entry><b>45</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="unavailabledelay"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/unavailabledelay_info.dita#ReusableComponent_znr_3qb_5tb/p_a4r_3qb_5tb"
+                            />
+                        </entry>
+                        <entry>1-3600</entry>
+                        <entry><b>60</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="unreachabledelay"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/notes/unavailabledelay_info.dita#ReusableComponent_znr_3qb_5tb/p_a4r_3qb_5tb"
+                            />
+                        </entry>
+                        <entry>1-3600</entry>
+                        <entry><b>15</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_logslowqueries"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_logslowqueries_info.dita#ReusableComponent_cqw_rs2_trb/div_dqw_rs2_trb"
+                            />
+                        </entry>
+                        <entry>0-3600000</entry>
+                        <entry><b>3000</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="loadmodule"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/loadmodule_info.dita#ReusableComponent_opp_cv1_5tb/div_ppp_cv1_5tb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry>"dummy1.so,dummy2.so,dummy10.so"</entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_vaultdbpath"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_vaultdbpath_info.dita#ReusableComponent_fcr_vw2_trb/div_gcr_vw2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry>/zbx/path</entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_vaulturl"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_vaulturl_info.dita#ReusableComponent_qfw_1x2_trb/div_rfw_1x2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry><b>https://127.0.0.1:8200/</b>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="vault_token"/></entry>
+                        <entry>
+                            <div
+                                conref="../reusable/notes/zbx_vault_token_info.dita#ReusableComponent_c3f_fx2_trb/div_d3f_fx2_trb"
+                            />
+                        </entry>
+                        <entry>—</entry>
+                        <entry>—</entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_tlsconnect"/></entry>
+                        <entry>Способ подключения агента к серверу. Значение переменной используется
+                            активными проверками и игнорируется пассивным прокси.</entry>
+                        <entry>
+                            <p>Можно указать только одно значение:</p>
+                            <ul id="ul_u1d_pgs_4xb">
+                                <li><codeph>unencrypted</codeph> — подключаться без шифрования (по
+                                    умолчанию);</li>
+                                <li><codeph>psk</codeph> — подключаться, используя TLS и pre-shared
+                                    ключ (PSK);</li>
+                                <li><codeph>cert</codeph> — подключаться, используя TLS и
+                                    сертификат.</li>
+                            </ul>
+                        </entry>
+                        <entry><b>unencrypted</b></entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_tslpskvalue"/></entry>
+                        <entry>Строка — значение pre-shared ключа прокси, используется для
+                            зашифрованных соединений с Zabbix сервером.</entry>
+                        <entry>Значение генерируется с помощью команды <codeph>openssl rand -hex
+                                32</codeph></entry>
+                        <entry>er125stgedh38dh34u2fgbjqe</entry>
+                    </row>
+                    <row>
+                        <entry>#<cmdname keyref="zbx_tlspskidentity"/></entry>
+                        <entry>Идентификатор pre-shared ключа, используется для зашифрованных
+                            соединений с Zabbix сервером.</entry>
+                        <entry>Любая строка</entry>
+                        <entry>Testpsk</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

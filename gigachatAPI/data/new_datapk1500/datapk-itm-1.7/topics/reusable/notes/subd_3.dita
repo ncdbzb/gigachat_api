@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ssy_rvt_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_tsy_rvt_psb"><cmd>Назначьте СУБД нестандартный каталог для хранения баз данных и конфигурационных файлов. Для этого:</cmd><substeps id="substeps_tnn_1vt_psb"><substep>
+                        <cmd>Перейдите в режим редактирования службы СУБД:</cmd>
+                        <info>
+                            <codeblock>systemctl edit jatoba-*.service</codeblock>
+                        </info>
+                    </substep><substep>
+                        <cmd>Введите следующий текст для обозначения нового каталога:</cmd>
+                        <info>
+                            <codeblock>[Service]
+Environment=PGDATA=/storage/base</codeblock>
+                        </info>
+                    </substep>
+                <substep
+                    conref="save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                    <cmd/>
+                </substep></substeps></step>
+        </steps>
+    </taskbody>
+</task>

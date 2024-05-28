@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="untitled3">
+    <glossterm>Техническое обслуживание</glossterm>
+    <glossdef>
+        <p>Комплекс операций по поддержанию работоспособности или исправности производственного
+            оборудования (изделий, деталей) в процессе технической эксплуатации, хранения и
+            транспортировки (ГОСТ 18322-2016).</p>
+    </glossdef>
+    <glossBody>
+        <glossSurfaceForm>ТО</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>ТО</glossAbbreviation>
+        </glossAlt>        
+    </glossBody> 
+</glossentry>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_dlw_21f_jxb">
+    <title></title>
+    <body><p id="p_jlw_21f_jxb">Исправлено отображение подсказки к полю «Наименование сервера» в окнах добавления и изменения свойств сервера мониторинга: теперь подсказка отображается, только если поле доступно для редактирования.</p></body>
+</topic>

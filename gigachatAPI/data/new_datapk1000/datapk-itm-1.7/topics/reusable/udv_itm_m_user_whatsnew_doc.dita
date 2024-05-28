@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_itm_m_user_whatsnew_doc">
+    <title>Обновления документации</title>
+    <body>
+        <p>Обновления в текущей версии документации:</p>
+        <ul id="ul_gwj_1cn_mwb">
+            <li>Добавлены разделы:<ul id="ul_jxm_hgc_nwb">
+                    <li><xref
+                            href="../usage/templates/template_configuration/itm_k_import_new_templates.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/triggers/trigger_expression/report_trigger_availability.dita"
+                        /></li>
+                    <li><xref href="../usage/net_maps/net_map_configuration/add_config_figures.dita"
+                        /></li>
+                    <li><xref href="../usage/net_maps/net_map_configuration/control_figures.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/monitoring_objects_and_hosts/inventory/inventory_data_collect.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/monitoring_objects_and_hosts/inventory/auto_mode_keys.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/users_and_user_groups/user_groups/itm_k_user_roles.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/users_and_user_groups/user_groups/itm_k_user_roles_create.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/users_and_user_groups/user_groups/itm_k_user_role_config.dita"
+                        /></li>
+                </ul></li>
+            <li>Исключены разделы:<ul id="ul_ths_xm1_rwb">
+                    <li>Настройка LDAPS в ОС сервера <ph outputclass="udvpdf"><term
+                                keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                keyref="datapk_itm_k"/></ph>;</li>
+                    <li>Добавление фигур;</li>
+                    <li>Добавление линий;</li>
+                    <li>Очередность фигур и лини;.</li>
+                    <li>Ручной режим;</li>
+                    <li>Автоматический режим;</li>
+                    <li>Построение инвентарных данных;</li>
+                </ul></li>
+            <li>Изменены разделы:<ul id="ul_dvf_kqn_mwb">
+                    <li><xref href="../ITM_K_reference_info/breadcrumbs/availability_report.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/monitoring_objects_and_hosts/monitoring_objects_hosts.dita"
+                        /></li>
+                    <li><xref href="../ITM_K_reference_info/rus_templates.dita"/></li>
+                    <li><xref href="../usage/monitoring_objects_and_hosts/inventory/inventory.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/monitoring_objects_and_hosts/inventory/inventory_data_review.dita"
+                        /></li>
+                    <li><xref href="../usage/monitoring_objects_and_hosts/host_configuration.dita"
+                        /></li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

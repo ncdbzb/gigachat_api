@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_agent_server_info">
+    <title>Просмотр свойств сервера UDV-ITM-RM</title>
+    <shortdesc></shortdesc>
+    <body conref="../../reusable/notes/agent_server_info_inf.dita#ReusableComponent_qgh_qx5_1xb/body_rgh_qx5_1xb"/>
+        
+</topic>

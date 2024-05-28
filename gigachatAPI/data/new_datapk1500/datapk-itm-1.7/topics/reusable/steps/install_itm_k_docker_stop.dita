@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_esp_xwc_vvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_fsp_xwc_vvb">
+                <cmd>Остановите службу docker:</cmd>
+                <info><codeblock>systemctl stop docker</codeblock></info>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

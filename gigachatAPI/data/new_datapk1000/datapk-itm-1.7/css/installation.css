@@ -1,0 +1,43 @@
+/*Стили PDF*/
+/*Руководство администратора*/
+
+
+/* Нижние колонтитулы*/
+/*    @page :left {
+          @bottom-left {
+            content: "Руководство по установке сервера агентов DATAPK ITM-A" ;
+            font-size:10pt;
+			color:#808080;
+        }
+        @bottom-right {
+            content: counter(page, decimal);
+            font-size:10pt;
+			color:#808080;
+        }
+    }  
+ @page :right{
+         @bottom-left {
+            content: "Руководство по установке сервера агентов DATAPK ITM-A";
+            font-size:10pt;
+			color:#808080;
+        }  
+        @bottom-right{
+             content: counter(page, decimal);
+             font-size:10pt;
+			color:#808080;
+        }
+}*/
+       /* Верхние колонтитулы */ 
+  @page table-of-contents:left {
+    @top-left {
+        content: "Руководство по установке сервера агентов DATAPK ITM-A: содержание | " counter(page, decimal);
+        
+    }
+}
+@page table-of-contents:right {
+     @top-right {
+        content: "Руководство по установке сервера агентов DATAPK ITM-A: содержание | " counter(page, decimal);
+       
+     }
+
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="templates">
+    <title>Шаблоны</title>
+    <body>
+        <p>Шаблон — набор объектов, который можно применить к нескольким узлам сети. Рекомендуется
+            использовать шаблоны для добавления одних и те же объектов к разным узлам сети.</p>
+        <p>Объектами могут быть:</p>
+        <ul id="ul_ccp_rqz_frb">
+            <li>элементы данных;</li>
+            <li><term keyref="triggers">триггеры</term>;</li>
+            <li>графики;</li>
+            <li>группы элементов данных;</li>
+            <li>комплексные экраны;</li>
+            <li>правила низкоуровневого обнаружения;</li>
+            <li>веб-сценарии.</li>
+        </ul>
+        <p>Шаблоны можно присоединять отдельно к каждому узлу сети или сразу к группе узлов сети.
+                <ul id="ul_vdp_c5t_hzb">
+                <li>Присоединить шаблон к отдельному узлу сети можно на вкладке «Шаблоны» при
+                    создании или редактировании узла. Подробнее см. в разделах <xref
+                        href="../monitoring_objects_and_hosts/hosts_creation.dita"/>, <xref
+                        href="../monitoring_objects_and_hosts/host_configuration.dita"/>.</li>
+                <li>Присоединить шаблон сразу к группе узлов сети можно с помощью операции «Массовое
+                    обновление» на странице <cite keyref="configuration"/> → <cite
+                        keyref="hosts_configuration"/>. Подробнее см. в разделе <xref
+                        href="../monitoring_objects_and_hosts/mass_change_hosts.dita"/>.</li>
+            </ul></p>
+        <p>Изменение одного параметра на уровне шаблона распространяется на все присоединенные к
+            этому шаблону узлы сети.</p>
+        <p>В комплект поставки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> входит набор русскоязычных шаблонов для мониторинга, которые
+            рекомендуется установить при первичной настройке по инструкции <ph outputclass="html"><xref
+                href="../../requirements/safe_installation/first_configuration/import_templates.dita"
+            /></ph><ph outputclass="onlypdf">«Импорт шаблонов» в Руководстве администратора <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph></ph>. Список шаблонов и их описание см. в разделе <xref
+                href="../../ITM_K_reference_info/rus_templates.dita"/>. Рекомендуется использовать
+            для мониторинга шаблоны из списка.</p>
+        <p>В этом разделе:</p>
+        <p>
+            <ul id="ul_bgn_22k_hrb">
+                <li><xref href="template_configuration/itm_k_import_new_templates.dita"/></li>
+                <li><xref href="template_configuration/create_template.dita"/></li>
+                <li><xref href="template_configuration/changetemplate.dita"/></li>
+                <li><xref href="template_configuration/add_items_triggers_graphs.dita"/></li>
+                <li><xref href="template_configuration/create_obj_for_template.dita"/></li>
+                <li><xref href="template_configuration/activate_detection_rules_template.dita"
+                    /></li>
+                <li><xref href="template_configuration/itm_k_change_interval.dita"/></li>
+                <li><xref href="template_configuration/prepare_OM_template.dita"/></li>
+            </ul>
+        </p>
+    </body>
+</topic>

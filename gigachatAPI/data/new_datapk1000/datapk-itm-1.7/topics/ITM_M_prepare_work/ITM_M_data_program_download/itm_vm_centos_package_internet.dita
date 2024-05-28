@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_vm_centos_package_internet">
+    <title>Установка дополнительных пактов в ОС Centos 8 с интернетом</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+        </context>
+        <steps
+            conref="../../reusable/steps/centos_package_internet_steps.dita#ReusableComponent_lhw_z25_4xb/steps_mhw_z25_4xb"
+            id="steps_ep4_mf5_4xb">
+            <step>
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>
