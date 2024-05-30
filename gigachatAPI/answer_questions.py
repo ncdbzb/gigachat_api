@@ -17,7 +17,7 @@ async def get_answer(
 ) -> dict:
     config: Config = await load_config()
 
-    giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False, verbose=False)
+    giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False, temperature=0.2, verbose=True)
 
     start_time = time.time()
 
@@ -27,7 +27,7 @@ async def get_answer(
 
     logger_info.info(f'Вопрос по документации: {filename}')
 
-    docs_with_scores = await vectordb.asimilarity_search_with_score(que, k=6)
+    docs_with_scores = await vectordb.asimilarity_search_with_score(que, k=4)
     sim_scores = [d[1] for d in docs_with_scores]
     docs = [d[0].page_content for d in docs_with_scores]
     logger_context.debug(f'Контекст: {docs}')
@@ -38,7 +38,7 @@ async def get_answer(
         llm=giga,
         retriever=vectordb.as_retriever(
             # search_type="similarity_score_threshold",
-            search_kwargs={"k": 6}
+            search_kwargs={"k": 4}
         ),
         return_source_documents=True,
         # verbose=True,
