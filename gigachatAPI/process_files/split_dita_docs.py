@@ -1,3 +1,4 @@
+import re
 import asyncio
 import fnmatch
 import os
@@ -15,8 +16,9 @@ async def get_dita_docs(
     chunk_size: int = 0,
     min_doc_length: int = 0,
     max_doc_length: int = 0,
-    with_xml_paths: bool = False
-) -> list[Document] | list[tuple[str, str]]:
+    with_xml_paths: bool = False,
+    without_large_chunks: bool = False
+) -> list[Document] | list[tuple[str, str]] | None:
 
     async def get_dita_paths(directory_path: str) -> dict[str | bytes, int]:
         dit = {}
@@ -27,14 +29,39 @@ async def get_dita_docs(
         return dit
 
     dita_dict = await get_dita_paths(dita_path)
+
+    if not dita_dict:
+        return
+
     path_list_larger = [i for i, j in dita_dict.items() if j > min_doc_length]
 
     if chunk_size:
+        # Парсим текст из каждого .dita файла и собираем в одну большую строку
         very_long_string = ''.join(await asyncio.gather(*(extract_text_from_xml(path, with_xml_paths)
                                                           for path in path_list_larger)))
+
+        # Создаем из строки список, используя перенос строки, как разделитесь, удаляем пустые элементы и лишнии пробелы
+        very_long_list = list(map(lambda x: ' '.join(x.split()), filter(None, very_long_string.split('\n'))))
+
+        # Возвращаем обратно строку с переносами строк в нужных местах
+        very_long_string = '\n '.join(very_long_list)
+
         document = [Document(page_content=very_long_string)]
-        docs = (CharacterTextSplitter(separator=' ', chunk_size=chunk_size, chunk_overlap=0)
+        docs = (CharacterTextSplitter(separator='\n', chunk_size=chunk_size, chunk_overlap=0)
                 .split_documents(document))
+
+        if without_large_chunks:
+            error_margin = int(chunk_size * 0.1)
+            error_docs = []
+            for doc in docs:
+                if len(doc.page_content) - error_margin > chunk_size:
+                    error_docs.append(docs.pop(docs.index(doc)))
+            if error_docs:
+                print(f'len error_docs: {len(error_docs)}')
+                error_split_docs = (CharacterTextSplitter(separator=' ', chunk_size=chunk_size, chunk_overlap=0)
+                                    .split_documents(error_docs))
+                docs += error_split_docs
+
     elif with_xml_paths:
         list_with_paths: list[tuple[str, str]] = list(await asyncio.gather(*(extract_text_from_xml(path, with_xml_paths)
                                                                              for path in path_list_larger)))
@@ -71,9 +98,14 @@ async def extract_text_from_xml(xml_file_path: str, with_xml_paths: bool) -> str
 
     text = get_text(root)
 
-    clean_text = ' '.join(text.split())
+    # Удаляем повторяющиеся символы переноса строки
+    cleaned_text = re.sub(r'\n\s*\n', '\n', text)
 
+    with open('gigachatAPI/data/dita1_7.txt', 'a+', encoding='utf-8') as file:
+        file.write(f'{cleaned_text}\n\n\n')
+    
     if with_xml_paths:
-        return xml_file_path, clean_text
+        return xml_file_path, cleaned_text
     else:
-        return clean_text
+        return cleaned_text
+    

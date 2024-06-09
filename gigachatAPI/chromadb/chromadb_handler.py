@@ -7,7 +7,7 @@ from gigachatAPI.config_data.config import load_config, Config
 
 async def initialize_chroma(split_docs: list[Document], filename: str) -> None:
     persist_directory = f"gigachatAPI/data/chroma/{filename}"
-    config: Config = await load_config()
+    config: Config = load_config()
     embeddings = GigaChatEmbeddings(credentials=config.GIGA_CREDENTIALS,
                                     verify_ssl_certs=False)
     await Chroma.afrom_documents(documents=split_docs,
@@ -20,7 +20,7 @@ async def initialize_chroma(split_docs: list[Document], filename: str) -> None:
 
 async def get_chroma(filename: str) -> Any:
     persist_directory = f"gigachatAPI/data/chroma/{filename}"
-    config: Config = await load_config()
+    config: Config = load_config()
     embeddings = GigaChatEmbeddings(credentials=config.GIGA_CREDENTIALS,
                                     verify_ssl_certs=False)
     vectordb = Chroma(persist_directory=persist_directory,

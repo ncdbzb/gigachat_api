@@ -15,7 +15,7 @@ async def get_answer(
         que: str,
         return_path_to_file: bool = True
 ) -> dict:
-    config: Config = await load_config()
+    config: Config = load_config()
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False, temperature=0.2, verbose=True)
 
@@ -57,13 +57,13 @@ async def get_answer(
 
     gigachat_time = time.time() - gigachat_start_time
 
-    if return_path_to_file:
-        if answer.lower() not in ('я не знаю.', 'я не знаю'):
+    try:
+        if return_path_to_file:
             tf_idf_time = time.time()
             most_relevant_dita_file_path = await get_path_to_doc(docs, filename, answer)
             tf_idf_time = time.time() - tf_idf_time
-        else:
-            return_path_to_file = False
+    except Exception:
+        return_path_to_file = False
 
     tokens = sum(map(lambda x: x.tokens, await giga.atokens_count(
         [i.page_content for i in source_documents] + [qna_prompt.template, que, answer]

@@ -12,14 +12,14 @@ from gigachatAPI.logs.logs import logger_info
 async def generate_test(
         filename: str
 ) -> dict:
-    config: Config = await load_config()
+    config: Config = load_config()
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False)
 
     start_time = time.time()
 
     path_for_splitting = os.path.join('gigachatAPI', 'data', filename)
-    split_docs = await get_result_docs_list(path_for_splitting, 'generate_test')
+    split_docs = await get_result_docs_list(path_for_splitting, filename, 'generate_test')
 
     data_process_time = time.time() - start_time
 

@@ -17,15 +17,26 @@ async def handle_doc(request):
     start_time = time.time()
     data = await request.post()
     file = data['file']
-    save_path = os.path.join('gigachatAPI', 'data', file.filename)
+    doc_name, extension = '.'.join(file.filename.split('.')[:-1]), file.filename.split('.')[-1]
+    
+    if extension != 'txt':
+        save_path = os.path.join('gigachatAPI', 'data', f'{doc_name}.{extension}')
+    else:
+        save_path = os.path.join('gigachatAPI', 'data', f'{doc_name}', f'{doc_name}.{extension}')
+        dir_path = os.path.dirname(save_path)
+        os.makedirs(dir_path, exist_ok=True)
+
     with open(save_path, 'wb') as file_object:
         file_object.write(file.file.read())
-    print(f'saved {file.filename} with time {time.time() - start_time}')
-    path = await process_and_take_path(file.filename, save_path)
+    print(f'saved {doc_name}.{extension} with time {time.time() - start_time}')
 
-    split_docs = await get_result_docs_list(path, 'initialize_chroma')
+    path = await process_and_take_path(doc_name, extension, save_path)
 
-    await initialize_chroma(split_docs, path.split('/')[-1])
+    split_docs = await get_result_docs_list(path, doc_name, 'initialize_chroma')
+
+    # vectordb_manager = VectordbManager()
+    # vectordb_manager.create_collection(doc_filename, split_docs)
+    await initialize_chroma(split_docs, doc_name)
     print(f'time: {time.time() - start_time}')
 
     return web.json_response({"result": "File was received"})
