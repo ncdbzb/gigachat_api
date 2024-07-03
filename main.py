@@ -8,6 +8,7 @@ from gigachatAPI.answer_questions import get_answer
 from gigachatAPI.generate_test import generate_test
 from gigachatAPI.process_files.process_paths import process_and_take_path
 from gigachatAPI.chromadb.chromadb_handler import initialize_chroma
+from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
 from gigachatAPI.utils.delete_doc import delete_doc
 from gigachatAPI.utils.help_methods import get_actual_doc_list
@@ -35,7 +36,7 @@ async def handle_doc(request):
     split_docs = await get_result_docs_list(path, doc_name, 'initialize_chroma')
 
     # vectordb_manager = VectordbManager()
-    # vectordb_manager.create_collection(doc_filename, split_docs)
+    # vectordb_manager.create_collection(doc_name, split_docs, use_cycle=True)
     await initialize_chroma(split_docs, doc_name)
     print(f'time: {time.time() - start_time}')
 

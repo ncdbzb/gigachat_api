@@ -55,9 +55,10 @@ async def get_dita_docs(
             error_docs = []
             for doc in docs:
                 if len(doc.page_content) - error_margin > chunk_size:
-                    error_docs.append(docs.pop(docs.index(doc)))
+                    error_docs.append(doc)
             if error_docs:
-                print(f'len error_docs: {len(error_docs)}')
+                for error_doc in error_docs:
+                    docs.remove(error_doc)
                 error_split_docs = (CharacterTextSplitter(separator=' ', chunk_size=chunk_size, chunk_overlap=0)
                                     .split_documents(error_docs))
                 docs += error_split_docs

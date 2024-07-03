@@ -58,6 +58,8 @@ async def get_answer(
     gigachat_time = time.time() - gigachat_start_time
 
     try:
+        if sim_scores[0] > 290:
+            return_path_to_file = False 
         if return_path_to_file:
             tf_idf_time = time.time()
             most_relevant_dita_file_path = await get_path_to_doc(docs, filename, answer)

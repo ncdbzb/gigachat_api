@@ -5,6 +5,9 @@ from gigachatAPI.process_files.split_dita_docs import get_dita_docs
 from gigachatAPI.process_files.split_other_docs import get_text_docs_list
 
 
+CHUNK_SIZE = 800
+
+
 async def get_result_docs_list(file_path: str, filename: str, operation: str) -> list[Document]:
     """
     Функция получает путь к файлу и создает список документов, разбивая на части содержимое файла.
@@ -18,7 +21,7 @@ async def get_result_docs_list(file_path: str, filename: str, operation: str) ->
     """
 
     if operation == 'initialize_chroma':
-        split_docs = await get_dita_docs(file_path, chunk_size=800, without_large_chunks=True)
+        split_docs = await get_dita_docs(file_path, chunk_size=CHUNK_SIZE, without_large_chunks=True)
         if not split_docs:
             split_docs = await get_text_docs_list(file_path, separator='\n', chunk_size=800, chunk_overlap=100)
     else:

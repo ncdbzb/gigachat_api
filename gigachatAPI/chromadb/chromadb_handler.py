@@ -6,6 +6,8 @@ from gigachatAPI.config_data.config import load_config, Config
 
 
 async def initialize_chroma(split_docs: list[Document], filename: str) -> None:
+    if filename == 'test_chroma':
+        raise ValueError(f'Name \"{filename}\" is unavailable')
     persist_directory = f"gigachatAPI/data/chroma/{filename}"
     config: Config = load_config()
     embeddings = GigaChatEmbeddings(credentials=config.GIGA_CREDENTIALS,

@@ -35,7 +35,7 @@ async def get_actual_doc_list():
 
     filtered_dirs = [
         item for item in all_items
-        if os.path.isdir(os.path.join(data_dir, item)) and item != "chroma"
+        if os.path.isdir(os.path.join(data_dir, item)) and item not in "chroma, test_chroma"
     ]
 
     return filtered_dirs

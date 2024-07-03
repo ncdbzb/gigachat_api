@@ -4,6 +4,9 @@ import sys
 logger_info = logging.getLogger('logger_info')
 logger_info.setLevel(logging.DEBUG)
 
+upload_doc_info = logging.getLogger('upload_doc_info')
+upload_doc_info.setLevel(logging.DEBUG)
+
 logger_context = logging.getLogger('logger_context')
 logger_context.setLevel(logging.DEBUG)
 
@@ -24,6 +27,9 @@ logger_info.addHandler(file_handler_info)
 
 logger_context.addHandler(file_handler_context)
 
+upload_doc_info.addHandler(console_handler_info)
+
 if 'pytest' in sys.argv[0]:
     logger_info.removeHandler(console_handler_info)
     logger_context.removeHandler(file_handler_context)
+    upload_doc_info.removeHandler(console_handler_info)
