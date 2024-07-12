@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_14">
+ <title>Отсутствуют события, генерируемые Комплексом</title>
+ <troublebody>
+ <condition>
+ 
+ <p>На странице <cite keyref="events_fp"/> частично или полностью отсутствуют события, генерируемые
+                    <term keyref="appliance"/>ом. В качестве причин рассмотрены следующие:</p>
+            <ol id="ol_ukf_z4v_p5b">
+                <li><xref href="#trouble_14/cause_events_disables" format="dita"/></li>
+                <li><xref href="#trouble_14/cause_full_disk" format="dita"/></li>
+            </ol>
+ </condition>
+     <troubleSolution>
+ <cause id="cause_events_disables">
+                <title>Генерация событий отключена в настройках переменных</title>
+                <p>В конфигурационном файле <codeph><term keyref="env"/></codeph>
+                    <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>
+                    переменным, отвечающим за отключение и включение генерации событий от служебных
+                    источников, присвоены значения <codeph>true</codeph> (генерация событий
+                    отключена).</p>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+                        <cmd>Присвойте необходимым переменным значение <codeph>false</codeph> или
+                            удалите переменные из файла <codeph><term keyref="env"/></codeph>.</cmd>
+                        <info>
+                            <note><ph>Порядок работы с указанными переменными приведен в подразделе
+                                    </ph><ph id="only_impl">«Включение и отключение служебных
+                                    источников» Руководства по эксплуатации.</ph><ph
+                                    id="only_main_pdf_html">«<xref
+                                        href="../../control_prot_obj_events/setup_collect_events_policy/toggle_datapk_sensor.dita"
+                                    />».</ph></note>
+                        </info>
+                    </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_full_disk">
+                <title>Диск операционной системы Комплекса заполнен более, чем на 90%</title>
+                <p>Сервис хранения и поиска событий недоступен в результате заполнения дискового
+                    пространства более, чем на 90%.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps id="steps_hx3_bwt_45b">
+                    <step>
+                        <cmd>Авторизуйтесь на операционной системе <term keyref="appliance"/>а
+                            уровня <abbreviated-form keyref="management"/>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь, что сервис хранения и поиска событий недоступен:</cmd>
+                        <info>
+                            <codeblock id="codeblock_bys_kpv_p5b">docker logs -f logstash</codeblock>
+                        </info>
+                        <stepresult>в журнале будут отображаться события вида
+                                <systemoutput>Opensearch в режиме
+                            read-only</systemoutput>.</stepresult>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а:</cmd>
+                        <info>
+                            <codeblock id="codeblock_gjz_nq1_ptb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Остановите работу сервисов <term keyref="appliance"/>а:</cmd>
+                        <info>
+                            <codeblock id="codeblock_wht_dqv_p5b">docker-compose down</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Удалите ненужные файлы с дискового пространства.</cmd>
+                    </step>
+                    <step>
+                        <cmd>При необходимости измените значения переменных <cmdname
+                                keyref="DATAPK_EVENT_MANAGER_EVENTS_SIZE"/> и <cmdname
+                                keyref="DATAPK_EVENT_MANAGER_ARCHIVES_SIZE"/>:</cmd>
+                        <substeps id="substeps_zdv_grv_p5b">
+                            <substep>
+                                <cmd>Откройте на редактирование файл <codeph><term keyref="env"
+                                        /></codeph>.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Найдите и измените значения переменных:</cmd>
+                                <info>
+                                    <codeblock id="codeblock_evc_nrv_p5b"><cmdname keyref="DATAPK_EVENT_MANAGER_EVENTS_SIZE"/>=[значение]
+<cmdname keyref="DATAPK_EVENT_MANAGER_ARCHIVES_SIZE"/>=[значение]</codeblock>
+                                </info>
+                                <info>
+                                    <note id="note_m1v_5rv_p5b" type="tip"><ph
+                                            conref="../../reusable/EM_ARCHIVES_SIZE_and_EVENTS_SIZE.dita#ReusableComponent_b2k_qvy_mpb/ph_g2k_qvy_mpb"
+                                            /><p
+                                            conref="../../reusable/env_var/datapk_event_manager_events_size_desc_1.dita#ReusableComponent_u3k_vnx_gtb/p_w3k_vnx_gtb"
+                                        /></note>
+                                </info>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step>
+                        <cmd>Очистите тома Docker, использованные при обновлении:</cmd>
+                        <substeps id="substeps_wl4_ktv_p5b">
+                            <substep>
+                                <cmd>Убедитесь в необходимости очистки:</cmd>
+                                <info>
+                                    <codeblock id="codeblock_kvl_ltv_p5b">docker system df</codeblock>
+                                    <note id="note_i1t_4tv_p5b" type="tip">При отображении более 50
+                                        ГБ занятого места необходима очистка.</note>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Удалите неиспользуемые данные:</cmd>
+                                <info>
+                                    <codeblock id="codeblock_ajn_rtv_p5b">docker system prune -a</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Нажмите <codeph>Y</codeph> в диалоговом окне.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Загрузите образ с текущей версией <term keyref="appliance"
+                                    />а:</cmd>
+                                <info>
+                                    <codeblock id="codeblock_jl4_ttv_p5b">docker load -i [tar-архив с установленной на данный момент версией <term keyref="appliance"/>а]</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>При необходимости загрузите образы сервиса обновлений:</cmd>
+                                <info>
+                                    <codeblock id="codeblock_nqv_q5v_p5b">docker load -i [tar-архив с сервисом обновлений]</codeblock>
+                                </info>
+                            </substep>
+                        </substeps>
+                        <stepresult>директории обновления Docker будут очищены. Метаданные не будут
+                            утеряны.</stepresult>
+                    </step>
+                    <step>
+                        <cmd>Если предыдущие способы не дали результата, очистите метаданные
+                            сервиса.</cmd>
+                        <info>
+                            <note id="note_bvg_2wv_p5b" type="caution">При очистке будут утеряны все
+                                индексы событий и элементы раздела <cite keyref="monitoring_fp"/>:
+                                шаблон индекса, панели мониторинга, сохраненные поиски,
+                                фильтры.</note>
+                            <p>Для очистки выполните команду:</p>
+                            <codeblock id="codeblock_xmh_pwv_p5b">rm -rf /var/lib/docker/volumes/datapk_elastic-data/_data/nodes/*</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Восстановите утерянные данные.</cmd>
+                        <info>
+                            <note id="note_cl3_twv_p5b"><ph>Подробнее о настройке см. разделы
+                                    </ph><ph outputclass="only_impl">«Создание шаблона индекса»,
+                                    «Импорт сохраненных объектов» Руководства по
+                                    эксплуатации.</ph><ph outputclass="only_main_pdf_html">«<xref
+                                        href="../../work_with_kibana/setup_normalization_rules.dita"
+                                    />», «<xref
+                                        href="../../work_with_kibana/exp_imp_kibana/import_kibana.dita"
+                                    />».</ph></note>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Запустите сервисы <term keyref="appliance"/>а: </cmd>
+                        <info>
+                            <codeblock id="codeblock_fh2_kxv_p5b">docker-compose up -d</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь в работоспособности сервиса хранения и поиска событий:</cmd>
+                        <substeps id="substeps_e3f_3xv_p5b">
+                            <substep>
+                                <cmd>Выполните следующий запрос:</cmd>
+                                <info><codeblock id="codeblock_wpb_bzv_p5b">curl -XPUT "http://[datapk_backend_nw]:9200/_settings" -H 'Content-Type: application/json' -d '{"index":{"blocks":{"read_only_allow_delete":"false"}}}'</codeblock><ph>Где
+                                            <codeph>[datapk_backend_nw]</codeph> — </ph><ph
+                                        conref="../../reusable/backed/M_gateway_descr_ph.dita#ReusableComponent_frs_r1j_bzb/ph_jrs_r1j_bzb"
+                                        /><ph>.</ph></info>
+                                <stepresult>запись вида <codeph>"acknowledged":true</codeph>
+                                    свидетельствует об успешном выполнении запроса.</stepresult>
+                            </substep>
+                            <substep>
+                                <cmd>Выполните действия, в результате которых должны появиться
+                                    события.</cmd>
+                                <info>
+                                    <note
+                                        conref="../../reusable/notes/how_to_gen_events_tip.dita#ReusableComponent_ekp_gj2_qyb/note_g25_qzv_p5b"
+                                        id="note_t4p_gj2_qyb"/>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd><ph
+                                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+                                    <cite keyref="events_fp"/>.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Найдите события по результатам выполненных действий.</cmd>
+                            </substep>
+                        </substeps>
+                    </step>
+                    <step>
+                        <cmd>Если события отсутствуют, ознакомьтесь с инструкциями ниже по
+                            устранению нештатных ситуаций.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+ </troublebody>
+    <related-links>
+        <link href="trouble_18.dita"/>
+    </related-links>
+</troubleshooting>

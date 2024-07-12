@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_DB_HOST">
+    <glossterm>DATAPK_DB_HOST</glossterm>
+    <glossdef>
+        <div
+            conref="../topics/reusable/env_var/datapk_db_host_desc.dita#ReusableComponent_mfh_drf_4yb/div_nfh_drf_4yb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

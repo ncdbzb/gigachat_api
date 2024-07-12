@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gpw_ch3_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult><ph id="ph_hpw_ch3_nyb">будет сформирован и доступен для скачивания в
+                        правом верхнем углу страницы <cite keyref="exchange_fp"/> под заголовком
+                            <uicontrol>Результат последнего экспорта</uicontrol></ph></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

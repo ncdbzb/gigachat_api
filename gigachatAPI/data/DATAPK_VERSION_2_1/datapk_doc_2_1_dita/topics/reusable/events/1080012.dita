@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1080012">
+    <title>
+Изменен объект защиты</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1080012"> ОЗ ID: <codeph>{old_id}</codeph>; Старые значения: [id:
+                                <codeph>{old_id}</codeph>; Имя: <codeph>{old_netbios_name}</codeph>;
+                                Описание: <codeph>{old_description}</codeph>; Тип:
+                                    <codeph>{old_host_type}</codeph>; ipv4-mac:
+                                    <codeph>{old_interfaces_list}</codeph>]; Новые значения: [id:
+                                    <codeph>{new_id}</codeph>; Имя:
+                                    <codeph>{new_netbios_name}</codeph>; Описание:
+                                    <codeph>{new_description}</codeph>; Тип:
+                                    <codeph>{new_host_type}</codeph>; ipv4-mac:
+                                    <codeph>{new_interfaces_list}</codeph>]</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

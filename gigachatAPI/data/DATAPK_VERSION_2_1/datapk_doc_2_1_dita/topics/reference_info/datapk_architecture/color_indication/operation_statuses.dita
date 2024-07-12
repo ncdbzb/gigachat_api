@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="operation_statuses">
+    <title>Индикация статусов операций</title>
+    <body>
+        <p>В веб-интерфейсе присутствует индикация статусов выполнения длительных операций
+            (например, группового удаления или изменения объектов). Ознакомиться с видами индикации
+            статусов вы можете в таблице ниже.</p>
+        <table id="indicators" outputclass="sortable">
+            <title>Индикаторы статусов операций в интерфейсе <term keyref="appliance"/>а</title>
+            <tgroup cols="4">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <colspec colnum="3" colname="col3"/>
+                <colspec colnum="4" colname="col4"/>
+                <thead>
+                    <row>
+                        <entry>Индикатор</entry>
+                        <entry>Цвет</entry>
+                        <entry>Описание</entry>
+                        <entry>Страница интерфейса</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><image href="../../../../images/icons/statuses/status%20(3).png"
+                                id="image_atx_m4l_tnb"/></entry>
+                        <entry>Красный</entry>
+                        <entry>Операция не была завершена вследствие ошибки. При нажатии на «▼»
+                            можно посмотреть детали</entry>
+                        <entry><cite keyref="prot_obj_profile_fp"/></entry>
+                    </row>
+                    <row>
+                        <entry><image href="../../../../images/icons/statuses/status%20(9).png"
+                                id="image_vxd_n4l_tnb"/></entry>
+                        <entry morerows="1">Оранжевый</entry>
+                        <entry>Операция была инициирована пользователем, ожидает в очереди на
+                            выполнение</entry>
+                        <entry><cite keyref="prot_obj_profile_fp"/></entry>
+                    </row>
+                    <row>
+                        <entry><image href="../../../../images/icons/statuses/status%20(4).png"
+                                id="image_bcj_44l_tnb"/></entry>
+                        <entry>Операция была запущена и выполняется в данный момент</entry>
+                        <entry><cite keyref="prot_obj_profile_fp"/></entry>
+                    </row>
+                    <row>
+                        <entry><image href="../../../../images/icons/statuses/status%20(19).png"
+                                id="image_ps1_p4l_tnb"/></entry>
+                        <entry>Оранжевый</entry>
+                        <entry>Операция не была завершена вследствие превышения времени
+                            ожидания</entry>
+                        <entry><cite keyref="prot_obj_profile_fp"/></entry>
+                    </row>
+                    <row>
+                        <entry><image href="../../../../images/icons/statuses/active_user.png"
+                                id="active_user"/></entry>
+                        <entry>Зеленый</entry>
+                        <entry>Пользователь активен (не заблокирован)</entry>
+                        <entry><cite keyref="users_fp"/></entry>
+                    </row>
+                    <row>
+                        <entry><image href="../../../../images/icons/statuses/unactive_user.png"
+                                id="unactive_user"/></entry>
+                        <entry>Красный</entry>
+                        <entry>Пользователь неактивен (заблокирован)</entry>
+                        <entry><cite keyref="users_fp"/></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

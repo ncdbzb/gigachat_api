@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cgy_11w_3tb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><note id="note_y3t_szv_3tb" type="caution">Настройка групп сканеров не рекомендована на <term keyref="appliance"/>ах базового уровня.</note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

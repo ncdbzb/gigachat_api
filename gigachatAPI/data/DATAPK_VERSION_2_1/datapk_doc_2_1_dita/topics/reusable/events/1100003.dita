@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1100003">
+    <title>Создан пользовательский статус инцидента</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1100003"> Обоснование: <codeph>{justification}</codeph>;
+                                Пользователь: <codeph>{user}</codeph>; Новый статус: [Название:
+                                    <codeph>{name}</codeph>; Категория:
+                                <codeph>{category}</codeph>]</p></entry></row></tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

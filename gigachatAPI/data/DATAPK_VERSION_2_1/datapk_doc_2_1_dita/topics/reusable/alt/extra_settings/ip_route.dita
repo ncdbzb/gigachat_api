@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_clp_sy4_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_dlp_sy4_f1c">
+                <cmd>Посмотрите список текущих сетевых маршрутов:</cmd>
+                <info><codeblock id="codeblock_zcr_sb5_21c">ip route</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

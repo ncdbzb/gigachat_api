@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_COMMAND_PROCESSOR_WORKER_MAX_MEMORY_SIZE_MB">
+    <glossterm>DATAPK_COMMAND_PROCESSOR_WORKER_MAX_MEMORY_SIZE_MB</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/datapk_command_processor_worker_max_memory_size_mb.dita#ReusableComponent_yxq_4fr_pyb/ph_nyq_4fr_pyb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_s.dita"/>
+    </related-links>
+</glossentry>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mtg_pd4_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_otg_pd4_f1c">
+                <cmd>Перезагрузите <term keyref="alt_name"/> командой:</cmd>
+                <info><codeblock id="codeblock_qzh_jcl_lyb">shutdown -r now</codeblock></info>
+                <stepresult>ОС успешно перезагружена.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

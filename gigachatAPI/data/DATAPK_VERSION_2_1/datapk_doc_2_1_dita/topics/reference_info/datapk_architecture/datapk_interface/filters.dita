@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="filters">
+ <title>Фильтры</title>
+ <body>
+ <p>Для поиска данных по критериям пользователь <term keyref="appliance"/>а может воспользоваться фильтрами.</p>
+ 
+ <fig
+ id="fig_fsb_ngp_xnb">
+ <title>Пример фильтров на странице «Потоки данных»</title>
+ <image href="../../../../images/streams/filters_on_stream_page_1.png"
+ id="image_onw_pgp_xnb"/>
+ </fig>
+ <p>Фильтры доступны на следующих страницах основного интерфейса:</p>
+ <ul id="ul_l2w_kt4_xnb">
+ <li><cite keyref="prot_obj_fp"/>.</li>
+   <li><ph
+          conref="../../../reusable/pages_breadcrumbs/maps.dita#ReusableComponent_u2d_3fk_qxb/ph_v2d_3fk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/flows.dita#ReusableComponent_rpk_jfk_qxb/ph_spk_jfk_qxb"
+        />.</li>
+ <li><cite keyref="incidents_fp"/>.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/indexes.dita#ReusableComponent_gzl_zy2_jxb/ph_hzl_zy2_jxb"
+        /></li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/oval_definitions.dita#ReusableComponent_z4m_dgk_qxb/ph_apm_dgk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/oval_groups.dita#ReusableComponent_ybd_fgk_qxb/ph_zbd_fgk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/oval_results.dita#ReusableComponent_xrx_5t2_qxb/ph_yrx_5t2_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/ref.dita#ReusableComponent_psy_wz2_qxb/ph_qsy_wz2_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/flow_rules.dita#ReusableComponent_ej1_qgk_qxb/ph_gj1_qgk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/oval_scripts.dita#ReusableComponent_chs_5lk_qxb/ph_dhs_5lk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+        />.</li>
+   <li><ph
+          conref="../../../reusable/pages_breadcrumbs/cred.dita#ReusableComponent_gfw_vnk_qxb/ph_hfw_vnk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/oval_settings.dita#ReusableComponent_gtk_v4k_qxb/ph_htk_v4k_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/config.dita#ReusableComponent_mlt_fqk_qxb/ph_nlt_fqk_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/corr_rules.dita#ReusableComponent_hjr_w2c_pxb/ph_jjr_w2c_pxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/incident_notification.dita#ReusableComponent_tzp_gz2_qxb/ph_uzp_gz2_qxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/ids_rules.dita#ReusableComponent_ykq_l4c_pxb/ph_zkq_l4c_pxb"
+        />.</li>
+ <li><ph
+          conref="../../../reusable/pages_breadcrumbs/users.dita#ReusableComponent_rvx_v3c_pxb/ph_svx_v3c_pxb"
+        /></li>
+ </ul>
+ <p>На каждой странице фильтры индивидуальны и зависят от содержания страницы.</p>
+    <p>Фильтры влияют только на отображение записей таблицы, количество и порядок столбцов таблицы
+      можно изменить в окне «Настройка таблицы». Подробнее см. в разделе «<xref
+        href="table_control_elements.dita"/>».</p>
+ <p>После настройки фильтров на страницах есть возможность сохранить примененный фильтр и другие
+      параметры страницы, такие как расположение узлов на карте или колонок таблиц. Уже созданные
+      представления можно изменить или удалить. Подробнее см. в разделе «<xref
+        href="control_view.dita"/>».</p>
+ </body>
+</topic>

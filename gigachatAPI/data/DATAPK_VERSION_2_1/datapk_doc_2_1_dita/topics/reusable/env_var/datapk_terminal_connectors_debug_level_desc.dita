@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_q3g_s3j_jpb">
+
+ <title>DATAPK_TERMINAL_CONNECTORS_DEBUG_LEVEL</title>
+ <body> 
+ <p id="p_z3g_s3j_jpb">Включает расширенное логирование сервиса сбора данных по ssh, telnet, winrm,
+   winexe terminal_connector</p> 
+</body> 
+</topic> 

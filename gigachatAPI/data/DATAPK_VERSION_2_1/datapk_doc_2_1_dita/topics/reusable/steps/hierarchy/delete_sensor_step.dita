@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cls_11g_czb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_rls_11g_czb">
+                <cmd>В открывшейся панели нажмите внизу кнопку <image
+                        href="../../../../images/icons/del.png" id="image_nq5_5d2_czb"/>
+                    <uicontrol>Удалить сенсор</uicontrol>. </cmd>
+                <stepresult>Появится окно с предупреждением: <systemoutput>Вместе с сенсором будут
+                        удалены связанные сетевые атрибуты и потоки. Вы действительно хотите удалить
+                        сенсор [имя]?</systemoutput></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

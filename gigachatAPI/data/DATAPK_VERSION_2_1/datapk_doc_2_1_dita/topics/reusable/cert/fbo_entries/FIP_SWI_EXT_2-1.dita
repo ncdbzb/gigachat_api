@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ntn_ntx_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_ptn_ntx_zxb">ФБО должны обеспечивать контроль
+                                целостности программного обеспечения объектов контролируемой ИС,
+                                который предусматривает контроль целостности программного
+                                обеспечения [по именам (идентификаторам) и (или) по контрольным
+                                суммам компонентов программного обеспечения динамически в процессе
+                                работы контролируемой информационной системы].</div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="uninstall_datapk">
+    <title>Удаление Комплекса</title>
+    <taskbody>
+        <context>
+            <p>Процесс удаления <term keyref="appliance"/>а состоит из двух следующих этапов:<ul
+                    id="ul_dkn_sdv_mbc">
+                    <li>остановка и удаление контейнеров;</li>
+                    <li>удаление директорий и образов.</li>
+                </ul></p>
+        </context>
+    </taskbody>
+    <task id="task_f43_vdv_mbc">
+        <title>Остановка и удаление контейнеров</title>
+        <taskbody>
+            <context id="context_wmp_wdv_mbc">
+                <p>Для остановки и удаления контейнеров:</p>
+            </context>
+            <steps id="steps_wqv_wdv_mbc">
+                <step>
+                    <cmd>Убедитесь, что все контейнеры запущены. Для этого выведите список
+                        контейнеров командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_xqv_wdv_mbc">docker ps</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Остановите контейнеры и удалите тома контейнеров <term keyref="appliance"
+                        />а уровня <abbreviated-form keyref="management"/> и <term
+                            keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"/>
+                        командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_yqv_wdv_mbc">docker-compose down -v</codeblock>
+                    </info>
+                    <info>
+                        <note type="caution" id="note_qgk_hbz_nbc">При вводе ключа
+                                <codeph>-v</codeph> будут удалены все тома, связанные с
+                            контейнерами, в результате чего данные будут потеряны.</note>
+                    </info>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_czd_d2v_mbc">
+        <title>Удаление директорий и образов</title>
+        <taskbody>
+            <context id="context_ryr_22v_mbc">
+                <p>Для удаления директорий и образов:</p>
+            </context>
+            <steps id="steps_ind_f2v_mbc">
+                <step>
+                    <cmd>Удалите директорию <codeph>/opt/datapk</codeph> для <term
+                            keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>
+                        командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_t4p_32v_mbc">rm -rf /opt/datapk</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Удалите директорию <codeph>/opt/sensor</codeph> для <term
+                            keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"/>
+                        командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_otd_l2v_mbc">rm -rf /opt/sensor</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Запустите очистку дискового пространства командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_fsg_n2v_mbc">docker system prune -a</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Подтвердите очистку, нажав клавишу <codeph>y</codeph>.</cmd>
+                    <info>
+                        <note id="note_ivg_gmv_mbc" type="caution">При вводе команды <codeph>docker
+                                system prune -a</codeph> будут удалены все остановленные контейнеры,
+                            неиспользуемые образы и сети.</note>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Удалите директорию <codeph>/var/backups/elasticsearch</codeph>
+                        командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_ulp_q2v_mbc">m -rf /var/backups/elasticsearch</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Удалите директорию <codeph>/var/backups/snmp_mibs</codeph> командой:</cmd>
+                    <info>
+                        <codeblock id="codeblock_fcv_q2v_mbc">m -rf /var/backups/snmp_mibs</codeblock>
+                    </info>
+                    <stepresult>После выполнения всех действий по удалению контейнеров, директорий и
+                        образов <term keyref="appliance"/> будет удален.</stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+</task>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+ <map> 
+
+ <title>reusable</title>
+ <topicref href="buttons/checkbox.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/config_button.dita" processing-role="resource-only"/>
+ <topicref href="buttons/create_report_button.dita" processing-role="resource-only"/>
+ <topicref href="buttons/delete_button.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/edit_button.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/events_button.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/expand_button.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/pause_button.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/play_now_button.dita" processing-role="resource-only"/> 
+ <topicref href="buttons/save_check_button.dita" processing-role="resource-only"/>
+ <topicref href="buttons/table_props_button.dita" processing-role="resource-only"/>
+ <topicref href="buttons/shedules_button.dita" processing-role="resource-only"/> 
+ <topicref href="filepath/env.dita" processing-role="resource-only"/> 
+ <topicref href="filepath/opt.dita" keys="opt" processing-role="resource-only"/> 
+ <topicref href="filepath/opt_datapk.dita" keys="opt_datapk" processing-role="resource-only"/> 
+ <topicref href="filepath/opt_updater.dita" processing-role="resource-only"/> 
+ <topicref href="filepath/var_backups.dita" processing-role="resource-only"/> 
+ <topicref href="before_import_ids.dita" processing-role="resource-only"/> 
+ <topicref href="cancel_oval_note.dita" processing-role="resource-only"/> 
+ <topicref href="docker_compose.dita" processing-role="resource-only"/> 
+ <topicref href="docker_compose_release_yml.dita" processing-role="resource-only"/> 
+ <topicref href="import_action_step.dita" processing-role="resource-only"/> 
+ <topicref href="import_action_step_2.dita" processing-role="resource-only"/> 
+ <topicref href="import_action_step_suricata.dita" processing-role="resource-only"/> 
+ <topicref href="note_recommend.dita" processing-role="resource-only"/> 
+ <topicref href="EM_ARCHIVES_SIZE.dita" keys="em_archives_size" processing-role="resource-only"/> 
+ <topicref href="EM_ARCHIVES_SIZE_and_EVENTS_SIZE.dita" keys="em_archives_size_and_events_size" processing-role="resource-only"/> 
+ <topicref href="before_import_ids.dita" keys="before_import_ids" processing-role="resource-only"/> 
+ <topicref href="cancel_oval_note.dita" keys="cancel_oval_note" processing-role="resource-only"/> 
+ <topicref href="configuration_definition.dita" keys="configuration_definition" processing-role="resource-only"/> 
+ <topicref href="critical.dita" keys="critical" processing-role="resource-only"/> 
+ <topicref href="data_collect_interface_step.dita" keys="data_collect_interface_step" processing-role="resource-only"/> 
+ <topicref href="docker_compose.dita" keys="docker_compose" processing-role="resource-only"/> 
+ <topicref href="docker_compose_release_yml.dita" keys="docker_compose_release_yml"
+  processing-role="resource-only"/>
+ <topicref href="docker_compose_stand_yml.dita" keys="docker_compose_stand_yml"
+  processing-role="resource-only"/>
+ <topicref href="false.dita" keys="false" processing-role="resource-only"/> 
+ <topicref href="import_action_step.dita" keys="import_action_step" processing-role="resource-only"/> 
+ <topicref href="import_action_step_2.dita" keys="import_action_step_2" processing-role="resource-only"/> 
+ <topicref href="import_action_step_suricata.dita" keys="import_action_step_suricata" processing-role="resource-only"/> 
+ <topicref href="low.dita" keys="low" processing-role="resource-only"/> 
+ <topicref href="note_recommend.dita" keys="note_recommend" processing-role="resource-only"/> 
+ <topicref href="to_saved_obj.dita" keys="to_saved_obj" processing-role="resource-only"/> 
+ <topicref href="true.dita" keys="true" processing-role="resource-only"/> 
+ <topicref href="filepath/opt_updater.dita" keys="opt_updater" processing-role="resource-only"/> 
+ <topicref href="filepath/var_backups.dita" keys="var_backups" processing-role="resource-only"/> 
+ <topicref href="filepath/var_backups_operational_data.dita" keys="var_backups_operational_data" processing-role="resource-only"/> 
+ <topicref href="filepath/tar.dita" keys="tar" processing-role="resource-only"/> 
+ <topicref href="trouble_28.dita" keys="trouble_28" processing-role="resource-only"/>
+ <topicref href="start_cont_steps.dita" keys="start_cont_steps" processing-role="resource-only"/>
+ <topicref href="appliance_name.dita" keys="appliance_name" processing-role="resource-only"/>
+ <topicref href="appliance_name_short.dita" keys="appliance_name_short" processing-role="resource-only"/>
+ <topicref href="alt/alt_stop_work.dita" processing-role="resource-only"/> 
+ <topicref href="alt/alt_run_container.dita" processing-role="resource-only"/>
+ <topicref href="alt/alt_name.dita" keys="alt_name" processing-role="resource-only"/> 
+</map> 

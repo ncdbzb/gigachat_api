@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="navigation_in_dashboards">
+ <title>Навигация в разделах мониторинга</title>
+ <body>
+ <p>Для удобства перемещения по разделам мониторинга предусмотрена навигация, которая содержит
+   только те ссылки, которые необходимы в конкретный момент анализа событий <abbreviated-form
+    keyref="IS"/>.</p>
+ <p>
+ <fig id="fig_glw_blp_vnb">
+ <title>Информационная панель</title>
+ <image href="../../../images/dashboards_kibana/ref_info/nav_panel_1.png"
+ id="image_hlw_blp_vnb"/>
+ </fig>
+ </p>
+ <p>Панель состоит из следующих ссылок на визуализированные разделы мониторинга:</p>
+  <ul id="ul_drf_mkp_vnb">
+   <li><xref href="../info_dashboards/compliance_vulnerability_control.dita"/></li>
+   <li><xref href="../info_dashboards/events_control_datapk.dita"/></li>
+   <li><xref href="../info_dashboards/operational_monitoring.dita"/></li>
+   <li><xref href="../main_dashboard/main_dashboard.dita"/></li>
+  </ul>
+ </body>
+</topic>

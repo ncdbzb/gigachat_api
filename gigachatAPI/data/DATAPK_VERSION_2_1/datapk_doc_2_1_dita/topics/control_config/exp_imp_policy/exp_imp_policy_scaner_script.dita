@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="exp_imp_policy_scaner_script">
+ <title>Экспорт и импорт задач сбора данных, сканеров и их групп</title>
+ <body>
+ <p>В этом разделе:</p>
+  <ul id="ul_evd_dpr_qnb">
+   <li><xref keyref="import_scanner"/></li>
+   <li><xref keyref="import_task"/></li>
+   <li><xref keyref="export_scanner"/></li>
+   <li><xref keyref="export_task"/></li>
+  </ul>
+ <p>Экспорт и импорт задач сбора данных, сканеров и их групп осуществляется на странице <ph
+    conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+   /> на панели <uicontrol>Сбор данных</uicontrol>.</p>
+ 
+ <fig id="fig_zjj_m1s_vpb">
+ <title>Панель «Сбор данных» на странице «Импорт и экспорт»</title>
+ <image href="../../../images/control_config/policy_exp_imp.png"
+ id="image_akj_m1s_vpb">
+ <alt>Панель «Сбор данных» на странице «Импорт и экспорт»</alt>
+ </image>
+ </fig>
+ </body>
+</topic>

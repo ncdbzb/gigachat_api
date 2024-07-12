@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="change_normalization_rules">
+    <title>Удаление шаблона индекса</title>
+    <taskbody>
+        <context>
+            <p>Для удаления шаблона индекса:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>В веб-интерфейсе Комплекса откройте страницу <cite
+                        keyref="appliance_control_fp"/> → <cite keyref="main_settings"/> → <cite
+                        keyref="monitoring_control_fp"/> и откройте вкладку <uicontrol>Шаблоны
+                        индексов</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на название шаблона индекса, который необходимо удалить. Откроется
+                    страница выбранного шаблона.</cmd>
+                <info>
+                    <fig id="fig_id4_cbn_41c">
+                        <title>Внешний вид страницы шаблона индекса</title>
+                        <image href="../../images/work_with_kibana/normalization/index_page.png"
+                            id="image_rj2_gbn_41c"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите <image href="../../images/icons/kibana/del_kib.png"
+                        id="image_mwc_fbn_41c"/> в правом верхнем углу.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне нажмите <uicontrol>Delete</uicontrol>.</cmd>
+                <info>
+                    <fig id="fig_vlm_dbn_41c">
+                        <title>Окно подтверждения удаления шаблона индекса</title>
+                        <image
+                            href="../../images/work_with_kibana/normalization/index_delete_confirmation.png"
+                            id="image_ztr_gbn_41c"/>
+                    </fig>
+                </info>
+                <stepresult>Шаблон индекса будет удален. После удаления шаблона индекса просмотр
+                    событий будет недоступен, в том числе на панелях мониторинга и визуализациях, но
+                    события не будут удалены.</stepresult>
+            </step>
+            <step>
+                <cmd>Для возможности дальнейшего просмотра событий создайте новый шаблон индекса —
+                    подробнее см. <xref href="setup_normalization_rules.dita"/>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

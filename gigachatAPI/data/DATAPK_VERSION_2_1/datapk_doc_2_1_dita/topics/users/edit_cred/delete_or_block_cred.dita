@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="delete_or_block_cred">
+ <title>Блокировка и удаление учетной записи</title>
+ <taskbody>
+ <context>
+ <p outputclass="no_en">В случае обнаружения несанкционированных действий пользователя (подробнее см. раздел «<xref
+     href="../../errors_troubleshooting/unautorised_access_troubleshooting/unautorised_access_troubleshooting.dita"
+    />») или в иных случаях, интерфейс <term keyref="appliance"/>а предоставляет возможность
+    бессрочно заблокировать или удалить учетную запись пользователя.</p>
+ </context>
+ <steps>
+ <step>
+ <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="appliance_control_fp"/> → <cite keyref="users_fp"/>.</cmd>
+ </step>
+ <step>
+ <cmd>Для блокировки учетной записи пользователя <term keyref="appliance"/>а:</cmd>
+ <substeps id="substeps_nwz_y5z_tnb">
+ <substep>
+                        <cmd>Выберите учетную запись в списке пользователей и нажмите кнопку <image
+                                href="../../../images/icons/edit.png" id="image_e3m_fxz_tnb"/>
+                            (<uicontrol>Редактировать учетную запись</uicontrol>). Появится окно <uicontrol>Редактирование учетной
+                                записи</uicontrol>.</cmd>
+                    </substep>
+ <substep>
+     <cmd>Отмените выбор чекбокса <uicontrol>Активность</uicontrol>.</cmd>
+                    </substep>
+ </substeps>
+ </step>
+ <step>
+ <cmd>Для удаления учетной записи пользователя <term keyref="appliance"/>а:</cmd>
+ <substeps id="substeps_ezf_z5z_tnb">
+ <substep>
+                        <cmd>Напротив утратившей актуальность учетной записи нажмите кнопку <image
+                                href="../../../images/icons/del.png" id="image_delete_button"/>
+                                (<uicontrol>Удалить учетную запись</uicontrol>).</cmd>
+                    </substep>
+ <substep>
+                        <cmd>Во всплывающем окне введите текст обоснования удаления.</cmd>
+                    </substep>
+ </substeps>
+ </step>
+ </steps>
+ </taskbody>
+</task>

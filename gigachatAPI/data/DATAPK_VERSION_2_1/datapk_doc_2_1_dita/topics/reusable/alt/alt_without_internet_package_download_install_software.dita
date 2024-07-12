@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vyr_htz_21c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_zyr_htz_21c">
+                        <cmd>Установите и обновите необходимое ПО по команде:</cmd>
+                        <info><codeblock id="codeblock_ibm_f1g_fzb">apt-get update &amp;&amp; apt-get dist-upgrade -y --download-only</codeblock><note
+                                id="note_wr2_ll4_fzb" type="attention">Если при выполнении команды
+                                будут возникать ошибки вида <systemoutput>Невозможно получить
+                                    [наименование_пакета]</systemoutput>, <systemoutput>Bizzare
+                                    error ...</systemoutput>, выполните команду повторно. При
+                                повторном возникновении ошибок обратитесь в сервисный центр «Базальт
+                                СПО».</note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

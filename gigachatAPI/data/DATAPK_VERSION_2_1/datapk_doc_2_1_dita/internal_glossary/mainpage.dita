@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="mainPage">
+    <glossterm>mainPage</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/environment_var/mainpage_desc.dita#ReusableComponent_fdq_bzc_jpb/p_kdq_bzc_jpb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/environment_json.dita"/>
+    </related-links>
+</glossentry>

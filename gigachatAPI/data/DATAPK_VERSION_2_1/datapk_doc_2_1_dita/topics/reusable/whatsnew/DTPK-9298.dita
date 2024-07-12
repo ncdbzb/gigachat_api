@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fqz_bsr_nzb">
+    <title></title>
+    <body>
+        <p id="p1">Исключена возможность сбора данных по протоколу Profinet. Исключена связанная
+            переменная <codeph>DATAPK_PLC_CONNECTOR_DEFAULT_INTERFACE</codeph></p>
+        <p id="p2">Добавлена возможность сбора данных с ПЛК ОВЕН по протоколу PLC-Browser</p>
+    </body>
+</topic>

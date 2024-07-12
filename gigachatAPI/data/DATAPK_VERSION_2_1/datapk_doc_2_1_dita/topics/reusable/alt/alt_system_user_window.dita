@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gb2_grc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <stepresult id="stepresult_ib2_grc_2zb">появится окно <uicontrol>Системный пользователь</uicontrol>.</stepresult>
+            </step>
+        </steps>
+        </taskbody>
+</task>

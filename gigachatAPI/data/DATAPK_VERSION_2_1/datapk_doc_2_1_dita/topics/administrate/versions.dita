@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="versions">
+ <title>Сведения о версиях Комплекса</title>
+ <body>
+ <p>Версия <term keyref="appliance"/>а указывается в поставляемой документации на комплекс и
+   отображается в веб-интерфейсе возле логотипа в верхней левой части страницы. Информация о версии
+   также отображается на странице <cite keyref="appliance_control_fp"/> → <cite
+    keyref="main_settings_fp"/>.</p>
+ </body>
+</topic>

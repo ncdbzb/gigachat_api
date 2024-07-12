@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_sxn_ylc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_txn_ylc_2zb">В следующем окне убедитесь, что в поле <uicontrol>Точка монтирования</uicontrol> указано <uicontrol>/</uicontrol>, и нажмите <uicontrol>ОК</uicontrol>.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

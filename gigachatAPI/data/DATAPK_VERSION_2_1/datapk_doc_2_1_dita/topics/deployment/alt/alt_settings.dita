@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="alt_settings">
+    <title>Настройка ОС Альт Сервер 10.1—10.2</title>
+    <taskbody>
+        <steps>
+            <step
+                conref="../../reusable/alt/alt_configuration_ssh.dita#ReusableComponent_uhv_zzc_2zb/step_vhv_zzc_2zb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/alt/alt_with_internet.dita#ReusableComponent_phc_gly_21c/cmd_shc_gly_21c"/>
+                <info>
+                    <note id="note_cf5_zzf_fzb" type="tip">Для установки и обновления компонентов
+                            <term keyref="alt_name"/> при отсутствии доступа в сеть Интернет см.
+                        раздел «<xref href="alt_server_save_packages.dita"/>». После обновления без
+                        использования сети Интернет сразу перейдите к шагу <xref
+                            href="#alt_settings/step_ssh_ave"/>.</note>
+                </info>
+                <substeps id="substeps_x4k_hfn_fzb">
+                    <substep>
+                        <cmd>Предварительно настройте доступ к репозиториям <term keyref="alt_name"
+                            />. Для этого:</cmd>
+                        <info
+                            conref="../../reusable/alt/alt_without_internet_package_download_cert.dita#ReusableComponent_kgr_2tz_21c/info_set_repos"
+                        />
+                    </substep>
+                    <substep
+                        conref="../../reusable/alt/alt_with_internet_update_software.dita#ReusableComponent_vsh_tly_21c/substep_wsh_tly_21c">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/alt/alt_with_internet_reload.dita#ReusableComponent_mtv_cmy_21c/substep_ntv_cmy_21c">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../reusable/alt/alt_config_relogin_cmd.dita#ReusableComponent_jpv_4gn_fzb/cmd_kpv_4gn_fzb"
+                        />
+                    </substep>
+                    <substep>
+                        <cmd>Выполните установку необходимого ПО для работы <term
+                                keyref="appliance_name_short"/>:</cmd>
+                        <info>
+                            <codeblock conref="../../reusable/alt/alt_config_soft_install_codeblock.dita#ReusableComponent_cfj_xdg_fzb/codeblock_qrw_ntq_lyb" id="codeblock_ymj_xdg_fzb"/>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>установлено и обновлено ПО для работы <term
+                        keyref="appliance_name_short"/>.</stepresult>
+            </step>
+            <step
+                conref="../../reusable/alt/alt_config_ssh.dita#ReusableComponent_w24_3zv_dzb/step_x24_3zv_dzb"
+                id="step_ssh_ave">
+                <cmd/>
+            </step>
+            <step id="step_cg1_ctz_666">
+                <cmd conref="../../reusable/alt/alt_configuration_time_cmd.dita#ReusableComponent_smm_s1d_2zb/cmd_tmm_s1d_2zb"/>
+                <substeps id="substeps_zg2_csf_myb">
+                    <substep conref="../../reusable/alt/alt_configuration_time_open_file.dita#ReusableComponent_vyb_51d_2zb/substep_wyb_51d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../../reusable/alt/alt_configuration_time_del_str.dita#ReusableComponent_udn_v1d_2zb/substep_vdn_v1d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../../reusable/alt/alt_configuration_time_chronyd.dita#ReusableComponent_i3t_w1d_2zb/substep_j3t_w1d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../../reusable/alt/alt_configuration_time_chronyd_restart.dita#ReusableComponent_z4v_x1d_2zb/substep_apv_x1d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/alt/alt_configuration_time_chronid_check.dita#ReusableComponent_dtb_tgt_21c/substep_etb_tgt_21c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult conref="../../reusable/alt/alt_configuration_time_result.dita#ReusableComponent_pxg_1bd_2zb/stepresult_qxg_1bd_2zb"/>
+            </step>
+            <step conref="../../reusable/alt/alt_configuration_change_kernel_config.dita#ReusableComponent_nbb_3dd_2zb/step_obb_3dd_2zb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd conref="../../reusable/alt/alt_configuration_net_interface_cmd.dita#ReusableComponent_kqh_5dd_2zb/cmd_lqh_5dd_2zb"/>
+                <substeps id="substeps_bxj_txp_nyb">
+                    <substep>
+                        <cmd>Если отсутствует, создайте директорию с наименованием сетевого
+                            интерфейса для прослушивания трафика (названия сетевых интерфейсов <term
+                                keyref="alt_name"/> взяты из этапа установки ОС в шаге <xref
+                                href="manual_instruct_safe_install_alt.dita#manual_instruct_safe_install_alt/iface_set_step"
+                            /> — в данном примере это <codeph>ens224</codeph>):</cmd>
+                        <info>
+                            <codeblock id="codeblock_hk3_l1g_myb">mkdir /etc/net/ifaces/ens224</codeblock>
+                        </info>
+                    </substep>
+                    <substep conref="../../reusable/alt/alt_configuration_net_interface_copy_file.dita#ReusableComponent_h3z_c2d_2zb/substep_i3z_c2d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../../reusable/alt/alt_configuration_net_interface_create_iplink.dita#ReusableComponent_x3z_cfd_2zb/substep_y3z_cfd_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../../reusable/alt/alt_configuration_net_interface_reload_service.dita#ReusableComponent_acw_kfd_2zb/substep_bcw_kfd_2zb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult
+                    conref="../../reusable/alt/alt_configuration_net_interface_result.dita#ReusableComponent_gmk_sfd_2zb/stepresult_hmk_sfd_2zb"/>
+            </step>
+            <step conref="../../reusable/alt/alt_configuration_ssd_trim.dita#ReusableComponent_vm4_1gd_2zb/step_wm4_1gd_2zb">
+                <cmd/>
+            </step>
+            <step>
+                <note id="note_sly_ykb_bzb">Если <codeph>TRIM</codeph> не поддерживается, пропустите
+                    данный шаг и перейдите к шагу <xref href="#alt_settings/step_start_docker"
+                        format="dita"/>.</note>
+                <cmd conref="../../reusable/alt/alt_configuration_trim_cmd.dita#ReusableComponent_p41_kgd_2zb/cmd_q41_kgd_2zb"/>
+                <substeps conref="../../reusable/alt/alt_configuration_trim_substeps.dita#ReusableComponent_h2n_tgd_2zb/substeps_djl_kkb_bzb">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult
+                    conref="../../reusable/alt/alt_configuration_trim_result.dita#ReusableComponent_wr2_ygd_2zb/stepresult_xr2_ygd_2zb"/>
+            </step>
+            <step id="step_start_docker" conref="../../reusable/alt/alt_configuration_start_docker.dita#ReusableComponent_qfv_jhd_2zb/step_docker">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="setting_NTP">
+    <title>Настройка Комплекса уровня Management в качестве NTP-сервера для сенсоров</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>В этом разделе приведена инструкция по подключению <term keyref="appliance"/>а
+            уровня <abbreviated-form keyref="sensor"/> к NTP-серверу, которым будет выступать <term
+                keyref="appliance"/> уровня <abbreviated-form keyref="management"/>. <note
+                id="note_zcv_vbz_lyb">Подключение <term keyref="appliance"/>а уровня
+                    <abbreviated-form keyref="management"/> к NTP-серверу выполняется в шаге <xref
+                    href="alt_settings.dita#alt_settings/step_cg1_ctz_666"/> раздела «<xref
+                    href="alt_settings.dita"/>».</note></context>
+        <steps>
+            <step>
+                <cmd>На <term keyref="appliance"/>е уровня <abbreviated-form keyref="management"
+                    />:</cmd>
+                <substeps id="substeps_hyk_4wp_nyb">
+                    <substep>
+                        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а и остановите
+                            работу контейнеров:</cmd>
+                        <info>
+                            <codeblock id="codeblock_dwf_pwp_nyb">cd /opt/datapk &amp;&amp; docker-compose down</codeblock>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/alt/extra_settings/check_123_udp.dita#ReusableComponent_i3h_fdp_f1c/substep_j3h_fdp_f1c">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/alt/extra_settings/open_chronyd_conf.dita#ReusableComponent_mpq_3dp_f1c/substep_npq_3dp_f1c">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте новую строку в конце раздела <codeph>Allow NTP client access
+                                from local network</codeph>:</cmd>
+                        <info><codeblock id="codeblock_s2j_ywp_nyb">allow [ip_addr]</codeblock>Где
+                                <codeph>[ip_addr]</codeph> — сетевой адрес комплекса уровня
+                                <abbreviated-form keyref="sensor"/>. <note type="tip"
+                                id="note_t2j_ywp_nyb">Также можно разрешить всю подсеть <term
+                                    keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"
+                                />: в таком случае <codeph>[ip_addr]</codeph> замените на адрес
+                                подсети <term keyref="appliance"/>а уровня <abbreviated-form
+                                    keyref="sensor"/> и через <uicontrol>/</uicontrol> укажите маску
+                                данной подсети, например <codeph>10.51.203.0/24</codeph>.</note><fig
+                                id="fig_u2j_ywp_nyb">
+                                <title>Настройка Комплекса уровня Sensor в качестве NTP-клиента в
+                                    файле chrony.conf</title>
+                                <image href="../../../images/deployment/alt/IP_Sensor.png"
+                                    id="image_v2j_ywp_nyb"/>
+                            </fig></info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/alt/extra_settings/restart_chronyd.dita#ReusableComponent_nww_sdp_f1c/substep_oww_sdp_f1c">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите контейнеры <term keyref="appliance"/>а по команде:</cmd>
+                        <info>
+                            <codeblock id="codeblock_tjq_5wp_nyb">cd /opt/datapk &amp;&amp; docker-compose up -d</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>На <term keyref="appliance"/>е уровня <abbreviated-form keyref="sensor"
+                    />:</cmd>
+                <substeps id="substeps_zd1_1wp_nyb">
+                    <substep>
+                        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а и остановите
+                            работу контейнеров:</cmd>
+                        <info>
+                            <codeblock id="codeblock_thg_qwp_nyb">cd /opt/sensor &amp;&amp; docker-compose down</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Откройте для редактирования файл <codeph>chrony.conf</codeph>:</cmd>
+                        <info>
+                            <codeblock id="codeblock_xsc_b21_myb">nano /etc/chrony.conf</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что в качестве NTP-сервера указан IP-адрес <term
+                                keyref="appliance"/>а уровня <abbreviated-form keyref="management"
+                            />.</cmd>
+                        <info>
+                            <fig id="fig_x53_2wp_nyb">
+                                <title>Настройка Комплекса уровня Management в качестве NTP-сервера
+                                    в файле chrony.conf</title>
+                                <image href="../../../images/deployment/alt/NTP_management.png"
+                                    id="image_y53_2wp_nyb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Перезапустите службу <codeph>chronyd</codeph>:</cmd>
+                        <info>
+                            <codeblock id="codeblock_ltv_kwp_nyb">systemctl restart chronyd</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите контейнеры <term keyref="appliance"/>а по команде:</cmd>
+                        <info>
+                            <codeblock id="codeblock_uss_vmz_lyb">cd /opt/sensor &amp;&amp; docker-compose up -d</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

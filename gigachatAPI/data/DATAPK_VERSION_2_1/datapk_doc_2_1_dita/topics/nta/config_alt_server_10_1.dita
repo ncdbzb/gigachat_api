@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="config_alt_server_10_1">
+    <title>Настройка ОС Альт Сервер 10.1</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p/>
+        </context>
+        <steps>
+            <step>
+                <cmd conref="../reusable/alt/alt_configuration_login.dita#ReusableComponent_qkj_qtc_2zb/cmd_rkj_qtc_2zb"/>
+            </step>
+            <step>
+                <cmd conref="../reusable/alt/alt_with_internet.dita#ReusableComponent_phc_gly_21c/cmd_shc_gly_21c"/>
+                <info>
+                    <note>Для установки и обновления компонентов <term keyref="alt_name"/> при
+                        отсутствии доступа в сеть Интернет см. раздел «<xref
+                            href="config_alt_server_without_internet.dita"/>». После обновления без
+                        использования сети Интернет сразу перейдите к шагу <xref
+                            href="#config_alt_server_10_1/connect_VM_NTA"/>.</note>
+                </info>
+                <substeps id="substeps_xpc_rly_21c">
+                    <substep conref="../reusable/alt/alt_with_internet_update_software.dita#ReusableComponent_vsh_tly_21c/substep_wsh_tly_21c">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_with_internet_reload.dita#ReusableComponent_mtv_cmy_21c/substep_ntv_cmy_21c">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd conref="../reusable/alt/alt_config_relogin_cmd.dita#ReusableComponent_jpv_4gn_fzb/cmd_kpv_4gn_fzb"/>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните установку необходимого ПО для работы UDV NTA:</cmd>
+                        <info>
+                            <codeblock conref="../reusable/alt/alt_config_soft_install_codeblock.dita#ReusableComponent_cfj_xdg_fzb/codeblock_qrw_ntq_lyb"/>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>установлено и обновлено ПО для работы UDV NTA.</stepresult>
+            </step>
+            <step id="connect_VM_NTA">
+                <cmd>Подключитесь к виртуальной машине UDV NTA по протоколу SSH. В случае успешного
+                    подключения появится окно SSH-сеанса.</cmd>
+                <substeps id="substeps_jxj_pny_21c">
+                    <substep>
+                        <cmd>Выполните команду для подключения к UDV NTA и нажмите клавишу
+                                <uicontrol>Enter</uicontrol>:</cmd>
+                        <info><codeblock>ssh dpi@[ip_addr]</codeblock>Где <codeph>[ip_addr]</codeph>
+                            — IP-адрес сетевого интерфейса управления UDV NTA. </info>
+                    </substep>
+                    <substep
+                        conref="../reusable/alt/alt_enter_password.dita#ReusableComponent_qsp_f4y_21c/substep_ssp_f4y_21c">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/alt/alt_priv.dita#ReusableComponent_ymr_m4y_21c/substep_zmr_m4y_21c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult
+                    conref="../reusable/alt/alt_root_ssh_result.dita#ReusableComponent_tqn_z4y_21c/stepresult_uqn_z4y_21c"
+                />
+            </step>
+            <step conref="../reusable/alt/alt_config_ssh.dita#ReusableComponent_w24_3zv_dzb/step_x24_3zv_dzb">
+                <cmd/>
+            </step>
+            <step id="nta_time">
+                <cmd conref="../reusable/alt/alt_configuration_time_cmd.dita#ReusableComponent_smm_s1d_2zb/cmd_tmm_s1d_2zb"/>
+                <substeps id="substeps_fy3_fgt_21c">
+                    <substep conref="../reusable/alt/alt_configuration_time_open_file.dita#ReusableComponent_vyb_51d_2zb/substep_wyb_51d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_time_del_str.dita#ReusableComponent_udn_v1d_2zb/substep_vdn_v1d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_time_chronyd.dita#ReusableComponent_i3t_w1d_2zb/substep_j3t_w1d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_time_chronyd_restart.dita#ReusableComponent_z4v_x1d_2zb/substep_apv_x1d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_time_chronid_check.dita#ReusableComponent_dtb_tgt_21c/substep_etb_tgt_21c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult>выполнена настройка службы <codeph>chronyd</codeph> для синхронизации
+                    времени UDV NTA.</stepresult>
+            </step>
+            <step conref="../reusable/alt/alt_configuration_change_kernel_config.dita#ReusableComponent_nbb_3dd_2zb/step_obb_3dd_2zb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd conref="../reusable/alt/alt_configuration_net_interface_cmd.dita#ReusableComponent_kqh_5dd_2zb/cmd_lqh_5dd_2zb"/>
+                <substeps id="substeps_ktt_4ry_21c">
+                    <substep>
+                        <cmd>Если отсутствует, создайте директорию с наименованием сетевого
+                            интерфейса для прослушивания трафика (названия сетевых интерфейсов <term
+                                keyref="alt_name"/> взяты из этапа установки ОС в шаге <xref
+                                href="install_alt_server_10_1.dita#install_alt_server_10_1/net_configurations"
+                            /> — в данном примере это <codeph>ens224</codeph>):</cmd>
+                        <info>
+                            <codeblock>mkdir /etc/net/ifaces/ens224</codeblock>
+                        </info>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_net_interface_copy_file.dita#ReusableComponent_h3z_c2d_2zb/substep_i3z_c2d_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_net_interface_create_iplink.dita#ReusableComponent_x3z_cfd_2zb/substep_y3z_cfd_2zb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_configuration_net_interface_reload_service.dita#ReusableComponent_acw_kfd_2zb/substep_bcw_kfd_2zb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult conref="../reusable/alt/alt_configuration_net_interface_result.dita#ReusableComponent_gmk_sfd_2zb/stepresult_hmk_sfd_2zb"/>
+            </step>
+            <step>
+                <cmd>Убедитесь, что SSD-диск аппаратной платформы UDV NTA поддерживает
+                        <codeph>TRIM</codeph>. Для этого:</cmd>
+                <substeps id="substeps_ih5_m5y_21c">
+                    <substep
+                        conref="../reusable/alt/alt_fstrim.dita#ReusableComponent_anz_g5y_21c/substep_cnz_g5y_21c">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/alt/alt_lsblk.dita#ReusableComponent_ws1_s5y_21c/substep_zs1_s5y_21c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <note>Если <codeph>TRIM</codeph> не поддерживается, пропустите данный шаг и
+                    перейдите к шагу <xref href="#config_alt_server_10_1/start_docker"/>.</note>
+                <cmd conref="../reusable/alt/alt_configuration_trim_cmd.dita#ReusableComponent_p41_kgd_2zb/cmd_q41_kgd_2zb"/>
+                <substeps conref="../reusable/alt/alt_configuration_trim_substeps.dita#ReusableComponent_h2n_tgd_2zb/substeps_djl_kkb_bzb">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult>в параметры загрузки <term keyref="alt_name"/> добавлена поддержка
+                        <codeph>TRIM</codeph> для SSD-диска UDV NTA.</stepresult>
+            </step>
+            <step conref="../reusable/alt/alt_configuration_start_docker.dita#ReusableComponent_qfv_jhd_2zb/step_docker" id="start_docker">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

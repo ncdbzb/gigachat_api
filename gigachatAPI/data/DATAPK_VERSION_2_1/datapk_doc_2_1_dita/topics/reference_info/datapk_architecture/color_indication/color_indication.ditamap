@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Цветовая индикация и виды уведомлений</title>
+    <topicref href="assets_indication.dita"/>
+    <topicref href="assets_statuses.dita"/>
+    <topicref href="group_oper_statuses.dita"/>
+    <topicref href="flows_indication.dita"/>
+    <topicref href="operation_statuses.dita"/>
+    <topicref href="notification_types.dita"/>
+    <topicref href="oval_indication.dita"/>
+</map>

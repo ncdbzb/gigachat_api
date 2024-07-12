@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="laboratory_task_1_1_install_datapk">
+  <title>Установка Комплекса на базе образа ОС CentOS</title>
+  <taskbody>
+   <prereq>
+      <note conref="../../reusable/notes/RAID_10.dita#ReusableComponent_rxn_sgk_v5b/note_uq4_hhb_g5b"
+        id="note_iq4_sgk_v5b"/>
+    </prereq>
+    <context id="context_b1w_tgd_ttb">
+      <p>Для установки <term keyref="appliance"/>а на базе образа <abbreviated-form keyref="OS"/>
+        CentOS в графическом режиме:</p>
+    </context>
+    <steps id="steps_c1w_tgd_ttb">
+      <step>
+        <cmd>Подключите к серверу ISO-образ операционной системы CentOS
+            <codeph>datapk_CentOS-Stream-8-x86_64-[дата_сборки_CentOS]-dvd1_[дата_и_время_сборки_измененного_образа].iso</codeph>
+          и установите приоритет устройств загрузки. </cmd>
+      </step>
+      <step>
+        <cmd>Включите сервер.</cmd>
+        <stepresult>окно установки откроется автоматически или по нажатию любой
+          клавиши.</stepresult>
+      </step>
+      <step>
+        <cmd>Выберите пункт меню <uicontrol>Install CentOS Stream 8-stream</uicontrol>.</cmd>
+        <info>
+          <fig id="fig_d1w_tgd_ttb">
+            <title id="heading_h.30j0zll">Окно установки ОС Centos</title>
+            <image
+              href="../../../images/deployment/centos_installation/CentOS_installation.png"
+              id="image_qtb_x24_gtb"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Нажмите клавишу <uicontrol>Enter</uicontrol>.</cmd>
+        <stepresult><p>откроется главное меню установщика <abbreviated-form keyref="OS"/>
+            CentOS.</p>
+          <fig id="fig_rtb_x24_gtb">
+            <title id="heading_h.1fob9te">Окно настройки параметров установки ОС CentOS</title>
+            <image
+              href="../../../images/deployment/centos_installation/CentOS_installation_parameters.png"
+              id="image_stb_x24_gtb"/>
+          </fig>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Установите региональные настройки. Для этого в разделе главного меню <uicontrol>Региональные
+          настройки</uicontrol>:</cmd>
+        <substeps id="substeps_hxr_rmd_ttb">
+          <substep>
+            <cmd>Выберите пункт <uicontrol>Keyboard</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Раскладка клавиатуры</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне <uicontrol>Раскладка клавиатуры</uicontrol>:</cmd>
+            <info>
+              <ol id="ol_u4z_rqd_ttb">
+                <li>Убедитесь, что выбраны английская и русская раскладки.</li>
+                <li>Если одной из раскладок не хватает, нажмите <uicontrol>+</uicontrol> и добавьте раскладку.</li>
+                <li>Для изменения порядка использования раскладок выделите одну из них и
+                  воспользуйтесь кнопками <uicontrol>˄</uicontrol> и <uicontrol>˅</uicontrol>.</li>
+                <li>Нажмите <uicontrol>Готово</uicontrol>.</li>
+              </ol>
+              <fig id="fig_g1w_tgd_ttb">
+                <title>Настройка раскладки клавиатуры</title>
+                <image href="../../../images/deployment/centos_installation/choose_keyboard_layout.png"
+                  id="image_jx3_s34_gtb"/>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Выберите пункт <uicontrol>Поддержка Language</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Языковая поддержка</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне <uicontrol>Языковая поддержка</uicontrol> убедитесь, что выбран русский язык и регион <codeph>Россия</codeph>, и
+              нажмите <uicontrol>Готово</uicontrol>.</cmd>
+            <info>
+              <fig id="fig_wxp_cnd_ttb">
+                <title>Окно «Языковая поддержка»</title>
+                <image href="../../../images/deployment/centos_installation/choose_language.png"
+                  id="image_xxp_cnd_ttb"/>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Выберите пункт <uicontrol>Time &amp; Date</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Дата и Время</uicontrol></stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне <uicontrol>Дата и время</uicontrol>:</cmd>
+            <info>
+              <ol id="ol_lcw_3pd_ttb">
+                <li>Установите курсор на ваш регион либо выберите регион и город из выпадающих
+                  списков.</li>
+                <li>Установите текущее время и дату в нижней части страницы и нажмите <uicontrol>Готово</uicontrol>.</li>
+              </ol>
+            </info>
+            <info>
+              <fig id="fig_ut1_3h4_gtb">
+                <title>Окно «Дата и Время»</title>
+                <image href="../../../images/deployment/centos_installation/choose_date_time.png"
+                  id="image_vt1_3h4_gtb"/>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Настройте программное обеспечение. Для этого в разделе главного меню <uicontrol>Программное
+          обеспечение</uicontrol>:</cmd>
+        <substeps id="substeps_htf_lsd_ttb">
+          <substep>
+            <cmd>Выберите пункт <uicontrol>Выбор программ</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Выбор программ</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне <uicontrol>Выбор программ</uicontrol>:</cmd>
+            <info>
+              <ol id="ol_kzk_nsd_ttb">
+                <li>Выберите базовое окружение <uicontrol>Минимальная установка</uicontrol>.</li>
+                <li>Убедитесь, что другие опции не выбраны, и нажмите <uicontrol>Готово</uicontrol>.</li>
+              </ol>
+              <fig id="fig_mtm_rsd_ttb">
+                <title>Окно «Выбор программ»</title>
+                <image href="../../../images/deployment/centos_installation/choose_programs.png"
+                  id="image_ntm_rsd_ttb"/>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Задайте настройки разделов системы. Для этого:</cmd>
+        <substeps id="substeps_xqt_wsd_ttb">
+          <substep>
+            <cmd>В разделе меню <uicontrol>Система</uicontrol> выберите пункт <uicontrol>Установка Destination</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Место установки</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне <uicontrol>Место установки</uicontrol>:</cmd>
+            <info>
+              <ol id="ol_v4w_ysd_ttb">
+                <li>Установите чекбокс <uicontrol>По-своему</uicontrol> под заголовком <uicontrol>Конфигурация устройств
+                  хранения</uicontrol>.</li>
+                <li>
+                  <p>Нажмите <uicontrol>Готово</uicontrol>.</p>
+                  <fig id="fig_dp4_js4_gtb">
+                    <title>Окно «Место установки»</title>
+                    <image
+                      href="../../../images/deployment/centos_installation/manual%20partitioning.png"
+                      id="image_ep4_js4_gtb"/>
+                  </fig>
+                </li>
+              </ol>
+            </info>
+            <stepresult>появится окно <uicontrol>Разметка вручную</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне <uicontrol>Разметка вручную</uicontrol> нажмите <uicontrol>Создать их автоматически</uicontrol> для создания разделов
+              по умолчанию.</cmd>
+            <info>
+              <fig id="fig_h1w_tgd_ttb">
+                <title>Окно «Разметка вручную»</title>
+                <image href="../../../images/deployment/centos_installation/auto_partioning.png"
+                  id="image_i1w_tgd_ttb"/>
+              </fig>
+            </info>
+            <stepresult>появится окно <uicontrol>Разметка вручную</uicontrol>, содержащее разделы дискового
+              пространства.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В открывшемся окне <uicontrol>Разметка вручную</uicontrol>:</cmd>
+            <info>
+              <ol id="ol_rpk_4yd_ttb">
+                <li>Выберите тип устройства <codeph>LVM</codeph>.</li>
+                <li>Выберите файловую систему <codeph>xfs</codeph>.</li>
+                <li>Выделите раздел <codeph>/home</codeph>.</li>
+                <li>
+                  <p>Нажмите кнопку <uicontrol>—</uicontrol> в нижней части области выбора раздела.</p>
+                  <fig id="fig_j1w_tgd_ttb">
+                    <title id="heading_h.1t3h5sf">Удаление раздела /home</title>
+                    <image href="../../../images/deployment/centos_installation/delete_home.png"
+                      id="image_k1w_tgd_ttb"/>
+                  </fig>
+                </li>
+                <li>Выделите корневой раздел <codeph>/</codeph>. </li>
+                <li>Задайте значение поля <uicontrol>Требуемый объем</uicontrol> равным
+                    <codeph>99999</codeph>.</li>
+                <li>Установите курсор на любой другой раздел.</li>
+              </ol>
+              <fig id="fig_l1w_tgd_ttb">
+                <title>Увеличение раздела «/»</title>
+                <image
+                  href="../../../images/deployment/centos_installation/increase_root_directory.png"
+                  id="image_ujg_xs4_gtb"/>
+              </fig>
+            </info>
+            <stepresult>значения полей обновятся, и инсталляция займет все свободное
+              место.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Нажмите <uicontrol>Готово</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Обзор изменений</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Убедитесь в корректности произведенных изменений.</cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите <uicontrol>Принять изменения</uicontrol>.</cmd>
+            <info>
+              <fig id="fig_m1w_tgd_ttb">
+                <title id="heading_h.2s8eyo1">Применение настроек разметки диска</title>
+                <image href="../../../images/deployment/centos_installation/accept_disk_layout.png"
+                  id="image_n1w_tgd_ttb"/>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Настройте сеть и имя узла. Для этого:</cmd>
+        <substeps id="substeps_b4j_vsf_ftb">
+          <substep>
+            <cmd>В разделе главного <uicontrol>Система</uicontrol> меню выберите пункт <uicontrol>Сеть и имя хоста</uicontrol>.</cmd>
+            <stepresult>откроется окно <uicontrol>Сеть и имя узла</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В нижней части страницы найдите поле <uicontrol>Имя узла</uicontrol> и введите имя <term
+                keyref="appliance"/>а.</cmd>
+            <info>
+              <fig id="fig_p1w_tgd_ttb">
+                <title id="heading_h.17dp8vu">Настройка имени узла</title>
+                <image href="../../../images/deployment/centos_installation/hostname_configuration.png"
+                  id="image_q1w_tgd_ttb"/>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Нажмите кнопку <uicontrol>Применить</uicontrol>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Выберите основной сетевой интерфейс <uicontrol>ens192: наименование адаптера</uicontrol>.</cmd>
+            <info>
+              <note id="note_r1w_tgd_ttb">Данный интерфейс будет использоваться в качестве
+                интерфейса для удаленного администрирования <term keyref="appliance"/>а.</note>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Для настройки интерфейса:</cmd>
+            <info>
+            <note id="note_u1w_tgd_ttb">При необходимости настроить интерфейсы можно после установки
+              ОС.</note>
+            
+              <ol id="ul_s5z_kkz_ttb">
+                <li>Нажмите кнопку <uicontrol>Настроить</uicontrol>.</li>
+                <li>Выберите раздел <uicontrol>Параметры IPv4</uicontrol> для настройки выбранного интерфейса.</li>
+                <li>В верхней части окна выберите из выпадающего списка метод настройки
+                  <uicontrol>Вручную</uicontrol>.</li>
+                <li>Для добавления статического IP-адреса нажмите кнопку <uicontrol>Добавить</uicontrol>.</li>
+                <li>Задайте сетевые реквизиты.</li>
+                <li>Нажмите кнопку <uicontrol>Сохранить</uicontrol>.</li>
+              </ol>
+              <image
+                href="../../../images/deployment/centos_installation/net_configuration_method.png"
+                id="image_q4b_5lb_5tb"/></info>
+          </substep>
+          <substep>
+            <cmd>Нажмите переключатель справа для включения интерфейса.</cmd>
+            <info>
+              <fig id="fig_tc2_g4b_5tb">
+                <title>Окно настройки сети, включение активного интерфейса</title>
+                <image
+                  href="../../../images/deployment/centos_installation/turn_on_active_interface.png"
+                  id="image_uc2_g4b_5tb"/>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Нажмите <uicontrol>Готово</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+       
+      </step>
+      <step>
+        <cmd>Настройте пароль суперпользователя. Для этого:</cmd>
+        <substeps id="substeps_ajt_nvf_ftb">
+          <substep>
+            <cmd>В главном меню выберите пункт <uicontrol>Root Password</uicontrol>.</cmd>
+            <stepresult>появится окно <uicontrol>Пароль Root</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Укажите пароль для учетной записи администратора системы (суперпользователя)
+                <codeph>root</codeph>.</cmd>
+            <info>
+              <fig id="fig_x1w_tgd_ttb">
+                <title id="heading_h.2jxsxqh">Окно «Пароль Root»</title>
+                <image
+                  href="../../../images/deployment/centos_installation/enter_superuser_password.png"
+                  id="image_y1w_tgd_ttb"/>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Нажмите <uicontrol>Готово</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>При необходимости создайте учетные записи пользователей системы. Для этого: </cmd>
+        <substeps id="substeps_pnw_fwf_ftb">
+          <substep>
+            <cmd>В главном меню выберите пункт <uicontrol>Создание пользователя</uicontrol>.</cmd>
+            <stepresult><p>появится окно <uicontrol>Создание пользователя</uicontrol>.</p>
+              <fig id="fig_z1w_tgd_ttb">
+                <title>Окно «Создание пользователя»</title>
+                <image href="../../../images/deployment/centos_installation/enter_new_username.png"
+                  id="image_abw_tgd_ttb"/>
+              </fig></stepresult>
+          </substep>
+          <substep>
+            <cmd>Укажите полное имя и логин для учетной записи.</cmd>
+          </substep>
+          <substep>
+            <cmd>Введите пароль и подтвердите его.</cmd>
+          </substep>
+          <substep>
+            <cmd
+              conref="../../reusable/steps/initial_configuration/press_ready_2times.dita#ReusableComponent_ndk_vmp_gtb/cmd_odk_vmp_gtb"
+            />
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Убедитесь в корректности настроек: язык, разметка диска, регион, сетевой интерфейс,
+          пароль суперпользователя, учетные записи.</cmd>
+      </step>
+      <step>
+        <cmd>В главном меню нажмите кнопку <uicontrol>Начать установку</uicontrol>.</cmd>
+        <info>
+          <fig id="fig_bbw_tgd_ttb">
+            <title id="heading_h.1ksv4uv">Подтверждение начала установки</title>
+            <image
+              href="../../../images/deployment/centos_installation/start_installation.png"
+              id="image_cbw_tgd_ttb"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Дождитесь окончания установки и перезагрузите виртуальную машину.</cmd>
+        <info>
+          <fig id="fig_dbw_tgd_ttb">
+            <title id="heading_h.3j2qqm3">Окно установки</title>
+            <image href="../../../images/deployment/centos_installation/installation_window.png"
+              id="image_ebw_tgd_ttb"/>
+          </fig>
+        </info>
+      </step>
+    </steps>
+  </taskbody>
+</task>

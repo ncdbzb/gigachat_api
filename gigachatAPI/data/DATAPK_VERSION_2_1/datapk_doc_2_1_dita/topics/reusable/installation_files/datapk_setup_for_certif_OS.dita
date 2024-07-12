@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_t3t_tpk_x5b">
+    <title/>
+    <body>
+        <ul>
+            <li id="li_v3t_tpk_x5b"><codeph>datapk_setup_[название_ОС].sh</codeph> — мастер
+                конфигурирования сетевых интерфейсов и временной зоны <term keyref="appliance"
+                />а.</li>
+        </ul>
+    </body>
+</topic>

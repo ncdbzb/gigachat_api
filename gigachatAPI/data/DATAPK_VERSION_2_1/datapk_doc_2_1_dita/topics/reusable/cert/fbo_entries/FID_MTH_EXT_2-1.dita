@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_jm5_l5y_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_km5_l5y_zxb">ФБО должны выполнять анализ собранных
+                                данных с целью обнаружения вторжений с использованием эвристических
+                                методов, основанных на <i><u>методах выявления аномалий сетевого
+                                        трафика,</u></i> [описанных в правилах БРП].</div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

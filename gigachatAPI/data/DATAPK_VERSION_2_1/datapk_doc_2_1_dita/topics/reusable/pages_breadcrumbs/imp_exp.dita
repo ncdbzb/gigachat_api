@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:imp_exp-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vxy_1c4_kxb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><ph id="ph_wxy_1c4_kxb"><cite keyref="appliance_control_fp"/> → <cite
+                            keyref="main_settings"/> → <cite keyref="exchange_fp"/></ph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

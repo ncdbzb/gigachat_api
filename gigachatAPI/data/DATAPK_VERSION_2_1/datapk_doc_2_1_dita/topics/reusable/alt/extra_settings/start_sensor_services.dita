@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_e5q_r5n_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_h5q_r5n_f1c">
+                <cmd>Запустите сервисы сенсора по команде:</cmd>
+                <info><codeblock id="codeblock_bnf_414_4yb">cd <codeph conref="../../filepath/opt.dita#opt/opt"/>/sensor &amp;&amp; docker-compose up -d</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

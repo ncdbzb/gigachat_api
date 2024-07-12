@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_7">
+ <title>Не обнаруживаются новые потоки</title>
+ <troublebody>
+  <condition>
+   <p>В качестве причин отсутствия обнаружения новых потоков рассмотрены следующие:</p>
+   <ul id="ul_g2m_n3p_snb">
+    <li><xref href="#trouble_7/cause_incorr_homenet" format="dita"/></li>
+    <li><xref href="#trouble_7/cause_delay" format="dita"/></li>
+    <li><xref href="#trouble_7/cause_incorr_iface_sett" format="dita"/></li>
+    <li><xref href="#trouble_7/cause_incorr_ane_sett" format="dita"/></li>
+    <li><xref href="#trouble_7/cause_sensor_env" format="dita"/></li>
+    <li><xref href="#trouble_7/cause_no_full_tcp" format="dita"/></li>
+    <li><xref href="#trouble_7/cause_godpi_err" format="dita"/></li>
+   </ul>
+  </condition>
+  <troubleSolution>
+   <cause id="cause_incorr_homenet">
+    <title>Некорректные настройки домашней сети на странице Сенсоры</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps id="steps_sty_c5f_qyb">
+     <step>
+      <cmd>На странице <cite keyref="sensors_fp"/> веб-интерфейса <term keyref="appliance"/>а
+       убедитесь, что добавлены все домашние сети, которые прослушивают подключенные сенсоры. </cmd>
+     </step>
+     <step>
+      <cmd>Убедитесь, что IP-адрес объекта защиты принадлежит хотя бы одному из диапазонов адресов
+       домашней сети сенсоров.</cmd>
+     </step>
+     <step>
+      <cmd>Выполните сканирование домашней сети (см. раздел «<xref
+        href="../../administrate/network_scan.dita"/>»).</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_delay">
+    <title>Комплекс получает информацию о новых потоках данных с задержкой</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps id="steps_py2_bdy_pyb">
+     <step>
+      <cmd>Выполните настройку домашней сети сенсоров согласно инструкции в п. выше «<xref
+       href="#trouble_7/cause_incorr_homenet" format="dita"/>».</cmd>
+     </step>
+     <step>
+      <cmd>Дождитесь обновления информации о потоках на странице <cite keyref="dataflow_fp"/> (до 5
+       минут) — такая задержка допустима из-за особенностей передачи данных с сенсоров на <term
+        keyref="appliance"/>.</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_incorr_iface_sett">
+    <title>Некорректные настройки интерфейса сенсора, выполняющего прослушивание всего трафика
+     домашней сети (listening interface)</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps>
+     <step>
+      <cmd>Выполните команду в операционной системе сенсора:</cmd>
+      <info>
+       <codeblock>ifconfig [наименование прослушивающего интерфейса сенсора]</codeblock>
+       <p>или:</p>
+       <codeblock id="codeblock_hpg_mxw_l5b">ip -a link show [наименование прослушивающего интерфейса сенсора]</codeblock>
+      </info>
+      <info>
+       <note type="tip">Интерфейсы пишутся через запятую без пробелов.</note>
+      </info>
+     </step>
+     <step>
+      <cmd>Убедитесь, что интерфейс в состоянии <codeph>UP</codeph> и режиме
+        <codeph>PROMISC</codeph>.</cmd>
+     </step>
+     <step>
+      <cmd>При необходимости откорректируйте сетевые настройки.</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_incorr_ane_sett">
+    <title>Некорректные настройки зеркалирования трафика на активном сетевом оборудовании (АСО) или
+     отсутствие сетевого трафика</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps>
+     <step>
+      <cmd>Несколько раз выполните команду в операционной системе сенсора:</cmd>
+      <info>
+       <codeblock>ifconfig [наименование прослушивающего интерфейса сенсора]
+или:
+ip -s -s link show [наименование прослушивающего интерфейса сенсора]</codeblock>
+      </info>
+      <info>
+       <note type="tip">Интерфейсы пишутся через запятую без пробелов.</note>
+      </info>
+     </step>
+     <step>
+      <cmd>Убедитесь в том, что параметр <codeph>RX packets</codeph> постепенно увеличивается.</cmd>
+     </step>
+     <step>
+      <cmd>Проверьте настройки зеркалирования на АСО. При необходимости откорректируйте их.</cmd>
+     </step>
+     <step>
+      <cmd>Убедитесь в наличии связи между интерфейсами АСО и сенсором.</cmd>
+     </step>
+     <step>
+      <cmd>Сгенерируйте сетевую активность. Для этого отправьте ICMP-пакеты с интерфейса сенсора на
+       интерфейс любого объекта защиты.</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_sensor_env">
+    <title>Некорректное значение переменной сенсора DATAPK_LISTENING_INTERFACES</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps>
+     <step>
+      <cmd>Перейдите в рабочую директорию сенсора и остановите работу контейнеров.</cmd>
+     </step>
+     <step>
+      <cmd>Присвойте переменной <cmdname keyref="DATAPK_LISTENING_INTERFACES"/> в файле <term
+        keyref="env"/> значение <codeph>false</codeph>.</cmd>
+      <info>
+       <note>Переменная может быть представлена в виде списка интерфейсов через запятую, и одно из
+        значений должно быть равно названию интерфейса сенсора, выполняющего прослушивание всего
+        трафика.</note>
+      </info>
+     </step>
+     <step>
+      <cmd>Перезапустите контейнеры.</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_no_full_tcp">
+    <title>В Комплексе отключено обнаружение потоков для неполных TCP-сессий</title>
+    <p>В некоторых случаях <term keyref="appliance"/> может не обнаружить заголовок TCP-сессии в
+     прослушиваемом трафике. Например, при поступлении пакетов на анализатор трафика в неправильном
+     порядке, подключении <term keyref="appliance"/>а в момент уже установившейся TCP-сессии (сессии
+     в АСУ ТП могут существовать продолжительное время), потерями части трафика на сетевых
+     устройствах. Чтобы регистрировать потоки для неполных TCP-сессий, необходимо добавить
+     переменную <cmdname keyref="DATAPK_GODPI_TCP_SKIP_SESSION_WITHOUT_HANDSHAKE"
+      /><codeph>=false</codeph> в файл <ph
+      conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/></p>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для включения обнаружения неполных TCP-сессий:</responsibleParty>
+    <steps id="steps_qgk_f2p_tzb">
+     <step>
+      <cmd>Перейдите в рабочую директорию сенсора и остановите работу контейнеров.</cmd>
+     </step>
+     <step>
+      <cmd>Добавьте в файл <ph
+        conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+       переменную <cmdname keyref="DATAPK_GODPI_TCP_SKIP_SESSION_WITHOUT_HANDSHAKE"/> и присвойте ей
+       значение <codeph>false</codeph>.</cmd>
+     </step>
+     <step>
+      <cmd>Перезапустите контейнеры.</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_godpi_err">
+    <title>Ошибки в контейнере godpi</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps>
+     <step>
+      <cmd>Выполните команду в операционной системе сенсора: </cmd>
+      <info>
+       <codeblock>docker ps</codeblock>
+       <note id="note_nph_gfy_pyb">Контейнер должен быть в состоянии <codeph>up</codeph> (колонка
+         <uicontrol>Status</uicontrol>).</note>
+      </info>
+     </step>
+     <step>
+      <cmd>Просмотрите журнал godpi на наличие критичных ошибок, выполнив команду:</cmd>
+      <info><codeblock>docker logs -f godpi</codeblock></info>
+     </step>
+     <step>
+      <cmd>Убедитесь, что в начале инициализации godpi корректно подключился к базе, загрузил
+       правила и публикация событий о потоках начата. При ошибках см. п. «<xref
+        href="trouble_2.dita#trouble_2/cause_iniz_container"/>» в разделе «<xref
+        href="trouble_2.dita"/>».</cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+ </troublebody>
+</troubleshooting>

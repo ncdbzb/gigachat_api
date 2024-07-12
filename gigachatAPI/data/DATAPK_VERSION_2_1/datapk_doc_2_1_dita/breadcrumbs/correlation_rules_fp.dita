@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="correlation_rules_fp">
+    <glossterm>Правила корреляции</glossterm>
+    <glossdef><p>Подраздел настроек инцидентов, в котором можно управлять службой корреляции событий,
+        создавать, редактировать, применять, удалять, активировать и деактивировать правила
+            корреляции.</p><fig id="fig_msl_bwh_npb">
+            <title>Страница «Правила корреляции»</title>
+            <image href="../images/pages/correlation_rules_page_scr.png" id="image_nsl_bwh_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/event_correlation_service/create_correlation_rules.dita"/>
+        <link href="../topics/event_correlation_service/control_event_correlation_service.dita"/>
+    </related-links>
+</glossentry>

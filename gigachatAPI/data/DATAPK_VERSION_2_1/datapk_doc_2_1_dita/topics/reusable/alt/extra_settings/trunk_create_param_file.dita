@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fz5_trq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_create_file_p">
+                <cmd>Создайте файл с параметрами сетевого интерфейса
+                    <codeph>[iface_name]</codeph>:</cmd>
+                <info><codeblock id="codeblock_z3m_xrs_21c">echo -e 'TYPE=vlan\nBOOTPROTO=static\nHOST=<codeph>[iface_name]</codeph>\nVID=[vlan_id]' > \
+/etc/net/ifaces/[iface_name].[vlan_id]/options</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

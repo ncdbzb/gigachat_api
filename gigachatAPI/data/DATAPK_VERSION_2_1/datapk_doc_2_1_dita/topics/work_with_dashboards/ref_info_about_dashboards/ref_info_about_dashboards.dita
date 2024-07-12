@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ref_info_about_dashboards">
+ <title>Работа с импортируемыми панелями мониторинга</title>
+ <body>
+ <p>В этом разделе:</p>
+  <ul>
+   <li><xref href="navigation_in_dashboards.dita"/></li>
+   <li><xref href="controls_in_dashboards/controls_in_dashboards.dita"/><ul id="ul_ncs_mpl_1qb">
+     <li><xref href="controls_in_dashboards/search_in_dashboards.dita"/></li>
+     <li><xref href="controls_in_dashboards/filters_in_dashboards.dita"/></li>
+    </ul></li>
+   <li><xref href="kibana_controls.dita"/><ul id="ul_zst_npl_1qb">
+     <li><xref href="diagrams_and_tables/charts_and_tables.dita"/></li>
+     <li><xref href="diagrams_and_tables/charts.dita"/></li>
+     <li><xref href="diagrams_and_tables/pie_charts.dita"/></li>
+     <li><xref href="diagrams_and_tables/column_charts.dita"/></li>
+     <li><xref href="diagrams_and_tables/tables.dita"/></li>
+    </ul></li>
+  </ul>
+ </body>
+
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_19">
+ <title>Не создается индекс в экспертном режиме страницы «События»</title>
+ <troublebody>
+ <troubleSolution>
+ <cause>
+ <title>Причина: отсутствуют события в Копмлексе</title>
+ </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+      <cmd>Сгенерируйте события действий в веб-интерфейсе.</cmd>
+      <info>
+       <note
+        conref="../../reusable/notes/how_to_gen_events_tip.dita#ReusableComponent_ekp_gj2_qyb/note_g25_qzv_p5b"
+        id="note_t4p_gj2_qyb"/>
+      </info>
+     </step>
+     <step>
+      <cmd>Создайте или включите источники объектов защиты и сгенерируйте на них события.</cmd>
+     </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+</troubleshooting>

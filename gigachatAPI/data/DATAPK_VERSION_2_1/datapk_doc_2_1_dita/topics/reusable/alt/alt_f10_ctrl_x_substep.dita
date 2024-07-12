@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zhz_klx_dzb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_a3z_klx_dzb"><cmd>Нажмите клавишу <uicontrol>F10</uicontrol> или сочетание клавиш <uicontrol>CTRL + X</uicontrol>.</cmd></substep>
+                </substeps>
+            </step>
+        </steps>
+        </taskbody>
+</task>

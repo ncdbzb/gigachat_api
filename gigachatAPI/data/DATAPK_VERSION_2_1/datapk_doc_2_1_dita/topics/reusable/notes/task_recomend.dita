@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:task_recomend-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mhb_jfw_ktb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <info><ol>
+                        <li><note><p><ph id="ph_uhb_jfw_ktb">Не рекомендуется использовать группы, количество сканеров в которых
+                                        превышает 30. Подробнее о группах сканеров см. в разделе
+                                            «<xref keyref="group_scaner"/>».</ph></p></note></li>
+                    </ol></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

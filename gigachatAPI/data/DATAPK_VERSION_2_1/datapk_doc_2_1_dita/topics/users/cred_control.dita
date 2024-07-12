@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cred_control">
+ <title>Управление учетными записями пользователей</title>
+ <body>
+ <p>
+ <div>
+ <p>В этом разделе:</p>
+ <ul id="ul_bqd_1dc_qnb">
+ <li><xref href="edit_cred/create_local_cred.dita"/></li>
+ <li><xref href="edit_cred/create_ad_cred.dita"/></li>
+ <li><xref href="edit_cred/edit_cred.dita"/></li>
+ </ul><p>Веб-интерфейс <term keyref="appliance"/>а предоставляет возможность управления учетными записями
+     пользователей. При создании пользователя и назначении ему роли пользователь станет обладать
+     набором разрешений роли.</p><p><ph
+                        conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                        /><ph
+                        conref="../reusable/pages_breadcrumbs/users.dita#ReusableComponent_rvx_v3c_pxb/ph_svx_v3c_pxb"
+                    />, чтобы просмотреть список учетных записей пользователей <term
+                        keyref="appliance"/>а.</p>
+ <fig>
+                    <title>Страница «Пользователи»</title>
+                    <image href="../../images/pages/users_page_scr.png"/>
+                </fig>
+ 
+ 
+ <p>Для фильтрации списка учетных записей пользователей веб-интерфейс <term keyref="appliance"/>а
+     предоставляет возможность использования предустановленных фильтров активности учетной
+     записи.</p><p>В списке учетных записей выводится наименование, описание, роль пользователя, а также статус
+                    активности.</p><p>Предусмотрено создание локальных учетных записей и учетных
+                        записей службы каталогов. При выборе типа <codeph>Локальная</codeph> аутентификация происходит
+                        локально на <term keyref="appliance"/>е. При выборе типа <codeph>Служба каталогов</codeph> аутентификация происходит
+ с использованием службы каталогов, а создаваемой учетной записи сопоставляется
+ учетная запись из службы каталогов.</p></div>
+ </p>
+ </body>
+</topic>

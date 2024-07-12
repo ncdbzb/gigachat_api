@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1170007">
+    <title>
+Изменены данные и пароль учетной записи пользователя</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1170007">Ответственный: <codeph>{login_initiator}</codeph>;
+                                Пользователь, чьи данные были изменены:
+                                    <codeph>{login_edited}</codeph>; Старые значения: [Состояние:
+                                    <codeph>{old_state}</codeph>, Роль: <codeph>{old_role}</codeph>,
+                                Логин: <codeph>{old_login}</codeph>, Имя:
+                                    <codeph>{old_name}</codeph>, Отчество:
+                                    <codeph>{old_patronymic_name}</codeph>, Фамилия:
+                                    <codeph>{old_surname}</codeph>], Новые значения: [Состояние:
+                                    <codeph>{new_state}</codeph>, Роль: <codeph>{new_role}</codeph>,
+                                Логин: <codeph>{new_login}</codeph>, Имя:
+                                    <codeph>{new_name}</codeph>, Отчество:
+                                    <codeph>{new_patronymic_name}</codeph>, Фамилия:
+                                    <codeph>{new_surname}</codeph>]</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

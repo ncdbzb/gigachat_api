@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="column_charts">
+ <title>Столбчатые диаграммы</title>
+ <body>
+ <p>Столбчатые диаграммы используются на следующих страницах: обнаружение вторжений, контроль
+ потоков данных, контроль конфигураций. Представляют собой столбики данных, позволяющие
+ сравнить количество, например, вторжений по их источнику. Таким образом можно быстро
+ увидеть, на какие <abbreviated-form keyref="host"/> была нацелена атака.</p>
+ 
+ <fig id="fig_wkk_cvp_vnb">
+ <title>Пример столбчатой диаграммы</title>
+ <image href="../../../../images/dashboards_kibana/charts/column_chart.png"
+ id="image_h3q_cvp_vnb"/>
+ </fig>
+ </body>
+</topic>

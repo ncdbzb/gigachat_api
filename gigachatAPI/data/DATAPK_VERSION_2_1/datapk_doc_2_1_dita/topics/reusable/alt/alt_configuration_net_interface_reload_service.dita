@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_acw_kfd_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_bcw_kfd_2zb">
+                        <cmd>Перезагрузите сетевой сервис:</cmd>
+                        <info><codeblock id="codeblock_fdv_v5w_3sb">systemctl restart network</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

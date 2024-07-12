@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Поиск уязвимостей</title>
+    <topicref href="cve_vuln_search.dita">
+        <topicref href="check_relevance.dita"/>
+        <topicref href="../prot_obj/prot_obj_settings/cpe_cve_import.dita"/>
+        <topicref href="../prot_obj/prot_obj_settings/bdu_import.dita"/>
+        <topicref href="../prot_obj/prot_obj_settings/cve_report.dita"/>
+        <topicref href="../prot_obj/prot_obj_settings/cpe_software_not_found.dita"/>
+    </topicref>
+    <topicref href="../oval/oval.dita">
+        <mapref href="../oval/map_oval.ditamap"/>
+    </topicref>
+</map>

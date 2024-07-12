@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="ReusableComponent_sd2_33r_pyb">
+    <glossterm>datapk_rabbitmq_disk_free_limit</glossterm>
+    <glossdef><ph id="ph_td2_33r_pyb">Минимальный уровень свободного дискового пространства, при
+            достижении которого сервис <codeph>rabbitmq</codeph> блокирует запись сообщений, но
+            будет доступен для их чтения, что увеличит время выполнения некоторых действий в
+            веб-интерфейсе, либо для этих действий будет отображаться ошибка. Когда свободного места
+            станет больше минимального, сервисы продолжат работу</ph></glossdef>
+</glossentry>

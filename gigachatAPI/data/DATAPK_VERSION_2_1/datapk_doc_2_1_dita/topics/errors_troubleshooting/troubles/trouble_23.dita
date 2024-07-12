@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_23">
+ <title>Не выполняется архивация событий при превышении размера или времени хранения индекса</title>
+ <troublebody>
+        <condition id="condition_smm_t4d_l1c">
+            <p>Возможны следующие причины:</p>
+            <ul id="ul_vvt_x4d_l1c">
+                <li><xref href="#trouble_23/cause_no_permit" format="dita"/></li>
+                <li><xref href="#trouble_23/cause_env" format="dita"/></li>
+            </ul>
+        </condition>
+ <troubleSolution>
+ <cause id="cause_no_permit">
+                <title>Директориям, в которые выполняется загрузка архивов, не присвоены права для
+                    загрузки в них файлов</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+                    <step id="step_h55_2fw_zrb">
+                        <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а уровня
+                                <abbreviated-form keyref="management"/>.</cmd>
+                    </step>
+ <step>
+                        <cmd>Убедитесь, что следующим директориям, расположенным в рабочей
+                            директории <term keyref="appliance"/>а уровня <abbreviated-form
+                                keyref="management"/>, присвоены права доступа
+                                <codeph>drwxrwxrwx</codeph>:</cmd>
+                        <info>
+                            <ul>
+                                <li><codeph>/var/backups/elasticsearch</codeph>:<ul
+                                        id="ul_qgj_44d_14b">
+                                        <li><codeph>/var/backups/elasticsearch/indices</codeph></li>
+                                        <li><codeph>/var/backups/elasticsearch/uploads</codeph></li>
+                                    </ul></li>
+                            </ul>
+                        </info>
+                        <info>Для этого введите
+                            команду:<codeblock>ls –la [путь к директории]</codeblock></info>
+                    </step>
+ <step>
+      <cmd>При необходимости измените права на указанные директории с помощью следующих
+       команд:</cmd>
+      <info><codeblock>chmod -R 777 /opt/datapk/elasticsearch</codeblock>где ключ
+                                <codeph>-R</codeph> — рекурсивное изменение прав (они будут
+                            применены и к вложенным директориям).</info>
+     </step>
+ <step>
+                        <cmd><ph>Повторно выполните архивацию событий (индексов) через веб-интерфейс
+                                    <term keyref="appliance"/>а (подробнее см. раздел </ph><ph
+                                outputclass="only_impl">«Выгрузка событий Комплекса в архив»
+                                Руководства по эксплуатации).</ph><ph
+                                outputclass="only_main_pdf_html">«<xref
+                                    href="../../routine_work/data_backup/upload_event_index_archive.dita"
+                                />»).</ph></cmd>
+                    </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_env">
+                <title>В переменной файла .env настроено удаление индексов вместо сохранения в
+                    архив</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps id="steps_hl3_w4d_l1c">
+                    <step>
+                        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а уровня
+                                <abbreviated-form keyref="management"/>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Остановите работу контейнеров без удаления данных.</cmd>
+                    </step>
+                    <step>
+                        <cmd>В конфигурационном файле <codeph><term keyref="env"/></codeph>
+                            присвойте переменной <cmdname
+                                keyref="DATAPK_EVENT_MANAGER_EVENTS_ACTION_MORE_SIZE"/> значение
+                                <codeph>rotate</codeph>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Запустите работу контейнеров и дождитесь их запуска (5-7 минут).</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+ </troublebody>
+</troubleshooting>

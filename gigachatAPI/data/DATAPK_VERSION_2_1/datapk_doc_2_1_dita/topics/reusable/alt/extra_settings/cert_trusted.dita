@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fjt_kwj_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_hjt_kwj_g1c">Для добавления сертификата в «доверенные» нажмите на него
+                    два раза, затем выберите <uicontrol>Установить сертификат</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="oval_indication">
+    <title>Индикация результатов OVAL-проверок</title>
+    <body>
+        <p>Результаты <abbreviated-form keyref="oval_def"/>-проверок объекта защиты на уязвимости
+            или соответствие требованиям информационной безопасности имеют цветовую индикацию на
+            странице <ph
+                conref="../../../reusable/pages_breadcrumbs/oval_results.dita#ReusableComponent_xrx_5t2_qxb/ph_yrx_5t2_qxb"
+            /> веб-интерфейса.</p>
+        <div
+            conref="../../../reusable/steps/oval/tutorialinfo_compliance_oval.dita#ReusableComponent_r1f_pbs_jyb/div_t1f_pbs_jyb"
+        />
+    </body>
+    <related-links>
+        <link href="../../../oval/checkup_prot_obj_to_is_requirements.dita"/>
+        <link href="../../../oval/view_checkup_prot_obj_to_is_requirements.dita"/>
+    </related-links>
+</topic>

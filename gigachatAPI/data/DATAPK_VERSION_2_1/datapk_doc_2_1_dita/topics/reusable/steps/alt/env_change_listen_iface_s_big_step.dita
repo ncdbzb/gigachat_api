@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qg4_vvn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_sg4_vvn_4yb">
+                <cmd>Внесите изменения в переменную <cmdname keyref="DATAPK_LISTENING_INTERFACES"/>
+                    файла <codeph><codeph conref="../../filepath/opt.dita#opt/opt"/>/sensor/<ph
+                            conref="../../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /></codeph>. Для этого:</cmd>
+                <substeps id="substeps_jrr_vmg_myb">
+                    <substep>
+                        <cmd>Откройте файл <ph
+                                conref="../../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                            /> для редактирования:</cmd>
+                        <info>
+                            <codeblock id="codeblock_dwk_wmg_myb">nano <codeph conref="../../filepath/opt.dita#opt/opt"/>/sensor/<ph conref="../../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/></codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Измените значение переменной <cmdname
+                                keyref="DATAPK_LISTENING_INTERFACES"/> на имя сетевого интерфейса
+                            сенсора для прослушивания трафика.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл <ph
+                                conref="../../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                            />.</cmd>
+                    </substep>
+                </substeps>
+                <info><note id="note_hgr_ph4_myb">Подробнее обо всех переменных в файле <ph
+                            conref="../../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /> и их безопасных значениях описано в разделах «<xref
+                            href="../../../reference_info/env_variables.dita"/>» и «<xref
+                            href="../../../reference_info/env_variables_reccomendations.dita"/>»
+                        Руководства по эксплуатации.</note></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

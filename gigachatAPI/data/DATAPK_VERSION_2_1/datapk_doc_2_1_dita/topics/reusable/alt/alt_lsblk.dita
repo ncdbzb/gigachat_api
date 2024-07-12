@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ws1_s5y_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_zs1_s5y_21c">
+                        <cmd>Проверьте корневой раздел с помощью утилиты <codeph>lsblk</codeph>:</cmd>
+                        <info><codeblock id="codeblock_usx_pbg_myb">lsblk -Df</codeblock>
+                            <note id="note_kb5_qbg_myb">Убедитесь, что столбцы <codeph>DISC-GRAN</codeph> и <codeph>DISC-MAX</codeph> имеют ненулевые значения.</note>
+                            <fig id="fig_scv_dwr_lyb"><title>Корректный вывод команды lsblk -Df</title>
+                                <image href="../../../images/deployment/alt/lsblk_Df.png" id="image_sh2_d4r_lyb" scale="80"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

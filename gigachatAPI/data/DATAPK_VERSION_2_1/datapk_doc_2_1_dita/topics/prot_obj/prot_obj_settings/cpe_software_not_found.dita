@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="cpe_software_not_found">
+    <title>Выгрузка отчета по результатам сопоставления собранного ПО со справочником CPE</title>
+    <taskbody>
+        <context>
+            <p><ph
+                    conref="../../reusable/cpe_soft_list_upload_ph.dita#ReusableComponent_xfv_vrr_xyb/ph_zfv_vrr_xyb"
+                /></p>
+            <p>Для экспорта отчета, содержащего результаты сопоставления собранного сканерами
+                    <abbreviated-form keyref="software"/> и <abbreviated-form keyref="OS"/> со
+                справочником CPE всех объектов защиты, для которых когда-либо выполнялся поиск
+                уязвимостей:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd><ph
+                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                        /><cite keyref="check_report_settings_fp"/> → <cite keyref="soft_list_fp"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>При необходимости очистите предыдущий файл отчета — для этого нажмите кнопку
+                        <image href="../../../images/icons/cpe_clear_report.png"
+                        id="image_qrx_k22_4yb"/> (<uicontrol>Очистить отчет по результатам
+                        сопоставления собранного ПО со справочником CPE</uicontrol>).</cmd>
+            </step>
+            <step>
+                <cmd>Запустите поиск уязвимостей на <abbreviated-form keyref="host"/> — подробнее
+                    см. раздел «<xref href="cve_report.dita"/>».</cmd>
+                <info>
+                    <note id="note_ab2_yxr_5zb">Отчет по результатам сопоставления собранного ПО со
+                        справочником CPE может содержать объединенный список ПО с нескольких
+                            <abbreviated-form keyref="host"/> — для этого перед выгрузкой отчета
+                        необходимо запустить и дождаться завершения поиска уязвимостей на всех
+                        требуемых <abbreviated-form keyref="host"/>.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите кнопку <image href="../../../images/icons/cpe_report.png"
+                        id="image_atv_5gy_nyb" scale="80"/> (<uicontrol>Экспортировать отчет по
+                        результатам сопоставления собранного ПО со справочником
+                    CPE</uicontrol>).</cmd>
+                <stepresult>Файл с отчетом формата <codeph>*.csv</codeph> будет загружен на
+                    компьютер в директорию загрузки по умолчанию.</stepresult>
+            </step>
+            <step>
+                <cmd>Заполните <xref href="../../errors_troubleshooting/service_center_form.dita"
+                        >анкету</xref>, укажите в ней список ПО, для которого необходимо уточнить
+                    CPE, и отправьте с анкетой файл отчета на адрес сервисного центра <ph
+                        conref="../../reusable/Company_name.dita#ReusableComponent_vl1_dsp_g5b/ph_wl1_dsp_g5b"
+                    />: <xref format="html" href="mailto:support@ussc.ru" scope="external"
+                        >support@cyberlympha.com</xref></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

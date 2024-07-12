@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mjc_5v1_yyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info id="info_ojc_5v1_yyb"
+                                ><codeblock id="codeblock_gmy_c2g_myb">HOST_FQDN='[hostname]'
+DATAPK_IP='[ip_addr]'</codeblock><p>Где <codeph>[hostname]</codeph>
+                                — сетевое имя <term keyref="appliance"/>а,
+                                    <codeph>[ip_addr]</codeph> — IP-адрес сетевого интерфейса
+                                управления <term keyref="appliance"/>а.</p></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

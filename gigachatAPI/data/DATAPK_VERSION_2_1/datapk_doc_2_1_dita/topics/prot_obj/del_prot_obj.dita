@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="del_prot_obj">
+  <title>Удаление объектов защиты</title>
+  <taskbody>
+    <context>
+      <note type="warning">При удалении одного или нескольких объектов защиты с <term
+          keyref="appliance"/>а будут удалены все связанные с ними данные: конфигурации, потоки,
+        данные об операционной системе и программном обеспечении, информация о найденных
+        уязвимостях.</note>
+    </context>
+  </taskbody>
+  <task id="task_gj5_mgv_fyb">
+    <title>Удаление объекта защиты</title>
+    <taskbody>
+      <context id="context_yct_xmw_dzb">Для удаления объекта защиты:</context>
+      <steps id="steps_cwh_qgv_fyb">
+        <step>
+          <cmd><ph
+              conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+              /><cite keyref="prot_obj_fp"/>.</cmd>
+        </step>
+        <step>
+          <cmd>Нажмите на иконку или наименование объекта защиты.</cmd>
+          <stepresult>появится <cite keyref="prot_obj_profile_fp"/>.</stepresult>
+        </step>
+        <step>
+          <cmd>Нажмите кнопку <image href="../../images/icons/del.png" id="image_grm_cvs_tnb"/>
+            <uicontrol>Удалить ОЗ</uicontrol> в правом верхнем углу.</cmd>
+          <info>
+            <fig id="fig_dwh_qgv_fyb">
+              <title>Кнопка «Удалить ОЗ» в карточке объекта защиты</title>
+              <image href="../../images/hosts/del/del_prot_obj_button.png" id="image_ewh_qgv_fyb"/>
+            </fig>
+          </info>
+        </step>
+        <step>
+          <cmd>В открывшемся окне введите обоснование удаления объекта защиты и нажмите кнопку
+              <uicontrol>Подтвердить</uicontrol>.</cmd>
+          <info>
+            <fig id="fig_fwh_qgv_fyb">
+              <title>Окно обоснования удаления объекта защиты</title>
+              <image href="../../images/windows/approve_del_asset_window.png" id="image_gwh_qgv_fyb"
+              />
+            </fig>
+          </info>
+          <stepresult>объект защиты будет удален. Откроется страница <cite keyref="prot_obj_fp"
+            />.</stepresult>
+        </step>
+      </steps>
+    </taskbody>
+  </task>
+  <task id="task_tvj_k3l_pnb">
+    <title>Групповое удаление объектов защиты</title>
+    <taskbody>
+      <context id="context_qst_wmw_dzb">Для удаления нескольких объектов защиты:</context>
+      <steps>
+        <step>
+          <cmd><ph
+              conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+              /><cite keyref="prot_obj_fp"/>.</cmd>
+        </step>
+        <step>
+          <cmd>Получите необходимую выборку <abbreviated-form keyref="host"/>:</cmd>
+          <substeps id="substeps_yxq_lbv_fyb">
+            <substep>
+              <cmd>Выберите группу <abbreviated-form keyref="host"/> в левой части страницы.</cmd>
+            </substep>
+            <substep>
+              <cmd>На панели фильтров настройте параметры фильтрации списка <abbreviated-form
+                  keyref="host"/> и нажмите кнопку <uicontrol>Применить</uicontrol>.</cmd>
+              <info>
+                <note id="note_tyb_tbv_fyb" type="attention">Если выбрана группа <abbreviated-form
+                    keyref="host"/>, параметры фильтрации и групповые операции будут применяться
+                  только к объектам защиты из группы.</note>
+              </info>
+            </substep>
+            <substep>
+              <cmd>Отметьте все отфильтрованные <abbreviated-form keyref="host"/> на удаление с
+                помощью чекбокса в заголовке таблицы, либо отметьте отдельные объекты защиты с
+                помощью чекбоксов рядом с <abbreviated-form keyref="host"/>.</cmd>
+            </substep>
+          </substeps>
+        </step>
+        <step>
+          <cmd>На панели <uicontrol>Управление</uicontrol> нажмите кнопку <image
+              href="../../images/icons/del_2.png" id="image_k1w_2vs_tnb"/> (<uicontrol>Групповое
+              удаление</uicontrol>).</cmd>
+          <info>
+            <fig>
+              <title>Кнопка «Групповое удаление» на панели управления объектами защиты</title>
+              <image href="../../images/hosts/del/group_del_button.png"/>
+            </fig>
+          </info>
+          <info>
+            <note>Кнопка <image href="../../images/icons/del_2.png" id="image_rqx_1ll_lyb"/>
+                (<uicontrol>Групповое удаление</uicontrol>) недоступна при выполнении любого из
+              следующих условий:<ul id="ul_fvr_nfl_lyb">
+                <li>применен хотя бы один из фильтров: <uicontrol>Статус проблемности</uicontrol>,
+                    <uicontrol>Производитель ОС</uicontrol>, <uicontrol>ОС</uicontrol>,
+                    <uicontrol>Версия ОС</uicontrol>, <uicontrol>IP-адреса</uicontrol>,
+                    <uicontrol>MAC-адрес</uicontrol> или <uicontrol>Сенсор</uicontrol>;</li>
+                <li>по результатам фильтрации получилось больше 100 записей;</li>
+                <li>применено действие <uicontrol>Выбрать все записи (>100) в данной
+                    таблице</uicontrol>.</li>
+              </ul></note>
+          </info>
+        </step>
+        <step>
+          <cmd>В открывшемся окне введите обоснование удаления объектов защиты и нажмите кнопку
+              <uicontrol>Подтвердить.</uicontrol></cmd>
+          <stepresult>появится всплывающее уведомление об успешном удалении: <systemoutput>Удаление
+                <abbreviated-form keyref="host"/> запущено</systemoutput>.</stepresult>
+        </step>
+      </steps>
+    </taskbody>
+  </task>
+</task>

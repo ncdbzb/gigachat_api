@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="definitions_group">
+    <glossterm>Группы OVAL</glossterm>
+    <glossdef><p>Подраздел настроек проверок и отчетов, где можно создавать, редактировать и удалять
+        группы OVAL-определений.</p><fig id="fig_dvw_3z4_npb">
+            <title>Страница «Группы <abbreviated-form keyref="oval_def"/> определений»</title>
+            <image href="../images/pages/oval_definitions_groups_page.png"
+                id="image_evw_3z4_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/oval/setup_prot_obj_check_is/create_oval_definitions_group.dita"/>
+        <link href="../topics/oval/setup_prot_obj_check_is/add_oval_definitions_to_group.dita"/>
+        <link href="../topics/oval/exp_imp_oval/import_oval_group_definitions.dita"/>
+    </related-links>
+</glossentry>

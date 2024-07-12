@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_n5b_xjx_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_o5b_xjx_zxb"><p>ФБО должны обеспечивать контроль
+                                    действий по внесению изменений в конфигурацию контролируемой ИС.
+                                    Контроль действий по внесению изменений
+                                    включает:</p><p>[</p><p>- регистрацию событий при внесении
+                                    изменений в базовую конфигурацию</p><p>].</p></div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

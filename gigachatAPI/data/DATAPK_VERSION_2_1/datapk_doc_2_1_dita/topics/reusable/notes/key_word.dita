@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rjh_crl_q5b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><note><ph id="ph_vjh_crl_q5b">В качестве значения поля <uicontrol>Ключевое слово</uicontrol> можно
+                                    задать наименование, описание или <term keyref="appliance"/>, на
+                                    котором был обнаружен инцидент.</ph></note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

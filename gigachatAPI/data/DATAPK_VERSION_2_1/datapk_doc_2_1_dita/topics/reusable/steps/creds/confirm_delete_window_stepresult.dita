@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gfv_pqt_jyb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>
+                    <ph id="ph_hfv_pqt_jyb">появится окно ввода обоснования удаления учетных данных.</ph>
+                </cmd>
+            </step>
+        </steps></taskbody>
+</task>

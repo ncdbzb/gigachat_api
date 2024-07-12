@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_zwb_b54_kyb">
+    <title></title>
+    <body><div id="div_bxb_b54_kyb">Исключена возможность одновременного выполнения более чем одного сканера
+            на одном <abbreviated-form keyref="host"/>. Если на <abbreviated-form keyref="host"/>
+            запущено 2 сканера или более, они будут выполняться по очереди в порядке запуска</div></body>
+</topic>

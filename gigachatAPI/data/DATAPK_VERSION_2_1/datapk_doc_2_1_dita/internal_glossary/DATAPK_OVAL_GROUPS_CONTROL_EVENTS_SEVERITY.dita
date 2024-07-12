@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="DATAPK_OVAL_GROUPS_CONTROL_EVENTS_SEVERITY">
+    <glossterm>DATAPK_OVAL_GROUPS_CONTROL_EVENTS_SEVERITY</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/datapk_oval_groups_control_events_severity_desc.dita#ReusableComponent_s3w_1nw_nqb/ph_x3w_1nw_nqb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+        <link href="../topics/control_prot_obj_events/event_source_desc/datapk_sensor.dita"/>
+    </related-links>
+</glossentry>

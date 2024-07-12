@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gzh_2ws_hwb">
+    <title/>
+    <taskbody>
+        <prereq><note id="note_rct_m2m_fwb">Для подсчета контрольных сумм скрипт <ph
+                    conref="checksum_script.dita#ReusableComponent_xxz_wc1_rvb/ph_yxz_wc1_rvb"/>
+                использует утилиту <codeph>alt-gensum</codeph>, установленную по умолчанию в
+                сертифицированной ОС Альт 8 СП Сервер. Алгоритм расчета контрольных сумм —
+                SHA-1.</note></prereq>
+    </taskbody>
+</task>

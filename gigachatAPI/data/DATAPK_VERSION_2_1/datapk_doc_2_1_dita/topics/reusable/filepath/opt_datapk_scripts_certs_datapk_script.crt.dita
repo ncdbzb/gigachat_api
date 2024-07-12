@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:opt_datapk_scripts_certs_datapk_script.crt-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_pwm_zzy_mtbww">
+    <title/>
+    <body>
+        <p id="opt_datapk_scripts_certs_datapk_script.crt"><codeph
+                conref="opt_datapk_scripts_certs.dita#ReusableComponent_pwm_zzy_mtb/codeph_twm_zzy_mtb"
+                /><codeph>/datapk_script.crt</codeph></p>
+    </body>
+</topic>

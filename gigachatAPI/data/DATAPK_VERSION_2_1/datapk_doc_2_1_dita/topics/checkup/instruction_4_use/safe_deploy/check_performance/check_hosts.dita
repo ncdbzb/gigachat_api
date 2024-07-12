@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Toc86071548">
+    <title>Проверка
+списка
+объектов
+защиты,
+полученного
+в
+результате
+настройки
+домашней
+сети</title>
+    <taskbody><steps>
+
+      <step>
+    <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite>Объекты защиты</cite> (<xref href="#Toc86071548/Ref84520044"
+     />).</cmd>
+    <info>
+     <fig id="Ref84520044">
+      <title>Страница «Объекты защиты» с локальным списком объектов защиты</title>
+      <image href="../../../../../images/pages/prot_obj_page_scr.png" id="image_s3k_zjq_xtb">
+       <alt>prot_obj_page_scr</alt>
+      </image>
+     </fig>
+    </info>
+   </step>
+   <step>
+    <cmd>
+     В области фильтров отметьте опцию <uicontrol>Локальный Комплекс</uicontrol> и нажмите кнопку <uicontrol>Применить</uicontrol>.</cmd>
+   </step>
+     <step>
+      <cmd>Убедитесь,
+       что в
+       группе
+       объектов
+       защиты
+       <codeph>Неизвестный
+       тип</codeph>
+       отображаются
+       объекты
+       защиты с
+       MAC-адресом и
+       IP-адресом
+       (узлы,
+       соответствующие
+       домашней
+       подсети), а
+       также
+       объекты
+       защиты с
+       MAC-адресом,
+       но без
+       IP-адреса
+       (узлы,
+       принадлежность
+       которых к
+       домашней
+       подсети
+       невозможно
+       определить
+       в
+       автоматическом
+       режиме
+       из-за
+       отсутствия
+       IP-адреса).</cmd>
+     </step>
+    </steps></taskbody>
+   </task>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_yc4_tg3_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><ph id="ph_cd4_tg3_nyb"><image href="../../../images/icons/export.png"
+                            id="image_p1p_qnp_kyb"/>
+                    (<uicontrol>Экспортировать</uicontrol>)</ph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

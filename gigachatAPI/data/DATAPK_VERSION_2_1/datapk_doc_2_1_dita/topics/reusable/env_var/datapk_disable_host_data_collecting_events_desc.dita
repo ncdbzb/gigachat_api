@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_vzx_r2j_jpb">
+
+ <title>DATAPK_DISABLE_HOST_DATA_COLLECTING_EVENTS</title>
+ <body> 
+ <p><ph id="ph_a1y_r2j_jpb">При значении переменной <ph
+                    conref="../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/> события
+                сбора данных не собираются</ph></p> 
+ </body> 
+</topic> 

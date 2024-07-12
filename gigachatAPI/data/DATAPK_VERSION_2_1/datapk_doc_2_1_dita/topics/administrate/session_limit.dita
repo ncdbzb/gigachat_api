@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="session_limit">
+    <title>Отключение ограничения на количество сессий пользователей</title>
+    <taskbody>
+        <context>
+            <p>Для отключения ограничения на количество одновременных сессий пользователя в
+                веб-интерфейсе <term keyref="appliance"/>а уровня <abbreviated-form
+                    keyref="management"/>:</p>
+        </context>
+        <steps>
+            <step id="step_h55_2fw_zrb">
+                <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а.</cmd>
+            </step>
+            <step>
+                <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а (по умолчанию
+                        <codeph conref="../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                    />):</cmd>
+                <info>
+                    <codeblock id="codeblock_jnd_3ql_vsb">cd <codeph conref="../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                </info>
+            </step>
+            <step id="step_q55_2fw_zrb">
+                <cmd>Остановите работу контейнеров без удаления данных следующей командой:</cmd>
+                <info>
+                    <codeblock id="codeblock_zct_crp_pyb">docker-compose down</codeblock>
+                </info>
+            </step>
+            <step id="step_u55_2fw_zrb">
+                <cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+            </step>
+            <step>
+                <cmd>Откройте конфигурационный файл <ph
+                        conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    /> в режиме редактирования.</cmd>
+            </step>
+            <step>
+                <cmd>Добавьте в файл <ph
+                        conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    /> переменную <cmdname keyref="DATAPK_USE_SESSION_LIMIT"/> и присвойте ей
+                    значение <codeph><ph
+                            conref="../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+                        /></codeph>:</cmd>
+                <info>
+                    <codeblock id="codeblock_ek2_byz_sxb"><cmdname keyref="DATAPK_USE_SESSION_LIMIT"/>=<ph conref="../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"/></codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Сохраните и закройте файл <ph
+                        conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    />.</cmd>
+            </step>
+            <step
+                conref="../reusable/start_cont_steps.dita#ReusableComponent_ith_q2k_pyb/step_rqf_hfw_zrb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+                />
+            </step>
+        </steps>
+    </taskbody>
+</task>

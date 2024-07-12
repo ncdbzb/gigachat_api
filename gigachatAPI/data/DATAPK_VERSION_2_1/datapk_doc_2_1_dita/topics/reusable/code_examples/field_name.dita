@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+<topic id="ReusableComponent_fmc_2v4_lrb"> 
+    <title>имя поля</title>
+    <body> 
+        
+        <p><ph id="ph_lmc_2v4_lrb">{имя_поля}</ph></p> 
+    </body> 
+</topic> 

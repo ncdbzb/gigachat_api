@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_umx_5qn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd id="cmd_vmx_5qn_4yb">Выполните скрипт <codeph>generate_env-<ph
+                                    conref="../../version.dita#version/version"
+                            />.0.0.bash</codeph>:</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

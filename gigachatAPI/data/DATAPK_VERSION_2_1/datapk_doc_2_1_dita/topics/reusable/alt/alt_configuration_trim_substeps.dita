@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_h2n_tgd_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps id="substeps_djl_kkb_bzb"><substep><cmd>Выполните команду для запуска и добавления в автозапуск службы <codeph>anacron</codeph>:</cmd><info><codeblock id="codeblock_oln_5bg_myb">systemctl enable --now anacron</codeblock></info></substep><substep><cmd>Откройте для редактирования конфигурационный файл <codeph>grub2</codeph> с параметрами загрузки ядра:</cmd><info><codeblock id="codeblock_yxt_vbg_myb">nano /etc/sysconfig/grub2</codeblock></info></substep><substep><cmd>В параметр <codeph>GRUB_CMDLINE_LINUX_DEFAULT</codeph> добавьте опцию <codeph>rootflags=discard</codeph> через пробел. К примеру, после добавления данной опции параметр может выглядеть следующим образом:</cmd><info><codeblock id="codeblock_qwz_wbg_myb">GRUB_CMDLINE_LINUX_DEFAULT='panic=30 splash rootflags=discard'</codeblock></info></substep><substep><cmd>Примените обновленные параметры загрузки:</cmd><info><codeblock id="codeblock_c2b_ybg_myb">grub-mkconfig -o /boot/grub/grub.cfg</codeblock></info></substep><substep><cmd>Перезагрузите <term keyref="alt_name"/>:</cmd><info><codeblock id="codeblock_wcp_jsr_lyb">shutdown -r now</codeblock></info></substep><substep><cmd>Выполните вход в <term keyref="alt_name"/> под учетной записью <codeph>root</codeph>.</cmd></substep><substep><cmd>Убедитесь, что сетевой интерфейс для сбора трафика перешел в режим прослушивания <codeph>PROMISC MODE</codeph>:</cmd><info><codeblock id="codeblock_ldp_jcg_myb">ip a</codeblock><fig id="fig_s4p_ncg_myb"><title>Настройки сетевого интерфейса для прослушивания трафика </title><image href="../../../images/deployment/alt/listening.png" scale="70" id="image_t4p_ncg_myb"/></fig></info></substep><substep><cmd>Убедитесь, что опция <codeph>discard</codeph> успешно добавлена при монтировании файловой системы:</cmd><info><codeblock id="codeblock_tmv_kcg_myb">grep discard /proc/mounts</codeblock><fig id="fig_z3y_ncg_myb"><title>Успешное выполнение опции discard</title><image href="../../../images/deployment/alt/discard.png" scale="90" id="image_ajy_ncg_myb"/></fig></info></substep>
+                </substeps>
+            </step>
+        </steps>       
+    </taskbody>
+</task>

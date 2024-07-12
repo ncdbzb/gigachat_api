@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_frh_gmz_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_grh_gmz_zxb"><p>ФБО должны
+                                    предоставлять</p><p>[</p><p>а) администратору
+                                    безопасности;</p><p>б) администратору Комплекса;</p><p>в)
+                                    аналитику ИБ;</p><p>г) аудитору ИБ;</p><p>д) инженеру
+                                    ИБ;</p><p>е) просмотрщику;</p><p>ж)
+                                    разработчику</p><p>]</p><p>возможность читать [все события] из
+                                    записей аудита.</p></div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

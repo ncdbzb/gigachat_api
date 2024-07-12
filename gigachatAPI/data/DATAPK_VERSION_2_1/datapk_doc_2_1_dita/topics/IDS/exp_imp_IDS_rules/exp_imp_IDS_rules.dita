@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="work_with_invasion_rules">
+ <title>Экспорт и импорт правил службы обнаружения вторжения</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_fyb_1qy_rnb">
+ <li><xref href="import_IDS_rules.dita"/></li>
+ <li><xref href="import_suricata_rules.dita"/></li>
+ <li><xref href="export_IDS_rules.dita"/></li>
+ </ul>
+  <p>Экспорт и импорт правил обнаружения вторжений осуществляется на странице <ph
+    conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+   /> на панели <uicontrol>Обнаружение вторжений</uicontrol>.</p>
+  <fig id="fig_yfl_m1f_wnb">
+   <title>Панель «Обнаружение вторжений» на странице «Импорт и экспорт»</title>
+   <image href="../../../images/IDS/IDS_imp_exp.png" id="image_zbg_n1f_wnb"/>
+  </fig>
+ </body>
+</topic>

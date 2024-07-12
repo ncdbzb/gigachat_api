@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="whatsnew" outputclass="wide">
+  <title>Что нового?</title>
+  <body>
+    <p>Обновления Программного комплекса <term keyref="appliance_name"/> в версиях 2.0—<ph
+        conref="reusable/version.dita#version/version"/>.</p>
+    <div outputclass="nopdf">
+      <note type="tip">Ознакомиться со списком всех изменений вы можете в разделе «<xref
+          href="errors_troubleshooting/changelog.dita"/>».</note>
+    </div>
+    <table outputclass="forimgs sortable">
+      <tgroup cols="4">
+        <colspec colnum="1" colname="col1" colwidth="45%"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colname="col4" colnum="3" colwidth="180px"/>
+        <colspec colname="col3" colnum="4" colwidth="210px" align="center"/>
+        <thead>
+          <row>
+            <entry>Описание</entry>
+            <entry>Разделы документации</entry>
+            <entry>Категория</entry>
+            <entry>Иллюстрация изменений</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row id="DTPK-7388_7416">
+            <entry>Изменен внешний вид интерфейса</entry>
+            <entry><xref href="whats_new/web_interface_changes.dita"/></entry>
+            <entry>Внешний вид, интерфейс</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/new_interface.png"
+                id="image_php_b5z_4xb"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div>
+                <p>Изменена концепция уровней иерархии:</p>
+                <ul id="ul_ojf_jcq_kyb">
+                  <li><term keyref="appliance"/> нижнего уровня → <term keyref="appliance"/> уровня
+                      <abbreviated-form keyref="sensor"/>. Собирает данные и события с объектов
+                    защиты, обнаруживает вторжения.</li>
+                  <li><term keyref="appliance"/> среднего уровня → <term keyref="appliance"/> уровня
+                      <abbreviated-form keyref="management"/>. Управляет сенсорами, хранит и
+                    визуализирует информацию, полученную с сенсоров, управляет справочниками,
+                    обнаруживает инциденты.</li>
+                  <li><term keyref="appliance"/> верхнего уровня → <term keyref="appliance"/> уровня
+                      <abbreviated-form keyref="sv"/>. Управляет <term keyref="appliance"/>ами
+                    уровня  <abbreviated-form keyref="management"/> и визуализирует полученную с них
+                    общую информацию о защищаемой системе.</li>
+                </ul>
+                <note
+                  conref="reusable/notes/appiances_diff_warn.dita#ReusableComponent_qsh_rfq_kyb/note_ndx_p2q_kyb"
+                  id="note_vd3_rfq_kyb"/>
+              </div>
+            </entry>
+            <entry><xref href="common_info.dita"/>, <xref
+                href="reference_info/datapk_architecture/datapk_architecture.dita"/></entry>
+            <entry>Иерархия <term keyref="appliance"/>ов</entry>
+            <entry align="right" outputclass="figpic"><image
+                href="../images/reference_info/datapk_architecture/struct_schema.svg"
+                id="image_p3w_r5k_tnb">
+                <alt>Структурная схема иерархии</alt>
+              </image></entry>
+          </row>
+          <row>
+            <entry>Изменен порядок подключения <term keyref="appliance"/>ов уровня <abbreviated-form
+                keyref="sensor"/> к <term keyref="appliance"/>у уровня <abbreviated-form
+                keyref="management"/>: подключение выполняется в командной строке <term
+                keyref="appliance"/>а уровня <abbreviated-form keyref="management"/></entry>
+            <entry><xref href="deployment/alt/install_datapk_in_alt.dita"/>, <xref
+                href="deployment/alt/connect_s_to_m.dita"/></entry>
+            <entry>Установка и настройка</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p>Добавлена возможность поиска уязвимостей объектов защиты в базах <abbreviated-form
+                  keyref="cve"/> и <term keyref="bdu_fstec">Банка данных угроз безопасности
+                  информации ФСТЭК России</term></p>
+            </entry>
+            <entry><xref href="prot_obj/prot_obj_settings/cve_report.dita"/></entry>
+            <entry>Активы, объекты защиты, уязвимости</entry>
+            <entry outputclass="figpic"><image href="../images/hosts/cve/cve_search_window.png"
+                id="image_gbr_pjx_pxb"/><image href="../images/hosts/cve/cve_show_window.png"
+                id="image_mzx_2zh_tzb"/></entry>
+          </row>
+          <row>
+            <entry>
+              <p>Добавлена возможность сопоставления распознанного ПО с базой <abbreviated-form
+                  keyref="cpe"/></p>
+            </entry>
+            <entry><xref href="../breadcrumbs/soft_list.dita"/>, <xref
+                href="prot_obj/prot_obj_settings/cpe_software_not_found.dita"/></entry>
+            <entry>Активы, объекты защиты, сбор данных, ПО</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-9387.dita#ReusableComponent_wbz_xcb_b1c/p_xbz_xcb_b1c"
+              />
+            </entry>
+            <entry><xref href="vuln_search/cve_vuln_search.dita"/>, <xref
+                href="control_config/os_soft/os_soft.dita"/>, <xref
+                href="prot_obj/edit_prot_obj.dita"/></entry>
+            <entry>Активы, объекты защиты, уязвимости</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>Изменена страница <cite keyref="events_fp"/>:<ul id="ul_zz1_lfv_4zb">
+                <li>Новая страница предназначена для быстрой фильтрации событий и просмотра их
+                  ключевых параметров.</li>
+                <li>На страницу добавлена кнопка <uicontrol>Экспертный режим</uicontrol> для
+                  перехода к режиму детального просмотра и фильтрации событий</li>
+              </ul></entry>
+            <entry><cite keyref="events_fp"/>, <cite keyref="events_em_fp"/>, <xref
+                href="monitoring/events_search.dita"/>, <xref
+                href="work_with_kibana/filters_and_queries.dita"/></entry>
+            <entry>События</entry>
+            <entry outputclass="figpic"><image href="../images/pages/events_page.png"
+                id="image_nsr_rsw_wzb"/></entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_a2t_bfv_4zb">
+                <li>Добавлена страница <cite keyref="monitoring_fp"/> → <cite keyref="sec_status_fp"
+                  />, содержащая главную панель мониторинга;</li>
+                <li>Добавлена пользовательская роль <uicontrol>Просмотр панели
+                    мониторинга</uicontrol> для непрерывного просмотра страницы <cite
+                    keyref="sec_status_fp"/></li>
+              </ul>
+            </entry>
+            <entry><xref href="monitoring/security_status_dashboard.dita"/>, <xref
+                href="../breadcrumbs/sec_status_fp.dita"/></entry>
+            <entry>Панель мониторинга</entry>
+            <entry outputclass="figpic"><image href="../images/pages/security_status_page_scr.png"
+                id="image_vmx_1hq_rzb"/></entry>
+          </row>
+          <row>
+            <entry>
+              <p><ph>Добавлен импорт новых справочников</ph>:<ul id="ul_kgk_bdq_kyb">
+                  <li>Справочники ПО и уязвимостей (<abbreviated-form keyref="cpe"/> и
+                      <abbreviated-form keyref="cve"/>);</li>
+                  <li>Сопоставление собранного сканерами ПО со справочником <abbreviated-form
+                      keyref="cpe"/></li>
+                </ul></p>
+            </entry>
+            <entry><xref href="prot_obj/prot_obj_settings/cpe_cve_import.dita"/></entry>
+            <entry>Уязвимости, ПО, импорт</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-9385.dita#ReusableComponent_ocy_4dd_zyb/p_rcy_4dd_zyb"
+              />
+            </entry>
+            <entry><xref href="prot_obj/create_prot_obj.dita"/>, <xref
+              href="prot_obj/edit_prot_obj.dita"/></entry>
+            <entry>Активы, объекты защиты</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>Изменен список переменных конфигурационного файла <ph
+                conref="reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              /></entry>
+            <entry><xref href="whats_new/env_var_changes.dita"/>, <xref
+                href="reference_info/env_variables.dita"/>, <xref
+                href="reference_info/env_variables_reccomendations.dita"/></entry>
+            <entry>Переменные</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>Изменен список событий, попадающих в разделы мониторинга</entry>
+            <entry><xref href="whats_new/event_changes.dita"/>, <xref
+                href="work_with_dashboards/ref_info_about_dashboards/events_in_dashboards.dita"
+              /></entry>
+            <entry>События</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-7949.dita#ReusableComponent_bzb_mgx_wxb/ph_czb_mgx_wxb"
+              /></entry>
+            <entry><xref href="whats_new/proto_changes.dita"/>, <xref
+                href="reference_info/protocols.dita"/></entry>
+            <entry>Протоколы</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p><ph>Удалены переменные файла <codeph>environment.json</codeph>:</ph><ul
+                  id="ul_cwg_fwm_mxb">
+                  <li><codeph>maxNumberGroupElementsToPerformActions</codeph></li>
+                  <li><codeph>pollMapIntervalTime</codeph></li>
+                  <li><codeph>pollMapIntervalTimeForChildBox</codeph></li>
+                  <li><codeph>definitionsCountToSelecting</codeph></li>
+                  <li><codeph>showedCredentialHostsLength</codeph></li>
+                  <li><codeph>brandDir</codeph></li>
+                  <li><codeph>treeDepth</codeph></li>
+                </ul></p>
+            </entry>
+            <entry><xref href="reference_info/environment_json.dita"/></entry>
+            <entry>Переменные</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-8957.dita#ReusableComponent_qr4_tnm_4yb/p_xr4_tnm_4yb"
+              />
+            </entry>
+            <entry><xref href="administrate/func_check/sync_ids_rules.dita"/>, <xref
+                href="IDS/control_IDS.dita"/></entry>
+            <entry>Обнаружение вторжений</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-8645.dita#ReusableComponent_alr_gdn_jyb/ph_clr_gdn_jyb"
+              /></entry>
+            <entry><xref href="administrate/network_scan.dita"/>, <xref
+                href="../breadcrumbs/sensors_fp.dita"/></entry>
+            <entry>Сканирование сети</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/scan_network.png"
+                id="image_n3z_kcn_jyb"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div><p><ph
+                    conref="reusable/whatsnew/DTPK-5101.dita#ReusableComponent_rgk_4zp_kyb/ph_tgk_4zp_kyb"
+                  />:</p><ul id="ul_qy3_mxj_3yb">
+                  <li><uicontrol>Конфигурации</uicontrol></li>
+                  <li><uicontrol>Сбор данных</uicontrol></li>
+                  <li><uicontrol>Уязвимости</uicontrol></li>
+                  <li><uicontrol>Инциденты</uicontrol></li>
+                </ul><ph>Соответствующие столбцы добавлены в отчет по объектам защиты</ph></div>
+            </entry>
+            <entry><xref
+                href="reference_info/datapk_architecture/color_indication/assets_statuses.dita"/>,
+                <xref href="../breadcrumbs/prot_obj_fp.dita"/>, <xref
+                href="reference_info/datapk_architecture/datapk_functionality/reports_upload.dita"
+              /></entry>
+            <entry>Активы, объекты защиты, отчет, сбор данных, инциденты, уязвимости</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/assets_statuses.png"
+                id="image_sxm_f1q_kyb"/></entry>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-8569.dita#ReusableComponent_zmt_tx2_2yb/ph_int_tx2_2yb"
+              /></entry>
+            <entry>—</entry>
+            <entry>Протоколы, потоки данных</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/vlan_id.png"/></entry>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-8529.dita#ReusableComponent_hqy_yx2_2yb/ph_rqy_yx2_2yb"
+              /></entry>
+            <entry>—</entry>
+            <entry>Потоки данных, сбор данных</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8503.dita#ReusableComponent_tyn_gy2_2yb/div_uyn_gy2_2yb"/>
+              <p>Добавлена роль <codeph>Просмотр панели мониторинга</codeph></p>
+            </entry>
+            <entry><xref href="users/users_control.dita"/>, <xref
+                href="work_with_dashboards/ref_info_about_dashboards/events_in_dashboards.dita"/>,
+                <xref href="func_sep.dita"/></entry>
+            <entry>Роли, пользователи</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/new_datapk_roles.png"/></entry>
+          </row>
+          <row>
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-9133.dita#ReusableComponent_t1w_1y2_2yb/p_u1w_1y2_2yb"
+              />
+            </entry>
+            <entry><xref href="users/users_control.dita"/>, <xref href="users/cred_control.dita"/>,
+              <xref href="users/edit_cred/create_ad_cred.dita"/>, <xref
+                href="users/edit_cred/create_local_cred.dita"/></entry>
+            <entry>Роли, пользователи</entry>
+            <entry outputclass="figpic">
+              <image href="../images/pages/users_page_scr.png"/>
+              <image href="../images/users_roles/creation_local_cred_window.png"/>
+            </entry>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-8402.dita#ReusableComponent_u3n_ny2_2yb/ph_w3n_ny2_2yb"
+              /></entry>
+            <entry><xref href="control_config/work_w_archive/archive_view.dita"/>, <xref
+                href="control_config/view_config_summary.dita"/>, <xref
+                href="control_config/work_with_config_changing_archive.dita"/></entry>
+            <entry>Сбор данных</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/view_host_congiguration.png"
+                id="image_e1r_51x_wxb"/></entry>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-10050.dita#ReusableComponent_scl_45l_g1c/ph_tcl_45l_g1c"
+              /></entry>
+            <entry>—</entry>
+            <entry>Сбор данных</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-8566.dita#ReusableComponent_o1x_2z2_2yb/ph_p1x_2z2_2yb"
+              /></entry>
+            <entry>—</entry>
+            <entry>Сбор данных</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/big_config.png"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8803.dita#ReusableComponent_odh_kw2_2yb/div_rdh_kw2_2yb"/>
+            </entry>
+            <entry><xref href="control_config/setup_data_collect_module/create_task.dita"/>, <xref
+                href="../breadcrumbs/data_collect_tasks_fp.dita"/>, <xref
+                href="control_config/create_data_collect_scaner/scaner_control.dita"/>, <xref
+                href="../breadcrumbs/scaners_fp.dita"/></entry>
+            <entry>Сбор данных</entry>
+            <entry outputclass="figpic">
+              <image href="../images/whatsnew/name_defenition_prot_objpng.png"/>
+              <p><image href="../images/whatsnew/name_detection_scaners.png"/></p>
+            </entry>
+          </row>
+          <row>
+            <entry><ph
+                conref="reusable/whatsnew/DTPK-8669.dita#ReusableComponent_pkv_gkp_fyb/ph_skv_gkp_fyb"
+              /></entry>
+            <entry><xref href="control_config/data_collect_results_view.dita"/>, <xref
+                href="reference_info/datapk_architecture/color_indication/assets_statuses.dita"
+              /></entry>
+            <entry>Сбор данных, внешний вид</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/new_error_statuses.png"
+              /></entry>
+          </row>
+          <row id="DOC-2537">
+            <entry>
+              <div
+                conref="reusable/whatsnew/DOC-2537.dita#ReusableComponent_op1_gn5_hyb/div_qp1_gn5_hyb"/>
+            </entry>
+            <entry><xref
+                href="reference_info/datapk_architecture/datapk_functionality/group_operations.dita"
+              />, <xref
+                href="reference_info/datapk_architecture/datapk_interface/table_control_elements.dita"
+              />, <xref href="control_config/create_data_collect_scaner/group_scaner.dita"/>, <xref
+                href="prot_obj/host_group/host_groupping.dita"/>, <xref
+                href="prot_obj/control_prot_obj.dita"/>, <xref
+                href="control_config/create_data_collect_scaner/control_scaner.dita"/>, <xref
+                href="reference_info/datapk_architecture/datapk_functionality/reports_upload.dita"
+              />, <xref href="reference_info/datapk_architecture/datapk_interface/filters.dita"
+              /></entry>
+            <entry>Таблицы</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/table_example.png"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8539.dita#ReusableComponent_r3z_53n_kyb/div_t3z_53n_kyb"
+              />
+            </entry>
+            <entry><xref
+                href="reference_info/datapk_architecture/datapk_interface/table_control_elements.dita"
+              /></entry>
+            <entry>Внешний вид, таблицы</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/dataflow_rules_sort.png"
+              /></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-9796.dita#ReusableComponent_spm_pwh_3yb/ph_tpm_pwh_3yb"
+              />
+            </entry>
+            <entry><xref href="prot_obj/control_prot_obj.dita"/></entry>
+            <entry>Объекты защиты</entry>
+            <entry outputclass="figpic">
+              <image href="../images/hosts/hosts_connected_pages.png" id="image_p1v_xwh_3yb"/>
+            </entry>
+          </row>
+          
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8741.dita#ReusableComponent_kz1_dss_jyb/div_lz1_dss_jyb"/>
+            </entry>
+            <entry><xref
+              href="control_config/setup_data_collect_module/host_setup_4data_collect.dita"/>,
+              <xref href="cred_prot_obj_settings/edit_del_cred/edit_del_cred.dita"/>, <xref
+                href="cred_prot_obj_settings/add_prot_obj_cred.dita"/>, <xref
+                  href="cred_prot_obj_settings/cred_prot_obj_settings.dita"/></entry>
+            <entry>Объекты защиты</entry>
+            <entry outputclass="figpic"><image href="../images/pages/host_card_1_page_scr.png"
+              /></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8492.dita#ReusableComponent_zwb_b54_kyb/div_bxb_b54_kyb"
+              />
+            </entry>
+            <entry>—</entry>
+            <entry>Сбор данных</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8888.dita#ReusableComponent_iss_hdj_lyb/div_swt_ctp_kyb"
+              />
+            </entry>
+            <entry><xref href="prot_obj/exp_prot_obj.dita"/>, <xref
+                href="prot_obj/exp_imp_hosts/export_host_groups.dita"/></entry>
+            <entry>Экспорт</entry>
+            <entry outputclass="figpic">
+              <image href="../images/whatsnew/export_example2.png"/>
+              <image href="../images/whatsnew/export_example1.png"/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-9960.dita#ReusableComponent_eb1_n5j_lyb/div_fb1_n5j_lyb"
+              />
+            </entry>
+            <entry>—</entry>
+            <entry>Сбор данных</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/config_no_sort.png"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-9024.dita#ReusableComponent_iqn_bkl_lyb/div_jqn_bkl_lyb"
+              />
+            </entry>
+            <entry><xref href="prot_obj/del_prot_obj.dita"/>, <xref
+                href="prot_obj/filter_prot_obj.dita"/></entry>
+            <entry>Активы, объекты защиты</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <div id="div_sdl_fs3_nyb">
+                <p><ph>Добавлены фильтры на страницу <cite keyref="prot_obj_fp"/>:</ph><ul
+                    id="ul_pk1_hgg_vzb">
+                    <li><uicontrol>Сенсор</uicontrol></li>
+                    <li><uicontrol>MAC-адрес</uicontrol></li>
+                  </ul></p>
+                <p>Добавлена колонка <uicontrol>Сенсор</uicontrol> на страницу <cite
+                    keyref="prot_obj_fp"/></p>
+              </div>
+            </entry>
+            <entry><xref href="prot_obj/filter_prot_obj.dita"/></entry>
+            <entry>Активы, ОЗ, фильтры</entry>
+            <entry outputclass="figpic"><image href="../images/hosts/filters/hosts_all_filters.png"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-8655.dita#ReusableComponent_nh4_gyd_4yb/div_ph4_gyd_4yb"
+              />
+            </entry>
+            <entry><xref href="prot_obj/prot_obj_settings/cpe_software_not_found.dita"/>, <xref
+                href="vuln_search/cve_vuln_search.dita"/></entry>
+            <entry>CPE, отчеты</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/cpe_whatsnew.png"/></entry>
+          </row>
+          <row>
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-8889.dita#ReusableComponent_jpn_rsb_wyb/p_lpn_rsb_wyb"/>
+            </entry>
+            <entry><xref
+                href="control_prot_obj_events/setup_collect_events_policy/create_syslog_manual.dita"
+              /></entry>
+            <entry>Источники событий</entry>
+            <entry outputclass="figpic"><image
+                href="../images/control_prot_obj_events/service_syslog/create_source_window.png"
+                id="image_e2f_2tb_wyb"/></entry>
+          </row>
+          <row>
+            <entry>
+              <div
+                conref="reusable/whatsnew/DTPK-7253.dita#ReusableComponent_kdm_jbq_bzb/div_rz3_fbq_bzb"
+              />
+            </entry>
+            <entry><xref href="../breadcrumbs/events_fp.dita"/></entry>
+            <entry>События</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p conref="reusable/whatsnew/DTPK-9298.dita#ReusableComponent_fqz_bsr_nzb/p1"/>
+            </entry>
+            <entry morerows="1"><xref href="deployment/problem_diagnostic.dita"/>, <xref
+                href="reference_info/collected_data_list.dita"/>, <xref
+                href="reference_info/env_variables_s.dita"/>
+            </entry>
+            <entry morerows="1">Сбор данных</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p conref="reusable/whatsnew/DTPK-9298.dita#ReusableComponent_fqz_bsr_nzb/p2"/>
+            </entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-10490.dita#ReusableComponent_b4t_hfr_5zb/p_c4t_hfr_5zb"
+              />
+            </entry>
+            <entry><xref href="../breadcrumbs/exchange_fp.dita"/></entry>
+            <entry>Импорт, справочники</entry>
+            <entry></entry>
+          </row>
+          <row outputclass="figpic">
+            <entry>
+              <p
+                conref="reusable/whatsnew/DTPK-10024.dita#ReusableComponent_jrs_jmq_31c/p_lrs_jmq_31c"
+              />
+            </entry>
+            <entry/>
+            <entry>Корреляция событий, инциденты</entry>
+            <entry outputclass="figpic"><image href="../images/whatsnew/select_window.png"
+                id="image_yds_sw3_31c"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

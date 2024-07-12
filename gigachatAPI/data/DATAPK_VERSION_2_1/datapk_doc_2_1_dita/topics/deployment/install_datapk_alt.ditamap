@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка и настройка Комплекса на базе ОС Альт Сервер</title>
+    <topicref href="alt/description_of_distributions.dita"/>
+    <topicref href="alt/install_and_config_alt.dita">
+        <topicref href="alt/manual_instruct_safe_install_alt.dita"/>
+        <topicref href="alt/alt_settings.dita"/>
+    </topicref>
+    <topicref href="cert_alt/install_and_config_cert_alt.dita">
+        <topicref href="cert_alt/manual_instruct_safe_install_alt_cert.dita"/>
+        <topicref href="cert_alt/alt_settings_cert.dita"/>
+    </topicref>     
+    <topicref href="alt/install_datapk_in_alt.dita">
+        <topicref href="alt/preliminary_mgmt.dita"/>
+        <topicref href="alt/preliminary_sensor.dita"/>
+        <topicref href="alt/preliminary_sensor_and_mgmt.dita"/>   
+    </topicref>
+    <topicref href="alt/settings_datapk_dop.dita">
+        <topicref href="alt/connect_s_to_m.dita"/>
+        <topicref href="alt/alt_server_save_packages.dita"/>
+        <topicref href="alt/subnet_change.dita"/>
+        <topicref href="alt/conf_network_interfaces.dita"/>
+        <topicref href="alt/set_pass_policy_and_audit.dita"/>
+        <topicref href="alt/hostname_change.dita"/>
+        <topicref href="alt/changing_time_zone.dita"/>
+        <topicref href="alt/add_static_route.dita"/>
+        <topicref href="alt/setting_NTP.dita"/>
+        <topicref href="alt/web_trusted_cert.dita"/>
+        <!--            <topicref href="alt/many_complex.dita">
+                <topicref href="alt/certificate.dita"/>
+                <topicref href="alt/certificate_and_key.dita"/>
+                <topicref href="alt/setting_ARM_adm.dita"/>
+            </topicref>-->
+        <topicref href="alt/lacp_channel.dita"/>
+        <topicref href="alt/trunk_port.dita"/>
+    </topicref>
+</map>

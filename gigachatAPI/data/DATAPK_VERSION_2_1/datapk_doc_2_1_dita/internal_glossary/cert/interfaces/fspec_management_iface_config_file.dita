@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="fspec_management_iface_config_file">
+    <glossterm>Интерфейс управления, конфигурационный файл .env</glossterm>
+    <glossdef>
+        <ul id="ul_uff_dvy_qtb">
+            <li>Назначение — для изменения пользовательских значений параметров работы ОО.</li>
+            <li>Способы использования — через команды в интерфейсе командной строки. Ввод значений в
+                текстовый файл.</li>
+            <li>Параметры — значения переменных ОО в конфигурационном файле
+                    <cmdname>/opt/datapk/.env</cmdname>. Полный список переменных приведен в
+                документе <ph
+                    conref="../../../topics/reusable/cert/decimal_number.dita#decimal_number/decimal_number_ph"
+                />-РЭ.1 в разделе «<xref href="../../../topics/reference_info/env_variables.dita"
+                />». </li>
+            <li>Описание действий — позволяет настраивать пользовательские значения параметров
+                (переменных) <term keyref="cert_appliance_name_short"/>.</li>
+            <li>Описание алгоритмов функционирования — подключение к данному интерфейсу возможно с
+                помощью встроенных средств ОС и по защищенному протоколу SSH. Любые действия
+                пользователя с набором привилегий по изменению настроек и их просмотру возможны
+                только после успешного прохождения процедуры идентификации и аутентификации в
+                ОС.</li>
+            <li>Возможные ошибки — «Access denied» при некорректной авторизации в консоли, «Ошибка
+                записи» при отсутствии прав на запись файла <cmdname>/opt/datapk/.env</cmdname>,
+                ошибки в логах определенных сервисов при некорректном значении переменных, указанных
+                в <cmdname>/opt/datapk/.env</cmdname>.</li>
+        </ul>
+    </glossdef>
+    <glossBody>
+        <glossSurfaceForm>Интерфейс управления, конфигурационный файл</glossSurfaceForm>
+    </glossBody>
+</glossentry>

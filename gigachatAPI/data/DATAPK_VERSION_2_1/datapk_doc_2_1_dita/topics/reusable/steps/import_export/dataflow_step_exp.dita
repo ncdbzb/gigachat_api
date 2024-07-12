@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:dataflow_step_exp-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qlj_tnl_htb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_slj_tnl_htb">
+                <cmd>В открывшемся окне:</cmd>
+                <substeps id="substeps_j5s_gml_htb">
+                    <substep>
+                        <cmd>выберите из списка наименование <term keyref="appliance"/>а, потоки с
+                            которого необходимо экспортировать;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>период, за который были обнаружены необходимые для экспорта
+                            потоки.</cmd>
+                    </substep>
+                </substeps>
+                <info><fig id="fig_kcr_lnl_htb">
+                        <title>Окно «Экспорт потоков данных»</title>
+                        <image href="../../../../images/streams/exp_imp/export_streams_window.png"
+                            id="image_lcr_lnl_htb">
+                            <alt>Окно «Экспорт потоков данных»</alt>
+                        </image>
+                    </fig></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

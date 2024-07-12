@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_x3z_cfd_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_y3z_cfd_2zb">
+                        <cmd>Создайте новый файл <codeph>iplink</codeph> и добавьте в него команду переключения интерфейса в режим прослушивания всех пакетов (<codeph>promisc</codeph>) по команде:</cmd><info><codeblock id="codeblock_xvm_41g_myb">echo promisc on > /etc/net/ifaces/ens224/iplink</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>    
+    </taskbody>
+</task>

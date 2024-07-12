@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_b2q_lh4_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_c2q_lh4_f1c">
+                <cmd>Остановите работу UDV NTA одной из команд:</cmd>
+                <info>
+                    <ul>
+                        <li>Для UDV NTA уровня Management:
+                            <codeblock id="codeblock_r35_xxj_lyb">cd /opt/datapk &amp;&amp; docker-compose down</codeblock></li>
+                        <li>Для UDV NTA
+                            уровня Sensor:<codeblock id="codeblock_ydm_sdy_lyb">cd /opt/sensor &amp;&amp; docker-compose down</codeblock></li>
+                        <li>Для UDV NTA уровня Management+Sensor на одной аппаратной
+                            платформе:<codeblock id="codeblock_vnr_sdy_lyb">cd /opt/datapk &amp;&amp; docker-compose down &amp;&amp; cd /opt/sensor &amp;&amp; docker-compose down</codeblock></li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

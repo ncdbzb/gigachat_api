@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bbf_1wh_myb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_pkr_wth_myb">
+                        <cmd>Дождитесь завершения поиска.</cmd>
+                        <stepresult>в окне <uicontrol>Запуск поиска уязвимостей</uicontrol>
+                            отобразится текущее состояние создания отчета:
+                                <systemoutput>Завершено</systemoutput>. <ph
+                                conref="../../if_error_vuln_cve_ph.dita#ReusableComponent_hng_lvh_yyb/ph_ing_lvh_yyb"
+                            /></stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

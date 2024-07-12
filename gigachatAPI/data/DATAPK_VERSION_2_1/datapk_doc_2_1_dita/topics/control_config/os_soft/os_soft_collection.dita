@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="os_soft_collection">
+    <title>Запуск сбора данных об операционной системе и установленном ПО</title>
+    <taskbody>
+        <context id="context_qhj_bzq_q5b">Для настройки возможности сбора подробной информации об
+            операционной системе и установленном <abbreviated-form keyref="software"/> объекта
+            защиты:</context>
+    
+        <steps>
+            <step>
+                <cmd>Импортируйте или создайте сканеры для сбора данных об <abbreviated-form
+                        keyref="OS"/> и <abbreviated-form keyref="software"/> с типами <codeph>Версия ОС</codeph> и
+                    <codeph>Установленное ПО</codeph>.</cmd>
+                <info>
+                    <note id="note_wpp_cwq_q5b">См. подробнее в разделах «<xref
+                            keyref="import_scanner"/>», «<xref
+                            href="../create_data_collect_scaner/create_data_collect_scaner.dita"/>»,
+                            «<xref keyref="control_scaner"/>».</note>
+                </info>
+                <info>
+                    <note type="attention" id="note_nk2_vxl_lyb">
+                        <p>При повторном сборе информации об <abbreviated-form keyref="OS"/> или
+                                <abbreviated-form keyref="software"/> предыдущие данные удаляются и
+                            заменяются новыми. Автообновление данных об <abbreviated-form
+                                keyref="OS"/> можно отключить в карточке объекта защиты — см. пункт
+                                <xref
+                                href="../../prot_obj/edit_prot_obj.dita#edit_prot_obj/step_edit_os"
+                            /> раздела «<xref href="../../prot_obj/edit_prot_obj.dita"/>».</p>
+                    </note>
+                </info>
+            </step>
+            <step
+                conref="../../reusable/steps/data_collect/data_collection_steps.dita#ReusableComponent_n45_pzq_q5b/step_p45_pzq_q5b"
+                conrefend="../../reusable/steps/data_collect/data_collection_steps.dita#ReusableComponent_n45_pzq_q5b/step_t45_pzq_q5b">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Ознакомьтесь с результатами сбора.</cmd>
+                <stepresult>
+                    <ul id="ul_mll_twl_lyb">
+                        <li>Результаты сбора данных об ОС отобразятся в карточке объекта защиты в
+                            блоке <uicontrol>Информация об ОС</uicontrol>.</li>
+                        <li>Результаты сбора данных об установленном ПО отобразятся на странице
+                                <cite keyref="soft_list_fp"/>.</li>
+                    </ul>
+                </stepresult>
+            </step>
+        </steps>
+        </taskbody>
+</task>

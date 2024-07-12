@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="safe_way_to_work_w_appliance_centos">
+    <title>Действия для обеспечения безопасной работы с Комплексом в ОС РЕД ОС</title>
+    
+        <taskbody>
+            <context id="context_krq_1yw_35b">После запуска Комплекса рекомендуется выполнить
+                следующие действия для обеспечения безопасной работы с <term keyref="appliance"
+                />ом:</context>
+            <steps id="ol_vbl_ghd_jsb">
+            <step
+                conref="../../reusable/steps/OS_settings/safe_settings_1.dita#ReusableComponent_og4_rx2_twb/step_pg4_rx2_twb"
+                conrefend="../../reusable/steps/OS_settings/safe_settings_1.dita#ReusableComponent_og4_rx2_twb/step_sg4_rx2_twb">
+                <cmd/>
+            </step>
+                <step>
+                    <cmd>Выполните настройки парольной политики и настройки блокировки учетных
+                        записей при превышении количества неудачных попыток входа в ОС. Данные
+                        настройки выполняются путем редактирования переменных в конфигурационных
+                        файлах ОС согласно информации в таблице ниже<ph outputclass="onlypdf"> (<xref
+                            href="#safe_way_to_work_w_appliance_centos/table_opg_qkd_jsb" format="dita"/>)</ph>.
+                        После редактирования всех конфигурационных файлов настройки применяются
+                        мгновенно; парольная политика начинает действовать для вновь создаваемых
+                        пользователей.</cmd>
+                    <info>
+                        <table id="table_opg_qkd_jsb">
+                            <title>Настройки парольной политики и блокировки учетных записей ОС РЕД
+                            ОС при превышении количества неудачных попыток входа</title>
+                            <tgroup cols="3">
+                                <colspec colname="col1" colnum="1" colwidth="20%"/>
+                                <colspec colname="col2" colnum="2" colwidth="40%"/>
+                                <colspec colname="col3" colnum="3" colwidth="40%"/>
+                                <thead>
+                                    <row>
+                                        <entry>Конфигурационный файл</entry>
+                                        <entry>Параметр и требуемое значение</entry>
+                                        <entry>Описание параметра</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry morerows="2"><codeph>/etc/login.defs</codeph></entry>
+                                        <entry><codeph>PASS_MAX_DAYS 180</codeph></entry>
+                                        <entry>Максимальный срок действия пароля, в днях</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>PASS_MIN_LEN 6</codeph></entry>
+                                        <entry>Ограничение минимальной длины пароля</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>PASS_WARN_AGE 7</codeph></entry>
+                                        <entry>Число дней до истечения срока действия пароля, когда
+                                        пользователю выдается предупреждение о необходимости замены
+                                        его пароля</entry>
+                                    </row>
+                                    <row>
+                                        <entry morerows="5"
+                                            ><codeph>/etc/security/pwquality.conf</codeph></entry>
+                                        <entry><codeph>difok = 4</codeph></entry>
+                                        <entry>Минимальное количество знаков, отличающихся от
+                                        предыдущего пароля</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>minlen = 6</codeph></entry>
+                                        <entry>Минимальная длина пароля</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>dcredit = -1</codeph></entry>
+                                        <entry>Минимум одна цифра. Пишется со знаком «-»</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>ucredit = -1</codeph></entry>
+                                        <entry>Минимум один символ верхнего регистра. Пишется со
+                                        знаком «-»</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>lcredit = -1</codeph></entry>
+                                        <entry>Минимум один символ нижнего регистра. Пишется со
+                                        знаком «-»</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>ocredit = -1</codeph></entry>
+                                        <entry>Минимум один специальный символ. Пишется со знаком
+                                        «-»</entry>
+                                    </row>
+                                    <row>
+                                        <entry morerows="9"
+                                            ><codeph>/etc/pam.d/password-auth</codeph>
+                                    </entry>
+                                        <entry><codeph>auth required pam_env.so</codeph></entry>
+                                        <entry>Оставить строку (есть в файле по умолчанию)</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth required pam_faillock.so preauth silent
+                                                audit deny=3 unlock_time=300</codeph></entry>
+                                        <entry>
+                                            <p>deny — число попыток авторизации, unlock_time — время
+                                                разблокировки учетной записи после достижения
+                                                количества неудачных попыток входа, в секундах.</p>
+                                            <p>Добавить строку для выполнения обработки отказов
+                                                аутентификации.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth sufficient pam_unix.so try_first_pass
+                                                nullok </codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth [default=die] pam_faillock.so authfail
+                                                audit deny=3 unlock_time=300</codeph></entry>
+                                        <entry>
+                                            <p>Добавить строку для выполнения обработки отказов
+                                                аутентификации.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth required pam_deny.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>account required
+                                            pam_faillock.so</codeph></entry>
+                                        <entry>
+                                            <p>Добавить строку.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>account required pam_unix.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>password requisite pam_pwquality.so
+                                                try_first_pass local_users_only enforce_for_root
+                                                retry=3</codeph></entry>
+                                        <entry>
+                                            <p>Добавить строку. Задействует вышеуказанную парольную
+                                                политику.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>password sufficient pam_unix.so
+                                                try_first_pass use_authtok nullok sha512
+                                                shadow</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>password required
+                                            pam_deny.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry morerows="9"
+                                        ><codeph>/etc/pam.d/system-auth</codeph></entry>
+                                        <entry><codeph>auth required pam_env.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth required pam_faillock.so preauth silent
+                                                audit deny=3 even_deny_root
+                                            unlock_time=300</codeph></entry>
+                                        <entry>
+                                            <p>deny — число попыток авторизации, unlock_time — время
+                                                разблокировки учетной записи после достижения
+                                                количества неудачных попыток входа, в секундах.</p>
+                                            <p>Добавить строку для выполнения обработки отказов
+                                                аутентификации.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth sufficient pam_unix.so try_first_pass
+                                                nullok</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth [default=die] pam_faillock.so authfail
+                                                audit deny=3 even_deny_root
+                                            unlock_time=300</codeph></entry>
+                                        <entry>
+                                            <p>Добавить строку для выполнения обработки отказов
+                                                аутентификации.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>auth required pam_deny.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>account required
+                                            pam_faillock.so</codeph></entry>
+                                        <entry>
+                                            <p>Добавить строку.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>account required pam_unix.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>password requisite pam_pwquality.so
+                                                try_first_pass local_users_only enforce_for_root
+                                                retry=3</codeph></entry>
+                                        <entry>
+                                            <p>Добавить строку для выполнения обработки отказов
+                                                аутентификации.</p>
+                                            <p>Пишется сразу после строки, приведенной выше</p>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>password sufficient pam_unix.so
+                                                try_first_pass use_authtok nullok sha512
+                                                shadow</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                    <row>
+                                        <entry><codeph>password required
+                                            pam_deny.so</codeph></entry>
+                                        <entry>Оставить строку</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Для упрощения работы с командами ПО Docker (не нужно будет добавлять
+                            <codeph>sudo</codeph> для этих команд) добавьте дополнительную учетную
+                        запись администратора, созданную при установке ОС, в группу docker.</cmd>
+                </step>
+                <step>
+                    <cmd>Замените пароль созданной учетной записи. </cmd>
+                    <info>
+                        <note type="caution">Новый пароль должен соответствовать настроенной
+                            парольной политике.</note>
+                    </info>
+                </step>
+            </steps>
+        </taskbody>
+    
+</task>

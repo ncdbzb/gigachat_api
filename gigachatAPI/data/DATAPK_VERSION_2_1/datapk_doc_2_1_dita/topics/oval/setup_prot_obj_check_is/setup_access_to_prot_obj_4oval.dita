@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="setup_access_to_prot_obj_4oval">
+ <title>Настройка доступа к объекту защиты для сбора OVAL-объектов</title>
+ <taskbody>
+ <context>
+ <p>Для настройки доступа к объекту защиты для сбора <abbreviated-form keyref="oval_def"/>-объектов:</p>
+ </context>
+ <steps>
+ <step>
+    <cmd>Добавьте, учетную запись объекта защиты (см. раздел «<xref
+      href="../../cred_prot_obj_settings/cred_prot_obj_settings.dita"/>»).</cmd>
+   </step><step><cmd>Привяжите учетную запись к объекту защиты. Для этого:</cmd>
+ 
+ <substeps>
+ <substep>
+      <cmd> откройте окно <cite keyref="prot_obj_profile_fp"/>;</cmd>
+     </substep>
+ <substep>
+            <cmd>на панели <uicontrol>Учетные данные</uicontrol> нажмите <image
+                href="../../../images/icons/edit.png" id="image_a51_lz2_5nb"/>. </cmd>
+            <stepresult>появится окно <uicontrol>Настройка учетных данных</uicontrol>.</stepresult>
+          </substep>
+     <substep>
+      <cmd>выберите подходящие учетные данные из списка и нажмите <uicontrol>Сохранить</uicontrol>. </cmd>
+     </substep>
+ </substeps>
+ </step><step>
+    <cmd>Убедитесь, что загружены скрипты для сбора <abbreviated-form keyref="oval_def"/>-объектов
+     на странице <cite keyref="prot_obj_inspection_fp"/> → <cite keyref="check_report_fp"/> → <cite
+      keyref="check_report_settings_fp"/> → <cite keyref="scripts_fp"/>.</cmd>
+   </step><step>
+ <cmd>Привяжите скрипты для сбора <abbreviated-form keyref="oval_def"/>-объектов к объекту защиты. Для этого:</cmd>
+ <substeps>
+ <substep>
+ <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="prot_obj_inspection_fp"/> → <cite keyref="check_report_fp"/> → <cite keyref="check_report_settings_fp"/> → <cite keyref="oval_settings_fp"/>.</cmd>
+ <info>
+ <fig id="fig_gjv_241_snb">
+ <title>Страница «Настройки OVAL»</title>
+ <image href="../../../images/pages/oval_settings_page_scr.png"
+  id="image_hjv_241_snb"/>
+ </fig>
+ </info>
+ </substep>
+ <substep>
+            <cmd>Нажмите кнопку <uicontrol>Создать настройку</uicontrol>.</cmd>
+          </substep>
+ <substep>
+            <cmd>В открывшемся окне <uicontrol>Создание настройки OVAL</uicontrol> задайте следующие
+              параметры для привязки скрипта к отдельным объектам защиты:</cmd>
+            <info>
+              <ol>
+                <li>
+                  <p>в поле <uicontrol><term keyref="script"/></uicontrol> выберите из списка скрипт
+                    для сбора выбранного <abbreviated-form keyref="oval_def"/>-объекта.</p>
+                  <note id="note_btt_1n3_zsb">Тип <abbreviated-form keyref="oval_def"/>-объекта
+                    будет отображен автоматически.</note>
+                </li>
+                <li>в поле <uicontrol>Объекты защиты</uicontrol> выберите один или несколько
+                  объектов защиты, к которым будет привязан скрипт для выполнения <abbreviated-form
+                    keyref="oval_def"/>-проверок;</li>
+                <li>в поле <uicontrol>Метка</uicontrol> выберите из списка метку, к которой
+                  необходимо привязать скрипт для выполнения проверок на соответствие требованиям
+                    <abbreviated-form keyref="IS"/></li>
+                <li>отметьте параметр <uicontrol>По умолчанию</uicontrol>, чтобы установить
+                  настройку для всех объектов защиты, которым не присвоена другая настройка.</li>
+              </ol>
+              <fig>
+                <title>Окно «Создание настройки OVAL»</title>
+                <image href="../../../images/oval/create_oval_settings_window.png"/>
+              </fig>
+            </info>
+          </substep>
+ <substep>
+            <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений.</cmd>
+          </substep>
+ </substeps>
+ </step> <step>
+ <cmd>Повторите шаги из п. 4 для остальных <abbreviated-form keyref="oval_def"/>-объектов.</cmd>
+ </step> 
+ </steps>
+ </taskbody>
+</task>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ny5_2rc_3bc">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><note id="note_xfs_500" type="attention">Необходимо создавать разделы
+                                объемом не более 500 ГБ при разметке дискового пространства в
+                                файловой системе xfs на <term keyref="alt_name"/>. При необходимости
+                                объем можно увеличить после завершения установки.</note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

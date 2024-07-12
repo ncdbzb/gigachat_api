@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_pb1_mtv_r5b">
+    <title/>
+    <body>
+        <p><ph id="ph_qb1_mtv_r5b">В <term keyref="cert_appliance_name_short"/> предусмотрена
+                возможность регистрации инцидентов – сообщений, генерируемых системой корреляции
+                событий, а также событий, имеющих статус «critical». Инциденты хранятся в базе
+                данных SQL <term keyref="cert_appliance_name_short"/>.</ph></p>
+    </body>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="restart_checkup_prot_obj_to_is_requirements">
+ <title>Повторный запуск OVAL-проверки на соответствие требованиям ИБ</title>
+ <shortdesc></shortdesc>
+ <taskbody>
+ <context>
+ <p>Для повторного запуска ранее выполненной проверки <abbreviated-form keyref="oval_def"/> на
+        соответствие требованиям <abbreviated-form keyref="IS"/> (успешной или неуспешной):</p>
+ </context>
+ <steps>
+ <step>
+    <cmd><ph
+      conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../reusable/pages_breadcrumbs/oval_results.dita#ReusableComponent_xrx_5t2_qxb/ph_yrx_5t2_qxb"
+     />. </cmd>
+   </step><step>
+        <cmd>Нажмите кнопку <image href="../../images/icons/refresh.png" id="image_cbd_bkh_5nb"
+            scale="80"/> (<uicontrol>Перезапустить проверку</uicontrol>) в строке с проверкой
+            <abbreviated-form keyref="oval_def"/>, которую необходимо выполнить повторно.</cmd>
+        <info conref="../reusable/cancel_oval_note.dita#cancel_oval_note/cancel_oval_note"/>
+      </step><step><cmd>Обновите страницу <cite keyref="check_report_fp"/> для получения результата проверки.
+ </cmd></step>
+ </steps>
+ </taskbody>
+</task>

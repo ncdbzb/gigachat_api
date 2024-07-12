@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="search">
+    <title>Поиск и просмотр событий в упрощенном режиме</title>
+    <taskbody>
+        <context>При обновлении страницы <cite keyref="events_fp"/> все результаты фильтрации
+            сохраняются.</context>
+    </taskbody>
+    <task id="task_h3r_lnp_wzb">
+        <title>Просмотр событий</title>
+        <taskbody>
+            <context id="context_j4x_lnp_wzb">
+                <p>Для просмотра события:</p>
+            </context>
+            <steps id="steps_k4x_lnp_wzb">
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../images/icons/rollup.png"
+                            id="image_mms_35p_wzb"/>для просмотра информации о событии.</cmd>
+                    <stepresult><ph>отобразится подробная информация о событии.</ph><fig
+                            id="fig_l4x_lnp_wzb">
+                            <title>Подробная информация о событии</title>
+                            <image href="../../images/events/event_information.PNG"
+                                id="image_m4x_lnp_wzb"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>Для перехода к объектам защиты, связанным с событием, нажмите кнопку <image
+                            href="../../images/icons/go_to_assets.PNG" id="image_n4x_lnp_wzb"
+                        />.</cmd>
+                    <info>
+                        <note id="note_tn2_vxp_wzb" type="tip">Кнопка <image
+                                href="../../images/icons/go_to_assets.PNG" id="image_hzf_s4v_wzb"/>
+                            доступна, если к моменту регистрации события <term keyref="appliance"/>
+                            уже зарегистрировал объекты защиты, чьи сетевые атрибуты и
+                            идентификаторы присутствуют в событии в полях
+                                <uicontrol>Источник</uicontrol> и
+                            <uicontrol>Получатель</uicontrol>.</note>
+                    </info>
+                    <stepresult>откроется страница <cite keyref="prot_obj_fp"/> со списком объектов
+                        защиты, связанных с событием.<fig id="fig_wj3_lxp_wzb">
+                            <title>Объекты защиты, связанные с событием, на странице
+                                «Активы»</title>
+                            <image href="../../images/events/assets_and_event.png"
+                                id="image_ydd_mxp_wzb"/>
+                        </fig></stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_dtl_ynf_vzb">
+        <title>Поиск событий с помощью строки поиска</title>
+        <taskbody>
+            <context id="context_ad2_14f_vzb">
+                <p>Для автоматического поиска с помощью строки поиска:</p>
+            </context>
+            <steps id="steps_pts_b4f_vzb">
+                <step>
+                    <cmd>Установите курсор в строку поиска.</cmd>
+                    <stepresult>отобразится выпадающий список с наименованиями доступных полей
+                            событий.<fig id="fig_ojl_y4f_vzb">
+                            <title>Список доступных полей событий</title>
+                            <image href="../../images/events/event_fields.png"
+                                id="image_nj4_w4t_vzb"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>Выберите поле события из списка, либо начните вводить поле вручную.</cmd>
+                    <info>
+                        <note id="note_htt_bqv_wzb" type="tip">При вводе поискового запроса в строке
+                            поиска будут появляться подсказки с доступными полями, операторами и
+                            значениями полей.</note>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Выберите оператор поля события из списка.</cmd>
+                    <info>
+                        <p><ph>Доступные операторы для числовых данных:</ph><ul id="ul_bdj_xpv_wzb">
+                                <li><codeph>=</codeph> — равно;</li>
+                                <li><codeph>!=</codeph> — не равно;</li>
+                                <li><codeph>></codeph> — больше;</li>
+                                <li><codeph>&lt;</codeph> — меньше;</li>
+                                <li><codeph>>=</codeph> — больше или равно;</li>
+                                <li><codeph>&lt;=</codeph> — меньше или равно;</li>
+                            </ul></p>
+                    </info>
+                    <info>
+                        <p><ph>Доступные операторы для текстовых данных:</ph><ul id="ul_nsx_xpv_wzb">
+                                <li><codeph>=</codeph> — равно;</li>
+                                <li><codeph>!=</codeph> — не равно;</li>
+                                <li><codeph>~</codeph> — содержит;</li>
+                                <li><codeph>!~</codeph> — не содержит;</li>
+                                <li><codeph>^</codeph> — начинается с;</li>
+                                <li><codeph>!^</codeph> — не начинается с.</li>
+                            </ul></p>
+                    </info>
+                    
+                </step>
+                <step>
+                    <cmd>Введите значение поля.</cmd>
+                    <info>
+                        <note id="note_th4_2yk_xzb" type="tip">Допускается создавать сложные
+                            поисковые запросы, объединяя несколько запросов «поле-оператор-значение»
+                            с помощью логических операторов <codeph>И</codeph>/<codeph>ИЛИ</codeph>.
+                            Данные операторы также появляются в строке поиска в виде
+                            подсказок.</note>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../images/icons/find_button.png" width="44"
+                            height="20" id="image_uwz_n4f_vzb"/>.</cmd>
+                    <stepresult><ph>результаты поиска будут отображены на странице.</ph><fig
+                            id="fig_ird_v4f_vzb">
+                            <title>Отображение результатов поиска в строке поиска на странице
+                                «События»</title>
+                            <image href="../../images/events/events_found.png"
+                                id="image_obp_lfp_wzb"/>
+                        </fig></stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="search_filters">
+        <title>Поиск событий с помощью фильтров</title>
+        <taskbody>
+            <context id="context_search_filters">
+                <p><ph>Фильтры — это набор инструментов на странице <cite keyref="events_fp"/> для
+                        фильтрации событий по заданным параметрам. Фильтрация выполняется после
+                        ввода значения в фильтр, за исключением фильтра
+                            <uicontrol>Критичность</uicontrol>, в котором по умолчанию заданы
+                        значения <codeph>Низкая</codeph> или <codeph>Критическая</codeph>. Фильтры
+                        расположены под строкой поиска.</ph><note id="note_bgz_lsv_wzb" type="tip"
+                        >Для более точного поиска событий можно использовать одновременно несколько
+                        фильтров и строку поиска.</note></p>
+                <p>Для поиска события с помощью фильтра:</p>
+            </context>
+            <steps id="steps_jc2_rsr_5zb">
+                <step id="quick_f_step_1">
+                    <cmd> Выберите необходимый фильтр. </cmd>
+                    <stepresult>отобразится поле ввода значения в выбранный фильтр.<fig
+                            id="fig_nkq_zmp_wzb">
+                            <title>Поле ввода значения в фильтр</title>
+                            <image href="../../images/events/fasf_filter_example.png"
+                                id="image_nrs_1np_wzb"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>
+                        Введите значение в фильтр.
+                    </cmd>
+                </step>
+                <step id="quick_f_step_3">
+                    <cmd> Нажмите кнопку <image href="../../images/icons/approve.png"
+                            id="image_rq5_gnf_vzb"/>.</cmd>
+                    <stepresult>результаты поиска будут отображены на странице.</stepresult>
+                </step>
+                <step>
+                    <cmd>При необходимости повторите шаги <xref
+                            href="#search_filters/quick_f_step_1" format="dita"/>-<xref
+                            href="#search_filters/quick_f_step_3" format="dita"/> с другими
+                        фильтрами для более точного поиска событий.</cmd>
+                </step>
+                <step>
+                    <cmd>Для очистки результатов поиска по одному из фильтров нажмите кнопку <image
+                            href="../../images/events/clear_filter_icon.png" id="image_jpp_3sv_wzb"
+                        /> справа от выбранного фильтра.</cmd>
+                    <stepresult>результаты поиска будут автоматически обновлены на
+                        странице.</stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_gvw_ynn_vzb">
+        <title>Поиск событий с помощью фильтра «Дата создания»</title>
+        <taskbody>
+            <context id="context_dnm_14n_vzb">
+                <p>По умолчанию на странице <cite keyref="events_fp"/> отображаются события за
+                    текущую дату.</p>
+                <p>Для поиска события с помощью фильтра <uicontrol>Дата создания</uicontrol>:</p>
+            </context>
+            <steps id="steps_dvy_14n_vzb">
+                <step>
+                    <cmd>Выберите фильтр <uicontrol>Дата создания</uicontrol>.</cmd>
+                    <stepresult>откроется календарь выбора временного периода, в котором были
+                        зарегистрированы события.<fig id="fig_zcy_bnp_wzb">
+                            <title>Календарь выбора временного периода регистрации событий</title>
+                            <image href="../../images/events/calendar.png" id="image_bmr_fnp_wzb"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>Выберите начальную дату.</cmd>
+                    <stepresult>автоматически отобразятся события за выбранную дату.</stepresult>
+                </step>
+                <step>
+                    <cmd>При необходимости выберите конечную дату.</cmd>
+                    <stepresult><ph>в календаре будут выделены все даты между выбранными начальной и
+                            конечной. На странице автоматически отобразятся события за установленный
+                            временной период.</ph><fig id="fig_igx_xzv_wzb">
+                            <title>Выбранные даты в календаре</title>
+                            <image href="../../images/events/dates_in_calendar.png"
+                                id="image_ats_yzv_wzb"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>При необходимости введите время в поля <uicontrol>с:</uicontrol> и
+                            <uicontrol>по:</uicontrol> (время вводится в формате
+                            <codeph>ЧЧ:ММ:СС.ССС</codeph>).</cmd>
+                    <info>
+                        <note id="note_akz_dbw_wzb">Если выбраны разные начальная и конечная даты,
+                            поля <uicontrol>с:</uicontrol> и <uicontrol>по:</uicontrol> будут
+                            работать следующим образом:<ul id="ul_knh_jbw_wzb">
+                                <li>в поле <uicontrol>с:</uicontrol> указывается время для начальной
+                                    даты;</li>
+                                <li>в поле <uicontrol>по:</uicontrol> указывается время для конечной
+                                    даты.</li>
+                            </ul></note>
+                    </info>
+                    <stepresult><ph>на странице автоматически отобразятся события за установленный
+                            временной период.</ph><fig id="fig_dj2_b5s_vzb">
+                            <title>Отображение событий за установленный временной период</title>
+                            <image href="../../images/events/events_period.PNG"
+                                id="image_ryr_x4t_vzb"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>Для очистки результатов поиска по выбранному временному периоду нажмите
+                        кнопку <image href="../../images/events/clear_filter_icon.png"
+                            id="image_edn_m2w_wzb"/> справа от фильтра <uicontrol>Дата
+                            создания</uicontrol>.</cmd>
+                    <stepresult>на странице автоматически отобразятся события за текущую
+                        дату.</stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="add_filters">
+        <title>Добавление фильтров</title>
+        <taskbody>
+            <context id="context_add_filters">Для добавления фильтров на страницу <cite
+                    keyref="events_fp"/>:</context>
+            <steps id="steps_zs4_4by_5zb">
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../images/icons/add_filter.PNG" width="16"
+                            height="16" id="image_dpw_vby_5zb"/>, расположенную под строкой
+                        поиска.</cmd>
+                    <stepresult><ph>Отобразится выпадающий список с доступными фильтрами. Фильтры,
+                            уже выбранные для отображения на странице, имеют серый цвет и иконку
+                                <image href="../../images/icons/approve.png" id="image_jqg_cwv_wzb"
+                            /> слева от названия.</ph><fig id="fig_s5x_s5v_wzb">
+                            <title>Список доступных фильтров</title>
+                            <image href="../../images/events/filter_list.png" id="image_q4n_t5v_wzb"
+                            />
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>В выпадающем списке выберите необходимые фильтры.</cmd>
+                    <stepresult>выбранные фильтры отобразятся на панели фильтров.</stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="delete_filters">
+        <title>Удаление фильтров</title>
+        <taskbody>
+            <context id="context_btq_2dy_5zb">Для удаления фильтров со страницы <cite
+                    keyref="events_fp"/>:</context>
+            <steps>
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../images/icons/add_filter.PNG" width="16"
+                        height="16" id="image_dpw_vby_5zb"/>, расположенную под строкой
+                        поиска.</cmd>
+                </step>
+                <step>
+                    <cmd>В выпадающем списке отмените выбор необходимых фильтров.</cmd>
+                    <stepresult>фильтры перестанут отображаться на панели фильтров.</stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+</task>

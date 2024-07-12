@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="FSTEC_MAPPINGS_ENABLED">
+    <glossterm>FSTEC_MAPPINGS_ENABLED</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/fstec_mappings_enabled.dita#ReusableComponent_njw_qxm_tzb/p_gr5_s2j_jpb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

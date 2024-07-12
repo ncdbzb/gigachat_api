@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cqy_hk2_1yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_dqy_hk2_1yb">
+                <cmd>Завершить сеанс.</cmd>
+            </step>
+            <step id="step_fqy_hk2_1yb">
+                <cmd>Войти в веб-интерфейс управления <term keyref="cert_appliance_name_short"/> с
+                    использованием учетной записи администратора ИБ.</cmd>
+            </step>
+            <step id="step_gqy_hk2_1yb">
+                <cmd>Перейти на страницу <uicontrol>Управление комплексом-Пользователи</uicontrol>.</cmd>
+            </step>
+            <step id="step_hqy_hk2_1yb">
+                <cmd>Выбрать учетную запись test2 для редактирования.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

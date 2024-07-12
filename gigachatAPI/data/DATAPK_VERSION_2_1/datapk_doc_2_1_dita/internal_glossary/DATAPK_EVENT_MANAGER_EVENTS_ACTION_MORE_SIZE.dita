@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="DATAPK_EVENT_MANAGER_EVENTS_ACTION_MORE_SIZE">
+    <glossterm>DATAPK_EVENT_MANAGER_EVENTS_ACTION_MORE_SIZE</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/datapk_event_manager_events_action_more_size_desc.dita#ReusableComponent_mpg_rs3_jpb/p_spg_rs3_jpb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

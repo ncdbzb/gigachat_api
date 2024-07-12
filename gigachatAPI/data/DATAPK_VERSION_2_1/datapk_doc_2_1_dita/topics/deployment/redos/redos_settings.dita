@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="redos_settings">
+    <title>Настройка ОС РЕД ОС</title>
+    <taskbody>
+        <steps>
+            <step
+                conref="../../reusable/steps/astra/bios_config.dita#ReusableComponent_s5x_fd4_55b/step_gym_yzx_j5b">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/OS_settings/cmd_open.dita#ReusableComponent_sc1_3tj_nvb/cmd_tc1_3tj_nvb"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/OS_settings/cmd_login.dita#ReusableComponent_hfq_cmj_nvb/cmd_jfq_cmj_nvb"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/astra/utc_config.dita#ReusableComponent_rg3_ld4_55b/cmd_ijf_d2y_j5b"/>
+                <info
+                    conref="../../reusable/steps/astra/utc_config_code.dita#ReusableComponent_fms_4d4_55b/info_dv3_22y_j5b"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/ssh_cmd.dita#ReusableComponent_xsh_rg4_55b/cmd_pcj_v5t_h5b"/>
+                <info>
+                    <ol
+                        conref="../../reusable/steps/redos/ssh_steps.dita#ReusableComponent_odg_1h4_55b/ol_dnn_zg4_55b"
+                        id="ol_whg_1h4_55b">
+                        <li/>
+                    </ol>
+                </info>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/ntp_cmd.dita#ReusableComponent_sq4_134_55b/cmd_ntc_3wt_h5b"/>
+                <info
+                    conref="../../reusable/steps/redos/ntp_steps.dita#ReusableComponent_fzb_pn4_55b/info_ckh_jwt_h5b"
+                />
+            </step>
+            <step>
+                <cmd>Запишите значения переменных в конфигурационный файл
+                        <codeph>99-sysctl.conf</codeph>, для этого:</cmd>
+                <substeps id="substeps_axk_v3y_25b">
+                    <substep>
+                        <cmd>Откройте конфигурационный файл <codeph>99-sysctl.conf</codeph>:</cmd>
+                        <info>
+                            <codeblock>sudo nano /etc/sysctl.d/99-sysctl.conf</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте в конец конфигурационного файла следующие строки:</cmd>
+                        <info>
+                            <codeblock>net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+vm.max_map_count=262144
+net.core.rmem_default=16777216
+net.core.rmem_max=16777216
+vm.swappiness = 30</codeblock>
+                            <fig id="fig_dbk_tj3_25b">
+                                <title>Конфигурационный файл 99-sysctl.conf</title>
+                                <image
+                                    href="../../../images/deployment/redos_installation/99-sysctl.png"
+                                    id="image_ebk_tj3_25b"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните команду для открытия файла <codeph>rc.local</codeph>
+                            командой: </cmd>
+                        <info>
+                            <codeblock>sudo nano /etc/rc.d/rc.local</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте в файл следующие строки:</cmd>
+                        <info>
+                            <codeblock>#!/bin/sh
+ip link set [Имя интерфейса для прослушивания трафика] promisc on                      </codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Установите права на файл <codeph>rc.local</codeph> командой:</cmd>
+                        <info>
+                            <codeblock id="codeblock_fvc_31r_swb">sudo chmod 744 /etc/rc.d/rc.local</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите службу rc-local командой: </cmd>
+                        <info>
+                            <codeblock>sudo systemctl start rc-local.service</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для применения новых настроек перезагрузите РЕД ОС командой:</cmd>
+                        <info>
+                            <codeblock>sudo shutdown -r now</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что сетевым интерфейсам назначены IP-адреса, они находятся в
+                            состоянии <codeph>UP</codeph> и интерфейс для прослушивания трафика
+                            работает в режиме <codeph>PROMISC</codeph>. Для этого выполните
+                            команду:</cmd>
+                        <info>
+                            <codeblock>ip a</codeblock>
+                            <fig id="fig_conf">
+                                <title>Файл конфигурации серверов разрешения имен</title>
+                                <image
+                                    href="../../../images/deployment/redos_installation/name_server_config.png"
+                                    id="image_conf"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Если сетевые интерфейсы не были настроены при установке ОС в
+                            графическом режиме, выполните настройку через командную строку. Для
+                            этого:</cmd>
+                        <info>
+                            <ol id="ol_df2_5hq_swb">
+                                <li>
+                                    <p>В командной строке ОС откройте для редактирования
+                                        конфигурационный файл сетевого интерфейса управления:</p>
+                                    <codeblock id="codeblock_ozl_vhq_swb">sudo nano /etc/sysconfig/network-scripts/&lt;Имя интерфейса управления></codeblock>
+                                </li>
+                                <li>
+                                    <p>Настройте данный интерфейс таким же образом, как указано на
+                                        рисунке (поля <codeph>Name</codeph>, <codeph>UID</codeph>,
+                                            <codeph>Device</codeph> и сетевые реквизиты могут
+                                        отличаться от тех, что представлены в примере):</p>
+                                    <fig id="net_interface_config">
+                                        <title>Пример конфигурационного файла сетевого интерфейса
+                                            управления</title>
+                                        <image
+                                            href="../../../images/deployment/redos_installation/net_interface_config.png"
+                                            id="image_net_interface_config"/>
+                                    </fig>
+                                </li>
+                                <li>После окончания редактирования сохраните и закройте
+                                    конфигурационный файл.</li>
+                                <li>
+                                    <p>Откройте для редактирования конфигурационный файл сетевого
+                                        интерфейса для прослушивания трафика командой:</p>
+                                    <codeblock id="codeblock_bd1_13q_swb">sudo nano /etc/sysconfig/network-scripts/&lt;Имя интерфейса прослушивания></codeblock>
+                                </li>
+                                <li>
+                                    <p>Настройте данный интерфейс таким же образом, как указано на
+                                        рисунке (поля <codeph>Name</codeph>, <codeph>UID</codeph>,
+                                            <codeph>Device</codeph> могут отличаться от тех, что
+                                        представлены в примере):</p>
+                                    <fig id="fig_upv_c3q_swb">
+                                        <title>Пример конфигурационного файла сетевого интерфейса
+                                            прослушивания</title>
+                                        <image
+                                            href="../../../images/deployment/redos_installation/net_interface_listen_config.png"
+                                            id="image_net_interface_listen_config"/>
+                                    </fig>
+                                </li>
+                                <li>После окончания редактирования сохраните и закройте
+                                    конфигурационный файл.</li>
+                                <li>
+                                    <p>Перезапустите службу сети командой:</p>
+                                    <codeblock id="codeblock_uv3_f3q_swb">sudo systemctl restart NetworkManager</codeblock>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Подготовка файлов, необходимых для установки и работы <term keyref="appliance"
+                    />а на РЕД ОС:</cmd>
+                <substeps id="substeps_bxk_v3y_25b">
+                    <substep>
+                        <cmd>При наличии подключения к сети Интернет:</cmd>
+                        <info>
+                            <ol id="ol_zhh_v2s_swb">
+                                <li>
+                                    <p>Выполните установку необходимого ПО для работы <term
+                                            keyref="appliance"/>а с помощью команды:</p>
+                                    <codeblock id="codeblock_xzm_v1r_swb">sudo yum install docker-ce docker-compose -y</codeblock>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>При отсутствии подключения к сети Интернет:</cmd>
+                        <info>
+                            <ol id="ol_epm_y2s_swb">
+                                <li>
+                                    <p>Скопируйте архив <codeph>dependencies.zip</codeph> в
+                                        директорию <codeph>/home/datapk</codeph>.</p>
+                                    <note id="note_dbd_qcs_swb" type="note">
+                                        <p>Архив <codeph>dependencies.zip</codeph> содержит пакеты
+                                            «docker-ce» и «docker-compose» со всеми зависимостями из
+                                            официальных репозиториев производителей РЕД ОС:</p>
+                                        <codeblock id="codeblock_vgr_f2s_swb">http://repo.red-soft.ru/redos/7.3c/x86_64/os
+http://repo.red-soft.ru/redos/7.3c/x86_64/updates
+http://repo1.red-soft.ru/redos/7.3c/x86_64/os
+http://repo1.red-soft.ru/redos/7.3c/x86_64/updates
+http://mirror.yandex.ru/redos/7.3c/x86_64/os
+http://mirror.yandex.ru/redos/7.3c/x86_64/updates</codeblock>
+                                    </note>
+                                </li>
+                                <li>
+                                    <p>Перейдите в директорию <codeph>/home/datapk</codeph>:</p>
+                                    <codeblock id="codeblock_sxl_bfs_swb">cd /home/datapk</codeblock>
+                                </li>
+                                <li>
+                                    <p>Распакуйте архив «dependencies.zip»:</p>
+                                    <codeblock id="codeblock_wqx_cfs_swb">unzip /home/datapk/dependencies.zip -d /home/datapk</codeblock>
+                                </li>
+                                <li>
+                                    <p>Перейдите в директорию <codeph>dependencies</codeph>:</p>
+                                    <codeblock id="codeblock_z3v_dfs_swb">cd dependencies</codeblock>
+                                </li>
+                                <li>
+                                    <p>Установите дополнительные пакеты ПО командой:</p>
+                                    <codeblock id="codeblock_tcx_2fs_swb">sudo yum install -\-disablerepo=base,updates */* -y</codeblock>
+                                </li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Если файл <codeph>docker-compose</codeph> расположен в директории
+                                <codeph>/usr/bin</codeph>, переместите его в
+                                <codeph>/usr/local/bin</codeph>:</cmd>
+                        <info>
+                            <codeblock>sudo mv /usr/bin/docker-compose /usr/local/bin/</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Назначьте права на выполнение файлу <codeph>docker-compose</codeph>
+                            командой:</cmd>
+                        <info>
+                            <codeblock>sudo chmod +x /usr/local/bin/docker-compose</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запишите <codeph>usr/local/bin</codeph> в переменные «security_path»,
+                            для этого:</cmd>
+                        <info>
+                            <ol id="ol_dst_gz3_g5b">
+                                <li>Откройте файл с переменными «security_path»
+                                    командой:<codeblock>sudo visudo</codeblock></li>
+                                <li>Найдите в открывшемся файле строку, начинающуюся с «Defaults
+                                    secure_path», передвиньте курсор в конец данной строки и
+                                    перейдите в режим редактирования нажатием клавиши «a».</li>
+                                <li>Добавьте в конец строки следующее:
+                                    <codeblock>:/usr/local/bin</codeblock></li>
+                                <li>Нажмите клавишу «Esc» для выхода из режима редактирования.</li>
+                                <li>Введите <codeph>:wq</codeph> и нажмите «Enter» для сохранения
+                                    изменений и закрытия файла.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите ПО Docker и добавьте его в автозагрузку:</cmd>
+                        <info>
+                            <codeblock>sudo systemctl enable --now docker</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd> Убедитесь, что Docker в состоянии <codeph>active</codeph>, используя
+                            команду:</cmd>
+                        <info>
+                            <codeblock>sudo systemctl status docker</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/iptables_cmd.dita#ReusableComponent_fl4_d34_55b/cmd_mcw_cxt_h5b"/>
+                <substeps id="substeps_cxk_v3y_25b">
+                    <substep>
+                        <cmd>Откройте конфигурационный файл <codeph>iptables</codeph> с правилами
+                            межсетевого экранирования:</cmd>
+                        <info>
+                            <codeblock>sudo nano /etc/sysconfig/iptables</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте следующие строки в файл <codeph>iptables</codeph>:</cmd>
+                        <info>
+                            <codeblock>-A INPUT -s 172.10.0.0/16 -j ACCEPT
+<ph outputclass="only_main">-A INPUT -s 172.8.0.0/24 -p tcp --dport 28428 -j ACCEPT</ph>
+-A INPUT -p tcp --dport 443 -j ACCEPT
+-A INPUT -p udp --dport 514 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 514 -j ACCEPT
+-A INPUT -p udp --dport 515 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 515 -j ACCEPT
+-A INPUT -p udp --dport 162 -j ACCEPT
+-A INPUT -p tcp --dport 25500 -j ACCEPT</codeblock>
+                            <note type="attention">
+                                <p>Данные правила должны быть добавлены в цепочку INPUT до правила,
+                                    запрещающего входящие пакеты:</p>
+                                <codeblock>-A INPUT -j REJECT --reject-with icmp-host-prohibited</codeblock>
+                                <p>В обратном случае правила не сработают.</p>
+                            </note>
+                            <fig id="fig_dxk_v3y_25b">
+                                <title>Содержимое файла «iptables» после редактирования</title>
+                                <image
+                                    href="../../../images/deployment/redos_installation/iptables.png"
+                                    id="image_exk_v3y_25b"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Запустите службу «iptables» и добавьте ее в автозагрузку командой: </cmd>
+                        <info>
+                            <codeblock>sudo systemctl enable --now iptables.service</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Перезагрузите РЕД ОС командой:</cmd>
+                <info>
+                    <codeblock>sudo shutdown -r now</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/net_interface.dita#ReusableComponent_mcb_wh4_55b/cmd_ysf_tv1_35b"/>
+                <info
+                    conref="../../reusable/steps/redos/net_interface_commands.dita#ReusableComponent_vky_wm4_55b/info_mkf_vv1_35b"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/net_interface_cabel.dita#ReusableComponent_gyh_lm4_55b/cmd_ztp_2w1_35b"/>
+                <info
+                    conref="../../reusable/steps/redos/net_interface_cabel_info.dita#ReusableComponent_f4g_sm4_55b/info_y5x_fw1_35b"
+                />
+            </step>
+            <!--Возможно, hostname вообще не надо проверять - там уже всё настроено-->
+            <!--<step
+                conref="../../reusable/steps/redos/hostname_check.dita#ReusableComponent_s55_3m4_55b/step_sdy_lx1_35b">
+                <cmd/>
+            </step>-->
+        </steps>
+    </taskbody>
+</task>

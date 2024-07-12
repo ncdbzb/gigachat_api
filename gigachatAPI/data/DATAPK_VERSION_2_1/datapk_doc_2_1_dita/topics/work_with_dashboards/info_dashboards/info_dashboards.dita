@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="info_dashboards">
+ <title>Информационные панели</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_fbf_nlr_vnb">
+ <li><xref href="compliance_vulnerability_control.dita"/></li>
+ <li><xref href="events_control_datapk.dita"/></li>
+ <li><xref href="operational_monitoring.dita"/></li>
+ </ul>
+ <p>Информационные панели предназначены для анализа внутренних событий <term keyref="appliance"/>а, а также просмотра проверок на уязвимости. Перейти к информационным панелям можно
+ с главного дашборда, воспользовавшись ссылками в его верхней части или со страницы
+  <uicontrol>Панели мониторинга</uicontrol>.</p>
+ <note type="tip">Подробнее с навигацией в панелях мониторинга вы
+ можете ознакомиться в разделе «<xref
+ href="../ref_info_about_dashboards/navigation_in_dashboards.dita"/>».</note>
+ </body>
+</topic>

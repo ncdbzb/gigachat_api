@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vvw_fqb_pvb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_wvw_fqb_pvb">
+                <cmd>При необходимости измените часовой пояс и настройте синхронизацию времени с
+                    помощью скрипта мастера настройки времени
+                        <codeph>datapk_setup_[название_ОС].sh</codeph>. Подробная инструкция по
+                    работе с мастером приведена в разделе «<xref
+                        href="../../../certification/manual/manual_time_script.dita"/>». </cmd>
+                <info><note type="attention">Данные настройки должны выполняться только при остановленных контейнерах
+                            <term keyref="appliance"/>а после генерации конфигурационного файла <ph
+                            conref="../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /> и расположения всех необходимых файлов и директорий в рабочей
+                        директории.</note></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

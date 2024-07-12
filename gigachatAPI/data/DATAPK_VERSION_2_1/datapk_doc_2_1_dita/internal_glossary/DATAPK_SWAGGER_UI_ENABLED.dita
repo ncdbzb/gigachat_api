@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_SWAGGER_UI_ENABLED">
+    <glossterm>DATAPK_SWAGGER_UI_ENABLED</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/datapk_swagger_ui_enabled_desc.dita#ReusableComponent_bnq_vh4_gtb/ph_o15_bnw_nqb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

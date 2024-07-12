@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="DATAPK_GODPI_TCP_SKIP_SESSION_WITHOUT_HANDSHAKE">
+    <glossterm>DATAPK_GODPI_TCP_SKIP_SESSION_WITHOUT_HANDSHAKE</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/datapk_godpi_tcp_skip_session_without_handshake_desc.dita#ReusableComponent_i5w_qqh_jpb/p_n5w_qqh_jpb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_s.dita"/>
+    </related-links>
+</glossentry>

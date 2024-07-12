@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="nta_changing_time_zone">
+    <title>Изменение часового пояса</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>Для изменения часового пояса UDV NTA:</context>
+        <steps>
+            <step conref="../reusable/alt/extra_settings/udv_nta_stop.dita#ReusableComponent_b2q_lh4_f1c/step_c2q_lh4_f1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/open_list_timezones.dita#ReusableComponent_flb_sr4_f1c/step_jlb_sr4_f1c">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Перенастройте часовой пояс:</cmd>
+                <info>
+                    <codeblock id="codeblock_pxv_lry_lyb">timedatectl set-timezone Asia/Yekaterinburg</codeblock>
+                </info>
+                <info>
+                    <note id="note_dj1_vkz_lyb">После выполнения команды UDV NTA будет перенастроен
+                        на часовой пояс г. Екатеринбурга. Вместо <codeph>Asia/Yekaterinburg</codeph>
+                        укажите свой часовой пояс.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Измените часовой пояс в конфигурационных файлах <codeph>.env</codeph> UDV NTA
+                    одной из команд:</cmd>
+                <info>
+                    <ul id="ul_rrd_fwg_myb">
+                        <li>Для UDV NTA уровня Management или Sensor+Management на одной
+                                платформе:<codeblock id="codeblock_exk_3wg_myb">nano /opt/datapk/.env</codeblock><note
+                                id="note_xzq_3wg_myb">В файле <codeph>.env</codeph> в строке,
+                                начинающейся на <codeph>TZ=</codeph>, укажите свой часовой
+                                пояс.</note></li>
+                        <li>Для UDV NTA уровня Sensor или Sensor+Management на одной
+                                платформе:<codeblock id="codeblock_mvz_3wg_myb">nano /opt/sensor/.env</codeblock><note
+                                id="note_rlf_jwg_myb">В файле <codeph>.env</codeph> в переменной
+                                    <cmdname>TZ</cmdname> укажите свой часовой пояс и сохраните
+                                изменения.</note></li>
+                    </ul>
+                </info>
+            </step>
+            <step conref="../reusable/alt/extra_settings/udv_nta_start.dita#ReusableComponent_xdk_zh4_f1c/step_zdk_zh4_f1c">
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

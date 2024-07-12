@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="exp_prot_obj">
+ <title>Экспорт объектов защиты</title>
+  <taskbody>
+    <context id="context_bzk_ycq_g5b">Для экспорта всех объектов защиты в файл формата
+        <codeph>*.json</codeph>:</context>
+    
+    <steps>
+      <step>
+        <cmd><ph
+            conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+            /><cite keyref="prot_obj_fp"/>.</cmd>
+      </step>
+      <step>
+        <cmd>Нажмите кнопку <image href="../../images/icons/host_downl.png"/>
+            (<uicontrol>Экспортировать объекты защиты</uicontrol>) на панели
+            <uicontrol>Управление</uicontrol> в верхней части страницы.</cmd>
+        <stepresult>файл со списком объектов защиты, их групп, меток, <abbreviated-form
+            keyref="ACS_and_TP"/> с названием <codeph>hosts_[дата_и_время].json</codeph> будет
+          загружен на компьютер в директорию загрузки по умолчанию.</stepresult>
+      </step>
+      <step>
+        <cmd
+          conref="../reusable/steps/import_export/export_file_to_comp_cmd.dita#ReusableComponent_jmq_rh3_nyb/cmd_kmq_rh3_nyb"/>
+        <stepresult>файл <codeph>hosts_[дата_и_время].json</codeph> будет загружен на
+          компьютер.</stepresult>
+      </step>
+    </steps>
+    <postreq id="postreq_vmp_r5p_kyb">
+      <note type="warning">В файл <codeph>hosts_[дата_и_время].json</codeph> будут добавлены все
+        объекты защиты, независимо от выбора и фильтрации <abbreviated-form keyref="host"/>.</note>
+    </postreq>
+  </taskbody>
+</task>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1060012">
+    <title>
+Удалены все потоки данных вне домашней сети</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1060012">
+Диапазон домашней сети: <codeph>{ranges}</codeph>; Причина: потоки данных принадлежали старой домашней сети</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

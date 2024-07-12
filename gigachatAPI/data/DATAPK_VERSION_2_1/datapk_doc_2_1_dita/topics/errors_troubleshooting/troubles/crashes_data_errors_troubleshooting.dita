@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="crashes_data_errors_troubleshooting">
+ <title>Действия по восстановлению комплекса при сбойных ситуациях и ошибках в данных</title>
+ <body>
+ <p>При эксплуатации <term keyref="appliance"/>а пользователь может столкнуться с различными видами затруднений,
+ которые также возможно самостоятельно устранить. Основные типы затруднений:</p>
+ <ul id="ul_vdk_p3n_snb">
+   <li><xref href="trouble_1.dita"/></li>
+   <li><xref href="trouble_2.dita"/></li>
+   <li><xref href="trouble_3.dita"/></li>
+   <li><xref href="trouble_4.dita"/></li>
+   <li><xref href="trouble_5.dita"/></li>
+   <li><xref href="trouble_6.dita"/></li>
+   <li><xref href="trouble_7.dita"/></li>
+   <li><xref href="trouble_8.dita"/></li>
+   <li><xref href="trouble_9.dita"/></li>
+   <li><xref href="trouble_10.dita"/></li>
+   <li><xref href="trouble_11.dita"/></li>
+   <li><xref href="trouble_12.dita"/></li>
+   <li><xref href="trouble_13.dita"/></li>
+   <li><xref href="trouble_14.dita"/></li>
+   <li><xref href="trouble_15.dita"/></li>
+   <li><xref href="trouble_16.dita"/></li>
+   <li><xref href="trouble_17.dita"/></li>
+   <li><xref href="trouble_18.dita"/></li>
+   <li><xref href="trouble_19.dita"/></li>
+   <li><xref href="trouble_20.dita"/></li>
+   <li><xref href="trouble_21.dita"/></li>
+   <li><xref href="trouble_22.dita"/></li>
+   <li><xref href="trouble_23.dita"/></li>
+   <li><xref href="trouble_27.dita"/></li>
+   <li><xref href="trouble_28.dita"/></li>
+   <li><xref href="trouble_29.dita"/></li>
+   <li><xref href="trouble_30.dita"/></li>
+   <li><xref href="trouble_31.dita"/></li>
+   <li><xref href="trouble_32.dita"/></li>
+  </ul>
+ </body>
+</topic>

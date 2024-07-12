@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="normalizing_term"><glossterm>Нормализация событий</glossterm><glossdef>Нормализация событий — приведение событий из разных источников к единому формату, принятому в <term keyref="appliance"/>е.</glossdef></glossentry>

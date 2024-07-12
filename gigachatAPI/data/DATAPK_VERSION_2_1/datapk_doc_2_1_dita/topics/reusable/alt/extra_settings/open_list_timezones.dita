@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_flb_sr4_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_jlb_sr4_f1c">
+                <cmd>Откройте список часовых поясов по команде:</cmd>
+                <info><codeblock id="codeblock_utk_5bz_lyb">timedatectl list-timezones</codeblock></info>
+                <info><note id="note_zcj_rjz_lyb">Используя клавиши стрелок
+                            <uicontrol>Вверх</uicontrol> и <uicontrol>Вниз</uicontrol>, выберите
+                        свой часовой пояс.</note></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

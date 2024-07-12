@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_av1_4wj_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_bv1_4wj_g1c">Выберите, устанавливать ли сертификат для текущего
+                    пользователя или для локального компьютера. Нажмите
+                    <uicontrol>Далее</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

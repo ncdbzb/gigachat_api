@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_22">
+    <title>Не удается импортировать сканер сбора данных в веб-интерфейсе</title>
+    <troublebody>
+        <condition>
+
+            <p>Для проблем с импортом сканера сбора данных могут быть следующие причины:</p>
+            <ul id="ul_bv3_phq_snb">
+                <li><xref href="#trouble_22/cause_incorr_cert_chain" format="dita"/></li>
+                <li><xref href="#trouble_22/cause_incorr_encode" format="dita"/></li>
+                <li><xref href="#trouble_22/cause_changed_scanner" format="dita"/></li>
+            </ul>
+        </condition>
+        <troubleSolution>
+            <cause id="cause_incorr_cert_chain">
+                <title>Неверная цепочка сертификатов для проверки цифровой подписи Python-скрипта в
+                    сканере</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Убедитесь, что конечный сертификат <codeph>datapk_script.crt</codeph>,
+                            используемый для проверки подлинности Python-скриптов сбора данных,
+                            является клиентским для корневого сертификата <codeph>ca.crt</codeph>,
+                            который расположен в рабочей директории <term keyref="appliance"/>а
+                            уровня <abbreviated-form keyref="management"/>. Для этого выполните
+                            следующую команду:</cmd>
+                        <info>
+                            <codeblock>openssl verify -CAfile /opt/datapk/ca.crt /opt/datapk/<ph conref="../../reusable/files/scripts-cert.dita#ReusableComponent_fvh_z3t_jbc/ph_hvh_z3t_jbc"/>/datapk_script.crt</codeblock>
+                        </info>
+                        <stepresult>если верификация пройдет успешно, в командную строку будет
+                            выведена следующая информация:
+                            <codeblock>/opt/datapk/<ph conref="../../reusable/files/scripts-cert.dita#ReusableComponent_fvh_z3t_jbc/ph_hvh_z3t_jbc"/>/datapk_script.crt: OK</codeblock>
+                        </stepresult>
+                    </step>
+                    <step>
+                        <cmd>При необходимости замените конечный сертификат
+                                <codeph>datapk_script.crt</codeph> и повторно выполните
+                            верификацию.</cmd>
+                    </step>
+                    <step>
+                        <cmd id="sign_script_cmd">Повторно выполните цифровую подпись
+                            Python-скрипта.</cmd>
+                    </step>
+                    <step>
+                        <cmd id="import_script_cmd">Создайте новый сканер или измените существующий,
+                            импортировав в него новый Python-скрипт и его цифровую подпись. Либо
+                            импортируйте набор сканеров c новыми цифровыми подписями в
+                            веб-интерфейсе <term keyref="appliance"/>а.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_incorr_encode">
+                <title>Неверная кодировка Python-скрипта сбора данных</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Откройте Python-скрипт сбора данных с помощью текстового
+                            редактора.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Убедитесь, что Python-скрипт имеет кодировку UTF-8 без BOM. При
+                            необходимости измените кодировку и сохраните изменения.</cmd>
+                    </step>
+                    <step>
+                        <cmd conref="#trouble_22/sign_script_cmd"/>
+                    </step>
+                    <step>
+                        <cmd conref="#trouble_22/import_script_cmd"/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_changed_scanner">
+                <title>Сканер сбора данных был изменен с момента создания его последней цифровой
+                    подписи</title>
+                <p>Python-скрипт, размещенный и подписываемый в операционной системе <term
+                        keyref="appliance"/>а, не совпадает со скриптом, размещенным на локальной
+                        <abbreviated-form keyref="OS"/> и загружаемым в веб-интерфейсе <term
+                        keyref="appliance"/>а) при создании сканера.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps>
+
+                    <step>
+                        <cmd>Убедитесь в целостности Python-скрипта сбора данных.</cmd>
+                    </step>
+                    <step>
+                        <cmd conref="#trouble_22/sign_script_cmd"/>
+                    </step>
+                    <step>
+                        <cmd conref="#trouble_22/import_script_cmd"/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

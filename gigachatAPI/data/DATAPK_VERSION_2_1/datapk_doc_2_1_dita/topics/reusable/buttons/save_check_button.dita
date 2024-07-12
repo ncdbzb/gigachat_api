@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="save_check_button">
+
+ <title>Кнопка «Сохранить изменения»</title>
+ <body> 
+ <p><ph id="changes"><image href="../../../images/icons/check.png" id="image_jr3_3bf_5nb"/>
+  (<uicontrol>Сохранить изменения</uicontrol>)</ph></p> 
+ </body> 
+</topic> 

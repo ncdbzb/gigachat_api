@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="tar_consist">
+    <title>Содержание архива с резервной копией Комплекса</title>
+    <body>
+        <p><ph>В веб-интерфейсе <term keyref="appliance"/>а доступен запуск резервного копирования
+                основных данных в файл формата <codeph>.tar</codeph>. Архив содержит:</ph><ul
+                conref="../../reusable/backup_tar_consist.dita#ReusableComponent_i5t_prj_pyb/ul_umy_jpf_snb"
+                id="ul_hf5_prj_pyb">
+                <li/>
+            </ul></p>
+    </body>
+</topic>

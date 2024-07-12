@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vc5_fyl_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ad5_fyl_21c">После перезагрузки выберите пункт меню <uicontrol>Install
+                        Alt Server 10.1 x86_64</uicontrol> и нажмите клавишу
+                        <uicontrol>Enter</uicontrol>.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

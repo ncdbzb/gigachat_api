@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1080017">
+    <title>
+На <term keyref="appliance"/>е обнаружены объекты защиты с совпадающим сетевым именем</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1080017">Обнаружены объекты защиты с совпадающим сетевым именем:
+                                    <codeph>{target_name}</codeph> (<codeph>{target_id}</codeph>,
+                                    <codeph>{target_ip}</codeph>, <codeph>{target_mac}</codeph>,
+                                сенсор: <codeph>{target_sensor_name}</codeph>) и
+                                    <codeph>{source_name}</codeph> (<codeph>{source_id}</codeph>,
+                                    <codeph>{source_ip}</codeph>, <codeph>{source_mac}</codeph>,
+                                сенсор: <codeph>{source_sensor_name}</codeph>).</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

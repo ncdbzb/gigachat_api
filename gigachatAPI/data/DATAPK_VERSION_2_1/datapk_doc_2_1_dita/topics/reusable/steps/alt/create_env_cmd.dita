@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_sd3_vpn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ud3_vpn_4yb">Сгенерируйте конфигурационный файл <ph
+                        conref="../../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    /> и файл <ph
+                        conref="../../filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"
+                    /> с уникальным идентификатором <term keyref="appliance"/>а. Для этого:</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

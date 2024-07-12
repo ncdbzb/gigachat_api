@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Работа с журналом событий в интерфейсе визуализации</title>
+ <topicref href="setup_normalization_rules.dita"/>
+ <topicref href="setup_user_rules.dita"/>
+ <topicref href="exp_imp_normalization/exp_imp_normalization.dita" >
+ <topicref href="exp_imp_normalization/export_event_normalization.dita"
+ />
+ <topicref href="exp_imp_normalization/export_event_enhancement.dita"
+ />
+ <topicref href="exp_imp_normalization/export_event_mapping.dita" />
+ <topicref href="exp_imp_normalization/import_event_normalization.dita"
+ />
+ <topicref href="exp_imp_normalization/import_event_enhancement.dita"
+ />
+ <topicref href="exp_imp_normalization/import_event_mapping.dita" 
+ />
+ </topicref>
+ <topicref href="filters_and_queries.dita"/>
+ 
+ <topicref href="events/create_visualisation.dita"/>
+ <topicref href="events/create_dashboard.dita"/>
+ </topicref>
+ <topicref href="exp_imp_kibana/exp_imp_kibana.dita">
+ <topicref href="exp_imp_kibana/export_kibana.dita"/>
+ <topicref href="exp_imp_kibana/import_kibana.dita"/>
+ </topicref>
+ <topicref href="setup_dates_and_numbers_in_kibana.dita"/>
+</map>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle><b>Инструкция по применению</b></mainbooktitle>
+        <booktitlealt><ph outputclass="CL">CL.DATAPK.AUDIT-РЭ.1</ph><ph outputclass="USSC"
+            >шифр «ДАТАПК»</ph></booktitlealt>
+    </booktitle>
+    <frontmatter>
+        <booklists>
+            <toc/>
+        </booklists>
+        <topicref href="../user_guide/history.dita" toc="no" outputclass="before-toc"/>
+    </frontmatter>
+    <chapter href="../user_guide/short.dita"/>
+    <chapter href="safe_deploy/connection/connection.dita">
+        <topicref href="safe_deploy/connection/connection_electricity.dita"/>
+        <topicref href="safe_deploy/connection/connect_to_diode.dita"
+            keys="connect_to_diode" outputclass="USSC"/>
+        <topicref href="safe_deploy/connection/connection_system.dita"/>
+    </chapter>
+    <chapter href="safe_deploy/actions/actions.dita">
+        <topicref href="safe_deploy/actions/setup_infrastructure.dita"/>
+        <topicref href="safe_deploy/actions/config_infodiode.dita" keys="config_infodiode"
+            outputclass="USSC"/>
+        <topicref href="safe_deploy/actions/setup_spo.dita">
+            <topicref href="../../administrate/cred_and_network/home_network.dita"/>
+            <topicref href="safe_deploy/actions/store_traffic.dita"/>
+            <topicref href="safe_deploy/actions/speed.dita"/>
+            <topicref href="safe_deploy/actions/report_usage.dita" keys="report_usage"/>
+        </topicref>
+    </chapter>
+    <chapter href="safe_deploy/safe_way_to_admin.dita"/>
+    <chapter href="safe_deploy/check_performance/check_performance.dita">
+        <topicref href="safe_deploy/check_performance/check_IDS_corr.dita"/>
+        <topicref href="safe_deploy/check_performance/check_hosts.dita"/>
+        <topicref href="safe_deploy/check_performance/check_flows.dita"/>
+        <topicref href="safe_deploy/check_performance/check_service_copy_traffic_dump.dita"/>
+        <topicref href="safe_deploy/check_performance/check_events.dita"/>
+        <topicref href="safe_deploy/check_performance/check_wifi.dita" keys="check_wifi"
+            outputclass="USSC"/>
+    </chapter>
+    <chapter toc="no" href="../user_guide/changes_reg_list.dita" keys="changes_reg_list"/>
+    <chapter processing-role="resource-only">
+        <topicref href="../../../internal_glossary/appliance.dita" keys="appliance"
+            navtitle="Комплекс"/>
+        <topicref href="../../../internal_glossary/env.dita" keys="env"/>
+        <mapref href="../../../breadcrumbs/breadcrumbs.ditamap"/>
+        <mapref href="../../reusable/reusable.ditamap" format="ditamap"
+            processing-role="resource-only"/>
+    </chapter>
+</bookmap>

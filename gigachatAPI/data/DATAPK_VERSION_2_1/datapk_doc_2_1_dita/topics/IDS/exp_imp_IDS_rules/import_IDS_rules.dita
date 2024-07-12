@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_invasion_rules">
+ <title>Импорт правил обнаружения вторжений в формате *.json</title>
+ <taskbody>
+ <prereq conref="../../reusable/before_import_ids.dita#before_import_ids/before_import_ids"
+      id="prereq_ncb_yjr_v4b"/>
+ <context>
+ <p>Для импорта файла формата <codeph>*.json</codeph> с правилами обнаружения:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd
+          conref="../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+        />
+      </step><step>
+        <cmd>На панели <uicontrol>Обнаружение вторжений</uicontrol> в строке <uicontrol>Правила
+            обнаружения вторжений</uicontrol> нажмите кнопку <ph
+            conref="../../reusable/buttons/import_button.dita#ReusableComponent_bj1_d1p_pyb/ph_dj1_d1p_pyb"
+          />. </cmd>
+      </step><step><cmd>В открывшемся окне укажите расположение импортируемого файла формата <codeph>*.json</codeph> и подтвердите выбор.
+ </cmd></step>
+ <step
+ conref="../../reusable/import_action_step_suricata.dita#import_action_step_suricata/import_action_step_suricata">
+ <cmd/>
+ </step>
+   <step>
+        <cmd>Нажмите <uicontrol>Импортировать</uicontrol> для запуска процедуры импорта.</cmd>
+        <info>
+          <fig id="fig_xxj_jmg_3qb">
+            <title>Окно «Подготовка к импорту» при загрузке правил обнаружения вторжений</title>
+            <image href="../../../images/IDS/prepare_to_import_suricata.png" id="image_i4t_klg_3qb"
+            />
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Дождитесь успешного результата импорта.</cmd>
+        <stepresult><ph
+            conref="../../reusable/import_status.dita#ReusableComponent_lhl_dfp_yxb/ph_mhl_dfp_yxb"
+          />, и правила будут загружены на страницу <cite keyref="ids_detection_fp"/>.</stepresult>
+      </step><step>
+        <cmd>Перейдите на страницу <cite keyref="ids_detection_fp"/> и убедитесь, что правила были
+          успешно загружены.</cmd>
+      </step>
+ </steps>
+ </taskbody>
+</task>

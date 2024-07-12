@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1050002">
+    <title>
+Нарушено эталонное состояние конфигурации</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1050002"> ОЗ: <codeph>{host_netbios_name}</codeph>; Наименование сканера:
+                                    <codeph>{scanner_name}</codeph>; Изменения:
+                                    <codeph>{changes}</codeph></p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

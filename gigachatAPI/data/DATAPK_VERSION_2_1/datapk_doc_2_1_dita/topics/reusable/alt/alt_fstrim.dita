@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_anz_g5y_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_cnz_g5y_21c">
+                        <cmd>Проверьте корневой раздел с помощью утилиты <codeph>fstrim</codeph>:</cmd>
+                        <info><codeblock id="codeblock_cfg_z1g_myb">fstrim -v /</codeblock>
+                            <note id="note_nk5_z1g_myb">Если <codeph>TRIM</codeph> не поддерживается, результатом вывода команды будет <systemoutput>/: the discard operation is not supported</systemoutput>.</note>
+                            <fig id="fig_rvz_xpr_lyb">
+                                <title>Корректный вывод команды fstrim -v</title>
+                                <image href="../../../images/deployment/alt/fstrim_v.png" id="image_svz_xpr_lyb"/></fig>
+                        </info>
+                    </substep> 
+                </substeps>
+            </step>
+        </steps>        
+    </taskbody>
+</task>

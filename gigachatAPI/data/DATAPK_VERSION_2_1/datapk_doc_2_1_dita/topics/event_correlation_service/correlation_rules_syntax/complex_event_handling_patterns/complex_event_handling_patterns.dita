@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="complex_event_handling_patterns">
+ <title>Шаблоны обработки сложных событий</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_vk2_djx_vnb">
+ <li><xref href="pattern_command.dita"/></li>
+ <li><xref href="every_operator.dita"/></li>
+ </ul>
+ <p>С помощью правил корреляции можно создавать модели поведения злоумышленников. Для
+ реализации этого существует такой инструмент, как шаблоны обработки сложных событий.</p>
+ <example>
+ <p>Пример использования шаблона:</p>
+ <p>
+ <codeblock outputclass="language-sql">SELECT df.user, df.source_ip, df.target_ip FROM PATTERN@SuppressOverlappingMatches [EVERY df=cisco_event(df.description="Login Success" OR df.action = "LOGIN_SUCCESS") AND EVERY c=datapk_data_flow(c.action="detect" AND c.protocol="ssh" AND df.source_ip=c.source_ip)].win:time(180 sec)</codeblock>
+ </p>
+ </example>
+ <p>Далее рассмотрим применение самого шаблона «PATTERN» и используемый оператор
+ «EVERY».</p>
+ </body>
+</topic>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Toc86071547">
+    <title>Проверка статуса служб обнаружения вторжений и корреляции событий</title>
+    <taskbody><steps>
+     <step>
+    <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite>Обнаружение вторжений</cite> (<xref
+      href="#Toc86071547/fig_x3f_kkq_xtb"/>).</cmd>
+    <info>
+     <fig id="fig_x3f_kkq_xtb">
+      <title>Страница «Обнаружение вторжений»</title>
+      <image href="../../../../../images/pages/invasion_detection_rules_page_scr.png"
+       id="image_ajf_kkq_xtb"/>
+     </fig>
+    </info>
+   </step>
+     
+      <step>
+    <cmd>Убедитесь, что служба обнаружения вторжений запущена. Кнопка в верхней части страницы
+     будет иметь вид «<image href="../../../../../images/icons/stop.png" id="image_or3_bgr_xtb"
+     />».</cmd>
+        <info>
+          <note id="note_xv1_v1f_ytb" type="tip">Если кнопка имеет вид  «<image
+              href="../../../../../images/icons/play.png" id="image_olg_51f_ytb"/>», нажмите на нее
+            и служба запустится.</note>
+        </info>
+   </step>
+
+      <step>
+    <cmd>Перейдите в подраздел <cite>Инциденты → Настройки инцидентов → Правила корреляции</cite>
+      (<xref href="#Toc86071547/Ref84518470"/>).</cmd>
+    <info>
+     <fig id="Ref84518470">
+      <title>Страница «Правила корреляции»</title>
+      <image href="../../../../../images/pages/correlation_rules_page_scr.png"/>
+     </fig>
+    </info>
+   </step>
+     
+      <step>
+        <cmd>Убедитесь, что служба корреляции запущена. Кнопка запуска в этом случае будет
+          недоступна.</cmd>
+      </step>
+     </steps></taskbody>
+   </task>

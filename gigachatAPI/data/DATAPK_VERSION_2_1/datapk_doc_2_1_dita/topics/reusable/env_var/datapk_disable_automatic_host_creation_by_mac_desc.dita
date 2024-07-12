@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_jnz_xsh_jpb">
+
+ <title>DATAPK_DISABLE_AUTOMATIC_HOST_CREATION_BY_MAC</title>
+ <body> 
+ <p id="p_onz_xsh_jpb">Включение фильтрации создания неизвестных объектов защиты с IP и MAC-адресом
+      (IP+MAC) при значении переменной <ph
+        conref="../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/>.</p> 
+ <p id="p_tnz_xsh_jpb">При значении переменной <ph
+        conref="../false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"/> неизвестные
+        <abbreviated-form keyref="host"/> создаются и без IP-адреса (только MAC)</p> 
+</body> 
+</topic> 

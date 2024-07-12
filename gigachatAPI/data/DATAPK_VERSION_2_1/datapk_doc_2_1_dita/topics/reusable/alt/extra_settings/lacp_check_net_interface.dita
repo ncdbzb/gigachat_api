@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_stk_gqq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_utk_gqq_g1c">
+                <cmd>Для проверки корректности создания сетевого интерфейса выполните команду:</cmd>
+                <info><codeblock id="codeblock_sjs_wgs_21c">cat /proc/net/bonding/bond0</codeblock></info>
+                <stepresult>в выводе будут представлены настройки объединенного сетевого интерфейса
+                        <codeph>bond0</codeph> и сетевых интерфейсов <codeph>[iface_name_1]</codeph>
+                    и <codeph>[iface_name_2]</codeph>, которые были объединены.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

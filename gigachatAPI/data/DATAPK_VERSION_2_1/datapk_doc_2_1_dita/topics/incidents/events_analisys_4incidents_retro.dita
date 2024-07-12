@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="events_analisys_4incidents_retro">
+    <title>Ретроспективный анализ событий</title>
+    <taskbody>
+        <context>
+            <p>Для запуска ретроспективного анализа событий:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Убедитесь в наличии элементов схемы корреляции. Для этого перейдите на страницу
+                        <ph
+                        conref="../reusable/pages_breadcrumbs/corr_scheme.dita#ReusableComponent_df3_ffc_pxb/ph_ff3_ffc_pxb"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Активируйте один или несколько элементов схемы корреляции. Для этого: </cmd>
+                <substeps id="substeps_v41_dnc_cqb">
+                    <substep>
+                        <cmd>Нажмите кнопку <image href="../../images/icons/filter.png"
+                                id="image_obj_qvc_cqb"/> в верхнем правом углу страницы и
+                            воспользуйтесь представленными фильтрами.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации элемента схемы:</cmd>
+                        <info>
+                            <ol id="ol_nkc_bxc_cqb">
+                                <li>наведите курсор на строку со схемой и нажмите <ph
+                                        conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                                    />;</li>
+                                <li>установите чекбокс <uicontrol>Применение в ретроспективном
+                                        анализе</uicontrol>;</li>
+                                <li>нажмите <uicontrol>Сохранить</uicontrol>.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации всех выбранных в фильтре элементов схемы нажмите <image
+                                href="../../images/icons/check.png" id="image_k1m_j4c_cqb"/>
+                                (<uicontrol>Включить элементы схемы для ретроспективного
+                                анализа</uicontrol>).</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь в наличии правил корреляции. Для этого перейдите на страницу <ph
+                        conref="../reusable/pages_breadcrumbs/corr_rules.dita#ReusableComponent_hjr_w2c_pxb/ph_jjr_w2c_pxb"
+                    />. </cmd>
+            </step>
+            <step>
+                <cmd>Активируйте одно или несколько правил корреляции. Для этого: </cmd>
+                <substeps id="substeps_q24_tyc_cqb">
+                    <substep>
+                        <cmd>Воспользуйтесь фильтрами на странице <cite
+                            keyref="correlation_rules_fp"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации отдельных правил:</cmd>
+                        <info>
+                            <ol id="ol_s24_tyc_cqb">
+                                <li>в строке с правилом нажмите <ph
+                                        conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                                    />;</li>
+                                <li>установите чекбокс <uicontrol>Активно в ретроспективном
+                                        анализе</uicontrol>;</li>
+                                <li>нажмите <uicontrol>Сохранить</uicontrol>.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации всех выбранных в фильтре правил нажмите <image
+                                href="../../images/icons/check.png" id="image_t24_tyc_cqb"/>
+                                (<uicontrol>Включить правила для ретроспективного
+                                анализа</uicontrol>).</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Запустите ретроспективную проверку. Для этого:</cmd>
+                <info>
+                    <note type="attention">Возможен запуск только одной проверки за раз.</note>
+                </info>
+                <substeps id="substeps_amc_4gd_cqb">
+                    <substep>
+                        <cmd><ph
+                                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                                /><ph
+                                conref="../reusable/pages_breadcrumbs/retro.dita#ReusableComponent_xwr_h2c_pxb/ph_ywr_h2c_pxb"
+                            />.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Запустить анализ</uicontrol>.</cmd>
+                        <stepresult>появится окно <uicontrol>Запуск ретроспективного
+                                анализа</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В открывшемся окне задайте следующие обязательные параметры
+                            анализа:</cmd>
+                        <info>
+                            <ol>
+                                <li>название;</li>
+                                <li>период, за который будут проанализированы события;</li>
+                            </ol>
+                        </info>
+                        <info>
+                            <fig id="fig_swv_jv3_cqb">
+                                <title>Окно запуска ретроспективного анализа</title>
+                                <image href="../../images/incidents/run_the_retro.png"
+                                    id="image_twv_jv3_cqb">
+                                    <alt>Окно запуска ретроспективного анализа</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости введите описание и фильтр в формате Lucene.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Запустить</uicontrol>.</cmd>
+                        <info>
+                            <note type="tip">Если необходимо остановить процесс анализа, нажмите
+                                кнопку <uicontrol>Остановить анализ</uicontrol> в верхней части
+                                страницы.</note>
+                            <note type="attention">Запуск других ретроспективных анализов будет
+                                недоступен до окончания проверки. Удалять анализ до окончания
+                                проверки не рекомендуется.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Дождитесь окончания выполнения анализа.</cmd>
+                        <stepresult>по завершении анализа будет получен статус и число выявленных
+                            инцидентов. Для просмотра списка инцидентов нажмите на число в колонке
+                                <uicontrol>Число инцидентов</uicontrol>.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Если был получен статус <systemoutput>Ошибка</systemoutput> или
+                        <systemoutput>Выполнено с ограничениями</systemoutput>:</cmd>
+                <substeps
+                    conref="../reusable/steps/incidents/substeps_retro_status.dita#ReusableComponent_bsc_yfn_hwb/substeps_wly_sbr_4tb"
+                    id="substeps_rxc_yfn_hwb">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links outputclass="no_en">
+        <link href="../errors_troubleshooting/troubles/trouble_29.dita"/>
+    </related-links>
+</task>

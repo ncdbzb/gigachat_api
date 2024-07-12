@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_iv4_zg4_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_kv4_zg4_f1c">
+                <cmd>Для смены подсети сетевого интерфейса docker0:</cmd>
+                <substeps id="substeps_flr_sqg_myb">
+                    <substep>
+                        <cmd>Откройте для редактирования конфигурационный файл docker
+                                <codeph>daemon.json</codeph>:</cmd>
+                        <info><codeblock id="codeblock_cz4_yqg_myb">nano /etc/docker/daemon.json</codeblock></info>
+                        <info><ol id="ol_etl_vqg_myb">
+                                <li>Поставьте в конце строки, начинающейся на
+                                        <codeph>"storage-driver"</codeph>, запятую.</li>
+                                <li>Добавьте <codeph>"bip": "172.21.0.1/16"</codeph> после строки,
+                                    начинающейся на <codeph>"storage-driver"</codeph>, где
+                                        <codeph>172.21.0.1/16</codeph> — пример новой подсети для
+                                    сетевого интерфейса docker0.<fig id="fig_crf_fly_lyb">
+                                        <title>Пример конфигурационного файла daemon.json после
+                                            редактирования</title>
+                                        <image
+                                            href="../../../../images/deployment/alt/daemon_json.png"
+                                            id="image_itz_qxx_lyb"/>
+                                    </fig></li>
+                            </ol></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

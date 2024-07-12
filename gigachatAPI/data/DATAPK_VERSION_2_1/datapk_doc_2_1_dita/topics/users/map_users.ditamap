@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Управление пользователями</title>
+ <topicref href="cred_control.dita">
+ <topicref href="edit_cred/create_local_cred.dita"/>
+ <topicref href="edit_cred/create_ad_cred.dita"/>
+ <topicref href="edit_cred/edit_cred.dita">
+ <topicref href="edit_cred/change_cred_settings.dita"/>
+ <topicref href="edit_cred/change_cred_password.dita"/>
+ <topicref href="edit_cred/delete_or_block_cred.dita"/>
+ </topicref>
+ </topicref>
+ <topicref href="../administrate/password_policy.dita"/>
+ <topicref href="../administrate/session_limit.dita"/>
+</map>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gyh_lm4_55b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ztp_2w1_35b">Убедитесь в подключении сетевого кабеля к
+                    интерфейсу:</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

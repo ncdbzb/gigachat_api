@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_18">
+ <title>Не инициализируется стек opensearch, opensearch-dashboards, logstash</title>
+ <troublebody>
+ <condition>
+ 
+ <p>Возможны следующие причины:</p>
+ <ul id="ul_us2_dgq_snb">
+    <li><xref href="#trouble_18/cause_incorr_env" format="dita"/></li>
+    <li><xref href="#trouble_18/cause_err_normaliz" format="dita"/></li>
+ </ul>
+ </condition>
+ <troubleSolution>
+ <cause id="cause_incorr_env">
+    <title>Некорректное значение системной переменной vm.max_map_count</title>
+   </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+      <cmd>Проверьте значение переменной в операционной системе <term keyref="appliance"/>а уровня
+        <abbreviated-form keyref="management"/>. Для этого выполните команду:</cmd>
+      <info>
+       <codeblock>sysctl vm.max_map_count</codeblock>
+      </info>
+     </step>
+ <step>
+      <cmd>Убедитесь, что данная переменная имеет значение <codeph>262144</codeph>.</cmd>
+     </step>
+ <step>
+ <cmd>При необходимости откорректируйте значение переменной. Для этого:</cmd>
+ <substeps>
+ <substep>
+        <cmd>Откройте файл <codeph>/etc/sysctl.conf</codeph>.</cmd>
+       </substep>
+ <substep>
+        <cmd>Добавьте строку <codeph>vm.max_map_count = 262144</codeph>.</cmd>
+       </substep>
+ <substep>
+        <cmd>Либо, если строка с переменной уже была добавлена, измените значение переменной.</cmd>
+       </substep>
+ </substeps>
+ </step>
+ <step>
+      <cmd>Выполните команду для немедленной установки переменной <codeph>vm.max_map_count</codeph>
+       (без перезагрузки):</cmd>
+      <info>
+       <codeblock>sysctl -w vm.max_map_count=262144</codeblock>
+      </info>
+     </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ <troubleSolution>
+ <cause id="cause_err_normaliz">
+    <title>Ошибки в настройках нормализациии</title>
+   </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+      <cmd>Посмотрите журнал контейнера <codeph>logstash</codeph>. Для этого введите команду:</cmd>
+      <info>
+       <codeblock>docker logs -f logstash</codeblock>
+      </info>
+     </step>
+ <step>
+ <cmd>При наличии ошибок убедитесь в целостности директории <codeph>/logstash</codeph>,
+ расположенном в рабочей директории <term keyref="appliance"/>а. При необходимости замените
+ директорию и перезагрузите работу контейнеров <term keyref="appliance"/>а без удаления
+ накопленных данных.</cmd>
+ </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+ <related-links>
+  <link href="trouble_14.dita"/>
+ </related-links>
+</troubleshooting>

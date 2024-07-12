@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+ PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="Toc86071538">
+    <title>Подключение
+Комплекса
+к
+проверяемой
+системе</title>
+    <body>
+        <p outputclass="CL">Подключите внешний сетевой интерфейс АРМ на базе ПЭВМ типа ноутбук к SPAN-порту
+   сетевого оборудования (коммутатора) кабелем вида «витая пара» с коннекторами RJ-45.</p>
+        <p outputclass="USSC">Подключите внешний сетевой интерфейс IN в АК «InfoDiode» к SPAN-порту сетевого
+            оборудования (коммутатора) кабелем вида «витая пара» с коннекторами RJ-45.</p>
+     <p>На рисунке (<xref href="#Toc86071538/Ref84507490"/>) представлена схема подключения
+            оборудования Комплекса.</p>
+     <fig id="Ref84507490">
+            <title>Схема подключения оборудования Комплекса</title>
+         <image outputclass="CL" href="../../../../../images/checkup/checkup_scheme.svg"/>
+       
+            <image outputclass="USSC" href="../../../../../images/checkup/checkup_scheme_ussc.svg"/>
+        </fig>
+    </body>
+   </topic>

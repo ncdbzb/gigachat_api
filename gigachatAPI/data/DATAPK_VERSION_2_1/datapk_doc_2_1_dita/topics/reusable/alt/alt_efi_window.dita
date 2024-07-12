@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_e5v_rcs_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info>
+                    <fig id="fig_rcz_gtc_nvb">
+                        <title>Окно «Установка загрузчика»</title>
+                        <image href="../../../images/deployment/alt/alt_boot_setup.png" id="image_scz_gtc_nvb"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

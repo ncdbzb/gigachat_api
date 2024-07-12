@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:opt_datapk_nginx-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_trx_d1z_mtb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><codeph id="codeph_xrx_d1z_mtb"
+                            ><codeph conref="opt_datapk.dita#opt_datapk/opt_datapk"
+                                id="codeph_vrx_d1z_mtb"/>/nginx</codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

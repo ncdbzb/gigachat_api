@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Управление информационными потоками</title>
+ <topicref href="stream_list_filter.dita"/>
+ <topicref href="streams_report.dita"/>
+ <topicref href="stream_accept_del/stream_accept_del.dita">
+ <topicref href="stream_accept_del/stream_accept_del_manual.dita">
+ <topicref href="stream_accept_del/accept_stream.dita"/>
+ <topicref href="stream_accept_del/temporary_approve.dita"/>
+ <topicref href="stream_accept_del/cancel_approve.dita"/>
+ <topicref href="stream_accept_del/del_stream.dita"/>
+ </topicref>
+ <topicref href="stream_accept_del/change_comment.dita"/>
+ <topicref href="stream_accept_del/stream_accept_del_auto.dita">
+ <topicref href="stream_accept_del/control_stream_rules_on.dita"/>
+ <topicref href="stream_accept_del/create_stream_control_rule.dita"/>
+ </topicref>
+ </topicref>
+ <topicref href="exp_imp/exp_imp_stream_rules_file.dita">
+ <topicref href="exp_imp/export_stream_rules.dita"/>
+ <topicref href="exp_imp/import_stream_rules.dita"/>
+ </topicref>
+</map>

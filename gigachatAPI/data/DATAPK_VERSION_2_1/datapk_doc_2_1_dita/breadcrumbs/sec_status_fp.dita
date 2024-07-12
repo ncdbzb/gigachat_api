@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="sec_status_fp">
+    <glossterm>Статус защищенности</glossterm>
+    <glossdef>
+        <p>Подраздел мониторинга, в котором отображаются статистика и изменения в реальном времени
+            по ключевым оперативным данным <term keyref="appliance"/>а. </p>
+        <fig id="fig_elv_wgq_rzb">
+            <title>Страница «Статус защищенности»</title>
+            <image href="../images/pages/security_status_page_scr.png" id="image_vmx_1hq_rzb"/>
+        </fig>
+    </glossdef>
+    <related-links>
+        <link href="../topics/monitoring/security_status_dashboard.dita"/>
+    </related-links>
+</glossentry>

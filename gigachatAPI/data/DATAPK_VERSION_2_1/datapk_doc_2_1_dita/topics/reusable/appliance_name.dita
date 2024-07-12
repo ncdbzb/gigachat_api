@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="appliance_name">
+    <glossterm>CyberLympha DATAPK</glossterm>
+    <glossdef>Маркетинговое наименование программного комплекса DATAPK</glossdef>
+    <glossBody>
+        <glossSurfaceForm>CyberLympha DATAPK</glossSurfaceForm>
+        <glossAlt id="appliance_name_alt">
+            <glossAbbreviation>CL DATAPK</glossAbbreviation>
+        </glossAlt>
+    </glossBody>
+</glossentry>

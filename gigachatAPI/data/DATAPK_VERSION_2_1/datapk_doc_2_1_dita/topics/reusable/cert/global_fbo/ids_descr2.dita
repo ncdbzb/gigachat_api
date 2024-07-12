@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_qwg_jvv_r5b">
+    <title/>
+    <body>
+        <p><ph id="ph_rwg_jvv_r5b">Уведомления о событиях модуля обнаружения вторжений заносятся в
+                базу данных модуля хранения событий и отображаются в виде соответствующего события в
+                интерфейсе модуля просмотра событий.</ph></p>
+    </body>
+</topic>

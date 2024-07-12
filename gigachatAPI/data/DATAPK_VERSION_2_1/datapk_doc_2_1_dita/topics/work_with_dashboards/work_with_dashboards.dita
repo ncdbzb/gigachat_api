@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="work_with_dashboards">
+ <title>Импортируемые панели мониторинга</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_tf3_qgp_vnb">
+ <li><xref href="how_to_work_with_dashboards.dita"/></li>
+         <li><xref href="If_i_see_events.dita"/></li>
+         <li><xref href="ref_info_about_dashboards/create_filter_in_dashboards.dita"/></li>
+         <li><xref href="ref_info_about_dashboards/choose_period_in_dashboards.dita"/></li>
+ <li><xref href="main_dashboard/main_dashboard.dita"/></li>
+ <li><xref href="info_dashboards/info_dashboards.dita"/></li>
+ <li><xref href="export_events_from_dashboards.dita"/></li>
+ </ul>
+ <p>Одним из вариантов использования <term keyref="appliance"/>а может быть последовательный мониторинг
+ возникающих событий при помощи панелей мониторинга.</p>
+ <p><term keyref="dashboard"/> или <i>дашборд</i> (Dashboard) — тип графического интерфейса,
+ использующий интерактивные визуализации для обзора ключевых показателей.</p>
+ <p><term keyref="visualize"/> — представление информации о событиях в виде, удобном для зрительного
+ наблюдения и анализа.</p>
+ <p>Производитель <term keyref="appliance"/>а предоставляет<ph outputclass="only_cert"> в виде файла
+    формата <codeph>*.ndjson</codeph></ph> следующий набор панелей мониторинга:</p>
+ <ul id="ul_k12_vfk_vnb">
+ <li><p><xref href="main_dashboard/main_dashboard.dita">Главный дашборд</xref> — основное средство
+     мониторинга событий, которое позволяет инженеру своевременно обнаруживать аномалии. Подразделы
+     главного дашборда:</p><ul
+ id="ul_l12_vfk_vnb">
+        <li><xref href="main_dashboard/analysis_section/analysis_section.dita"/></li>
+ <li><xref href="main_dashboard/traffic_analysis/traffic_analysis.dita"/>:<ul
+ id="ul_yt2_wgp_vnb">
+ <li><xref href="main_dashboard/traffic_analysis/nodes_control.dita"
+ />.</li>
+ <li><xref href="main_dashboard/traffic_analysis/flows_control.dita"
+ />.</li>
+ <li><xref href="main_dashboard/traffic_analysis/IDS_detection.dita"
+ />.</li>
+ </ul></li>
+ <li><xref href="main_dashboard/config_control/config_control_main.dita"/>:<ul
+ id="ul_zkh_cw4_znb">
+ <li><xref href="main_dashboard/config_control/config_control.dita"
+ />.</li>
+ <li><xref href="main_dashboard/config_control/data_collect.dita"/>.</li>
+ </ul></li>
+ <li><xref href="main_dashboard/events_control/events_control.dita"/>:<ul
+ id="ul_n12_vfk_vnb">
+ <li><xref href="main_dashboard/events_control/prot_obj_events.dita"
+ />.</li>
+ <li><xref href="main_dashboard/events_control/incidents.dita"/>.</li>
+ </ul></li>
+ </ul></li>
+ <li><xref href="info_dashboards/compliance_vulnerability_control.dita"/> — средство визуализации
+    уязвимостей и соответствия требованиям информационной безопасности, использующее проверки на
+    соответствие требованиям <abbreviated-form keyref="IS"/>.</li>
+ <li><xref href="info_dashboards/events_control_datapk.dita"/> — список всех событий доступа и
+    управления экземпляра <term keyref="appliance"/>а.</li>
+ <li><xref href="info_dashboards/operational_monitoring.dita"/> — содержит три списка
+ событий, относящихся к непосредственному функционированию <term keyref="appliance"/>а.</li>
+ </ul>
+ </body>
+</topic>

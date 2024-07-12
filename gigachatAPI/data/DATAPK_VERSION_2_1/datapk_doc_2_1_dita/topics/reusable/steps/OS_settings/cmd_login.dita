@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hfq_cmj_nvb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_jfq_cmj_nvb">Введите логин и пароль учетной записи пользователя с
+                    правами администратора системы.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

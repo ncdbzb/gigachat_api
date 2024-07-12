@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1100009">
+    <title> Изменена группа инцидентов</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1100009">Комментарий: <codeph>{action_comment}</codeph>; Пользователь: <codeph>{user}</codeph>; Количество измененных инцидентов: <codeph>{incident_count}</codeph>; Примененный фильтр: <codeph>{filter_info}</codeph></p>
+                        </entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

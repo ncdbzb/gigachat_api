@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_yt5_krp_d1c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_zt5_krp_d1c">Нажмите <image href="../../../../images/icons/del_list_element.png" id="image_mkk_yqp_d1c"/>, чтобы закрыть окно выбора виджетов и вернуться к панели мониторинга.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

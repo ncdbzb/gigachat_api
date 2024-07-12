@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ghc_vb4_pvb">
+    <title/>
+    <body>
+        <ul>
+            <li><ul id="ul_ecq_qkf_4vb">
+                    <li>срок хранения каждого сохраненного в файл журнала – 1 месяц;</li>
+                    <li>максимальный размер журнала – 8 Мб;</li>
+                    <li>максимальное количество сохраненных файлов журнала – 5;</li>
+                    <li>при достижении максимального размера журнала автоматически генерируется
+                        предупреждение (в журнал <codeph>/var/log/messages</codeph>:
+                            «<i>auditd[954]: Audit daemon rotating log files</i>»), затем
+                        выполняется ротация журнала (сохранение журнала в новый файл) и начинается
+                        перезапись сообщений в основном журнале;</li>
+                    <li>настройки по умолчанию, которые отвечают за данные действия, содержатся в
+                        файле <codeph>/etc/audit/autitd.conf</codeph>:<ul id="ul_xwz_vmd_jsb">
+                            <li>
+                                <codeph>max_log_file = 8</codeph>
+                            </li>
+                            <li><codeph>num_logs = 5</codeph>
+                            </li>
+                            <li><codeph>max_log_file_action = ROTATE</codeph>
+                            </li>
+                        </ul></li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

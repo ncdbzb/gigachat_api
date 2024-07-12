@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="kics4net_events">
+ <title>События KICS4Net</title>
+ <body>
+ <section id="section_qmw_msw_vnb">
+ <title>Потоки KICS4Net(kics4net_data_flow)</title>
+ <p>Поля для событий потоков KICS4Net приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#kics4net_events/table_wx2_42w_vnb"/>)</ph>.</p>
+ <table id="table_wx2_42w_vnb">
+ <title>Поля для событий потоков KICS4Net</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="30%"/>
+ <colspec colnum="2" colname="col2" colwidth="70%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>category</entry>
+ <entry>Наименование точки мониторинга.</entry>
+ </row>
+ <row>
+ <entry>description</entry>
+ <entry>Описание потока.</entry>
+ </row>
+ <row>
+ <entry>event_code</entry>
+ <entry>Идентификатор типа события в KICS4Net.</entry>
+ </row>
+ <row>
+ <entry>observer_name</entry>
+ <entry>Сетевое имя регистратора события: ОЗ (сервера KICS4Net), сенсора или Комплекса.</entry>
+ </row>
+ <row>
+ <entry>observer_id</entry>
+ <entry>IP-адрес регистратора события: ОЗ (сервера KICS4Net), сенсора или Комплекса.</entry>
+ </row>
+ <row>
+ <entry>protocol </entry>
+ <entry>Название протокола.</entry>
+ </row>
+ <row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес источника потока данных.</entry>
+ </row>
+ <row>
+ <entry>source_mac</entry>
+ <entry><p>MAC-адрес источника потока данных.</p><note type="warning">MAC-адрес
+  указывается заглавными буквами.</note></entry>
+ </row>
+ <row>
+ <entry>source_port</entry>
+ <entry>Порт источника потока данных.</entry>
+ </row>
+ <row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес получателя потока данных.</entry>
+ </row>
+ <row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес источника потока данных.</p><note type="warning">MAC-адрес
+  указывается заглавными буквами.</note></entry>
+ </row>
+ <row>
+ <entry>target_port</entry>
+ <entry>Порт получателя потока данных.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </section>
+ <section id="section_ir3_nsw_vnb">
+ <title>События KICS4Net (kics4net_event)</title>
+ <p>Поля для событий KICS4Net приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#kics4net_events/table_dvz_4vw_vnb"/>)</ph>.</p>
+ <table id="table_dvz_4vw_vnb">
+ <title>Поля для событий KICS4Net</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="30%"/>
+ <colspec colnum="2" colname="col2" colwidth="70%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>additional_information</entry>
+ <entry>Название сработавшего правила или значение
+ noTrafficDuration.</entry>
+ </row>
+ <row>
+ <entry>category</entry>
+ <entry>Наименование точки мониторинга.</entry>
+ </row>
+ <row>
+ <entry>description</entry>
+ <entry>Описание потока.</entry>
+ </row>
+ <row>
+ <entry>event_code</entry>
+ <entry>Идентификатор типа события в KICS4Net.</entry>
+ </row>
+ <row>
+ <entry>hostname</entry>
+ <entry>Сетевое имя сервера KICS4Net.</entry>
+ </row>
+ <row>
+ <entry>ip</entry>
+ <entry>IP-адрес KICS4Net.</entry>
+ </row>
+ <row>
+ <entry>protocol </entry>
+ <entry>Название протокола.</entry>
+ </row>
+ <row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес источника потока данных.</entry>
+ </row>
+ <row>
+ <entry>source_mac</entry>
+ <entry><p>MAC-адрес источника.</p><note type="warning">MAC-адрес указывается заглавными буквами.</note></entry>
+ </row>
+ <row>
+ <entry>source_port</entry>
+ <entry>Порт источника потока данных.</entry>
+ </row>
+ <row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес получателя потока данных.</entry>
+ </row>
+ <row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес получателя.</p><note type="warning">MAC-адрес указывается заглавными буквами.</note></entry>
+ </row>
+ <row>
+ <entry>target_port</entry>
+ <entry>Порт получателя потока данных.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </section>
+ </body>
+</topic>

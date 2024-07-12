@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_pm4_xpc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_tm4_xpc_2zb">В поле <uicontrol>Шлюз по умолчанию:</uicontrol> введите IP-адрес шлюза для интерфейса управления.</cmd>
+            </step>
+        </steps>
+       </taskbody>
+</task>

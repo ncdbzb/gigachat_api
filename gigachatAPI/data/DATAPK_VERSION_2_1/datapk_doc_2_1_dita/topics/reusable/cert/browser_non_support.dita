@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_pms_lrv_41c">
+    <title/>
+    <body>
+        <div><p id="p_qms_lrv_41c"><ph>Не поддерживаются следующие обозреватели:</ph><ul id="ul_qct_grv_41c">
+                    <li>Google Chrome версии 70 и ниже;</li>
+                    <li>Mozilla Firefox версии 57 и ниже (для ПК) и Mozilla Firefox версии 33 и ниже
+                        (для iOS).</li>
+                </ul></p></div>
+    </body>
+</topic>

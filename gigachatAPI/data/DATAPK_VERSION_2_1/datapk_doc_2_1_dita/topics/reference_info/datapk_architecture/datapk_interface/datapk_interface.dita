@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_interface">
+ <title>Интерфейс Комплекса</title>
+ <body>
+ <p>В разделе описаны детали работы с веб-интерфейсом <term keyref="appliance"/>а.</p>
+ <ul  outputclass="no_en" id="ul_spd_5xk_tnb">
+ <li><xref href="control_elements.dita"/></li>
+ <li><xref href="table_control_elements.dita"/></li>
+ <li outputclass="no_en"><xref href="color_indication_and_notification_types.dita"/></li>
+ <li><xref href="datapk_interface_main_topic.dita"/></li>
+ </ul>
+ </body>
+</topic>

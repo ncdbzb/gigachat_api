@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:Причина несоответствия-->
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_lzv_jkk_jsb">
+    <title>Причина несоответствия</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_nzv_jkk_jsb"><table frame="all" rowsep="1" colsep="1"
+                                    id="table_hwx_tdk_jsb">
+                                    <tgroup cols="1">
+                                        <colspec colname="c1" colnum="1" colwidth="1*"
+                                            />
+                                        <thead>
+                                            <row>
+                                                <entry>Причина несоответствия</entry>
+                                            </row>
+                                        </thead>
+                                        <tbody>
+                                            <row>
+                                                <entry><p>Описание метода установления причины
+                                                  несоответствия</p><p>Описание причины
+                                                  несоответствия</p></entry>
+                                            </row>
+                                        </tbody>
+                                    </tgroup>
+                                </table></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Анализ уязвимостей и контроль соответствия требованиям информационной безопасности на объектах защиты</title>
+ <topicref href="exp_imp_oval/exp_imp_oval.dita">
+  <topicref href="exp_imp_oval/export_oval_definitions_group.dita"/>
+  <topicref href="exp_imp_oval/export_oval_script.dita" keys="export_oval_script"/>
+  <topicref href="exp_imp_oval/export_oval_settings.dita" keys="export_oval_settings"/>
+  <topicref href="exp_imp_oval/import_oval_definitions.dita"/>
+  <topicref href="exp_imp_oval/import_oval_group_definitions.dita"/>
+  <topicref href="exp_imp_oval/import_oval_script.dita" keys="import_oval_script"/>
+  <topicref href="exp_imp_oval/imp_oval_settings.dita"/>
+ </topicref>
+ <topicref href="setup_prot_obj_check_is/setup_prot_obj_check_is.dita">
+  <topicref href="../control_config/create_config_script.dita"/>
+  <topicref href="../control_config/data_collect_script_sign.dita"/>
+  <topicref href="manage_oval_scripts.dita"/>
+ <topicref href="setup_prot_obj_check_is/setup_access_to_prot_obj_4oval.dita"/>
+ <topicref
+ href="setup_prot_obj_check_is/checkup_attach_oval_script_to_prot_obj.dita"
+ />
+  <topicref href="setup_prot_obj_check_is/create_oval_definitions_group.dita"/>
+  <topicref href="setup_prot_obj_check_is/add_oval_definitions_to_group.dita"/>
+ </topicref>
+ <topicref href="checkup_prot_obj_to_is_requirements.dita"/>
+ <topicref href="view_checkup_prot_obj_to_is_requirements.dita"/>
+ <topicref href="restart_checkup_prot_obj_to_is_requirements.dita"/>
+ <topicref href="delete_checkup_prot_obj_to_is_requirements.dita"/>
+</map>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cs2_syc_gyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <info><note type="tip" id="note_ds2_syc_gyb">При необходимости воспользуйтесь
+                        кнопками <image href="../../../images/icons/plus.png" id="image_ekq_pcx_xnb"
+                        /> (<uicontrol>Показать еще по 5 окружающих строк</uicontrol>) и <image
+                            href="../../../images/icons/minus.png" id="image_qkw_qcx_xnb"/>
+                            (<uicontrol>Скрыть по 5 окружающих строк</uicontrol>), а также
+                        возможностью отображения спецсимволов.</note></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

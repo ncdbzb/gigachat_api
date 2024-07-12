@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1080006">
+    <title>
+Удалены объекты защиты</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1080006">Количество ОЗ: <codeph>{filtered_count}</codeph>; Примененный фильтр: [АСУ ТП:
+                                    <codeph>{asu_tp}</codeph>; Типы объектов защиты:
+                                    <codeph>{host_types}</codeph>; Метки:
+                                    <codeph>{host_tags}</codeph>; Интерфейсы:
+                                    <codeph>{interfaces}</codeph>; Объекты защиты:
+                                    <codeph>{hosts}</codeph>; Производители:
+                                    <codeph>{vendors}</codeph>; Группы ОЗ:
+                                    <codeph>{host_groups}</codeph>; ОЗ без групп:
+                                    <codeph>{outside_tree}</codeph>]; Пользователь:
+                                    <codeph>{user}</codeph>; Обоснование:
+                                    <codeph>{justification}</codeph></p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

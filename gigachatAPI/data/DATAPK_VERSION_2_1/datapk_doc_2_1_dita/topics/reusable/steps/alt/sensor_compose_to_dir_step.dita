@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_g5t_bxq_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_h5t_bxq_nyb">
+                <cmd>Поместите файл <codeph>docker-compose.sensor.yml</codeph> для сервисов
+                    взаимодействия сенсора с ОЗ в директорию <codeph><codeph
+                            conref="../../filepath/opt.dita#opt/opt"/>/sensor</codeph>:</cmd>
+                <info><p><codeblock outputclass="language-bourne" id="codeblock_zdr_2mk_lyb">mv /home/datapk/docker-compose.sensor.yml <codeph conref="../../filepath/opt.dita#opt/opt"/>/sensor/</codeblock></p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

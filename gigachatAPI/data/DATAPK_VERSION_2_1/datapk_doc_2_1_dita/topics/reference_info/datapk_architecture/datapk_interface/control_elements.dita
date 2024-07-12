@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="control_elements" outputclass="wide">
+ <title>Управляющие элементы</title>
+ <body>
+ <p>В таблице ниже<ph outputclass="onlypdf"> (<xref href="#control_elements/table_controls"/>)</ph>
+   описаны управляющие элементы — кнопки и иконки, доступные в основном интерфейсе <term
+    keyref="appliance"/>а.</p>
+ <p>
+ <table id="table_controls" outputclass="sortable">
+ <title>Управляющие элементы Комплекса</title>
+ <tgroup cols="4">
+ <colspec colnum="1" colname="col1" colwidth="25%" align="center"/>
+ <colspec colnum="2" colname="col2"/>
+ <colspec colnum="3" colname="col3" colwidth="35%"/>
+ <colspec colnum="4" colname="col4" colwidth="20%"/>
+ <thead>
+ <row>
+ <entry>Упр. эл-т</entry>
+ <entry namest="col2" nameend="col3">Описание</entry>
+ <entry>Страницы интерфейса</entry>
+ </row>
+ </thead>
+ <tbody>
+      <row>
+       <entry><image href="../../../../images/icons/filter.png" id="filter"/></entry>
+       <entry namest="col2" nameend="col3">Отфильтровать содержимое страницы</entry>
+       <entry/>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/calendar_2.png"
+  id="image_q1t_mbl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Выбор календаря в фильтрах</entry>
+ <entry/>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/rollup.png"
+  id="image_sw3_pcl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Развернуть</entry>
+ <entry/>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/expand.png"
+  id="image_mgf_qcl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Свернуть. Отображается, когда элемент развернут</entry>
+ <entry/>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/scale.png"
+  id="image_i3c_hdl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">
+ <p>Управление масштабом карт:</p>
+ <p><b>+</b> Увеличить масштаб</p>
+ <p><b>–</b> Уменьшить масштаб</p>
+ </entry>
+ <entry morerows="5"><cite keyref="maps_fp"/></entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/maps_scale.png"
+         id="image_vqt_wwh_nsb"/></entry>
+       <entry namest="col2" nameend="col3">Установить масштаб 100%</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/maps_grid.png"
+         id="image_tls_vwh_nsb"/></entry>
+       <entry namest="col2" nameend="col3">Расположить узлы на карте на сетке</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/maps_circle.png"
+         id="image_qsq_5wh_nsb"/></entry>
+       <entry namest="col2" nameend="col3">Расположить узлы на карте по кругу</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/maps_group.png"
+         id="image_pln_twh_nsb"/></entry>
+       <entry namest="col2" nameend="col3">Выполнить визуальную сортировку узлов по количеству
+        потоков</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/goto_flows.png" id="image_e3q_xjx_dyb"/></entry>
+       <entry namest="col2" nameend="col3">Перейти на страницу <cite keyref="dataflow_fp"/></entry>
+      </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/play_2.png" id="image_px2_kwd_tsb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Запустить сканер</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Запустить сбор событий от источника</entry>
+       <entry morerows="1"><cite keyref="event_source_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/pause_2.png" id="image_zry_nd2_tsb"/></entry>
+       <entry namest="col2" nameend="col3">Приостановить сбор событий от источника</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/play.png" id="image_zgm_5dl_tnb"/></entry>
+       <entry namest="col2" nameend="col3">Запустить службу</entry>
+       <entry morerows="3"><cite keyref="correlation_rules_fp"/></entry>
+      </row>
+ <row>
+       <entry><image href="../../../../images/icons/stop.png" id="image_svd_vdl_tnb"/></entry>
+       <entry namest="col2" nameend="col3">Остановить службу</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/restart_1.png" id="image_szc_htw_byb"/></entry>
+       <entry namest="col2" nameend="col3">Перезапустить службу</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/to_service_info.png" id="to_service_info_corr"
+        /></entry>
+       <entry namest="col2" nameend="col3">Перейти к событиям службы</entry>
+      </row>
+ <row>
+ <entry morerows="2"><image href="../../../../images/icons/export.png" id="image_ogc_wdl_tnb"
+        /></entry>
+ <entry namest="col2" nameend="col3">Экспортировать источники</entry>
+ <entry><cite keyref="event_source_fp"/></entry>
+ </row>
+ <row>
+ <entry namest="col2" nameend="col3">Экспортировать справочники</entry>
+ <entry><cite keyref="exchange_fp"/></entry>
+ </row>
+      <row>
+       <entry namest="col2" nameend="col3">Исключить из группы <term keyref="oval_def"
+        />-определений</entry>
+       <entry><cite keyref="definitions_list_fp"/></entry>
+      </row>
+      <row>
+       <entry morerows="2"><image href="../../../../images/icons/import.png" id="image_vz1_2gx_dyb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Импортировать источники</entry>
+       <entry><cite keyref="event_source_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Импортировать  справочники</entry>
+       <entry><cite keyref="exchange_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Добавить в группу <term keyref="oval_def"
+        />-определений</entry>
+       <entry><cite keyref="definitions_list_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/cve.png" id="image_hm4_ckx_pxb"/></entry>
+       <entry namest="col2" nameend="col3">Запустить поиск уязвимостей на выбранных активах</entry>
+       <entry morerows="3"><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/report.png" id="image_p4v_vjx_byb"/></entry>
+       <entry namest="col2" nameend="col3">Сформировать отчет по выбранным активам</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/host_import.png" id="image_bst_pjx_byb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Импортировать активы</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/host_downl.png"/></entry>
+       <entry namest="col2" nameend="col3">Экспортировать активы</entry>
+      </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/to_configs.png"
+         id="image_sgq_c2l_tnb"/></entry>
+       <entry namest="col2" nameend="col3">Перейти к конфигурациям актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к конфигурациям выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+ <row>
+ <entry morerows="1"><image href="../../../../images/icons/events.png" id="image_zkz_kdl_tnb"
+          /><p><uicontrol>События</uicontrol></p></entry>
+ <entry namest="col2" nameend="col3">Перейти к событиям актива</entry>
+ <entry><cite keyref="prot_obj_profile_fp"/></entry>
+ </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к событиям выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/incidents.png" id="image_qsy_ldl_tnb"/>
+        <p><uicontrol>Инциденты</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Перейти к инцидентам актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/incidents_2.png" id="image_z1j_vzk_lyb"
+          /><p><uicontrol>Инциденты</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Перейти к инцидентам выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+ <row>
+ <entry morerows="2"><image href="../../../../images/icons/flows_1.png" id="image_ibz_mdl_tnb"
+          /><p><uicontrol>Потоки данных</uicontrol></p></entry>
+ <entry namest="col2" nameend="col3">Перейти к списку потоков данных актива</entry>
+ <entry><cite keyref="prot_obj_profile_fp"/></entry>
+ </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к списку потоков данных выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к списку потоков данных, обработанных
+        правилом</entry>
+       <entry><cite keyref="dataflow_rules_fp"/></entry>
+      </row>
+ <row>
+ <entry morerows="1"><image href="../../../../images/icons/source.png" id="image_gkh_pdl_tnb"
+          /><p><uicontrol>Источники</uicontrol></p></entry>
+ <entry namest="col2" nameend="col3">Перейти к источникам актива</entry>
+ <entry><cite keyref="prot_obj_profile_fp"/></entry>
+ </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к источникам выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+ <row>
+ <entry morerows="1"><image href="../../../../images/icons/cred.png" id="image_xjc_rdl_tnb"
+          /><p><uicontrol>Учетные данные ОЗ</uicontrol></p></entry>
+ <entry namest="col2" nameend="col3">Перейти к учетным данным актива</entry>
+ <entry><cite keyref="prot_obj_profile_fp"/></entry>
+ </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к учетным данным выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/os.png" id="image_uhs_bfx_byb"
+          /><p><uicontrol>Перечень ПО</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Перейти к перечню ПО актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Перейти к перечню ПО выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/map.png" id="image_bck_pfx_byb"
+          /><p><uicontrol>Карты сети</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Показать потоки данных актива на карте сети</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/map_2.png" id="image_f5g_dzk_lyb"
+          /><p><uicontrol>Карты сети</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Показать потоки данных выбранных активов на карте
+        сети</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/collect_tasks.png"
+         id="image_uhs_bgx_byb"/><p><uicontrol>Задачи сбора данных</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Показать задачи сбора данных актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Показать задачи сбора данных выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/collect_log.png"
+         id="image_o3c_ggx_byb"/><p><uicontrol>Статус сбора данных</uicontrol></p></entry>
+       <entry namest="col2" nameend="col3">Показать статус сбора данных актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Показать статус сбора данных выбранных активов</entry>
+       <entry><cite keyref="prot_obj_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/untie.png" id="image_trr_kbn_3tb"/></entry>
+       <entry namest="col2" nameend="col3">Отвязать сетевые атрибуты от актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/>, окно настройки сетевых атрибутов</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/check_1.png" id="image_urr_kbn_3tb"/></entry>
+       <entry namest="col2" nameend="col3">Сохранить изменения сетевых атрибутов актива</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/>, окно настройки сетевых атрибутов</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/pc.png" id="image_ecx_5my_byb"/></entry>
+       <entry>Автоматизированное рабочее место (АРМ)</entry>
+       <entry morerows="9">
+        <note type="warning" id="note_esk_prf_cyb">
+         <p>Обратите внимание, что объекты защиты могут иметь также цветовую индикацию и специальные
+          символы — подробнее см. раздел «<xref href="color_indication_and_notification_types.dita"
+          />».</p>
+        </note>
+       </entry>
+       <entry morerows="9"><cite keyref="prot_obj_fp"/>, <cite keyref="prot_obj_profile_fp"/>, <cite
+         keyref="maps_fp"/></entry>
+      </row>
+ <row>
+       <entry><image href="../../../../images/icons/switch.png" id="image_isd_y2l_tnb"/></entry>
+       <entry>Коммутатор</entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/router.png" id="image_abb_52l_tnb"/></entry>
+ <entry>Маршрутизатор</entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/prot_obj_unknown.png" id="image_mpj_drf_cyb"/></entry>
+ <entry>Неизвестный тип</entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/serv.png" id="image_fk5_vmy_byb"/></entry>
+ <entry>Сервер</entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/periphery_equipment.png" id="image_yqz_4my_byb"
+        /></entry>
+ <entry>Периферийное оборудование</entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/plc.png" id="image_scx_s2l_tnb"/></entry>
+ <entry>Программируемый логический контроллер (<term keyref="PLC"/>)</entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/protect.png" id="image_zp5_v2l_tnb"/></entry>
+       <entry>Средство защиты</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/sensor.png" id="image_rxr_lny_byb"/></entry>
+       <entry>Сенсор</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/appliance.png" id="image_mv3_qny_byb"/></entry>
+       <entry>Комплекс</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/external_net.png" id="image_g1c_xj4_dyb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Внешняя сеть</entry>
+       <entry><cite keyref="maps_fp"/></entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/del.png"
+  id="image_sgd_z2l_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Удалить элемент</entry>
+ <entry morerows="2"><cite keyref="prot_obj_fp"/>, <cite keyref="incidents_fp"/>, <cite
+         keyref="event_index_fp"/>, <cite keyref="scaners_fp"/>, <cite
+         keyref="data_collect_tasks_fp"/>, <cite keyref="data_collect_results_fp"/>, <cite
+         keyref="definitions_list_fp"/>, <cite keyref="definitions_group_fp"/>, <cite
+         keyref="check_report_fp"/>, <cite keyref="ref_fp"/>, <cite keyref="dataflow_rules_fp"/>,
+         <cite keyref="scripts_fp"/>, <cite keyref="scaners_fp"/>, <cite keyref="event_source_fp"/>,
+         <cite keyref="cred_prot_obj_fp"/>, <cite keyref="oval_settings_fp"/>, <cite
+         keyref="correlation_rules_fp"/>, <cite keyref="notification_fp"/>, <cite
+         keyref="ids_detection_fp"/>, <cite keyref="users_fp"/></entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/del_2.png" id="image_del2"/></entry>
+       <entry namest="col2" nameend="col3">Удалить группу элементов</entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/del_1.png"
+  id="image_ygm_z2l_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Недоступная для использования кнопка группового удаления. Можно
+        увидеть, когда нет элементов для удаления, либо они недоступны</entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/edit.png"
+  id="image_i3w_z2l_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Редактировать элемент</entry>
+ <entry morerows="2"><cite keyref="data_collect_tasks_fp"/>, <cite keyref="definitions_group_fp"/>,
+         <cite keyref="prot_obj_profile_fp"/>, <cite keyref="ref_fp"/>, <cite
+         keyref="dataflow_rules_fp"/>, <cite keyref="scripts_fp"/>, <cite keyref="scaners_fp"/>,
+         <cite keyref="event_source_fp"/>, <cite keyref="cred_prot_obj_fp"/>, <cite
+         keyref="oval_settings_fp"/>, <cite keyref="correlation_rules_fp"/>, <cite
+         keyref="ids_detection_fp"/>, <cite keyref="users_fp"/></entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/edit_1.png" id="image_edit1"/></entry>
+       <entry namest="col2" nameend="col3">Редактировать группу элементов</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/table_props.png" id="table_prop_icon"/></entry>
+       <entry namest="col2" nameend="col3">Настроить список столбцов таблицы</entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/report.png"
+  id="image_mqn_1fl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Сформировать отчет по содержимому страницы</entry>
+ <entry><cite keyref="prot_obj_fp"/>, <cite keyref="dataflow_fp"/>, <cite keyref="check_report_fp"/>,
+ <cite keyref="config_fp"/></entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/approve_2.png" id="image_pjg_yww_dyb"/></entry>
+       <entry namest="col2" nameend="col3">Одобрить потоки</entry>
+       <entry morerows="5"><cite keyref="dataflow_fp"/></entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/temporary.png"
+  id="image_kw4_bfl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Временно одобрить потоки</entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/approve.png" id="image_xyr_hww_dyb"/></entry>
+       <entry namest="col2" nameend="col3">Одобрить поток</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/temporary_1.png" id="image_kfv_bxd_tsb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Временно одобрить поток</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/cancel_2.png" id="image_adh_jxd_tsb"/></entry>
+       <entry namest="col2" nameend="col3">Убрать одобрение с потока</entry>
+      </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/cancel.png" id="image_hkf_gcz_tnb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Убрать одобрение с потоков</entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Отменить изменения сетевых атрибутов объекта
+        защиты</entry>
+       <entry><cite keyref="prot_obj_profile_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/plus_1.png" id="image_qjf_cfl_tnb"/></entry>
+       <entry namest="col2" nameend="col3">Добавить Email Адрес получателя</entry>
+       <entry morerows="1"><cite keyref="notification_fp"/></entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/del_network.png"
+ id="del_network"/></entry>
+ <entry namest="col2" nameend="col3">Удалить Email Адрес получателя</entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/archive_2.png"
+  id="image_f1r_gfl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Архивировать группу индексов событий</entry>
+ <entry morerows="2"><cite keyref="event_index_fp"/></entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/archive.png" id="image_g3s_l42_tsb"/></entry>
+       <entry namest="col2" nameend="col3">Архивировать индекс событий</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/restore_indicies.png" id="image_kmf_zzk_nyb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Восстановить индексы из архива</entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/plus.png" id="image_etq_crc_c4b"/></entry>
+ <entry namest="col2" nameend="col3">Добавить все определения для добавления в группу</entry>
+ <entry morerows="1"><cite keyref="definitions_list_fp"/></entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/minus.png" id="image_yf4_1rc_c4b"/></entry>
+ <entry namest="col2" nameend="col3">Исключить все определения из выбора для добавления в
+        группу</entry>
+ </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/plus_2.png" id="image_fwr_w3y_ssb"
+        /></entry>
+       <entry namest="col2" nameend="col3" valign="middle">Показать еще 5 строк</entry>
+       <entry><cite keyref="config_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3" valign="middle">Выбрать определение для добавления в
+        группу</entry>
+       <entry><cite keyref="definitions_list_fp"/></entry>
+      </row>
+ <row>
+       <entry morerows="1"><image href="../../../../images/icons/minus_1.png" id="image_zz1_hjy_ssb"
+        /></entry>
+ <entry namest="col2" nameend="col3">Скрыть 5 строк</entry>
+ <entry><cite keyref="config_fp"/></entry>
+ </row>
+      <row>
+       <entry namest="col2" nameend="col3">Исключить определение из выбора</entry>
+       <entry><cite keyref="definitions_list_fp"/></entry>
+      </row>
+ <row>
+ <entry><image href="../../../../images/icons/results_oval_view.png"
+  id="image_odc_lfl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Посмотреть результаты</entry>
+ <entry morerows="3"><cite keyref="check_report_fp"/></entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/refresh.png"
+  id="image_hns_mfl_tnb"/></entry>
+ <entry namest="col2" nameend="col3">Перезапустить проверку</entry>
+ </row>
+      <row>
+       <entry><image href="../../../../images/icons/stop.png" id="image_q5p_j3v_xnb"/></entry>
+       <entry namest="col2" nameend="col3">Отменить проверку</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/save_results.png" id="image_vv1_wjy_ssb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Сохранить результаты в файл</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/del_list_element.png"
+         id="image_del_list_element"/></entry>
+       <entry namest="col2" nameend="col3">Удалить сеть</entry>
+       <entry morerows="2"><cite keyref="sensors_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/switch_turn_on.png" id="image_iqd_l3m_4yb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Служба обнаружения вторжений включена (выключить
+        службу)</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/switch_turn_off.png" id="image_img_s3m_4yb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Служба обнаружения вторжений выключена (включить
+        службу)</entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/check_cancel.png" id="image_ibv_mqw_byb"/></entry>
+       <entry namest="col2" nameend="col3">Не применять все выбранные в фильтре элементы</entry>
+       <entry morerows="1"><cite keyref="correlation_rules_fp"/>, <cite
+         keyref="scheme_correlation_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/check.png" id="image_q24_gdl_tnb"/></entry>
+       <entry namest="col2" nameend="col3">Применить все выбранные в фильтре элементы</entry>
+      </row> <row>
+ <entry><image href="../../../../images/icons/order_up.png" id="image_khg_hqy_byb"/></entry>
+ <entry namest="col2" nameend="col3">Повысить порядок статуса инцидентов</entry>
+ <entry><cite keyref="incident_statuses_fp"/></entry>
+ </row>
+ <row>
+ <entry><image href="../../../../images/icons/order_down.png" id="image_zql_zpy_byb"/></entry>
+ <entry namest="col2" nameend="col3">Понизить порядок статуса инцидентов</entry>
+ <entry><cite keyref="incident_statuses_fp"/></entry>
+ </row>
+      <row>
+       <entry morerows="1"><image href="../../../../images/icons/info.png" id="image_js4_hdh_wsb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Просмотреть информацию об элементе (при
+        наведении)</entry>
+       <entry><cite keyref="exchange_fp"/></entry>
+      </row>
+      <row>
+       <entry namest="col2" nameend="col3">Просмотреть информацию об элементе (кнопка)</entry>
+       <entry><cite keyref="incidents_fp"/>, <cite keyref="scaners_fp"/>, <cite
+         keyref="data_collect_tasks_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/copy.png" id="image_nsm_pbk_2tb"/></entry>
+       <entry namest="col2" nameend="col3">Копировать задачу</entry>
+       <entry><cite keyref="data_collect_tasks_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/protocols.png" id="image_khc_gzp_xnb"/></entry>
+       <entry namest="col2" nameend="col3">Просмотреть информацию о протоколе</entry>
+       <entry><cite keyref="dataflow_fp"/></entry>
+      </row>
+      <row>
+       <entry><image href="../../../../images/icons/to_flow_rule_info.png" id="image_nxt_t5h_kyb"
+        /></entry>
+       <entry namest="col2" nameend="col3">Просмотреть информацию о правиле потоков</entry>
+       <entry><cite keyref="dataflow_rules_fp"/></entry>
+      </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </p>
+ </body>
+</topic>

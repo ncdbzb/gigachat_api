@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="del_config">
+ <title>Удаление конфигураций</title>
+ <taskbody>
+ <context>
+ <p>Для удаления конфигураций вы можете воспользоваться следующими возможностями:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd>Удаление одной конфигурации. Для удаления:</cmd>
+        <info>
+          <note type="warning" id="note_s55_4qk_4tb">Удаление возможно только для тех конфигураций,
+            которые не были приняты за эталонную.</note>
+        </info>
+        <substeps id="substeps_gk2_pqk_4tb">
+          <substep>
+            <cmd
+              conref="../../reusable/steps/data_collect/go_to_config.dita#ReusableComponent_q2k_k1l_4tb/cmd_u2k_k1l_4tb"
+            />
+          </substep>
+          <substep>
+            <cmd>В верхней части страницы напротив названия конфигурации нажмите кнопку <ph
+                conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+              />).</cmd>
+            <info>
+              <fig id="fig_e21_5wl_wpb">
+                <title>Кнопка удаления неэталонной конфигурации</title>
+                <image href="../../../images/control_config/cofig/config_buttons.png"
+                  id="image_f21_5wl_wpb">
+                  <alt>Расположение кнопки удаления неэталонной конфигурации</alt>
+                </image>
+              </fig>
+            </info>
+            <stepresult>появится окно ввода обоснования удаления конфигурации.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Введите текст обоснования удаления неэталонной конфигурации.</cmd>
+            <info>
+              <fig id="fig_q3g_f1m_wpb">
+                <title>Окно обоснования удаления неэталонной конфигурации</title>
+                <image href="../../../images/windows/approve_del_window.png" id="image_r3g_f1m_wpb">
+                  <alt>Окно обоснования удаления неэталонной конфигурации</alt>
+                </image>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Удаление всех конфигураций, собранных сканером. Для удаления:</cmd>
+        <substeps id="substeps_obg_tqk_4tb">
+          <substep>
+            <cmd
+              conref="../../reusable/steps/data_collect/go_to_config.dita#ReusableComponent_q2k_k1l_4tb/cmd_u2k_k1l_4tb"
+            />
+          </substep>
+          <substep>
+            <cmd>Нажмите <ph
+                conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                > кон</ph><uicontrol> конфигурации</uicontrol>) напротив названия сканера. </cmd>
+            <stepresult>появится окно ввода обоснования.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Введите обоснование удаления всех конфигураций, собранных сканером и нажмите
+                <uicontrol>Подтвердить</uicontrol>. </cmd>
+            <info>
+              <fig id="fig_egr_hcl_4tb">
+                <title>Окно ввода обоснования удаления конфигураций объекта защиты</title>
+                <image href="../../../images/windows/approve_del_window.png" id="image_fgr_hcl_4tb">
+                  <alt>Окно ввода обоснования удаления конфигураций объекта защиты</alt>
+                </image>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+   
+ </steps>
+ </taskbody>
+</task>

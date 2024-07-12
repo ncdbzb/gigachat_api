@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fbj_xpq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_ibj_xpq_g1c">
+                <cmd>Создайте файл с параметрами сетевого интерфейса <codeph>bond0</codeph> (команду
+                    ниже необходимо скопировать и вставить в командную строку целиком):</cmd>
+                <info><codeblock id="codeblock_kkb_ngs_21c">echo -e 'TYPE=bond\nONBOOT=yes\nBOOTPROTO=static
+HOST="[iface_name_1] [iface_name_2]"\nBONDMODE=4
+BONDOPTIONS="miimon=100 lacp_rate=1"' \
+> /etc/net/ifaces/bond0/options</codeblock><p>где <codeph>[iface_name_1]</codeph> и
+                            <codeph>[iface_name_2]</codeph> — названия подключенных сетевых
+                        интерфейсов, которые необходимо объединить.</p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

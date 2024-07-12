@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="nta_conf_network_interfaces">
+    <title>Настройка сетевых интерфейсов в терминале UDV NTA</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для настройки сетевых интерфейсов через терминал UDV NTA выполните следующие
+                команды:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Отобразите наименование сетевых интерфейсов UDV NTA, которые были
+                    инициализированы или переименованы в ходе запуска <term keyref="alt_name"/>. Для
+                    этого выполните команду:</cmd>
+                <info>
+                    <codeblock id="codeblock_ljg_gm4_f1c">dmesg -T | grep -E "NIC|renamed"</codeblock>
+                    <fig id="fig_x2b_kwp_dzb">
+                        <title>Вывод сетевых интерфейсов, инициализированных в ходе запуска ОС Альт
+                            Сервер</title>
+                        <image href="../../images/deployment/alt/alt_interfaces.png"
+                            id="image_mjg_gm4_f1c"/>
+                    </fig>
+                </info>
+            </step>
+            <step conref="../reusable/alt/extra_settings/udv_nta_stop.dita#ReusableComponent_b2q_lh4_f1c/step_c2q_lh4_f1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/create_net_interface.dita#ReusableComponent_ivl_4l4_f1c/step_lvl_4l4_f1c">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Создайте файл с IP-адресом и маской сетевого интерфейса управления
+                    UDV NTA:</cmd>
+                <info><codeblock id="codeblock_pxv_lry_lyb">echo [ip_addr]/[mask] > /etc/net/ifaces/ens192/ipv4address</codeblock>Где
+                        <codeph>[ip_addr]</codeph> — IP-адрес сетевого интерфейса управления
+                    UDV NTA, <codeph>[mask]</codeph> — маска сетевого интерфейса управления
+                    UDV NTA.</info>
+            </step>
+            <step>
+                <cmd>Создайте файл со шлюзом сетевого интерфейса управления UDV NTA</cmd>
+                <info><codeblock id="codeblock_xml_f2z_lyb">echo default via [ip_addr] > /etc/net/ifaces/ens192/ipv4route</codeblock>Где
+                        <codeph>[ip_addr]</codeph> — IP-адрес шлюза сетевого интерфейса управления
+                    UDV NTA.</info>
+            </step>
+            <step>
+                <cmd>Создайте файл с адресами DNS-серверов интерфейса управления UDV NTA:</cmd>
+                <info><codeblock id="codeblock_tjr_j2z_lyb">echo nameserver [ip_addr] > /etc/net/ifaces/ens192/resolv.conf</codeblock>Где
+                        <codeph>[ip_addr]</codeph> — IP-адрес DNS-сервера сетевого интерфейса
+                    управления UDV NTA.</info>
+            </step>
+            <step conref="../reusable/alt/extra_settings/create_net_interface_file.dita#ReusableComponent_s35_rl4_f1c/step_u35_rl4_f1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/restart_network.dita#ReusableComponent_hkf_5l4_f1c/step_ikf_5l4_f1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/udv_nta_start.dita#ReusableComponent_xdk_zh4_f1c/step_zdk_zh4_f1c">
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

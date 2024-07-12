@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_events_source">
+ <title>Импорт источников событий</title>
+ <taskbody>
+ <context>
+ <p>Для импорта источников событий из файла формата <codeph>*.json</codeph> в <term
+          keyref="appliance"/>:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd><ph
+            conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+          <ph
+            conref="../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+          />.</cmd>
+      </step>
+ <step>
+        <cmd>Нажмите кнопку <image href="../../../images/icons/import.png" id="image_nc1_vp4_yxb"/>
+          <uicontrol>Импортировать</uicontrol>.</cmd>
+      </step>
+ <step><cmd>В открывшемся окне укажите расположение импортируемого файла формата <codeph>*.json</codeph> и подтвердите выбор.</cmd></step>
+ <step id="import_action_step_1">
+        <cmd>В открывшемся окне <uicontrol>Подготовка к импорту</uicontrol> выберите действие для
+          элементов, которые отсутствуют в новом справочнике:</cmd>
+        <choices
+          conref="../../reusable/steps/import_export/choices_import_same_elements.dita#ReusableComponent_gg1_grd_gyb/choices_syg_3vd_wnb"
+          id="choices_bl1_grd_gyb">
+          <choice/>
+        </choices>
+        <info>
+          <note type="attention">Доступен импорт только тех источников, для которых уже создан
+            объект защиты. Если объект защиты, указанный в импортируемом источнике, отсутствует, то
+            такой источник будет пропущен при импорте.</note>
+          <fig id="fig_thk_sby_vnb">
+            <title>Окно «Подготовка к импорту» при импорте источников событий объектов
+              защиты</title>
+            <image href="../../../images/hosts/exp_imp/prepare_to_import_sources_window.png"
+              id="image_jfj_3xd_wnb"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol> для выполнения импорта.</cmd>
+        <stepresult>сразу после загрузки файла в правом вернем углу страницы появится уведомление:
+            <systemoutput>Список «Источники» успешно обновлен</systemoutput>, и на странице
+          отобразятся импортированные источники.</stepresult>
+      </step>
+ </steps>
+ </taskbody>
+</task>

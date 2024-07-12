@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_lkl_lzw_yxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_nkl_lzw_yxb">При <b>достижении</b> определенного <b>в
+                                    элементе FIA_AFL.1.1(1)</b> числа неуспешных попыток
+                                аутентификации ФБО должны: [предотвратить возможность аутентификации
+                                пользователем в течение 15 минут путем установки статуса блокировки
+                                пользователя].</div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

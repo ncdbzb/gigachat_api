@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wx4_xzf_czb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_xx4_xzf_czb">
+                <cmd>Остановите сервисы сенсора по команде:</cmd>
+                <info><codeblock id="codeblock_e1l_wc2_czb">cd /opt/sensor &amp;&amp; docker-compose down</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

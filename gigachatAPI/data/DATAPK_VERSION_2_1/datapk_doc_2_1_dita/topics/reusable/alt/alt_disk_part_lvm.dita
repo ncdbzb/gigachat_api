@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ld4_pkc_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_md4_pkc_2zb">В раскрывающемся списке <uicontrol>LVM</uicontrol> выберите <uicontrol>rootfs</uicontrol> и нажмите <uicontrol>Создать файловую систему</uicontrol>.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="nta_trunk_port">
+    <title>Подключение к trunk-порту коммутатора или маршрутизатора</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context conref="../reusable/alt/extra_settings/trunk_context.dita#ReusableComponent_sxm_wqq_g1c/context_at5_n3s_21c">
+            <p></p>
+        </context>
+        <steps>
+            <step id="ask_vlan_id" conref="../reusable/alt/extra_settings/trunk_ask_ip_vlan.dita#ReusableComponent_lwx_1rq_g1c/step_ask_ip">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Выберите из сетевых интерфейсов <term keyref="alt_name"/> интерфейс для
+                    создания VLAN. Получить список сетевых интерфейсов можно по команде:</cmd>
+                <info>
+                    <codeblock id="codeblock_irv_mry_21c">ip a</codeblock>
+                    <note id="note_fnw_cqy_21c">Выбранный сетевой интерфейс не должен быть сетевым
+                        интерфейсом UDV NTA для прослушивания трафика. Если у UDV NTA имеется всего
+                        два сетевых интерфейса, рекомендуется выбрать сетевой интерфейс
+                        управления.</note>
+                </info>
+            </step>
+            <step conref="../reusable/alt/extra_settings/udv_nta_stop.dita#ReusableComponent_b2q_lh4_f1c/step_c2q_lh4_f1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/lacp_goto_net_ifaces.dita#ReusableComponent_qhb_p4q_g1c/step_shb_p4q_g1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/trunk_create_vlan_dir.dita#ReusableComponent_u3j_nrq_g1c/step_v3j_nrq_g1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/trunk_create_vlan_id_file.dita#ReusableComponent_hcd_rrq_g1c/step_icd_rrq_g1c">
+                <cmd></cmd>
+            </step>
+            <step id="param_file" conref="../reusable/alt/extra_settings/trunk_create_param_file.dita#ReusableComponent_fz5_trq_g1c/step_create_file_p">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Если необходимо подключить тот же сетевой интерфейс UDV NTA к trunk-порту с
+                    другим VLAN, повторите шаги <xref href="#nta_trunk_port/ask_vlan_id"/>-<xref
+                        href="#nta_trunk_port/param_file"/> для создания подинтерфейсов с нужным
+                    идентификатором VLAN (<codeph>[vlan_id]</codeph>). </cmd>
+            </step>
+            <step>
+                <cmd conref="../reusable/alt/extra_settings/alt_reboot.dita#ReusableComponent_i2c_sqq_g1c/cmd_k2c_sqq_g1c"/>
+            </step>
+            <step conref="../reusable/alt/extra_settings/trunk_check_iface_state.dita#ReusableComponent_a5h_psq_g1c/step_e5h_psq_g1c">
+                <cmd></cmd>
+            </step>
+            <step conref="../reusable/alt/extra_settings/udv_nta_start.dita#ReusableComponent_xdk_zh4_f1c/step_zdk_zh4_f1c">
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

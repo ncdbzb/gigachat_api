@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="cred_and_network">
+ <title>Настройка локальных реквизитов и домашней сети</title>
+ <taskbody>
+ <context>В этом разделе:<ul id="ul_i3s_ttq_tnb">
+ <li><xref href="edit_datapk_info.dita"/></li>
+ <li><xref href="home_network.dita"/></li>
+ </ul></context>
+
+ </taskbody>
+</task>

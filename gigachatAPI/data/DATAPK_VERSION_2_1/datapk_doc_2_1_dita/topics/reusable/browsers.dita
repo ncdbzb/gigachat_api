@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:browsers-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_z13_cbh_ptb">
+    <title/>
+    <body>
+        <div id="div_cb3_cbh_ptb"><p><ph>Поддерживаемые обозреватели (браузеры):</ph><ul
+                    conref="cert/browser_requirements.dita#ReusableComponent_fgb_y2c_g5b/ul_cvs_3qv_41c"
+                    id="ul_ttq_yqv_41c">
+                    <li/>
+                </ul></p>
+            <p conref="cert/browser_non_support.dita#ReusableComponent_pms_lrv_41c/p_qms_lrv_41c"/><note type="tip" id="note_p23_zyg_ptb">По умолчанию веб-интерфейс <term keyref="appliance"/>а
+                доступен только через поддерживаемые обозреватели. Если необходимо включить доступ
+                через любые обозреватели, установите значение переменной <codeph><cmdname
+                        keyref="DATAPK_DISABLE_BROWSER_CHECK"/>=<ph
+                        conref="true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/></codeph>.
+                См. подробнее в разделе «<xref href="../reference_info/env_variables.dita"
+                />».</note></div>
+    </body>
+</topic>

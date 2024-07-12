@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dkc_ppq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_fkc_ppq_g1c">
+                <cmd>Создайте файл с IP-адресом для сетевого интерфейса
+                    <codeph>bond0</codeph>:</cmd>
+                <info><codeblock id="codeblock_pw2_4fs_21c">echo [ip_addr]/[subnet_mask] > /etc/net/ifaces/bond0/ipv4address</codeblock><p>где
+                            <codeph>[ip_addr]/[subnet_mask]</codeph> — IP-адрес и маска интерфейса
+                            <codeph>bond0</codeph>.</p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

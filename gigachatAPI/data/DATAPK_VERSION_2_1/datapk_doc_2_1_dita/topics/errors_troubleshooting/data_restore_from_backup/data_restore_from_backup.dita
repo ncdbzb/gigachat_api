@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="data_restore_from_backup">
+ <title>Восстановление данных из резервных копий</title>
+ <body>
+ <p>Восстановление данных на текущей версии <term keyref="appliance"/>а уровня <abbreviated-form
+        keyref="management"/> возможно только из резервной копии, выполненной для той же версии
+        <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>.</p>
+    <p>Восстановление данных рекомендуется выполнять в следующем порядке:</p>
+    <ul outputclass="no_en" id="ul_ght_ykq_snb">
+      <li><xref href="prepare_restore_from_backup.dita"/></li>
+      <li><xref href="main_dir_and_db_restore.dita"/></li>
+      <li><xref href="event_indexes_restore.dita"/></li>
+      <li><xref href="sensor_restore_from_backup.dita"/></li>
+    </ul>
+  <p><term keyref="appliance"/>ы уровня <abbreviated-form keyref="sensor"/> не хранят данные,
+      поэтому их восстановление из резервной копии заключается в их развертывании с нуля —
+      необходимо только скопировать сохраненные файлы <ph
+        conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"/>
+      и <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+      />, а не создавать новые перед первым запуском. Также после восстановления сенсоров необходимо
+      синхронизировать правила обнаружения вторжений и повторно настроить домашние сети.</p>
+    <p>Для подготовки к восстановлению данных из резервной копии подготовьте архив с резервной
+      копией <codeph
+        conref="../../reusable/files/backup_archive_file.dita#ReusableComponent_mxs_bkj_nyb/codeph_nxs_bkj_nyb"
+      />.</p>
+    <note id="note_jsn_pr3_pyb" type="caution">Не рекомендуется использовать резервную копию данных с
+      целью развернуть  еще одну копию <term keyref="appliance"/>а — идентификатор в файле <ph
+        conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"/>
+      должен быть уникальным на каждом <term keyref="appliance"/>е, и не допускается наличие двух
+        <term keyref="appliance"/>ов с одинаковыми идентификаторами в одной сети.</note>
+ </body>
+</topic>

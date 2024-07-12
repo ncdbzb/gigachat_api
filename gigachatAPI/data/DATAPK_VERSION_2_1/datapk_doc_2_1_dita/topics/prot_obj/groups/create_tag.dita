@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_hd5_tzq_4nb">
+ <title>Создание метки</title>
+ <taskbody>
+ <context>
+ <p>Для создания метки:</p>
+   <note
+    conref="../../reusable/notes/groups_tree_limit.dita#ReusableComponent_pf2_2c3_myb/note_h5d_yb3_myb"
+    id="note_cj2_2c3_myb"/>
+ </context>
+ <steps>
+ <step>
+ <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="prot_obj_fp"/> → <cite keyref="prot_obj_settings_fp"/> → <cite keyref="ref_fp"/>.</cmd>
+ </step>
+ <step>
+  <cmd>Нажмите кнопку <uicontrol>Создать метку</uicontrol>. В открывшемся окне <uicontrol>Создание метки</uicontrol> задайте следующие
+     параметры:</cmd>
+    <substeps id="substeps_jw1_yzq_4nb">
+     <substep>
+      <cmd>наименование новой метки;</cmd>
+     </substep>
+     <substep>
+      <cmd>вышестоящую метку.</cmd>
+     </substep>
+     
+    </substeps>
+    <info>
+     <fig>
+      <title>Окно «Создание метки»</title>
+      <image href="../../../images/hosts/create_group/create_group_window.png"/>
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений.</cmd>
+   </step>
+ </steps>
+ </taskbody>
+</task>

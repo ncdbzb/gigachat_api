@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_ggx_z5r_jrb">
+
+ <title>
+</title>
+ <body> 
+ <codeblock outputclass="language-sql" id="codeblock_lgx_z5r_jrb">select a.hostnameSrc, a.IPsrc, a.MACsrc, lastEvent.eventID, lastEvent.observer_name, a.UID, lastEvent.UID from pattern [every a=DataFlowEvent(protocol=\"rdp\") -> lastEvent=WindowsEvent((eventID=\"4624\" or eventID=\"528\" or eventID=\"540\") and a.hostnameDst=observer_name)].win:time(10 min)</codeblock> 
+</body> 
+</topic> 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xfv_vrr_xyb">
+    <title/>
+    <body>
+        <p><ph id="ph_zfv_vrr_xyb">Для некоторого ПО элементы CPE могут подбираться с недостаточной
+                точностью, поэтому для уточнения справочника CPE и дальнейшего повышения точности
+                поиска уязвимостей отчет сопоставления ПО с распознанными элементами CPE необходимо
+                выгрузить и передать в сервисный центр разработчика Комплекса.</ph></p>
+    </body>
+</topic>

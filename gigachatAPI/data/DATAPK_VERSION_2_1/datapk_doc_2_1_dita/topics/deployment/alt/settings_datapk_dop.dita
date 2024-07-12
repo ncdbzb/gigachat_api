@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="settings_datapk_dop">
+    <title>Дополнительные настройки Комплекса</title>
+    <body>
+        <p><ph>В этом разделе приведены настройки, которые можно выполнить при необходимости на
+                любой версии <term keyref="alt_name"/> 10 (сертифицированной и несертифицированной)
+                после ее установки и развертывания всех уровней <term keyref="appliance"/>а:</ph><ul
+                id="ul_kb2_gzr_nyb">
+                <li><xref href="connect_s_to_m.dita"/></li>
+                <li><xref href="alt_server_save_packages.dita"/></li>
+                <li><xref href="subnet_change.dita"/></li>
+                <li><xref href="conf_network_interfaces.dita"/></li>
+                <li><xref href="set_pass_policy_and_audit.dita"/></li>
+                <li><xref href="hostname_change.dita"/></li>
+                <li><xref href="changing_time_zone.dita"/></li>
+                <li><xref href="add_static_route.dita"/></li>
+                <li><xref href="setting_NTP.dita"/></li>
+                <li><xref href="web_trusted_cert.dita"/></li>
+                <li><xref href="lacp_channel.dita"/></li>
+                <li><xref href="trunk_port.dita"/></li>
+            </ul></p>
+    </body>
+
+</topic>

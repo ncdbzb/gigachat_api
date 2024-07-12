@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id_4">
+    <title>Режимы
+функционирования</title>
+    <body>
+      <p><term keyref="cert_appliance_name_short"/>
+предусматривает
+3 режима
+функционирования.</p>
+      <ul>
+        <li>Пассивный мониторинг — однонаправленное получение информации при отсутствии влияния на
+        <abbreviated-form keyref="ACS_and_TP"/>.</li>
+        <li>Активный мониторинг — обмен информации с компонентами <abbreviated-form keyref="ACS_and_TP"/> с использованием штатных
+        механизмов взаимодействия.</li>
+        <li>Сканирование защищенности — активное взаимодействие с компонентами <abbreviated-form keyref="ACS_and_TP"/> с целью
+        выявления уязвимостей.</li>
+      </ul>
+    </body>
+  </topic>

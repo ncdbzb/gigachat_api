@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_oqh_zqx_dzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_pqh_zqx_dzb">В новом окне выберите <uicontrol>Файловая система FAT32</uicontrol> и нажмите <uicontrol>ОК</uicontrol>.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

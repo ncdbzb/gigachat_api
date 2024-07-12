@@ -1,0 +1,3287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="protocols">
+ <title>Протоколы, обнаруживаемые Комплексом</title>
+ <body>
+ 
+ <p><term keyref="appliance"/> способен обнаруживать самые разные данные в трафике <abbreviated-form
+    keyref="host"/>. Эти данные используют множество протоколов, ознакомиться с которыми вы можете в
+   таблице ниже<ph outputclass="onlypdf"> (<xref href="#protocols/table_pgw_grl_tnb" format="dita"
+    />)</ph>.</p>
+  <table id="table_pgw_grl_tnb" outputclass="sortable">
+   <title>Список протоколов, обнаруживаемых Комплексом</title>
+   <tgroup cols="2">
+    <colspec colnum="1" colname="col1" colwidth="35%"/>
+    <colspec colnum="2" colname="col2" colwidth="65%"/>
+    <thead>
+     <row>
+      <entry>Наименование</entry>
+      <entry>Описание</entry>
+     </row>
+    </thead>
+     <tbody>
+     <row>
+      <entry>ARP (Address Resolution Protocol)</entry>
+      <entry>Address Resolution Protocol (ARP) — протокол в компьютерных сетях, предназначенный для
+       определения соответствия между MAC-адресом (физическим адресом устройства) и IP-адресом
+       (логическим адресом сетевого уровня) удаленного компьютера. Является протоколом канального
+       уровня модели OSI</entry>
+     </row>
+     <row>
+      <entry>BACnet IP</entry>
+      <entry>BACnet — протокол, применяемый в системах автоматизации зданий и сетях управления.
+       Использует протоколы стандартов ASHRAE, ANSI и ISO 16484-5</entry>
+     </row>
+     <row>
+      <entry>Bitcoin Protocol</entry>
+      <entry>Bitcoin — протокол, используемый для осуществления транзакций пользователей
+       криптовалюты</entry>
+     </row>
+     <row>
+      <entry>Bitmessage Protocol</entry>
+      <entry>Bitmessage — криптографический мессенджер с открытым исходным кодом, использующий
+       децентрализованную P2P сеть</entry>
+     </row>
+     <row>
+      <entry>BitTorrent</entry>
+      <entry>BitTorrent — одноранговый (P2P) протокол обмена файлами. Файлы по такому протоколу
+       передаются частями, а каждый torrent-клиент, получая эти части, в то же время отдает их
+       другим клиентам. Быстрое распространение программ P2P на рабочих компьютерах представляет
+       новые проблемы безопасности для корпоративных сетей, поскольку сеть P2P может использоваться
+       для облегчения выполнения различных сетевых атак</entry>
+     </row>
+     <row>
+      <entry>Bristol Standard Asynchronous Protocol</entry>
+      <entry>Bristol Standard Asynchronous/Synchronous Protocol (BSAP) — протокол промышленной
+       автоматизации,разработанный компанией Bristol Babcock и предназначенный для подключения,
+       управления и мониторинга <abbreviated-form keyref="PLC"/> семейства Bristol Babcock Network
+       3000 и ControlWave, удаленных терминалов и контроллеров потока производства компании
+       Emerson</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wmz_jnj_gtb">
+        <li>Bristol Standard Asynchronous Protocol Serial version</li>
+       </ul>
+      </entry>
+      <entry>Версия для протоколов последовательной передачи данных</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qzn_knj_gtb">
+        <li>BSAP CHANGE LOCAL NODE ADDR command</li>
+       </ul>
+      </entry>
+      <entry>Команда на изменение локального адреса</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_f4s_knj_gtb">
+        <li>BSAP DIAGNOSTICS RESET command</li>
+       </ul>
+      </entry>
+      <entry>Команда сброса диагностических данных</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ddy_knj_gtb">
+        <li>BSAP Download Command</li>
+       </ul>
+      </entry>
+      <entry>Команда загрузки</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_svh_mnj_gtb">
+        <li>BSAP Enhanced Security Code Validation (Secure Mode — GET KEY)</li>
+       </ul>
+      </entry>
+      <entry>Валидация кода безопасности (запрос ключа)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_o2g_nnj_gtb">
+        <li>BSAP Enhanced Security Code Validation (Secure Mode — LOGIN REQUEST)</li>
+       </ul>
+      </entry>
+      <entry>Валидация кода безопасности (запрос авторизации)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_uzn_nnj_gtb">
+        <li>BSAP RBE Activation/Deactivation request</li>
+       </ul>
+      </entry>
+      <entry>Команда включения/выключения сигналов RBE</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hxv_nnj_gtb">
+        <li>BSAP RBE Going Active satate</li>
+       </ul>
+      </entry>
+      <entry>Перевод RBE в активное состояние</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bpw_4nj_gtb">
+        <li>BSAP RBE Initialisation request</li>
+       </ul>
+      </entry>
+      <entry>Команда инициализации RBE</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_d3f_pnj_gtb">
+        <li>BSAP READ DATE AND TIME command</li>
+       </ul>
+      </entry>
+      <entry>Команда на чтение даты и времени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qdr_pnj_gtb">
+        <li>BSAP READ DATE command</li>
+       </ul>
+      </entry>
+      <entry>Команда на чтение даты</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_kyw_pnj_gtb">
+        <li>BSAP READ LOGICAL BY ADDRESS command</li>
+       </ul>
+      </entry>
+      <entry>Команда чтения логических данных по адресу</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xnd_qnj_gtb">
+        <li>BSAP READ LOGICAL BY LIST CONTINUE command</li>
+       </ul>
+      </entry>
+      <entry>Команда на продолжение считывания логических данных по списку</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ffj_qnj_gtb">
+        <li>BSAP READ LOGICAL BY LIST START command</li>
+       </ul>
+      </entry>
+      <entry>Команда на начало считывания логических данных по списку</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rvs_qnj_gtb">
+        <li>BSAP READ LOGICAL BY NAME command</li>
+       </ul>
+      </entry>
+      <entry>Команда чтения логических данных по имени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wwx_qnj_gtb">
+        <li>BSAP READ SIGNAL BY ADDRESS command</li>
+       </ul>
+      </entry>
+      <entry>Команда чтения сигналов по адресу</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zvd_rnj_gtb">
+        <li>BSAP READ SIGNAL BY LIST CONTINUE command</li>
+       </ul>
+      </entry>
+      <entry>Команда на продолжение считывания сигналов по списку</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rbj_rnj_gtb">
+        <li>BSAP READ SIGNAL BY LIST START command</li>
+       </ul>
+      </entry>
+      <entry>Команда на начало считывания сигналов по списку</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fr4_rnj_gtb">
+        <li>BSAP READ SIGNAL BY NAME command</li>
+       </ul>
+      </entry>
+      <entry>Команда чтения сигналов по имени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_y5t_rnj_gtb">
+        <li>BSAP READ TIME command</li>
+       </ul>
+      </entry>
+      <entry>Команда на чтение времени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_cyy_rnj_gtb">
+        <li>BSAP RESET SYSTEM command</li>
+       </ul>
+      </entry>
+      <entry>Команда сброса системы</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jf2_snj_gtb">
+        <li>BSAP Standard Security Code Validation (Simple Mode)</li>
+       </ul>
+      </entry>
+      <entry>Валидация кода безопасности (простой режим)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_tkk_snj_gtb">
+        <li>BSAP WRITE DATE AND TIME command</li>
+       </ul>
+      </entry>
+      <entry>Команда на изменение даты и времени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zvp_snj_gtb">
+        <li>BSAP WRITE DATE command</li>
+       </ul>
+      </entry>
+      <entry>Команда на изменение даты</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xf5_snj_gtb">
+        <li>BSAP WRITE SIGNAL BY ADDRESS command</li>
+       </ul>
+      </entry>
+      <entry>Команда записи сигналов по адресу</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_al1_tnj_gtb">
+        <li>BSAP WRITE SIGNAL BY LIST CONTINUE command</li>
+       </ul>
+      </entry>
+      <entry>Команда на продолжение записи списка сигналов</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xzh_tnj_gtb">
+        <li>BSAP WRITE SIGNAL BY LIST START command</li>
+       </ul>
+      </entry>
+      <entry>Команда на начало записи списка сигналов</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pgn_tnj_gtb">
+        <li>BSAP WRITE SIGNAL BY NAME command</li>
+       </ul>
+      </entry>
+      <entry>Команда записи сигналов по имени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_csr_tnj_gtb">
+        <li>BSAP WRITE TIME command</li>
+       </ul>
+      </entry>
+      <entry>Команда на изменение времени</entry>
+     </row>
+     <row>
+      <entry>Browser</entry>
+      <entry>Browser — протокол службы Microsoft Computer Browser, которая обеспечивает
+       функционирование списков Windows-доменов, рабочих групп и компьютеров в масштабе всей сети, а
+       также списков других сетевых аппаратных устройств, совместимых с протоколом NetBIOS. Она
+       позволяет пользователям легко просматривать и находить общие ресурсы на компьютерах в одной
+       подсети (но недоступна в сегментах сети, разделенных маршрутизаторами)</entry>
+     </row>
+     <row>
+      <entry>CPMI (Check Point Management Interface)</entry>
+      <entry>Check Point Management Interface (CPMI) — протокол CheckPoint, используемый для связи
+       между SmartConsole и сервером управления безопасностью, а также протокол для подключений из
+       многодоменного графического интерфейса пользователя к MDS и CMA/домену</entry>
+     </row>
+     <row>
+      <entry>Cisco loopback detection</entry>
+      <entry>Cisco loopback detection (LBD) — протокол для функции коммутаторов Cisco,
+       обеспечивающей защиту от петель путем передачи пакетов данного протокола из портов, где
+       включена защита петель. Когда коммутатор отправляет пакет протокола LBD, а затем получает тот
+       же пакет, он закрывает порт, получивший пакет. LBD работает независимо от протокола STP
+       (Spanning Tree Protocol)</entry>
+     </row>
+     <row>
+      <entry>CoDeSys PLC protocol</entry>
+      <entry>Протокол взаимодействия программного обеспечения CoDeSys c <abbreviated-form
+        keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_mb5_jqz_sxb">
+        <li>CoDeSys protocol CREATE APPLICATION command</li>
+       </ul>
+      </entry>
+      <entry>Команда "создать приложение" протокола взаимодействия программного обеспечения CoDeSys
+       c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_udc_lqz_sxb">
+        <li>CoDeSys protocol CREATE DEVICE APPLICATION command</li>
+       </ul>
+      </entry>
+      <entry>Команда "создать приложение на устройстве" протокола взаимодействия программного
+       обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_z2c_kqz_sxb">
+        <li>CoDeSys protocol DELETE APPLICATION command</li>
+       </ul>
+      </entry>
+      <entry>Команда "удалить приложение" протокола взаимодействия программного обеспечения CoDeSys
+       c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wxw_kqz_sxb">
+        <li>CoDeSys protocol DEVICE DOWNLOAD command</li>
+       </ul>
+      </entry>
+      <entry>Команда "загрузка данных об устройстве" протокола взаимодействия программного
+       обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xrh_kqz_sxb">
+        <li>CoDeSys protocol DOWNLOAD command</li>
+       </ul>
+      </entry>
+      <entry>Команда "загрузка программы в <abbreviated-form keyref="PLC"/>" протокола
+       взаимодействия программного обеспечения CoDeSys c <abbreviated-form keyref="PLC"/>
+       Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nrf_jqz_sxb">
+        <li>CoDeSys protocol LOGIN command</li>
+       </ul>
+      </entry>
+      <entry>Команда "авторизация пользователя" протокола взаимодействия программного обеспечения
+       CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rsm_jqz_sxb">
+        <li>CoDeSys protocol LOGOUT command</li>
+       </ul>
+      </entry>
+      <entry>Команда "выход пользователя из системы" протокола взаимодействия программного
+       обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_utp_kqz_sxb">
+        <li>CoDeSys protocol ONLINE CHANGE command</li>
+       </ul>
+      </entry>
+      <entry>Команда "изменить программу <abbreviated-form keyref="PLC"/> в режиме online" протокола
+       взаимодействия программного обеспечения CoDeSys c <abbreviated-form keyref="PLC"/>
+       Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_akg_mqz_sxb">
+        <li>CoDeSys protocol READ command</li>
+       </ul>
+      </entry>
+      <entry>Команда "чтение данных" протокола взаимодействия программного обеспечения CoDeSys c
+        <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_j2t_lqz_sxb">
+        <li>CoDeSys protocol RESET command</li>
+       </ul>
+      </entry>
+      <entry>Команда "сброс <abbreviated-form keyref="PLC"/>" протокола взаимодействия программного
+       обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_sm1_mqz_sxb">
+        <li>CoDeSys protocol SINGLE CYCLE command</li>
+       </ul>
+      </entry>
+      <entry>Команда "выполнить один цикл <abbreviated-form keyref="PLC"/>" протокола взаимодействия
+       программного обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vl3_lqz_sxb">
+        <li>CoDeSys protocol START command</li>
+       </ul>
+      </entry>
+      <entry>Команда "запуск <abbreviated-form keyref="PLC"/>" протокола взаимодействия программного
+       обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pvn_lqz_sxb">
+        <li>CoDeSys protocol STOP command</li>
+       </ul>
+      </entry>
+      <entry>Команда "останов <abbreviated-form keyref="PLC"/>" протокола взаимодействия
+       программного обеспечения CoDeSys c <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qyl_mqz_sxb">
+        <li>CoDeSys protocol WRITE command</li>
+       </ul>
+      </entry>
+      <entry>Команда "запись данных" протокола взаимодействия программного обеспечения CoDeSys c
+        <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>ConnectionLess Network Protocol</entry>
+      <entry>Connection Less Network Protocol (CLNP) — дейтаграммный протокол передачи данных,
+       который реализует в OSI-сетях задачи Connectionless-mode Network Service (сетевое
+       обслуживание без установления соединения), сопоставимые с UDP в стеке IP</entry>
+     </row>
+     <row>
+      <entry>ControlEdge Builder Controller Configuration protocol</entry>
+      <entry>ControlEdge Builder Controller Configuration protocol — протокол конфигурирования
+       контроллеров Honeywell ControlEdge</entry>
+     </row>
+     <row>
+      <entry>ControlEdge Discovery protocol</entry>
+      <entry>ControlEdge Builder Discovery protocol — протокол обнаружения Honeywell ControlEdge PLC
+       и Honeywell ControlEdge RTU</entry>
+     </row>
+     <row>
+      <entry>COTP (Connection-Oriented Transport Protocol)</entry>
+      <entry>Connection Oriented Transport Protocol (COTP) — транспортный протокол соединения ISO
+       ProtocolFamily, используется ICCP (Inter-Control Center Communications Protocol) для
+       установления сеансов и обмена параметрами соединения.В большинстве приложений этот протокол
+       был заменен на TCP</entry>
+     </row>
+     <row>
+      <entry>Dameware Remote Control</entry>
+      <entry>Dameware Mini Remote Control — протокол для взаимодействия с агентом Dameware на
+       удаленном рабочем столе</entry>
+     </row>
+     <row>
+      <entry>DeltaV PLC protocol</entry>
+      <entry>DeltaV — проприетарный протокол связи c контроллерами Emerson DeltaV</entry>
+     </row>
+     <row>
+      <entry>Delta DVP PLC Run command</entry>
+      <entry>Команда протокола Modbus для перевода <abbreviated-form keyref="PLC"/> DELTA DVP в
+       состояние RUN</entry>
+     </row>
+     <row>
+      <entry>Delta DVP PLC Stop command</entry>
+      <entry>Команда протокола Modbus для перевода <abbreviated-form keyref="PLC"/> DELTA DVP в
+       состояние STOP</entry>
+     </row>
+     <row>
+      <entry>Digital Imaging and Communications in Medicine</entry>
+      <entry><ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM_ABORT</entry>
+      <entry>Сообщение об аварийном завершении работы протокола DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM ASSOCIATE connetcion accept</entry>
+      <entry>Разрешение на установку соединения по протоколу DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM ASSOCIATE connetcion reject</entry>
+      <entry>Отказ установки соединения по протоколу DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM ASSOCIATE connetcion requset</entry>
+      <entry>Запрос на установку соединения по протоколу DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM C-FIND command</entry>
+      <entry>Команда "поиск" DICOM-элементов или DICOM-файлов пациентов на выбранном
+       DICOM-устройстве протокола DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM C-MOVE command</entry>
+      <entry>Команда "копировать" (перенести) DICOM-элементы или DICOM-файлы пациентов с одного
+       DICOM-устройства на другое протокола DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM DATA transfer</entry>
+      <entry>Пакет передачи данных по протоколу DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM RELEASE request</entry>
+      <entry>Запрос разрыва соединения протокола DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DICOM RELEASE responce</entry>
+      <entry>Подтверждение разрыва соединения протокола DICOM. <ph
+        conref="../reusable/protocols/DICOM_definition.dita#ReusableComponent_mtj_4nz_sxb/ph_otj_4nz_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DirectLogix ECOM protocol</entry>
+      <entry>DirectLogix — проприетарный протокол для взаимодействия с <abbreviated-form
+        keyref="PLC"/> DirectLogix через модули ECOM, разработанный компанией
+       AutomationDirect</entry>
+     </row>
+     <row>
+      <entry>Distributed Network Protocol 3</entry>
+      <entry>Протокол, используемый для связи между компонентами <abbreviated-form
+        keyref="ACS_and_TP"/></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bqv_24j_gtb">
+        <li>DNP3 Cold Restart command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды холодного перезапуска. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_sqb_f4j_gtb">
+        <li>DNP3 Disable Unsolicited command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды запретить нежелательные сообщения. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_krh_f4j_gtb">
+        <li>DNP3 Enable Unsolicited command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для разрешения нежелательных сообщений. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_w5n_f4j_gtb">
+        <li>DNP3 Initialize Application command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды инициализации приложения. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ins_f4j_gtb">
+        <li>DNP3 Initialize Data command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды инициализации данных. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gky_f4j_gtb">
+        <li>DNP3 Response Broadcast Message</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг широковещательное сообщение. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_klc_g4j_gtb">
+        <li>DNP3 Response Device Restart</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг перезапуска устройства. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gsg_g4j_gtb">
+        <li>DNP3 Response Device Trouble</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг ошибки устройства. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nhl_g4j_gtb">
+        <li>DNP3 Response Digital Outputs In Local</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг "дискретные выходы управляются локально". <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xcr_g4j_gtb">
+        <li>DNP3 Response Event Buffer Overflow</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг переполнения буфера событий. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_s1w_g4j_gtb">
+        <li>DNP3 Response Function Code Not Supported</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг "функция не поддерживается". <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nbc_h4j_gtb">
+        <li>DNP3 Response Object Unknown</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг "объект неизвестен". <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xbh_h4j_gtb">
+        <li>DNP3 Response Operation Already Executing</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг "операция в процессе выполнения". <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jhl_h4j_gtb">
+        <li>DNP3 Response Parameter Error</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг "ошибка параметра". <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fqp_h4j_gtb">
+        <li>DNP3 Response Time Synchronization Required</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг "требуется синхронизация времени". <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_om5_h4j_gtb">
+        <li>DNP3 Response Сonfiguration сorrupt</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие флаг ошибки конфигурации. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_v3y_h4j_gtb">
+        <li>DNP3 Save Configuration command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды сохранения конфигурации. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_e3d_34j_gtb">
+        <li>DNP3 Start Application command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды запуска приложения. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hqh_34j_gtb">
+        <li>DNP3 Stop Application command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, содержащие код функции для команды остановки приложения. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_d1l_34j_gtb">
+        <li>DNP3 Warm Restart command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты DNP3, команда горячего перезапуска. <ph
+        conref="../reusable/protocols/DNP3_definition.dita#ReusableComponent_hh2_vxr_sxb/ph_ih2_vxr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>DNS (Domain Name System)</entry>
+      <entry>Domain Name System (DNS) — протокол компьютерной распределенной системы для получения
+       информации о доменах. Система чаще всего используется для получения IP-адреса по имени хоста
+       (компьютера или устройства), получения информации о маршрутизации почты, обслуживающих узлах
+       для протоколов в домене. Является частью Zeroconf — пакета технологий, который помогает
+       сетевым устройствам находить друг друга автоматически</entry>
+     </row>
+     <row>
+      <entry>Dynamic Host Configuration Protocol </entry>
+      <entry>Dynamic Host Configuration Protocol (DHCP) — протокол управления сетью, используемый в
+       сетях TCP/IP, для динамического присваивания каждому устройству коммутируемой сети IP-адреса
+       и других параметров сетевой конфигурации для возможности их связи с другими IP-сетями.
+       DHCP-сервер выполняет назначение уникальных динамических IP-адресов и соответствующих масок
+       подсети и шлюзов по умолчанию для запущенных компьютеров в конкретной серверной сети.
+      </entry>
+     </row>
+     <row>
+      <entry>Dynamic Host Configuration Protocol for IPv6</entry>
+      <entry>DHCPv6 — реализация протокола DHCP для IPv6</entry>
+     </row>
+     <row>
+      <entry>Emerson Data exchange protocol</entry>
+      <entry>Emerson Data exchange protocol — протокол обмена данными с устройствами
+       Emerson</entry>
+     </row>
+     <row>
+      <entry>Encapsulated Remote Switch Packet Analysis</entry>
+      <entry>ERSPAN — технология компании Cisco, позволяющая отслеживать трафик между коммутаторами.
+       Для копирования отслеживаемого сетевого трафика используется общая инкапсуляция маршрутов
+       (Generic Routing Encapsulation, GRE)</entry>
+     </row>
+     <row>
+      <entry>Ethernet 802.3</entry>
+      <entry>Ethernet — технология пакетной передачи данных между устройствами для компьютерных и
+       промышленных проводных локальных сетей</entry>
+     </row>
+     <row>
+      <entry>EthernetIP</entry>
+      <entry>EthernetIP — промышленный протокол Ethernet, обычно используемый для обмена данными
+       между программируемыми контроллерами и системами человеко-машинного интерфейса. Разработан
+       группой ODVA на основе коммуникационного протокола CIP (Common Interface Protocol)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_tjv_m4j_gtb">
+        <li>EthernetIP Answer PLC reseted</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие ответ от <abbreviated-form keyref="PLC"/> на команду
+       сброса</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nvz_m4j_gtb">
+        <li>EthernetIP Answer PLC started</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие ответ от <abbreviated-form keyref="PLC"/> на команду
+       запуска</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_szd_n4j_gtb">
+        <li>EthernetIP Answer PLC stopped</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие ответ от <abbreviated-form keyref="PLC"/> на команду
+       останова</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_imk_n4j_gtb">
+        <li>EthernetIP CIP IO</li>
+       </ul>
+      </entry>
+      <entry><ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_upx_xdc_5xb">
+        <li>EthernetIP CIP Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос по протоколу CIP. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_amp_g2c_5xb">
+        <li>EthernetIP CIP Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос по протоколу CIP. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_smg_n5b_5xb">
+        <li>EthernetIP Create Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос на создание атрибута. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pyf_1vb_5xb">
+        <li>EthernetIP Create Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос создания атрибута. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nf4_qyb_5xb">
+        <li>EthernetIP Delete Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос удаления атрибута. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_l52_zyb_5xb">
+        <li>EthernetIP Delete Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос удаления атрибута. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hh4_n4j_gtb">
+        <li>EthernetIP Download</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие код функции для загрузки программы в <abbreviated-form
+        keyref="PLC"/></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wn1_c3b_5xb">
+        <li>EthernetIP Forward Close Connection Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос команды "Forward Close". <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zhj_spb_5xb">
+        <li>EthernetIP Forward Close Connection Response</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос команды "Forward Close". <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lwz_xgb_5xb">
+        <li>EthernetIP Forward Open Connection Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос команды "Forward Open". <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hmx_shb_5xb">
+        <li>EthernetIP Forward Open Connection Response</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос команды "Forward Open". <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lmg_qrb_5xb">
+        <li>EthernetIP Get Attribute All Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос всех атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hss_1sb_5xb">
+        <li>EthernetIP Get Attribute All Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос всех атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nw5_psb_5xb">
+        <li>EthernetIP Get Attribute List Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос списка атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ggq_ftb_5xb">
+        <li>EthernetIP Get Attribute List Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос списка атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_h1w_ntb_5xb">
+        <li>EthernetIP Get Attribute Single Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос одного из атрибутов. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ygv_xtb_5xb">
+        <li>EthernetIP Get Attribute Single Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос одного атрибута. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_z4q_xqb_5xb">
+        <li>EthernetIP Get Instance Attribute List Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос списка атрибутов экземпляра. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fvy_2rb_5xb">
+        <li>EthernetIP Get Instance Attribute List Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос списка атрибутов
+       экземпляра. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lb2_wy1_5xb">
+        <li>EthernetIP HMI Read Tag Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос из HMI/SCADA на чтение тегов. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vfr_1by_sxb">
+        <li>EthernetIP List Identity request/response command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат команду запроса списка идентификаторов
+       устройства. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xfp_ww1_5xb">
+        <li>EthernetIP List Interface request/response command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат команду запроса списка интерфейсов
+       устройства. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rmb_v1y_sxb">
+        <li>EthernetIP List Services request/response command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат команду запроса списка сервисов
+       устройства. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jxh_1qb_5xb">
+        <li>EthernetIP Multiple Service Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат список запросов команд. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bpq_jqb_5xb">
+        <li>EthernetIP Multiple Service Response</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат список ответов на запросы команд. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rym_n1b_5xb">
+        <li>EthernetIP Read Fragment Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос чтения фрагмента данных. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ks1_tdb_5xb">
+        <li>EthernetIP Read Modify Write Service Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос чтения, изменения или записи
+       фрагмента данных. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rfq_12b_5xb">
+        <li>EthernetIP Read Modify Write Service Response</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос чтения/изменения/записи
+        фрагмента данных. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jxp_ndb_5xb">
+        <li>EthernetIP Read Modify Write Tag Service Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос чтения, изменения или записи
+        фрагмента тега. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_z2l_fz1_5xb">
+        <li>EthernetIP Read Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос чтения данных. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_v2m_nz1_5xb">
+        <li>EthernetIP Read Responce</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос чтения данных. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_e5w_b1b_5xb">
+        <li>EthernetIP Read Tag Fragment Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос чтения фрагмента тега. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rrk_v1b_5xb">
+        <li>EthernetIP Read Tag Fragment Responce</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос чтения фрагмента данных.
+        <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+     <row><?oxy_custom_end?>
+      <entry>
+       <ul id="ul_o4s_my1_5xb">
+        <li>EthernetIP Read Tag Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос чтения тегов. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+     </row><?oxy_custom_end?>
+     <row>
+      <entry>
+       <ul id="ul_fpy_cx1_5xb">
+        <li>EthernetIP Register Session request/response command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат команду запроса регистрации сессии. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_dqs_n4j_gtb">
+        <li>EthernetIP Reset command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие код функции для сброса <abbreviated-form keyref="PLC"/>.
+        <ph
+        conref="../reusable/protocols/EthernetIP_definition.dita#ReusableComponent_isb_bzr_sxb/ph_ksb_bzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jl4_jcc_5xb">
+        <li>EthernetIP RSlogix5000 Online Change Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос на изменение программы в процессе
+        работы <abbreviated-form keyref="PLC"/>. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_v2m_ycc_5xb">
+        <li>EthernetIP RSlogix5000 Service Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат сервисные запросы ПО RSlogix5000. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_k5r_kdc_5xb">
+        <li>EthernetIP RSlogix5000 Service Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на сервисные запросы ПО
+       RSlogix5000. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fwr_3zb_5xb">
+        <li>EthernetIP Set Attribute All Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос установления значений всех
+       атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_kbx_4zb_5xb">
+        <li>EthernetIP Set Attribute All Response</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос установления значений всех
+        атрибутов. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_z1q_zzb_5xb">
+        <li>EthernetIP Set Attribute List Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос установления значений списка
+       атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_aw1_l1c_5xb">
+        <li>EthernetIP Set Attribute List Response</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат ответ на запрос установления значений
+       списка атрибутов. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pmt_fbc_5xb">
+        <li>EthernetIP Set Attribute Single Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос установления значений одного
+        атрибута. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_stv_5bc_5xb">
+        <li>EthernetIP Set Attribute Single Response</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос установления значений одного
+        атрибута. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lnr_fkk_sxb">
+        <li>EthernetIP Set Password</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие код операции для установки или изменения пароля
+        <abbreviated-form keyref="PLC"/>. <ph
+        conref="../reusable/protocols/EthernetIP_definition.dita#ReusableComponent_isb_bzr_sxb/ph_ksb_bzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pqx_n4j_gtb">
+        <li>EthernetIP Start command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие код функции для запуска <abbreviated-form keyref="PLC"/>.
+        <ph
+        conref="../reusable/protocols/EthernetIP_definition.dita#ReusableComponent_isb_bzr_sxb/ph_ksb_bzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vjd_44j_gtb">
+        <li>EthernetIP Stop command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие код функции для останова <abbreviated-form keyref="PLC"
+       />. <ph
+        conref="../reusable/protocols/EthernetIP_definition.dita#ReusableComponent_isb_bzr_sxb/ph_ksb_bzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lfc_by1_5xb">
+        <li>EthernetIP T3 connected msg</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, формата SendUnitData. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nh2_qx1_5xb">
+        <li>EthernetIP unconnected msg</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, формата SendRRData. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_oyd_kx1_5xb">
+        <li>EthernetIP Unregister Session request/response command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат команду запроса окончания сессии. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_izr_qkk_sxb">
+        <li>EthernetIP Unsecure PLC</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, содержашие код операции для снятия защиты с
+        <abbreviated-form keyref="PLC"/>. <ph
+        conref="../reusable/protocols/EthernetIP_definition.dita#ReusableComponent_isb_bzr_sxb/ph_ksb_bzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vcj_44j_gtb">
+        <li>EthernetIP Upload</li>
+       </ul>
+      </entry>
+      <entry>Пакеты EthernetIP, содержащие код функции для выгрузки программы из <abbreviated-form
+        keyref="PLC"/></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wk3_5cb_5xb">
+        <li>EthernetIP Write Fragment Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос записи фрагмента данных. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_urm_ccb_5xb">
+        <li>EthernetIP Write Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос записи данных. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_srw_kcb_5xb">
+        <li>EthernetIP Write Responce</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос записи данных. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hcj_bdb_5xb">
+        <li>EthernetIP Write Tag Fragment Request</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола EthernetIP, которые содержат запрос записи фрагмента тега. <ph
+        conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_igs_hdb_5xb">
+        <li>EthernetIP Write Tag Fragment Responce</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат ответ на запрос записи фрагмента данных. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nnx_5bb_5xb">
+        <li>EthernetIP Write Tag Request</li>
+       </ul>
+      </entry>
+      <entry>
+       <p>Пакеты протокола EthernetIP, которые содержат запрос записи значения тега. <ph
+         conref="../reusable/protocols/EthernetIP_ODVA_definition.dita#ReusableComponent_ip2_mby_sxb/ph_jp2_mby_sxb"
+        /></p>
+      </entry>
+     </row>
+     <row>
+      <entry>FTP (File Transfer Protocol) — Control connection</entry>
+      <entry>File Transfer Protocol (FTP) — стандартный протокол передачи файлов по сети. Формально
+       FTP подразумевает подключение к определенной папке, которая находится на сервере</entry>
+     </row>
+     <row>
+      <entry>General Electric Global Data</entry>
+      <entry>Ethernet Global Data (EGD) — протокол, предназначенный для передачи данных между
+        <abbreviated-form keyref="PLC"/> GE Fanuc и другими компонентами автоматизированных систем:
+       приводами, HMI, SCADA, иными <abbreviated-form keyref="PLC"/>. EGD позволяет источнику данных
+       (серверу) предоставить доступ потребителям (клиентам) к областям его памяти с заданным
+       периодом времени</entry>
+     </row>
+     <row>
+      <entry>Generic Routing Encapsulation</entry>
+      <entry>GRE (Generic Routing Encapsulation — общая инкапсуляция маршрутов) — протокол
+       туннелирования сетевых пакетов, разработанный компанией Cisco Systems. Его основное
+       назначение — инкапсуляция пакетов сетевого уровня сетевой модели OSI в IP-пакеты</entry>
+     </row>
+     <row>
+      <entry>GE-SRTP (General Electric Service Request Transport Protocol)</entry>
+      <entry>General Electric Service Request Transport Protocol (GE-SRTP) — протокол, разработанный
+       компанией GE Fanuc и предназначенный для обмена данными между <abbreviated-form keyref="PLC"
+       /> GE Fanuc. Применяется через Ethernet. Протокол GE-SRTP поддерживается практически всем
+       оборудованием автоматизации, произведенным компанией GE и оснащенным портами Ethernet. Чтение
+       и запись в системную память любого количества удаленных устройств, поддерживающих протокол
+       SRTP, может осуществляться любым клиентом SRTP. </entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pnx_rjk_sxb">
+        <li>GE-SRTP change PLC CPU Privilege Level command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для изменения уровня привилегий
+       ЦПУ <abbreviated-form keyref="PLC"/>. <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_m42_ckk_sxb">
+        <li>GE-SRTP download to PLC command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для загрузки программы в
+        <abbreviated-form keyref="PLC"/>. <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gnd_pjk_sxb">
+        <li>GE-SRTP logon command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для авторизации пользователей.
+        <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nvg_3jk_sxb">
+        <li>GE-SRTP read program memory command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для чтения программной памяти.
+        <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zpz_tjk_sxb">
+        <li>GE-SRTP set control ID (CPU ID) command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для назначения контрольного
+       идентификатора (Идентификатора ЦПУ). <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_etc_xjk_sxb">
+        <li>GE-SRTP set PLC (run vs stop) command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для настройки <abbreviated-form
+        keyref="PLC"/> (запуск или остановка). <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qhc_1kk_sxb">
+        <li>GE-SRTP upload from PLC command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции для выгрузки программ из
+        <abbreviated-form keyref="PLC"/>. <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hyz_ljk_sxb">
+        <li>GE-SRTP write program memory command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола GE-SRTP, которые содержат код операции записи памяти программ. <ph
+        conref="../reusable/protocols/GE-SRTP_definition.dita#ReusableComponent_phl_nwr_sxb/ph_qhl_nwr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>Graylog</entry>
+      <entry>Graylog — протокол для взаимодействия с ПО компании Graylog, предназначенного для
+       централизованного сбора, хранения и анализа данных о различных событиях в журналах на
+       серверах локальной сети</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC connect</entry>
+      <entry>Haiwell PLC connect — протокол подключения среды разработки к ПЛК Haiwell</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC diagnostics</entry>
+      <entry>Haiwell PLC diagnostics — протокол сбора данных с ПЛК Haiwell</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC password change</entry>
+      <entry>Haiwell PLC password change — протокол смены пароля ПЛК Haiwell</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC project clear</entry>
+      <entry>Haiwell PLC project clear — протокол удаление текущей программы из ПЛК Haiwell</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC project download</entry>
+      <entry>Haiwell PLC project download (PC to PLC) — протокол загрузки проекта на ПЛК
+       Haiwell</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC project upload</entry>
+      <entry>Haiwell PLC project upload (PLC to PC) — протокол выгрузки проекта из ПЛК
+       Haiwell</entry>
+     </row>
+     <row>
+      <entry>Haiwell PLC set parameters</entry>
+      <entry>Haiwell PLC set parameters — протокол изменения параметров ПЛК Haiwell</entry>
+     </row>
+     <row>
+      <entry>Honeywell C300 Data Exchange protocol</entry>
+      <entry>Honeywell C300 Data Exchange — протокол для обмена информацией в контроллерах Honeywell
+       C300</entry>
+     </row>
+     <row>
+      <entry>Honeywell C300 Information protocol</entry>
+      <entry>Honeywell C300 Information — протокол для передачи сведений о контроллерах Honeywell
+       C300</entry>
+     </row>
+     <row>
+      <entry>HTTP (Hyper Text Transfer Protocol)</entry>
+      <entry>Hypertext Transfer Protocol (HTTP) — протокол прикладного уровня передачи данных для
+       передачи гипертекстовых документов, таких как HTML. В первую очередь он используется для
+       связи между веб-браузерами и веб-серверами, но также может использоваться и для других целей.
+       Протокол работает на основе классической клиент-серверной модели, когда клиент открывает
+       соединение для создания запроса, а затем ждет ответа. Клиенты и серверы взаимодействуют,
+       обмениваясь одиночными сообщениями</entry>
+     </row>
+     <row>
+      <entry>Huawei loopback detection</entry>
+      <entry>Протокол 2 уровня, используемый в коммутаторах Huawei для обнаружения петель в
+       сети</entry>
+     </row>
+     <row>
+      <entry>ICMP (Internet Control Message Protocol)</entry>
+      <entry><ph
+        conref="../reusable/protocols/ICMP_definition.dita#ReusableComponent_dq2_yzr_sxb/ph_eq2_yzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rfp_w4j_gtb">
+        <li>ICMP debug</li>
+       </ul>
+      </entry>
+      <entry>Пакеты группы Debug протокола ICMP, которые содержат в поле тип одно из значений: <ul
+        id="ul_ek1_k4p_b1c">
+        <li>0 (echo reply);</li>
+        <li>8 (echo);</li>
+        <li>13 (timestamp);</li>
+        <li>14 (timestamp reply).</li>
+       </ul>Стандартные пакеты, которые постоянно используются для отладки сети. <ph
+        conref="../reusable/protocols/ICMP_definition.dita#ReusableComponent_dq2_yzr_sxb/ph_eq2_yzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rg5_w4j_gtb">
+        <li>ICMP extra</li>
+       </ul>
+      </entry>
+      <entry>Пакеты группы Extra протокола ICMP, не относящиеся к группам host_error, route_error,
+       net_error, debug или suspicious. <ph
+        conref="../reusable/protocols/ICMP_definition.dita#ReusableComponent_dq2_yzr_sxb/ph_eq2_yzr_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xr1_x4j_gtb">
+        <li>ICMP host error</li>
+       </ul>
+      </entry>
+      <entry>Пакеты группы Host-error протокола ICMP с типом 3 (адресат недоступен), которые
+       содержат одно из следующих сообщений: <ul id="ul_dlm_xpp_b1c">
+        <li>2 (протокол недостижим);</li>
+        <li>3 (порт недостижим).</li>
+       </ul>Данные пакеты предупреждают о возможной проблеме на хосте-получателе</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fbj_x4j_gtb">
+        <li>ICMP net error</li>
+       </ul>
+      </entry>
+      <entry>Net-error – пакеты ICMP с типом 4 (Сдерживание источника, отключение источника при
+       переполнении очереди) или 12 (Неверный параметр, проблема с параметрами дейтаграммы: ошибка в
+       IP-заголовке или отсутствует необходимая опция), предупреждающие о проблеме в сети</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ujv_x4j_gtb">
+        <li>ICMP route error</li>
+       </ul>
+      </entry>
+      <entry>Route_error — пакеты ICMP с типом 3 (Адресат недоступен), содержащие одно из сообщений:
+       0 («Сеть недостижима»), 1(«Узел недостижим»), 4 («Необходима фрагментация, но установлен флаг
+       DF ее запрета»), или 5 («Неверный маршрут от источника»), либо пакеты ICMP с типом 11 (Время
+       жизни дейтаграммы истекло), содержащие одно из сообщений: 0 («Время жизни пакета (TTL)
+       истекло при транспортировке») или 1 («Время жизни пакета истекло при сборке фрагментов»).
+       Данные пакеты предупреждают о возможной проблеме маршрутизации в сети</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wtj_y4j_gtb">
+        <li>ICMP suspicious</li>
+       </ul>
+      </entry>
+      <entry>Suspicious — пакеты ICMP с типом 5 (Перенаправление), 15 (Информационный запрос —
+       устаревший тип) или 16 (Информационный ответ — устаревший тип). Появление такого пакета ICMP
+       с высокой вероятностью является признаком компьютерной атаки</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gqy_1pj_gtb">
+        <li>ICMPv6 (Internet Control Message Protocol version 6)</li>
+       </ul>
+      </entry>
+      <entry>ICMPv6 — реализация протокола ICMP для IPv6</entry>
+     </row>
+     <row>
+      <entry>ICPDAS MiniOS7 Utility protocol </entry>
+      <entry><ph
+        conref="../reusable/protocols/ICPDAS_definition.dita#ReusableComponent_gqn_c2s_sxb/ph_jqn_c2s_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bv3_tmk_sxb">
+        <li>ICPDAS bios1 command</li>
+       </ul>
+      </entry>
+      <entry>Команда обновления операционной системы MiniOS7 (второй шаг, запись файла в FLASH
+       память). <ph
+        conref="../reusable/protocols/ICPDAS_definition.dita#ReusableComponent_gqn_c2s_sxb/ph_jqn_c2s_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_p2w_zmk_sxb">
+        <li>ICPDAS research command</li>
+       </ul>
+      </entry>
+      <entry>Команда поиска <abbreviated-form keyref="PLC"/> ICPDAS в сети. <ph
+        conref="../reusable/protocols/ICPDAS_definition.dita#ReusableComponent_gqn_c2s_sxb/ph_jqn_c2s_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_itq_vmk_sxb">
+        <li>ICPDAS reset command</li>
+       </ul>
+      </entry>
+      <entry>Команда перезагрузки системы MiniOS7. <ph
+        conref="../reusable/protocols/ICPDAS_definition.dita#ReusableComponent_gqn_c2s_sxb/ph_jqn_c2s_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_h3y_qmk_sxb">
+        <li>ICPDAS upload command</li>
+       </ul>
+      </entry>
+      <entry>Команда обновления операционной системы MiniOS7 (первый шаг, загрузка файла в SRAM).
+        <ph
+        conref="../reusable/protocols/ICPDAS_definition.dita#ReusableComponent_gqn_c2s_sxb/ph_jqn_c2s_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>IEC 60870-5-104</entry>
+      <entry>IEC 60870-5-104 — протокол стандарта IEC 60870-5 для оборудования и систем
+       телеуправления, который обеспечивает профиль связи для отправки базовых сообщений
+       телеуправления между системами в электротехнике и автоматизации энергосистем</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xcz_jqp_b1c">
+        <li>IEC 60870-5-104 insert command</li>
+       </ul>
+      </entry>
+      <entry>Команда insert</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ybf_lqp_b1c">
+        <li>IEC 60870-5-104 insert off command</li>
+       </ul>
+      </entry>
+      <entry>Команда insert off</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fgh_lqp_b1c">
+        <li>IEC 60870-5-104 put command</li>
+       </ul>
+      </entry>
+      <entry>Команда put</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_dxb_mqp_b1c">
+        <li>IEC 60870-5-104 put reverse command</li>
+       </ul>
+      </entry>
+      <entry>Команда put reverse</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_z4f_spj_gtb">
+        <li>IEC104 change value command</li>
+       </ul>
+      </entry>
+      <entry>Команда change value</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_mhm_spj_gtb">
+        <li>IEC104 insert command</li>
+       </ul>
+      </entry>
+      <entry>Команда insert</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_smr_spj_gtb">
+        <li>IEC104 insert off command</li>
+       </ul>
+      </entry>
+      <entry>Команда insert off</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xcw_spj_gtb">
+        <li>IEC104 put command</li>
+       </ul>
+      </entry>
+      <entry>Команда put</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_uwz_spj_gtb">
+        <li>IEC104 put reverse command</li>
+       </ul>
+      </entry>
+      <entry>Команда put reverse</entry>
+     </row>
+     <row>
+      <entry>IEC 61850/GOOSE</entry>
+      <entry>GOOSE (Generic Object-Oriented Substation Event) — протокол стандарта МЭК 61850,
+       предназначенный для обмена дискретными данными между терминалами релейной защиты и автоматики
+       (РЗА) посредством передачи данных в цифровом виде по Ethernet</entry>
+     </row>
+     <row>
+      <entry>IEC 61850/MMS</entry>
+      <entry>MMS (Manufacturing Message Specification) — протокол передачи данных по технологии
+       «клиент-сервер» стандарта МЭК 61850, предназначенный для передачи данных от терминалов
+       релейной защиты и автоматики (РЗА) в SCADA систему для дальнейшей визуализации</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wx1_tzx_sxb">
+        <li>IEC 61850/MMS Confirmed Response PDU</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат ответ на запрос в формате "Confirmed
+       RequestPDU". <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lcw_21y_sxb">
+        <li>IEC 61850/MMS Confirmed ResponsePDU read command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат ответ на запрос чтения данных. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_rrc_k1y_sxb">
+        <li>IEC 61850/MMS Confirmed ResponsePDU write command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат ответ на запрос записи данных. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vs5_3sx_sxb">
+        <li>IEC 61850/MMS Confirmed Request delete Program Invocation command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос на удаление программы. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_u53_qsx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Download command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос передачи контента домена,
+       включая любые подчиненные объекты, посредством загрузки данных MMS-пользователю. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_asr_yqx_sxb">
+        <li>IEC 61850/MMS Confirmed Request GetNameList command </li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос списка имен. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qnx_dsx_sxb">
+        <li>IEC 61850/MMS Confirmed Request GetNamedVariableListAttributes command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос чтения списка атрибутов. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_of5_frx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Identify command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос идентификатора устройства. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_l4v_kzx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Kill command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат команду уничтожения. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_tw3_2qx_sxb">
+        <li>IEC 61850/MMS Confirmed Request PDU</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC 61850 MMS, которые содержат запрос в формате "Confirmed
+       RequestPDU". <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bfz_trx_sxb">
+        <li>IEC 61850/MMS Confirmed Request read command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос чтения данных. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_mz1_4rx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Rename command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос изменения имени. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ehg_3zx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Reset command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат команду сброса. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ttv_vtx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Resume command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат команду возобновления работы. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ygn_btx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Start command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат команду запуска. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bsp_ktx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Stop command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат команду останова. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wht_2qx_sxb">
+        <li>IEC 61850/MMS Confirmed Request status command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC 61850 MMS, которые содержат запрос статуса устройства. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_y51_ysx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Upload command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос передачи контента домена,
+       включая любые подчиненные объекты, посредством загрузки данных от удаленного пользователя.
+        <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_d3s_wrx_sxb">
+        <li>IEC 61850/MMS Confirmed Request Write command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола IEC61850 MMS, которые содержат запрос записи данных. <ph
+        conref="../reusable/protocols/IEC61850_definition.dita#ReusableComponent_isb_pqx_sxb/ph_ksb_pqx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>IEEE 802.2 Logical Link Control</entry>
+      <entry>IEEE 802.2 Logical Link Control (LLC) — протокол управления логическим каналом. По
+       стандарту IEEE 802 — это верхний подуровень канального уровня модели OSI, который
+       осуществляет управление передачей данных и обеспечивает проверку и правильность передачи
+       информации по соединению</entry>
+     </row>
+     <row>
+      <entry>IEEE 802.2 Logical Link Control SNAP</entry>
+      <entry>IEEE 802.2 Logical Link Control Subnetwork Access Protocol (SNAP) — протокол доступа к
+       подсети, который используется для инкапсуляции дейтаграмм IP и запросов ARP в сетях IEEE 802.
+       Дейтаграммы IP передаются в сетях IEEE 802 инкапсулированными в 802.2 LLC и канальный уровень
+       SNAP, а также в физические уровни 802.3, 802.4 и 802.5</entry>
+     </row>
+     <row>
+      <entry>IGMP</entry>
+      <entry>Internet Group Management Protocol (IGMP) — протокол сетевого уровня для управления
+       групповой передачей данных в сетях, основанных на протоколе IP. IGMP используется
+       маршрутизаторами и IP-узлами для организации сетевых устройств в группы. Используется только
+       при взаимодействии связанных друг с другом маршрутизатора и хоста, который выступает или
+       желает выступать в роли получателя трафика группового вещания</entry>
+     </row>
+     <row>
+      <entry>IMAP</entry>
+      <entry>IMAP — протокол прикладного уровня для доступа к электронной почте</entry>
+     </row>
+     <row>
+      <entry>Internet Group Management Protocol</entry>
+      <entry>Internet Group Management Protocol (IGMP) — протокол сетевого уровня для управления
+       групповой передачей данных в сетях, основанных на протоколе IP. IGMP используется
+       маршрутизаторами и IP-узлами для организации сетевых устройств в группы. Используется только
+       при взаимодействии связанных друг с другом маршрутизатора и хоста, который выступает или
+       желает выступать в роли получателя трафика группового вещания</entry>
+     </row>
+     <row>
+      <entry>Internet Message Access Protocol</entry>
+      <entry>IMAP протокол прикладного уровня для доступа к электронной почте</entry>
+     </row>
+     <row>
+      <entry>Internet Relay Chat Protocol</entry>
+      <entry>IRC — протокол прикладного уровня для обмена сообщениями в режиме реального
+       времени</entry>
+     </row>
+     <row>
+      <entry>IP (Internet Protocol)</entry>
+      <entry>Internet Protocol (IP) — маршрутизируемый протокол сетевого уровня (по сетевой модели
+       OSI) стека TCP/IP. Это протокол или набор правил для маршрутизации и адресации пакетов
+       данных, чтобы они могли перемещаться по сети и достигать правильного пункта назначения. IP
+       объединяет сегменты сети в единую сеть, обеспечивая доставку пакетов данных между любыми
+       узлами сети через произвольное число промежуточных узлов (маршрутизаторов)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bnj_mqj_gtb">
+        <li>IPv4 (Internet Protocol version 4)</li>
+       </ul>
+      </entry>
+      <entry>Internet Protocol version 4 (IPv4) — в протоколе IP этой версии каждому узлу сети
+       ставится в соответствие IP-адрес длиной 4 октета (4 байта). При этом компьютеры в подсетях
+       объединяются общими начальными битами адреса. Количество этих бит, общее для данной подсети,
+       называется маской подсети</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lxp_mqj_gtb">
+        <li>IPv6 (Internet Protocol version 6)</li>
+       </ul>
+      </entry>
+      <entry>Internet Protocol version 6 (IPv6) — новая версия интернет-протокола (IP), призванная
+       решить проблемы предыдущей версии (IPv4) при ее использовании в Интернете (исчерпание IPv4
+       адресов) и обеспечить дополнительные возможности (поддержку огромных пакетов — джамбограмм,
+       многоадресное вещание и др.)</entry>
+     </row>
+     <row>
+      <entry>IPX (Internetwork Packet Exchange)</entry>
+      <entry>IPX (Internetwork Packet Exchange) — протокол сетевого уровня модели OSI в стеке
+       протоколов IPX/SPX, предназначенный для передачи дейтаграмм (без установления соединения) от
+       одного процесса к другому</entry>
+     </row>
+     <row>
+      <entry>IRC</entry>
+      <entry>IRC — протокол прикладного уровня для обмена сообщениями в режиме реального
+       времени</entry>
+     </row>
+     <row>
+      <entry>ISO 8327-1 OSI Session Protocol</entry>
+      <entry>ISO 8327 — базовый протокол сеансового уровня, ориентированный на соединение. Протокол
+       устанавливает, управляет и завершает соединение между локальными и удаленными приложениями.
+       Также управляет безопасностью соединения, использует приостановку/возобновление для
+       синхронизации аудио и видео</entry>
+     </row>
+     <row>
+      <entry>ISO 8823 OSI Presentation</entry>
+      <entry>ISO 8823 — протокол уровня представления данных, ориентированный на соединение.
+       Применяется для кодирования и декодирования данных. Поддерживает синтаксис однократной
+       передачи данных и базовые правила кодирования (BER). Другие синтаксисы передачи данных будут
+       отклонены при попытке соединения</entry>
+     </row>
+     <row>
+      <entry>JavaScript Object Notation Remote Procedure Call</entry>
+      <entry>JSON-RPC — протокол удаленного вызова процедур, использующий JSON для кодирования
+       сообщений</entry>
+     </row>
+     <row>
+      <entry>JSON-RPC</entry>
+      <entry>JSON-RPC — протокол удаленного вызова процедур, использующий JSON для кодирования
+       сообщений</entry>
+     </row>
+     <row>
+      <entry>Kaspersky Security Center</entry>
+      <entry>Протокол, используемый Kaspersky Security Center для управления клиентскими
+       устройствами и подчиненными Серверами администрирования.Легитимный протокол</entry>
+     </row>
+     <row>
+      <entry>Lightweight Directory Access Protocol (LDAP)</entry>
+      <entry>Lightweight Directory Access Protocol (LDAP) — протокол прикладного уровня для доступа
+       к службе каталогов X.500, разработанный сообществом IETF. Позволяет производить операции
+       аутентификации, поиска и сравнения, а также операции добавления, изменения или удаления
+       записей службы</entry>
+     </row>
+     <row>
+      <entry>Link Layer Discovery Protocol (LLDP)</entry>
+      <entry>Link Layer Discovery Protocol (LLDP) — протокол канального уровня, который позволяет
+       сетевым устройствам анонсировать в сеть информацию о себе и о своих возможностях, а также
+       собирать эту информацию о соседних устройствах. Это стандартный протокол, который описан в
+       стандарте IEEE 802.1AB</entry>
+     </row>
+     <row>
+      <entry>Link-local Multicast Name Resolution (LLMNR)</entry>
+      <entry>Link-Local Multicast Name Resolution (LLMNR) — протокол легковесной службы имен LLMNR,
+       использующей группу абонентов (multicast group) для поиска и преобразования базовых имен в
+       пределах одной подсети для IPv4, IPv6 или обоих видов адресов сразу без обращения к серверам.
+       Аналог NetBIOS Name Service. Используется в сетях, где применение DNS-сервера либо неудобно,
+       либо невозможно</entry>
+     </row>
+     <row>
+      <entry>MC Protocol for Mitsubishi PLC binary</entry>
+      <entry>MC Protocol — открытый протокол, предназначенный для связи с устройствами MELSOFT
+       копании MITSUBISHI ELECTRIC</entry>
+     </row>
+     <row>
+      <entry>MDLC</entry>
+      <entry>Message Data Link Controller или Motorola Data Link Communication (MDLC) — протокол,
+       базирующийся на 7-уровневой модели OSI, опубликованной Международной организацией по
+       стандартизации, адаптированный компанией Motorola для систем SCADA и передачи данных по
+       радиоканалу</entry>
+     </row>
+     <row>
+      <entry>MDLC RTU to RTU</entry>
+      <entry>MDLC RTU to RTU — вариант протокола MDLC для передачи базы данных, локального состояния
+       и измерений от одного RTU сети другому</entry>
+     </row>
+     <row>
+      <entry>MDLC RTU to SCADA</entry>
+      <entry>MDLC RTU to SCADA — вариант протокола MDLC для передачи базы данных, локального
+       состояния и измерений от одного RTU сети к SCADA путем эмуляции SCADA-протоколов. </entry>
+     </row>
+     <row>
+      <entry>Media Redundancy Protocol</entry>
+      <entry>MRP — это стандартный протокол, используемый в кольцевых топологиях, позволяет избежать
+       отказов точек, обеспечивая время восстановления 10 мс или меньше</entry>
+     </row>
+     <row>
+      <entry>MELSOFT connection for Mitsubishi PLC</entry>
+      <entry>MELSOFT connection — проприетарный протокол, предназначенный для связи между
+       устройствами и программным обеспечением MELSOFT компании MITSUBISHI ELECTRIC</entry>
+     </row>
+     <row>
+      <entry>Message Queue Telemetry Transport</entry>
+      <entry>MQTT — упрощенный сетевой протокол, ориентированный на обмен сообщениями между
+       устройствами по принципу издатель-подписчик</entry>
+     </row>
+     <row>
+      <entry>Microsoft Windows Browser Protocol</entry>
+      <entry>Browser — протокол службы Microsoft Computer Browser, которая обеспечивает
+       функционирование списков Windows-доменов, рабочих групп и компьютеров в масштабе всей сети, а
+       также списков других сетевых аппаратных устройств, совместимых с протоколом NetBIOS. Она
+       позволяет пользователям легко просматривать и находить общие ресурсы на компьютерах в одной
+       подсети (но недоступна в сегментах сети, разделенных маршрутизаторами)</entry>
+     </row>
+     <row>
+      <entry>Mitsubishi FX2N PLC protocol</entry>
+      <entry>Mitsubishi FX2N — проприетарный протокол для связи с <abbreviated-form keyref="PLC"/>
+       FX2N MITSUBISHI ELECTRIC</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_icq_lnk_sxb">
+        <li>Mitsubishi PLC REMOTE Latch Clear command</li>
+       </ul>
+      </entry>
+      <entry>Команда удаленной очистки памяти <abbreviated-form keyref="PLC"/> MITSUBISHI
+       ELECTRIC</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_izx_lnk_sxb">
+        <li>Mitsubishi PLC REMOTE Logon command</li>
+       </ul>
+      </entry>
+      <entry>Команда авторизации пользователя <abbreviated-form keyref="PLC"/> MITSUBISHI
+       ELECTRIC</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gp2_mnk_sxb">
+        <li>Mitsubishi PLC REMOTE PAUSE command</li>
+       </ul>
+      </entry>
+      <entry>Команда удаленного перевода <abbreviated-form keyref="PLC"/> MITSUBISHI ELECTRIC в
+       состояние PAUSE</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_m1l_mnk_sxb">
+        <li>Mitsubishi PLC REMOTE RESET command</li>
+       </ul>
+      </entry>
+      <entry>Команда удаленного сброса <abbreviated-form keyref="PLC"/> MITSUBISHI ELECTRIC</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jqc_nnk_sxb">
+        <li>Mitsubishi PLC REMOTE RUN command</li>
+       </ul>
+      </entry>
+      <entry>Команда удаленного перевода <abbreviated-form keyref="PLC"/> MITSUBISHI ELECTRIC в
+       состояние RUN</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zth_nnk_sxb">
+        <li>Mitsubishi PLC REMOTE STOP command</li>
+       </ul>
+      </entry>
+      <entry>Команда удаленного перевода <abbreviated-form keyref="PLC"/> MITSUBISHI ELECTRIC в
+       состояние STOP</entry>
+     </row>
+     <row>
+      <entry>MMS</entry>
+      <entry>MMS (Manufacturing Message Specification) — протокол передачи данных по технологии
+       «клиент-сервер» стандарта МЭК 61850, предназначенный для передачи данных от терминалов
+       релейной защиты и автоматики (РЗА) в SCADA-систему для дальнейшей визуализации</entry>
+     </row>
+     <row>
+      <entry>Modbus</entry>
+      <entry>Modbus — открытый коммуникационный протокол, часто встречающийся в сетях SCADA и
+       применяемый в промышленности для организации связи между электронными устройствами на основе
+       архитектуры «ведущий — ведомый» («master-slave»). Необходимо оценивать легитимность
+       указанного потока</entry>
+     </row>
+     <row>
+      <entry>Modbus RTU over TCP</entry>
+      <entry>Протокол Modbus RTU через TCP/IP. Обычно используется серверами последовательных
+       интерфейсов, где может быть расположен клиент Modbus Ethernet, связывающийся с несколькими
+       ведомыми устройствами Modbus RTU-RS485 через сервер. Последовательный сервер удаляет секцию
+       Ethernet и пересылает сообщение Modbus RTU на последовательный порт</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zmj_xqj_gtb">
+        <li>Modbus/TCP operational</li>
+       </ul>
+      </entry>
+      <entry>TCP-протокол Modbus</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jr4_xqj_gtb">
+        <li>Modbus/TCP programming</li>
+       </ul>
+      </entry>
+      <entry>Пакеты Modbus TCP, содержащие зарезервированные коды функций</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_usg_zqj_gtb">
+        <li>Modbus/TCP Response Error</li>
+       </ul>
+      </entry>
+      <entry>Ответы Modbus TCP, содержащие ошибки выполнения Modbus-запросов</entry>
+     </row>
+     <row>
+      <entry>Motorola Data Link Communication (MDLC)</entry>
+      <entry>Message Data Link Controller/Motorola Data Link Communication (MDLC) — протокол,
+       базирующийся на 7-уровневой модели OSI, опубликованной Международной организацией по
+       стандартизации, адаптированный компанией Motorola для систем SCADA и передачи данных по
+       радиоканалу</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_xpq_mrj_gtb">
+        <li>Motorola MDLC RTU to RTU </li>
+       </ul>
+      </entry>
+      <entry>MDLC RTU to RTU — вариант протокола MDLC для передачи базы данных, локального состояния
+       и измерений от одного RTU сети другому</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zjv_mrj_gtb">
+        <li>Motorola MDLC RTU to SCADA </li>
+       </ul>
+      </entry>
+      <entry>MDLC RTU to SCADA — вариант протокола MDLC для передачи базы данных, локального
+       состояния и измерений от одного RTU сети к SCADA путем эмуляции SCADA-протоколов</entry>
+     </row>
+     <row>
+      <entry>Moxa MXconfig Broadcast Search</entry>
+      <entry>Moxa MXconfig Broadcast Search — широковещательный поиск устройств Moxa из ПО
+       MXconfig</entry>
+     </row>
+     <row>
+      <entry>MQTT</entry>
+      <entry>MQTT — упрощенный сетевой протокол, ориентированный на обмен сообщениями между
+       устройствами по принципу «издатель-подписчик»</entry>
+     </row>
+     <row>
+      <entry>MRP</entry>
+      <entry>MRP — протокол, используемый в кольцевых топологиях; позволяет избежать отказов точек,
+       обеспечивая время восстановления 10 мс или меньше</entry>
+     </row>
+     <row>
+      <entry>Multicast DNS</entry>
+      <entry>Multicast DNS (mDNS) — многоадресная (multicast) версия протокола DNS (запросы
+       рассылаются всем устройствам широковещательного домена).Domain Name System (DNS) — протокол
+       компьютерной распределенной системы для получения информации о доменах. Система чаще всего
+       используется для получения IP-адреса по имени хоста (компьютера или устройства), получения
+       информации о маршрутизации почты, обслуживающих узлах для протоколов в домене. Является
+       частью Zeroconf — пакета технологий, который помогает сетевым устройствам находить друг друга
+       автоматически</entry>
+     </row>
+     <row>
+      <entry>MySQL Protocol</entry>
+      <entry>MySQL — протокол для взаимодействия с СУБД MySQL</entry>
+     </row>
+     <row>
+      <entry>Network Basic Input/Output System (NetBIOS)</entry>
+      <entry>Network Basic Input/Output System (NetBIOS) — протокол сетевого уровня для обнаружения
+       компьютеров в сети, построенной на базе TCP/IP. Особенностью является возможность его работы
+       поверх разных протоколов (NetBEUI, IPX, стек протоколов TCP/IP)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_yqk_qrj_gtb">
+        <li>Netbios Datagram Service</li>
+       </ul>
+      </entry>
+      <entry>NetBIOS Datagram Services (NETBIOS-DGM) — протокол службы рассылки дейтаграмм NetBIOS
+       (для связи без установления соединения). Этот сервис обеспечивает: персональный запрос к
+       одной станции, широковещательный запрос ко всем станциям, запрос к станциям с одним групповым
+       именем</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_edt_qrj_gtb">
+        <li>NetBIOS over IPX</li>
+       </ul>
+      </entry>
+      <entry>NetBIOS over IPX — протокол NetBIOS, использующий протокол IPX в качестве
+       транспорта</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_tzy_qrj_gtb">
+        <li>NetBIOS over LLC</li>
+       </ul>
+      </entry>
+      <entry>NetBIOS over LLC — протокол NetBIOS, использующий протокол LLC в качестве
+       транспорта</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wtk_rrj_gtb">
+        <li>NetBios Session Service</li>
+       </ul>
+      </entry>
+      <entry>NetBIOS-SSN — протокол службы сеанса NetBIOS (для связи с установлением соединения).
+       Служба позволяет двум компьютерам устанавливать соединение, позволяет сообщениям охватывать
+       несколько пакетов и обеспечивает обнаружение и восстановление ошибок</entry>
+     </row>
+     <row>
+      <entry>Network Dynamic Data Exchange</entry>
+      <entry>Network Dynamic Data Exchange (NetDDE) — протокол механизма Network DDE,
+       предназначенный для динамического взаимодействия приложений в операционных системах Microsoft
+       Windows и OS/2, выполняющихся на разных компьютерах в сети</entry>
+     </row>
+     <row>
+      <entry>Network File System</entry>
+      <entry>NFS — протокол, используемый для получения сетевого доступа к файлам сети</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_dmw_5rj_gtb">
+        <li>Network File System v2</li>
+       </ul>
+      </entry>
+      <entry>В NFSv2 отсутствуют данные о внутреннем состоянии внутри протокола</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hn1_vrj_gtb">
+        <li>Network File System v2 or v3 on rpc</li>
+       </ul>
+      </entry>
+      <entry>Определяются как NFSv2, так и NFSv3 с использованием протокола удаленного вызова
+       процедур (RPC)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_hvf_vrj_gtb">
+        <li>Network File System v3</li>
+       </ul>
+      </entry>
+      <entry>В NFSv3 добавлена поддержка дескрипторов файлов переменного размера до 64 байт, снято
+       ограничение на 8192 байта в RPC-вызовах чтения и записи, реализована поддержка файлов больших
+       размеров, добавлена поддержка асинхронных вызовов операций записи, к процедурам READ и WRITE
+       добавлены вызовы ACCESS, MKNOD, READDIRPLUS, FSINFO, FSSTAT, PATHCONF и COMMIT</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jqj_vrj_gtb">
+        <li>Network File System v4</li>
+       </ul>
+      </entry>
+      <entry>NFSv4 отличается улучшенными по сравнению с предыдущей версией параметрами
+       производительности и безопасности</entry>
+     </row>
+     <row>
+      <entry>Network Time protocol</entry>
+      <entry>Network Time Protocol (NTP) — протокол для синхронизации времени внутренних системных
+       часов компьютера. В NTP время предается от одной системы к другой с использованием сетевого
+       протокола UDP</entry>
+     </row>
+     <row>
+      <entry>NXLog</entry>
+      <entry>NXLog — протокол для взаимодействия с ПО NXLog, предназначенного для централизованного
+       сбора, хранения и анализа данных о различных событиях в журналах на серверах локальной
+       сети</entry>
+     </row>
+     <row>
+      <entry>OLE for Process Control Data Access OR DCOM</entry>
+      <entry>Distributed Component Object Model (DCOM) — протокол стандарта OPC DA, описывающий
+       набор функций обмена данными в реальном времени между серверами и различными промышленными
+       устройствами (<abbreviated-form keyref="PLC"/>, РСУ, ЧМИ, ЧПУ и др.). OPC — это семейство
+       программных технологий, предоставляющих единый интерфейс для управления объектами
+       автоматизации и технологическими процессами</entry>
+     </row>
+     <row>
+      <entry>OMRON FINS Protocol</entry>
+      <entry>OMRON FINS — открытый протокол компании OMRON для взаимодействия с контроллерами
+       разработки компании Omron</entry>
+     </row>
+     <row>
+      <entry>OPC Unified Architecture</entry>
+      <entry>Унифицированная архитектура OPC — это спецификация ОРС, определяющая передачу данных в
+       промышленных сетях и взаимодействие устройств в них</entry>
+     </row>
+     <row>
+      <entry>OWEN_PLC_Protocol</entry>
+      <entry>Протокол обмена данными между <abbreviated-form keyref="PLC"/> Овен и ПО
+       CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ajn_hfz_sxb">
+        <li>OWEN PLC Browser command</li>
+       </ul>
+      </entry>
+      <entry>Запрос данных при помощи утилиты <abbreviated-form keyref="PLC"/>-Браузер протокола
+       обмена данными между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nmg_3fz_sxb">
+        <li>OWEN PLC Browser Delete password command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Удалить пароль», отправленная при помощи утилиты <abbreviated-form
+        keyref="PLC"/>-Браузер протокола обмена данными между <abbreviated-form keyref="PLC"/> Овен
+       и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_evl_3fz_sxb">
+        <li>OWEN PLC Browser Set password command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Установить пароль», отправленная при помощи утилиты <abbreviated-form
+        keyref="PLC"/>-Браузер протокола обмена данными между <abbreviated-form keyref="PLC"/> Овен
+       и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_as1_3fz_sxb">
+        <li>OWEN PLC Browser Start program command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Запуск программы <abbreviated-form keyref="PLC"/>», отправленная при помощи
+       утилиты <abbreviated-form keyref="PLC"/>-Браузер протокола обмена данными между
+        <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_cq5_hfz_sxb">
+        <li>OWEN PLC Browser Stop program command</li>
+       </ul>
+      </entry>
+      <entry> Команда «Остановка программы <abbreviated-form keyref="PLC"/>», отправленная при
+       помощи утилиты <abbreviated-form keyref="PLC"/>-Браузер протокола обмена данными между
+        <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_mdw_gfz_sxb">
+        <li>OWEN PLC Cold Read command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Чтение данных из <abbreviated-form keyref="PLC"/>» протокола обмена данными
+       между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_u2x_2fz_sxb">
+        <li>OWEN PLC Cold Reset command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Сброс (холодный) <abbreviated-form keyref="PLC"/>» протокола обмена данными
+       между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_sjc_hfz_sxb">
+        <li>OWEN PLC Cold Write command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Запись данных в <abbreviated-form keyref="PLC"/>» протокола обмена данными
+       между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ux4_gfz_sxb">
+        <li>OWEN PLC Download command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Загрузка программы в <abbreviated-form keyref="PLC"/>» протокола обмена
+       данными между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zvg_hfz_sxb">
+        <li>OWEN PLC Download full command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Полная загрузка программы в <abbreviated-form keyref="PLC"/>» протокола обмена
+       данными между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_yqg_ffz_sxb">
+        <li>OWEN PLC Factory Reset command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Сброс (заводской) <abbreviated-form keyref="PLC"/>» протокола обмена данными
+       между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_nrw_ffz_sxb">
+        <li>OWEN PLC One Shot command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Выполнить один цикл» протокола обмена данными между <abbreviated-form
+        keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_pr3_gfz_sxb">
+        <li>OWEN PLC Read File from PLC command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Читать файл из <abbreviated-form keyref="PLC"/>» протокола обмена данными
+       между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_r2p_2fz_sxb">
+        <li>OWEN PLC Reset command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Сброс <abbreviated-form keyref="PLC"/>» протокола обмена данными между
+        <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qrm_ffz_sxb">
+        <li>OWEN PLC Start command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Старт <abbreviated-form keyref="PLC"/>» протокола обмена данными между
+        <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_mr1_2fz_sxb">
+        <li>OWEN PLC Stop command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Стоп <abbreviated-form keyref="PLC"/>» протокола обмена данными между
+        <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gyd_gfz_sxb">
+        <li>OWEN PLC Write File to PLC command</li>
+       </ul>
+      </entry>
+      <entry>Команда «Записать файл в <abbreviated-form keyref="PLC"/>» протокола обмена данными
+       между <abbreviated-form keyref="PLC"/> Овен и ПО CoDeSys</entry>
+     </row>
+     <row>
+      <entry>Post Office Protocol Version 3</entry>
+      <entry>POP3 — стандартный интернет-протокол прикладного уровня, используемый клиентами
+       электронной почты для получения почты с удаленного сервера по TCP-соединению</entry>
+     </row>
+     <row>
+      <entry>PostgreSQL</entry>
+      <entry>PGSQL — протокол для взаимодействия с СУБД PostgreSQL</entry>
+     </row>
+     <row>
+      <entry>Precision Time Protocol (PTP)</entry>
+      <entry><ph
+        conref="../reusable/protocols/PTP_definition.dita#ReusableComponent_w5b_dfx_sxb/ph_x5b_dfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_qdc_zrj_gtb">
+        <li>Precision Time Protocol Event Messages</li>
+       </ul>
+      </entry>
+      <entry>Пакеты категории «события» протокола PTP, используемые для расчета задержки соединения
+       на основе меток времени</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_zjh_zrj_gtb">
+        <li>Precision Time Protocol General Messages</li>
+       </ul>
+      </entry>
+      <entry>Пакеты категории «общие» протокола PTP, используемые для установления иерархии
+       «клиент-сервер» и не требующие меток времени. <ph
+        conref="../reusable/protocols/PTP_definition.dita#ReusableComponent_w5b_dfx_sxb/ph_x5b_dfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vlm_zrj_gtb">
+        <li>Precision Time Protocol over Ethernet</li>
+       </ul>
+      </entry>
+      <entry>Протокол PTP версии 2 и выше, использующий в качестве транспортного протокол Ethernet.
+        <ph
+        conref="../reusable/protocols/PTP_definition.dita#ReusableComponent_w5b_dfx_sxb/ph_x5b_dfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ypq_zrj_gtb">
+        <li>Precision Time Protocol version 1</li>
+       </ul>
+      </entry>
+      <entry>Версия 1 протокола PTP, использующий в качестве транспортного протокол UDP</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ybv_zrj_gtb">
+        <li>Precision Time Protocol version 2</li>
+       </ul>
+      </entry>
+      <entry>Версия 2 протокола PTP, использующий в качестве транспортного протокол UDP. <ph
+        conref="../reusable/protocols/PTP_definition.dita#ReusableComponent_w5b_dfx_sxb/ph_x5b_dfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>PROFINET</entry>
+      <entry>PROFINET — стандарт промышленных сетей в области автоматизации — один из двух открытых
+       стандартных протоколов автоматизации Ethernet от Profibus International. Обмен данными
+       ввода/вывода реализован поверх Ethernet</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fjk_jsj_gtb">
+        <li>Profinet IO</li>
+       </ul>
+      </entry>
+      <entry>PROFINET IO — один из двух открытых стандартных протоколов автоматизации Ethernet от
+       Profibus International. PROFINET IO в первую очередь предназначен для обмена данными в
+        <abbreviated-form keyref="PLC"/>, а PROFINET CBA — для распределенных систем автоматизации.
+       PROFINET IO использует циклическую передачу данных для обмена данными через Ethernet</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_t2p_jsj_gtb">
+        <li>Profinet IO Real Time</li>
+       </ul>
+      </entry>
+      <entry>Profinet IO Real Time — один из двух открытых стандартных протоколов автоматизации
+       Ethernet от Profibus International. Обмен данными ввода/вывода реализован поверх
+       Ethernet</entry>
+     </row>
+     <row>
+      <entry>PRP/HSR</entry>
+      <entry>PRP/HSR — протоколы резевирования стандарта МЭК 62439-3. PRP (Parallel Redundancy
+       Protocol) — протокол параллельного резервирования. При использовании PRP строятся две
+       независимые сети. Каждый пакет данных дублируется и одновременно передается по обеим сетям.
+       Если до получателя доходят оба пакета, то пакет, который пришел позже, отбрасывается. Это
+       позволяет обеспечить бесшовную передачу данных даже при полном отказе одной из сетей. HSR
+       (High-availability Seamless Redundancy) — протокол резервирования кольцевого соединения. HSR
+       используют в кольцевых топологиях. Каждый передаваемый кадр дублируется и передается в обоих
+       направления кольца HSR. Если до получателя доходят оба пакета, то пакет, который пришел
+       позже, отбрасывается. Это позволяет обеспечить бесшовную передачу данных при одиночном обрыве
+       линии связи</entry>
+     </row>
+     <row>
+      <entry>Radmin</entry>
+      <entry>Radmin — протокол на базе архитектуры «клиент-сервер», используемый программой Radmin.
+       Это программа удаленного администрирования ПК для платформы Windows, которая позволяет
+       работать на нескольких удаленных компьютерах с помощью графического интерфейса, передавать
+       файлы и использовать режим голосового или текстового общения с пользователем удаленного
+       компьютера</entry>
+     </row>
+     <row>
+      <entry>RARP (Reverse Address Resolution Protocol)</entry>
+      <entry>Reverse Address Resolution Protocol (ARP) — протокол, выполняющий обратное отображение
+       адресов. Преобразует физический (MAC) адрес в IP-адрес</entry>
+     </row>
+     <row>
+      <entry>Remote Call Procedure</entry>
+      <entry>Remote Procedure Call (RPC) — спецификация для механизма удаленного вызова процедур,
+       разработанная для Distributed Computing Environment (DCE). Является ключевой технологией,
+       используемой при построении распределенных приложении. RPC позволяет приложению выполнять
+       процедуры на другой машине в сети. При этом механизм RPC скрывает от разработчика детали
+       сетевого взаимодействия при удаленных вызовах и может использоваться в сетях, построенных с
+       использованием различных архитектур</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_uwx_4sj_gtb">
+        <li>Remote Call Procedure</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола DCE RPC версии 3 и ниже</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_fhd_psj_gtb">
+        <li>Remote Call Procedure V4</li>
+       </ul>
+      </entry>
+      <entry>Пакеты протокола DCE RPC версии 4</entry>
+     </row>
+     <row>
+      <entry>Remote Desktop Protocol</entry>
+      <entry>Remote Desktop Protocol (RDP) — проприетарный протокол Microsoft, который используется
+       для подключения к другому компьютеру через сетевое соединение. Клиент RDP предоставляет
+       графический интерфейс после успешного подключения. Серверы RDP, необходимые для подключения
+       от клиента, встроены в ОС Windows</entry>
+     </row>
+     <row>
+      <entry>Reverse Address Resolution Protocol</entry>
+      <entry>Reverse Address Resolution Protocol — протокол, выполняющий обратное отображение
+       адресов. Преобразует физический (MAC) адрес в IP-адрес</entry>
+     </row>
+     <row>
+      <entry>RTSP (Real Time Streaming Protocol)</entry>
+      <entry>RTSP — протокол управления сетью, разработанный для использования в развлекательных и
+       коммуникационных системах для управления серверами потоковых данных</entry>
+     </row>
+     <row>
+      <entry>S7 Communication</entry>
+      <entry><ph
+        conref="../reusable/protocols/S7_definition.dita#ReusableComponent_ymd_rfx_sxb/ph_zmd_rfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ptq_ytj_gtb">
+        <li>S7 Communication Monitoring</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7, содержащие код функции для мониторинга состояния <abbreviated-form
+        keyref="PLC"/> (Monitor)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bzv_ytj_gtb">
+        <li>S7 PLC Start Command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7, содержащие код функции для запуска <abbreviated-form keyref="PLC"/>
+       (PLC_START). <ph
+        conref="../reusable/protocols/S7_definition.dita#ReusableComponent_ymd_rfx_sxb/ph_zmd_rfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_l2b_ztj_gtb">
+        <li>S7 PLC Stop Command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7, содержащие код функции для остановки <abbreviated-form keyref="PLC"/>
+       (PLC_STOP). <ph
+        conref="../reusable/protocols/S7_definition.dita#ReusableComponent_ymd_rfx_sxb/ph_zmd_rfx_sxb"
+       /></entry>
+     </row>
+     <row>
+      <entry>S7 Plus Communication</entry>
+      <entry>S7 Communication Plus — проприетарный протокол Siemens для взаимодействия с
+        <abbreviated-form keyref="PLC"/> семейства Siemens S7-1200/1500</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_wpk_ztj_gtb">
+        <li>S7 Plus Communication keep alive</li>
+       </ul>
+      </entry>
+      <entry>Пакеты keep_alive протокола S7comm Plus</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_bsp_ztj_gtb">
+        <li>S7 Plus Communication Monitor Program</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7 Plus, содержащие код функции для мониторинга состояния <abbreviated-form
+        keyref="PLC"/> (Monitor)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_n1v_ztj_gtb">
+        <li>S7 Plus Communication new Hardware configuration Download to PLC</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7 Plus, содержащие код функции для загрузки новой конфигурации оборудования в
+        <abbreviated-form keyref="PLC"/> (Hardware_to_PLC)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_dl1_15j_gtb">
+        <li>S7 Plus Communication Program Download to PLC</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7 Plus, содержащие код функции для загрузки приложения в <abbreviated-form
+        keyref="PLC"/> (Upload)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_oz2_15j_gtb">
+        <li>S7 Plus Communication Program Upload from PLC</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7 Plus, содержащие код функции для загрузки приложения из <abbreviated-form
+        keyref="PLC"/> (Download)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_exk_15j_gtb">
+        <li>S7 Plus Communication Start Command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7 Plus, содержащие код функции для запуска <abbreviated-form keyref="PLC"/>
+       (PLC_START)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_gq4_15j_gtb">
+        <li>S7 Plus Communication Stop Command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7 Plus, содержащие код функции для остановки <abbreviated-form keyref="PLC"/>
+       (PLC_STOP)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_dwb_25j_gtb">
+        <li>S7 Plus Communication version 1</li>
+       </ul>
+      </entry>
+      <entry>Версия 1 протокола S7comm Plus</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ktg_25j_gtb">
+        <li>S7 Plus Communication version 2</li>
+       </ul>
+      </entry>
+      <entry>Версия 2 протокола S7comm Plus</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_dyb_f5j_gtb">
+        <li>S7 Plus Communication version 3</li>
+       </ul>
+      </entry>
+      <entry>Версия 3 протокола S7comm Plus</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_jtw_25j_gtb">
+        <li>S7 Project Download Command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7, содержащие код функции для загрузки приложения в <abbreviated-form
+        keyref="PLC"/> (Download)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_cbs_25j_gtb">
+        <li>S7 Project Upload Command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты S7, содержащие код функции для выгрузки приложения из <abbreviated-form
+        keyref="PLC"/> (Upload)</entry>
+     </row>
+     <row>
+      <entry>SCADA SONATA</entry>
+      <entry>Протокол системы SCADA «Соната» - проприетарный протокол верхнего уровня, применяемый
+       для передачи событий между компонентами АСУ ТП. Каждый переданный пакет подтверждается
+       принимающей стороной</entry>
+     </row>
+     <row>
+      <entry>Secure Shell (SSH)</entry>
+      <entry>Secure Shell (SSH) — сетевой протокол прикладного уровня, позволяющий производить
+       удаленное управление операционной системой и туннелирование TCP-соединений (в том числе для
+       передачи файлов). Схож по функциональности с протоколами Telnet и rlogin, но, в отличие от
+       них, шифрует весь трафик, включая и передаваемые пароли. SSH допускает выбор различных
+       алгоритмов шифрования</entry>
+     </row>
+     <row>
+      <entry>Simple Service Discovery Protocol</entry>
+      <entry>Simple Service Discovery Protocol (SSDP) — сетевой протокол, основанный на наборе
+       протоколов Интернета, служащий для объявления и обнаружения сетевых сервисов без
+       использования специальных механизмов статической конфигурации или действий со стороны
+       серверов, таких как DHCP или DNS. SSDP является основой протокола обнаружения Universal
+       plug-and-play (UPnP) и предназначен для использования в домашних сетях и в малом
+       бизнесе</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_vpp_1wj_gtb">
+        <li>Simple Service Discovery Protocol Reply</li>
+       </ul>
+      </entry>
+      <entry>Ответ на запрос SSDP</entry>
+     </row>
+     <row>
+      <entry>Sirius IS Proprietary protocol</entry>
+      <entry>Sirius_IS — проприетарный протокол для взаимодействия систем Сириус-ИС, предназначенных
+       для контроля и управления технологическими объектами в реальном времени</entry>
+     </row>
+     <row>
+      <entry>SMB</entry>
+      <entry>Server Message Block (SMB) — сетевой протокол прикладного уровня для удаленного доступа
+       к файлам, принтерам, COM-портам и другим сетевым ресурсам, а также для межпроцессного
+       взаимодействия. Используется в операционных системах Microsoft Windows</entry>
+     </row>
+     <row>
+      <entry>SMTP (Simple Mail Transfer Protocol)</entry>
+      <entry>SMTP — сетевой протокол, предназначенный для передачи электронной почты в сетях
+       TCP/IP</entry>
+     </row>
+     <row>
+      <entry>SNMP (Simple Network Management Protocol)</entry>
+      <entry>Simple Network Management Protocol (SNMP) — стандартный интернет-протокол для
+       управления устройствами в IP-сетях на основе архитектур TCP/UDP. К таким устройствам
+       относятся маршрутизаторы, коммутаторы, серверы, рабочие станции, принтеры, модемные стойки и
+       другие. Протокол обычно используется в системах сетевого управления для контроля подключенных
+       к сети устройств на предмет условий, которые требуют внимания администратора</entry>
+     </row>
+     <row>
+      <entry>SOCKS5</entry>
+      <entry>SOCKS5 — протокол, позволяющий пересылать пакеты от клиента к серверу через
+       прокси-сервер</entry>
+     </row>
+     <row>
+      <entry>Spanning Tree Protocol</entry>
+      <entry>Spanning Tree Protocol (STP) — протокол канального уровня, предназначенный для
+       устранения петель в топологии произвольной сети Ethernet, в которой есть один или более
+       сетевых мостов, связанных избыточными соединениями</entry>
+     </row>
+     <row>
+      <entry>SSL</entry>
+      <entry>Secure Sockets Layer (SSL) или Transport Layer Security (TLS) — сетевой протокол,
+       обеспечивающий шифрованную связь по сети. Используемые версии: SSL 1.0, SSL 3.0, TLS 1.0, TLS
+       1.1 и TLS 1.2. Цель TLS — обеспечить конфиденциальность и целостность данных между двумя
+       взаимодействующими сторонами. Симметричная криптография, асимметричная криптография и
+       аутентификация по ключу используются для предотвращения перехвата и изменения данных третьими
+       сторонами</entry>
+     </row>
+     <row>
+      <entry>SysLog BSD</entry>
+      <entry>System Log (Syslog) — протокол для отправки и регистрации сообщений на Syslog-сервере о
+       происходящих в системе событиях, использующийся в компьютерных сетях, работающих по протоколу
+       IP. Syslog не может использоваться для опроса устройств для сбора информации</entry>
+     </row>
+     <row>
+      <entry>Tabular Data Stream</entry>
+      <entry>TDS (Tabular Data Stream) — протокол, используемый для передачи данных между сервером
+       базы данных и клиентом и обеспечивающий согласование аутентификации и шифрования канала.
+       Используется для взаимодействия с СУБД MSSQL</entry>
+     </row>
+     <row>
+      <entry>TCP (Transmission Control Protocol)</entry>
+      <entry>Transmission Control Protocol (TCP) — основной протокол стека TCP/IP и один из основных
+       протоколов передачи данных интернета, используемый для обеспечения надежной доставки данных
+       на транспортном уровне модели OSI. Механизм TCP предоставляет поток данных с предварительной
+       установкой соединения, осуществляет повторный запрос данных в случае потери данных и
+       устраняет дублирование при получении двух копий одного пакета, гарантируя тем самым, в
+       отличие от UDP, целостность передаваемых данных и уведомление отправителя о результатах
+       передачи</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_om3_cwj_gtb">
+        <li>TCP Dynamic</li>
+       </ul>
+      </entry>
+      <entry>TCP-соединение с одновременным использованием динамических портов источника и
+       получателя (с номерами портов, превышающих 32767)</entry>
+     </row>
+     <row>
+      <entry>TeamViewer</entry>
+      <entry>TeamViewer — протокол для удаленного контроля компьютеров, обмена файлами между
+       управляющей и управляемой машинами, видеосвязи и веб-конференций</entry>
+     </row>
+     <row>
+      <entry>Telnet</entry>
+      <entry>Telnet — протокол прикладного уровня для удаленного управления , используемый для
+       реализации двунаправленного текстового терминального интерфейса по сети (при помощи
+       транспорта TCP). Используется для удаленного администрирования различными сетевыми
+       устройствами и программными серверами</entry>
+     </row>
+     <row>
+      <entry>TPKT</entry>
+      <entry>TPKT — пакеты протокольного блока данных транспортного уровня. Транспортная служба ISO
+       поверх TCP. TCP и ISO относятся к двум конкурирующим наборам сетевых протоколов. TPKT
+       обеспечивает перевод между этими двумя группами: он переносит пакет OSI в полезной нагрузке
+       своего собственного пакета, а затем передает полученную структуру в TCP, после чего пакет
+       обрабатывается как пакет TCP / IP</entry>
+     </row>
+     <row>
+      <entry>Transparent Network Substrate</entry>
+      <entry>TNS — протокол для взаимодействия с СУБД Oracle</entry>
+     </row>
+     <row>
+      <entry>Trivial File Transfer Protocol</entry>
+      <entry>TFTP — простой протокол передачи файлов. Используется для загрузки бездисковых рабочих
+       станций, загрузки обновлений и конфигураций в «умные» сетевые устройства, записи статистики с
+       мини-АТС (CDR) и аппаратных маршрутизаторов/межсетевых экранов</entry>
+     </row>
+     <row>
+      <entry>UDP (User Datagram protocol)</entry>
+      <entry>User Datagram Protocol (UDP) — протокол связи, который используется в Интернете для
+       передачи данных, чувствительных ко времени, в виде дейтаграмм. Он ускоряет обмен данными,
+       т.к. не требует предварительного сообщения для установки специальных каналов передачи или
+       путей данных, позволяя передавать данные до того, как принимающая сторона согласится на
+       обмен</entry>
+     </row>
+     <row>
+      <entry>Unified Messaging Application Services (UMAS)</entry>
+      <entry>Unified Messaging Application Services (UMAS) — проприетарный протокол, используемый
+       для настройки и мониторинга <abbreviated-form keyref="PLC"/> производства компании Schneider
+       Electric</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_lcn_wwj_gtb">
+        <li>UMAS PLC monitor command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты UMAS, содержащие коды функции для мониторинга состояния <abbreviated-form
+        keyref="PLC"/> (Monitor)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_yws_wwj_gtb">
+        <li>UMAS PLC start command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты UMAS, содержащие код функции для запуска <abbreviated-form keyref="PLC"/>
+       (PLC_Start)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_r3x_wwj_gtb">
+        <li>UMAS PLC stop command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты UMAS, содержащие код функции для остановки <abbreviated-form keyref="PLC"/>
+       (PLC_Stop)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_sfd_xwj_gtb">
+        <li>UMAS transfer project from PLC command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты UMAS, содержащие код функции для загрузки приложения из <abbreviated-form
+        keyref="PLC"/> (transfer_project_from_PLC)</entry>
+     </row>
+     <row>
+      <entry>
+       <ul id="ul_ox4_xwj_gtb">
+        <li>UMAS transfer project to PLC command</li>
+       </ul>
+      </entry>
+      <entry>Пакеты UMAS, содержащие код функции для загрузки приложения в <abbreviated-form
+        keyref="PLC"/> (transfer_project_to_PLC)</entry>
+     </row>
+     <row>
+      <entry>Virtual LAN (802.3ac)</entry>
+      <entry>Тег VLAN в кадре Ethernet, предназначенный для передачи информации о принадлежности к
+       VLAN. Virtual LAN — топологическая (виртуальная) локальная сеть (Virtual Local Area Networks,
+       VLAN) в сети IEEE 802.3 Ethernet. Представляет собой группу хостов с общим набором
+       требований, которые взаимодействуют так, как если бы они были подключены к широковещательному
+       домену, независимо от их физического местонахождения</entry>
+     </row>
+     <row>
+      <entry>Virtual Network Computing</entry>
+      <entry>VNC (Virtual Network Computing) — система, использующая протокол RFB (Remote
+       Framebuffer) для удаленного доступа к графическому рабочему столу компьютера</entry>
+     </row>
+     <row>
+      <entry>VNET/IP Protocol Yokogawa</entry>
+      <entry>Vnet/IP – протокол сети Vnet/IP, работающий в реальном времени и применяемый в
+       распределенных системах управления. Сеть разработана компанией Yokogawa. Vnet/IP базируется
+       на 1 Гбит Ethernet и реализует транспортные протоколы, оптимизированные для автоматизации
+       технологических процессов поверх UDP протокола</entry>
+     </row>
+     <row>
+      <entry>Wago PLC protocol</entry>
+      <entry>Сервисный проприетарный протокол <abbreviated-form keyref="PLC"/> Wago</entry>
+     </row>
+     <row>
+      <entry>Web Services Dynamic Discovery</entry>
+      <entry>Web Services Dynamic Discovery (WS-Discovery) — протокол связи на основе UDP,
+       используемый для автоматического обнаружения веб-служб внутри сетей. Он используется
+       принтерами, камерами и другими типами устройств, в том числе различными функциями Windows,
+       начиная с Windows Vista</entry>
+     </row>
+     <row>
+      <entry>WinCC Client-Server Proprietary protocol</entry>
+      <entry>WinCC Client-Server Proprietary protocol — проприетарный протокол, разработанный
+       компанией Siemens для взаимодействия HMI систем WinCC на основе архитектуры «клиент —
+       сервер»</entry>
+     </row>
+     <row>
+      <entry>Windows Remote Management</entry>
+      <entry>Windows Remote Management (WinRM) — протокол службы удаленного управления для
+       операционных систем Windows. Служба WinRM – серверная часть приложения удаленного управления,
+       к которому возможно удаленное подключение с помощью клиента Windows Remote Shell
+       (WinRS)</entry>
+     </row>
+     <row>
+      <entry>Wonderware SuiteLink</entry>
+      <entry>Wonderware InTouch SuiteLink — промышленный протокол, разработанный компанией
+       Wonderware для взаимодействия HMI систем InTouch на основе архитектуры «клиент — сервер». В
+       основе протокола SuiteLink лежит протокол TCP/IP</entry>
+     </row>
+     <row>
+      <entry>X Window System core protocol version 11</entry>
+      <entry>X Window System core protocol является базовым протоколом системы X Window, которая
+       представляет собой сетевую оконную систему для растровых дисплеев, используемую для создания
+       графических пользовательских интерфейсов в Unix, Unix-подобных и других операционных
+       системах</entry>
+     </row>
+     <row>
+      <entry>Zabbix Agent</entry>
+      <entry>Протокол обмена данными Zabbix-сервера для связи с Zabbix-агентом, основанный на
+       формате JSON.Легитимный протокол</entry>
+     </row>
+     <row>
+      <entry>Zabbix Trapper</entry>
+      <entry>Протокол коммуникации на основе JSON, который Zabbix-сервер использует для получения
+       данных от утилиты Zabbix sender в случае с траппер элементами данных.Легитимный
+       протокол</entry>
+     </row>
+    </tbody>
+    </tgroup>
+   </table>
+ 
+ </body>
+</topic>

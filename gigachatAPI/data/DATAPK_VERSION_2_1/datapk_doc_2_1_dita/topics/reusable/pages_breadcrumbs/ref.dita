@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:ref-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_psy_wz2_qxb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd><ph id="ph_qsy_wz2_qxb"><cite keyref="appliance_control_fp"/> → <cite
+                                    keyref="prot_obj_settings_fp"/> → <cite keyref="ref_fp"
+                            /></ph></cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+ <task id="ReusableComponent_w1k_zmg_wpb">
+ <title>настройка в карточке ОЗ интерфейса сбора данных</title>
+ <taskbody> 
+ <steps> 
+ <step id="step_cbk_zmg_wpb">
+ <cmd>Если интерфейс для сбора данных с объекта защиты не был выбран ранее:</cmd> 
+ <substeps> 
+ <substep>
+            <cmd>Нажмите <image href="../../images/icons/edit.png" id="image_a51_lz2_5nb"/> напротив
+              блока <uicontrol>Сетевые атрибуты</uicontrol>;</cmd>
+          </substep> 
+ <substep>
+            <cmd>В открывшемся окне <uicontrol>Сетевые атрибуты объекта защиты</uicontrol> выберите
+              из списка интерфейс для сбора данных и отметьте параметр <uicontrol>Интерфейс для
+                сбора данных</uicontrol> при помощи чекбокса в левой части таблицы.</cmd>
+            <info>
+              <note
+                conref="notes/only_one_collect_interface.dita#ReusableComponent_s1q_31g_cyb/note_op1_11g_cyb"
+                id="note_i2q_31g_cyb"/>
+            </info>
+          </substep> 
+ <substep>
+            <cmd>Нажмите кнопку <ph
+                conref="buttons/save_check_button.dita#save_check_button/changes"/> напротив
+              редактируемого сетевого интерфейса.</cmd>
+          </substep> 
+</substeps> 
+</step> 
+</steps> 
+</taskbody> 
+
+</task> 

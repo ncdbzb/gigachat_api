@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="sensor_restore_from_backup">
+    <title>Восстановление сенсоров из резервных копий</title>
+    <taskbody>
+        <prereq id="prereq_v14_5wb_zyb">Восстановление сенсоров рекомендуется выполнять после
+            полного восстановления <term keyref="appliance"/>ов уровня <abbreviated-form
+                keyref="management"/>, к которым планируется подключать восстанавливаемые
+            сенсоры.</prereq>
+        <context>
+            <p>Для восстановления <term keyref="appliance"/>а уровня <abbreviated-form
+                    keyref="sensor"/> из резервной копии:</p>
+            <p>
+                <note id="note_lcz_mj3_yyb" type="warning">
+                    <ul id="ul_rk3_5q3_rzb">
+                        <li>Для восстановления сенсора необходимо использовать при развертывании
+                            ранее сохраненные файлы <ph
+                                conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"
+                            /> и <ph
+                                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                            />, а не создавать новые.</li>
+                        <li><ph
+                                conref="../../reusable/notes/sensor_management_diff_versions_ph.dita#ReusableComponent_zcr_bgq_pzb/ph_bdr_bgq_pzb"
+                            /></li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd><ph>Выполните развертывание сенсора с нуля согласно одной из инструкций</ph><ph
+                        outputclass="only_main_pdf_html"> Руководства по внедрению и
+                        поддержке</ph><ph>:</ph></cmd>
+                <info>
+                    <ul id="ul_erh_y33_yyb">
+                        <li>«<xref href="../../deployment/alt/preliminary_sensor.dita"/>»</li>
+                        <li>«<xref href="../../deployment/alt/preliminary_sensor_and_mgmt.dita"
+                            />»</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>После запуска сенсора откройте веб-интерфейс <term keyref="appliance"/>а уровня
+                        <abbreviated-form keyref="management"/>.</cmd>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/restart_sync_step.dita#ReusableComponent_a1f_4wb_dzb/step_b1f_4wb_dzb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/sensor_sidebar_big_step.dita#ReusableComponent_rz2_wyc_zyb/step_tz2_wyc_zyb"
+                id="step_sensor">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Повторите шаг <xref href="#sensor_restore_from_backup/step_sensor"
+                        format="dita"/> для всех подключенных сенсоров. </cmd>
+            </step>
+            <step>
+                <cmd><ph
+                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+                    <ph
+                        conref="../../reusable/pages_breadcrumbs/ids_rules.dita#ReusableComponent_ykq_l4c_pxb/ph_zkq_l4c_pxb"
+                    />.</cmd>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/sync_ids_rules_step.dita#ReusableComponent_tln_fyc_zyb/step_fmn_fyc_zyb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

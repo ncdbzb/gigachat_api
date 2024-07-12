@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_stream_rules">
+ <title>Импорт правил управления потоками данных</title>
+ <taskbody>
+ <context>
+ <p>Для импорта справочника с правилами управления потоками данных из файла формата
+     <codeph>*.json</codeph>:</p>
+ </context>
+ <steps>
+ <step>
+                <cmd
+                    conref="../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+                />
+            </step> <step>
+                <cmd>На панели <uicontrol>Правила потоков</uicontrol> нажмите кнопку <ph
+                        conref="../../reusable/buttons/import_button.dita#ReusableComponent_bj1_d1p_pyb/ph_dj1_d1p_pyb"
+                    />. </cmd>
+            </step> <step>
+ <cmd>В открывшемся окне укажите расположение импортируемого файла формата <codeph>*.json</codeph> и подтвердите выбор.
+ </cmd>
+ </step> <step>
+ <cmd>Убедитесь, что список правил был успешно загружен. Сразу после загрузки файла в
+ правом вернем углу страницы <cite keyref="exchange_fp"/> появится уведомление <systemoutput>Список «Правила потоков» успешно обновлен</systemoutput>, а на странице <cite keyref="dataflow_rules_fp"/>
+ отобразятся импортированные правила. </cmd>
+ </step>
+ </steps>
+ </taskbody>
+</task>

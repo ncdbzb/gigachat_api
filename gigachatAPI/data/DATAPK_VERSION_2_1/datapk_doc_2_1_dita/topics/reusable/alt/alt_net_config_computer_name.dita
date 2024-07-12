@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_f4m_24c_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_g4m_24c_2zb">В поле <uicontrol>Имя компьютера:</uicontrol> введите сетевое имя для <term keyref="appliance_name_short"/>.</cmd>
+            </step>
+        </steps>
+     </taskbody>
+</task>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_tqh_zwq_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_vqh_zwq_nyb">
+                <cmd>Поместите файлы <codeph>docker-compose.release.yml</codeph>,
+                        <codeph>docker-compose.backup.yml</codeph> и каталоги
+                        <codeph>logstash</codeph>, <codeph>NGUI</codeph> в директорию в <codeph
+                        conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> и назначьте
+                    им права: </cmd>
+                <info><p><codeblock outputclass="language-bourne" id="codeblock_ryc_mdk_lyb">mv /home/datapk/docker-compose* <codeph conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/
+mv /home/datapk/logstash/ <codeph conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/
+mv /home/datapk/NGUI/ <codeph conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/
+chmod -R 777 <codeph conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/logstash
+chmod -R 755 <codeph conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/NGUI</codeblock></p><note
+                        id="note_vbc_rsq_nyb">Все файлы и директории в <codeph
+                            conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>, кроме
+                        директории <codeph>logstash</codeph> с содержимым, должны иметь права 755.
+                        Директории <codeph>logstash</codeph> назначаются права 777.</note></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

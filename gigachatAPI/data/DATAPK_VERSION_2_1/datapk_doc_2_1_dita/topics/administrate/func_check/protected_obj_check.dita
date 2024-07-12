@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="protected_obj_check">
+ <title>Проверка обнаружения объектов защиты из домашней сети</title>
+ <taskbody>
+ <context>
+ <p>Для проверки обнаружения объектов защиты в результате настройки домашней сети на сенсорах:</p>
+ </context>
+ <steps>
+ <step>
+    <cmd><ph
+      conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><cite keyref="prot_obj_fp"/>
+     <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>.</cmd>
+    <info>
+     <fig id="fig_myj_pds_tnb">
+      <title>Страница «Активы»</title>
+      <image href="../../../images/administrate/first_setup/prot_obj_page_scr.png"
+       id="image_nyj_pds_tnb">
+       <alt>Страница «Активы»</alt>
+      </image>
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Убедитесь, что в группе объектов защиты <codeph>Неизвестный тип</codeph> отображаются: </cmd>
+    <info>
+     <ul id="ul_sph_cyh_yxb">
+      <li>объекты защиты с MAC-адресом и IP-адресом — узлы, соответствующие домашней подсети;</li>
+      <li>объекты защиты с MAC-адресом, но без IP-адреса — узлы, принадлежность которых к домашней
+       подсети невозможно определить в автоматическом режиме из-за отсутствия IP-адреса.</li>
+     </ul>
+    </info>
+   </step>
+ </steps>
+ </taskbody>
+</task>

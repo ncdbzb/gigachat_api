@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="preparation">
+ <title>Предварительная подготовка к обновлению на всех Комплексах в иерархии</title>
+ <taskbody>
+ <context>
+ <p>Для предварительной подготовки:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd>Отключите сбор данных с <term keyref="appliance"/>а внешними системами, если таковой
+          присутствует.</cmd>
+      </step>
+      <step>
+        <cmd>Убедитесь, что на <term keyref="appliance"/>е установлена версия не ниже
+          1.18.0.0.</cmd>
+      </step>
+      <step>
+        <cmd>При необходимости:</cmd>
+        <substeps id="substeps_gf5_pjz_lvb">
+          <substep>
+            <cmd>Скопируйте настройки домашней сети каждого <term keyref="appliance"/>а, который
+              будет обновлен.</cmd>
+          </substep>
+          <substep>
+            <cmd>Экспортируйте необходимые справочники на странице <ph
+                conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+              />. </cmd>
+          </substep>
+          <substep>
+            <cmd>Сохраните отчеты по потокам и инцидентам при необходимости.</cmd>
+          </substep>
+          <substep>
+            <cmd>Архивируйте и скопируйте получившиеся архивы индексов событий. </cmd>
+          </substep>
+          <substep>
+            <cmd>Экспортируйте уникальные (не из комплекта поставки) объекты раздела <cite
+                keyref="monitoring_fp"/>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Экспортируйте объекты защиты.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Убедитесь, что переменной <cmdname keyref="DATAPK_SERVICES_BIND_IP"/> файла <ph
+            conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+          присвоено значение <codeph>127.0.0.1</codeph>. </cmd>
+      </step>
+ <step>
+ <cmd>Перейдите в режим командной строки операционной системы, на которой установлен
+ <term keyref="appliance"/>.</cmd>
+ </step>
+ <step>
+        <cmd>Убедитесь в наличии сетевого доступа между <term keyref="appliance"/>ами верхнего и
+          нижних уровней по TCP-портам 443 и 25500 (в обе стороны):</cmd>
+        <info>
+          <codeblock>iptables -nvL</codeblock>
+        </info>
+      </step>
+ <step>
+        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а:</cmd>
+        <info>
+          <codeblock>cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+        </info>
+      </step>
+ <step>
+        <cmd>Убедитесь, что в файле <ph
+            conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+          закомментирован stand-файл. Для этого введите команду <codeph>cat <ph
+              conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+            /></codeph> и обратите внимание на значение переменной <codeph><cmdname
+              keyref="COMPOSE_FILE"/></codeph>.</cmd>
+        <info>
+          <note type="tip">В файле <ph
+              conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+            /> должны присутствовать две строки с разным значением переменной <cmdname
+              keyref="COMPOSE_FILE"/>, одна из которых закомментирована (о чем свидетельствует
+            символ «#» в начале строки):
+            <codeblock><cmdname keyref="COMPOSE_FILE"/>=docker-compose.release.yml
+#<cmdname keyref="COMPOSE_FILE"/>=docker-compose.release.yml:docker-compose.stand.yml</codeblock></note>
+        </info>
+        <info>Если в вашем <term keyref="appliance"/>е закомментирована строка <codeph><cmdname
+              keyref="COMPOSE_FILE"/>=docker-compose.release.yml</codeph>, отредактируйте файл <ph
+            conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+          />. Для этого:</info>
+        <substeps id="substeps_f3f_vtz_k4b">
+          <substep>
+            <cmd>Остановите <term keyref="appliance"/> без удаления накопленных данных при помощи
+              команды: </cmd>
+            <info>
+              <codeblock>docker-compose down</codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Введите команду для редактирования файла <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              />:</cmd>
+            <info>
+              <codeblock>nano <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/></codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Переместите символ «#» на строку со значением переменной <codeph><cmdname
+                  keyref="COMPOSE_FILE"
+                />=docker-compose.release.yml:docker-compose.stand.yml</codeph>;</cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите Ctrl+O для сохранения изменений в файле <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              />. Или нажмите Ctrl+X для выхода без сохранения изменений.</cmd>
+          </substep>
+        </substeps>
+      </step>
+ <step>
+        <cmd>Если ранее <term keyref="appliance"/> был остановлен для выполнения изменений на
+          межсетевом экране или в файле <ph
+            conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+          />, запустите его при помощи команды:</cmd>
+        <info>
+          <codeblock>docker-compose up -d</codeblock>
+        </info>
+      </step><step>
+    <cmd>Загрузите в директорию <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/> архив с
+     файлами сервиса обновления <codeph>updater-[текущая версия].tar.gz</codeph>. Для этого:</cmd>
+    <substeps id="substeps_gyw_gv1_l4b">
+     <substep>
+      <cmd>Перейдите в директорию <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>:</cmd>
+      <info>
+       <codeblock>cd <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/></codeblock>
+      </info>
+     </substep>
+     <substep>
+            <cmd>Скопируйте в папку <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>
+              подготовленный ранее архив <codeph>updater-[текущая версия].tar.gz</codeph>.</cmd>
+          </substep>
+    </substeps>
+    <info>
+     <note type="tip"> Для сокращения времени копирования архивов сначала загрузите архив на один
+       <term keyref="appliance"/> с использованием FTP-клиента или с USB-носителя, затем скопируйте
+      архив с данного <term keyref="appliance"/>а по очереди на другие <term keyref="appliance"/>ы,
+      используя следующую команду (выполняется на <term keyref="appliance"/>е, с которого будет
+      производиться копирование):
+      <codeblock>scp /[полный_путь_до_архива]/updater-[текущая версия].tar.gz [логин_получателя]@[IP-адрес_получателя]:[полный_путь_до_директории_назначения]</codeblock>В
+      процессе выполнения команды:<ol>
+       <li>Введите <codeph>yes</codeph> для ответа на вопрос:
+                <codeblock>Are you sure you want to continue connecting (yes/no/[fingerprint])?</codeblock></li>
+       <li>Введите пароль от учетной записи, логин которой был введен в команде. Пример команды:
+                <codeblock>scp /opt/updater.tar.gz root@192.168.243.5:/opt</codeblock></li>
+      </ol></note>
+    </info>
+   </step>
+ <step>
+    <cmd>Перейдите в директорию <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>.</cmd>
+   </step>
+ <step>
+    <cmd>Распакуйте архив <codeph>updater.tar.gz</codeph> в текущую директорию <codeph
+      conref="../../reusable/filepath/opt.dita#opt/opt"/> при помощи команды:</cmd>
+    <info>
+     <codeblock>tar -xvzf updater-[текущая версия].tar.gz</codeblock>
+    </info>
+    <stepresult>при распаковке создастся директория <codeph
+      conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/> с требуемыми
+     файлами для запуска сервиса обновлений.</stepresult>
+   </step><step>
+ <cmd>Перейдите в директорию <codeph
+ conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"
+ />.</cmd>
+ <tutorialinfo>При работе сервиса обновлений по умолчанию используется подсеть
+            <codeph>172.8.0.0/24</codeph>. Если в вашей сети есть возможность зарезервировать эту
+          подсеть, то переходите к шагу <xref href="#preparation/step_TCP" format="dita"/> настоящей
+          инструкции.</tutorialinfo>
+ </step><step>
+        <cmd>При отсутствии возможности резерва подсети <codeph>172.8.0.0/24</codeph>:</cmd>
+        <substeps>
+          <substep>
+            <cmd>Перейдите в директорию <codeph
+                conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/>: </cmd>
+            <info>
+              <codeblock id="codeblock_ubw_2sh_nvb">cd <codeph conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/></codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Запустите скрипт <codeph>generate_env_file.sh</codeph> для генерации
+              конфигурационного файла <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              />:</cmd>
+            <info>
+              <codeblock id="codeblock_dyk_yx2_mvb">bash generate_env_file.sh</codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Откройте созданный файл <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              /> в режиме редактирования:</cmd>
+            <info>
+              <codeblock>nano <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/></codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Добавьте переменную <codeph>UPDATER_NETWORK</codeph> со значением подсети, отличной
+              от <codeph>172.8.0.0/24</codeph>. Например:</cmd>
+            <info>
+              <codeblock>UPDATER_NETWORK=172.1.1.0/24</codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Нажмите Ctrl+O для сохранения изменений в файле <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              />.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>При отсутствии возможности использования подсети 172.10.0.0/16 для
+            <codeph>datapk_backend_nw</codeph>:</cmd>
+        <substeps id="substeps_lqt_5sh_nvb">
+          <substep>
+            <cmd>Перейдите в директорию <codeph
+                conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/>: </cmd>
+            <info>
+              <codeblock id="codeblock_g4f_wsh_nvb">cd <codeph conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/></codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Если файл <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              /> не был создан ранее, запустите скрипт <codeph>generate_env_file.sh</codeph> для
+              генерации конфигурационного файла <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              />:</cmd>
+            <info>
+              <codeblock id="codeblock_lk3_g5h_nvb">bash generate_env_file.sh</codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Откройте файл <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              /> в режиме редактирования:</cmd>
+            <info>
+              <codeblock id="codeblock_mht_lzh_nvb">nano <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/></codeblock>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Измените значение переменной <cmdname keyref="DATAPK_SERVICES_BIND_IP"/> так, чтобы
+              оно совпадало со значением переменной <cmdname keyref="DATAPK_BACKEND_NETWORK_GATEWAY"
+              />.</cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите Ctrl+O для сохранения изменений в файле <ph
+                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+              />.</cmd>
+          </substep>
+        </substeps>
+      </step>
+ 
+ <step>
+    <cmd>Из директории <codeph
+      conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/> запустите скрипт
+     инициализации сервиса обновления <codeph>init.sh</codeph>:</cmd>
+    <info>
+     <codeblock>bash init.sh</codeblock>
+     <note><term keyref="script"/> выполняет следующие действия: <ul>
+       <li>загружает сервисы, необходимые для обновления;</li>
+              <li>загружает phpmyadmin версии 4.9.4 и pgadmin версии 4.28-buster-slim;</li>
+       <li>генерирует файл <ph
+                  conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                /> для сервиса обновления (если ранее он не был сгенерирован);</li>
+       <li>останавливает сервис обновления;</li>
+       <li>запускает новый сервис обновления и проверяет, что он успешно запущен.</li>
+      </ul>
+     </note>
+     <note type="tip"> Если получено сообщение с кодом ошибки <codeph>502</codeph>, убедитесь в том,
+      что <term keyref="appliance"/> запущен, а все необходимые правила межсетевого экрана настроены
+      и применены.</note>
+     <note type="tip">При получении ошибки <codeph>404</codeph> убедитесь, что <term
+       keyref="appliance"/> запущен.</note>
+    </info>
+    <stepresult><p>при успешном выполнении скрипта будет получено сообщение «Сервис доступен».</p>
+      <fig id="fig_yn5_k33_nvb">
+        <title>Результат успешного выполнения скрипта инициализации сервиса обновления</title>
+        <image href="../../../images/routine_work/success_result.png" id="image_zn5_k33_nvb"/>
+      </fig>
+        </stepresult>
+   </step>
+ </steps>
+ </taskbody>
+</task>

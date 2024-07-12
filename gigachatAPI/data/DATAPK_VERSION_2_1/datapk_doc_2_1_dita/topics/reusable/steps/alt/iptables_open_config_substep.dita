@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wmm_mtn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_xmm_mtn_4yb">
+                        <cmd>Откройте для редактирования конфигурационный файл
+                                <codeph>iptables</codeph> с правилами межсетевого экранирования: </cmd>
+                        <info>
+                            <codeblock id="codeblock_bcj_nlg_myb">nano /etc/sysconfig/iptables</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

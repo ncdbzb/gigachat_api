@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="page_404">
+    <glossterm>Страница «Страница не найдена»</glossterm>
+    <glossdef><p>Страница, которая автоматически открывается при переходе по ссылке на несуществующую страницу
+            веб-интерфейса <term keyref="appliance"/>а. Страница также содержит ссылку для перехода
+            на страницу <cite keyref="prot_obj_fp"/>.</p><fig id="fig_ksq_mqn_npb">
+            <title>Страница «Страница не найдена»</title>
+            <image href="../images/pages/404_not_found.png" id="image_znj_1c3_b1c"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="prot_obj_fp.dita"/>
+    </related-links>
+</glossentry>

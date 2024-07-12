@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_wqm_dtd_cyb">
+    <title>Кнопка создания отчета</title>
+    <body>
+        <p><ph id="ph_yqm_dtd_cyb"><image href="../../../images/icons/report.png"
+                    id="image_lfj_hlg_5nb"/> (<uicontrol>Создать отчет</uicontrol>)</ph></p>
+    </body>
+</topic>

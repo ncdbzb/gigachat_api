@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_qdd_l2j_jpb">
+
+ <title>DATAPK_AVAILABILITY_CONTROL_EVENTS_SEVERITY</title>
+ <body> 
+ <p><ph id="ph_vdd_l2j_jpb">Уровень критичности событий доступности узлов</ph></p> 
+</body> 
+</topic> 

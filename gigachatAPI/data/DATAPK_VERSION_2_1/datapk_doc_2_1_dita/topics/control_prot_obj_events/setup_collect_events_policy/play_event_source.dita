@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="play_event_source">
+ <title>Запуск сбора событий от источника</title>
+ <taskbody>
+ <context>
+ <p>Для возобновления процесса получения событий от определенного источника:</p>
+ </context>
+ <steps>
+ <step><cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="monitoring_fp"/> → <cite keyref="monitoring_settings_fp"/> → <cite keyref="event_source_fp"/>.</cmd></step>
+ <step>
+    <cmd>Нажмите кнопку <ph
+      conref="../../reusable/buttons/play_now_button.dita#play_now_button/play_now_button"
+     />»).</cmd>
+   </step>
+ </steps>
+ </taskbody>
+</task>

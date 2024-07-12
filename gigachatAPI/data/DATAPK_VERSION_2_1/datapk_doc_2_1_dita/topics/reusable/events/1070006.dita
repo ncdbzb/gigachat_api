@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:Задача сбора событий успешно выполнена, новых событий не обнаружено-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_s5n_w2w_mxb" outputclass="wide">
+    <title>Задача сбора событий успешно выполнена, новых событий не обнаружено</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_u5n_w2w_mxb">ОЗ: <codeph>{host_name}</codeph>
+                                    (<codeph>{host_id}</codeph>); Наименование сканера:
+                                    <codeph>{scanner_name}</codeph></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

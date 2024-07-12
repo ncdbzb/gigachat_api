@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="control_config">
+ <title>Настройка конфигураций объектов защиты</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_t5n_p4q_qnb">
+ <li><xref href="create_config_script.dita"/></li>
+ <li>
+ <xref href="data_collect_script_sign.dita"/></li>
+      <li><xref href="exp_imp_policy/exp_imp_policy_scaner_script.dita"/></li>
+      <li><xref keyref="scaner_control"/></li>
+      <li><xref href="access_snmp.dita"/></li>
+      <li><xref href="setup_data_collect_module/setup_data_collect_module.dita"/></li>
+      <li><xref keyref="data_collect_results_view"/></li>
+      <li><xref href="work_with_config_changing_archive.dita"/></li>
+ 
+ </ul>
+    <p><term keyref="task_def"/> — сущность, позволяющая при помощи групп сканеров собирать
+      конфигурации и события с объектов защиты и их групп, в том числе с использованием расписания
+      cron. Создание и управление задачами производится на странице <ph
+        conref="../reusable/pages_breadcrumbs/tasks.dita#ReusableComponent_jl2_gw2_qxb/ph_kl2_gw2_qxb"
+      /> (подробнее см. разделы «<xref keyref="create_task"/>», «<xref keyref="tasks_control"
+      />»).</p>
+    <p><ph><term keyref="scan"/> — </ph><ph
+        conref="../../glossary/terms/scan.dita#scan_term/scan_def_ph"/><ph> После импорта или
+        создания сканеров их можно собрать в группы. Управление сканерами и их группами производится
+        на странице <ph
+          conref="../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+        /> (подробнее см. раздел «<xref keyref="scaner_control"/>»).</ph></p>
+    <p><ph><term keyref="script"/> — это </ph><ph
+        conref="../../glossary/terms/script.dita#script_term/script_def_ph"/><ph> Подробнее о
+        создании скриптов см. в разделе «<xref href="create_config_script.dita"/>». Скрипты сбора
+        данных доступны к импорту при создании сканера. Скрипт также можно экспортировать при
+        редактировании сканера.</ph></p>
+    <p>В результате выполнения отдельных сканеров, либо в составе задач сбора данных формируются
+      конфигурации и события объектов защиты.</p>
+ <p>По умолчанию эталонной считается конфигурация, которая была получена первой в результате
+      успешного сбора данных по расписанию, указанному в настройках задачи сбора данных объекта
+      защиты.</p>
+ <p>Просмотреть последние собранные конфигурации можно на странице <cite keyref="prot_obj_inspection_fp"/> → <cite keyref="config_fp"/> (подробнее см. раздел «<xref href="view_config_summary.dita"/>»).</p>
+ <p>Сбор информации о конфигурациях ведется при помощи задач сбора данных, он может быть разовым или
+      периодическим, с отложенным временем запуска или начиная с момента сохранения.</p>
+    <note conref="../data_collect/data_collect.dita#host_data_collect/note_data_collect_recomm"/>
+ </body>
+</topic>

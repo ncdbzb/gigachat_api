@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_k15_bnw_nqb">
+
+ <title>datapk_disable_oval_groups_control_events</title>
+ <body> 
+ <p><ph id="ph_o15_bnw_nqb">При значении переменной <ph
+                    conref="../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/> события об
+                удалении групп <abbreviated-form keyref="oval_def"/> -определений не
+            собираются</ph></p> 
+</body> 
+</topic> 

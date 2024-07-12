@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="note_recommend">
+
+ <title>заметка со ссылкой на рекомендации по событиям сбора данных</title>
+ <body> 
+ <note id="note_recommend" outputclass="no_en"><ph>Список возможных проблем сбора данных см. в
+    разделе </ph><ph outputclass="only_impl">«Рекомендуемые действия в случае обнаружения событий на
+    панели мониторинга "Сбор данных"» Руководства по эксплуатации.</ph><ph
+    outputclass="only_main_pdf_html">«<xref
+     href="../work_with_dashboards/main_dashboard/config_control/recommendations_5.dita"
+   />.</ph></note> 
+</body> 
+</topic> 

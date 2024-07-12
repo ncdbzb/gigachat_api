@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_i2c_sqq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_k2c_sqq_g1c">Для применения новых настроек перезапустите службу сети
+                    командой <codeph>systemctl restart network</codeph> или перезапустите <term
+                        keyref="alt_name"/> командой <codeph>reboot</codeph>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

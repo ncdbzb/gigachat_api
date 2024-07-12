@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_catalog_archive">
+ <title>Импорт архива со справочниками в Комплекс</title>
+ <taskbody>
+ <prereq id="prereq_m2g_tg4_xnb">
+      <p><ph
+          conref="../reusable/notes/no_events_ref.dita#ReusableComponent_cbs_zhl_htb/ph_lbs_zhl_htb"
+        /></p>
+    </prereq>
+ <context>
+ <p>Если архив не был импортирован ранее при первом входе в веб-интерфейс <term keyref="appliance"/>а на
+ странице <uicontrol>Первоначальная настройка <term keyref="appliance"/>а</uicontrol>:</p>
+ </context>
+ <steps>
+ <step>
+ <cmd>Откройте страницу <cite keyref="hierarchy_fp"/> → <cite keyref="exchange_fp"
+ />.</cmd>
+ <info>
+ <fig id="fig_pwx_ryr_tnb">
+ <title>Страница «Импорт и экспорт»</title>
+ <image href="../../images/pages/exchange_page_scr.png"
+ id="image_qwx_ryr_tnb">
+ <alt>Страница «Импорт и экспорт»</alt>
+ </image>
+ </fig>
+ </info>
+ </step>
+ <step>
+ <cmd>В верхней части страницы нажмите кнопку <uicontrol>Импортировать справочники</uicontrol>.</cmd>
+ </step>
+ <step id="import_action_step_1">
+    <cmd>В открывшемся окне <uicontrol>Подготовка к импорту</uicontrol> выберите действие для элементов, которые
+     отсутствуют в новых (загружаемых) справочниках:</cmd>
+    <choices id="choices_syg_3vd_wnb">
+     <choice>оставить — новые элементы будут добавлены к уже существующим;</choice>
+     <choice>удалить — старые элементы будут удалены и добавлены новые.</choice>
+    </choices>
+    <info>
+     <fig id="fig_thk_sby_vnb">
+      <title>Окно «Подготовка к импорту»</title>
+      <image href="../../images/administrate/prepare_to_import_window.png" id="image_oh4_glj_xnb"/>
+     </fig>
+    </info>
+   </step>
+ <step id="step_mkr_pxd_wnb">
+    <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol> для запуска процедуры выполнения импорта.</cmd>
+    <stepresult>в правом верхнем углу появится уведомление: <systemoutput>Запущен импорт справочников</systemoutput>. Статус
+     напротив кнопки импорта справочников изменится на <systemoutput>Выполняется</systemoutput>.</stepresult>
+   </step>
+ <step>
+    <cmd>Дождитесь окончания импорта.</cmd>
+    <info>
+     <note id="note_pym_cxj_htb" type="tip">Статус процедуры можно увидеть напротив кнопки импорта
+      справочников. В случае успешного импорта статус будет <systemoutput>Завершен</systemoutput>. В случае проблем с импортом
+      — <systemoutput>Ошибка</systemoutput>.</note>
+    </info>
+    <info>
+     <note>Для получения подробностей об ошибке импорта наведите курсор на статус <systemoutput>Ошибка</systemoutput>. Появится
+      подсказка с подробностями.</note>
+    </info>
+   </step>
+ <step>
+    <cmd>Убедитесь, что необходимые справочники были импортированы. Для этого просмотрите
+     соответствующие страницы веб-интерфейса <term keyref="appliance"/>а.</cmd>
+    <info>
+     <note type="tip">При необходимости отправки справочников на нижестоящие <term
+       keyref="appliance"/>ы воспользуйтесь кнопкой «Отправить на нижестоящие <term
+       keyref="appliance"/>ы» в верхней части страницы. Подробнее см. раздел «<xref
+       href="send_ref/send_all_ref.dita"/>».</note>
+    </info>
+   </step>
+ </steps>
+ </taskbody>
+</task>

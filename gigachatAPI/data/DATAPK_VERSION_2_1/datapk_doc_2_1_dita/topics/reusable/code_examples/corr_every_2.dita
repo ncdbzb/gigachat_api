@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_zqg_2w4_lrb">
+
+ <title>corr_every_2</title>
+ <body> 
+ <codeblock outputclass="language-sql" id="codeblock_grg_2w4_lrb">{A <sub> 1</sub> , B <sub> 1</sub> }; {A <sub> 2</sub> , B <sub> 3</sub> }; {A <sub> 3</sub> , B <sub> 3</sub> }; {A <sub> 4</sub> , B <sub> 4</sub> }</codeblock> 
+</body> 
+</topic> 

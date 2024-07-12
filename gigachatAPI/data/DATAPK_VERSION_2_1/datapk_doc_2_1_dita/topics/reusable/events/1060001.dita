@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1060001">
+    <title>
+Обнаружен поток данных</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1060001">
+<codeph>{src_ip}</codeph> [<codeph>{src_mac}</codeph>] sport: <codeph>{sport}</codeph> host_id: <codeph>{src_host_id}</codeph> ->
+ <codeph>{dst_ip}</codeph> [<codeph>{dst_mac}</codeph>] dport: <codeph>{dport}</codeph> host_id: <codeph>{dst_host_id}</codeph>(<codeph>{last_protocol_name}</codeph>)</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

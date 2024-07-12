@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="settings_control_monitoring">
+    <title>Настройка и управление мониторингом</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_tx4_rqy_cqb">
+            <li><xref href="../work_with_kibana/setup_normalization_rules.dita"/></li>
+            <li><xref href="../work_with_kibana/events/create_visualisation.dita"/></li>
+            <li><xref href="visualization_view.dita"/></li>
+            <li><xref href="../work_with_kibana/events/create_dashboard.dita"/></li>
+            <li><xref href="../work_with_kibana/setup_user_rules.dita"/></li>
+            <li><xref href="../work_with_kibana/setup_dates_and_numbers_in_kibana.dita"/></li>
+            <li><xref href="../work_with_kibana/exp_imp_kibana/exp_imp_kibana.dita"/></li>
+        </ul>
+    </body>
+</topic>

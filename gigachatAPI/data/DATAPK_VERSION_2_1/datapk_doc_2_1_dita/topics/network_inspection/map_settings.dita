@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="map_settings">
+    <title>Настройка представлений на карте</title>
+    <taskbody><context><p>На странице <cite keyref="maps_fp"/> вы можете создавать, редактировать и удалять
+            представления.</p><fig id="fig_w1j_zth_znb">
+            <title>Представления на странице Карта сети</title>
+            <image href="../../images/maps/views.png" id="image_iy1_k5h_znb"/>
+        </fig>
+        <p>К сохранению в составе представлений доступны:</p>
+        <ul id="ul_xps_sr3_nsb">
+            <li>фильтры;</li>
+            <li>группировка узлов по количеству потоков (<image
+                        href="../../images/icons/maps_group.png" id="image_nvy_wsj_nsb"/>
+                    <uicontrol>Сгруппировать по количеству потоков</uicontrol>);</li>
+            <li>расположение элементов на карте (<image href="../../images/icons/maps_grid.png"
+                        id="image_mtb_dtj_nsb"/>
+                    <uicontrol>Расположить на сетке</uicontrol>, <image
+                        href="../../images/icons/maps_circle.png" id="image_drq_dtj_nsb"/>
+                    <uicontrol>Расположить по кругу</uicontrol>).</li>
+        </ul>
+        <p>В составе представлений не учитывается масштабирование, поиск и выделение по его результатам.</p>
+            <p>В качестве примера приводится изменение параметров фильтрации и отображения,
+                последующее сохранение и изменение представления. Для работы с представлением на
+                карте:</p>
+    </context>
+        <steps id="steps_dpl_rtj_nsb">
+            <step>
+                <cmd>Измените необходимые параметры фильтров.</cmd>
+                <stepxmp><p>Например, выберите типы объектов защиты <codeph>АРМ</codeph>, <codeph>Маршрутизатор</codeph>, <codeph>Периферийное оборудование</codeph>,
+                        <codeph>ПЛК</codeph>, <codeph>Сервер</codeph>, <codeph>Сетевое средство защиты</codeph>, <codeph>Неизвестный тип</codeph>.</p><fig
+                        id="fig_byc_x5j_nsb">
+                        <title>Выбор типа отображаемых на карте объектов защиты</title>
+                    <image
+                        href="../../images/maps/example/maps_example_1.png" id="image_vkg_1vj_nsb"/>
+                </fig>
+                </stepxmp>
+            </step>
+            <step>
+                <cmd>Измените параметры отображения узлов на карте.</cmd>
+                <stepxmp>
+                    <p>Например, выберите группировку по количеству потоков (<image
+                            href="../../images/icons/maps_group.png" id="image_wqb_jhw_dyb"/>
+                        <uicontrol>Сгруппировать по количеству потоков</uicontrol>).</p>
+                    <fig id="fig_hqy_rvj_nsb">
+                        <title>Карта в результате фильтрации и изменения параметров отображения </title>
+                        <image
+                            href="../../images/maps/example/maps_example_2.png" id="maps_example_2"/>
+                    </fig>
+                </stepxmp>
+            </step>
+                    <step>
+                <cmd>В верхней правой части страницы нажмите <image
+                        href="../../images/icons/edit_filter_button.png" id="image_obt_dcj_nsb"
+                    />;</cmd>
+            </step>
+                    <step>
+                <cmd>В выпадающем меню выберите опцию <uicontrol>Сохранить как</uicontrol>;</cmd>
+                <stepresult>появится окно сохранения представления.</stepresult>
+            </step>
+                    <step>
+                <cmd>В окне сохранения представления:</cmd>
+                <info>
+                    <ul id="ol_gc1_b5j_nsb">
+                        <li>
+                            <p>введите наименование;</p>
+                            <note id="note_vgq_mqj_nsb" type="attention">Имя не должно совпадать с
+                                уже существующим.</note>
+                        </li>
+                        <li>выберите, будет ли представление доступно для использования другими
+                            пользователями.</li>
+                    </ul>
+                </info>
+                <stepxmp>
+                    <p>Например, введите название <codeph>Подсеть управления</codeph> и выберите тип использования
+                        <codeph>Только для меня</codeph>.</p>
+                    <fig id="fig_maps_example_3">
+                        <title>Окно сохранения представления</title>
+                        <image href="../../images/maps/example/maps_example_3.png"
+                            id="maps_example_3"/>
+                    </fig>
+                </stepxmp>
+            </step>
+                    <step>
+                <cmd>Нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+                <stepresult>новое представление станет доступно для выбора.</stepresult>
+            </step>
+                
+            
+            
+               
+                
+                    <step>
+                <cmd>В верхней части панели фильтров выберите из выпадающего списка только что
+                    созданное представление.</cmd>
+                        
+                <info>
+                    <fig id="fig_maps_example_4">
+                        <title>Выпадающий список с доступными представлениями</title>
+                        <image href="../../images/maps/example/maps_example_4.png"
+                            id="maps_example_4"/>
+                    </fig>
+                </info>
+            </step>
+                    <step>
+                <cmd>Измените параметры фильтрации и отображение узлов на карте.</cmd>
+                <stepxmp>Например, выберите потоки за один месяц и расположение узлов по кругу. </stepxmp>
+                <stepresult>возле названия представления в верхней части панели фильтров появится
+                    оранжевый символ <codeph>*</codeph>. Это означает, что есть несохраненные изменения
+                    представления.</stepresult>
+            </step>
+                    <step>
+                <cmd>Нажмите <image href="../../images/icons/edit_filter_button.png"
+                        id="image_fz2_k2p_xnb"/> в верхней правой части страницы.</cmd>
+            </step>
+                    <step>
+                <cmd>В появившемся меню выберите <uicontrol>Редактировать</uicontrol>.</cmd>
+                <info>
+                    <fig id="fig_fjc_52p_xnb">
+                        <title>Меню управления представлением</title>
+                        <image
+                            href="../../images/reference_info/datapk_architecture/datapk_functionality/filters/filter_toggle_menu.png"
+                            id="image_ip4_v2p_xnb"/>
+                    </fig>
+                </info>
+            </step>
+                    <step>
+                <cmd>В окне сохранения представления введите новое имя представления.</cmd>
+                <stepxmp>
+                    <p>Например, <codeph>Потоки за июль 2022</codeph>.</p>
+                    <fig id="fig_jv1_ddp_xnb">
+                        <title>Окно редактирования представления</title>
+                        <image
+                            href="../../images/reference_info/datapk_architecture/datapk_functionality/filters/edit_filter.png"
+                            id="image_kv1_ddp_xnb"/>
+                    </fig>
+                </stepxmp>
+            </step>
+                    <step>
+                <cmd>Нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+                <stepresult>сохраненное представление изменит название.</stepresult>
+            </step>
+                
+            
+        </steps>
+    
+    </taskbody>
+    <related-links outputclass="no_en">
+        <link href="../reference_info/datapk_architecture/datapk_functionality/views.dita"/>
+    </related-links>
+</task>

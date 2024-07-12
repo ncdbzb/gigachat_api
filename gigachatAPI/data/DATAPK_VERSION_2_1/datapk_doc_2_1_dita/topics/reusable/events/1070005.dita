@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1070005">
+    <title>
+С источника получено меньше событий, чем указано в его параметрах</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1070005"> Источник: <codeph>{source_name}</codeph>; ОЗ: <codeph>{host_name}</codeph>
+                                    (<codeph>{host_id}</codeph>); За <codeph>{delay}</codeph> секунд
+                                было получено <codeph>{received}</codeph> событий, ожидалось
+                                    <codeph>{threshold}</codeph> событий.</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

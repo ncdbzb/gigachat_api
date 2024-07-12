@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_swk_k4c_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_twk_k4c_2zb">
+                        <cmd>В поле <uicontrol>Интерфейсы</uicontrol> выберите сетевой интерфейс, который будет использоваться для управления <term keyref="appliance_name_short"/>.</cmd>
+                        <info><note>Чтобы узнать, в какой сетевой интерфейс физически подключен интернет-кабель, при выборе
+                                сетевого интерфейса просмотрите его описание: если указан статус
+                                    <systemoutput>провод подсоединен</systemoutput>, значит кабель
+                                подключен к выбранному интерфейсу.</note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

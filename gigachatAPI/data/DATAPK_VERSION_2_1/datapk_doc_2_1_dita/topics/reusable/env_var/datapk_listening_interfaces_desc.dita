@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_ebx_ww3_jpb">
+
+ <title>DATAPK_LISTENING_INTERFACES</title>
+ <body> 
+ <p id="p_ibx_ww3_jpb">Наименования всех интерфейсов, с которых сенсор анализирует трафик. Можно
+   указывать интерфейсы в любом режиме (не только прослушивания трафика). При использовании
+   нескольких интерфейсов перечисляются через запятую без пробелов.</p> 
+ <p id="p_nbx_ww3_jpb">Все интерфейсы должны быть в состоянии <systemoutput>up</systemoutput>, иначе
+   сенсор не сможет корректно инициализироваться</p> 
+</body> 
+</topic> 

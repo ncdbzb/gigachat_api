@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qmd_cbn_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_rmd_cbn_f1c">
+                        <cmd>Создайте сертификат:</cmd>
+                        <info><codeblock>openssl req -x509 -out /opt/datapk/nginx/certs/${DATAPK_IP}.cert \
+-keyout /opt/datapk/nginx/certs/${DATAPK_IP}.key -days 3650 \
+-newkey rsa:2048 -nodes -sha256 -subj "/CN=${HOST_FQDN}" \
+-extensions EXT -config /opt/datapk/nginx/certs/config.txt</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

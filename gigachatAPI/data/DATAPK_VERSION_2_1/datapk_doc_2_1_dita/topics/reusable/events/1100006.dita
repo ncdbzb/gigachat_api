@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1100006">
+    <title>Удален инцидент</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1100006">
+                                Обоснование: <codeph>{justification}</codeph>; Пользователь: <codeph>{user}</codeph>; Название: <codeph>{name}</codeph>; Описание: <codeph>{description}</codeph>; Приоритет: <codeph>{priority}</codeph>; Статус: <codeph>{status}</codeph>; Комментарий: <codeph>{comment}</codeph>; Подтвержден: <codeph>{is_confirmed}</codeph>
+                            </p>
+                        </entry>
+                    </row></tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

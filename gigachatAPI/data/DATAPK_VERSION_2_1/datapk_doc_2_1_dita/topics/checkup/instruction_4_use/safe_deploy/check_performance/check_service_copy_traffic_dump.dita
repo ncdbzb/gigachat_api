@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Toc86071550">
+    <title>Проверка
+работоспособности
+службы
+хранения
+копии
+сетевого
+трафика</title>
+    <taskbody><steps>
+      <step>
+        <cmd>На АРМ на базе ПЭВМ типа ноутбук запустите терминальную консоль.</cmd>
+      </step>
+   <step>
+        <cmd>В консоли терминальной консоли введите IP-адрес компактного компьютера.</cmd>
+      </step>
+      <step>
+        <cmd>Введите <codeph>ssh [имя администратора]@[IP-адрес компактного
+          компьютера]</codeph>.</cmd>
+      </step>
+   <step>
+        <cmd>Введите пароль администратора удаленного доступа к управлению программным средством
+          контроля защищенности АСУ ТП, заданные при установке операционной системы.</cmd>
+      </step>
+      <step><cmd>Убедитесь в том, что служба запущена. Для этого:</cmd>
+        <substeps id="substeps_dzj_21f_ytb">
+          <substep>
+            <cmd>Введите команду <codeph>systemctl status trafficlogger</codeph>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Найдите значение <systemoutput>active (running)</systemoutput> (<xref href="#Toc86071550/image_qzh_dsl_xtb"
+              />).</cmd>
+            <info>
+              <fig id="image_qzh_dsl_xtb">
+                <title>Вывод команды «systemctl status trafficlogger»</title>
+                <image href="../../../../../images/checkup/img(13).png" id="image_ytz_g1f_ytb"/>
+              </fig>
+            </info>
+          </substep>
+        </substeps></step>
+      <step>
+        <cmd>Просмотрите лог-файл данной службы:</cmd>
+        <info>
+          <codeblock id="codeblock_gr4_lsl_xtb">cat /var/log/trafficlogger.log</codeblock>
+        </info>
+      </step>
+      <step><cmd>Убедитесь
+в том, что
+запись в
+лог-файл
+ведется (<xref href="#Toc86071550/image_nnv_2sl_xtb"/>).</cmd>
+        <info>
+          <fig id="image_nnv_2sl_xtb">
+            <title>Пример записей в лог-файле службы «trafficlogger»</title>
+            <image href="../../../../../images/checkup/img(14).png" id="image_vq3_j1f_ytb"/>
+          </fig>
+        </info></step>
+     </steps></taskbody>
+   </task>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_sw3_r5q_nyb">
+    <title/>
+    <taskbody>
+        <postreq id="postreq_oz3_l5q_nyb">Выполните на каждом <term keyref="appliance"/>е настройки,
+            общие для всех уровней, согласно разделу «<xref
+                href="../../../deployment/alt/set_pass_policy_and_audit.dita"/>».</postreq>
+    </taskbody>
+</task>

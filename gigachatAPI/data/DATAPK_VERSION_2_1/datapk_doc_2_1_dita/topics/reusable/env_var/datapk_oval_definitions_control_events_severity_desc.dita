@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_xmm_qmw_nqb">
+
+ <title>datapk_oval_definitions_control_events_severity</title>
+ <body> 
+ <p><ph id="ph_cnm_qmw_nqb">Уровень критичности событий удаления проверок на соответствие
+    требованиям <abbreviated-form keyref="IS"/></ph></p> 
+</body> 
+</topic> 

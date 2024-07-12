@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="del_incident">
+ <title>Удаление инцидента</title>
+ <taskbody>
+ <context>
+ <p>Если инцидентов слишком много или они уже не нужны, их можно удалить. При этом
+ удаленные инциденты останутся в событиях. Для удаления инцидента:</p>
+ </context>
+ <steps>
+ <step><cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="incidents_fp"/>.
+ </cmd></step>
+   <step>
+        <cmd>Наведите курсор на неактуальный более инцидент.</cmd>
+      </step><step>
+        <cmd>Нажмите кнопку <ph
+            conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+            /><uicontrol> инцидент</uicontrol>).</cmd>
+        <stepresult>появится окно подтверждения удаления инцидента.</stepresult>
+      </step><step>
+        <cmd>Во всплывающем окне введите обоснование удаления и нажмите <uicontrol>Удалить</uicontrol>.</cmd>
+        <info>
+          <note type="warning"> Текст обоснования должен содержать минимум три символа. Без
+            обоснования удалить инцидент невозможно.</note>
+          <fig>
+            <title>Окно обоснования удаления инцидента</title>
+            <image href="../../../images/windows/approve_del_window.png"/>
+          </fig>
+        </info>
+      </step><step><cmd>После удаления инцидента будет зафиксировано соответствующее событие, в котором будет отображено обоснование удаления.</cmd></step>
+ </steps>
+ </taskbody>
+</task>

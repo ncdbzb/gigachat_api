@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="choose_period_in_dashboards">
+ <title>Выбор периода отображения событий на панели мониторинга</title>
+ <taskbody>
+ <context>
+ <p>Основным способом выбора времени отображения событий является панель управления
+ временем отображения. Она находится в верхней части страницы.</p>
+ <fig id="fig_tkm_qxp_vnb">
+ <title>Выбор периода отображения событий</title>
+ <image href="../../../images/dashboards_kibana/choose_period.png"
+ id="image_wdr_qxp_vnb"/>
+ </fig>
+ <p>Панель позволяет выбрать любой период в прошлом: до текущего момента, за период
+ (например, год), относительно (например, неделю назад), абсолютно (например,
+ 20.03.2024).</p>
+ <p>Дополнительным способом выбора периода отображения событий является визуальный. При работе с
+    графиками есть возможность выбрать период прямо на визуальном представлении. Для этого:</p>
+ </context>
+ <steps>
+ 
+ 
+ <step>
+ <cmd>Наведите на начало интересующего периода на любом из графиков. Рядом с
+ курсором вы увидите вертикальную красную полосу;</cmd>
+ 
+ <info>
+ <fig>
+ <title>Выбор начала периода отображения событий</title>
+ <image href="../../../images/dashboards_kibana/choose_start.png"
+ id="image_bjh_jwp_vnb"/>
+ </fig></info>
+ <substeps id="substeps_otq_zvp_vnb">
+ <substep>
+      <cmd>Зажмите левую клавишу мыши.</cmd>
+     </substep>
+ <substep>
+      <cmd>Не отпуская, ведите до окончания интересующего периода. Область выбора времени на графике
+       станет серой.</cmd>
+     </substep>
+ </substeps>
+ <info>
+ <fig>
+ <title>Выбор окончания периода отображения событий</title>
+ <image href="../../../images/dashboards_kibana/choose_end.png"
+ id="image_cwb_nwp_vnb"/>
+ </fig></info></step>
+ <step><cmd>Отпустите левую клавишу мыши.</cmd>
+ <stepresult>в результате этих действий визуализации перестроятся в соответствии с выбранным
+     периодом, а в панели управления временем отображения можно будет увидеть выбранный период с
+     точностью до миллисекунды.</stepresult></step>
+ </steps>
+ </taskbody>
+ <task id="autoupdate">
+ <title>Автообновление</title>
+ <taskbody>
+ <context id="context_nt5_bxp_vnb">Для оперативного мониторинга событий в режиме реального времени
+                можно включить автообновление. Для этого:</context>
+ <steps id="steps_xs3_cxp_vnb">
+ <step>
+     <cmd>В верхней правой части страницы нажмите <image
+       href="../../../images/icons/kibana/calendar_kibana.png" id="image_nzj_pjg_znb"/>;</cmd>
+    </step>
+ <step>
+                    <cmd>В нижней части окна выбора периода отображения, в строке <uicontrol>Refresh
+                            every</uicontrol> введите число и выберите единицу измерения
+                        времени.</cmd>
+                    <info>
+                        <note type="tip">
+                            <p>Доступны следующие единицы измерения времени:</p>
+                            <ul id="ul_kgw_bkg_znb">
+                                <li><codeph>seconds</codeph> — секунды;</li>
+                                <li><codeph>minutes</codeph> — минуты;</li>
+                                <li><codeph>hours</codeph> — часы;</li>
+                            </ul>
+                        </note>
+                    </info>
+                    <info>
+                        <fig>
+                            <title>Выбор интервала автообновления</title>
+                            <image href="../../../images/dashboards_kibana/update_interval.png"
+                                id="image_pv5_mxp_vnb"/>
+                        </fig>
+                    </info>
+                </step>
+ <step>
+                    <cmd>Нажмите <uicontrol>Start</uicontrol> для инициации процедуры
+                        автообновления.</cmd>
+                </step>
+ 
+ </steps>
+ </taskbody>
+ </task>
+ 
+ 
+</task>

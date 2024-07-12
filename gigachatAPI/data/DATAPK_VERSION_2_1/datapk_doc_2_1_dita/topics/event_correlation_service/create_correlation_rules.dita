@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_correlation_rules">
+ <title>Управление правилами корреляции событий</title>
+ <taskbody>
+ <context>
+ <p>Для управления правилами корреляции в веб-интерфейсе <term keyref="appliance"/>а предусмотрены
+        следующие возможности:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd>Создание правил корреляции. Для создания:</cmd>
+        <substeps id="substeps_vfy_dvg_3qb">
+          <substep>
+            <cmd><ph
+                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><ph
+                conref="../reusable/pages_breadcrumbs/corr_rules.dita#ReusableComponent_hjr_w2c_pxb/ph_jjr_w2c_pxb"
+              />. </cmd>
+            <info>
+              <fig>
+                <title>Страница «Правила корреляции»</title>
+                <image href="../../images/pages/correlation_rules_page_scr.png"/>
+              </fig>
+            </info>
+          </substep><substep>
+            <cmd>Нажмите кнопку <uicontrol>Создать правило</uicontrol>. В открывшемся окне настройте следующие
+              параметры:</cmd>
+            <info>
+              <ul>
+                <li>наименование и описание; <note>Для поля <uicontrol>Описание</uicontrol> установлен лимит, равный 2000 символов.</note>
+                </li>
+                <li>правило; </li>
+                <li>сообщение, которое будет отображаться при возникновении события;</li>
+                <li>при необходимости установите чекбоксы для применения в текущем и (или)
+                  ретроспективном анализе. </li>
+              </ul>
+              <fig>
+                <title>Окно «Создание правила корреляции»</title>
+                <image href="../../images/event_correlation_service/create_correlation_rules.png"/>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений. </cmd>
+            <info>
+              <note>В процессе сохранения правило будет проверено на корректность синтаксиса для
+                выбранного анализа. В случае появления несоответствий и ошибок, правило не будет
+                сохранено. </note>
+            </info>
+            <stepresult>правило будет доступно для применения в текущем и ретроспективном анализе.</stepresult>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Редактирование правила корреляции. Для редактирования:</cmd>
+        <substeps id="substeps_ttl_z5g_3qb">
+          <substep>
+            <cmd><ph
+                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><cite keyref="correlation_rules_fp"/>. </cmd>
+          </substep>
+          <substep>
+            <cmd>В правой части страницы нажмите <ph
+                conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"/>.</cmd>
+            <stepresult>откроется окно <uicontrol>Редактирование правила
+              корреляции</uicontrol>.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Измените необходимые параметры и нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+            <info>
+              <fig id="fig_dvv_pzj_cqb">
+                <title>Окно «Редактирование правила корреляции»</title>
+                <image href="../../images/event_correlation_service/edit_correlation_rules.png">
+                  <alt>Окно «Редактирование правила корреляции»</alt>
+                </image>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Удаление правила корреляции. Для удаления: </cmd>
+        <substeps>
+          <substep>
+            <cmd>Наведите курсор на строку с правилом, которое нужно удалить.</cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите <ph
+                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                /><uicontrol> правило</uicontrol>). </cmd>
+            <stepresult>появится окно ввода обоснования удаления.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Введите обоснование удаления и нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Удаление нескольких правил корреляции. Для группового удаления правил:</cmd>
+        <substeps>
+          <substep>
+            <cmd>Воспользуйтесь фильтрами на странице <cite keyref="correlation_rules_fp"/>.</cmd>
+          </substep>
+          <substep>
+            <cmd>В верхней части страницы нажмите <ph
+                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                /><uicontrol> правила</uicontrol>).</cmd>
+            <stepresult>появится окно ввода обоснования удаления.</stepresult>
+          </substep>
+          <substep>
+            <cmd>Введите обоснование и нажмите <uicontrol>Удалить</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+ 
+ </steps>
+ </taskbody>
+</task>

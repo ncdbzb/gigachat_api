@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_aj3_d4q_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_gj3_d4q_g1c">
+                <cmd>Убедитесь, что сетевые интерфейсы, которые необходимо объединить, имеют
+                    одинаковые сетевые параметры (например, скорость, способ связи). Для этого
+                    введите команду:</cmd>
+                <info><codeblock id="codeblock_hhr_s2s_21c">ethtool [iface_name]</codeblock><p>где
+                            <codeph>[iface_name]</codeph> — имя проверяемого сетевого
+                        интерфейса.</p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

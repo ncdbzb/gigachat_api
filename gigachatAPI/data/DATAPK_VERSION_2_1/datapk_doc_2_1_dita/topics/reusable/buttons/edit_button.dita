@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="edit_button">
+
+ <title>кнопка редактировать</title>
+ <body> <p>
+      <ph id="edit_button"><image href="../../../images/icons/edit.png" id="image_edit_button"/>
+          (<uicontrol>Редактировать</uicontrol>)</ph></p> 
+</body> 
+</topic> 

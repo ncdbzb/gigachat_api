@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="FAU_ISM_EXT-1">
+    <glossterm>FAU_ISM_EXT.1 Мониторинг безопасности</glossterm>
+    <glossdef>
+        <table id="table_p5t_5vw_gsb">
+            <tgroup cols="2" id="FAU_ISM_EXT-1-1">
+                <tbody>
+                    <row>
+                        <entry>FAU_ISM_EXT.1.1</entry>
+                        <entry>
+                            <p>ФБО должны осуществлять мониторинг состояния ИБ (контроль
+                                соответствия состояния ИБ в ИС заранее установленным метрикам) на ОО
+                                и на объектах контролируемой ИС. Мониторинг подразумевает:</p>
+                            <p> [назначение: <i>список мероприятий для осуществления мониторинга
+                                    состояния ИБ на ОО и объектах ИС</i>].</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </glossdef>
+    <glossBody>
+        <glossSurfaceForm>FAU_ISM_EXT.1</glossSurfaceForm>
+        <glossAlt id="glossAlt_ttv_hww_gsb">
+            <glossAbbreviation>FAU_ISM_EXT.1</glossAbbreviation>
+        </glossAlt>
+    </glossBody>
+</glossentry>

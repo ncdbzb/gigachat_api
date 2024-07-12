@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="preliminary_sensor">
+    <title>Установка Комплекса уровня Sensor</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context><note
+                conref="../../reusable/notes/sensor_management_diff_versions_note.dita#ReusableComponent_fzc_p14_rzb/note_izc_p14_rzb"
+            />Для установки и запуска <term keyref="appliance"/>а уровня <abbreviated-form
+                keyref="sensor"/>:</context>
+        <steps>
+            <step
+                conref="../../reusable/steps/alt/copy_distr_files.dita#ReusableComponent_syg_pwq_nyb/step_vyg_pwq_nyb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/login_root_step.dita#ReusableComponent_ozt_rwq_nyb/step_pzt_rwq_nyb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Создайте для сенсора первую рабочую директорию <codeph><codeph
+                            conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor/</codeph> по
+                    команде:</cmd>
+                <info>
+                    <codeblock id="codeblock_r35_xxj_lyb">mkdir <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor/</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте для сенсора вторую рабочую директорию <codeph
+                        conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> и
+                    вложенную в него директорию <codeph><ph
+                            conref="../../reusable/files/scripts-cert.dita#ReusableComponent_fvh_z3t_jbc/ph_hvh_z3t_jbc"
+                        /></codeph> по команде:</cmd>
+                <info>
+                    <codeblock id="codeblock_r35_xxj_lyb1">mkdir -p <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/<ph conref="../../reusable/files/scripts-cert.dita#ReusableComponent_fvh_z3t_jbc/ph_hvh_z3t_jbc"/></codeblock>
+                </info>
+                <info>
+                    <note id="note_vzz_2rv_11c" type="warning">В рабочих директориях <codeph><codeph
+                                conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor</codeph>
+                        и <codeph
+                            conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>
+                        располагаются только файлы, добавленные пользователем перед запуском
+                        Комплекса, а также файлы, сгенерированные самим Комплексом во время работы.
+                        Хранение других файлов (например, <codeph>datapk-v<ph
+                                conref="../../reusable/version.dita#version/version"
+                            />.0.0-s.tar.gz</codeph>) в рабочих директориях не допускается,
+                        поскольку в этом случае нежелательно увеличится размер файла резервного
+                            копирования.<p>Также не допускается использование <codeph
+                                conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                            /> в качестве домашней директории пользователя <codeph>datapk</codeph>
+                            операционной системы — по умолчанию его домашняя директория
+                                <codeph>/home/datapk</codeph>.</p></note>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите необходимые права на директории, последовательно выполнив
+                    команды:</cmd>
+                <info>
+                    <codeblock id="codeblock_o3m_1zc_bzb">chmod 755 <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/> <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor/ <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/<ph conref="../../reusable/files/scripts-cert.dita#ReusableComponent_fvh_z3t_jbc/ph_hvh_z3t_jbc"/></codeblock>
+                </info>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/copy_certs_to_dir_step.dita#ReusableComponent_gps_5wq_nyb/step_hps_5wq_nyb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/sensor_compose_to_dir_step.dita#ReusableComponent_g5t_bxq_nyb/step_h5t_bxq_nyb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/unpack_snmp_step.dita#ReusableComponent_sbb_xvq_nybww/step_tbb_xvq_nyb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/delete_snmp_step.dita#ReusableComponent_sbb_xvq_nyb/step_tbb_xvq_nybqq">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/unpack_sensor_images_step.dita#ReusableComponent_yk4_1wq_nyb/step_zk4_1wq_nyb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/alt/create_env_cmd.dita#ReusableComponent_sd3_vpn_4yb/cmd_ud3_vpn_4yb"/>
+                <substeps id="substeps_ypv_11r_nyb">
+                    <substep>
+                        <cmd
+                            conref="../../reusable/steps/alt/execute_gen_env_cmd.dita#ReusableComponent_umx_5qn_4yb/cmd_vmx_5qn_4yb"/>
+                        <info><codeblock conref="../../reusable/steps/alt/gen_env_s_codeblock.dita#ReusableComponent_bgh_drn_4yb/codeblock_j5y_dqn_4yb" id="codeblock_ujh_drn_4yb"/><ph>Где
+                                    <codeph>[M_ip_addr]</codeph> — IP-адрес интерфейса управления
+                                    <term keyref="appliance"/>а уровня <abbreviated-form
+                                    keyref="management"/>.</ph></info>
+                        <stepresult>
+                            <ul id="ul_jtk_zsx_31c">
+                                <li><ph>в терминале отобразятся
+                                    сообщения:</ph><codeblock id="codeblock_rct_dtx_31c">Sensor env file has been generated</codeblock><codeblock id="codeblock_sct_dtx_31c">Node-id file has been generated</codeblock></li>
+                                <li>в директории <codeph><codeph
+                                            conref="../../reusable/filepath/opt.dita#opt/opt"
+                                        />/sensor</codeph> будет создан файл <ph
+                                        conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                                    />;</li>
+                                <li>в директории <codeph
+                                        conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                                    /> будет создан файл <ph
+                                        conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"
+                                    />.</li>
+                            </ul>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../reusable/steps/alt/check_env_cmd.dita#ReusableComponent_rqt_xtn_4yb/cmd_sqt_xtn_4yb"/>
+                        <info>
+                            <codeblock id="codeblock_icy_cvk_lyb">ls -la <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor/ | grep <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/></codeblock>
+                            <fig id="fig_p3z_nvk_lyb">
+                                <title>Пример наличия файла env уровня Sensor</title>
+                                <image href="../../../images/deployment/alt/env_s_check.png"
+                                    id="image_bcn_x5n_4yb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/steps/alt/check_node_id_step.dita#ReusableComponent_kwv_m43_pyb/substep_nwv_m43_pyb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/steps/alt/delete_gen_env_substep.dita#ReusableComponent_n3f_zpn_4yb/substep_o3f_zpn_4yb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/alt/config_iptables_cmd.dita#ReusableComponent_kbs_ptn_4yb/cmd_lbs_ptn_4yb"/>
+                <substeps id="substeps_q3p_ntn_4yb">
+                    <substep
+                        conref="../../reusable/steps/alt/check_efw_substep.dita#ReusableComponent_lpb_ttn_4yb/substep_mpb_ttn_4yb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/steps/alt/iptables_open_config_substep.dita#ReusableComponent_wmm_mtn_4yb/substep_xmm_mtn_4yb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../../reusable/steps/alt/add_iptables_rules_cmd.dita#ReusableComponent_z2n_bsn_4yb/cmd_afn_bsn_4yb"/>
+                        <info>
+                            <codeblock id="codeblock_nh4_wlg_myb">*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:DOCKER - [0:0]
+:DOCKER-USER - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 172.31.255.0/24 -j ACCEPT
+-A INPUT -p udp -m udp --dport 514 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 514 -j ACCEPT
+-A INPUT -p udp -m udp --dport 515 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 515 -j ACCEPT
+-A INPUT -p udp -m udp --dport 162 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+
+COMMIT</codeblock>
+                            <note
+                                conref="../../reusable/notes/iptables_change_docker_note.dita#ReusableComponent_ugk_5rn_4yb/note_uy3_jh4_myb"
+                                id="note_mlk_5rn_4yb"/>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../../reusable/steps/alt/iptables_restart_substep.dita#ReusableComponent_lnt_jtn_4yb/substep_nnt_jtn_4yb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../../reusable/steps/alt/restart_docker_substep.dita#ReusableComponent_ykq_s2d_bzb/substep_blq_s2d_bzb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/env_change_listen_iface_s_big_step.dita#ReusableComponent_qg4_vvn_4yb/step_sg4_vvn_4yb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/start_s_big_step.dita#ReusableComponent_ppk_4vn_4yb/step_qpk_4vn_4yb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/alt/check_datapk_containers_big_step.dita#ReusableComponent_onm_cwn_4yb/step_pnm_cwn_4yb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь, что сенсор успешно подключился к <term keyref="appliance"/>у уровня
+                        <abbreviated-form keyref="management"/>. Для этого убедитесь, что в логах
+                    сервиса <codeph>redis-sensor</codeph> нет ошибок, по команде:</cmd>
+                <info>
+                    <codeblock id="codeblock_rmk_334_4yb">docker logs redis-sensor --tail 10</codeblock>
+                </info>
+                <info>
+                    <fig id="fig_awm_l34_4yb">
+                        <title>Ошибки подключения сенсора к Комплексу уровня Management</title>
+                        <image href="../../../images/deployment/alt/s_to_m_error_redis.png"
+                            id="image_ntp_m34_4yb"/>
+                    </fig>
+                </info>
+            </step>
+            
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="../../administrate/first_setup/steps_connect_web.dita"/>
+    </related-links>
+</task>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_mnc_js3_jpb">
+
+ <title>DATAPK_EVENT_MANAGER_ARCHIVES_SIZE</title>
+ <body> 
+ <p id="p_rnc_js3_jpb">Максимально допустимый объем глубокого архива. <ph
+ conref="../EM_ARCHIVES_SIZE.dita#ReusableComponent_bsw_cxy_mpb/ph_gsw_cxy_mpb"/> 
+</p> 
+</body> 
+</topic> 

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="env_variables_s">
+    <title>Переменные файла env Комплекса уровня Sensor</title>
+    <body>
+        <p>Список переменных, содержащийся в файле <ph
+                conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+            <term keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"/> по умолчанию,
+            представлен в таблице ниже<ph outputclass="onlypdf"> (<xref
+                    href="#env_variables_s/env_default_var_s" format="dita"/>)</ph>.</p>
+        <table id="env_default_var_s" outputclass="sortable">
+            <title>Переменные файла .env Комплекса уровня Sensor по умолчанию</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="35%"/>
+                <colspec colname="c2" colnum="2" colwidth="45%"/>
+                <colspec colname="сl3" colnum="3" colwidth="20%"/>
+                <thead>
+                    <row>
+                        <entry>Переменная</entry>
+                        <entry>Описание</entry>
+                        <entry>Значение по умолчанию (жирным), либо пример</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry morerows="1"><!--s+m--><cmdname keyref="COMPOSE_FILE"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/compose_file_desc.dita#ReusableComponent_ech_ys3_jpb/p_ich_ys3_jpb"/>
+                            <p outputclass="only_cert">Безопасное значение для функционирования
+                                    <term keyref="appliance"/>а</p>
+                        </entry>
+                        <entry><codeph><b>docker-compose.sensor.yml</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <p>Файлы Docker Compose исключительно для отладочного запуска
+                                веб-интерфейса rabbitmq<ph outputclass="only_cert">, а также для
+                                    доступа к внутреннему API</ph>. По окончании работ необходимо
+                                вернуться к стандартному compose-файлу</p>
+                        </entry>
+                        <entry><codeph><b>docker-compose.sensor.yml</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s+m--><cmdname keyref="IMAGES_TAG_FOR_STAND"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/images_tag_for_stand_desc.dita#ReusableComponent_pyy_pl3_jpb/p_uyy_pl3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph>v<ph conref="../reusable/version.dita#version/version"
+                                />.0.0</codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="MANAGER_NODE_ADDRESS"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/manager_node_address_desc.dita#ReusableComponent_oxw_cw2_4yb/p_qxw_cw2_4yb"
+                            />
+                        </entry>
+                        <entry><codeph><b>172.31.254.1</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="SNMP_MIBS_DIR"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/snmp_mibs_dir_desc.dita#ReusableComponent_bjt_qz2_4yb/p_cjt_qz2_4yb"
+                            />
+                        </entry>
+                        <entry><codeph><b>/var/backups/snmp_mibs</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s+m--><cmdname keyref="TZ"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/TZ_desc.dita#ReusableComponent_vdr_1t3_jpb/p_a2r_1t3_jpb"
+                                conrefend="../reusable/env_var/TZ_desc.dita#ReusableComponent_vdr_1t3_jpb/p_f2r_1t3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph>Asia/Yekaterinburg</codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_LISTENING_INTERFACES"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_listening_interfaces_desc.dita#ReusableComponent_ebx_ww3_jpb/p_ibx_ww3_jpb"
+                                conrefend="../reusable/env_var/datapk_listening_interfaces_desc.dita#ReusableComponent_ebx_ww3_jpb/p_nbx_ww3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph>ens32,ens33,ens35,dummy0</codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Переменные, которые не включены в автоматически генерируемый файл <ph
+                conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+            <term keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"/> и добавляются при
+            необходимости, указаны в таблице ниже<ph outputclass="onlypdf"> (<xref
+                    href="#env_variables_s/env_var_s" format="dita"/>)</ph>.</p>
+        <table id="env_var_s" outputclass="sortable">
+            <title>Дополнительные переменные файла .env Комплекса уровня Sensor</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="40%"/>
+                <colspec colname="c2" colnum="2" colwidth="45%"/>
+                <colspec colname="c3" colnum="3" colwidth="15%"/>
+                <thead>
+                    <row>
+                        <entry>Переменная</entry>
+                        <entry>Описание</entry>
+                        <entry>Значение по умолчанию (жирным), либо пример</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><!--s+m--><cmdname keyref="BACKEND_NETWORK"/></entry>
+                        <entry>
+                            <p><ph
+                                    conref="../reusable/env_var/backend_network_desc.dita#ReusableComponent_e5z_xhq_dyb/ph_i5z_xhq_dyb"
+                                /></p>
+                        </entry>
+                        <entry><codeph><b>172.31.255.0/24</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s+m--><cmdname keyref="BACKEND_NETWORK_GATEWAY"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/backend_network_gateway_desc.dita#ReusableComponent_mtw_lfq_dyb/p_otw_lfq_dyb"
+                            />
+                        </entry>
+                        <entry><codeph><b>172.31.255.1</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s+m--><cmdname keyref="DATAPK_BACKUP_DIR"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_backup_dir_desc.dita#ReusableComponent_ggb_mxh_jpb/p_mgb_mxh_jpb"
+                            />
+                        </entry>
+                        <entry><b><codeph
+                                    conref="../reusable/filepath/var_backups.dita#var_backups/var_backups"
+                                /></b></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_TEMP_DIR"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_temp_dir_desc.dita#ReusableComponent_zwb_rl3_jpb/p_exb_rl3_jpb"
+                            />
+                        </entry>
+                        <entry><b><codeph>/tmp/datapk</codeph></b></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_SYSLOG_RFC3164_SERVER_PORT"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_syslog_rfc3164_server_port_desc.dita#ReusableComponent_pyc_5t3_jpb/p_uyc_5t3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>514</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_SYSLOG_RFC5424_SERVER_PORT"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_syslog_rfc5424_server_port_desc.dita#ReusableComponent_v5q_rt3_jpb/p_avq_rt3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>515</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_SYSLOG_RFC3164_TCP_SERVER_PORT"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_syslog_rfc3164_tcp_server_port_desc.dita#ReusableComponent_gvk_qt3_jpb/p_lvk_qt3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>514</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_SYSLOG_RFC5424_TCP_SERVER_PORT"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_syslog_rfc5424_tcp_server_port_desc.dita#ReusableComponent_hg2_pt3_jpb/p_mg2_pt3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>515</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_SNMP_SERVER_PORT"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_snmp_server_port_desc.dita#ReusableComponent_fjs_nt3_jpb/p_kjs_nt3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>162</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_DISABLE_TCP_HIGH_PORT_DISCARDING"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_disable_tcp_high_port_discarding_desc.dita#ReusableComponent_xgk_wc3_jpb/p_chk_wc3_jpb"
+                                conrefend="../reusable/env_var/datapk_disable_tcp_high_port_discarding_desc.dita#ReusableComponent_xgk_wc3_jpb/p_hhk_wc3_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>true</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_GODPI_TCP_SKIP_SESSION_WITHOUT_HANDSHAKE"/>
+                        </entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_godpi_tcp_skip_session_without_handshake_desc.dita#ReusableComponent_i5w_qqh_jpb/p_n5w_qqh_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>true</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="LOG_LEVEL"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/log_level_desc.dita#ReusableComponent_vhm_jkf_4yb/p_d1s_jyh_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>INFO</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_TERMINAL_CONNECTOR_SSH_TIMEOUT"/></entry>
+                        <entry>
+                            <p><ph
+                                    conref="../reusable/env_var/datapk_terminal_connector_ssh_timeout_desc.dita#ReusableComponent_rzx_vdq_dyb/ph_szx_vdq_dyb"
+                                /></p>
+                        </entry>
+                        <entry><codeph><b>30</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><!--s--><cmdname keyref="DATAPK_TERMINAL_CONNECTORS_DEBUG_LEVEL"/></entry>
+                        <entry>
+                            <p
+                                conref="../reusable/env_var/datapk_terminal_connectors_debug_level_desc.dita#ReusableComponent_q3g_s3j_jpb/p_z3g_s3j_jpb"
+                            />
+                        </entry>
+                        <entry><codeph><b>ERROR</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="DATAPK_COMMAND_PROCESSOR_WORKER_MAX_MEMORY_SIZE_MB"
+                            /></entry>
+                        <entry><ph
+                                conref="../reusable/env_var/datapk_command_processor_worker_max_memory_size_mb.dita#ReusableComponent_yxq_4fr_pyb/ph_nyq_4fr_pyb"
+                            /></entry>
+                        <entry><codeph><b>256</b></codeph></entry>
+                    </row>
+                    <row>
+                        <entry><cmdname keyref="RABBITMQ_DISK_FREE_LIMIT"/></entry>
+                        <entry><ph
+                                conref="../reusable/env_var/rabbitmq_disk_free_limit.dita#ReusableComponent_opn_1jr_pyb/ph_td2_33r_pyb"
+                            /></entry>
+                        <entry><codeph><b>5GB</b></codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

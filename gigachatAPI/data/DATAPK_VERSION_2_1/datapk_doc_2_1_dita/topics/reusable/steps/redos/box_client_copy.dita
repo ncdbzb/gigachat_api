@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rrk_g3l_v5b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_hsk_g3l_v5b">Скопируйте файлы <codeph>box_client.crt</codeph> и
+                        <codeph>box_client.key</codeph> в рабочую директорию.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

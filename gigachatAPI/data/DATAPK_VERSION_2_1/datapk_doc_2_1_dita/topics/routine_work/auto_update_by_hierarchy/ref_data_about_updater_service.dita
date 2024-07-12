@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ref_data_about_updater_service">
+ <title>Справочные данные для работы с сервисом обновления</title>
+ <body>
+ <p>
+ <ul id="ul_v5c_1z3_snb">
+ <li>
+ <p>для остановки сервиса обновления перейдите в директорию <codeph
+       conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/> и выполните
+      команду:</p>
+ <codeblock>docker-compose up -d</codeblock>
+ </li>
+ <li>
+ <p>для запуска сервиса обновления перейдите в директорию <codeph
+       conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"/> и выполните
+      запуск скрипта <codeph>init.sh</codeph>:</p>
+ <codeblock>bash init.sh</codeblock>
+ </li>
+ <li>
+ <p>для просмотра журнала сервиса обновления введите следующие команды:</p>
+ <codeblock>docker logs -f updater
+docker logs -f updater_nginx
+docker logs -f updater_nginx-gen
+docker logs -f registry</codeblock>
+ </li>
+ </ul>
+ </p>
+ </body>
+</topic>

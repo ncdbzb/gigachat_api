@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="block_user">
+ <title>Изменение статуса активности учетной записи пользователя Комплекса</title>
+ <taskbody>
+ <context>
+ <p>Чтобы изменить статус активности учетной записи пользователя <term keyref="appliance"/>а:</p>
+ </context>
+ <steps>
+ <step>
+ <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="appliance_control_fp"/> → <cite
+ keyref="users_fp"/>.</cmd>
+ </step>
+ <step>
+                    <cmd>Выберите учетную запись в списке и нажмите <image
+                              href="../../../images/icons/edit.png" id="image_yg1_rgl_ynb"/>
+                              (<uicontrol>Редактировать учетную запись</uicontrol>).</cmd>
+               </step>
+ <step>
+ <cmd>В зависимости от желаемого действия:</cmd>
+ <choices id="choices_qkd_v3y_qpb">
+ <choice>установите чекбокс <uicontrol><term keyref="cred"/> пользователя активна</uicontrol>, чтобы
+                              активировать (разблокировать) доступ пользователя к веб-интерфейсу
+                                   <term keyref="appliance"/>а;</choice>
+ <choice>отмените установку чекбокса <uicontrol><term keyref="cred"/> пользователя
+                                   активна</uicontrol> для учетной записи, чтобы заблокировать
+                              пользователю доступ к веб-интерфейсу <term keyref="appliance"
+                              />а.</choice>
+ </choices>
+ </step>
+ <step>
+ <cmd>Сохраните изменения.</cmd>
+ <stepresult>после подтверждения активность учетной записи пользователя будет
+ изменена. </stepresult>
+ </step>
+ </steps>
+ </taskbody>
+</task>

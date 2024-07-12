@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qkj_qtc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_rkj_qtc_2zb">Выполните вход в <term keyref="alt_name"/> под учетной записью администратора системы <codeph>root</codeph>.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

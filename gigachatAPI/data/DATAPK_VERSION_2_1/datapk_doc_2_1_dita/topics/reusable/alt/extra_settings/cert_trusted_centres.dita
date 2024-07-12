@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gn5_twj_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_jn5_twj_g1c">В новом окне выберите <uicontrol>Доверенные корневые
+                        центры сертификации</uicontrol> и нажмите <uicontrol>ОК</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

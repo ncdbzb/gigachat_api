@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_lwv_fs3_jpb">
+
+ <title>DATAPK_HOST_MANAGER_INACTIVITY_INTERVAL</title>
+ <body> 
+ <p id="p_pwv_fs3_jpb">Задержка, по истечении которой в случае отсутствия трафика от объекта защиты
+      на активных прослушивающих интерфейсах, формируется событие о его недоступности и индикатор на
+      странице <cite keyref="prot_obj_fp"/> становится серым. Значение задается в секундах</p> 
+</body> 
+</topic> 

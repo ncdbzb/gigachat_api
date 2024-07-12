@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+
+ <task id="import_action_step">
+ 
+ <title>Подготовка к импорту</title>
+ <taskbody> 
+ <steps> 
+
+
+ <step id="import_action_step">
+    <cmd
+     conref="steps/import_export/prepare_import_cmd.dita#ReusableComponent_d4n_1nd_gyb/cmd_e4n_1nd_gyb"/>
+    <choices
+     conref="steps/import_export/choices_import_same_elements.dita#ReusableComponent_gg1_grd_gyb/choices_syg_3vd_wnb"
+     id="choices_bl1_grd_gyb">
+     <choice/>
+    </choices>
+    <info>
+     <fig id="fig_thk_sby_vnb">
+      <title>Окно «Подготовка к импорту»</title>
+      <image href="../../images/windows/prepare_to_import_window.png" id="image_w1p_sby_vnb"/>
+     </fig>
+    </info>
+   </step> 
+ <step id="step_mkr_pxd_wnb">
+    <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol> для выполнения импорта.</cmd>
+    <stepresult
+     conref="steps/import_export/import_process_stepresult.dita#ReusableComponent_y35_rmd_gyb/stepresult_cj5_rmd_gyb"
+    />
+   </step> 
+</steps> 
+</taskbody> 
+</task> 

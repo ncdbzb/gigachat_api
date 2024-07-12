@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_phl_nwr_sxb">
+    <title></title>
+    <body>
+        <p>
+        <ph id="ph_qhl_nwr_sxb">GE-SRTP — протокол для обмена данными между <abbreviated-form keyref="PLC"/> GE Fanuc.</ph>
+        </p>
+    </body>
+</topic>

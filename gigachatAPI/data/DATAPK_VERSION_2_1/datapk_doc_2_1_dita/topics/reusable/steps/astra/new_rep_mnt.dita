@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lsc_3g4_55b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><ol>
+                                <li><ol>
+                                    <li id="li_rep"><p>Закомментируйте первую строку файла
+                                            и в новой строке укажите новый файловый репозиторий в
+                                            директории <codeph>/mnt</codeph>. Например:
+                                            </p>
+                                        <codeblock id="codeblock_new_rep">#deb cdrom:[OS Astra Linux 1.7.0 1.7_x86-64 DVD ]/ 1.7_x86-64 contrib main non-free
+#deb https://download.astralinux.ru/astra/stable/1.7_x86-64/repository/ 1.7_x86-64  main contrib non-free
+deb file:/mnt 1.7_x86-64 contrib main non-free</codeblock></li>
+                                    </ol></li>
+                            </ol></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

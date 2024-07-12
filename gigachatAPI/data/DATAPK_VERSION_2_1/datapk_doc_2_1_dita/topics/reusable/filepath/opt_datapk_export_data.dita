@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Description:/opt/datapk/export_data-->
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_t2d_hhd_hqb">
+
+ <title>/opt/datapk/export_data</title>
+ <body> 
+ <p><codeph id="codeph_x2d_hhd_hqb">
+  <codeph conref="opt_datapk.dita#opt_datapk/opt_datapk"/>/export_data</codeph></p> 
+ </body> 
+</topic> 

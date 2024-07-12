@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nmx_rpq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_omx_rpq_g1c">
+                <cmd>Создайте файл с указанием шлюза для сетевого интерфейса
+                    <codeph>bond0</codeph>:</cmd>
+                <info><codeblock id="codeblock_urs_1gs_21c">echo default via [gateway] > /etc/net/ifaces/bond0/ipv4route</codeblock><p>где
+                            <codeph>[gateway]</codeph> — IP-адрес шлюза сетевого интерфейса
+                            <codeph>bond0</codeph>.</p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

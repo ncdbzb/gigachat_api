@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_vy4_hhj_jpb">
+
+ <title>DATAPK_DISABLE_BOX_CONTROL_EVENTS</title>
+ <body> 
+ <p><ph id="ph_zy4_hhj_jpb">При значении переменной <codeph><ph
+            conref="../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/></codeph> события
+        инфообмена не собираются</ph></p> 
+</body> 
+</topic> 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="event_source_fp">
+    <glossterm>Источники</glossterm>
+    <glossdef><p>Подраздел настроек активов, в котором можно создавать и редактировать источники событий, а также
+            запускать и останавливать прием данных от них.</p>
+            <fig id="fig_dzk_bpy_mpb">
+                <title>Страница «Источники»</title>
+                <image href="../images/pages/sources_page_scr.png" id="image_ezk_bpy_mpb"/>
+            </fig>
+        </glossdef>
+    <related-links>
+        <link
+            href="../topics/control_prot_obj_events/setup_collect_events_policy/create_syslog_manual.dita"/>
+        <link
+            href="../topics/control_prot_obj_events/setup_collect_events_policy/play_stop_del_event_source.dita"/>
+    </related-links>
+</glossentry>

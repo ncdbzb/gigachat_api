@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_t1r_f5p_p5b">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_u1r_f5p_p5b"><i>Примечание. При отсутствии возможности
+                                    подачи трафика с активного сетевого оборудования стенда проверка
+                                    может проводиться с использованием дампов трафика
+                                (*.pcap)</i>.</p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

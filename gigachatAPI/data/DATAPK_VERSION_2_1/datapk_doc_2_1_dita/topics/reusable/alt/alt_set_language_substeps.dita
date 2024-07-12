@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zkx_pmx_dzb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps id="substeps_rc3_sfp_dzb"><substep><cmd>Выберите язык <uicontrol>Русский</uicontrol>.</cmd></substep><substep><cmd>Установите способ переключения раскладки <uicontrol>Клавиши Alt и Shift одновременно</uicontrol>.</cmd></substep><substep><cmd>Нажмите <uicontrol>Далее</uicontrol>.</cmd></substep>
+                </substeps>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

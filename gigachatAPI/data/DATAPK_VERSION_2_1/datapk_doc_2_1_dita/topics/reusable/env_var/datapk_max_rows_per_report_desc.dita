@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_gt4_53j_jpb">
+
+ <title>DATAPK_MAX_ROWS_PER_REPORT</title>
+ <body> 
+ <p id="p_lt4_53j_jpb">Максимальное количество строк в отчетах. Значение по умолчанию —
+                <codeph>1000</codeph>. Значения меньше или равные <codeph>1000</codeph> применяются
+            для отчетов в формате <codeph>pdf</codeph> и <codeph>xls</codeph>. Значения больше
+                <codeph>1000</codeph> применяются только для отчетов в формате <codeph>xls</codeph>,
+            в <codeph>pdf</codeph> попадает только <codeph>1000</codeph> строк</p> 
+</body> 
+</topic> 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="superior_datapk_steps">
+ <title>Подготовка файлов обновления на вышестоящем Комплексе</title>
+ <taskbody>
+ <context>
+ <p>На <term keyref="appliance"/>е верхнего уровня: </p>
+ </context>
+ <steps>
+ <step>
+    <cmd>Загрузите в любую, отличную от рабочей <codeph
+      conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> директорию архив с
+     образами новой версии <codeph>datapk_v[номер_версии].tar.gz:</codeph></cmd>
+    <info>
+     <codeblock>docker load -i [путь к tar-архиву]</codeblock>
+    </info>
+   </step><step>
+    <cmd>Перейдите в директорию, в которую был загружен архив, и загрузите образы новой версии <term
+      keyref="appliance"/>а из архива:</cmd>
+    <info>
+     <codeblock>docker load -i datapk_v[номер_версии].tar.gz</codeblock>
+    </info>
+    <stepresult>на остальные <term keyref="appliance"/>ы образы будут загружены в процессе
+     обновления.</stepresult>
+   </step>
+ <step>
+ <cmd>В <codeph
+ conref="../../reusable/filepath/opt_updater.dita#opt_updater/opt_updater"
+ /> создайте директорию <codeph>new_compose</codeph>, в которую загрузите обновленные файлы
+ <codeph
+ conref="../../reusable/docker_compose_release_yml.dita#docker_compose_release_yml/docker_compose_release_yml"
+ /> для <term keyref="appliance"/>ов разных уровней иерархии.</cmd>
+ <stepxmp>Например, при наличии <term keyref="appliance"/>ов трех уровней иерархии можно создать три
+     директории: <codeph>/opt/updater/new_compose/High</codeph> — для <term keyref="appliance"/>ов верхнего
+      уровня; <codeph>/opt/updater/new_compose/Mid</codeph> — для <term keyref="appliance"/>ов среднего
+     уровня; и <codeph>/opt/updater/new_compose/Low</codeph> — для <term keyref="appliance"/>ов базового
+     уровня. В каждой директории должен находиться соответствующий уровню иерархии файл
+      <codeph>docker-compose.release.yml</codeph>.</stepxmp>
+ </step>
+ </steps>
+ </taskbody>
+</task>

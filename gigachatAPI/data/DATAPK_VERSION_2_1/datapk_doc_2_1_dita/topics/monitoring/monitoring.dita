@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="monitoring_dashboard">
+    <title>Мониторинг событий</title>
+    <body>
+        <section id="section_tr4_1d4_tzb">
+            <title>Просмотр и визуализация событий</title>
+            <p><term keyref="appliance"/> регистрирует события и их атрибуты: дату и время
+                обнаружения, данные о протоколе взаимодействия, адреса источника, цели и другие.
+                Дата и время хранятся во временной зоне UTC и адаптируются под время рабочей
+                станции, с которой ведется просмотр. Если время на рабочей станции отличается от
+                времени на операционной системе <term keyref="appliance"/>а, то и в интерфейсе будут
+                обнаружены расхождения.</p>
+            <p>Все события отображаются на странице <cite keyref="events_fp"/> и в <xref
+                    href="../work_with_kibana/filters_and_queries.dita">экспертном режиме</xref> в
+                порядке их обнаружения от последних к более ранним. Событие можно развернуть и
+                посмотреть подробности в виде таблицы.</p>
+            <fig id="fig_kjs_5pf_vzb">
+                <title>Список событий на странице «События»</title>
+                <image href="../../images/pages/events_page.png" id="image_tyw_1pt_vzb"/>
+            </fig>
+            <p>В разделе <cite keyref="monitoring_fp"/> предусмотрено сохранение и дальнейшее
+                использование результатов <xref
+                    href="../reference_info/datapk_architecture/datapk_functionality/events_normalization.dita"
+                    >нормализации событий</xref> в виде объектов. Объектами раздела <cite
+                    keyref="monitoring_fp"/> являются сохраненные запросы, а также графические
+                объекты на страницах <cite keyref="visualize_fp"/> и <cite keyref="dashboard_fp"
+                />.</p>
+            <p><ph id="ph_dashb">Страница <cite keyref="monitoring_fp"/> → <cite
+                        keyref="sec_status_fp"/> является главной панелью мониторинга <term
+                        keyref="appliance"/>а для отслеживания статистики и изменений ключевых
+                    оперативных данных в реальном времени.</ph></p>
+        </section>
+        <section>
+            <title>Поиск и просмотр событий</title>
+            <p>Поиск и просмотр событий выполняются на странице <cite keyref="events_fp"/>.</p>
+            <p><ph>Поиск событий можно выполнять двумя способами или их комбинацией:</ph><ol
+                    id="ol_qrs_lkp_wzb">
+                    <li>Использовать строку поиска.</li>
+                    <li>Использовать фильтры, расположенные под строкой поиска.</li>
+                </ol></p>
+            <p>В каждом событии расположены поля, для которых генерируются уникальные данные.
+                Подробнее о полях событий см. в разделе «<xref
+                    href="../reference_info/event_fields_desc.dita"/>».</p>
+            <p>Инструменты для работы с запросами (создание нового запроса, сохранение текущего
+                запроса, открытие сохраненного результата) расположены в в <xref
+                    href="../work_with_kibana/filters_and_queries.dita">экспертном режиме</xref>
+                страницы <cite keyref="events_fp"/>.</p>
+        </section>
+        <section id="section_avn_dd4_tzb">
+            <title>Генерация событий</title>
+            <p><term keyref="appliance"/> предоставляет возможности по выявлению критичных событий
+                    <abbreviated-form keyref="IS"/><ph outputclass="no_cc">, называемых инцидентами.
+                    Подробнее см. в главе «<xref href="../incidents/incidents_analysis_work.dita"
+                    />»</ph>.</p>
+            <p><term keyref="appliance"/> в результате работы генерирует собственные события
+                автоматически. Также возможно получение событий от настроенных источников и в
+                результате активного сбора событий с объектов защиты.</p>
+            <p>Все типы событий, необходимых для обеспечения информационной безопасности
+                    <abbreviated-form keyref="ACS_and_TP"/>, могут быть зарегистрированы <term
+                    keyref="appliance"/>ом, если корректно настроена их отправка с объектов
+                защиты.</p>
+            <p>Сбор событий с объектов защиты выполняется при помощи протоколов TCP/UDP и SNMP.
+                Прием реализуется механизмами syslog (стандарты RFC 3164 и RFC 5424), SNMP-trap и
+                Eventlog. Предусмотрена возможность интеграции с внешними системами для отправки
+                событий с <term keyref="appliance"/>а по протоколу <term keyref="syslog"/> путем
+                настройки конфигурационных файлов в директории <codeph
+                    conref="../reusable/filepath/opt_datapk_logstash.dita#ReusableComponent_mn1_l1z_mtb/codeph_pn1_l1z_mtb"/>
+                <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>. Для
+                сбора событий, не предусмотренных по умолчанию, можно также создать сканеры с <xref
+                    href="../control_config/create_config_script.dita">собственными</xref>
+                Python-скриптами сбора данных.</p>
+            <p><ph
+                    conref="../reusable/datapk_sensor_params_ph.dita#ReusableComponent_q25_g31_wyb/ph_w25_g31_wyb"
+                />. Ознакомиться с доступными для настройки переменными вы можете в разделе «<xref
+                    href="../control_prot_obj_events/event_source_desc/datapk_sensor.dita"/>».</p>
+            <note id="note_egv_bj1_wyb">Служебные источники не отображаются на странице <ph
+                    conref="../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+                />.</note>
+        </section>
+        <section id="section_ipl_kd4_tzb">
+            <title>Хранение событий</title>
+            <p>События, которые доступны к просмотру через веб-интерфейс, хранятся в оперативном
+                архиве — индексе. По умолчанию при превышении размера или времени хранения в индексе
+                события переходят в глубокий архив. При достижении лимита объема или времени
+                хранения в глубоком архиве события удаляются безвозвратно. Такой процесс называется
+                ротацией событий. Архивированные индексы событий расположены в директории <codeph
+                    conref="../reusable/filepath/var_backups_elasticsearch_indices.dita#ReusableComponent_kxl_djz_mtb/codeph_oxl_djz_mtb"/>
+                <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>. Чтобы
+                просмотреть эти события, их нужно восстановить из архива — подробнее см. раздел
+                    «<xref
+                    href="../errors_troubleshooting/data_restore_from_backup/event_indexes_restore.dita"
+                />».</p>
+            <p><ph>Внутренние события, сгенерированные <term keyref="appliance"/>ом, хранятся
+                    отдельно от событий, полученных из внешних источников:</ph><ul
+                    id="ul_hzr_rgq_sxb">
+                    <li><codeph>datapk-events-internal-[дата_создания_индекса]</codeph> — индексы
+                        для внутренних событий;</li>
+                    <li><codeph>datapk-events-external-[дата_создания_индекса]</codeph> — индексы
+                        для внешних событий.</li>
+                </ul></p>
+            <p>Общий объем зарегистрированных событий ограничен значениями, указанными в переменных
+                файла <ph
+                    conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+                <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>.
+                Регистрацию новых событий при переполнении оперативного архива можно отключить с
+                помощью переменной <cmdname keyref="DATAPK_EVENT_MANAGER_EVENTS_ACTION_MORE_SIZE"/>.
+                См. подробнее в разделах «<xref href="../reference_info/env_variables_m.dita"/>»,
+                    «<xref href="../reference_info/env_variables_reccomendations.dita"/>».</p>
+            <div
+                conref="../reusable/cert/monitoring_cert_1.dita#ReusableComponent_rkz_1pp_btb/div_ukz_1pp_btb"
+                outputclass="only_cert"/>
+        </section>
+        <div
+            conref="../reusable/cert/monitoring_cert.dita#ReusableComponent_p3d_bmm_1tb/div_s3d_bmm_1tb"
+            outputclass="only_cert"/>
+    </body>
+</topic>

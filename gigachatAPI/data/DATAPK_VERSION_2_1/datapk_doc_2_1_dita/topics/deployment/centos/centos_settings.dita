@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="centos_settings">
+    <title>Настройка операционной системы Комплекса</title>
+    <taskbody>
+        <context>
+            <p>Для настройки <term keyref="appliance"/>а на базе <abbreviated-form keyref="OS"/>
+                CentOS:</p>
+        </context>
+        <steps>
+            <step
+                conref="../../reusable/steps/astra/bios_config.dita#ReusableComponent_s5x_fd4_55b/step_gym_yzx_j5b">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/OS_settings/cmd_open.dita#ReusableComponent_sc1_3tj_nvb/cmd_tc1_3tj_nvb"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/OS_settings/cmd_login.dita#ReusableComponent_hfq_cmj_nvb/cmd_jfq_cmj_nvb"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/astra/utc_config.dita#ReusableComponent_rg3_ld4_55b/cmd_ijf_d2y_j5b"/>
+                <info id="info_dv3_22y_j5b">
+                    <codeblock id="codeblock_tpy_mtw_3sb" outputclass="language-bourne">timedatectl set-local-rtc 0 --adjust-system-clock
+timedatectl set-local-rtc 0</codeblock>
+                </info>
+            </step>
+                    <step>
+                <cmd> Убедитесь, что права 777 (rwxrwxrwx) присвоены следующим директориям: </cmd>
+                <info><ul id="ul_mbw_tgd_ttb">
+                        <li><codeph
+                                conref="../../reusable/filepath/var_backups_elasticsearch.dita#ReusableComponent_mg3_v3z_mtb/codeph_qg3_v3z_mtb"
+                            />.</li>
+                    </ul> Для этого выполните команды:
+                    <codeblock id="codeblock_nbw_tgd_ttb">ls -l <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>
+ls -l <codeph conref="../../reusable/filepath/var_backups.dita#var_backups/var_backups" id="codeph_og3_v3z_mtb"/></codeblock></info>
+                <info>
+                    <note id="note_obw_tgd_ttb"> При необходимости измените права на директорию при
+                        помощи команды <codeph>chmod</codeph>.</note>
+                </info>
+                <stepxmp>для директории <codeph
+                        conref="../../reusable/filepath/var_backups_elasticsearch.dita#ReusableComponent_mg3_v3z_mtb/codeph_qg3_v3z_mtb"
+                    />:
+                    <codeblock id="codeblock_pbw_tgd_ttb">chmod -R 777 <codeph conref="../../reusable/filepath/var_backups_elasticsearch.dita#ReusableComponent_mg3_v3z_mtb/codeph_qg3_v3z_mtb"/></codeblock></stepxmp>
+            </step>
+            <step>
+                
+                        <cmd>Убедитесь, что присутствуют следующие директории: </cmd>
+                        <info>
+                            <ul id="ul_zbw_tgd_ttb">
+                                <li><codeph>/opt/datapk</codeph> — основная директория <term
+                                keyref="appliance"/>а;</li>
+                                <li><codeph>/opt/datapk/nginx/certs</codeph> — директория для
+                            серверных сертификатов;</li>
+                                <li><codeph>/var/backups</codeph> и его подкаталоги: <ul
+                                        id="ul_mf3_jfg_ftb">
+                                        <li><codeph>/var/backups/snmp_mibs</codeph>;</li>
+                                        <li><codeph>/var/backups/elasticsearch</codeph> и его
+                                            подкаталоги: <ul id="ul_nf3_jfg_ftb">
+                                                <li><codeph>/var/backups/elasticsearch/indices</codeph>;</li>
+                                                <li><codeph>/var/backups/elasticsearch/uploads</codeph>.</li>
+                                            </ul></li>
+                                    </ul></li>
+                            </ul>
+                        </info>
+                    </step>
+            <step>
+                        <cmd>Убедитесь, что присутствуют необходимые файлы: </cmd>
+                        <info>
+                            <ul id="ul_acw_tgd_ttb">
+                                <li><codeph>datapk_script.crt</codeph> и
+                                <codeph>datapk_script.key</codeph> в подкаталоге <codeph
+                                conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                                /><codeph>/scripts-certs</codeph>;</li>
+                                <li>mib-файлы в подкаталоге <codeph
+                                conref="../../reusable/filepath/var_backups_snmp_mibs.dita#ReusableComponent_ob2_njz_mtb/codeph_zb2_njz_mtb"
+                            />;</li>
+                                <li>корневой сертификат <codeph>ca.crt</codeph> в <codeph
+                                conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                            />.</li>
+                            </ul>
+                        </info>
+                    
+            </step>
+            <step>
+                <cmd>Подготовьте <term keyref="appliance"/> к настройке. Для этого:</cmd>
+                <substeps id="substeps_ccw_tgd_ttb">
+                    <substep>
+                        <cmd>Скопируйте в директорию <codeph
+                                conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                            /> следующие элементы:</cmd>
+                        <info>
+                            <ul id="ul_r3l_lv4_gtb">
+                                <li>файл скрипта для генерации .env-файла
+                                        <codeph>generate_env_file-[версия <term keyref="appliance"
+                                        />а].sh</codeph>;</li>
+                                <li>директория <codeph>NGUI</codeph>;</li>
+                                <li>compose-файлы (<codeph>docker-compose.release.yml</codeph>,
+                                        <codeph>docker-compose.stand.yml</codeph>,
+                                        <codeph>docker-compose.backup.yml</codeph>);</li>
+                                <li>директория <codeph>logstash</codeph>.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Установите для директории <codeph
+                                conref="../../reusable/filepath/opt_datapk_logstash.dita#ReusableComponent_mn1_l1z_mtb/codeph_pn1_l1z_mtb"
+                            /> права 777. Для этого воспользуйтесь следующей командой:</cmd>
+                        <info>
+                            <codeblock id="codeblock_dcw_tgd_ttb">chmod -R 777 <codeph conref="../../reusable/filepath/opt_datapk_logstash.dita#ReusableComponent_mn1_l1z_mtb/codeph_pn1_l1z_mtb"/></codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Скопируйте архив <codeph>datapk-v[версия <term keyref="appliance"
+                                />а].tar.gz</codeph> в директорию <codeph
+                                conref="../../reusable/filepath/opt.dita#opt/opt"/>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/box_client_cert_key.dita#ReusableComponent_hpk_r1j_55b/cmd_jpk_r1j_55b"/>
+                <info
+                    conref="../../reusable/steps/redos/box_client_cert_key_steps.dita#ReusableComponent_h32_21j_55b/info_hpp_krr_h5b"/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/box_client_copy.dita#ReusableComponent_rrk_g3l_v5b/cmd_hsk_g3l_v5b"/>
+                <info>
+                    <note id="note_ecw_tgd_ttb" type="caution">
+                        <ph>В дистрибутиве ОС по умолчанию уже присутствуют демонстрационные файлы
+                            сертификата <codeph>box_client.crt</codeph> и
+                                <codeph>box_client.key</codeph>.</ph>
+                        <p>В ходе начальной настройки их обязательно <u>нужно заменить</u>. Если
+                            этого не сделать, <u>могут проявиться проблемы с построением
+                                иерархии</u> в дальнейшем, а изменить уникальный идентификатор <term
+                                keyref="appliance"/>а (box_id) в инсталляции без потери данных
+                            невозможно.</p></note>
+                </info>
+            </step>
+            <step>
+                <cmd>Загрузите в систему Docker-образы <term keyref="appliance"/>а:</cmd>
+                <info>
+                    <codeblock id="codeblock_fcw_tgd_ttb">docker load -i /opt/datapk-v[версия <term keyref="appliance"/>а].tar.gz</codeblock>
+                    <note
+                        conref="../../reusable/notes/docker_load_datapk.dita#ReusableComponent_gy4_32j_55b/note_gcw_tgd_ttb"
+                        id="note_ybp_32j_55b"/>
+                </info>
+            </step>
+            <step>
+                <cmd>Смените текущую директорию на <codeph
+                        conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>:</cmd>
+                <info>
+                    <codeblock id="codeblock_hcw_tgd_ttb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Запустите скрипт <codeph>generate_env_file-[версия <term keyref="appliance"
+                        />а].sh</codeph> для создания файла <codeph>.env</codeph> и автоматической
+                    генерации переменных окружения:</cmd>
+                <info>
+                    <codeblock id="codeblock_icw_tgd_ttb">bash /generate_env_file-[версия <term keyref="appliance"/>а].sh</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что файл переменных окружения <codeph>.env</codeph> был создан. Для
+                    этого:</cmd>
+                <info>
+                    <ol id="ol_wwv_sw4_gtb">
+                        <li>
+                            <p>В командной строке введите следующую команду:</p>
+                            <codeblock id="codeblock_jcw_tgd_ttb">ls –la /opt/datapk | grep .env</codeblock>
+                            <fig id="fig_xwv_sw4_gtb">
+                                <title>Результат генерации файла переменных окружения «.еnv»</title>
+                                <image
+                                    href="../../../images/deployment/console/env_generation_result.png"
+                                    id="image_ywv_sw4_gtb"/>
+                            </fig>
+                        </li>
+                        <li>
+                            <p>Просмотрите содержимое файла <codeph>.env</codeph> с помощью
+                                команды:</p>
+                            <codeblock id="codeblock_kcw_tgd_ttb">nano .env</codeblock>
+                            <fig id="fig_zwv_sw4_gtb">
+                                <title>Содержимое файла .env</title>
+                                <image
+                                    href="../../../images/deployment/console/env_variables.png"
+                                    id="image_axv_sw4_gtb"/>
+                            </fig>
+                        </li>
+                    </ol>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

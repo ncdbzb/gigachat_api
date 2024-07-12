@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ugk_5rn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><note id="note_uy3_jh4_myb" type="attention">Если необходимо использовать другие подсети Docker
+                                вместо <codeph>172.31.254.0/24</codeph> и
+                                    <codeph>172.31.255.0/24</codeph>, выполните смену подсети
+                                согласно разделу «<xref
+                                    href="../../deployment/alt/subnet_change.dita"/>» и при
+                                настройке правил <codeph>iptables</codeph> укажите новые подсети
+                                Docker.</note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

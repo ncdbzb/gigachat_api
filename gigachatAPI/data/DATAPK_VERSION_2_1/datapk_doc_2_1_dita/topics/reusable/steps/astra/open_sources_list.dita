@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jhf_dg4_55b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><ol>
+                                <li><ol>
+                                        <li id="li_os"><p>Откройте для редактирования файл со списком доступных репозиториев, откуда будет скачиваться и
+                                                устанавливаться новое ПО:</p>
+                                            <codeblock outputclass="language-bourne" id="codeblock_os">sudo nano /etc/apt/sources.list</codeblock></li>
+                                    </ol></li>
+                            </ol></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

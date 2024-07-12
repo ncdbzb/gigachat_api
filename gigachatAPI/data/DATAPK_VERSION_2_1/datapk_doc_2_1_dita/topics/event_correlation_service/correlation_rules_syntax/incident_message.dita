@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="incident_message">
+ <title>Сообщение инцидента</title>
+ <body>
+ <p>При создании правила корреляции требуется обозначить текст, отображаемый оператору в
+ случае возникновения инцидента. Чтобы сообщение было более информативным, рекомендуется
+ индивидуализировать его посредством внесения переменных.</p>
+ <p>Переменными в сообщении могут являться только те поля, которые были «выбраны» командой
+ <codeph>SELECT</codeph>.</p>
+ <example>
+ <p>Например, при указании данного правила:</p>
+ <p>
+    <codeblock conref="../../reusable/code_examples/incident_message_1.dita#ReusableComponent_jhv_jw4_lrb/codeblock_ohv_jw4_lrb"/>
+   </p>
+ <p>возможно использование следующего сообщения оператору:</p>
+ <p>
+    <codeblock conref="../../reusable/code_examples/incident_message_2.dita#ReusableComponent_dhs_kw4_lrb/codeblock_ihs_kw4_lrb"/>
+   </p>
+ <p>В случае наименования хоста — «GasStation», IP-адреса — <codeph>192.168.0.100</codeph>,
+ атакуемого пользователя «Администратор», по прошествии трех неудачных попыток ввода
+ пароля оператор <abbreviated-form keyref="IS"/> получит сообщение об инциденте следующего вида:</p>
+ <p>
+    <codeblock conref="../../reusable/code_examples/incident_message_3.dita#ReusableComponent_lx3_lw4_lrb/codeblock_px3_lw4_lrb"/>
+   </p>
+ </example>
+ <p>Для образования информативных сообщений необходимо воспользоваться следующим синтаксисом
+ написания переменных:</p>
+ <p>
+   <codeblock conref="../../reusable/code_examples/incident_message_4.dita#ReusableComponent_vny_nw4_lrb/codeblock_b4y_nw4_lrb"/>
+  </p>
+ </body>
+</topic>

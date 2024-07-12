@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mgm_bl2_1yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_ogm_bl2_1yb">
+                <cmd>Завершить сеанс пользователя.</cmd>
+            </step>
+            <step id="step_qgm_bl2_1yb">
+                <cmd>Войти в веб-интерфейс управления <term keyref="cert_appliance_name_short"/> с
+                    использованием учетной записи datapk.</cmd>
+            </step>
+            <step id="step_xgm_bl2_1yb">
+                <cmd>Перейти на вкладку «Управление комплексом-Пользователи».</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

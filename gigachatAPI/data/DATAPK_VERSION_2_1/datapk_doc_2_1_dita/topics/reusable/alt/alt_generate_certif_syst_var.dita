@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fxh_41n_f1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_hxh_41n_f1c">
+                        <cmd>Задайте системные переменные, последовательно выполнив команды:</cmd>
+                        <info><codeblock>HOST_FQDN='[hostname]' #hostname - сетевое имя UDV NTA
+DATAPK_IP='[ip_addr]' #ip_addr - IP-адрес сетевого интерфейса управления UDV NTA</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

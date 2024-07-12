@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="incident_statuses_fp">
+    <glossterm>Статусы инцидентов</glossterm>
+    <glossdef><p>Подраздел настроек инцидентов, содержащий доступные для редактирования статусы,
+        которые оператор может присвоить инцидентам. Доступна сортировка, редактирование и удаление
+        (в т. ч. групповое).
+            </p>
+                <fig id="incident_statuses_page_scr">
+                    <title>Страница «Статусы инцидентов»</title>
+                    <image href="../images/pages/incident_statuses_page_scr.png"
+                        id="image_t5c_gd1_bqb">
+                        <alt>Страница «Статусы инцидентов»</alt>
+                    </image>
+                </fig>
+            
+        </glossdef>
+    <related-links>
+        <link href="../topics/control_prot_obj_events/events_incidents/incident_status.dita"/>
+    </related-links>
+</glossentry>

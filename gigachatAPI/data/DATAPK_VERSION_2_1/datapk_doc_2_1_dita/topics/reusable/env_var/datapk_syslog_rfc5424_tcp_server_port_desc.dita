@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_hg2_pt3_jpb">
+
+ <title>DATAPK_SYSLOG_RFC5424_TCP_SERVER_PORT</title>
+ <body> 
+ <p id="p_mg2_pt3_jpb">Порт для прослушивания syslog5424 TCP</p> 
+</body> 
+</topic> 

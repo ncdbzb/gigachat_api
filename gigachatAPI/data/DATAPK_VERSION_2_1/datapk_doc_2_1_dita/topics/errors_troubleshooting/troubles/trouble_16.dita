@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_16">
+ <title>Не принимаются сообщения от служб корреляции и обнаружения вторжений</title>
+  <troublebody>
+    <troubleSolution>
+      <cause>
+        <title>Причина: наименование служебного объекта защиты не совпадает с сетевым именем
+          (hostname) Комплекса</title>
+      </cause>
+      <remedy>
+        <title>Способ устранения</title>
+        <responsibleParty>Для устранения затруднения:</responsibleParty>
+        <steps id="steps_l15_232_qyb">
+          <step>
+            <cmd>Убедитесь, что наименование <term keyref="appliance"/>а уровня <abbreviated-form
+                keyref="management"/> совпадает с его сетевым именем на странице <cite
+                keyref="appliance_control_fp"/> → <cite keyref="main_settings_fp"/>.</cmd>
+          </step>
+          <step>
+            <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а уровня
+                <abbreviated-form keyref="management"/>.</cmd>
+          </step>
+          <step>
+            <cmd>Выполните команду <codeph>export</codeph>. Убедитесь, что переменная
+                <cmdname>HOSTNAME</cmdname> присутствует в выводе команды и содержит сетевое имя
+                <term keyref="appliance"/>а.</cmd>
+          </step>
+          <step>
+            <cmd>Если переменная <cmdname>HOSTNAME</cmdname> отсутствует в выводе команды
+                <codeph>export</codeph>:</cmd>
+            <substeps id="substeps_m15_232_qyb">
+              <substep>
+                <cmd>Остановите работу контейнеров <term keyref="appliance"/>а без удаления
+                  накопленных данных.</cmd>
+              </substep>
+              <substep>
+                <cmd>Откройте файл <codeph>/etc/profile</codeph> в режиме редактирования с помощью
+                  редактора nano:</cmd>
+                <info>
+                  <codeblock id="codeblock_n15_232_qyb">nano /etc/profile</codeblock>
+                </info>
+              </substep>
+              <substep>
+                <cmd>Добавьте в конец файла строку:</cmd>
+                <info>
+                  <codeblock id="codeblock_o15_232_qyb">export HOSTNAME</codeblock>
+                </info>
+              </substep>
+              <substep>
+                <cmd>Сохраните изменения и закройте файл <codeph>/etc/profile</codeph>.</cmd>
+              </substep>
+              <substep>
+                <cmd>Перезагрузите сеанс пользователя или перезагрузите <abbreviated-form
+                    keyref="OS"/>.</cmd>
+              </substep>
+              <substep>
+                <cmd>Запустите работу контейнеров <term keyref="appliance"/>а.</cmd>
+              </substep>
+              <substep>
+                <cmd>Убедитесь, что наименование <term keyref="appliance"/>а совпадает с его сетевым
+                  именем на странице <cite keyref="appliance_control_fp"/> → <cite
+                    keyref="main_settings_fp"/>.</cmd>
+              </substep>
+            </substeps>
+          </step>
+        </steps>
+      </remedy>
+    </troubleSolution>
+  </troublebody>
+</troubleshooting>

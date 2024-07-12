@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_ekp_gj2_qyb">
+    <title/>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step>
+                        <cmd/>
+                        <substeps>
+                            <substep>
+                                <cmd/>
+                                <info><note id="note_g25_qzv_p5b" type="tip">Например, создайте и
+                                        удалите новые элементы справочников (правил,
+                                        классификаторов), выполните сбор событий или конфигураций с
+                                        объекта защиты.</note></info>
+                            </substep>
+                        </substeps>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

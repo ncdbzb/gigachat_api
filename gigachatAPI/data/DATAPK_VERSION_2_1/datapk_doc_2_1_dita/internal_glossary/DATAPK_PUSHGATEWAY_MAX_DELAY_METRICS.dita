@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_PUSHGATEWAY_MAX_DELAY_METRICS">
+    <glossterm>DATAPK_PUSHGATEWAY_MAX_DELAY_METRICS</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/datapk_pushgateway_max_delay_metrics.dita#ReusableComponent_if3_l5p_gyb/ph_jf3_l5p_gyb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

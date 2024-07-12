@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="settings_datapk_all">
+    <title>Настройка парольной политики и аудита ОС Альт Сервер 10</title>
+    <taskbody>
+        <context>Для настройки парольной политики и аудита операционной системы <term
+                keyref="alt_name"/>, на которой установлен <term keyref="appliance"/>:</context>
+        <steps>
+            <step conref="../../reusable/alt/alt_stop_work.dita#alt_stop_work/alt_stop_work">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Настройте парольную политику на <term keyref="appliance"/>ах всех
+                    уровней:</cmd>
+                <substeps
+                    conref="../../reusable/alt/extra_settings/pass_policy_change_var_substeps.dita#ReusableComponent_rc1_hd4_f1c/substeps_typ_gng_myb"
+                    id="substeps_yl1_hd4_f1c">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult>выполнены настройки парольной политики <term
+                        keyref="appliance_name_short"/>.</stepresult>
+            </step>
+            <step
+                conref="../../reusable/alt/extra_settings/pass_policy_check_audit.dita#ReusableComponent_nvt_ld4_f1c/step_ovt_ld4_f1c">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/alt/extra_settings/pass_policy_shutdown_os.dita#ReusableComponent_mtg_pd4_f1c/step_otg_pd4_f1c">
+                <cmd/>
+            </step>
+            <step conref="../../reusable/alt/alt_run_container.dita#alt_run_container/run_container">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

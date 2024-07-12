@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="setup_user_rules">
+ <title>Настройка пользовательских правил нормализации событий</title>
+ <taskbody>
+ <context>
+ <p>Для настройки пользовательских правил нормализации событий:</p>
+ </context>
+ <steps>
+ <step><cmd>Создайте конфигурационный файл, содержащий пользовательский фильтр grok.
+ </cmd></step><step>
+ <cmd>Скопируйте файл в директорию <codeph>/logstash/config/plugins/pipeline</codeph> в рабочей
+ директории <term keyref="appliance"/>а.</cmd>
+ </step><step>
+    <cmd><ph
+      conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../reusable/pages_breadcrumbs/monitoring_settings.dita#ReusableComponent_ks1_35x_3xb/ph_ls1_35x_3xb"
+     />. </cmd>
+ </step><step><cmd>Откройте вкладку <uicontrol>Шаблоны индексов</uicontrol>.
+ </cmd>
+ <info><fig>
+ <title>Вкладка управления мониторингом «Шаблоны индексов»</title>
+ <image href="../../images/work_with_kibana/index_templates.png"/>
+ </fig></info>
+ </step>
+ <step>
+ <cmd>Нажмите на интересующий набор индексов.</cmd>
+ <stepresult>появится окно с перечислением всех полей.</stepresult>
+ </step>
+ <step>
+        <cmd>Обновите список полей. Для этого в правом верхнем углу нажмите кнопку <image
+            href="../../images/icons/update.png" id="image_iq3_xch_5nb"/>.</cmd>
+      </step><step>
+        <cmd>В появившемся окне <uicontrol>Перезапустить список полей?</uicontrol> нажмите кнопку
+          <uicontrol>Перезапустить</uicontrol>.</cmd>
+ </step><step>
+    <cmd>Убедитесь, что в список были добавлены дополнительные поля из пользовательского
+     фильтра.</cmd>
+   </step>
+ </steps>
+ </taskbody>
+  <related-links>
+    <link
+      href="../reference_info/datapk_architecture/datapk_functionality/events_normalization.dita"/>
+  </related-links>
+</task>

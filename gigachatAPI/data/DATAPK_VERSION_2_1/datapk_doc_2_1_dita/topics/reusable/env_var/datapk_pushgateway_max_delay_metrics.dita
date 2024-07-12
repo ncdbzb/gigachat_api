@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_if3_l5p_gyb" outputclass="wide">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><ph id="ph_jf3_l5p_gyb">Максимальное время ответа сенсора <term
+                                    keyref="appliance"/>у по запросу данных, при котором сенсор
+                                считается доступным. При нарушении доступности и при восстановлении
+                                фиксируются соответствующие события 1180015 и 1180016. Задается в
+                                секундах</ph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

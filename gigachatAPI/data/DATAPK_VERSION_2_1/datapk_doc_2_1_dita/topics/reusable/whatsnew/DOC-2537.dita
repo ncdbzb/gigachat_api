@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_op1_gn5_hyb">
+    <title></title>
+    <body><div id="div_qp1_gn5_hyb">
+            <p>Изменены принципы работы с таблицами:</p>
+            <ul id="ul_isd_q1n_jyb">
+                <li>На страницах <cite keyref="prot_obj_fp"/>, <cite keyref="scaners_fp"/>, <cite
+                        keyref="definitions_list_fp"/> добавлены чекбоксы для выбора отдельных или
+                    всех строк таблицы и добавлена кнопка для отмены выбора.</li>
+                <li>На страницах <cite keyref="prot_obj_fp"/>, <cite keyref="visualize_fp"/>, <cite
+                        keyref="scaners_fp"/>, <cite keyref="definitions_list_fp"/> изменен механизм
+                    выбора строк для групповых операций: выбор осуществляется при помощи чекбоксов,
+                    а не фильтров.</li>
+                <li>Добавлена возможность настройки количества и порядка отображаемых колонок таблиц
+                    в окне <uicontrol>Настройка таблицы</uicontrol>. </li>
+                <li>Изменено отображение длинных списков элементов в таблицах: отображается только
+                    часть элементов, просмотр полного списка доступен при нажатии на кнопку
+                        <b>Просмотреть все</b>, которая появляется внизу ячейки</li>
+            </ul>
+    </div></body>
+</topic>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_21">
+ <title>Объекты мониторинга и визуализации импортируются с ошибкой</title>
+ <troublebody>
+ <troubleSolution>
+ <cause>
+ <title>Причина: отсутствуют нужные поля в шаблоне индекса</title>
+ </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+                                    <cmd>Убедитесь в целостности директории
+                                                <codeph>/logstash</codeph>, расположенном в рабочей
+                                          директории <term keyref="appliance"/>а уровня
+                                                <abbreviated-form keyref="management"/>.</cmd>
+                              </step>
+ <step>
+ <cmd>Убедитесь, что все нужные поля присутствуют в шаблоне индекса.</cmd>
+ </step>
+ <step>
+ <cmd>При отсутствии необходимых полей:</cmd>
+ <substeps>
+ <substep>
+        <cmd>Обновите шаблон индекса.</cmd>
+       </substep>
+ <substep>
+        <cmd>Убедитесь, что было принято событие с новыми полями.</cmd>
+       </substep>
+ <substep>
+                                                <cmd>Удалите сохраненные объекты (страница <cite
+                                                  keyref="monitoring_fp"/> → <cite
+                                                  keyref="monitoring_control_fp"/>, вкладка
+                                                  <uicontrol>Сохраненные Объекты</uicontrol>).</cmd>
+                                          </substep>
+ <substep>
+        <cmd>Повторите импорт.</cmd>
+       </substep>
+ </substeps>
+ </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+</troubleshooting>

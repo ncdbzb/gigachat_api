@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:1080025-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_z3h_mjx_nxb" outputclass="wide">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_ajh_mjx_nxb">Наименование УД: <codeph>{cred_names}</codeph>;
+                                Пользователь: <codeph>{user}</codeph>; Обоснование:
+                                    <codeph>{justification}</codeph></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

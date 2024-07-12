@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_kxf_nyh_jpb">
+
+ <title>DATAPK_ADFH_MAX_RULE_COUNT</title>
+ <body> 
+ <p id="p_pxf_nyh_jpb">Максимальное количество правил потоков данных</p> 
+</body> 
+</topic> 

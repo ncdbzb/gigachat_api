@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="correlation_rules_term"><glossterm>Правила корреляции событий</glossterm><glossdef>Правила корреляции событий — набор команд, которые оперируют событиями из разных
+        источников и выдают на основе их анализа инциденты. На основе инцидентов могут быть
+        сформированы уведомления, которые отправляются инженеру информационной безопасности или
+        другим сотрудникам.</glossdef></glossentry>

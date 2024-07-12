@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="update_check_script">
+ <title>Проверка доставки образов</title>
+ <body>
+ <p>После рассылки обновлений на <term keyref="appliance"/> необходимо проверить, были ли они доставлены
+ корректно. Для этого в готовый образ сервиса обновлений входит скрипт
+ <codeph>check_imgs.sh</codeph>. Для запуска скрипта воспользуйтесь
+ командой:<codeblock>bash check_imgs.sh -t [наименование версии] -f [путь к compose-файлу]</codeblock></p>
+ <p>Например, после выполнения
+   команды:<codeblock>bash check_imgs.sh -t v1.19.0.1 -f /opt/updater/new_compose/Mid/docker-compose.release.yml</codeblock></p>
+ <p>скрипт проверит, есть ли на <term keyref="appliance"/>е образы заданной версии из compose-файла <codeph
+ conref="../../reusable/docker_compose_release_yml.dita#docker_compose_release_yml/docker_compose_release_yml"
+ />.</p>
+ <p>Также, если поместить скрипт <codeph>check_imgs.sh</codeph> в папку <codeph
+ conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+ /> и запустить его без параметров при помощи команды <codeph>bash
+ check_imgs.sh</codeph>, то необходимые параметры: номер версии (тег) и compose-файлы,
+ будут считаны автоматически из дочерних папок.</p><note>Версия считывается скриптом из
+ переменной <codeph><cmdname keyref="IMAGES_TAG_FOR_STAND"/></codeph>, compose-файлы – из
+ переменной <codeph><cmdname keyref="COMPOSE_FILE"/></codeph> в файле <codeph><term keyref="env"
+ /></codeph>.</note>
+ <p>Для вызова краткой справки по использованию скрипта воспользуйтесь
+ командой:<codeblock>bash check_imgs.sh -h</codeblock></p>
+ <p>
+ <note>Справка содержит список используемых параметров команды вызова скрипта.</note>
+ </p>
+ </body>
+</topic>

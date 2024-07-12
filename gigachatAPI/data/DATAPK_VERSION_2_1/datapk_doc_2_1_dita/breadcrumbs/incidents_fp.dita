@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="incidents_term">
+    <glossterm>Инциденты</glossterm>
+    <glossdef><p>Подраздел меню <cite keyref="incidents_menu_fp"/>, содержащий информацию обо всех выявленных
+            инцидентах. На странице можно ознакомиться с подробностями инцидента: его текущим
+            статусом, сформировавшими инцидент событиями, историей изменения инцидента,
+            детализацией. В процессе расследования можно обновить статус и приоритет инцидента,
+            подтвердить его или удалить. В результате будет сформировано событие с указанием
+            произведенного действия, ответственного и его комментария.</p><fig id="fig_ksq_mqn_npb">
+            <title>Страница «Инциденты»</title>
+            <image href="../images/pages/incidents_page.png" id="image_lsq_mqn_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/control_prot_obj_events/events_incidents/incident_status.dita"/>
+        <link href="../topics/control_prot_obj_events/events_incidents/edit_incident.dita"/>
+        <link href="../topics/control_prot_obj_events/events_incidents/del_incident.dita"/>
+        <link href="../topics/control_prot_obj_events/events_incidents/group_oper_incidents.dita"/>
+    </related-links>
+</glossentry>

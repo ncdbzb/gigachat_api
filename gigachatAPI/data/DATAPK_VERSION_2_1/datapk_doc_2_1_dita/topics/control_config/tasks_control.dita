@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="tasks_control">
+    <title>Управление задачами сбора данных</title>
+    <taskbody>
+        <context>
+            <p>Для управления задачами сбора конфигураций и событий веб-интерфейсе <term
+                    keyref="appliance"/>а предусмотрены следующие возможности:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Редактирование задачи сбора данных.</cmd>
+                <info>
+                    <note id="note_sqp_4nx_ssb" type="attention">Редактирование доступно только для
+                        задач, содержащих расписание. Для задач с однократным типом запуска
+                        воспользуйтесь возможностью копирования.</note>
+                    <p>Для изменения параметров задачи:</p>
+                </info>
+                <substeps id="substeps_vjp_14x_ssb">
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/data_collect/go_to_task.dita#ReusableComponent_mrv_znx_ssb/cmd_orv_znx_ssb"
+                        />
+                    </substep>
+                    <substep>
+                        <cmd>Наведите курсор на правую часть строки с задачей, которую необходимо
+                            изменить.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку <ph
+                                conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                            />.</cmd>
+                        <stepresult>появится окно <uicontrol>Редактирование задачи</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените необходимые параметры задачи.</cmd>
+                        <info>
+                            <fig id="fig_a3b_r4x_ssb">
+                                <title>Окно «Редактирование задачи»</title>
+                                <image href="../../images/control_config/tasks/edit_task_window.png"
+                                    id="image_b3b_r4x_ssb">
+                                    <alt>Окно «Редактирование задачи»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Копирование задачи сбора данных. Для копирования:</cmd>
+                <substeps id="substeps_bqw_14x_ssb">
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/data_collect/go_to_task.dita#ReusableComponent_mrv_znx_ssb/cmd_orv_znx_ssb"
+                        />
+                    </substep>
+                    <substep>
+                        <cmd>Наведите курсор на правую часть строки с задачей, которую необходимо
+                            скопировать.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <image href="../../images/icons/copy.png"
+                                id="image_nsm_pbk_2tb"/> (<uicontrol>Копировать задачу</uicontrol>).</cmd>
+                        <stepresult>появится окно <uicontrol>Копирование задачи</uicontrol>, в котором автоматически
+                            будет добавлена текущая дата и время в конце наименования
+                            задачи.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости измените параметры задачи.</cmd>
+                        <info>
+                            <fig id="fig_ahg_kjw_wsb">
+                                <title>Окно «Копирование задачи»</title>
+                                <image href="../../images/control_config/tasks/copy_task_window.png"
+                                    id="image_bhg_kjw_wsb">
+                                    <alt>Окно «Копирование задачи»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Создать</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult>задача будет запускаться с новыми параметрами. Если наименование задачи
+                    изменено, на странице <cite keyref="data_collect_results_fp"/> новое
+                    наименование задачи будет отображаться только для новых процессов
+                    сбора.</stepresult>
+            </step>
+            <step>
+                <cmd>Удаление задачи сбора данных. Для удаления:</cmd>
+                <substeps id="substeps_xxb_b4x_ssb">
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/data_collect/go_to_task.dita#ReusableComponent_mrv_znx_ssb/cmd_orv_znx_ssb"
+                        />
+                    </substep>
+                    <substep>
+                        <cmd>Наведите курсор на правую часть строки с задачей, которую необходимо
+                            удалить.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку <ph
+                                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                            /><uicontrol> задачу</uicontrol>).</cmd>
+                        <stepresult>появится окно подтверждения удаления задачи.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите обоснование удаления задачи и нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+                        <info>
+                            <fig id="fig_t25_xpx_ssb">
+                                <title>Окно ввода обоснования удаления задачи</title>
+                                <image href="../../images/control_config/tasks/del_task_window.png"
+                                    id="image_u25_xpx_ssb">
+                                    <alt>Окно ввода обоснования удаления задачи</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Групповое удаление задач сбора данных. Для удаления:</cmd>
+                <substeps id="substeps_ij3_b4x_ssb">
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/data_collect/go_to_task.dita#ReusableComponent_mrv_znx_ssb/cmd_orv_znx_ssb"
+                        />
+                    </substep>
+                </substeps>
+                <substeps id="substeps_gyk_qqx_ssb">
+                    <substep>
+                        <cmd>Нажмите кнопку <ph
+                                conref="../reusable/buttons/delete_group_button.dita#ReusableComponent_i3k_5br_ssb/delete_group_button"
+                            />).</cmd>
+                        <stepresult>появится окно подтверждения удаления задач.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Введите обоснование удаления задач и нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+                        <info>
+                            <fig id="fig_jyl_qqx_ssb">
+                                <title>Окно ввода обоснования удаления задачи</title>
+                                <image href="../../images/control_config/tasks/del_tasks_window.png"
+                                    id="image_del_tasks_window">
+                                    <alt>Окно ввода обоснования удаления задач</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>задача будет удалена. На странице <cite keyref="data_collect_results_fp"
+                    /> сохранятся записи о процессах, завершенных в рамках удаленной
+                    задачи.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

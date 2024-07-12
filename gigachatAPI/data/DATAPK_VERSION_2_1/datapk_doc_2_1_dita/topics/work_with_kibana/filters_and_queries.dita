@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="filters_and_queries">
+ <title>Просмотр событий и создание запросов в экспертном режиме</title>
+ <taskbody>
+  <prereq id="prereq_cwb_hr4_wzb">Перед созданием запросов убедитесь, что создан шаблон индекса
+   согласно инструкции «<xref href="setup_normalization_rules.dita"/>».</prereq>
+ <context>
+ <p>Расширенный просмотр событий и настройка нормализации осуществляется на странице <ph
+     conref="../reusable/pages_breadcrumbs/events_expert_mode.dita#ReusableComponent_sdg_tqp_wzb/ph_udg_tqp_wzb"
+    />. </p>
+ <p>Запросы и фильтры можно сохранять для дальнейшего экспорта или для графической визуализации
+    результатов. Инструменты для работы с запросами (создание нового запроса, сохранение текущего
+    запроса, открытие сохраненного результата) расположены в правой верхней части страницы <cite
+     keyref="events_em_fp"/>.</p>
+   <p>В левой части страницы и в каждом событии расположены поля, для которых генерируются
+    уникальные данные. Подробнее о полях событий см. в разделе «<xref
+     href="../reference_info/event_fields_desc.dita"/>».</p>
+ <p>Для создания нового запроса:</p>
+ </context>
+ <steps>
+ <step>
+    <cmd><ph
+      conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><cite keyref="events_fp"/>.</cmd>
+   </step>
+   <step>
+    <cmd>Нажмите кнопку <image href="../../images/icons/expert_mode.png" id="image_t1r_d4g_vzb"/> в
+     верхнем правом углу.</cmd>
+    <stepresult>откроется страница <cite keyref="events_em_fp"/></stepresult>
+   </step>
+   <step>
+    <cmd>Нажмите кнопку <image href="../../images/icons/kibana/plus_kibana.png"
+     id="image_nr5_s4n_k5b"/> напротив необходимых полей в блоке <uicontrol>Available fields</uicontrol>.</cmd>
+    <stepresult>
+     <p>будут отображены только выбранные поля.</p>
+     <fig id="fig_ug4_3sn_k5b">
+      <title>Результат выбора столбцов «description» и «listener»</title>
+      <image href="../../images/work_with_kibana/event_fields_filter.png" id="image_vg4_3sn_k5b">
+       <alt>Результат выбора столбцов «description» и «listener»</alt>
+      </image>
+     </fig>
+    </stepresult>
+   </step>
+   <step>
+    <cmd>Для ввода запросов в формате <xref
+      href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html" format="html"
+      scope="external">Lucene</xref> воспользуйтесь полем <uicontrol>Search</uicontrol>.</cmd>
+   </step><step>
+    <cmd>Для добавления фильтров нажмите кнопку <uicontrol>+ Add filter</uicontrol>.</cmd>
+   </step>
+   <step>
+    <cmd>Для сохранения запроса в виде объекта нажмите кнопку <uicontrol>Save</uicontrol> в верхнем
+     правом углу страницы. </cmd>
+   </step>
+   <step>
+    <cmd>В появившемся окне введите название сохраняемого объекта. </cmd>
+    <info>
+     <fig id="fig_rmr_rvc_xzb">
+      <title>Окно сохранения поиска</title>
+      <image href="../../images/work_with_kibana/saved_queries.png"/>
+     </fig>
+    </info>
+   </step><step>
+    <cmd>Нажмите кнопку <uicontrol>Save</uicontrol>.</cmd>
+   </step>
+   <step>
+    <cmd><ph
+      conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../reusable/pages_breadcrumbs/monitoring_settings.dita#ReusableComponent_ks1_35x_3xb/ph_ls1_35x_3xb"
+     />.</cmd>
+   </step>
+   <step>
+    <cmd>Выберите вкладку <uicontrol>Saved Objects</uicontrol>.</cmd>
+   </step><step>
+    <cmd>Выберите тип <codeph>search</codeph> и убедитесь, что в списке запросов присутствует
+     сохраненный объект.</cmd>
+    <info>
+     <fig>
+      <title>Выбор типа «search» в разделе «Saved objects» страницы «Настройки мониторинга»</title>
+      <image href="../../images/work_with_kibana/searches_tab.png"/>
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Для применения сохраненного запроса перейдите на страницу <ph
+      conref="../reusable/pages_breadcrumbs/events_expert_mode.dita#ReusableComponent_sdg_tqp_wzb/ph_udg_tqp_wzb"
+     />, нажмите кнопку <uicontrol>Open</uicontrol> в верхнем правом углу страницы и выберите из
+     списка сохраненный запрос.</cmd>
+    <info>
+     <fig id="fig_hyf_hhm_ynb">
+      <title>Окно выбора поискового запроса</title>
+      <image href="../../images/work_with_kibana/open_search_window.png" id="image_apk_hhm_ynb"/>
+     </fig>
+    </info>
+   </step>
+ </steps>
+ </taskbody>
+</task>

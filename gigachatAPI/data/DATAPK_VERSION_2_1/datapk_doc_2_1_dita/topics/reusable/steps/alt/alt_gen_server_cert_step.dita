@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_avh_wrq_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="gen_serv_cert_step">
+                <cmd>Сгенерируйте серверные сертификаты <codeph>nginx</codeph>. Для этого:</cmd>
+                <substeps id="substeps_j13_b2g_myb">
+                    <substep>
+                        <cmd>Задайте системные переменные по очереди:</cmd>
+                        <info
+                            conref="../../alt/alt_create_system_vars_info.dita#ReusableComponent_mjc_5v1_yyb/info_ojc_5v1_yyb"/>
+                    </substep>
+                    <substep
+                        conref="create_serv_cert_config_substep.dita#ReusableComponent_u3k_nv1_yyb/substep_v3k_nv1_yyb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>Создайте сертификат по команде:</cmd>
+                        <info>
+                            <codeblock conref="../../alt/create_serv_cert_codeblock.dita#ReusableComponent_wmv_kv1_yyb/codeblock_ull_kgg_myb" id="codeblock_tsv_kv1_yyb"/>
+                            <note id="note_ylv_kgg_myb">При выполнении команды убедитесь, что файл
+                                сертификата имеет расширение <codeph>.cert</codeph>. Если требуется
+                                настроить вход в <term keyref="appliance"/> по сетевому имени,
+                                перейдите к разделу «<xref
+                                    href="../../../deployment/alt/web_trusted_cert.dita"/>».</note>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="del_serv_cert_config_substep.dita#ReusableComponent_ob5_qv1_yyb/substep_pb5_qv1_yyb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

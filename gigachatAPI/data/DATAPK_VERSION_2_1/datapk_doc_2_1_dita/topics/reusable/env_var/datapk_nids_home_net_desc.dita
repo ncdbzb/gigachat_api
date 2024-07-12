@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_iwg_fx3_jpb">
+
+ <title>DATAPK_NIDS_HOME_NET</title>
+ <body> 
+ <p id="p_owg_fx3_jpb">Домашняя сеть для системы обнаружения вторжений. По умолчанию имеет значение
+                  частных внутренних подсетей
+                        <codeph>192.168.0.0/16,10.0.0.0/8,172.16.0.0/12</codeph>. Значение по
+                  умолчанию менять не рекомендуется</p> 
+</body> 
+</topic> 

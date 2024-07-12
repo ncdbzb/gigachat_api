@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_ref">
+ <title>Импорт справочника с классификаторами АСУ ТП</title>
+ <taskbody>
+ <context>
+ <note>Как правило, файлы в формате <codeph>*.json</codeph> не создаются вручную, а
+     экспортируются из другого <term keyref="appliance"/>а.</note>
+	 
+	 <p>Для импорта справочника с пользовательской иерархией <abbreviated-form keyref="ACS_and_TP"/> из
+        файла формата <codeph>*.json</codeph> в <term keyref="appliance"/>:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd
+          conref="../../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+        />
+      </step>
+ <step>
+        <cmd>На панели <uicontrol>Элементы иерархии</uicontrol> в строке Иерархия
+              <uicontrol><abbreviated-form keyref="ACS_and_TP"/></uicontrol> нажмите кнопку <ph
+            conref="../../../reusable/buttons/import_button.dita#ReusableComponent_bj1_d1p_pyb/ph_dj1_d1p_pyb"
+          />.</cmd>
+      </step>
+ <step>
+    <cmd>В открывшемся окне укажите расположение импортируемого файла формата
+      <codeph>*.json</codeph> и подтвердите выбор.</cmd>
+   </step>
+ <step
+ conref="../../../reusable/import_action_step.dita#import_action_step/import_action_step">
+ <cmd/>
+ </step>
+      <step>
+        <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol>.</cmd>
+      </step>
+ <step>
+        <cmd>Убедитесь, что классификаторы <abbreviated-form keyref="ACS_and_TP"/> были успешно
+          загружены.</cmd>
+        <stepresult>сразу после загрузки файла в правом вернем углу страницы <cite
+            keyref="exchange_fp"/> появится уведомление: <systemoutput>Список «Иерархия
+              <abbreviated-form keyref="ACS_and_TP"/>» успешно обновлена</systemoutput>, и на
+          странице <cite keyref="prot_obj_fp"/> → <cite keyref="prot_obj_settings_fp"/> → <cite
+            keyref="ref_fp"/> появится импортированный справочник.</stepresult>
+      </step>
+ </steps>
+ </taskbody>
+</task>

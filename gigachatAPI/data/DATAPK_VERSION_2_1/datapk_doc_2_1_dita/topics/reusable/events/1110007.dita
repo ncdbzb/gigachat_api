@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1110007">
+    <title>
+Выполнение проверки завершено успешно</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1110007">
+Название проверки: <codeph>{assessment_title}</codeph>; Название ОЗ: <codeph>{host_netbios_name}</codeph>; ID ОЗ: <codeph>{assessment_host_id}</codeph>; Пользователь: <codeph>{assessment_created_by}</codeph>; Результат: <codeph>{assessment_status_value}</codeph>; Описание: <codeph>{description}</codeph>; Время запуска проверки: <codeph>{assessment_created_at}</codeph>; Время окончания проверки: <codeph>{assessment_updated_at}</codeph>; IP ОЗ: <codeph>{host_interface_ip_v4_address}</codeph>; MAC ОЗ: <codeph>{host_interface_mac_address}</codeph>; Количество OVAL-определений: <codeph>{oval_definitions_count}</codeph>; Количество выполненных проверок: <codeph>{performed_checks_count}</codeph>; Состояние соответствия: есть несоответствия/уязвимостей нет; Количество выявленных несоответствий: <codeph>{compliance_false_count}</codeph>; Количество выявленных уязвимостей: <codeph>{vulnerabilities_true_count}</codeph></p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

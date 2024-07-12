@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_static_route">
+    <title>Добавление статического маршрута</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>При необходимости добавьте временные или постоянные статические маршруты сетевому
+            интерфейсу <term keyref="appliance"/>а. Для этого:</context>
+        <steps>
+            <step
+                conref="../../reusable/alt/extra_settings/ip_route.dita#ReusableComponent_clp_sy4_f1c/step_dlp_sy4_f1c">
+                <cmd/>
+            </step>
+            <step conref="../../reusable/alt/alt_stop_work.dita#alt_stop_work/alt_stop_work">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для добавления интерфейсу <term keyref="appliance"/>а временного маршрута к
+                    необходимой IP-подсети выполните команду:</cmd>
+                <info>
+                    <codeblock id="codeblock_b5h_cl1_f1c">ip route add [subnet]/[subnet_mask] via [subnet_gateway] dev [iface_name]</codeblock>
+                    <p><ph>где:</ph><ul id="ul_c5h_cl1_f1c">
+                            <li><codeph>[subnet]/[subnet_mask]</codeph> — подсеть, в которую
+                                необходимо проложить маршрут, и маска этой подсети;</li>
+                            <li><codeph>[subnet_gateway]</codeph> — IP-адрес шлюза, через который
+                                можно получить доступ к подсети;</li>
+                            <li><codeph>[iface_name]</codeph> — имя сетевого интерфейса <term
+                                    keyref="appliance"/>а, для которого будет добавлен маршрут.</li>
+                        </ul></p>
+                    <note id="note_yj5_gm1_f1c"><ph>Можно создавать маршруты до отдельных хостов
+                            командой:</ph><codeblock id="codeblock_y22_3m1_f1c">ip route add [ip_addr] via [gateway] dev [iface_name]</codeblock><p><ph>где:</ph><ul
+                                id="ul_osv_qm1_f1c">
+                                <li><codeph>[ip_addr]</codeph> — IP-адрес хоста, до которого
+                                    необходимо проложить маршрут;</li>
+                                <li><codeph>[gateway]</codeph> — IP-адрес шлюза, через который можно
+                                    получить доступ к хосту;</li>
+                                <li><codeph>[iface_name]</codeph> — имя сетевого интерфейса <term
+                                        keyref="appliance"/>а, для которого будет добавлен
+                                    маршрут.</li>
+                            </ul></p></note>
+                </info>
+                <stepresult>Будет создан временный маршрут: это значит, что после перезапуска
+                    сетевой службы <codeph>network</codeph> либо <term keyref="alt_name"/> данные
+                    маршруты будут удалены.</stepresult>
+            </step>
+            <step>
+                <cmd>Для добавления интерфейсу <term keyref="appliance"/>а постоянного маршрута к
+                    необходимой IP-подсети:</cmd>
+                <substeps id="substeps_zqz_gl1_f1c">
+                    <substep>
+                        <cmd>Откройте конфигурационный файл <codeph>ipv4route</codeph> в директории
+                            сетевого интерфейса <codeph>[iface_name]</codeph>, которому необходимо
+                            добавить маршрут:</cmd>
+                        <info>
+                            <codeblock id="codeblock_xml_f2z_lyb">nano /etc/net/ifaces/[iface_name]/ipv4route</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте в новой строке статический маршрут:</cmd>
+                        <info>
+                            <codeblock id="codeblock_q44_1pz_lyb">[subnet]/[subnet_mask] via [subnet_gateway]</codeblock>
+                            <p><ph>где:</ph><ul id="ul_mn4_pl1_f1c">
+                                    <li><codeph>[subnet]/[subnet_mask]</codeph> — подсеть, в которую
+                                        необходимо проложить маршрут, и маска этой подсети;</li>
+                                    <li><codeph>[subnet_gateway]</codeph> — IP-адрес шлюза, через
+                                        который можно получить доступ к подсети.</li>
+                                </ul></p>
+                            <note id="note_ddr_sb5_21c">
+                                <p>Каждый новый маршрут добавляется в новой строке.</p>
+                                <p>Можно создавать маршруты до отдельных хостов, добавляя в
+                                    конфигурационный файл <codeph>ipv4route</codeph> интерфейса
+                                    новые строки вида:</p>
+                                <codeblock id="codeblock_wbf_dn1_f1c">[ip_addr] via [subnet_gateway]</codeblock>
+                                <p><ph>где:</ph><ul id="ul_nq5_fn1_f1c">
+                                        <li><codeph>[ip_addr]</codeph> — IP-адрес хоста, до которого
+                                            необходимо проложить маршрут;</li>
+                                        <li><codeph>[gateway]</codeph> — IP-адрес шлюза, через
+                                            который можно получить доступ к хосту.</li>
+                                    </ul></p>
+                            </note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните изменения в файле <codeph>ipv4route</codeph> и закройте
+                            его.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../../reusable/alt/extra_settings/systemctl_restart_network.dita#ReusableComponent_cvj_hz4_f1c/step_evj_hz4_f1c">
+                <cmd/>
+            </step>
+            <step conref="../../reusable/alt/alt_run_container.dita#alt_run_container/run_container">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

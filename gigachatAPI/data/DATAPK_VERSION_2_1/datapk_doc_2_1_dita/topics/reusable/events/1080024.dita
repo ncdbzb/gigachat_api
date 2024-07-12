@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:1080024-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_dsf_pjx_nxb" outputclass="wide">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_esf_pjx_nxb">Наименование УД: <codeph>{cred_name}</codeph>;
+                                ОЗ, которым были присвоены УД:
+                                <codeph>{host_netbios_names}</codeph>; Пользователь:
+                                    <codeph>{user}</codeph>; Обоснование:
+                                    <codeph>{justification}</codeph></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

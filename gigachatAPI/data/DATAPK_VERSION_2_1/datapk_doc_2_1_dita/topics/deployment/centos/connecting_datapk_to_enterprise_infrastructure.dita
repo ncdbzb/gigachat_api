@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id_1">
+  <title>Установка и настройка Комплекса на базе ОС CentOS</title>
+  <body>
+    <p>Установка и настройка <term keyref="appliance"/>а на базе операционной системы CentOS
+      выполняется в три этапа:<ol id="ul_tl3_z53_gtb">
+        <li><xref href="install_datapk.dita"/></li>
+        <li><xref keyref="centos_settings"/></li>
+        <li><xref keyref="configurator"/></li>
+      </ol></p>
+    <p>Файлы, используемые при установке и настройке:</p>
+    <ul>
+      <li><p><codeph>datapk_CentOS-Stream-8-x86_64-[дата_сборки_CentOS]-dvd1_[дата_и_время_сборки_измененного_образа].iso</codeph>
+        — образ операционной системы CentOS для установки на серверы <term keyref="appliance"/>а.
+        Образ не требует доступа в Интернет и включает в себя пакеты, необходимые для работы <term
+          keyref="appliance"/>а.</p>
+		  <note type="tip"><p>Рекомендуется использовать этот ISO-образ ОС
+          CentOS Stream 8 для инсталляций <term keyref="appliance"/>а, где не приобретена
+          сертифицированная ОС.</p>
+		  <p>Сборка ISO-образов ОС CentOS 8 больше не производится в связи с
+            прекращением поддержки этой системы.</p></note>
+			</li>
+      <li
+        conref="../../reusable/installation_files/generate_env.dita#ReusableComponent_x3d_tnk_x5b/li_w4z_pzp_g5b"/>
+      <li
+        conref="../../reusable/installation_files/ngui.dita#ReusableComponent_glw_qnk_x5b/li_cj3_szp_g5b"/>
+      <li
+        conref="../../reusable/installation_files/scripts_certs.dita#ReusableComponent_svb_v4k_x5b/li_tvb_v4k_x5b"/>
+      <li
+        conref="../../reusable/installation_files/docker-compose_release.dita#ReusableComponent_w5g_x4k_x5b/li_xp5_11q_g5b"/>
+      <li
+        conref="../../reusable/installation_files/docker-compose_stand.dita#ReusableComponent_qly_z4k_x5b/li_zdc_c1q_g5b"/>
+      <li
+        conref="../../reusable/installation_files/docker-compose_backup.dita#ReusableComponent_fd1_bpk_x5b/li_bw3_d1q_g5b"/>
+      <li
+        conref="../../reusable/installation_files/logstash.dita#ReusableComponent_hm2_cpk_x5b/li_rvl_21q_g5b"/>
+      <li
+        conref="../../reusable/installation_files/datapk_tar.dita#ReusableComponent_g5z_dpk_x5b/li_kcw_m1q_g5b"/>
+      <li
+        conref="../../reusable/installation_files/get_id.dita#ReusableComponent_nd1_kpk_x5b/li_hvt_q1q_g5b"/>
+      <li><codeph>datapk_setup.sh</codeph> — мастер конфигурирования <term keyref="appliance"
+        />а.</li>
+    </ul>
+  </body>
+</topic>

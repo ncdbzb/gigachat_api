@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wyn_vvz_21c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_xyn_vvz_21c">
+                        <cmd>Выполните перезагрузку <term keyref="alt_name"/>:</cmd>
+                        <info><codeblock id="codeblock_yfv_ftq_lyb">shutdown -r now</codeblock></info>
+                        <stepresult><term keyref="alt_name"/> перезагружена.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

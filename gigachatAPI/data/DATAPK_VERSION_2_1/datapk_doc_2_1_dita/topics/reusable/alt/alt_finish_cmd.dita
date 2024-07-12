@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ktg_msc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_mtg_msc_2zb">Нажмите <uicontrol>Завершить</uicontrol> и дождитесь перезагрузки <term keyref="alt_name"/>.</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

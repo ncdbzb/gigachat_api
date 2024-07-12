@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="ReusableComponent_kdm_1b3_k1c">
+    <glossterm>OVAL_IMPORT_TIMEOUT_MINUTES</glossterm>
+    <glossdef><ph id="ph_mdm_1b3_k1c">Время, по истечении которого импорт OVAL-групп завершается с
+            ошибкой. Значение задается в минутах</ph></glossdef>
+</glossentry>

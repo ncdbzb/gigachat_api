@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="diagnostics_fp">
+    <glossterm>Диагностика</glossterm>
+    <glossdef><p>Подраздел управления <term keyref="appliance"/>ом, где можно просматривать графики нагрузки на
+            различные компоненты системы, на которой установлен текущий <term keyref="appliance"/>.
+            Для выбора доступны периоды 1 час, 24 часа и 7 дней.</p><fig id="fig_zhs_ltg_dqb">
+            <title>Страница «Диагностика»</title>
+            <image href="../images/pages/diagnostics_page_scr.png" id="image_a3s_ltg_dqb">
+                <alt>Страница «Диагностика»</alt>
+            </image>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/general_settings/diagnostics.dita"/>
+    </related-links>
+</glossentry>

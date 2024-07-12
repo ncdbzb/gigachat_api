@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nl3_lph_yyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <info><ph id="ph_ol3_lph_yyb">Где <codeph>[M_interface]</codeph> — наименование
+                        физического сетевого интерфейса <term keyref="appliance"/>а уровня
+                            <abbreviated-form keyref="management"/>, к которому будут подключаться
+                        сенсоры.</ph></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

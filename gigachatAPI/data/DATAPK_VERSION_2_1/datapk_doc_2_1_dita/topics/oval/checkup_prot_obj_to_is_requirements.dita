@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="checkup_prot_obj_to_is_requirements">
+ <title>Запуск OVAL-проверки объекта защиты на соответствие требованиям информационной
+  безопасности</title>
+ <taskbody>
+ <context>
+ <p>Для проверки объекта защиты на соответствие требованиям информационной безопасности с помощью
+     <abbreviated-form keyref="oval_def"/>:</p>
+ </context>
+ <steps>
+ <step>
+    <cmd><ph
+      conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../reusable/pages_breadcrumbs/oval_results.dita#ReusableComponent_xrx_5t2_qxb/ph_yrx_5t2_qxb"
+     />. </cmd>
+    <info>
+     <fig>
+      <title>Страница «Результаты проверок»</title>
+      <image href="../../images/pages/oval_reports_page_scr.png"/>
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать проверку OVAL</uicontrol>. В открывшемся окне
+      <uicontrol>Создание проверки OVAL-определений</uicontrol> настройте следующие параметры:</cmd>
+    <substeps>
+     <substep>
+      <cmd>группу <abbreviated-form keyref="oval_def"/>-определений;</cmd>
+     </substep>
+     <substep>
+      <cmd>наименование проверки;</cmd>
+     </substep>
+     <substep>
+      <cmd>описание цели выполнения проверки;</cmd>
+     </substep>
+     <substep>
+      <cmd>статус проверки;</cmd>
+     </substep>
+     <substep>
+      <cmd>объекты защиты, к которым был настроен доступ. </cmd>
+      <info>
+       <note>Если поля <uicontrol>Цель проверки</uicontrol>, <uicontrol>Статус проверки</uicontrol>
+        и <uicontrol>Наименование оставить</uicontrol> неизменными, то они будут заполнены
+        автоматически. Поле <uicontrol>OVAL -определения</uicontrol> недоступно для редактирования и
+        заполняется автоматически после выбора группы <abbreviated-form keyref="oval_def"
+        />-определений.</note>
+      </info>
+     </substep>
+    </substeps>
+    <info>
+     <fig>
+      <title>Окно «Создание проверки OVAL-определений»</title>
+      <image
+       href="../../images/oval/checkup_prot_obj_to_is_requirements/create_oval_definitions_report_window.png"
+      />
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений. </cmd>
+    <stepresult>
+     <p>выполнение проверки запустится автоматически.</p>
+    </stepresult>
+   </step>
+	  <step>
+    <cmd>Обновите страницу <cite keyref="check_report_fp"/> для получения результата проверки.</cmd>
+    <stepresult>на странице отобразятся результаты проверки с цветовой индикацией. Подробнее см.
+     раздел «<xref href="view_checkup_prot_obj_to_is_requirements.dita"/>».</stepresult>
+   </step>
+ </steps>
+ </taskbody>
+</task>

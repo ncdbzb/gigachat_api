@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_MAX_DISK_SPACE_CONSUMED_PERCENTAGE">
+    <glossterm>DATAPK_MAX_DISK_SPACE_CONSUMED_PERCENTAGE</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/datapk_max_disk_space_consumed_percentage_desc.dita#ReusableComponent_kgd_kf1_5sb/ph_mgd_kf1_5sb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

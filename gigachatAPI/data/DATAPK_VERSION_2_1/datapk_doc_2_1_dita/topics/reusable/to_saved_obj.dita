@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+ <task id="ReusableComponent_i51_243_qpb">
+ <title>переход к сохраненным объектам</title>
+
+ <taskbody> 
+ <steps> 
+
+
+ <step id="step_n51_243_qpb">
+    <cmd><ph conref="pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/><ph
+      conref="pages_breadcrumbs/monitoring_settings.dita#ReusableComponent_ks1_35x_3xb/ph_ls1_35x_3xb"
+     />.</cmd>
+   </step> 
+ <step id="step_t51_243_qpb">
+        <cmd>Выберите вкладку <uicontrol>Saved Objects</uicontrol>.</cmd>
+        <info>
+          <fig id="fig_rpv_qwv_znb">
+            <title>Вкладка «Saved Objects»</title>
+            <image href="../../images/pages/saved_obj_kibana_page.png" id="image_kwd_rwv_znb"/>
+          </fig>
+        </info>
+      </step> 
+</steps> 
+</taskbody> 
+</task> 

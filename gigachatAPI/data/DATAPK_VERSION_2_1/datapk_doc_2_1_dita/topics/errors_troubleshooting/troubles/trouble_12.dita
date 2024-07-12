@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_12">
+    <title>При попытке сбора данных в результатах выводится предупреждение «Превышено время ожидания
+        выполнения задачи сбора событий</title>
+    <troublebody>
+        <condition>
+
+            <p>Для получения предупреждения <systemoutput>Превышено время ожидания выполнения задачи
+                    сбора событий</systemoutput> возможны следующие причины:</p>
+            <ul id="ul_r1h_vlp_snb">
+                <li><xref href="#trouble_12/cause_too_much_connect" format="dita"/></li>
+                <li><xref href="#trouble_12/cause_full_queue" format="dita"/></li>
+                <li><xref href="#trouble_12/cause_timeout" format="dita"/></li>
+            </ul>
+            <note conref="../../reusable/note_recommend.dita#note_recommend/note_recommend"/>
+        </condition>
+        <troubleSolution>
+            <cause id="cause_too_much_connect">
+                <title>ОЗ не может принять несколько одновременных подключений к нему по одному или
+                    нескольким протоколам</title>
+            </cause>
+            <remedy>
+                <title>Рекомендации по настройке запуска задач сбора данных с одного объекта
+                    защиты</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Настраивайте сбор событий с промежутком между запусками задач (для
+                            каждой задачи установите отдельное от остальных задач время
+                            выполнения).</cmd>
+                    </step>
+                    <step>
+                        <cmd>Используйте сканеры сбора событий с <abbreviated-form keyref="OS"/>
+                            Windows, которые собирают только критичные события.</cmd>
+                    </step>
+                    <step>
+                        <cmd>В одну задачу добавляйте не более одного сканера сбора данных.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_full_queue">
+                <title>Переполнена очередь задач сбора данных в сервисе rabbitmq Комплекса</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Перейдите в карточку объекта защиты (или нескольких объектов защиты),
+                            для которого настроено расписание задачи сбора данных.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Отмените выполнение одной или нескольких задач сбора данных по
+                            расписанию (отмените выбор чекбокса <image
+                                href="../../../images/icons/checkbox.png" id="image_fkr_ktk_ynb"/> в
+                            строке с названием задачи).</cmd>
+                    </step>
+                    <step>
+                        <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а уровня
+                                <abbreviated-form keyref="management"/>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а и остановите
+                            работу контейнеров без удаления накопленных данных командой:</cmd>
+                        <info>
+                            <codeblock>docker-compose down</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Выполните команду очистки очереди сервиса rabbitmq. Для этого выполните
+                            команду:</cmd>
+                        <info>
+                            <codeblock>rm -rf /var/lib/docker/volumes/datapk_rabbitmq_data/_data/mnesia/* </codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Запустите работу контейнеров командой:</cmd>
+                        <info><codeblock>docker-compose up -d</codeblock></info>
+                    </step>
+                    <step>
+                        <cmd
+                            conref="../../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+                        />
+                    </step>
+                    <step>
+                        <cmd>Выполните повторный запуск сбора данных.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_timeout">
+                <title>Заканчивается максимальное время ожидания выполнения задачи сбора
+                    данных</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Увеличьте максимальное время ожидания выполнения задачи сбора
+                    данных для одного сканера.</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd><ph
+                                conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                                /><ph
+                                conref="../../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+                            />.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Откройте необходимый сканер сбора данных на редактирование.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Увеличьте значение в поле <uicontrol>Максимальное время ожидания
+                                выполнения задачи</uicontrol>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Нажмите кнопку <uicontrol>Сохранить</uicontrol> для подтверждения изменений.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Дождитесь сбора задачи сбора данных, создайте новую или запустите
+                            сканер.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

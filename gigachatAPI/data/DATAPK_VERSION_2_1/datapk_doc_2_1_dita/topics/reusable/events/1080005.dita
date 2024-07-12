@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1080005">
+    <title>
+Интерфейс был удален в результате изменения адресов домашней сети</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1080005">
+ID: <codeph>{id}</codeph>; ОЗ ID: <codeph>{host_id}</codeph>;  Имя: <codeph>{name}</codeph>; Интерфейс сбора данных: <codeph>{default}</codeph>; ipv4: <codeph>{ip_v4_address}</codeph>; mac: <codeph>{mac_address}</codeph>)</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

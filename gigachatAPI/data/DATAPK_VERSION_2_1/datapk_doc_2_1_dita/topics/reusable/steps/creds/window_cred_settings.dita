@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ryy_rtt_jyb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>
+                    <ph id="ph_tyy_rtt_jyb">откроется окно <uicontrol>Настройка учетных
+                            данных</uicontrol>.</ph>
+                </cmd>
+            </step>
+        </steps>
+     </taskbody>
+</task>

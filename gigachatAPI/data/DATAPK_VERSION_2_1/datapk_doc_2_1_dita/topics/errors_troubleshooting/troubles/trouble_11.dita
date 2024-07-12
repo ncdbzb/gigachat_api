@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_11">
+ <title>Не осуществляется сбор необходимых событий или конфигураций</title>
+ <troublebody>
+ <condition>
+ 
+ <p>Для проблем со сбором событий или конфигураций могут быть следующие причины:</p>
+ <ul id="ul_ixm_clp_snb">
+                <li><xref href="#trouble_11/cause_incorr_host_sett" format="dita"/></li>
+                <li><xref href="#trouble_11/cause_script_err" format="dita"/></li>
+ </ul>
+ <note conref="../../reusable/note_recommend.dita#note_recommend/note_recommend"/>
+ </condition>
+ <troubleSolution>
+ <cause id="cause_incorr_host_sett">
+                <title>Некорректные настройки объекта защиты</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step><cmd>Убедитесь в корректности настроек служб и разрешений для сбора данных с выбранного объекта защиты.</cmd></step>
+                    <step>
+                        <cmd>Убедитесь, что объекту защиты присвоены учетные данные с правами,
+                            которые:</cmd>
+                        <info>
+                            <ul id="ul_s2s_l5c_l1c">
+                                <li>позволяют получать информацию удаленно;</li>
+                                <li>позволяют получать критичную информацию, запрашиваемую скриптом
+                                    сбора данных.</li>
+                            </ul>
+                        </info>
+                    </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ <troubleSolution>
+ <cause id="cause_script_err">
+                <title>Ошибки в Python-скрипте сбора данных, неверные настройки учетных данных
+                    объекта защиты или расписания задачи сбора данных</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+                        <cmd>Проанализируйте сообщения об ошибках на страницах <cite
+                                keyref="data_collect_results_fp"/>, <cite
+                                keyref="data_collect_tasks_fp"/>, <cite keyref="events_fp"/>, на
+                            панели мониторинга <xref
+                                href="../../work_with_dashboards/main_dashboard/config_control/data_collect.dita"
+                            /> и на диаграммах в карточке <abbreviated-form keyref="host"/>.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Просмотрите содержание Python-скриптов сбора данных из сканеров, работа
+                            которых завершается ошибками, и найдите в них названия сервисов,
+                            участвующих в сборе данных (коннекторов). Название расположено в скобках
+                            после команды <codeph>execute</codeph>.</cmd>
+                        <info>
+                            <fig id="fig_pxn_nbk_45b">
+                                <title>Расположение названия коннектора в Python-скрипте сбора
+                                    данных</title>
+                                <image
+                                    href="../../../images/errors_troubleshooting/script_connector.png"
+                                    id="image_qxn_nbk_45b">
+                                    <alt>Расположение названия коннектора в Python-скрипте сбора
+                                        данных</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>На странице <cite keyref="sensors_fp"/> найдите сенсор, прослушивающий
+                            домашнюю сеть объекта защиты.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Подключитесь к операционной системе сенсора, который собирает данные из
+                            домашней сети объекта защиты.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Просмотрите список имеющихся сервисов-коннекторов:</cmd>
+                        <info>
+                            <codeblock id="codeblock_xq1_2mf_45b">docker ps | grep _connector</codeblock>
+                        </info>
+                        <stepresult>
+                            <p>будет выведен список сервисов-коннекторов.</p>
+                            <fig id="fig_hgk_4zj_45b">
+                                <title>Список коннекторов Комплекса</title>
+                                <image
+                                    href="../../../images/errors_troubleshooting/connectors_list.png"
+                                    id="image_igk_4zj_45b">
+                                    <alt>Список коннекторов Комплекса</alt>
+                                </image>
+                            </fig>
+                        </stepresult>
+                    </step>
+                    <step>
+                        <cmd>Найдите подходящий коннектор.</cmd>
+                        <info>
+                            <note id="note_sqc_pbk_45b">Название коннектора в выводе команды не
+                                полностью совпадает с названием в Python-скрипте сбора данных. За
+                                исключением <codeph>msrpc</codeph> название коннектора в выводе
+                                команды содержит <codeph>_connector</codeph>.</note>
+                        </info>
+                    </step>
+ <step>
+                        <cmd>Просмотрите журналы коннекторов, на которых обнаружены проблемы.
+                            Например <codeph>host_data_collector</codeph>:</cmd>
+                        <info>
+                            <codeblock>docker logs -f host_data_collector</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Посмотрите журналы сервиса <codeph>command_processor</codeph>, который
+                            отвечает за все запущенные процессы сбора данных:</cmd>
+                        <info>
+                            <codeblock id="codeblock_o3j_vsd_qyb">docker logs -f command_processor</codeblock>
+                        </info>
+                    </step>
+ <step>
+      <cmd>При необходимости отредактируйте сканеры сбора данных, расписание задачи, учетные данные
+       объекта защиты.</cmd>
+     </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+</troubleshooting>

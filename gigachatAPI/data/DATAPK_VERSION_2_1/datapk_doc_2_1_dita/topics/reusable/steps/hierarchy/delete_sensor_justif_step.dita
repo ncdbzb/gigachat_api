@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lyv_f1g_czb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_myv_f1g_czb">
+                <note type="caution" id="note_w2y_dm1_kzb">
+                    <ul id="ul_x2y_dm1_kzb">
+                        <li>При удалении сенсора будут удалены связанные с ним данные: сетевые
+                            атрибуты ОЗ, конфигурации, потоки. </li>
+                        <li>Если при удалении связанных сетевых атрибутов объекта защиты будет
+                            удален его интерфейс сбора данных, то новым интерфейсом сбора данных
+                            станет случайный из оставшихся сетевых атрибутов. </li>
+                        <li>Объект защиты не будет удален, если у него не останется ни одного
+                            сетевого атрибута после удаления сенсора. При необходимости измените или
+                            удалите такие объекты защиты вручную. </li>
+                    </ul>
+                </note>
+                <cmd> Введите обоснование удаления сенсора и нажмите кнопку
+                        <uicontrol>Подтвердить</uicontrol>.</cmd>
+                <info><fig id="fig_hf3_x22_czb">
+                        <image href="../../../../images/windows/approve_del_sensor_window.png"
+                            id="image_icd_y22_czb"/>
+                    </fig></info>
+                <stepresult>сенсор и связанные с ним данные будут удалены из <term
+                        keyref="appliance"/>а уровня <abbreviated-form keyref="management"
+                    />.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

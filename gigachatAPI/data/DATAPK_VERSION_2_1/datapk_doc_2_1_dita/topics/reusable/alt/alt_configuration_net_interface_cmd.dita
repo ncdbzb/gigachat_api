@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_kqh_5dd_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_lqh_5dd_2zb">Настройте сетевой интерфейс для прослушивания трафика. Для этого:</cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

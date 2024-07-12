@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hp4_1bm_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info>
+                    <fig id="fig_qrh_gyf_mvb">
+                        <title>Окно настройки языка и раскладки клавиатуры ОС Альт Сервер</title>
+                        <image href="../../../images/deployment/alt/alt_language_keyboard_config.png" id="image_rrh_gyf_mvb"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

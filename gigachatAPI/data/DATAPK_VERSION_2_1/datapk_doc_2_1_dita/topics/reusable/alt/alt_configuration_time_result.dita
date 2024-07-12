@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_pxg_1bd_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <stepresult id="stepresult_qxg_1bd_2zb">выполнена настройка службы <codeph>chronyd</codeph> для синхронизации времени <term keyref="appliance_name_short"/>.<note>Вы можете позже настроить <term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="management"/> в качестве NTP-сервера для <term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="sensor"/> — см. раздел «<xref href="../../deployment/alt/setting_NTP.dita"/>».</note>
+                </stepresult>
+            </step>
+        </steps>       
+    </taskbody>
+</task>

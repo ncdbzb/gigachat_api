@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_architecture">
+ <title>Архитектура CL DATAPK</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_z4q_wtk_tnb">
+ <li><xref href="datapk_interface/datapk_interface.dita"/></li>
+ <li><xref href="datapk_functionality/datapk_functionality.dita"/></li>
+ </ul>
+  <div outputclass="only_main">
+   <p>В <term keyref="appliance_name_short"/> реализован механизм, предоставляющий возможности по
+        выстраиванию трех уровней иерархии. Каждый уровень иерархии представлен отдельным вариантом
+        исполнения.</p>
+   <ul id="ul_n1n_ztk_tnb">
+    <li><u><term keyref="appliance_name_short"/> уровня <term keyref="sensor"/></u> (Сенсор) –
+          обладает базовым набором функций по получению информации с объектов защиты
+          технологического комплекса. Не имеет веб-интерфейса. Управление сенсорами выполняет <term
+            keyref="appliance"/> уровня <term keyref="management"/>.</li>
+    <li><u><term keyref="appliance_name_short"/> уровня <term keyref="management"/></u> (<term
+            keyref="appliance_name_short"/> среднего уровня) – обладает базовым набором функций,
+          включая централизованное обновление, настройку анализа защищенности, парольной политики,
+          правил потоков данных, возможностью анализа и корреляции событий безопасности. Управляет
+          сенсорами: отправляет им команды и обновления баз правил, а также получает с них
+          оперативные данные.</li>
+    <li><u><term keyref="appliance_name_short"/> уровня <term keyref="sv"/></u> (<term
+            keyref="appliance_name_short"/> верхнего уровня) – обладает набором функций для надзора
+          над нижестоящими <term keyref="appliance"/>ами уровня <term keyref="management"/>.</li>
+   </ul>
+  </div>
+    <fig id="fig_o3w_r5k_tnb">
+      <title>Структурная схема иерархии</title>
+      <image href="../../../images/reference_info/datapk_architecture/struct_schema.svg"
+        id="image_p3w_r5k_tnb">
+        <alt>Структурная схема иерархии</alt>
+      </image>
+    </fig>
+ <p><b>Порядок передачи информации по иерархии Комплексов</b></p>
+ <p>Предусмотрен следующий порядок взаимодействия между уровнями иерархии:</p>
+ <ul id="ul_sjg_h5k_tnb">
+ <li><u>Сенсор</u> (Sensor) → <u><term keyref="appliance"/> среднего уровня</u> (Management) →
+            <u><term keyref="appliance"/> верхнего уровня</u> (SuperVision) – передача оперативных
+        данных (результатов анализа сетевого трафика, событий конфигураций, проверок на уязвимости и
+        соответствие требованиям <abbreviated-form keyref="IS"/>).</li>
+ <li><u><term keyref="appliance"/> верхнего уровня</u> (SuperVision) → <u><term keyref="appliance"/>
+          среднего уровня</u> (Management) → <u>Сенсор</u> (Sensor) – передача управляющих команд,
+        обновлений, задач и их результатов, правил.</li>
+ </ul>
+ <p>Перечень данных, передаваемых по иерархии «снизу вверх», приведен в таблице ниже<ph
+        outputclass="onlypdf"> (<xref href="#datapk_architecture/table_stl_j5k_tnb"/>)</ph>.</p>
+ <p>
+ <table id="table_stl_j5k_tnb">
+ <title>Перечень данных, передаваемых по иерархии «снизу вверх»</title>
+ <tgroup cols="3">
+ <colspec colnum="1" colname="col1" colwidth="40%"/>
+ <colspec colnum="2" colname="col2" colwidth="30%" align="center"/>
+ <colspec colnum="3" colname="col3" colwidth="30%" align="center"/>
+ <thead>
+ 
+ 
+ <row>
+ <entry>Данные</entry>
+ <entry>Сенсор → Комплекс среднего уровня</entry>
+ <entry>Комплекс среднего уровня → Комплекс верхнего уровня</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>События</entry>
+ <entry>✔</entry>
+ <entry>✔*</entry>
+ </row>
+ <row>
+ <entry>Объекты защиты</entry>
+ <entry>✔</entry>
+ <entry>✔</entry>
+ </row>
+ <row>
+ <entry>Потоки данных</entry>
+ <entry>✔</entry>
+ <entry>✔</entry>
+ </row>
+ <row>
+ <entry>Конфигурации</entry>
+ <entry>✔</entry>
+ <entry>✔</entry>
+ </row>
+ <row>
+ <entry>Результаты проверок на уязвимости</entry>
+ <entry>✔</entry>
+ <entry>✔</entry>
+ </row>
+ <row>
+ <entry>Результаты проверок на соответствие требованиям <abbreviated-form keyref="IS"/></entry>
+ <entry>✔</entry>
+ <entry>✔</entry>
+ </row>
+ <row>
+ <entry><cite keyref="incidents_fp"/> <abbreviated-form keyref="IS"/></entry>
+ <entry>-</entry>
+ <entry>✔</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </p>
+ <fig id="fig_yn3_s5k_tnb">
+ <p>
+ <fig id="fig_ucq_v5k_tnb">
+ <title>Схема информационных потоков на различных уровнях иерархии</title>
+ <image
+ href="../../../images/reference_info/datapk_architecture/data_flows_schema.svg"
+ id="image_vcq_v5k_tnb">
+ <alt>Схема информационных потоков на различных уровнях иерархии</alt>
+ </image>
+ </fig>
+ </p>
+ </fig>
+ </body>
+</topic>

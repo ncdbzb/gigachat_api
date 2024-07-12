@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id_7">
+      <title>Типовые технические требования для инсталляции ПК CL DATAPK</title>
+      <body>
+        <p>На объекте
+инсталляции
+требуется
+обеспечить:</p>
+        <ul>
+          <li>Возможность размещения оборудования <term keyref="cert_appliance_name_short"/> (см. размеры, монтаж, масса).</li>
+          <li>Возможность подключения оборудования <term keyref="cert_appliance_name_short"/> к сети электропитания (см.
+        электропитание).</li>
+          <li>Возможность подключения управляющего интерфейса <term keyref="cert_appliance_name_short"/> к сети передачи данных
+        Объекта.</li>
+          <li>Возможность маршрутизации трафика между <term keyref="cert_appliance_name_short"/> различных уровней иерархии (при
+        наличии иерархии).</li>
+          <li>Возможность подключения интерфейсов мониторинга трафика к активному сетевому
+        оборудованию <abbreviated-form keyref="ACS_and_TP"/>, обеспечивающему возможность передачи копии трафика <abbreviated-form keyref="ACS_and_TP"/> на интерфейс
+        <term keyref="cert_appliance_name_short"/> (пассивный режим работы).</li>
+          <li>
+          <note>Активное сетевое оборудование должно поддерживать функцию передачи копии
+            сетевого трафика.</note>
+        
+      </li>
+
+          <li>Возможность подключения интерфейсов <term keyref="cert_appliance_name_short"/> к активному сетевому оборудованию <abbreviated-form keyref="ACS_and_TP"/>, c возможностью подключения к объектам защиты для сбора данных (активный режим работы).
+        Перечень используемых сетевых взаимодействий <term keyref="cert_appliance_name_short"/> приведен в таблице <xref
+          href="#id_7/Ref42248419"/>.</li>
+        </ul>
+        
+        <table id="Ref42248419">
+          <title>Перечень
+            сетевых
+            взаимодействий
+            <term keyref="cert_appliance_name_short"/></title>
+          <tgroup cols="5">
+            <colspec colname="col1" colnum="1" colwidth="1*"/>
+            <colspec colname="col2" colnum="2" colwidth="2.2*"/>
+            <colspec colname="col3" colnum="3" colwidth="2.99*"/>
+            <colspec colname="col4" colnum="4" colwidth="2.47*"/>
+            <colspec colname="col5" colnum="5" colwidth="2.59*"/>
+            <thead>
+              <row>
+                <entry>№ п.п.</entry>
+                <entry>Источник
+трафика</entry>
+                <entry>Порт
+назначения</entry>
+                <entry>Узел
+назначения</entry>
+                <entry>
+Назначение
+трафика</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry morerows="2">1.</entry>
+                <entry morerows="2"><term keyref="cert_appliance_name_short"/> уровня Sensor</entry>
+                <entry>TCP 135 (MSRPC), TCP 139, TCP 445 (WINEXE), TCP 1024-5000
+(MSRPC, XP), TCP 49152-65535 (MSRPC, Vista и
+новее), TCP 5985, TCP 5986 (WinRM),
+TCP 3306 (MySQL), TCP 1433 (MSSQL), TCP 1521 (Oracle DB)</entry>
+                <entry>Объекты
+защиты (<abbreviated-form keyref="host"/>)
+базе ОС Windows,
+СУБД</entry>
+                <entry morerows="2">Взаимодействие с <abbreviated-form keyref="host"/> при активном режиме функционирования</entry>
+              </row>
+              <row>
+                <entry>
+                  <p>TCP 22 (SSH), TCP 23 (</p>
+                  <p>Telnet)</p>
+                </entry>
+                <entry><abbreviated-form keyref="host"/> на базе <abbreviated-form keyref="OS"/>
+              Unix, АСО</entry>
+              </row>
+              <row>
+                <entry>
+                  <p>UDP 161 (SNMP)</p>
+                  <p>TCP 80 (HTTP)</p>
+                  <p>TCP 102 (S7)</p>
+                  <p>TCP 502 (Modbus)</p>
+                </entry>
+                <entry><abbreviated-form keyref="PLC"/></entry>
+              </row>
+              <row>
+                <entry>2.</entry>
+                <entry><abbreviated-form keyref="host"/>,
+поддерживающие
+передачу
+событий
+через
+стандарт
+syslog/SNMP-trap</entry>
+                <entry>UDP 514 (syslog 3164), UDP 515 (syslog 5424), TCP 514 (syslog
+3164 tcp), TCP 515 (syslog 5424 TCP), UDP 162 (SNMP-trap)</entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня Sensor</entry>
+                <entry>Пассивный сбор событий от <abbreviated-form keyref="host"/></entry>
+              </row>
+              <row>
+                <entry>3.</entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня Sensor</entry>
+                <entry>
+                  <p>TCP 443 (HTTPS)</p>
+                  <p>TCP 25500
+(централизованное
+обновление)</p>
+                </entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня
+Management</entry>
+                <entry morerows="1">Взаимодействие между <term keyref="cert_appliance_name_short"/> уровней Sensor и Management
+              (передача событий, параметров конфигураций, политик сбора событий и т.д.)</entry>
+              </row>
+              <row>
+                <entry>4.</entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня
+Management</entry>
+                <entry>
+                  <p>TCP 443 (HTTPS)</p>
+                  <p>TCP 25500
+(централизованное
+обновление)</p>
+                </entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня Sensor</entry>
+              </row>
+              <row>
+                <entry>5.</entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня
+Management</entry>
+                <entry>
+                  <p>TCP 443 (HTTPS)</p>
+                  <p>TCP 25500
+(централизованное
+обновление)</p>
+                </entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня
+SuperVision</entry>
+                <entry morerows="1">Взаимодействие между <term keyref="cert_appliance_name_short"/> уровней Management и SuperVision
+              (передача событий, параметров конфигураций, политик сбора событий и т.д.)</entry>
+              </row>
+              <row>
+                <entry>6.</entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня
+SuperVision</entry>
+                <entry>
+                  <p>TCP 443 (HTTPS)</p>
+                  <p>TCP 25500
+(централизованное
+обновление)</p>
+                </entry>
+                <entry><term keyref="cert_appliance_name_short"/> уровня
+Management</entry>
+              </row>
+              <row>
+                <entry>7.</entry>
+                <entry>
+                  <p><term keyref="cert_appliance_name_short"/> уровня Sensor</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+Management</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+SuperVision</p>
+                </entry>
+                <entry>UDP 123 (NTP)</entry>
+                <entry>NTP-серверы</entry>
+                <entry>Синхронизация времени</entry>
+              </row>
+              <row>
+                <entry>8.</entry>
+                <entry>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+Management</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+SuperVision</p>
+                </entry>
+                <entry>
+                  <p>UDP 514</p>
+                  <p>TCP 514</p>
+                </entry>
+                <entry>Смежная
+система</entry>
+                <entry>Отправка
+событий в
+смежные
+системы</entry>
+              </row>
+              <row>
+                <entry>9.</entry>
+                <entry>
+                  <p><term keyref="cert_appliance_name_short"/> уровня Sensor</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+Management</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+SuperVision</p>
+                </entry>
+                <entry>
+                  <p>TCP 389 (LDAP) или</p>
+                  <p>TCP 636 (LDAPS)</p>
+                </entry>
+                <entry>LDAP-сервер</entry>
+                <entry>При
+использовании
+авторизации
+пользователей
+<term keyref="cert_appliance_name_short"/> через
+службу
+каталогов</entry>
+              </row>
+              <row>
+                <entry>10.</entry>
+                <entry>АРМ административного персонала</entry>
+                <entry>
+                  <p>TCP 443 (HTTPS)</p>
+                  <p>TCP 22 (SSH)</p>
+                </entry>
+                <entry>
+                  <p><term keyref="cert_appliance_name_short"/> уровня Sensor</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+Management</p>
+                  <p><term keyref="cert_appliance_name_short"/> уровня
+SuperVision</p>
+                </entry>
+                <entry>
+                  <p>
+Администрирование
+<term keyref="cert_appliance_name_short"/>,</p>
+                  <p>SSH — для сервисного обслуживания</p>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </body>
+    </topic>

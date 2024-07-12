@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="appliance_look" outputclass="page-break-before">
+    <title>Внешний вид Комплекса в транспортной таре</title>
+    <body>
+        <p>Внешний вид Комплекса в транспортной таре представлен на рисунке (<xref
+                href="#appliance_look/fig_sgr_jyr_j5b" format="dita"/>).</p>
+        <fig id="fig_sgr_jyr_j5b">
+            <title>Внешний вид Комплекса в транспортной таре</title>
+            <image href="../../../../images/checkup/appliance_2.jpeg" id="image_tgr_jyr_j5b"
+                height="310">
+                <alt>Внешний вид Комплекса в транспортной таре</alt>
+            </image>
+        </fig>
+        <p>Внешний вид Комплекса в транспортной таре с открытой крышкой представлен на рисунке
+                (<xref href="#appliance_look/fig_qdt_lyr_j5b" format="dita"/>).</p>
+        <fig id="fig_qdt_lyr_j5b">
+            <title>Внешний вид Комплекса в транспортной таре с открытой крышкой</title>
+            <image href="../../../../images/checkup/appliance_3.jpg" id="image_rdt_lyr_j5b"
+                height="400">
+                <alt>Внешний вид Комплекса в транспортной таре с открытой крышкой</alt>
+            </image>
+        </fig>
+        <p>Внешний вид Комплекса в транспортной таре по уровням представлен на рисунке (<xref
+                href="#appliance_look/fig_dym_nyr_j5b" format="dita"/>).</p>
+        <fig id="fig_dym_nyr_j5b">
+            <title>Внешний вид Комплекса в транспортной таре по уровням</title>
+            <image href="../../../../images/checkup/appliance_1.jpg" id="image_eym_nyr_j5b"
+                height="500">
+                <alt>Внешний вид Комплекса в транспортной таре по уровням</alt>
+            </image>
+        </fig>
+    </body>
+</topic>

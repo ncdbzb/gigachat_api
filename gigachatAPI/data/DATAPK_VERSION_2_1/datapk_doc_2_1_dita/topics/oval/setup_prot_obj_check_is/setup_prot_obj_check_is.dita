@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="setup_prot_obj_check_is">
+ <title>Настройка OVAL-проверки объекта защиты на соответствие требованиям информационной
+                безопасности</title>
+ <body>
+ <p>Для запуска <abbreviated-form keyref="oval_def"/>-проверок на соответствие требованиям ИБ
+                        пользователь <term keyref="appliance"/>а должен убедиться, что все
+                        необходимые для этого элементы были ранее настроены. Для настройки вы можете
+                        последовательно воспользоваться следующими разделами:</p>
+ <ul id="ul_zlr_1wy_rnb">
+                        <li><xref href="../../control_config/create_config_script.dita"/></li>
+                        <li><xref href="../../control_config/data_collect_script_sign.dita"/></li>
+                        <li><xref href="../manage_oval_scripts.dita"/></li>
+ <li><xref href="setup_access_to_prot_obj_4oval.dita"/></li>
+ <li><xref href="checkup_attach_oval_script_to_prot_obj.dita"/></li>
+         <li><xref href="create_oval_definitions_group.dita"/></li>
+         <li><xref href="add_oval_definitions_to_group.dita"/></li>
+ </ul>
+ </body>
+</topic>

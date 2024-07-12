@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="CVE_DATA_DIR">
+    <glossterm>CVE_DATA_DIR</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/cve_data_dir_desc.dita#ReusableComponent_ej4_ljj_dzb/p_gj4_ljj_dzb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>
