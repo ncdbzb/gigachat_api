@@ -1,6 +1,6 @@
 import os
 import time
-from random import sample
+from random import sample, shuffle
 from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.prompts.create_prompts import gen_que_prompt
@@ -40,6 +40,10 @@ async def generate_test(
         questions_dict = await get_questions_dict(result.content + '\n')
         if 'result' in questions_dict.keys():
             logger_info.info(f'Тест успешно сгенерирован')
+            options = [questions_dict['result'][f'{i} option'] for i in range(1, 5)]
+            shuffle(options)
+            for i in range(1, 5):
+                questions_dict['result'][f'{i} option'] = options[i - 1]
             break
         logger_info.debug(f'Ошибка! Генериурю тест заново...')
 
@@ -58,5 +62,5 @@ async def generate_test(
         "total_time": round(lead_time, 3),
         "gigachat_time": round(gigachat_time, 3)
     }
-
+    
     return result_dict
