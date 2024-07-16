@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:datapk_max_ram_percentage_consumed-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ezh_gf1_5sb">
+    <title/>
+    <body>
+        <p><div><table>
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry><p><ph id="ph_gzh_gf1_5sb">Лимит заполнения оперативной памяти (RAM) операционной системы <term
+                                                keyref="appliance"/>а в процентах</ph></p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></div></p>
+    </body>
+</topic>

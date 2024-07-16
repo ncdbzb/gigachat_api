@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Работа с панелями мониторинга</title>
+ <topicref href="how_to_work_with_dashboards.dita">
+ <topicref href="If_i_see_events.dita"/>
+ </topicref>
+ <topicref
+ href="ref_info_about_dashboards/ref_info_about_dashboards.dita">
+ <topicref
+ href="ref_info_about_dashboards/events_in_dashboards.dita"/>
+ <topicref
+ href="ref_info_about_dashboards/navigation_in_dashboards.dita"/>
+ <topicref
+ href="ref_info_about_dashboards/controls_in_dashboards/controls_in_dashboards.dita">
+ <topicref
+ href="ref_info_about_dashboards/controls_in_dashboards/search_in_dashboards.dita"/>
+ <topicref
+ href="ref_info_about_dashboards/controls_in_dashboards/filters_in_dashboards.dita">
+ <topicref
+ href="ref_info_about_dashboards/controls_in_dashboards/control_filters_in_dashboards.dita"
+ />
+ </topicref>
+ </topicref>
+ <topicref
+ href="ref_info_about_dashboards/kibana_controls.dita"/>
+ <topicref
+ href="ref_info_about_dashboards/diagrams_and_tables/charts_and_tables.dita">
+ <topicref
+ href="ref_info_about_dashboards/diagrams_and_tables/charts.dita"/>
+ <topicref
+ href="ref_info_about_dashboards/diagrams_and_tables/pie_charts.dita"/>
+ <topicref
+ href="ref_info_about_dashboards/diagrams_and_tables/column_charts.dita"
+ />
+ <topicref
+ href="ref_info_about_dashboards/diagrams_and_tables/tables.dita"/>
+ </topicref>
+ </topicref>
+ <topicref
+ href="ref_info_about_dashboards/create_filter_in_dashboards.dita">
+ <topicref
+ href="ref_info_about_dashboards/create_filter_by_table_in_dashboards.dita"
+ />
+ </topicref>
+ <topicref
+ href="ref_info_about_dashboards/choose_period_in_dashboards.dita"/>
+ <topicref href="main_dashboard/main_dashboard.dita">
+ <topicref
+ href="main_dashboard/analysis_section/analysis_section.dita"/>
+ <topicref
+ href="main_dashboard/traffic_analysis/traffic_analysis.dita">
+ <topicref
+ href="main_dashboard/traffic_analysis/nodes_control.dita">
+ <topicref
+ href="main_dashboard/traffic_analysis/recommendations_1.dita"
+ />
+ </topicref>
+ <topicref
+ href="main_dashboard/traffic_analysis/flows_control.dita">
+ <topicref
+ href="main_dashboard/traffic_analysis/recommendations_2.dita"
+ />
+ </topicref>
+ <topicref
+ href="main_dashboard/traffic_analysis/invasion_detection.dita">
+ <topicref
+ href="main_dashboard/traffic_analysis/recommendations_3.dita"
+ />
+ </topicref>
+ </topicref>
+ <topicref
+ href="main_dashboard/config_control/config_control_main.dita">
+ <topicref
+ href="main_dashboard/config_control/config_control.dita">
+ <topicref
+ href="main_dashboard/recommendations_4.dita"/>
+ </topicref>
+ <topicref
+ href="main_dashboard/config_control/data_collect.dita">
+ <topicref outputclass="no_en" href="main_dashboard/config_control/recommendations_5.dita"
+ />
+ </topicref>
+ </topicref>
+ <topicref
+ href="main_dashboard/events_control/events_control.dita">
+ <topicref
+ href="main_dashboard/events_control/prot_obj_events.dita"/>
+ <topicref
+ href="main_dashboard/events_control/incidents.dita">
+ <topicref
+ href="main_dashboard/events_control/incidents_recommendations.dita"
+ />
+ </topicref>
+ </topicref>
+ </topicref>
+ <topicref href="info_dashboards/info_dashboards.dita">
+ <topicref
+ href="info_dashboards/compliance_vulnerability_control.dita"/>
+ <topicref href="info_dashboards/events_control_datapk.dita"/>
+ <topicref href="info_dashboards/operational_monitoring.dita"
+ />
+ </topicref>
+ <topicref href="export_events_from_dashboards.dita"/>
+</map>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_yfp_b5y_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_zfp_b5y_zxb"><p>ФБО должны быть способны собирать
+                                    информацию о сетевом трафике:</p><p><i><u>сетевой
+                                    адрес</u></i>;</p><p><i><u>используемый
+                                            порт</u></i>;</p><p><i><u>значения полей сетевого
+                                            пакета</u></i>;</p><p><i><u>идентификаторы
+                                            протоколов</u></i>;</p><p><i><u>последовательность
+                                            команд протоколов</u></i>;</p><p><i><u>размер полей
+                                            пакета</u>.</i>
+                                </p></div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

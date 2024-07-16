@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="unautorised_access_troubleshooting">
+ <title>Действия в случаях несанкционированного доступа к данным</title>
+ <body>
+ <p>После обнаружения нелегитимных действий со стороны пользователя администратор может
+      воспользоваться следующими возможностями по блокировке пользователей:</p>
+ <ul id="ul_xnb_cmq_snb">
+ <li><xref href="users_actions_journal_view.dita"/></li>
+ <li><xref href="block_user.dita"/></li>
+ </ul>
+ </body>
+</topic>

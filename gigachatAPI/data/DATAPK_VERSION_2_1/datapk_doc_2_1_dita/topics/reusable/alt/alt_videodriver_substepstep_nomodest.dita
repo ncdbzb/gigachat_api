@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vpj_j1m_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_bqj_j1m_21c">
+                        <cmd>Добавьте параметр <codeph>nomodeset</codeph> перед строкой, начинающейся 
+                            на <codeph>mpath lang=ru_RU</codeph>, как указано на рисунке ниже.</cmd>
+                        <info><fig id="fig_npw_kyx_lyb">
+                            <title>Добавление параметра nomodeset</title>
+                            <image href="../../../images/deployment/alt/nomodeset.png" id="image_itz_qxx_lyb"/>
+                        </fig></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

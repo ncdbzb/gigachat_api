@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_xkr_2s3_jpb">
+
+ <title>DATAPK_GODPI_EXACT_COUNT_THRESHOLD</title>
+ <body> 
+ <p id="p_clr_2s3_jpb">Предел точного подсчета записей на странице потоков</p> 
+</body> 
+</topic> 

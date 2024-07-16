@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_31_1">
+    <title>Ошибка вида «Не удалось получить список ПО. Убедитесь, что данные об установленном ПО
+        были собраны корректно»</title>
+    <troublebody>
+        <condition id="condition_kjh_4l1_yyb">
+            <p><ph>Возможны следующие причины:</ph><ul id="ul_k3h_fgp_snb">
+                    <li><xref href="#trouble_31_1/cause_err_scanner" format="dita"/></li>
+                    <li><xref href="#trouble_31_1/cause_no_soft_on_page" format="dita"/></li>
+                </ul></p>
+        </condition>
+        <troubleSolution>
+            <cause id="cause_err_scanner">
+                <title>Не удается запустить сканер сбора списка ПО, либо запуск завершается с
+                    ошибками</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps-informal id="steps-informal_zdy_ysd_zyb">Для устранения затруднения перейдите
+                    в раздел «<xref href="trouble_11.dita"/>» или «<xref href="trouble_12.dita"
+                    />».</steps-informal>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_no_soft_on_page">
+                <title>Сканер запустился, но не отображает результаты на странице «Список
+                    ПО»</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <steps-informal id="steps-informal_vxx_1td_zyb">Для устранения затруднения перейдите
+                    в раздел «<xref href="trouble_13.dita"/>».</steps-informal>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

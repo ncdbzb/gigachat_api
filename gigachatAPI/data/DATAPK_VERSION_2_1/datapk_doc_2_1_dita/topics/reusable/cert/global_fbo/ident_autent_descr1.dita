@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_j1b_p2n_r5b">
+    <title/>
+    <body>
+        <p id="p_l1b_p2n_r5b">Доступ к функционалу <term keyref="cert_appliance_name_short"/> могут
+            получить только незаблокированные пользователи, прошедшие процесс идентификации и
+            аутентификации с использованием идентификатора (логина) и пароля, который проверяется на
+            соответствие установленной парольной политике. Подлинность учетной записи пользователя
+                <term keyref="cert_appliance_name_short"/> устанавливается путем проверки
+            соответствия пары «логин-пароль», которые пользователь вводит при входе в веб-интерфейс
+                <term keyref="cert_appliance_name_short"/>, учетным данным, сохраненным в базе
+            данных <term keyref="cert_appliance_name_short"/>.</p>
+    </body>
+</topic>

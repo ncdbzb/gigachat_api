@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_prot_obj">
+ <title>Импорт объектов защиты</title>
+ <taskbody>
+ <context>
+ <p>Для импорта объектов защиты из файла формата <codeph>*.json</codeph> в <term keyref="appliance"
+        />:</p>
+ </context>
+ <steps>
+ <step>
+ <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="prot_obj_fp"/>.</cmd>
+ </step>
+ <step>
+        <cmd>Нажмите кнопку <image href="../../../images/icons/host_downl.png"
+          id="image_k1h_z3x_dyb"/> (<uicontrol>Импортировать ОЗ</uicontrol>) на панели <uicontrol>Управление</uicontrol> в верхней части
+          страницы.</cmd>
+      </step>
+ <step>
+        <cmd>В открывшемся окне <uicontrol>Импорт объектов защиты</uicontrol> нажмите левой кнопкой
+          мыши на область выбора файла или перетащите файл из проводника. В открывшемся окне укажите
+          расположение импортируемого файла формата <codeph>*.json</codeph> и подтвердите
+          выбор.</cmd>
+        <info>
+          <fig>
+            <title>Окно «Импорт объектов защиты»</title>
+            <image href="../../../images/hosts/exp_imp/import_prot_obj_window.png"/>
+          </fig>
+        </info>
+      </step>
+ <step>
+        <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol> для выполнения импорта списка
+            <abbreviated-form keyref="host"/>.</cmd>
+      </step>
+ <step>
+        <cmd>Убедитесь, что на странице <cite keyref="prot_obj_fp"/> объекты защиты успешно
+          импортированы из файла.</cmd>
+      </step>
+ </steps>
+ </taskbody>
+</task>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="protected_obj">
+ <title>Работа с объектами защиты</title>
+ <body>
+ <p><term keyref="host"/> — это сетевой узел, подлежащий защите от потенциальных угроз и
+ неправомерных действий, например, несанкционированного доступа и изменения данных
+ третьими лицами.</p>
+    <p><ph>На сводной странице <cite keyref="prot_obj_fp"/> отображается список всех найденных
+        автоматически и добавленных пользователем объектов защиты. </ph><ph
+        conref="../reusable/prot_obj_possibilities.dita#ReusableComponent_dhm_tvb_wxb/ph_hhm_tvb_wxb"
+      /></p>
+ 
+ <fig>
+ <title>Страница «Активы»</title>
+ <image href="../../images/pages/prot_obj_page_scr.png"/>
+ </fig>
+ <p>На основе данных из трафика <term keyref="appliance"/> может автоматически определять следующие параметры
+ объекта защиты:</p>
+ <ul id="ul_mk2_n5q_4nb">
+ <li>IP и MAC-адреса интерфейсов;</li>
+ <li>производителя;</li>
+ <li>тип <abbreviated-form keyref="host"/>;</li>
+ <li>операционную систему (для ОЗ с типом <codeph>ПЛК</codeph> — прошивку) и ее версию;</li>
+      <li>по наличию трафика — доступность <abbreviated-form keyref="host"/>.</li>
+ </ul>
+ <p>На странице <cite keyref="prot_obj_fp"/> доступно табличное представление списка объектов защиты
+      с возможностью сортировки по столбцам. В таблице можно настроить отображение столбцов со
+      статусами и статистикой по выполненным операциям активного сбора данных и по обнаруженным
+      инцидентам и уязвимостям.</p>
+    <note id="note_e2q_wlz_lyb">Подробнее о статусах объектов защиты см. разделы «<xref
+        href="../reference_info/datapk_architecture/color_indication/assets_statuses.dita"/>» и
+        «<xref href="../reference_info/datapk_architecture/color_indication/assets_indication.dita"
+      />».</note>
+ <fig id="fig_ktb_m5q_4nb">
+ <title>Табличное представление объектов защиты</title>
+ <image href="../../images/hosts/table_grouping_scr.png" id="image_ltb_m5q_4nb"/>
+ </fig>
+    <p>После обнаружения объектов защиты или добавления их вручную доступна группировка объектов
+      защиты, используемая при последующем сборе данных, а также для управления объектами защиты,
+      входящими в группы.</p>
+    <fig id="fig_xym_jgm_vsb">
+      <title>Панель управления группами объектов защиты</title>
+      <image href="../../images/hosts/host_groups/host_groups.png" id="image_yym_jgm_vsb">
+        <alt>Панель управления группами объектов защиты</alt>
+      </image>
+    </fig>
+ <p>По нажатию на иконку <abbreviated-form keyref="host"/> или его наименование появляется <cite
+        keyref="prot_obj_profile_fp"/>, отображающая:</p>
+ <ul id="ul_oxy_45q_4nb">
+ <li>описание объекта защиты: наименование, описание, производитель, тип, группа, АСУ ТП, дата и
+        время создания, дата и время, когда <abbreviated-form keyref="host"/> последний раз был
+        доступен;</li>
+      <li>учетные данные;</li>
+   <li>информацию об <abbreviated-form keyref="OS"/> (для ОЗ с типом <codeph>ПЛК</codeph> —
+        информацию о прошивке): дату и время последнего изменения указанных данных, производителя,
+        наименование и версию <abbreviated-form keyref="OS"/>;</li>
+ <li>сетевые атрибуты: название, IP и MAC-адреса;</li>
+      <li>набор присвоенных меток со страницы <cite keyref="ref_fp"/>;</li>
+      <li>статистику по задачам сбора данных, собранным конфигурациям, инцидентам и
+        уязвимостям;</li>
+      <li>
+        <p>связанные данные, позволяющие просмотреть данные об объекте защиты в других разделах:</p>
+        <ul id="ul_zmf_p5q_4nb">
+          <li>инциденты;</li>
+          <li>конфигурации;</li>
+          <li>события;</li>
+          <li>потоки данных;</li>
+          <li>источники;</li>
+          <li>учетные данные <abbreviated-form keyref="host"/>;</li>
+          <li>перечень ПО, установленного на <abbreviated-form keyref="host"/>.</li>
+        </ul>
+      </li>
+ </ul>
+ <p>
+ <fig id="fig_cts_v4q_4nb">
+ <title>Карточка объекта защиты</title>
+   <image href="../../images/pages/host_card_1_page_scr.png"
+ id="image_evs_dpq_4nb"/>
+ </fig>
+ </p>
+ </body>
+</topic>

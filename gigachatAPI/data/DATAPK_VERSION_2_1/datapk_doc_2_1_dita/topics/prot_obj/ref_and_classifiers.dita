@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ref_and_classifiers">
+ <title>Настройка классификаторов</title>
+ <body>
+ <p>Классификаторы <abbreviated-form keyref="host"/> загружаются в систему при первичной
+   инсталляции. Некоторые из них доступны для редактирования и дополнения.</p>
+ <p>Информация о редактируемых классификаторах приведена в таблице ниже<ph outputclass="onlypdf"> (<xref href="#ref_and_classifiers/table_elf_cwq_4nb"/>)</ph>.</p>
+ 
+ <table frame="all"
+ rowsep="1" colsep="1" id="table_elf_cwq_4nb">
+ <title>Редактируемые классификаторы Комплекса</title>
+ <tgroup cols="3">
+ <colspec colname="c1" colnum="1" colwidth="30%"/>
+ <colspec colname="c2" colnum="2" colwidth="30%"/>
+ <colspec colname="c3" colnum="3" colwidth="40%"/>
+ 
+ <thead>
+ <row>
+ <entry>Классификатор</entry>
+ <entry>Характеристика классификатора</entry>
+ <entry>Отношение к объектам защиты</entry>
+ </row></thead>
+ <tbody>
+ 
+ <row>
+ <entry>АСУ ТП</entry>
+ <entry>предустановленный редактируемый</entry>
+ <entry>необязательный атрибут классификации <abbreviated-form keyref="host"/></entry>
+ </row>
+ 
+ <row>
+ <entry><abbreviated-form keyref="oval_def"/></entry>
+ <entry>редактируемый</entry>
+ <entry>необязательный атрибут классификации <abbreviated-form keyref="host"/></entry>
+ </row>
+     <row>
+      <entry>Метки</entry>
+      <entry>редактируемый</entry>
+      <entry>необязательный атрибут классификации <abbreviated-form keyref="host"/></entry>
+     </row>
+ </tbody>
+ 
+ </tgroup>
+ </table>
+   <p><term keyref="classifier_glossentry"/>ы предназначены для фильтрации объектов защиты, их
+ содержимое генерируется автоматически при появлении новых элементов в <term
+ keyref="appliance"/>е. Информация о встроенных классификаторах приведена в таблице
+ ниже.</p>
+ <table frame="all" rowsep="1" colsep="1" id="table_rjr_pxq_4nb">
+ <title>Встроенные классификаторы Комплекса</title>
+ <tgroup cols="3">
+ <colspec colname="c1" colnum="1" colwidth="30%"/>
+ <colspec colname="c2" colnum="2" colwidth="30%"/>
+ <colspec colname="c3" colnum="3" colwidth="40%"/>
+ <thead>
+ <row>
+ <entry>Классификатор</entry>
+ <entry>Характеристика классификатора</entry>
+ <entry>Отношение к объектам защиты</entry>
+ </row>
+ </thead>
+ <tbody>
+  <row>
+ <entry><term keyref="appliance"/></entry>
+ <entry>предустановленный, автоматически дополняемый с добавлением <term keyref="appliance"/>ов
+       нередактируемый</entry>
+ <entry>обязательный атрибут классификации <abbreviated-form keyref="host"/>, появляется при наличии
+ иерархии <term keyref="appliance"/>ов</entry>
+ </row>
+ <row>
+ <entry>Производители</entry>
+ <entry>предустановленный нередактируемый</entry>
+ <entry>обязательный атрибут классификации <abbreviated-form keyref="host"/></entry>
+ </row>
+ <row>
+ <entry>Объекты защиты</entry>
+ <entry>предустановленный, автоматически дополняемый с добавлением <abbreviated-form
+        keyref="host"/> нередактируемый</entry>
+ <entry>обязательный атрибут классификации <abbreviated-form keyref="host"/></entry>
+ </row>
+ <row>
+ <entry>Типы объектов защиты</entry>
+ <entry>предустановленный нередактируемый</entry>
+ <entry>обязательный атрибут классификации <abbreviated-form keyref="host"/></entry>
+ </row>
+ 
+ <row>
+ <entry>Операционные системы, распознанные <term keyref="appliance"/>ом</entry>
+ <entry>предустановленный, автоматически дополняемый нередактируемый</entry>
+ <entry>необязательный атрибут классификации <abbreviated-form keyref="host"/>; присваивается
+                <abbreviated-form keyref="host"/> с операционной системой семейства Windows
+              автоматически (при возможности получения информации от <abbreviated-form keyref="host"
+              /> по протоколу Microsoft Windows Browser)</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+    <p>В <term keyref="appliance"/>е возможно автоматическое присваивание меток операционных систем
+      для объектов защиты. При сканировании узлов домашней сети (на странице <cite
+        keyref="sensors_fp"/>) метка CPE, полученная в результате сканирования объекта защиты и
+      содержащая информацию об операционной системе <abbreviated-form keyref="host"/> и ее версии,
+      сравнивается с метками CPE, присвоенными созданным ранее пользовательским меткам. В случае
+      совпадения объекту защиты присваивается соответствующая метка.</p>
+    <p>Для поиска объектов защиты в списке на странице <cite keyref="prot_obj_fp"/> используется
+      фильтрация по реквизитам объектов защиты, в том числе с помощью встроенных и пользовательских
+      классификаторов.</p>
+    <fig id="fig_jqt_wvh_ssb">
+      <title>Список объектов защиты с типом «Сервер» из классификатора «Типы объектов
+        защиты»</title>
+      <image href="../../images/hosts/groups_edit_del/prot_obj_scr_1.png"
+        id="image_kqt_wvh_ssb"/>
+    </fig>
+ </body>
+</topic>

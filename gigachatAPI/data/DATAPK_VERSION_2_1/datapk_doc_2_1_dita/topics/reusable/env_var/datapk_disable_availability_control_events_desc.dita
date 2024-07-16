@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_nlx_3hj_jpb">
+
+ <title>DATAPK_DISABLE_AVAILABILITY_CONTROL_EVENTS</title>
+ <body> 
+ <p><ph id="ph_slx_3hj_jpb">При значении переменной <ph
+                    conref="../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/> события о
+                доступности узлов не собираются</ph></p> 
+</body> 
+</topic> 

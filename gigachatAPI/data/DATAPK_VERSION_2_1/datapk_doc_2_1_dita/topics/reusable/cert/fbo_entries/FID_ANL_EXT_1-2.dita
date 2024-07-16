@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_cdw_f5y_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_ddw_f5y_zxb"><p>По результатам анализа ФБО должны
+                                    фиксировать следующую информацию:</p><p>а) дата и время,
+                                    результат анализа, тип данных, идентификатор источника
+                                    данных;</p><p>б) протокол (механизм), используемый для
+                                    проведения вторжения;</p><p>[</p><p>в) IP-адрес
+                                    источника;</p><p>г) IP-адрес назначения;</p><p>д) действие к
+                                    пакету;</p><p>е) класс сигнатуры.</p><p>]</p></div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

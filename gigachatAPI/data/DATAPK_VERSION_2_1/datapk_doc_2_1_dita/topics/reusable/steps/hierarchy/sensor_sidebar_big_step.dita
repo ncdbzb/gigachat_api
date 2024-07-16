@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rz2_wyc_zyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_tz2_wyc_zyb">
+                <cmd>Перейдите на страницу <cite keyref="sensors_fp"/>. На странице:</cmd>
+                <substeps id="substeps_mbp_fl3_yyb">
+                    <substep>
+                        <cmd>Выберите из списка восстановленный сенсор.</cmd>
+                        <stepresult
+                            conref="sensor_sidebar_stepresult.dita#ReusableComponent_s5x_snc_zyb/stepresult_u5x_snc_zyb"
+                        />
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что сенсор успешно подключился к <term keyref="appliance"/>у
+                            —  статусы синхронизации настроек и получения данных с сенсора должны
+                            иметь значение <systemoutput>Активен</systemoutput>.</cmd>
+                        <info>
+                            <fig id="fig_vn4_pgs_mtb">
+                                <title>Статусы исправной синхронизации настроек и получения данных с
+                                    сенсора</title>
+                                <image href="../../../../images/sensor/sensor_status.PNG"
+                                    id="image_wn4_pgs_mtb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что настройки домашней сети сенсора в блоке
+                                <uicontrol>Домашняя сеть</uicontrol> восстановлены
+                            автоматически.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что описание и место установки сенсора восстановлены
+                            автоматически.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости включите или выключите службу обнаружения вторжений
+                            сенсора с помощью переключателя: если переключатель в состоянии <image
+                                href="../../../../images/icons/switch_turn_on.png"
+                                id="image_u31_rgm_4yb"/> — служба включена.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

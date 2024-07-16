@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lg4_4mp_gtb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_og4_4mp_gtb">Установите чекбокс рядом с добавленной ранее учетной
+                    записью для привилегированного доступа к объекту защиты и нажмите кнопку
+                        <uicontrol>Сохранить</uicontrol>. </cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

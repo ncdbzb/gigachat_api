@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_w3j_rv4_lrb">
+ 
+ <title>create_config_script</title>
+ <body> 
+  <codeblock outputclass="language-python" id="codeblock_cjj_rv4_lrb">try:
+    credential = credentials['admin']
+except KeyError as e:
+    raise KeyError('Учетные данные для %s не найдены' % e)
+protocol_args = {
+    'host': host,
+    'username': credential.get('user'),
+    'password': credential.get('password'),
+    'interface': 'ssh',
+    'port': 22,
+    'query': [{
+        'command': 'arp -an\r\n',
+        'expects': [],
+        'timeout': 10
+    }]
+}
+def escape_ansi(line):
+    ansi_escape = re.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
+    return ansi_escape.sub('', line)
+data = execute('terminal', protocol_args, expiration)
+lines = bytes.fromhex(data).decode()
+lines = escape_ansi(lines)
+regex = r'\((?P&lt;ip>((\d{1,3}\.?){4}))\)\sat\s(?P&lt;mac>((\w{2}:?){6})).*\son\s(?P&lt;interface>(.*))\r\n'
+matches = re.finditer(regex, lines)
+interfaces = [[match.group(g) for g in ['ip', 'mac', 'interface']]
+              for match in matches]
+return {
+    'visible_keys': {
+        'ip': 'IP-адрес',
+        'mac': 'MAC-адрес',
+        'interface': 'Интерфейс',
+    },
+    'keys': ['ip', 'mac', 'interface'],
+    'data': interfaces,
+    'ignore_delete': True,
+}</codeblock>
+  
+ </body> 
+</topic> 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="finishing_touches">
+ <title>Завершение обновления</title>
+ <taskbody>
+ <context>
+ <p>Для завершения обновления на каждом <term keyref="appliance"/>е выполните следующие действия:</p>
+ </context>
+ <steps>
+ <step>
+ <cmd>Остановите работу <term keyref="appliance"/>а. Для этого:</cmd>
+ <substeps>
+ <substep>
+ <cmd>перейдите в режим командной строки операционной системы, на которой
+ установлен <term keyref="appliance"/>;</cmd>
+ </substep><substep>
+ <cmd>перейдите в рабочую директорию <term keyref="appliance"/>а (<codeph
+ conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+ />);</cmd>
+ </substep><substep>
+ <cmd>остановите <term keyref="appliance"/> с сохранением накопленных данных:</cmd>
+ <info>
+ <codeblock>docker-compose down</codeblock>
+ </info>
+ </substep>
+ </substeps>
+ </step><step>
+ <cmd>Замените файлы docker-compose.release.yml, docker-compose.stand.yml на файлы
+ новой версии, удалите текущие и скопируйте новые директории NGUI и
+ logstash.</cmd>
+ </step><step>
+ <cmd>В конфигурационном файле <term keyref="env"/> измените значение переменной <codeph><cmdname
+ keyref="IMAGES_TAG_FOR_STAND"/></codeph> на новую версию <term
+ keyref="appliance"/>а. Добавьте переменные, необходимые для работы новой
+ версии.</cmd>
+ </step><step>
+ <cmd>Запустите обновленный <term keyref="appliance"/>.</cmd>
+ <info>
+ <codeblock>docker-compose up -d</codeblock>
+ </info>
+ </step>
+   <step>
+        <cmd>Измените назначенные пользователям роли при необходимости.</cmd>
+        <info>
+          <note id="note_gjj_nhw_fyb" type="attention"
+            ><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>В процессе
+            обновления пользователи, которым не были назначены роли, поставляемые в новой версии,
+            приобрели роль «Администратор»<?oxy_custom_end?>.</note>
+        </info>
+        <info>
+          <note id="note_gb5_qdw_nvb">См. подробнее в разделе «<xref href="update_by_hierarchy.dita"
+            />».</note>
+        </info>
+      </step><step>
+        <cmd><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Если ранее инфообмен
+          был остановлен, возобновите его. Для этого:<?oxy_custom_end?></cmd>
+        <substeps id="substeps_pmx_bmp_l4b">
+          <substep>
+            <cmd>в веб-интерфейсе <term keyref="appliance"/>а ;</cmd>
+          </substep>
+          <substep>
+            <cmd>.</cmd>
+            <stepresult>.</stepresult>
+          </substep>
+        </substeps>
+      </step>
+ </steps>
+ </taskbody>
+</task>

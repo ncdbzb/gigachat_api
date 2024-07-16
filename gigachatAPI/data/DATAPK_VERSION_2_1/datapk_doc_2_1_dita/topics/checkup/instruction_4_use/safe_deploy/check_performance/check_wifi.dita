@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="check_wifi">
+    <title>Проверка работоспособности функции сканирования беспроводных сетей</title>
+    <taskbody>
+        <context>
+            <p>Для проверки работоспособности функции:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Убедитесь, что учетные данные и сетевые атрибуты настроены. Для этого:</cmd>
+                <substeps id="substeps_ihf_2wm_ytb">
+                    <substep>
+                        <cmd>перейдите в карточку объекта защиты текущего Комплекса;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>убедитесь, что учетные данные и сетевые атрибуты присутствуют. </cmd>
+                        <info>
+                            <note id="note_w4n_pwm_ytb">В противном случае воспользуйтесь
+                                инструкцией, приведенной в разделе «Настройка объектов защиты для
+                                сбора данных» руководства по эксплуатации.</note>
+                        </info>
+                        <info>
+                            <fig id="fig_ujw_ghn_ytb">
+                                <title>Общая информация об объекте защиты</title>
+                                <image href="../../../../../images/checkup/host_profile_general.png"
+                                    id="image_mmb_ghn_ytb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь, что функция управления задачами сбора данных включена. </cmd>
+                <info>
+                    <note id="note_jh3_hdn_ytb">В противном случае воспользуйтесь инструкцией,
+                        приведенной в разделе «Включение функции управления задачами сбора данных»
+                        руководства по эксплуатации.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что группа сканеров, включающая сканер с названием «Сканирование
+                    беспроводной сети» присутствует. Для этого:</cmd>
+                <substeps id="substeps_aqv_ycn_ytb">
+                    <substep>
+                        <cmd>перейдите в раздел <cite>Конфигурации → Настройки конфигураций →
+                                Сканеры</cite>;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>найдите сканер с названием <uicontrol>Сканирование беспроводной сети</uicontrol> и
+                            убедитесь, что он добавлен в группу.</cmd>
+                        <info>
+                            <note id="note_rnp_gdn_ytb">В противном случае воспользуйтесь
+                                инструкциями, приведенными в разделах «Создание сканера сбора
+                                данных», «Группировка сканеров сбора данных» или «Импорт сканеров и
+                                их групп» руководства по эксплуатации.</note>
+                        </info>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig id="fig_izb_khn_ytb">
+                        <title>Сканер «Сканирование беспроводной сети», находящийся в группе
+                            «Wi-fi_scan»</title>
+                        <image href="../../../../../images/checkup/wifi_scanner.png"
+                            id="image_jzb_khn_ytb"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте задачу сбора данных. Для этого:</cmd>
+                <substeps id="substeps_fzs_pdn_ytb">
+                    <substep>
+                        <cmd>Перейдите в раздел <cite>Конфигурации → Настройки конфигураций → Задачи
+                                сбора данных</cite>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В верхней части страницы нажмите <uicontrol>Создать</uicontrol>.</cmd>
+                        <stepresult>появится окно <uicontrol>Создание задачи</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Задайте следующие параметры задачи:</cmd>
+                        <info>
+                            <ol id="ol_oxh_h2n_ytb">
+                                <li>наименование, позволяющее идентифицировать задачу;</li>
+                                <li>время и тип запуска расписания;</li>
+                                <li>группу сканеров, содержащую сканер «Сканирование беспроводной
+                                    сети»;</li>
+                                <li>объект защиты — текущий Комплекс.</li>
+                            </ol>
+                        </info>
+                        <info>
+                            <fig id="fig_cdy_4hn_ytb">
+                                <title>Создание задачи для сканирования беспроводной сети</title>
+                                <image href="../../../../../images/checkup/task_wifi_create.png"
+                                    id="image_ddy_4hn_ytb" height="500"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Создать</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Дождитесь окончания сбора данных.</cmd>
+            </step>
+            <step>
+                <cmd>Убедитесь, что сбор прошел успешно. Для этого:</cmd>
+                <substeps id="substeps_lbj_42n_ytb">
+                    <substep>
+                        <cmd>Перейдите на вкладку <uicontrol>Сбор данных</uicontrol> карточки объекта защиты текущего
+                            Комплекса.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Просмотрите содержание представленной таблицы.</cmd>
+                        <info>
+                            <fig id="fig_rgr_rhn_ytb">
+                                <title>Результат сбора данных сканером</title>
+                                <image
+                                    href="../../../../../images/checkup/host_profile_data_collection.png"
+                                    id="image_sgr_rhn_ytb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости перейдите к конфигурациям объекта защиты.</cmd>
+                        <info>
+                            <fig id="fig_ww1_whn_ytb">
+                                <title>Конфигурации по результатам сбора</title>
+                                <image href="../../../../../images/checkup/wifi_configs.png"
+                                    id="image_xw1_whn_ytb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

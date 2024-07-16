@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install_datapk_alt_0">
+    <title>Установка Комплекса в настроенной ОС Альт Сервер</title>
+    <body>
+        <note id="note_gmw_khp_rbc">Инструкции, приведенные в этом разделе, актуальны для установки
+                <term keyref="appliance"/>а на сертифицированную и несертифицированную версии <term
+                keyref="alt_name"/>.</note>
+        <p>Порядок установки <term keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"/>
+            приведен в разделе «<xref href="preliminary_sensor.dita"/>».</p>
+        <p>Порядок установки <term keyref="appliance"/>а уровня <abbreviated-form
+                keyref="management"/> приведен в разделе «<xref href="preliminary_mgmt.dita"/>».</p>
+        <p>Порядок установки <term keyref="appliance"/>а уровня <abbreviated-form
+                keyref="management"/> и <abbreviated-form keyref="sensor"/> на одном аппаратном
+            средстве приведен в разделе «<xref href="preliminary_sensor_and_mgmt.dita"/>».</p>
+    </body>
+</topic>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_15">
+ <title>Не принимаются Syslog-сообщения от объектов защиты</title>
+ <troublebody>
+ <condition>
+ 
+ <p>Для отсутствия сообщений <term keyref="syslog"/> от объектов защиты могут быть следующие причины:</p>
+ <ul id="ul_uzf_wdq_snb">
+                <li><xref href="#trouble_15/cause_hostname_or_ip" format="dita"/></li>
+                <li><xref href="#trouble_15/cause_syslog_env" format="dita"/></li>
+                <li><xref href="#trouble_15/cause_no_source" format="dita"/></li>
+                <li><xref href="#trouble_15/cause_no_events" format="dita"/></li>
+ </ul>
+ </condition>
+ <troubleSolution>
+ <cause id="cause_hostname_or_ip">
+                <title>Наименование объекта защиты не совпадает с сетевым именем (hostname) узла или
+                    в списке объектов защиты присутствуют объекты защиты с такими же
+                    IP-адресами</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+ <cmd>Убедитесь, что наименование объекта защиты совпадает с его
+ hostname.</cmd>
+ </step>
+ <step>
+                        <cmd>Убедитесь в отсутствии известных объектов защиты с такими же
+                            IP-адресами.</cmd>
+                    </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ <troubleSolution>
+ <cause id="cause_syslog_env">
+                <title>Некорректные значения переменных для Syslog в файле .env сенсора</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+                        <cmd>Перейдите в рабочую директорию сенсора:</cmd>
+                        <info>
+                            <codeblock id="codeblock_cyt_nh2_qyb">cd /opt/sensor</codeblock>
+                        </info>
+                    </step>
+ <step>
+                        <cmd>Проверьте и, при необходимости, откорректируйте значения переменных
+                                <cmdname keyref="DATAPK_SYSLOG_RFC3164_SERVER_PORT"/> и <cmdname
+                                keyref="DATAPK_SYSLOG_RFC3164_TCP_SERVER_PORT"/> (обычно указывается
+                            значение 514), <cmdname keyref="DATAPK_SYSLOG_RFC5424_SERVER_PORT"/> и
+                                <cmdname keyref="DATAPK_SYSLOG_RFC5424_TCP_SERVER_PORT"/> (обычно
+                            указывается значение 515) в файле <ph
+                                conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                            />.</cmd>
+                    </step>
+ <step>
+ <cmd>Если стандартные <term keyref="syslog"/>-порты TCP или UDP (514 и 515) заняты другими
+ сервисами, назначьте вышеуказанным переменным номера свободных
+ портов.</cmd>
+ </step>
+ <step>
+ <cmd>Остановите и запустите работу контейнеров без удаления накопленных
+ данных.</cmd>
+ </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ <troubleSolution>
+ <cause id="cause_no_source">
+                <title>Не создан или некорректно создан источник для приема Syslog-сообщений</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+                        <cmd>Убедитесь, что источник для приема <term keyref="syslog"/>-сообщений
+                            выбранного объекта защиты корректно инициализирован на странице <ph
+                                conref="../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+                            />.</cmd>
+                    </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ <troubleSolution>
+ <cause id="cause_no_events">
+                <title>Некорректная настройка отправки Syslog-сообщений на объекте защиты</title>
+            </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ 
+ <step><cmd>Проверьте настройки отправки <term keyref="syslog"/>-сообщений на объекте защиты, убедитесь, что объект защиты отправляет события на требуемый IP-адрес и порт.</cmd>
+ </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+</troubleshooting>

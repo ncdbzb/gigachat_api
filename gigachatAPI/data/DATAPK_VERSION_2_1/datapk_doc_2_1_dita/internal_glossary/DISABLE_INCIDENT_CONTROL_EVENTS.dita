@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_DISABLE_INCIDENT_CONTROL_EVENTS">
+    <glossterm>DATAPK_DISABLE_INCIDENT_CONTROL_EVENTS</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/disable_incident_control_events_desc.dita#ReusableComponent_yhy_hty_2tb/ph_ky5_q2j_jpb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

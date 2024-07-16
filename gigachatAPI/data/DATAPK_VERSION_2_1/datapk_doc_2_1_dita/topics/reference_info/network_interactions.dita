@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_interactions" outputclass="wide">
+ <title>Сетевые взаимодействия Комплексов</title>
+ <body>
+ <p>В таблице <ph outputclass="onlypdf"> (<xref href="#network_interactions/network_interactions"/>)</ph>представлены сетевые взаимодействия <term keyref="appliance"/>ов.</p>
+  <p>Порты назначения указаны в формате: <codeph>[TCP или UDP] [номер порта TCP или UDP] ([протокол
+    или сервис назначения])</codeph></p>
+ <p>
+ <table id="network_interactions" outputclass="sortable">
+    <title>Сетевые взаимодействия Комплексов</title>
+    <tgroup cols="4">
+     <colspec colnum="1" colname="col2" colwidth="15%"/>
+     <colspec colnum="2" colname="col3" colwidth="35%"/>
+     <colspec colnum="3" colname="col4" colwidth="30%"/>
+     <colspec colnum="4" colname="col5" colwidth="20%"/>
+     <thead>
+      <row>
+       <entry>Источник трафика</entry>
+       <entry>Порт назначения (для внешних ОЗ и систем приведены порты по умолчанию)</entry>
+       <entry>Узел назначения</entry>
+       <entry>Назначение трафика</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry morerows="2"><term keyref="appliance_name_short"/> уровня <abbreviated-form
+         keyref="sensor"/></entry>
+       <entry>
+        <p>TCP 135 (MSRPC)</p>
+        <p>TCP 139</p>
+        <p>TCP 445 (Winexe)</p>
+        <p>TCP 1024-5000 (MSRPC в Windows XP)</p>
+        <p>TCP 49152-65535 (MSRPC в Windows Vista и новее)</p>
+        <p>TCP 5985</p>
+        <p>TCP 5986 (WinRM)</p>
+        <p>TCP 3306 (MySQL)</p>
+        <p>TCP 1433 (MSSQL)</p>
+        <p>TCP 1521 (Oracle DB)</p>
+       </entry>
+       <entry>Активы (<abbreviated-form keyref="host"/>) базе <abbreviated-form keyref="OS"/>
+        Windows, СУБД</entry>
+       <entry morerows="2">Взаимодействие с <abbreviated-form keyref="host"/> (режим опроса)</entry>
+      </row>
+      <row>
+       <entry>
+        <p>TCP 22 (SSH)</p>
+        <p>TCP 23 (Telnet)</p>
+       </entry>
+       <entry><abbreviated-form keyref="host"/> на базе <abbreviated-form keyref="OS"/> Unix,
+        АСО</entry>
+      </row>
+      <row>
+       <entry>
+        <p>UDP 161 (SNMP)</p>
+        <p>TCP 102 (S7)</p>
+        <p>TCP 502 (Modbus)</p>
+        <p>TCP 44818 (EthernetIP)</p>
+       </entry>
+       <entry><abbreviated-form keyref="PLC"/></entry>
+      </row>
+      <row>
+       <entry><abbreviated-form keyref="host"/>, поддерживающие передачу событий через стандарт
+        syslog/SNMP-trap</entry>
+       <entry>
+        <p>UDP 514 (Syslog 3164)</p>
+        <p>UDP 515 (Syslog 5424)</p>
+        <p>TCP 514 (Syslog 3164 TCP)</p>
+        <p>TCP 515 (Syslog 5424 TCP)</p>
+        <p>UDP 162 (SNMP-trap)</p>
+       </entry>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="sensor"
+        /></entry>
+       <entry>Пассивный сбор событий от <abbreviated-form keyref="host"/>
+       </entry>
+      </row>
+      <row>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="sensor"
+        /></entry>
+       <entry>
+        <p>TCP 16379 (redis) — синхронизация настроек</p>
+        <p>TCP 19091 (prometheus) — метрики</p>
+        <p>TCP 15673 (rabbitmq) — получение данных</p>
+        <p>UDP 123 (если <abbreviated-form keyref="management"/> выступает в роли NTP-сервера для
+          <abbreviated-form keyref="sensor"/>)</p>
+       </entry>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="management"
+        /></entry>
+       <entry>
+        <p>Взаимодействие уровня <abbreviated-form keyref="sensor"/> с уровнем <abbreviated-form
+          keyref="management"/>.</p>
+        <p>Инициирует соединения всегда сенсор, поэтому его действительный IP-адрес допускается
+         скрывать по технологии NAT (SNAT).</p>
+        <p>Если межсетевой экран стоит уже после SNAT, доступы к уровню <abbreviated-form
+          keyref="management"/> нужно открывать с использованием виртуального адреса сенсора</p>
+       </entry>
+      </row>
+      <row>
+       <entry>
+        <p><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="sensor"/>
+         (опционально)</p>
+        <p><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="management"/></p>
+       </entry>
+       <entry>UDP 123 (NTP)</entry>
+       <entry>NTP-серверы</entry>
+       <entry>Синхронизация времени</entry>
+      </row>
+      <row>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="management"
+        /></entry>
+       <entry>
+        <p>UDP 514</p>
+        <p>TCP 514</p>
+        <p>TCP 25 (SMTP)</p>
+        <p>TCP 465 (SMTPS)</p>
+       </entry>
+       <entry>Смежная система</entry>
+       <entry>Отправка событий и почтовых уведомлений в смежные системы</entry>
+      </row>
+      <row>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="management"
+        /></entry>
+       <entry>
+        <p>TCP 389 (LDAP) или</p>
+        <p>TCP 636 (LDAPS)</p>
+       </entry>
+       <entry>LDAP-сервер</entry>
+       <entry>Для возможности авторизации пользователей <term keyref="appliance_name_short"/> через
+        службу каталогов</entry>
+      </row>
+      <row>
+       <entry morerows="1">АРМ административного персонала</entry>
+       <entry>
+        <p>TCP 443 (HTTPS)</p>
+        <p>TCP 22 (SSH)</p>
+       </entry>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="management"
+        /></entry>
+       <entry>
+        <p>Администрирование <term keyref="appliance_name_short"/>.</p>
+        <p>SSH — для сервисного обслуживания в терминале операционной системы</p>
+       </entry>
+      </row>
+      <row>
+       <entry>TCP 22 (SSH)</entry>
+       <entry><term keyref="appliance_name_short"/> уровня <abbreviated-form keyref="sensor"
+        /></entry>
+       <entry>
+        <p>Администрирование <term keyref="appliance_name_short"/> (сервисное обслуживание)</p>
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+ </p>
+ </body>
+</topic>

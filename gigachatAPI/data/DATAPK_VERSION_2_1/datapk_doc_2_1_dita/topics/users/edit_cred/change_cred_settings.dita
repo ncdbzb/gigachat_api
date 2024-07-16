@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="change_cred_settings">
+ <title>Изменение учетных записей</title>
+ <taskbody>
+ <context>
+ <p>Для изменения настроек учетной записи пользователя:</p>
+ </context>
+ <steps>
+ <step>
+ <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="appliance_control_fp"/> → <cite keyref="users_fp"/>.</cmd>
+ </step>
+ <step>
+        <cmd>Выберите учетную запись в списке пользователей и нажмите кнопку <image
+            href="../../../images/icons/edit.png" id="image_g35_kwz_tnb"/> (<uicontrol>Редактировать учетную
+              запись</uicontrol>).</cmd>
+   <stepresult>появится окно <uicontrol>Редактирование учетной записи</uicontrol>.</stepresult>
+      </step>
+ <step>
+ <cmd>Измените необходимые параметры учетной записи и нажмите кнопку <uicontrol>Сохранить</uicontrol>.
+ </cmd>
+    <info>
+     <fig id="fig_kcb_yyv_2qb">
+      <title>Окно «Редактирование учетной записи»</title>
+      <image href="../../../images/users_roles/edit_cred_window.png" id="image_lcb_yyv_2qb"/>
+     </fig>
+    </info>
+ </step>
+   <step
+    conref="../../reusable/steps/creds/relogin.dita#ReusableComponent_r1k_x3p_rwb/step_s1k_x3p_rwb">
+    <cmd/>
+   </step>
+ </steps>
+ </taskbody>
+</task>

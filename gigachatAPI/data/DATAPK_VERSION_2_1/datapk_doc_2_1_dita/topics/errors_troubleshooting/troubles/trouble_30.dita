@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_30">
+    <title>При бездействии в веб-интерфейсе сеанс завершается раньше, чем через 10 минут</title>
+    <troublebody>
+        <condition>
+            <p><ph>В качестве причин раннего завершения сеанса рассмотрены следующие:</ph><ul
+                    id="ul_lh1_ynw_pyb">
+                    <li><xref href="#trouble_30/cause_less_time" format="dita"/></li>
+                    <li><xref href="#trouble_30/cause_another_user" format="dita"/></li>
+                </ul></p>
+        </condition>
+        <troubleSolution>
+            <cause id="cause_less_time">
+                <title>Время завершения сеанса пользователя при бездействии задано меньше 10
+                    минут</title>
+                <p>Время бездействия в веб-интерфейсе, после которого текущая сессия пользователя
+                    автоматически завершается и происходит переход на страницу авторизации,
+                    настраивается в переменной <cmdname keyref="DATAPK_AUTH_SESSION_EXPIRATION"/>
+                    файла <codeph><term keyref="env"/></codeph>
+                    <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/> и по
+                    умолчанию равно 600 секунд.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Перейдите в командную строку операционной системы <term
+                                keyref="appliance"/>а уровня <abbreviated-form keyref="management"
+                            />.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а (по
+                            умолчанию путь к рабочей директории — <codeph
+                                conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                            />):</cmd>
+                        <info>
+                            <codeblock id="codeblock_jnd_3ql_vsb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                        </info>
+                    </step>
+                    <step id="step_q55_2fw_zrb">
+                        <cmd>Остановите работу контейнеров без удаления данных следующей
+                            командой:</cmd>
+                        <info>
+                            <codeblock id="codeblock_qkm_frp_pyb">docker-compose down</codeblock>
+                        </info>
+                    </step>
+                    <step id="step_u55_2fw_zrb">
+                        <cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+                    </step>
+                    <step>
+                        <cmd>В конфигурационном файле <codeph><term keyref="env"/></codeph>
+                            присвойте переменной <cmdname keyref="DATAPK_AUTH_SESSION_EXPIRATION"/>
+                            необходимый лимит времени бездействия в секундах.</cmd>
+                    </step>
+                    <step
+                        conref="../../reusable/start_cont_steps.dita#ReusableComponent_ith_q2k_pyb/step_rqf_hfw_zrb">
+                        <cmd/>
+                    </step>
+                    <step id="step_vqf_hfw_zrb">
+                        <cmd
+                            conref="../../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"/>
+                        <stepresult>сессия пользователей будет завершаться после времени
+                            бездействия, указанного в переменной <cmdname
+                                keyref="DATAPK_AUTH_SESSION_EXPIRATION"/>.</stepresult>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_another_user">
+                <title>Под уже используемой учетной записью совершил вход другой
+                    пользователь</title>
+                <p>Ограничение на количество сессий под одной учетной записью настраивается в
+                    переменной <cmdname keyref="DATAPK_USE_SESSION_LIMIT"/> файла <codeph><term
+                            keyref="env"/></codeph>
+                    <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>. По
+                    умолчанию разрешается вход под одной учетной записью только с одного устройства
+                    (переменная имеет значение <codeph>true</codeph>) — при создании новой сессии
+                    предыдущая завершается.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps id="steps_eh3_4mw_pyb">
+                    <step>
+                        <cmd>При необходимости создайте в веб-интерфейсе новые учетные записи для
+                            других пользователей.</cmd>
+                    </step>
+                    <step>
+                        <cmd>При необходимости отключите ограничение на вход под одной учетной
+                            записью:</cmd>
+                        <substeps id="substeps_zm1_bqf_qyb">
+                            <substep>
+                                <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а
+                                    уровня <abbreviated-form keyref="management"/>.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Остановите работу контейнеров без удаления данных.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>В конфигурационном файле <codeph><term keyref="env"/></codeph>
+                                    добавьте переменную <cmdname keyref="DATAPK_USE_SESSION_LIMIT"/>
+                                    и установите ей значение <codeph>false</codeph>.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Запустите работу контейнеров и дождитесь их запуска (5-7
+                                    минут).</cmd>
+                            </substep>
+                        </substeps>
+                        <stepresult>станет возможным вход в веб-интерфейс под любой учетной записью
+                            с любого количества устройств.</stepresult>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

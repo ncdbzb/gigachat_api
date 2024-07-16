@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_events">
+ <title>События Комплекса</title>
+ <body>
+ <section id="section_kdl_jjw_vnb">
+<title>Общие поля для событий Комплекса</title>
+  <p>Общие поля для событий <term keyref="appliance"/>а приведены в таблице ниже.<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_ix2_42w_vnb"/>)</ph></p>
+<table id="table_ix2_42w_vnb">
+ <title>Общие поля для событий Комплекса</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="40%"/>
+ <colspec colnum="2" colname="col2" colwidth="60%"/>
+ <thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+</row>
+ </thead>
+ <tbody>
+<row>
+ <entry>observer_name</entry>
+ <entry>Сетевое имя регистратора события: <abbreviated-form keyref="host"/>, сенсора или <term
+         keyref="appliance"/>а</entry>
+</row>
+<row>
+ <entry>observer_ip</entry>
+ <entry>IP-адрес регистратора события: <abbreviated-form keyref="host"/>, сенсора или <term
+         keyref="appliance"/>а</entry>
+</row>
+      <row>
+       <entry>event_code</entry>
+       <entry>Идентификатор события</entry>
+      </row>
+      <row>
+       <entry>event_type</entry>
+       <entry>Тип события</entry>
+      </row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+  <section id="section_fsv_wjq_bzb">
+   <title>Резервное копирование данных (backup_control)</title>
+   <p>Поля для событий резервного копирования приведены в таблице ниже<ph outputclass="onlypdf">
+      (<xref href="#datapk_events/table_vwk_3mq_bzb" format="dita"/>)</ph>.</p>
+   <table id="table_vwk_3mq_bzb">
+    <title>Поля для событий резервного копирования</title>
+    <tgroup cols="2">
+     <colspec colnum="1" colname="col1" colwidth="35%"/>
+     <colspec colnum="2" colname="col2" colwidth="65%"/>
+     <thead>
+      <row>
+       <entry>Поле</entry>
+       <entry>Описание</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>additional_information</entry>
+       <entry>Обоснование действия (комментарий) и изменившееся значение</entry>
+      </row>
+      <row>
+       <entry>description</entry>
+       <entry>Описание выполненного действия</entry>
+      </row>
+      <row>
+       <entry>justification</entry>
+       <entry>Обоснование выполненного действия</entry>
+      </row>
+      <row>
+       <entry>user</entry>
+       <entry>Пользователь <term keyref="appliance"/>а, который выполнил действие</entry>
+      </row>
+      <row>
+       <entry>target_hostname</entry>
+       <entry>Сетевое имя <term keyref="appliance"/>а</entry>
+      </row>
+      <row>
+       <entry>target_id</entry>
+       <entry>Идентификатор <term keyref="appliance"/>а</entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+  </section>
+ <section id="section_brz_bjw_vnb">
+<title>Поток данных (datapk_data_flow)</title>
+  <p>Поля для событий потоков данных приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#datapk_events/table_jx2_42w_vnb"/>)</ph>.</p>
+<table id="table_jx2_42w_vnb">
+ <title>Поля для событий потоков данных</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+</row>
+ </thead>
+ <tbody>
+<row>
+ <entry>action</entry>
+ <entry>Произведенное действие. Возможны следующие варианты: detect или delete</entry>
+</row>
+<row>
+ <entry>additional_information</entry>
+ <entry>Дополнительные данные при автоматическом одобрении (состояние, комментарий, наименование
+        правила)</entry>
+</row>
+<row>
+ <entry>description</entry>
+ <entry>Описание события</entry>
+</row>
+<row>
+ <entry>protocol</entry>
+ <entry><p>Сетевой протокол передачи данных.</p><note type="warning">Сетевой
+протокол указывается строчными буквами.</note></entry>
+</row>
+<row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес источника потока данных</entry>
+</row>
+<row>
+ <entry>source_mac</entry>
+ <entry><p>MAC-адрес источника потока данных.</p><note type="warning">MAC-адрес
+источника указывается заглавными
+ буквами.</note></entry>
+</row>
+<row>
+ <entry>source_port</entry>
+ <entry>Порт источника потока данных</entry>
+</row>
+<row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес получателя потока данных</entry>
+</row>
+<row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес получателя потока данных.</p><note type="warning">MAC-адрес получателя указывается заглавными буквами.</note></entry>
+</row>
+<row>
+ <entry>target_port</entry>
+ <entry>Порт получателя потока данных</entry>
+</row>
+<row>
+ <entry>user</entry>
+ <entry>Имя пользователя, выполнившего удаление или создавшего правило одобрения</entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_wv4_bjw_vnb">
+<title>Действие пользователя (user_action_detected)</title>
+<p>Поля для событий действий пользователя приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#datapk_events/table_kx2_42w_vnb"/>)</ph>.</p>
+<table id="table_kx2_42w_vnb">
+ <title>Поля для событий о действиях пользователя</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+</row>
+ </thead>
+ <tbody>
+<row>
+ <entry>additional_information</entry>
+ <entry>Обоснование действия (комментарий) и изменившееся значение</entry>
+</row>
+<row>
+ <entry>category </entry>
+ <entry>Результат (статус выполненного действия) например: OK, cert_error, access_denied</entry>
+</row>
+<row>
+ <entry>description</entry>
+ <entry>Описание выполненного действия</entry>
+</row>
+<row>
+ <entry>user</entry>
+ <entry>Пользователь <term keyref="appliance"/>а, который выполнил действие</entry>
+</row>
+      <row>
+       <entry>target_hostname</entry>
+       <entry>Сетевое имя <term keyref="appliance"/>а</entry>
+      </row>
+      <row>
+       <entry>target_id</entry>
+       <entry>Идентификатор <term keyref="appliance"/>а</entry>
+      </row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_ic3_bjw_vnb">
+<title>Аутентификация (appliance_authentication)</title>
+  <p>Поля для событий аутентификации в <term keyref="appliance"/>е приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#datapk_events/table_nx2_42w_vnb"/>)</ph>.</p>
+<table id="table_lx2_42w_vnb">
+ <title>Поля для событий об аутентификации</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+</row>
+ </thead>
+ <tbody>
+<row>
+ <entry>action</entry>
+ <entry>Произведенное действие. Возможны следующие варианты: login или exit</entry>
+</row>
+<row>
+ <entry>category</entry>
+ <entry>Категория события аутентификации Возможны следующие варианты: success, failure или
+        token_expired</entry>
+</row>
+<row>
+ <entry>description</entry>
+ <entry>Описание события</entry>
+</row>
+<row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес с которого совершена попытка аутентификации</entry>
+</row>
+<row>
+ <entry>user</entry>
+ <entry>Имя пользователя, который выполнял попытку аутентификации</entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_dd1_bjw_vnb">
+<title>Действия с эталонным состоянием конфигурации ОЗ (host_config)</title>
+<p>Возможны следующие изменения эталонного состояния конфигурации: </p>
+<ul id="ul_mx2_42w_vnb">
+ <li><codeph>datapk_host_config_changed</codeph> — <systemoutput>Нарушено эталонное состояние
+      конфигурации</systemoutput>;</li>
+ <li><codeph>datapk_reference_config_changed</codeph> — <systemoutput>Изменено эталонное состояние
+      конфигурации</systemoutput>;</li>
+ <li><codeph>datapk_host_config_restored</codeph> — <systemoutput>Восстановлено эталонное состояние
+      конфигурации.</systemoutput></li>
+</ul>
+<p>Поля для событий изменения эталонного состояния конфигурации объектов защиты приведены в таблице
+     ниже<ph outputclass="onlypdf"> (<xref href="#datapk_events/table_nx2_42w_vnb"/>)</ph>.</p>
+<table id="table_nx2_42w_vnb">
+ <title>Поля для событий о состоянии конфигурации ОЗ</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+ <row>
+ <entry>additional_information</entry>
+ <entry>Список изменений в конфигурации, либо обоснование изменения эталонной конфигурации</entry>
+ </row>
+ <row>
+ <entry>category</entry>
+ <entry>Категория конфигурации (совпадает с названием сканера сбора конфигурации)</entry>
+ </row>
+<row>
+ <entry>description</entry>
+ <entry>Описывает событие изменения конфигурации <abbreviated-form keyref="host"/></entry>
+</row>
+<row>
+ <entry>target_hostname</entry>
+ <entry>Сетевое имя <abbreviated-form keyref="host"/>, на котором обнаружено нарушение эталонного
+        состояния конфигурации</entry>
+</row>
+ <row>
+ <entry>user</entry>
+ <entry>Имя пользователя, который изменил эталонную конфигурацию</entry>
+ </row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_vvp_1jw_vnb">
+<title>Обнаружение неизвестного ОЗ (datapk_unknown_host_detected)</title>
+<p>Поля для событий обнаружения неизвестных объектов защиты приведены в таблице ниже<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_ox2_42w_vnb"/>)</ph>.</p>
+<table id="table_ox2_42w_vnb">
+ <title>Поля для событий обнаружения неизвестного ОЗ</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+ <row>
+ <entry>description</entry>
+ <entry>Описание события</entry>
+ </row>
+ <row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес обнаруженного <abbreviated-form keyref="host"/></entry>
+ </row>
+<row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес обнаруженного <abbreviated-form keyref="host"/></p><note type="warning">MAC-адрес обнаруженного <abbreviated-form keyref="host"/> указывается заглавными буквами.</note></entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_op3_1jw_vnb">
+<title>Обнаружение действия пользователя с ОЗ (host_user_action_detected)</title>
+<p>Поля для событий о действиях пользователей с объектами защиты приведены в таблице ниже<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_px2_42w_vnb"/>)</ph>.</p>
+<table id="table_px2_42w_vnb">
+ <title>Поля для событий о действиях пользователя с ОЗ</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+<row>
+ <entry>action</entry>
+ <entry>Произведенное действие (варианты: create, change, change_interface или delete)</entry>
+</row>
+ <row>
+ <entry>additional_information</entry>
+ <entry>Дополнительные данные об <abbreviated-form keyref="host"/></entry>
+ </row>
+<row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес <abbreviated-form keyref="host"/>, с которым производят манипуляции</entry>
+</row>
+<row>
+ <entry>target_hostname</entry>
+ <entry>Сетевое имя <abbreviated-form keyref="host"/>, с которым производят манипуляции</entry>
+</row>
+<row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес <abbreviated-form keyref="host"/>, с которым производят манипуляции</p><note type="warning">MAC-адрес <abbreviated-form keyref="host"/>
+  указывается заглавными буквами.</note></entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_pn1_1jw_vnb">
+<title>Изменение статуса доступности ОЗ (availability_control)</title>
+<p>Поля для событий о статусе доступности объектов защиты приведены в таблице ниже<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_qx2_42w_vnb"/>)</ph>.</p>
+<table id="table_qx2_42w_vnb">
+ <title>Поля для событий статуса доступности ОЗ</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+<row>
+ <entry>description</entry>
+ <entry>Описание доступности интерфейса</entry>
+</row>
+<row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес <abbreviated-form keyref="host"/>, у которого происходит изменение статуса
+        доступности</entry>
+</row>
+<row>
+ <entry>target_hostname</entry>
+ <entry>Сетевое имя <abbreviated-form keyref="host"/>, у которого происходит изменение статуса
+        доступности</entry>
+</row>
+<row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес <abbreviated-form keyref="host"/>, у которого происходит изменение статуса
+         доступности</p><note type="warning"
+  >MAC-адрес указывается заглавными
+ буквами.</note></entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_cpq_v4w_vnb">
+ <title>Cобытия о настройке, запуске и остановке сбора данных (host_connection)</title>
+ <p>Поля для событий о команде запуска и остановки сбора данных приведены в таблице ниже<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_an5_cpw_vnb"/>)</ph>.</p>
+ <p>
+ <table id="table_an5_cpw_vnb">
+ <title>Поля для событий о подключениях к ОЗ</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+       <row>
+        <entry>additional_information</entry>
+        <entry>Дополнительные данные (что изменено, ошибки запуска)</entry>
+       </row>
+       <row>
+        <entry>description</entry>
+        <entry>Описание и перечень <abbreviated-form keyref="host"/>, для которых изменяется
+         состояние сбора данных</entry>
+       </row>
+       <row>
+        <entry>observer_id</entry>
+        <entry>Идентификатор сенсора, выполнившего сбор данных</entry>
+       </row>
+       <row>
+        <entry>observer_name</entry>
+        <entry>Сетевое имя сенсора, выполнившего сбор данных</entry>
+       </row>
+       <row>
+        <entry>source_hostname</entry>
+        <entry>Сетевое имя сенсора, выполнившего сбор данных</entry>
+       </row>
+       <row>
+        <entry>source_id</entry>
+        <entry>Идентификатор сенсора, выполнившего сбор данных</entry>
+       </row>
+       <row>
+        <entry>target_hostname</entry>
+        <entry>Сетевое имя <term keyref="appliance"/>а, получающего команду</entry>
+       </row>
+       <row>
+        <entry>target_id</entry>
+        <entry>Идентификатор <abbreviated-form keyref="host"/>, с которого осуществлялся сбор
+         данных</entry>
+       </row>
+       <row>
+        <entry>target_ip</entry>
+        <entry>IP-адрес <abbreviated-form keyref="host"/>, с которого осуществлялся сбор
+         данных</entry>
+       </row>
+       <row>
+        <entry>user</entry>
+        <entry>Имя пользователя, который производит действия с задачами</entry>
+       </row>
+      </tbody>
+ </tgroup>
+ </table>
+ </p>
+ </section>
+ <section id="section_vvz_y3w_vnb">
+<title>Результат проверок на соответствие требованиям ИБ (oval_event)</title>
+<p>Поля для событий о проверках <abbreviated-form keyref="oval_def"/> приведены в таблице ниже<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_tx2_42w_vnb"/>)</ph>.</p>
+<table id="table_tx2_42w_vnb">
+ <title>Поля для событий о результатах проверок на соответствие требованиям ИБ</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+<row>
+ <entry>action</entry>
+ <entry>Статус действия проверки Возможны следующие варианты: oval_check_success или
+        oval_check_error</entry>
+</row>
+ <row>
+ <entry>additional_information</entry>
+ <entry>Статус завершенного действия (например, «Проверка завершена») или вывод ошибки</entry>
+ </row>
+<row>
+ <entry>category</entry>
+ <entry>Название группы <abbreviated-form keyref="oval_def"/>-определений</entry>
+</row>
+<row>
+ <entry>description</entry>
+ <entry>Описание проверки на соответствие требованиям <abbreviated-form keyref="IS"/></entry>
+</row>
+<row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес проверяемого <abbreviated-form keyref="host"/></entry>
+</row>
+<row>
+ <entry>target_hostname</entry>
+ <entry>Сетевое имя проверяемого <abbreviated-form keyref="host"/></entry>
+</row>
+<row>
+ <entry>target_mac</entry>
+ <entry><p>MAC-адрес проверяемого <abbreviated-form keyref="host"/></p><note type="warning">MAC-адрес указывается заглавными
+  буквами.</note></entry>
+</row>
+<row>
+ <entry>user</entry>
+ <entry>Имя пользователя, который производит проверку на соответствие требованиям <abbreviated-form
+         keyref="IS"/></entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_v5p_y3w_vnb">
+<title>Верификация импортированного Python-скрипта (script_verification_event)</title>
+<p>Поля для событий верификации скриптов приведены в таблице ниже<ph outputclass="onlypdf"> (<xref
+      href="#datapk_events/table_ux2_42w_vnb"/>)</ph>.</p>
+<table id="table_ux2_42w_vnb">
+ <title>Поля для событий верификации Python-скриптов</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+ <row>
+ <entry>additional_information</entry>
+ <entry>Вывод ошибки</entry>
+ </row>
+ <row>
+ <entry>category</entry>
+ <entry>Название сканера, который содержит проверяемый Python-скрипт</entry>
+ </row>
+ <row>
+ <entry>description</entry>
+ <entry>Описание события <term keyref="appliance"/>а</entry>
+ </row>
+      <row>
+       <entry>request_id</entry>
+       <entry>Идентификатор запроса</entry>
+      </row>
+<row>
+ <entry>user</entry>
+ <entry>Имя пользователя, который производит манипуляции со сканером</entry>
+</row>
+      <row>
+       <entry>target_hostname</entry>
+       <entry>Сетевое имя регистратора события: <abbreviated-form keyref="host"/>, сенсора или <term
+         keyref="appliance"/>а</entry>
+      </row>
+      <row>
+       <entry>target_id</entry>
+       <entry>ID регистратора события: <abbreviated-form keyref="host"/>, сенсора или <term
+         keyref="appliance"/>а</entry>
+      </row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_x12_y3w_vnb">
+<title>Контроль событий Комплекса (event_control)</title>
+<p>Поля для контроля событий <term keyref="appliance"/>а приведены в таблице ниже<ph
+     outputclass="onlypdf"> (<xref href="#datapk_events/table_vx2_42w_vnb"/>)</ph>.</p>
+<table id="table_vx2_42w_vnb">
+ <title>Поля для контроля событий Комплекса</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+<row>
+ <entry>description</entry>
+ <entry>Описание события <term keyref="appliance"/>а</entry>
+</row>
+ <row>
+ <entry>protocol</entry>
+ <entry>Идентификатор источника</entry>
+ </row>
+<row>
+ <entry>source_hostname</entry>
+ <entry>Сетевое имя <abbreviated-form keyref="host"/></entry>
+</row>
+<row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес <abbreviated-form keyref="host"/></entry>
+</row>
+      <row>
+       <entry>target_hostname</entry>
+       <entry>Сетевое имя объекта, над которым выполнялось действие: <abbreviated-form keyref="host"
+        />, сенсор или <term keyref="appliance"/>а</entry>
+      </row>
+      <row>
+       <entry>target_id</entry>
+       <entry>ID объекта, над которым выполнялось действие: <abbreviated-form keyref="host"/>,
+        сенсора или <term keyref="appliance"/>а</entry>
+      </row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ <section id="section_b4m_rqw_vnb">
+ <title>События контроля инцидентов (incident_control_event)</title>
+ <p>Поля для контроля инцидентов приведены в таблице ниже<ph outputclass="onlypdf"> (<xref
+      href="#datapk_events/table_vx2_42w_vnb111" format="dita"/>)</ph>.</p>
+ <p>
+    <table id="table_vx2_42w_vnb111">
+     <title>Поля для событий контроля инцидентов</title>
+     <tgroup cols="2">
+      <colspec colnum="1" colname="col1" colwidth="35%"/>
+      <colspec colnum="2" colname="col2" colwidth="65%"/>
+      <thead>
+       <row>
+        <entry>Поле</entry>
+        <entry>Описание</entry>
+       </row>
+      </thead>
+      <tbody>
+       <row>
+        <entry>additional_information</entry>
+        <entry>Служебные поля инцидента (например, наименование правила корреляции)</entry>
+       </row>
+       <row>
+        <entry>description</entry>
+        <entry>Описание выполненного действия</entry>
+       </row>
+       <row>
+        <entry>justification</entry>
+        <entry>Обоснование выполненного действия</entry>
+       </row>
+       <row>
+        <entry>incident_id</entry>
+        <entry>Идентификатор созданного или измененного инцидента</entry>
+       </row>
+       <row>
+        <entry>link</entry>
+        <entry>Все id событий, на основе которых сформирован инцидент</entry>
+       </row>
+       <row>
+        <entry>target_ip</entry>
+        <entry>
+         <p>Все IP-адреса из событий, на основе которых сформирован инцидент.</p>
+         <note id="note_ylk_vbp_fzb">Отображаются только если это явно указано в правилах
+          корреляции.</note>
+        </entry>
+       </row>
+       <row>
+        <entry>target_id</entry>
+        <entry>Идентификатор регистратора события: <abbreviated-form keyref="host"/>, сенсора или
+          <term keyref="appliance"/>а</entry>
+       </row>
+       <row>
+        <entry>target_hostname</entry>
+        <entry>Сетевое имя регистратора события: <abbreviated-form keyref="host"/>, сенсора или
+          <term keyref="appliance"/>а</entry>
+       </row>
+       <row>
+        <entry>user</entry>
+        <entry>Имя пользователя, который выполнил действие</entry>
+       </row>
+       <row>
+        <entry>priority</entry>
+        <entry>Текущий приоритет созданного или измененного инцидента </entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </table>
+   </p>
+ </section>
+ <section id="section_tvl_x3w_vnb">
+<title>События службы обнаружения вторжений (suricata_event)</title>
+<p>Поля для событий службы обнаружения вторжений приведены в таблице ниже<ph outputclass="onlypdf">
+      (<xref href="#datapk_events/table_wx2_42w_vnb"/>)</ph>.</p>
+<table id="table_wx2_42w_vnb">
+ <title>Поля для событий службы обнаружения вторжений</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+<thead>
+<row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row></thead><tbody>
+ <row>
+ <entry>action</entry>
+ <entry><p>Действие службы обнаружения вторжений.</p><note>Берется из поля action правила службы обнаружения вторжений.</note></entry>
+ </row>
+ <row>
+ <entry>category</entry>
+ <entry><p>Категория события службы обнаружения вторжений.</p><note>Берется из поля event_type правила службы обнаружения вторжений.</note></entry>
+ </row>
+ <row>
+ <entry>description</entry>
+ <entry>Описание правила срабатывания сигнатуры (IDS)</entry>
+ </row>
+ <row>
+ <entry>event_code</entry>
+ <entry>Значение поля signature_id правила службы обнаружения вторжений</entry>
+ </row>
+<row>
+ <entry>protocol</entry>
+ <entry><p>Протокол срабатывания правила службы обнаружения вторжений.</p><note>Берется из поля app_proto  правила службы обнаружения вторжений.</note></entry>
+</row>
+<row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес отправителя сетевых пакетов</entry>
+</row>
+<row>
+ <entry>source_port</entry>
+ <entry>Порт, по которому отправлены сетевые пакеты</entry>
+</row>
+<row>
+ <entry>target_ip</entry>
+ <entry>IP-адрес получателя сетевых пакетов</entry>
+</row>
+<row>
+ <entry>target_port</entry>
+ <entry>Порт, на который отправлены сетевые пакеты</entry>
+</row>
+ </tbody>
+ </tgroup>
+</table>
+ </section>
+ 
+ </body>
+</topic>

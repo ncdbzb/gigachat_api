@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:sources-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bd3_rz2_jxb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd><ph id="ph_cd3_rz2_jxb"><cite keyref="appliance_control_fp"/> → <cite
+                                    keyref="prot_obj_settings_fp"/> → <cite keyref="event_source_fp"
+                                /></ph></cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

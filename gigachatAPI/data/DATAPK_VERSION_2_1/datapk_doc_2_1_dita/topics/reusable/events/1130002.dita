@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1130002">
+    <title>
+Удалена группа OVAL-определений</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1130002"> Пользователь: <codeph>{user_login}</codeph>; Обоснование:
+                                    <codeph>{justification}</codeph>; Группа OVAL определений:
+                                [Название: <codeph>{oval_group_title}</codeph>; Описание:
+                                    <codeph>{oval_group_description}</codeph>;]</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

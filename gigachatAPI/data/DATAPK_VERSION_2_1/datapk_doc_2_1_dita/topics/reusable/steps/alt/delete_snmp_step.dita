@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_sbb_xvq_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_tbb_xvq_nybqq">
+                <cmd>Удалите архив словарей SNMP <codeph>snmp_mibs.tar.gz</codeph> по команде:</cmd>
+                <info>
+                    <codeblock id="codeblock_n2t_wfk_lyb">rm -f snmp_mibs.tar.gz</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

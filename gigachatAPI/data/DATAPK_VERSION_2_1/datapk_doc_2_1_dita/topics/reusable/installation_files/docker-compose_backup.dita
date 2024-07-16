@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fd1_bpk_x5b">
+    <title/>
+    <body>
+        <ul>
+            <li id="li_bw3_d1q_g5b"><codeph>docker-compose.backup.yml</codeph> — stand-файл для
+                резервной копии.</li>
+        </ul>
+    </body>
+</topic>

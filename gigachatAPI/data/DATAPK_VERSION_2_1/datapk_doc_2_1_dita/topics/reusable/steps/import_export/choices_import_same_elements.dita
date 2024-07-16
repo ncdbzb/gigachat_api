@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gg1_grd_gyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <choices id="choices_syg_3vd_wnb">
+                    <choice><uicontrol>Оставить</uicontrol> — новые элементы будут добавлены к уже
+                        существующим;</choice>
+                    <choice><uicontrol>Удалить</uicontrol> — старые элементы будут удалены и
+                        добавлены новые.</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="connect_infodiode">
+    <title>Подключение питающих и соединительных кабелей к АК «InfoDiode» и соединение с компактным компьютером</title>
+    <taskbody>
+        <steps id="steps_l3n_syx_j5b">
+            <step>
+                <cmd>Подключите блок питания АК «InfoDiode» в разъем питания 12В.</cmd>
+            </step>
+            <step>
+                <cmd>Подключите коммутационный кабель RJ-45 – RJ-45 от слушающего (второго) порта
+                    компактного компьютера в разъем RJ-45 с надписью OUT (<xref
+                        href="#connect_infodiode/Ref85839180"/>). </cmd>
+                <info>
+                    <fig id="Ref85839180">
+                        <title>Пример подключения кабелей к АК «InfoDiode» и соединения с комп.
+                            компьютером</title>
+                        <image href="../../../../images/checkup/infodiode.jpg"
+                            id="image_vqb_3cs_j5b" height="300"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="stream_accept_del">
+ <title>Изменение потоков данных</title>
+ <body>
+ <p>При появлении нового потока данных необходимо принять решение по его одобрению или удалению.
+   Новые неподтвержденные потоки данных не имеют записи в столбце <uicontrol>Дата изменения
+    статуса</uicontrol>.</p>
+ <p>В интерфейсе <term keyref="appliance"/>а возможно одобрение и удаление потоков в ручном и автоматическом
+ режимах. Чтобы ознакомиться с предложенными способами, перейдите в следующие
+ разделы:</p>
+ <ul id="ul_bq5_bdv_pnb">
+ <li><xref href="stream_accept_del_manual.dita"/></li>
+ <li><xref href="stream_accept_del_auto.dita"/><ul id="ul_gcc_cdv_pnb">
+ <li><xref href="control_stream_rules_on.dita"/></li>
+ <li><xref href="create_stream_control_rule.dita"/></li>
+ </ul></li>
+ </ul>
+ </body>
+</topic>

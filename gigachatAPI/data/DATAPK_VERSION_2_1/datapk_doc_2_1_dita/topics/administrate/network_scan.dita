@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="network_scan">
+ <title>Сканирование сети и определение интерфейсов активного сетевого оборудования</title>
+ <taskbody>
+ <context>
+ <p><term keyref="appliance"/> обнаруживает новые <abbreviated-form keyref="host"/> в автоматическом
+        режиме на основании информации из пакетов сетевого трафика, которые поступают на активный и
+        прослушивающий интерфейсы сенсоров. Такой информацией могут быть IP и MAC-адреса источников
+        или получателей пакетов. Для некоторых <abbreviated-form keyref="host"/> возможно
+        определение дополнительной информации об операционной системе: версии <abbreviated-form
+          keyref="OS"/>, NetBIOS и DNS имени. Вся полученная информация об <abbreviated-form
+          keyref="host"/> отображается на странице <cite keyref="prot_obj_fp"/>.</p>
+ 
+ <note>
+ <p>Способ обнаружения объектов защиты и их отображение зависит от значения переменной <cmdname
+            keyref="DATAPK_DISABLE_AUTOMATIC_HOST_CREATION_BY_MAC"/> в конфигурационном файле <ph
+            conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+          />:</p>
+ <ul>
+ <li>Если переменная имеет значение <ph
+              conref="../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"/>, либо
+            она не задана в <ph
+              conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>,
+              <term keyref="appliance"/> фиксирует <abbreviated-form keyref="host"/> только по
+            MAC-адресу независимо от наличия у них IP-адреса. В списке объектов защиты отображаются
+            все найденные <abbreviated-form keyref="host"/> (до настройки домашней сети
+              <abbreviated-form keyref="host"/> отображаются только с MAC-адресами).</li>
+ <li>Если переменная имеет значение <ph
+              conref="../reusable/true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/>, <term
+              keyref="appliance"/> фиксирует <abbreviated-form keyref="host"/> по MAC-адресу (если
+            IP-адрес не обнаружен) и по связке MAC-адреса и IP-адреса. В списке объектов защиты
+            будут отображаться только <abbreviated-form keyref="host"/>, IP-адрес которых входит в
+            домашнюю сеть, а также <abbreviated-form keyref="host"/>, IP-адрес которых не
+            обнаружен.</li>
+ </ul></note>
+  <p outputclass="only_cert">На основании сетевого трафика, получаемого от объектов защиты в течение
+        некоторого времени, автоматически определяется доступность объектов защиты. Если за
+        определенное время исходящий трафик от <abbreviated-form keyref="host"/> отсутствует, он
+        считается недоступным, и <term keyref="appliance"/> генерирует событие о недоступности
+          <abbreviated-form keyref="host"/>.</p>
+ <p><term keyref="appliance"/> способен выполнять сканирование сети для обнаружения новых
+        неизвестных <abbreviated-form keyref="host"/> и для получения дополнительной информации об
+        операционных системах, на которых функционируют <abbreviated-form keyref="host"/> (возможно
+        только для ряда операционных систем).</p>
+      <p>Сканирование определяет новые доступные сетевые узлы. Также возможно определение их
+        IP-адреса, MAC-адреса и сетевого имени (если данная информация доступна в режиме быстрого
+        сканирования). В случае определения сетевого имени узла наименование соответствующего
+        объекта защиты в <term keyref="appliance"/>е меняется на сетевое имя.</p>
+ <p>Для сканирования сети:</p>
+ </context>
+ <steps>
+ 
+ <step>
+        <cmd><ph
+            conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+            /><cite keyref="sensors_fp"/>.</cmd>
+      </step>
+      <step>
+        <cmd>Выберите сенсор.</cmd>
+        <stepresult>появится боковая панель с описанием и настройками выбранного
+          сенсора.</stepresult>
+      </step>
+      <step>
+        <cmd>На панели <uicontrol>Сканирование сети</uicontrol> введите начальный и конечный адреса
+          для сканирования.</cmd>
+        <info>
+          <fig id="fig_bvj_dmh_pxb">
+            <title>Панель «Сканирование сети»</title>
+            <image href="../../images/pages/sensors_page_scr.png" id="image_cvj_dmh_pxb">
+              <alt>Панель «Сканирование сети»</alt>
+            </image>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Нажмите кнопку <uicontrol>Запустить</uicontrol>.</cmd>
+        <info>
+          <note id="note_k3b_3jj_pxb">При уменьшении количества IP-адресов, входящих в домашнюю
+            подсеть (при изменении подсети в меньшую сторону), объекты защиты с типом <codeph>Неизвестный
+              тип</codeph>, IP-адреса которых больше не входят в нее, будут удалены даже при наличии сетевого
+            имени.</note>
+        </info>
+        <stepresult>появится уведомление <systemoutput>Сканирование адресов домашней сети запущено
+            успешно</systemoutput>.</stepresult>
+      </step>
+ </steps>
+ </taskbody>
+</task>

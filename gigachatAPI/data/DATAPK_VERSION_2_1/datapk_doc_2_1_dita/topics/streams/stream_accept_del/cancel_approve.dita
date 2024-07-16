@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="cancel_approve">
+ <title>Отмена одобрения потока данных</title>
+ <taskbody>
+  <context>
+   <p>В интерфейсе <term keyref="appliance"/>а возможна отмена одобрения как одного, так и
+    нескольких потоков данных. Порядок действий:</p>
+  </context>
+  <steps>
+   <step>
+    <cmd><ph
+      conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><cite keyref="network_inspection_fp"/> → <cite keyref="dataflow_fp"/>.</cmd>
+   </step>
+   <step>
+    <cmd>Для отмены одобрения потока:</cmd>
+    <substeps>
+
+     <substep>
+      <cmd>Выберите из списка одобренный поток и в правой колонке нажмите кнопку <image
+        href="../../../images/icons/cancel.png" id="image_hkf_gcz_tnb"/> (<uicontrol>Убрать
+        одобрение c потока</uicontrol>).</cmd>
+     </substep>
+     <substep>
+      <cmd>В открывшемся окне введите комментарий для обоснования отмены одобрения потока данных и
+       нажмите кнопку <uicontrol>Подтвердить</uicontrol>.</cmd>
+      <info>
+       <fig id="fig_kly_dgn_5pb">
+        <title>Подтверждение отмены одобрения потока</title>
+        <image href="../../../images/windows/approve_del_window.png" id="image_lly_dgn_5pb">
+         <alt>Подтверждение отмены одобрения потока</alt>
+        </image>
+       </fig>
+      </info>
+     </substep>
+    </substeps>
+   </step>
+   <step>
+    <cmd>Для групповой отмены одобрения потоков:</cmd>
+    <substeps>
+
+     <substep>
+      <cmd>На странице <cite keyref="dataflow_fp"/> установите чекбокс <uicontrol>Только
+        одобренные</uicontrol>, выполните необходимую настройку других фильтров и нажмите кнопку
+        <uicontrol>Применить</uicontrol>.</cmd>
+     </substep>
+     <substep>
+      <cmd>Нажмите кнопку <image href="../../../images/icons/cancel.png" id="image_yws_gcz_tnb"/>
+        (<uicontrol>Убрать одобрение с потоков</uicontrol>) над областью фильтров.</cmd>
+     </substep>
+     <substep>
+      <cmd>В появившемся окне введите обоснование действия (отмены одобрения списка потоков данных)
+       и нажмите кнопку <uicontrol>Подтвердить</uicontrol>.</cmd>
+     </substep>
+    </substeps>
+   </step>
+  </steps>
+ </taskbody>
+</task>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qhb_p4q_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_shb_p4q_g1c">
+                <cmd>Перейдите в директорию <codeph>/etc/net/ifaces</codeph>:</cmd>
+                <info><codeblock id="codeblock_mtv_w2s_21c">cd /etc/net/ifaces</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

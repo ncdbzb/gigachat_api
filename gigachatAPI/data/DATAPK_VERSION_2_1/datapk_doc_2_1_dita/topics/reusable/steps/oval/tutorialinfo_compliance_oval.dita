@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_r1f_pbs_jyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <tutorialinfo><div id="div_t1f_pbs_jyb"><p>Если проверка выполнена успешно и для
+                                <abbreviated-form keyref="host"/> не было обнаружено несоответствие
+                            по любому из критериев оценки соответствия (тип проверки:
+                                <codeph>COMPLIANCE</codeph>) либо ни одна из уязвимостей не была
+                            обнаружена (тип проверки: <codeph>VULNERABILITY</codeph>), в таблице
+                            результатов в строке <uicontrol>Статус</uicontrol> появится надпись
+                                <systemoutput>Завершена</systemoutput>, и строка таблицы будет
+                            выделена зеленым цветом.</p><fig id="fig_qqy_vbz_cqb">
+                            <title>Результат успешной проверки на соответствие требованиям
+                                    <abbreviated-form keyref="IS"/> в случае выполнения всех
+                                критериев оценки</title>
+                            <image
+                                href="../../../../images/oval/checkup_prot_obj_to_is_requirements/good_oval_result.png"
+                                id="image_rqy_vbz_cqb"/>
+                        </fig><p>Если проверка выполнена, но для <abbreviated-form keyref="host"/>
+                            обнаружено несоответствие хотя бы по одному из критериев оценки (тип
+                            проверки: <codeph>COMPLIANCE</codeph>) либо была обнаружена хотя бы одна
+                            из уязвимостей (тип проверки: <codeph>VULNERABILITY</codeph>), в таблице
+                            результатов в строке <uicontrol>Статус</uicontrol> появится статус:
+                                <systemoutput>Завершена</systemoutput>, а строка таблицы будет
+                            выделена красным цветом. </p><fig id="fig_sqy_vbz_cqb">
+                            <title>Результат успешной проверки на соответствие требованиям
+                                    <abbreviated-form keyref="IS"/> в случае невыполнения критериев
+                                оценки</title>
+                            <image
+                                href="../../../../images/oval/checkup_prot_obj_to_is_requirements/so_so_oval_result.png"
+                                id="image_tqy_vbz_cqb"/>
+                        </fig><p>Если проверка не выполнена, в таблице результатов в столбце
+                                <uicontrol>Статус</uicontrol> появится статус:
+                                <systemoutput>Ошибка</systemoutput> с описанием ошибки.</p><fig
+                            id="fig_uqy_vbz_cqb">
+                            <title>Результат неуспешной проверки на соответствие требованиям
+                                    <abbreviated-form keyref="IS"/></title>
+                            <image
+                                href="../../../../images/oval/checkup_prot_obj_to_is_requirements/bad_oval_result.png"
+                                id="image_vqy_vbz_cqb"/>
+                        </fig><p>Результаты проверок будут выделены желтым цветом, если в случае
+                            проверок типа <codeph>COMPLIANCE</codeph> и
+                                <codeph>VULNERABILITY</codeph> хотя бы один критерий имеет
+                            результат, отличный от <codeph><ph
+                                    conref="../../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"
+                                /></codeph> и <codeph><ph
+                                    conref="../../false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+                                /></codeph> (например, в случае ошибки или невозможности получить
+                            данные с объекта защиты).</p><p>Результаты проверок типа
+                                <codeph>INVENTORY</codeph> (проверка наличия установленного
+                                <abbreviated-form keyref="software"/> и версий <abbreviated-form
+                                keyref="software"/>) и <codeph>MISCELLANEOUS</codeph> (иные виды
+                            проверок) не выделяются цветом.</p></div></tutorialinfo>
+            </step>
+        </steps>
+    </taskbody>
+</task>

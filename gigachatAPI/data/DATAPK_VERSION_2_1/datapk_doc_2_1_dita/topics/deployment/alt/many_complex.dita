@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="many_complex">
+    <title>Вход в Комплексы по сетевому имени (для множества Комплексов)</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>Данная инструкция предназначена для устранения ошибок о недоверенных сертификатах
+            при входе на множество <term keyref="appliance"/>ов. Требуется наличие сертификата и
+            ключа удостоверяющего центра площадки, либо они будут сгенерированы в
+            процессе.</context>
+    </taskbody>
+</task>

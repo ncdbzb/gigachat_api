@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_tn3_54h_rvb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step outputclass="only_cert" id="step_vn3_54h_rvb">
+                <cmd>Выполните проверку соответствия контрольных сумм дистрибутивных файлов <term
+                        keyref="cert_appliance_name_short"/> эталонным контрольным суммам,
+                    приведенным в приложении к документу «<ph
+                        conref="decimal_number.dita#decimal_number/decimal_number_ph"/>-ФО»:</cmd>
+                <info>
+                    <note id="note_s24_n2t_tvb">Проверка контрольных сумм производится только для
+                        следующих файлов на диске:<ul id="ul_vkv_v2t_tvb">
+                            <li>архив <codeph>datapk-v-[версия <term keyref="appliance"
+                                    />а].tar.gz</codeph>;</li>
+                            <li>директория <codeph>datapk</codeph> с содержимым;</li>
+                            <li>директория <codeph>datapk-tk</codeph> с содержимым;</li>
+                            <li>директория <codeph>content</codeph> с содержимым.</li>
+                        </ul></note>
+                </info>
+                <substeps id="substeps_z4x_dd1_rvb">
+                    <substep>
+                        <cmd>В директории <codeph>/opt</codeph> создайте текстовый файл
+                                <codeph>list</codeph>, содержащий пути ко всем файлам дистрибутива
+                            без указания корневой директории. Содержимое текстового файла можно
+                            скопировать из раздела «<xref
+                                href="../../../certification/manual/manual_distr_complekt.dita"
+                            />».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите в директорию, в которую смонтирован диск с дистрибутивом
+                                <term keyref="cert_appliance_name_short"/>.</cmd>
+                        <info>
+                            <note id="note_ycr_kpt_hwb" type="attention">При выполнении команды
+                                alt-gensum из другой директории те файлы, которые приведены в списке
+                                    <codeph>list</codeph>, не будут найдены, и команда завершится с
+                                ошибкой.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните расчет контрольных сумм файлов дистрибутива <term
+                                keyref="cert_appliance_name_short"/> с использованием утилиты
+                            alt-gensum, установленной по умолчанию в сертифицированной ОС Альт 8 СП
+                            Сервер:</cmd>
+                        <info><codeblock id="codeblock_lkm_r3t_hwb">alt-gensum -r [точка монтирования диска] -d /opt -l list</codeblock>Параметры
+                                команды:<ul id="ul_dmb_2jt_hwb">
+                                <li><codeph>-r [точка монтирования диска]</codeph> — директория, в
+                                    которую был примонтирован диск с дистрибутивом <term
+                                        keyref="cert_appliance_name_short"/> и с которой начнется
+                                    поиск файлов;</li>
+                                <li><codeph>-d /opt</codeph> — директория <codeph>/opt</codeph>, где
+                                    расположен список файлов <codeph>list</codeph> и где будет
+                                    создан отчет <codeph>sums</codeph> с контрольными суммами
+                                    файлов; </li>
+                                <li><codeph>-l list</codeph> — название файла <codeph>list</codeph>,
+                                    содержащего список файлов, для которых будут рассчитаны
+                                    контрольные суммы.</li>
+                            </ul></info>
+                    </substep>
+                    <substep>
+                        <cmd>Сравните вручную полученные контрольные суммы, приведенные в созданном
+                            отчете <codeph>sums</codeph>, с эталонными контрольными суммами,
+                            приведенными в файле-приложении к документу «<ph
+                                conref="decimal_number.dita#decimal_number/decimal_number_ph"/>-ФО»
+                                <codeph>dtpk_ks_distr.txt</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="manual_install_datapk_on_astra">
+    <title>Установка Комплекса в настроенной ОС Astra Linux Special Edition 1.7</title>
+    <taskbody>
+        <steps>
+            <step
+                conref="../../reusable/steps/redos/copy_work_directory_from_disk.dita#ReusableComponent_xhw_yhl_v5b/step_zhw_yhl_v5b">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/redos/files_datapk_from_disk.dita#ReusableComponent_jdl_b3l_v5b/step_kdl_b3l_v5b">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/redos/box_client_cert_key.dita#ReusableComponent_hpk_r1j_55b/cmd_jpk_r1j_55b"/>
+                <info
+                    conref="../../reusable/steps/redos/box_client_cert_key_steps.dita#ReusableComponent_h32_21j_55b/info_hpp_krr_h5b"
+                    outputclass="only_main"/>
+            </step>
+                <step>
+                <cmd
+                    conref="../../reusable/steps/redos/box_client_copy.dita#ReusableComponent_rrk_g3l_v5b/cmd_hsk_g3l_v5b"
+                />
+            </step>
+            <step
+                conref="../../reusable/steps/redos/openssl_check_certs.dita#ReusableComponent_pbz_ynl_v5b/step_sbz_ynl_v5b">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/redos/configure_directories.dita#ReusableComponent_ot3_4pl_v5b/step_rt3_4pl_v5b">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/redos/snmp_mibs_import.dita#ReusableComponent_k1t_t4w_pvb/step_p1t_t4w_pvb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/redos/create_and_configure_env.dita#ReusableComponent_jxp_rpl_v5b/step_kxp_rpl_v5b">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/redos/load_datapk_from_tar_gz.dita#ReusableComponent_jdb_kql_v5b/step_kdb_kql_v5b">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/cert/files_for_cert_copy.dita#ReusableComponent_dbk_bpb_pvb/step_ebk_bpb_pvb">
+                <cmd/>
+            </step>
+           
+            <step
+                conref="../../reusable/cert/use_file_datapk_setup.dita#ReusableComponent_vvw_fqb_pvb/step_wvw_fqb_pvb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/redos/docker_start.dita#ReusableComponent_ldz_n2j_55b/step_x2h_mgz_h5b">
+                <cmd/>
+            </step>
+                <step>
+                <cmd>Убедитесь, что все сервисы <term keyref="appliance"/>а запущены (имеют статус
+                    «up» и не имеют статуса «restarting»).</cmd>
+                <info>
+                    <codeblock>sudo docker ps</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что есть возможность подключения к <term keyref="appliance"/>у по
+                    протоколу HTTPS. <ph outputclass="only_main">Подробнее см. в разделе <xref
+                            href="../../administrate/first_setup/steps_connect_web.dita"
+                        /></ph>.</cmd>
+            </step>
+            
+       
+        </steps>
+        
+    </taskbody>
+</task>

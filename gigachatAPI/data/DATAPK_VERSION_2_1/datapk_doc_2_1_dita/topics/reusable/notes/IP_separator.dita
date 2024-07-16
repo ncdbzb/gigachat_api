@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ilr_gck_lyb">
+    <title/>
+    <body>
+        
+                <note id="note_cbv_hgb_wyb">В поля IP-адресов допускается копирование из других
+            источников списков IP-адресов, их диапазонов или подсетей. Элементы в исходном списке
+            должны разделяться с помощью: <uicontrol>,</uicontrol>, <uicontrol>;</uicontrol>,
+                <uicontrol>Tab</uicontrol>, <uicontrol>Enter</uicontrol>,
+                <uicontrol>Space</uicontrol>. Подсети задаются в формате CIDR.</note>
+    </body>
+</topic>

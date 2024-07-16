@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lbk_2nc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_nbk_2nc_2zb">
+                <cmd>Дождитесь окончания установки <term keyref="alt_name"/>.</cmd>
+                <stepresult>появится окно <uicontrol>Установка загрузчика</uicontrol>.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

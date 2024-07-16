@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_pyc_5t3_jpb">
+
+ <title>DATAPK_SYSLOG_RFC3164_SERVER_PORT</title>
+ <body> 
+ <p id="p_uyc_5t3_jpb">Порт для прослушивания syslog3164</p> 
+</body> 
+</topic> 

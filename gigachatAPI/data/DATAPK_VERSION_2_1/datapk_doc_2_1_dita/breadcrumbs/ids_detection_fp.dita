@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="ids_detection_fp">
+    <glossterm>Правила обнаружения</glossterm>
+    <glossdef><p>Подраздел инспекции сети, в котором можно управлять службой обнаружения вторжений,
+        создавать, редактировать, активировать и деактивировать правила обнаружения вторжений.</p><fig
+            id="fig_v1j_hxt_npb">
+            <title>Страница «Правила обнаружения»</title>
+            <image href="../images/pages/invasion_detection_rules_page_scr.png"
+                id="image_w1j_hxt_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/IDS/intrusion_detection_service.dita"/>
+    </related-links>
+</glossentry>

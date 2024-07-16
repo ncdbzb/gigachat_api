@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ykq_s2d_bzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_blq_s2d_bzb">
+                        <cmd>Выполните перезагрузку ПО <codeph>docker</codeph>:</cmd>
+                        <info><codeblock id="codeblock_izj_m2d_bzb">systemctl restart docker</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="main_dashboard">
+ <title>Главный дашборд</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_lpv_fdp_vnb">
+ <li><xref href="analysis_section/analysis_section.dita"/></li>
+ <li><xref href="traffic_analysis/traffic_analysis.dita"/><ul id="ul_fbs_gdp_vnb">
+ <li><xref href="traffic_analysis/nodes_control.dita"/></li>
+ <li><xref href="traffic_analysis/flows_control.dita"/></li>
+ <li><xref href="traffic_analysis/IDS_detection.dita"/></li>
+ </ul></li>
+ <li><xref href="config_control/config_control_main.dita"/><ul id="ul_ejr_p54_znb">
+ <li><xref href="config_control/config_control.dita"/></li>
+ <li><xref href="config_control/data_collect.dita"/></li>
+ </ul></li>
+ <li><xref href="events_control/events_control.dita"/><ul id="ul_y42_hdp_vnb">
+ <li><xref href="events_control/prot_obj_events.dita"/></li>
+ <li><xref href="events_control/incidents.dita"/></li>
+ </ul></li>
+ </ul>
+ <p>Чтобы попасть в основную панель мониторинга перейдите на страницу <cite keyref="monitoring_fp"/>
+      → <cite keyref="dashboard_fp"/> и выберите <uicontrol>Главный дашборд</uicontrol>.</p>
+ <p>На странице можно видеть визуальное представление статистических данных по типам событий.</p>
+ 
+ <fig id="fig_qps_fkq_vnb">
+ <title>Главный дашборд</title>
+ <image href="../../../images/pages/main_dashboard.png" id="image_pnz_fkq_vnb"/>
+ </fig>
+ <p>Основные элементы страницы мониторинга:</p>
+ <ul id="ul_t3g_yxp_vnb">
+ <li>Визуальное представление событий — находится в средней части страницы под разделом
+ навигации. Содержит два графика:<ul id="ul_u3g_yxp_vnb">
+ <li><uicontrol>Все события во времени</uicontrol>;</li>
+ <li><uicontrol>Значимые события во времени</uicontrol>.</li>
+ </ul></li>
+ <li>Раздел аналитики — расположен в нижней части страницы. Состоит из трех блоков:<ul
+ id="ul_v3g_yxp_vnb">
+ <li><uicontrol>Анализ трафика</uicontrol>;</li>
+ <li><uicontrol>Контроль конфигураций</uicontrol>;</li>
+ <li><uicontrol>Контроль событий</uicontrol>.</li>
+ </ul></li>
+ </ul>
+ <section id="section_w3g_yxp_vnb">
+ <title>Графики главного дашборда</title>
+ <p>Основным средством отслеживания количества событий на главном дашборде являются
+ графики.</p>
+ <fig id="fig_n3j_jkq_vnb">
+ <title>Графики главного дашборда</title>
+ <image
+ href="../../../images/dashboards_kibana/main_dashboard/charts_main_dashboard.png"
+ id="image_rl5_jkq_vnb"/>
+ </fig>
+ <p>Главный дашборд содержит два графика:</p>
+ <ul id="ul_y3g_yxp_vnb">
+ <li><uicontrol>Все события во времени</uicontrol> — график по всем событиям за выбранный период
+          позволяет инженеру быстро видеть аномалии и реагировать на них.</li>
+ <li><uicontrol>Значимые события во времени</uicontrol> — график содержит события за период по
+          основным категориям:<ul id="ul_z3g_yxp_vnb">
+            <li><uicontrol>Выявленные инциденты</uicontrol>;</li>
+            <li><uicontrol>Изменения конфигураций</uicontrol>;</li>
+            <li><uicontrol>Новые потоки</uicontrol>;</li>
+            <li><uicontrol>Обнаруженные вторжения</uicontrol>;</li>
+            <li><uicontrol>Обнаруженные узлы</uicontrol>.</li>
+          </ul></li>
+ </ul>
+ <p>Благодаря этим графикам можно оперативно обнаружить изменения в количестве событий за выбранный
+        период.</p>
+ </section>
+ </body>
+</topic>

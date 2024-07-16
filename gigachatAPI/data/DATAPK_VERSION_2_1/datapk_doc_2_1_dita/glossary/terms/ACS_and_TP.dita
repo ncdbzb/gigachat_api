@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="ACS_and_TP_term">
+    <glossterm>Автоматизированная система управления производственными и технологическими
+        процессами</glossterm>
+    <glossdef>Автоматизированная система управления производственными и технологическими
+        процессами — группа решений технических и программных средств, предназначенных для автоматизации
+        управления технологическим оборудованием на промышленных предприятиях.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>АСУ ТП</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>АСУ ТП</glossAbbreviation>
+        </glossAlt>
+       
+       <glossAlt>
+            <glossSynonym>Автоматизированная система управления производственно-технологическим
+                комплексом</glossSynonym>
+        </glossAlt>
+        <glossAlt>
+            <glossAbbreviation>АСУ ПТК</glossAbbreviation>
+        </glossAlt>       
+      
+    </glossBody>
+</glossentry>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="event_changes">
+    <title>Изменения в событиях, попадающих в разделы мониторинга</title>
+    <body>
+        <section id="section_sg3_tql_zyb">
+            <title>Изменены поля событий</title>
+            <ul id="ul_u4p_5ql_zyb">
+                <li><codeph>box_id</codeph> → <codeph>appliance_node_id</codeph></li>
+                <li><codeph>event_id</codeph> → <codeph>event_code</codeph>
+                </li>
+                <li><codeph>host_id</codeph> → <codeph>observer_id</codeph> (сетевое имя
+                    регистратора события: ОЗ, сенсора или Комплекса)</li>
+                <li><codeph>hostname</codeph> → <codeph>observer_name</codeph> (ID регистратора
+                    события)</li>
+                <li><codeph>ip</codeph> → <codeph>observer_ip</codeph> (IP-адрес регистратора
+                    события)</li>
+                <li><codeph>source</codeph> → <codeph>listener</codeph></li>
+            </ul>
+        </section>
+        <section id="section_bhv_rg5_fyb">
+            <title>Добавлены события</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_edents_add">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="30%"/>
+                        <colspec colname="c2" colnum="2" colwidth="70%"/>
+                        <thead>
+                            <row>
+                                <entry>Идентификатор</entry>
+                                <entry>Событие</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>1060013</entry>
+                                <entry>Удалены потоки данных в результате удаления объекта
+                                    защиты</entry>
+                            </row>
+                            <row>
+                                <entry>1060014</entry>
+                                <entry>Обнаружен и автоматически одобрен правилом № <codeph
+                                        conref="../reusable/code_examples/codeblocks.dita#codeblocks/rule_number"
+                                        id="codeblock_yhc_zn5_mxb"/> поток данных</entry>
+                            </row>
+                            <row>
+                                <entry>1070006</entry>
+                                <entry>Задача сбора событий успешно выполнена, новых событий не
+                                    обнаружено</entry>
+                            </row>
+                            <row>
+                                <entry>1220001</entry>
+                                <entry>Запущено сканирование сети</entry>
+                            </row>
+                            <row>
+                                <entry>1220002</entry>
+                                <entry>Сканирование сети успешно завершено</entry>
+                            </row>
+                            <row>
+                                <entry>1220003</entry>
+                                <entry>Обнаружена ошибка при попытке сканирования сети</entry>
+                            </row>
+                            <row>
+                                <entry>1080024</entry>
+                                <entry>Удалены учетные данные ОЗ</entry>
+                            </row>
+                            <row>
+                                <entry>1080025</entry>
+                                <entry>Удалено <codeph><ph
+                                            conref="../reusable/code_examples/count.dita#ReusableComponent_i22_v3x_nxb/ph_k22_v3x_nxb"
+                                        /></codeph> учетных данных ОЗ</entry>
+                            </row>
+                            <row>
+                                <entry>1080026</entry>
+                                <entry>Добавлены учетные данные ОЗ</entry>
+                            </row>
+                            <row>
+                                <entry>1080027</entry>
+                                <entry>Изменены учетные данные ОЗ</entry>
+                            </row>
+                            <row>
+                                <entry>1090201</entry>
+                                <entry>Импортированы группы сканеров</entry>
+                            </row>
+                            <row>
+                                <entry>1090202</entry>
+                                <entry>Экспортированы группы сканеров</entry>
+                            </row>
+                            <row>
+                                <entry>1090203</entry>
+                                <entry>Создан сканер</entry>
+                            </row>
+                            <row>
+                                <entry>1090206</entry>
+                                <entry>Запущен сканер на объекте защиты</entry>
+                            </row>
+                            <row>
+                                <entry>1090208</entry>
+                                <entry>Изменен сканер</entry>
+                            </row>
+                            <row>
+                                <entry>1090215</entry>
+                                <entry>Обнаружена ошибка сбора при выполнении сканера сбора
+                                    данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090301</entry>
+                                <entry>Импортированы задачи сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090302</entry>
+                                <entry>Экспортированы задачи сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090303</entry>
+                                <entry>Создана задача сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090306</entry>
+                                <entry>Удалено несколько групп задач сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090307</entry>
+                                <entry>Удалена группа задач сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090314</entry>
+                                <entry>Удален статус сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1100011</entry>
+                                <entry>Обнаружен инцидент</entry>
+                            </row>
+                            <row>
+                                <entry>1170013</entry>
+                                <entry>Не удалось изменить данные учетной записи пользователя:
+                                    отсутствуют роли</entry>
+                            </row>
+                            <row>
+                                <entry>1170014</entry>
+                                <entry>Не удалось изменить данные учетной записи пользователя:
+                                    пароль не соответствует парольной политике</entry>
+                            </row>
+                            <row>
+                                <entry>1170015</entry>
+                                <entry>Не удалось изменить данные учетной записи пользователя:
+                                    отсутствует пароль</entry>
+                            </row>
+                            <row>
+                                <entry>1170029</entry>
+                                <entry>
+                                    <p>Обнаружено одновременное использование веб-интерфейса
+                                        Комплекса более, чем на одном устройстве пользователем
+                                            <codeph
+                                            conref="../reusable/code_examples/user_login.dita#ReusableComponent_jdy_tgn_4xb/codeph_kdy_tgn_4xb"
+                                        /></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>1180011</entry>
+                                <entry>Обнаружено превышение потребления выделенной для брокера
+                                    сообщений оперативной памяти (RAM)</entry>
+                            </row>
+                            <row>
+                                <entry>1180012</entry>
+                                <entry>Потребление выделенной для брокера сообщений оперативной
+                                    памяти (RAM) нормализовано</entry>
+                            </row>
+                            <row>
+                                <entry>1180013</entry>
+                                <entry>Обнаружено переполнение выделенного для брокера сообщений
+                                    дискового пространства (HDD/SSD) на Комплексе</entry>
+                            </row>
+                            <row>
+                                <entry>1180014</entry>
+                                <entry>Переполнение выделенного для брокера сообщений дискового
+                                    пространства (HDD, SSD) устранено</entry>
+                            </row>
+                            <row>
+                                <entry>1180015</entry>
+                                <entry>Не удается установить соединение с сенсором</entry>
+                            </row>
+                            <row>
+                                <entry>1180016</entry>
+                                <entry>Соединение с сенсором восстановлено</entry>
+                            </row>
+                            <row>
+                                <entry>1180017</entry>
+                                <entry>Не удается установить соединение с сенсором. Получение данных
+                                    недоступно</entry>
+                            </row>
+                            <row>
+                                <entry>1180018</entry>
+                                <entry>Соединение и возможность получения данных с сенсора
+                                    восстановлены</entry>
+                            </row>
+                            <row>
+                                <entry>1180019</entry>
+                                <entry>Недоступен сервис отправки данных с сенсора</entry>
+                            </row>
+                            <row>
+                                <entry>1180020</entry>
+                                <entry>Доступность сервиса отправки данных восстановлена</entry>
+                            </row>
+                            <row>
+                                <entry>1180021</entry>
+                                <entry>Не удается установить соединение с сенсором. Синхронизация
+                                    настроек недоступна.</entry>
+                            </row>
+                            <row>
+                                <entry>1180022</entry>
+                                <entry>Соединение и возможность синхронизации настроек сенсора
+                                    восстановлены</entry>
+                            </row>
+                            <row>
+                                <entry>1180023</entry>
+                                <entry>Недоступен сервис синхронизации настроек</entry>
+                            </row>
+                            <row>
+                                <entry>1180024</entry>
+                                <entry>Доступность сервиса синхронизации настроек
+                                    восстановлена</entry>
+                            </row>
+                            <row>
+                                <entry>1180025</entry>
+                                <entry>Достигнут установленный лимит для отправки данных. Старейшие
+                                    данные будут удалены.</entry>
+                            </row>
+                            <row>
+                                <entry>1180026</entry>
+                                <entry>Отправка данных нормализована</entry>
+                            </row>
+                            <row>
+                                <entry>1180027</entry>
+                                <entry>Удален сенсор</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_sxq_sg5_fyb">
+            <title>Удалены события</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_edents_del">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="30%"/>
+                        <colspec colname="c2" colnum="2" colwidth="70%"/>
+                        <thead>
+                            <row>
+                                <entry>Идентификатор</entry>
+                                <entry>Событие</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>1030004</entry>
+                                <entry>Создана команда на создание резервной копии</entry>
+                            </row>
+                            <row>
+                                <entry>1050003</entry>
+                                <entry>Восстановлено эталонное состояние конфигурации</entry>
+                            </row>
+                            <row>
+                                <entry>1060006</entry>
+                                <entry>Удалены потоки данных</entry>
+                            </row>
+                            <row>
+                                <entry>1080014</entry>
+                                <entry>Удалена группа ОЗ</entry>
+                            </row>
+                            <row>
+                                <entry>1080021</entry>
+                                <entry>Сетевые атрибуты ОЗ не изменились</entry>
+                            </row>
+                            <row>
+                                <entry>1090008</entry>
+                                <entry>Непредвиденная ошибка выполнения задачи сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090010</entry>
+                                <entry>Ошибка выполнения сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090011</entry>
+                                <entry>Превышено время ожидания выполнения сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1090025</entry>
+                                <entry>Отменено выполнение сканера</entry>
+                            </row>
+                            <row>
+                                <entry>1090026</entry>
+                                <entry>Удален результат сбора данных</entry>
+                            </row>
+                            <row>
+                                <entry>1100002</entry>
+                                <entry>Удалены пользовательские статусы инцидентов</entry>
+                            </row>
+                            <row>
+                                <entry>1140001</entry>
+                                <entry>Отправлена команда на перезапуск сервисов <term
+                                        keyref="appliance"/>а</entry>
+                            </row>
+                            <row>
+                                <entry>1140002</entry>
+                                <entry>Перезапущены сервисы <term keyref="appliance"/>а</entry>
+                            </row>
+                            <row>
+                                <entry>1170004</entry>
+                                <entry>Выполнено действие</entry>
+                            </row>
+                            <row>
+                                <entry>1170005</entry>
+                                <entry>Запрос не выполнен</entry>
+                            </row>
+                            <row>
+                                <entry>1170008</entry>
+                                <entry>Не удалось изменить данные учетной записи пользователя:
+                                    редактирование служебного пользователя запрещено</entry>
+                            </row>
+                            <row>
+                                <entry>1170009</entry>
+                                <entry>Не удалось изменить данные учетной записи пользователя: выбор
+                                    служебного типа пользователя запрещен</entry>
+                            </row>
+                            <row>
+                                <entry>1170023</entry>
+                                <entry>Выполнено действие</entry>
+                            </row>
+                            <row>
+                                <entry>1170024</entry>
+                                <entry>Удален старейший экспортированный файл в результате
+                                    достижения лимита</entry>
+                            </row>
+                            <row>
+                                <entry>1170025</entry>
+                                <entry>Удален файл с экспортированными данными</entry>
+                            </row>
+                            <row>
+                                <entry>1040001</entry>
+                                <entry>Создан запрос на создание канала</entry>
+                            </row>
+                            <row>
+                                <entry>1040002</entry>
+                                <entry>Ошибка при создании канала</entry>
+                            </row>
+                            <row>
+                                <entry>1040003</entry>
+                                <entry>Подтвержден канал</entry>
+                            </row>
+                            <row>
+                                <entry>1040004</entry>
+                                <entry>Ошибка при подтверждении канала</entry>
+                            </row>
+                            <row>
+                                <entry>1040005</entry>
+                                <entry>Сообщение успешно отправлено</entry>
+                            </row>
+                            <row>
+                                <entry>1040006</entry>
+                                <entry>Ошибка при отправке сообщения</entry>
+                            </row>
+                            <row>
+                                <entry>1040007</entry>
+                                <entry>Входящее сообщение</entry>
+                            </row>
+                            <row>
+                                <entry>1040008</entry>
+                                <entry>Зафиксированы сбои в работе иерархии</entry>
+                            </row>
+                            <row>
+                                <entry>1040009</entry>
+                                <entry>Передача оперативных данных восстановлена</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_atl_tg5_fyb">
+            <title>Присвоен новый номер событиям</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_dtw_ygb_nxb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="30%"/>
+                        <colspec colname="c2" colnum="2" colwidth="70%"/>
+                        <thead>
+                            <row>
+                                <entry>Старые события</entry>
+                                <entry>Новые события</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>1090002, 1090003</entry>
+                                <entry>1220001</entry>
+                            </row>
+                            <row>
+                                <entry>1090005, 1090006</entry>
+                                <entry>1220002</entry>
+                            </row>
+                            <row>
+                                <entry>1090004</entry>
+                                <entry>1220003</entry>
+                            </row>
+                            <row>
+                                <entry>1090007</entry>
+                                <entry>1090310</entry>
+                            </row>
+                            <row>
+                                <entry>1090009</entry>
+                                <entry>1090213</entry>
+                            </row>
+                            <row>
+                                <entry>1090013</entry>
+                                <entry>1090209</entry>
+                            </row>
+                            <row>
+                                <entry>1090014</entry>
+                                <entry>1090210</entry>
+                            </row>
+                            <row>
+                                <entry>1090015</entry>
+                                <entry>1090211</entry>
+                            </row>
+                            <row>
+                                <entry>1090016</entry>
+                                <entry>1090212</entry>
+                            </row>
+                            <row>
+                                <entry>1090017</entry>
+                                <entry>1090304</entry>
+                            </row>
+                            <row>
+                                <entry>1090018</entry>
+                                <entry>1090305</entry>
+                            </row>
+                            <row>
+                                <entry>1090019</entry>
+                                <entry>1090308</entry>
+                            </row>
+                            <row>
+                                <entry>1090020</entry>
+                                <entry>1090309</entry>
+                            </row>
+                            <row>
+                                <entry>1090021</entry>
+                                <entry>1090313</entry>
+                            </row>
+                            <row>
+                                <entry>1090022</entry>
+                                <entry>1090214</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_qb2_5g5_fyb">
+            <title>Изменены события</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_events_chamged">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="30%"/>
+                        <colspec colname="c2" colnum="2" colwidth="70%"/>
+                        <thead>
+                            <row>
+                                <entry>Идентификатор</entry>
+                                <entry>Новое событие</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>1070001</entry>
+                                <entry>Запущен сервис регистрации событий</entry>
+                            </row>
+                            <row>
+                                <entry>1070002</entry>
+                                <entry>Остановлен сервис регистрации событий</entry>
+                            </row>
+                            <row>
+                                <entry>1070003</entry>
+                                <entry>Сервис регистрации событий запущен после очистки
+                                    зарезервированного дискового пространства</entry>
+                            </row>
+                            <row>
+                                <entry>1070004</entry>
+                                <entry>Сервис регистрации событий остановлен в результате
+                                    переполнения зарезервированного дискового пространства</entry>
+                            </row>
+                            <row>
+                                <entry>1080009</entry>
+                                <entry>Вместе с сенсором удалены сетевые атрибуты объекта
+                                    защиты</entry>
+                            </row>
+                            <row>
+                                <entry>1080013</entry>
+                                <entry>Вместе с сенсором удален объект защиты</entry>
+                            </row>
+                            <row>
+                                <entry>1080015</entry>
+                                <entry>Изменены группы объектов защиты</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+    <related-links>
+        <link href="../work_with_dashboards/ref_info_about_dashboards/events_in_dashboards.dita"/>
+    </related-links>
+</topic>

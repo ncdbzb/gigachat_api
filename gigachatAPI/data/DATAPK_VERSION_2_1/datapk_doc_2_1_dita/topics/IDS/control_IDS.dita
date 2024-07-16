@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="upload_invasion_rules">
+ <title>Управление службой обнаружения вторжений</title>
+ <taskbody>
+ <context>
+ <p>Службу обнаружения вторжений можно остановить и запустить на сенсорах. Правила службы
+        обнаружения вторжений доступны для редактирования после создания, также возможен запуск и
+        остановка всех доступных правил. После изменения правила необходимо синхронизировать с
+        сенсорами.</p>
+ </context>
+ <steps>
+      <step>
+        <cmd>Для запуска или остановки службы на сенсорах:</cmd>
+        <substeps id="substeps_cbs_blm_4yb">
+          <substep>
+            <cmd><ph
+                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+              <cite keyref="sensors_fp"/>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите на строку с сенсором, для которого нужно проверить статус службы
+              обнаружения вторжений.</cmd>
+            <stepresult>откроется боковая панель настроек выбранного сенсора.</stepresult>
+          </substep>
+          <substep>
+            <cmd
+              conref="../reusable/steps/ids/enable_sensor_ids_cmd.dita#ReusableComponent_fpt_ykm_4yb/cmd_gpt_ykm_4yb"
+            />
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Для активации и деактивации правил:</cmd>
+        <substeps id="substeps_klh_glm_4yb">
+          <substep>
+            <cmd><ph
+                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><ph
+                conref="../reusable/pages_breadcrumbs/ids_rules.dita#ReusableComponent_ykq_l4c_pxb/ph_zkq_l4c_pxb"
+              />.</cmd>
+          </substep>
+          <substep>
+            <cmd>Для включения нескольких правил воспользуйтесь фильтрами и нажмите кнопку
+                <uicontrol>✓ Активировать</uicontrol> в верхней части страницы.</cmd>
+          </substep>
+          <substep>
+            <cmd>Для отключения нескольких правил воспользуйтесь фильтрами и нажмите кнопку
+                <uicontrol>× Деактивировать</uicontrol> в верхней части страницы.</cmd>
+          </substep>
+        </substeps>
+      </step>
+ <step>
+ <cmd>Для редактирования правила:</cmd>
+ <substeps id="substeps_ml5_qlr_v4b">
+     <substep
+      conref="../reusable/steps/substep_edit_IDS.dita#ReusableComponent_dtq_xkh_zsb/substep_ftq_xkh_zsb">
+      <cmd/>
+     </substep>
+ <substep>
+            <cmd>Измените необходимые параметры в окне <uicontrol>Редактирование правила обнаружения
+                вторжений</uicontrol>.</cmd>
+            <info>
+              <note id="note_mqv_vjh_zsb">Не рекомендуется редактирование правил с sid в диапазоне,
+                отличающемся от пользовательского (94000000-94999999), так как такие правила могут
+                быть заменены при импорте.</note>
+            </info>
+            <info>
+              <fig id="fig_mlp_cmr_v4b">
+                <title>Окно редактирования правила обнаружения вторжения</title>
+                <image href="../../images/IDS/edit_ids_rules_window.png" id="image_ibk_2mr_v4b"/>
+              </fig>
+            </info>
+          </substep>
+ </substeps>
+ </step>
+   <step>
+    <cmd>Для изменения правила с sid в диапазоне, отличающемся от пользовательского
+     (94000000-94999999):</cmd>
+    <substeps>
+     <substep
+      conref="../reusable/steps/substep_edit_IDS.dita#ReusableComponent_dtq_xkh_zsb/substep_ftq_xkh_zsb">
+      <cmd/>
+     </substep>
+     <substep>
+            <cmd>Скопируйте значения полей окна.</cmd>
+          </substep>
+     <substep>
+            <cmd>При необходимости отмените выбор чекбокса <uicontrol>Активность</uicontrol> и
+              нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+          </substep>
+     <substep>
+            <cmd>Нажмите <uicontrol>Создать правило</uicontrol>.</cmd>
+          </substep>
+     <substep>
+            <cmd>Вставьте скопированные ранее значения полей окна в соответствующие поля окна
+              создания правила.</cmd>
+          </substep>
+     <substep>
+            <cmd>Измените sid так, чтобы он входил в пользовательский диапазон (94000000-94999999) и
+              не совпадал с другими правилами.</cmd>
+          </substep>
+     <substep>
+            <cmd>Измените необходимые параметры правила.</cmd>
+            <info>
+              <note id="note_wvy_gsh_zsb" type="tip">Для ограничения срабатывания правила на
+                конкретные IP-адреса замените значение свойства <codeph>Action</codeph> с
+                  <codeph>alert</codeph> на <codeph>pass</codeph> и адреса отправителей и
+                получателей.</note>
+            </info>
+            <stepxmp>
+              <p>Например, оригинальное правило с условием:</p>
+              <codeblock conref="../reusable/code_examples/IDS_codeblock_1.dita#ReusableComponent_vhf_mnv_3wb/codeblock_zht_45h_zsb" id="codeblock_vmf_mnv_3wb"/>
+              <p>После редактирования будет иметь следующий вид:</p>
+              <codeblock conref="../reusable/code_examples/IDS_codeblock_2.dita#ReusableComponent_cyq_rnv_3wb/codeblock_yfg_q5h_zsb" id="codeblock_sbr_rnv_3wb"/>
+              <p>В измененном правиле заменен <codeph>sid</codeph> на <codeph>94000000</codeph>, что
+                соответствует пользовательскому диапазону, а значение свойства
+                  <codeph>Action</codeph> заменено на <codeph>pass</codeph>, что позволяет отключить
+                срабатывание правила при получении на IP-адресе 192.268.1.10 пакетов от IP-адреса
+                192.268.1.1.</p>
+            </stepxmp>
+          </substep>
+     <substep>
+            <cmd>установите чекбокс <uicontrol>Активность</uicontrol>;</cmd>
+          </substep>
+     <substep>
+            <cmd>нажмите <uicontrol>Создать</uicontrol>.</cmd>
+            <stepresult>новое правило будет применяться для обнаружения вторжений. Старое правило
+              останется в системе и может быть обновлено при импорте, но применяться не будет, если
+              при импорте не будет активировано автоматически.</stepresult>
+          </substep>
+    </substeps>
+   </step>
+ <step>
+ <cmd>Для удаления правила: </cmd>
+ <substeps id="substeps_br5_gmr_v4b">
+ <substep>
+            <cmd>Нажмите <ph
+                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                /><uicontrol> правило</uicontrol>) напротив интересующего правила.</cmd>
+          </substep>
+ <substep>
+            <cmd>Введите текст обоснования удаления правила.</cmd>
+            <info>
+              <fig id="fig_qrl_jmr_v4b">
+                <title>Обоснование удаления правила обнаружения вторжений</title>
+                <image href="../../images/windows/approve_del_window.png" id="image_kmt_mmr_v4b"/>
+              </fig>
+            </info>
+          </substep>
+ </substeps>
+ </step>
+      <step>
+        <cmd>Для синхронизации измененных правил с сенсорами нажмите <uicontrol>⟲ Синхронизация
+            правил</uicontrol>. </cmd>
+      </step>
+ </steps>
+ </taskbody>
+</task>

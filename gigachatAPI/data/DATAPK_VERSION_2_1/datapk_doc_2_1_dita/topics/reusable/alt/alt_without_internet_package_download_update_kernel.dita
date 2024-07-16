@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ztx_ktz_21c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_c5x_ktz_21c">
+                        <cmd>Обновите ядро до актуальной версии по команде:</cmd>
+                        <info><codeblock id="codeblock_kd4_jc3_fzb">update-kernel -y</codeblock></info>
+                        <stepresult>ПО и ядро дополнительного экземпляра <term keyref="alt_name"/>
+                            обновлены до актуальной версии.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

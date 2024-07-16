@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ppk_pgm_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info>
+                    <fig id="fig_kqm_x2g_mvb">
+                        <title>Окно «Дата и время»</title>
+                        <image href="../../../images/deployment/alt/alt_set_time.png" id="image_lqm_x2g_mvb"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

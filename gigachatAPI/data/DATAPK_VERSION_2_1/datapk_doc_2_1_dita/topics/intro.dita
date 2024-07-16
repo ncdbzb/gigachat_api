@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="intro">
+  <title>Введение</title>
+  <body>
+    <p>В настоящем документе приведено Руководство по эксплуатации Программного комплекса <term
+        keyref="appliance_name"/><ph outputclass="only_cert">, децимальный номер <ph
+          conref="reusable/cert/decimal_number.dita#decimal_number/decimal_number_ph"/></ph> (далее
+      — <ph outputclass="only_main"><term keyref="appliance_name_short"/></ph><ph
+        outputclass="only_cert"><term keyref="cert_appliance_name_short"/></ph>, <term
+        keyref="appliance"/>). В документе описаны: область назначения, краткое описание
+      возможностей комплекса, описание процедуры подготовки к работе и мониторинга работоспособности
+      комплекса, описание выполняемых пользователями функций, задач и процедур <term
+        keyref="appliance"/>а, а также действия в нештатных ситуациях.</p>
+  </body>
+</topic>

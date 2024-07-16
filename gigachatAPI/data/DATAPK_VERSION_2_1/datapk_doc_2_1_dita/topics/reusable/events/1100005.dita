@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1100005">
+    <title>Изменен инцидент</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1100005">Комментарий: <codeph>{action_comment}</codeph>;
+                                Пользователь: <codeph>{user}</codeph>; Предыдущий статус:
+                                    <codeph>{status}</codeph>; Название: <codeph>{name}</codeph>;
+                                Описание: <codeph>{description}</codeph>; Приоритет:
+                                    <codeph>{priority}</codeph>; Комментарий:
+                                    <codeph>{comment}</codeph>; Подтвержден:
+                                    <codeph>{is_confirmed}</codeph>; Новый статус:
+                                    <codeph>{new_status}</codeph>; Название:
+                                    <codeph>{new_name}</codeph>; Описание:
+                                    <codeph>{new_description}</codeph>; Приоритет:
+                                    <codeph>{new_priority}</codeph>; Комментарий:
+                                    <codeph>{new_comment}</codeph>; Подтвержден:
+                                    <codeph>{new_is_confirmed}</codeph></p></entry></row></tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cfl_prd_q1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_gfl_prd_q1c">
+                        <cmd>Создайте переменную <codeph>V</codeph> и присвойте ей в качестве
+                            значения переменную <codeph>${D}</codeph> и наименование одного из
+                            созданных разделов диска следующим образом:</cmd>
+                        <info><codeblock id="codeblock_dzr_hv1_p1c">V=${D}[наименование_раздела]</codeblock></info>
+                        <stepxmp><ph>Создание переменной <codeph>V</codeph> с наименованием
+                                подраздела
+                            <codeph>p3</codeph>:</ph><codeblock id="codeblock_svx_rv1_p1c">V=${D}p3</codeblock></stepxmp>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

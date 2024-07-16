@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qfv_jhd_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_docker">
+                <cmd>Запустите ПО <codeph>docker</codeph>, добавьте его в автозагрузку и убедитесь, что он в состоянии <codeph>active</codeph>:</cmd>
+                <info><codeblock id="codeblock_lj2_hvr_lyb">systemctl enable --now docker
+systemctl status docker</codeblock></info>
+                <stepresult>служба ПО Docker добавлена в автозагрузку и успешно запущена.</stepresult>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

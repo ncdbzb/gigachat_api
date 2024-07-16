@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_RMQ_LOW_AVAILABLE_DISK_SPACE_WATERMARK_BYTES">
+    <glossterm>DATAPK_RMQ_LOW_AVAILABLE_DISK_SPACE_WATERMARK_BYTES</glossterm>
+    <glossdef><ph
+            conref="../topics/reusable/env_var/datapk_rmq_low_available_disk_space_watermark_bytes.dita#ReusableComponent_u2q_qlr_pyb/ph_w2q_qlr_pyb"
+        /></glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

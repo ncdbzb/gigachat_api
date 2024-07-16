@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:/opt/datapk/docker-compose.stand.yml-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_kxv_ghz_mtb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><codeph id="codeph_nxv_ghz_mtb"
+                            ><codeph conref="opt_datapk.dita#opt_datapk/opt_datapk"
+                                id="codeph_lxv_ghz_mtb"/>/<codeph
+                                conref="../docker_compose_stand_yml.dita#docker_compose_stand_yml/docker_compose_stand_yml"
+                                id="codeph_pxv_ghz_mtb"/></codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

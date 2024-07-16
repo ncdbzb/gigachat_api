@@ -101,9 +101,6 @@ async def extract_text_from_xml(xml_file_path: str, with_xml_paths: bool) -> str
 
     # Удаляем повторяющиеся символы переноса строки
     cleaned_text = re.sub(r'\n\s*\n', '\n', text)
-
-    with open('gigachatAPI/data/dita1_7.txt', 'a+', encoding='utf-8') as file:
-        file.write(f'{cleaned_text}\n\n\n')
     
     if with_xml_paths:
         return xml_file_path, cleaned_text

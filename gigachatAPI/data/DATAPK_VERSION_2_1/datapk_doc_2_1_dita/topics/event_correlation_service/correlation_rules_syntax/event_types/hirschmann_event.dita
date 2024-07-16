@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hirschmann_event">
+ <title>События Hirschmann</title>
+ <body>
+ <p>Доступные для событий Hirschmann поля приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#hirschmann_event/table_svz_5zw_vnb"/>)</ph>.</p>
+ <table id="table_svz_5zw_vnb">
+ <title>Поля для событий Hirschmann</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>category </entry>
+ <entry>Категория (например: TRAPMGR, HM_HPL_FDB, DOT1S, UNKN).</entry>
+ </row>
+ <row>
+ <entry>description </entry>
+ <entry>Описание события.</entry>
+ </row>
+ <row>
+ <entry>event_code</entry>
+ <entry>Уникальный идентификатор события. Состоит из Facility+severity из
+       protocol_specific_data.</entry>
+ </row>
+ <row>
+ <entry>ip </entry>
+ <entry>IP-адрес <abbreviated-form keyref="host"/>.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </body>
+</topic>

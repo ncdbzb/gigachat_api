@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="dashboard_fp">
+    <glossterm>Панели мониторинга</glossterm>
+    <glossdef><p>Подраздел мониторинга, в котором располагаются созданные пользователем или
+        предоставленные производителем <term keyref="appliance"/>а панели мониторинга. Расположенные в
+        подразделе объекты доступны для редактирования.</p><fig id="fig_ynn_3tf_npb">
+            <title>Страница «Панели мониторинга»</title>
+            <image href="../images/work_with_kibana/visualisations_dashboards/monitoring_page.png"
+                id="image_znn_3tf_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/work_with_kibana/events/create_dashboard.dita"/>
+        <link href="../topics/work_with_dashboards/work_with_dashboards.dita"/>
+        <link href="visualize_fp.dita"/>
+    </related-links>
+    
+</glossentry>

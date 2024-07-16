@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="events_button">
+
+ <title>кнопка события</title>
+ <body> 
+ <p><ph id="events_button">«<image href="../../../images/icons/events_1.png"
+  id="image_a5h_bwg_5nb"/>» («События»)</ph></p> 
+ </body> 
+</topic> 

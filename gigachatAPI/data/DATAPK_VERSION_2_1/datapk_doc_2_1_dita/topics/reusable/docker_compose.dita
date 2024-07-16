@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="docker_compose">
+
+ <title>docker-compose</title>
+ <body> 
+ <p><codeph id="docker_compose">docker-compose</codeph></p> 
+ </body> 
+</topic> 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zhj_hpm_c1c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <stepresult id="stepresult_a3j_hpm_c1c">откроется выбранная панель мониторинга.</stepresult>
+            </step>
+        </steps>
+       </taskbody>
+</task>

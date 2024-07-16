@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_sensor">
+ <title>Описание служебных источников событий</title>
+ <body>
+ <p>Служебные источники событий описаны в таблице ниже <ph outputclass="onlypdf"> (<xref
+          href="#datapk_sensor/table_zhj_jhj_j4b"/>)</ph>.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_zhj_jhj_j4b">
+      <title>Служебные источники событий Комплекса</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="35%" align="center"/>
+        <colspec colname="c2" colnum="2" colwidth="65%"/>
+        <thead>
+          <row>
+            <entry>Название источника (listener)</entry>
+            <entry>Описание</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Availability control</entry>
+            <entry>Изменение доступности объектов защиты, невозможность установки соединения с
+              объектом защиты</entry>
+          </row>
+          <row>
+            <entry>Backup control</entry>
+            <entry>Статус процедуры резервного копирования</entry>
+          </row>
+          <row>
+            <entry>Configuration control</entry>
+            <entry>Изменение состояния эталонной конфигурации объекта защиты</entry>
+          </row>
+          <row>
+            <entry>Data flow control</entry>
+            <entry>Появление новых потоков, удаление отдельных потоков, одобрение и удаление групп
+              потоков</entry>
+          </row>
+          <row>
+            <entry>Event control</entry>
+            <entry>Запуск или остановка системы регистрации событий</entry>
+          </row>
+          <row>
+            <entry>Host control</entry>
+            <entry>Создание, удаление и изменение объектов защиты, обнаружение неизвестных объектов
+              защиты</entry>
+          </row>
+          <row>
+            <entry>Host data collecting</entry>
+            <entry>Статус выполнения задачи сбора данных с объекта защиты, состояние работы ее
+              расписания</entry>
+          </row>
+          <row>
+            <entry>Incident control</entry>
+            <entry>Создание, удаление, изменение инцидентов</entry>
+          </row>
+          <row>
+            <entry><abbreviated-form keyref="oval_def"/> assessment control</entry>
+            <entry>Состояние выполнения, удаления результата проверок на соответствие требованиям
+                <abbreviated-form keyref="IS"/></entry>
+          </row>
+          <row>
+            <entry>
+              <abbreviated-form keyref="oval_def"/> definitions control </entry>
+            <entry>Состояние задачи удаления проверок на соответствие требованиям <abbreviated-form
+                keyref="IS"/></entry>
+          </row>
+          <row>
+            <entry>
+              <abbreviated-form keyref="oval_def"/> groups control </entry>
+            <entry>Состояние задачи на удаление группы или нескольких групп <abbreviated-form
+                keyref="oval_def"/>-определений</entry>
+          </row>
+          <!-- <row>
+ <entry>restart_control</entry>
+ <entry>Состояние выполнения команды на перезагрузку</entry>
+ </row>-->
+          <row>
+            <entry>Script verification</entry>
+            <entry>Статус верификации Python-скриптов, используемых в сканерах сбора данных</entry>
+          </row>
+          <row>
+            <entry>User action control</entry>
+            <entry>Выполнение действий пользователями</entry>
+          </row>
+          <row>
+            <entry> Switch Data Collecting Control </entry>
+            <entry>Статус активного сбора данных, смена задачи для активного сбора данных</entry>
+          </row>
+          <row>
+            <entry>System control</entry>
+            <entry>Статус компонентов <term keyref="appliance"/>а: оперативной памяти, дискового
+              пространства, нагрузки на ЦП, средней нагрузки (Load average)</entry>
+          </row>
+          <row>
+            <entry>IDS control</entry>
+            <entry>Статус службы обнаружения вторжений</entry>
+          </row>
+          <row>
+            <entry>Esper control</entry>
+            <entry>Статус службы корреляции</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+ <p>Сбор событий с использованием служебных источников запускается автоматически после включения
+        <term keyref="appliance"/>а.</p>
+ <p><b>Переменные для управления источниками событий</b></p>
+ <p><ph
+        conref="../../reusable/datapk_sensor_params_ph.dita#ReusableComponent_q25_g31_wyb/ph_w25_g31_wyb"
+      />, ознакомиться с которыми вы можете в таблице ниже<ph outputclass="onlypdf"> (<xref
+          href="#datapk_sensor/inner_events"/>)</ph>.</p>
+ <note type="tip">
+ <p>Переменные, наименование которых оканчивается на <codeph>_EVENTS</codeph>, могут иметь одно из
+ следующих значений:</p>
+ <ul id="ul_p33_smg_5nb">
+ <li><ph
+ conref="../../reusable/true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"
+ /> — для остановки работы сенсора; </li>
+ <li><ph
+ conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+ /> — для запуска работы сенсора, если ранее он был отключен.</li>
+ </ul>
+ <p>Переменные, наименование которых оканчивается на <codeph>_EVENTS_SEVERITY</codeph>, могут иметь одно
+ из следующих значений:</p>
+ <ul id="ul_q33_smg_5nb">
+ <li><ph
+ conref="../../reusable/critical.dita#ReusableComponent_yzx_3xk_hpb/ph_e1y_3xk_hpb"
+ /> — для установки критичного приоритета событиям, сгенерированным
+ сенсорами;</li>
+ <li><ph
+ conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+ /> — для установки низкого приоритета событиям, сгенерированных сенсорами.</li>
+ </ul>
+ </note>
+ <p>
+ <table frame="all" rowsep="1" colsep="1" id="inner_events">
+ <title>Переменные для управления событиями Комплекса</title>
+ <tgroup cols="3">
+ <colspec colname="c1" colnum="1" colwidth="30%" align="center"/>
+ <colspec colname="c2" colnum="2" colwidth="55%"/>
+ <colspec colname="c3" colnum="3" colwidth="15%" align="center"/>
+ <thead>
+ <row>
+ <entry>Переменная</entry>
+ <entry>Описание</entry>
+ <entry>Значение переменной по умолчанию</entry>
+ </row>
+ </thead>
+ <tbody>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_CONFIGURATION_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_configuration_control_events_desc.dita#ReusableComponent_an2_ghj_jpb/ph_gn2_ghj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_DATA_FLOW_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_data_flow_control_events_desc.dita#ReusableComponent_h5q_pgj_jpb/ph_m5q_pgj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_HOST_DATA_COLLECTING_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_host_data_collecting_events_desc.dita#ReusableComponent_vzx_r2j_jpb/ph_a1y_r2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_USER_ACTION_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_user_action_control_events_desc.dita#ReusableComponent_iyx_m2j_jpb/ph_nyx_m2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_HOST_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_host_control_events_desc.dita#ReusableComponent_ar5_s2j_jpb/ph_gr5_s2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_AVAILABILITY_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_availability_control_events_desc.dita#ReusableComponent_nlx_3hj_jpb/ph_slx_3hj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_OVAL_ASSESSMENT_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_oval_assessment_events_desc.dita#ReusableComponent_fy5_q2j_jpb/ph_ky5_q2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_INCIDENT_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/disable_incident_control_events_desc.dita#ReusableComponent_yhy_hty_2tb/ph_ky5_q2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_OVAL_DEFINITIONS_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_oval_definitions_control_events_desc.dita#ReusableComponent_ftm_rmw_nqb/ph_gr5_s2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_OVAL_GROUPS_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_oval_groups_control_events_desc.dita#ReusableComponent_k15_bnw_nqb/ph_o15_bnw_nqb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_SWITCH_DATA_COLLECTING_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_switch_data_collecting_control_events_desc.dita#ReusableComponent_gyt_vmw_nqb/ph_lyt_vmw_nqb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DISABLE_BACKUP_CONTROL_EVENTS"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_disable_backup_control_events_desc.dita#ReusableComponent_iqy_zmw_nqb/ph_nqy_zmw_nqb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_CONFIGURATION_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_configuration_control_events_severity_desc.dita#ReusableComponent_v32_g2j_jpb/ph_aj2_g2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_DATA_FLOW_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_data_flow_control_events_severity_desc.dita#ReusableComponent_fhl_d2j_jpb/ph_khl_d2j_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_HOST_DATA_COLLECTING_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_host_data_collecting_events_severity_desc.dita#ReusableComponent_gxg_wdj_jpb/ph_kxg_wdj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_USER_ACTION_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_user_action_control_events_severity_desc.dita#ReusableComponent_qgk_gdj_jpb/ph_vgk_gdj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_HOST_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_host_control_events_severity_desc.dita#ReusableComponent_zlk_zdj_jpb/ph_emk_zdj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+ <row>
+ <entry><cmdname keyref="DATAPK_AVAILABILITY_CONTROL_EVENTS_SEVERITY"/></entry>
+ <entry><ph
+  conref="../../reusable/env_var/datapk_availability_control_events_severity_desc.dita#ReusableComponent_qdd_l2j_jpb/ph_vdd_l2j_jpb"
+ /></entry>
+ <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+ </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_OVAL_ASSESSMENT_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_oval_assessment_control_events_severity_desc.dita#ReusableComponent_evq_3dj_jpb/ph_kvq_3dj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_INCIDENT_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_incident_control_events_severity_desc.dita#ReusableComponent_wwd_fdj_jpb/ph_axd_fdj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_OVAL_DEFINITIONS_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_oval_definitions_control_events_severity_desc.dita#ReusableComponent_xmm_qmw_nqb/ph_cnm_qmw_nqb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_OVAL_GROUPS_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_oval_groups_control_events_severity_desc.dita#ReusableComponent_s3w_1nw_nqb/ph_x3w_1nw_nqb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_SWITCH_DATA_COLLECTING_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_switch_data_collecting_control_events_severity_desc.dita#ReusableComponent_egm_5mw_nqb/ph_kgm_5mw_nqb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_BACKUP_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry><ph
+         conref="../../reusable/env_var/datapk_backup_control_events_severity_desc.dita#ReusableComponent_ksx_ymw_nqb/ph_d1h_1dj_jpb"
+        /></entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+        /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_IDS_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry>
+        <p
+         conref="../../reusable/env_var/datapk_ids_control_events_severity_desc.dita#ReusableComponent_lh2_d5x_2tb/p_nh2_d5x_2tb"
+        />
+       </entry>
+       <entry><b><ph conref="../../reusable/low.dita#ReusableComponent_vmy_1mk_hpb/ph_any_1mk_hpb"
+         /></b></entry>
+      </row>
+      <row>
+       <entry><cmdname keyref="DATAPK_ESPER_CONTROL_EVENTS_SEVERITY"/></entry>
+       <entry>
+        <p><ph
+          conref="../../reusable/env_var/datapk_esper_control_events_severity_desc.dita#ReusableComponent_zgh_kqn_5sb/ph_bhh_kqn_5sb"
+         /></p>
+       </entry>
+       <entry><b><ph
+          conref="../../reusable/critical.dita#ReusableComponent_yzx_3xk_hpb/ph_e1y_3xk_hpb"
+        /></b></entry>
+      </row>
+  
+ </tbody>
+ </tgroup>
+ </table>
+ </p>
+ 
+ </body>
+ <related-links outputclass="no_en">
+ <link href="../../reference_info/env_variables.dita"/>
+ </related-links>
+</topic>

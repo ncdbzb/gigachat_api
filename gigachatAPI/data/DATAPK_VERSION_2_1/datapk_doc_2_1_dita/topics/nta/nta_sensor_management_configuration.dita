@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="nta_sensor_management_configuration">
+    <title>Настройка UDV NTA уровня Management + Sensor</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Создайте рабочие директории UDV NTA и назначьте необходимые права:</cmd>
+                <info>
+                    <codeblock>mkdir -p /opt/datapk/scripts-certs
+mkdir -p /opt/datapk/nginx/certs
+mkdir /opt/sensor/
+chmod -R 755 /opt/</codeblock>
+                </info>
+                <info
+                    conref="../reusable/alt/alt_rights_info.dita#ReusableComponent_fp2_hbh_f1c/info_hp2_hbh_f1c"
+                />
+            </step>
+            <step conref="../reusable/alt/alt_move_ca_datapk_script.dita#ReusableComponent_nqh_tbh_f1c/step_pqh_tbh_f1c">
+                <cmd/>
+            </step>
+            <step id="sensor_management_nginx">
+                <cmd conref="../reusable/alt/alt_generate_certif.dita#ReusableComponent_tvv_f1n_f1c/cmd_xvv_f1n_f1c"/>
+                <substeps id="substeps_dg1_p1n_f1c">
+                    <substep conref="../reusable/alt/alt_generate_certif_syst_var.dita#ReusableComponent_fxh_41n_f1c/substep_hxh_41n_f1c">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_generate_certif_create_config_txt.dita#ReusableComponent_uvr_v1n_f1c/substep_vvr_v1n_f1c">
+                        <cmd></cmd>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_generate_certif_create_cert.dita#ReusableComponent_qmd_cbn_f1c/substep_rmd_cbn_f1c">
+                        <cmd></cmd>
+                    </substep>
+                    <substep conref="../reusable/alt/alt_generate_certif_delete_config_txt.dita#ReusableComponent_ydj_fbn_f1c/substep_zdj_fbn_f1c">
+                        <cmd></cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd conref="../reusable/alt/prepare_logstash_ngui.dita#ReusableComponent_b2r_jbn_f1c/cmd_c2r_jbn_f1c"></cmd>
+            </step>
+            <step conref="../reusable/alt/files_dir_rights.dita#ReusableComponent_cyh_pbn_f1c/step_dyh_pbn_f1c">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Используя протокол прикладного уровня передачи файлов поместите compose-файлы
+                        <codeph>docker-compose.sensor.yml</codeph>,
+                        <codeph>docker-compose.sensor_zeek.yml</codeph>,
+                        <codeph>docker-compose.sensor_stand.yml</codeph> в директорию
+                        <codeph>/home/dpi</codeph>, затем переместите их в директорию
+                        <codeph>/opt/sensor</codeph> командой:</cmd>
+                <info>
+                    <codeblock id="codeblock_jmp_1cn_f1c">mv /home/dpi/docker-compose* /opt/sensor/</codeblock>
+                </info>
+            </step>
+            <step conref="../reusable/steps/alt/create_var_backups_elasticsearch_step.dita#ReusableComponent_p21_44n_4yb/step_q21_44n_4yb">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Создайте директорию <codeph>/var/backups/snmp_mibs</codeph>, установите ей
+                    необходимые права и распакуйте в нее архив словарей SNMP
+                        <codeph>snmp_mibs.tar.gz</codeph>:</cmd>
+                <info>
+                    <codeblock id="codeblock_u5b_pcn_f1c">mkdir /var/backups/snmp_mibs
+chmod -R 755 /var/backups/snmp_mibs
+mv /home/dpi/snmp_mibs.tar.gz /var/backups/snmp_mibs
+cd /var/backups/snmp_mibs
+tar xvzf snmp_mibs.tar.gz</codeblock>
+                </info>
+            </step>
+            <step conref="../reusable/alt/delete_snmp_archive.dita#ReusableComponent_kz1_cdn_f1c/step_nz1_cdn_f1c">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd>Используя протокол прикладного уровня передачи файлов поместите архив с
+                    образами контейнеров Docker уровня Management в директорию
+                        <codeph>/home/dpi</codeph> и загрузите архив в Docker:</cmd>
+                <info>
+                    <codeblock id="codeblock_p5l_3dn_f1c">mv /home/dpi/[Название архива Management] /opt
+docker load -i /opt/[Название архива Management]</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd conref="../reusable/alt/docker_sensor_cmd.dita#ReusableComponent_l2d_4dn_f1c/cmd_n2d_4dn_f1c"/>
+                <info>
+                    <codeblock id="codeblock_qsm_qdn_f1c">mv /home/dpi/[Название архива Sensor] /opt
+docker load -i /opt/[Название архива Sensor]</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Сгенерируйте конфигурационный файл <ph
+                        conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    /> и файл <ph
+                        conref="../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"
+                    /> с уникальным идентификатором UDV NTA в директории
+                        <codeph>/opt/datapk</codeph>. Для этого:</cmd>
+                <substeps id="substeps_kh5_tdn_f1c">
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/alt/execute_gen_env_cmd.dita#ReusableComponent_umx_5qn_4yb/cmd_vmx_5qn_4yb"/>
+                        <info>
+                            <codeblock id="codeblock_brm_xdn_f1c">bash /home/dpi/generate_env-2.1.0.0.bash M</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/alt/check_env_cmd.dita#ReusableComponent_rqt_xtn_4yb/cmd_sqt_xtn_4yb"/>
+                        <info>
+                            <codeblock>ls -la /opt/datapk/ | grep .env</codeblock>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../reusable/steps/alt/check_node_id_step.dita#ReusableComponent_kwv_m43_pyb/substep_nwv_m43_pyb">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Используя протокол прикладного уровня передачи файлов поместите скрипт
+                        <codeph>generate_env-2.1.0.0.bash</codeph> в директорию
+                        <codeph>/home/dpi</codeph>, затем разрешите его исполнение, выполните,
+                    убедитесь, что необходимые файлы созданы, а после удалите его, используя
+                    следующие команды:</cmd>
+                <info>
+                    <codeblock id="codeblock_ibs_32n_f1c">bash /home/dpi/generate_env-2.1.0.0.bash S [ip_addr] #ip_addr - адрес UDV NTA уровня Management, к которому подключается сенсор, по умолчанию - 172.31.254.1
+ls -la /opt/sensor/ | grep .env
+rm -f /home/dpi/generate_env-2.1.0.0.bash</codeblock>
+                </info>
+                <stepresult>будет сгенерирован файл <codeph>.env</codeph> в директории <codeph>/opt/sensor</codeph>.</stepresult>
+            </step>
+            <step conref="../reusable/alt/config_traffic_files.dita#ReusableComponent_ekn_3fn_f1c/step_jkn_3fn_f1c">
+                <cmd></cmd>
+            </step>
+            <step>
+                <cmd conref="../reusable/steps/alt/config_iptables_cmd.dita#ReusableComponent_kbs_ptn_4yb/cmd_lbs_ptn_4yb"></cmd>
+                <substeps>
+                    <substep conref="../reusable/steps/alt/check_efw_substep.dita#ReusableComponent_lpb_ttn_4yb/substep_mpb_ttn_4yb">
+                        <cmd></cmd>
+                    </substep>
+                    <substep conref="../reusable/steps/alt/iptables_open_config_substep.dita#ReusableComponent_wmm_mtn_4yb/substep_xmm_mtn_4yb">
+                        <cmd></cmd>
+                    </substep>
+                    <substep>
+                        <cmd conref="../reusable/steps/alt/add_iptables_rules_cmd.dita#ReusableComponent_z2n_bsn_4yb/cmd_afn_bsn_4yb"></cmd>
+                        <info>
+                            <codeblock>*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:DOCKER - [0:0]
+:DOCKER-USER - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 172.31.254.0/24 -j ACCEPT
+-A INPUT -s 172.31.255.0/24 -j ACCEPT
+-A INPUT -p udp -m udp --dport 514 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 514 -j ACCEPT
+-A INPUT -p udp -m udp --dport 515 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 515 -j ACCEPT
+-A INPUT -p udp -m udp --dport 162 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+ 
+COMMIT</codeblock>
+                            <p>В этих правилах <codeph>M_interface</codeph> — наименование
+                                физического сетевого интерфейса UDV NTA уровня Management, к
+                                которому будут подключаться сенсоры.</p>
+                        </info>
+                    </substep>
+                    <substep conref="../reusable/steps/alt/iptables_restart_substep.dita#ReusableComponent_lnt_jtn_4yb/substep_nnt_jtn_4yb">
+                        <cmd></cmd>
+                    </substep>
+                    <substep conref="../reusable/steps/alt/iptables_nvl_substep.dita#ReusableComponent_ajb_kqh_f1c/substep_cjb_kqh_f1c">
+                        <cmd></cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Используя редактор <codeph>nano</codeph>, измените переменные в файле
+                    уровня Management: </cmd>
+                <substeps
+                    conref="../reusable/alt/change_var_management_substeps.dita#ReusableComponent_mkp_tgn_f1c/substeps_q3v_zs1_f1c">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Используя редактор <codeph>nano</codeph>, измените переменные в файле
+                    уровня Sensor:</cmd>
+                <substeps
+                    conref="../reusable/alt/change_var_sensor_substeps.dita#ReusableComponent_kcb_1hn_f1c/substeps_hvb_sqh_f1c">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+           
+        </steps>
+    </taskbody>
+</task>

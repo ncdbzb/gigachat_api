@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:Реестр активов-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fmp_2hc_vtb">
+    <title>Реестр активов</title>
+    <body>
+        <table id="table_gmp_2hc_vtb">
+            <title>Реестр активов</title>
+            <tgroup cols="7">
+                <colspec colnum="1" colname="c1" colwidth="5%"/>
+                <colspec colnum="2" colname="c2" colwidth="12%"/>
+                <colspec colnum="3" colname="c3" colwidth="14%"/>
+                <colspec colnum="4" colname="c4" colwidth="21%"/>
+                <colspec colnum="5" colname="c5" colwidth="14%"/>
+                <colspec colnum="6" colname="c6" colwidth="17%"/>
+                <colspec colnum="7" colname="c7" colwidth="17%"/>
+                <thead>
+                    <row>
+                        <entry>№ п/п</entry>
+    <entry>Имя актива</entry>
+    <entry>Владелец актива</entry>
+    <entry>Описание актива</entry>
+    <entry>Категория актива</entry>
+    <entry>Классифицирован</entry>
+    <entry>Местоположение</entry>
+    </row>
+    </thead>
+    <tbody>
+    <row>
+    <entry>1.</entry>
+    <entry>Серверы</entry>
+    <entry>Отдел эксплуатации, руководитель </entry>
+    <entry>Серверы, предназначенные для тестирования функциональных возможностей ПО, выполнения приложений автоматизации процесса и организации среды разработки</entry>
+    <entry>Материальные активы</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>Ткачей, 6, 1 этаж, помещение серверной</entry>
+    </row>
+    <row>
+    <entry>2.</entry>
+    <entry>Сетевое хранилище данных</entry>
+    <entry>Отдел эксплуатации, руководитель</entry>
+    <entry>
+                    <p>Дисковое хранилище, на котором хранятся:</p>
+                    <ul id="ul_lvp_wzc_vtb">
+                        <li>Дистрибутивы ПО.</li>
+                        <li>Виртуальные машины разработчиков.</li>
+                        <li>Резервные копии</li>
+                    </ul>
+                </entry>
+    <entry>Материальные активы</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>Ткачей, 6, 1 этаж, помещение серверной</entry>
+    </row>
+    <row>
+    <entry>3.</entry>
+    <entry>Сеть передачи данных</entry>
+    <entry>Отдел эксплуатации, руководитель</entry>
+    <entry>Структурированная кабельная сеть, коммутаторы, маршрутизаторы, межсетевые экраны и шлюзы виртуальных частных сетей, предназначенные для организации ЛВС разработки</entry>
+    <entry>Материальные активы</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>
+    <p>Ткачей, 6, 1 этаж, помещение серверной</p>
+    <p>Ткачей, 6, 2 этаж, Помещение серверной</p>
+    <p>Ткачей, 6, 3 этаж, Кабинет отдела разработки</p>
+    </entry>
+    </row>
+    <row>
+    <entry>4.</entry>
+    <entry>Программное обеспечение</entry>
+    <entry>Отдел эксплуатации, руководитель</entry>
+    <entry>Программное обеспечение автоматизации процесса разработки организации среды разработки</entry>
+    <entry>ПО</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>Ткачей, 6, 1 этаж, помещение серверной</entry>
+    </row>
+    <row>
+    <entry>5.</entry>
+    <entry>АРМ сотрудников</entry>
+    <entry>Отдел эксплуатации, руководитель</entry>
+    <entry>Оборудование и ПО рабочих мест сотрудников</entry>
+    <entry>Материальные активы, ПО</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>Ткачей, 6, 3 этаж, Кабинет отдела разработки</entry>
+    </row>
+    <row>
+    <entry>6.</entry>
+    <entry>Программный код</entry>
+    <entry>Отдел разработки, руководитель</entry>
+    <entry>Программный код разрабатываемого ПО</entry>
+    <entry>ПО</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>
+    <p>Ткачей, 6, 1 этаж, помещение серверной</p>
+    <p>Ткачей, 6, 3 этаж, Кабинет отдела разработки</p>
+    </entry>
+    </row>
+    <row>
+    <entry>7.</entry>
+    <entry>Документация</entry>
+    <entry>Отдел разработки, руководитель</entry>
+    <entry>Проектная и эксплуатационная документация для разрабатываемого ПО</entry>
+    <entry>Документация</entry>
+    <entry>Общедоступная информация</entry>
+    <entry>Ткачей, 6, 3 этаж, Кабинет отдела разработки</entry>
+    </row>
+    <row>
+    <entry>8.</entry>
+    <entry>Сотрудники организации</entry>
+    <entry>Отдел разработки, руководитель</entry>
+    <entry>Сотрудники <term keyref="cyberlympha_name_short"/> , задействованные в разработке специального ПО</entry>
+    <entry>Материальные активы</entry>
+    <entry>Не классифицировано</entry>
+    <entry>Ткачей, 6, 3 этаж, Кабинет отдела разработки</entry>
+    </row>
+    <row>
+    <entry>9.</entry>
+    <entry>АРМ для производства ПО</entry>
+    <entry>Отдел эксплуатации, руководитель</entry>
+    <entry>Оборудование и ПО для записи разрабатываемого ПО на оптические носители</entry>
+    <entry>Материальные активы, ПО</entry>
+    <entry>Для внутреннего пользования</entry>
+    <entry>Ткачей, 6, 3 этаж, Кабинет отдела разработки</entry>
+    </row>
+    </tbody>
+    </tgroup>
+    </table>
+        
+    </body>
+</topic>

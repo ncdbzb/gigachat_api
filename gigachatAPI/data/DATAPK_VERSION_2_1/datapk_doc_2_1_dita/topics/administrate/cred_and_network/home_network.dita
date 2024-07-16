@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="home_network_settings">
+ <title>Настройка домашней сети</title>
+ <taskbody>
+ <context>
+ <p>Настройка домашней сети необходима для отображения на странице <cite keyref="prot_obj_fp"/>
+            объектов защиты, IP-адреса которых входят в домашнюю сеть. До выполнения настройки
+            домашней сети, в зависимости от настроек <term keyref="appliance"/>а, в списке
+               <abbreviated-form keyref="host"/> отображаются все <abbreviated-form keyref="host"/>,
+            найденные только по MAC-адресу, независимо от наличия у них IP-адреса, либо только
+               <abbreviated-form keyref="host"/>, у которых не определен IP-адрес (подробнее см.
+            раздел «<xref href="../network_scan.dita"/>»).</p>
+ <p>Для настройки домашней сети <term keyref="appliance"/>а:</p>
+ </context>
+ <steps>
+ <step>
+            <cmd><ph
+                  conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+               <cite keyref="sensors_fp"/>.</cmd>
+         </step>
+         <step
+            conref="../../reusable/steps/hierarchy/choose_sensor_step.dita#ReusableComponent_zcc_1d2_czb/step_cdc_1d2_czb"
+            id="choose_sens_step">
+            <cmd/>
+         </step>
+ <step>
+            <cmd>В открывшейся панели в блоке <uicontrol>Домашняя сеть</uicontrol> нажмите кнопку <image
+                  href="../../../images/icons/edit.png" id="image_twy_gwv_wxb"/>
+                  (<uicontrol>Редактировать сеть</uicontrol>).</cmd>
+         </step>
+         <step>
+            <cmd>Нажмите кнопку <uicontrol>+ Добавить сеть</uicontrol> и введите IP-адрес и маску
+               подсети управляющего контура в качестве домашней подсети. Если требуется удалить
+               добавленную ранее подсеть из списка, нажмите кнопку <image
+                  href="../../../images/icons/del_list_element.png" id="image_acs_ycr_xxb"/>
+                  (<uicontrol>Удалить сеть</uicontrol>).</cmd>
+            <info>
+               <fig id="fig_hyp_jvr_tnb">
+                  <title>Блок «Домашняя сеть» в настройках сенсора</title>
+                  <image href="../../../images/sensor/sensor_home_network.PNG"
+                     id="image_iyp_jvr_tnb">
+                     <alt>Панель <uicontrol>Домашняя сеть</uicontrol> в настройках сенсора</alt>
+                  </image>
+               </fig>
+            </info>
+         </step>
+ <step id="apply_home_net_step">
+            <cmd>Нажмите кнопку <uicontrol>Применить</uicontrol> для подтверждения всех изменений и
+               запуска обновления списка <abbreviated-form keyref="host"/> в соответствии с
+               указанными домашними сетями.</cmd>
+         </step>
+         <step>
+            <cmd>Выполните шаги 2-<xref href="#home_network_settings/apply_home_net_step"
+                  format="dita"/> для всех подключенных сенсоров, для которых нужно настроить
+               домашнюю сеть.</cmd>
+            <stepresult>
+               <ul id="ul_x4j_2ry_bzb">
+                  <li>В список <abbreviated-form keyref="host"/> на странице <cite
+                        keyref="prot_obj_fp"/> будут добавлены обнаруженные <abbreviated-form
+                        keyref="host"/>, IP-адреса которых входят в настроенные домашние сети.</li>
+                  <li><ph>Каждому сетевому атрибуту обнаруженного <abbreviated-form keyref="host"/>
+                        будет присвоен сенсор, в чью домашнюю сеть входит IP-адрес атрибута.
+                        </ph><ph
+                        conref="../../reusable/watch_host_iface_sensor_ph.dita#ReusableComponent_onx_4zy_bzb/ph_pnx_4zy_bzb"
+                     /></li>
+               </ul>
+            </stepresult>
+         </step>
+ </steps>
+ </taskbody>
+</task>

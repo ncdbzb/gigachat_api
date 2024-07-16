@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gxn_2qt_jyb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>
+                    <ph id="ph_hxn_2qt_jyb">Введите обоснование удаления учетных данных и нажмите кнопку <uicontrol>Подтвердить</uicontrol>.</ph>
+                </cmd>
+            </step>
+        </steps>
+        </taskbody>
+</task>

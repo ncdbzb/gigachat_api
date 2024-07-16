@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_h5q_pgj_jpb">
+
+ <title>DATAPK_DISABLE_DATA_FLOW_CONTROL_EVENTS</title>
+ <body> 
+ <p><ph id="ph_m5q_pgj_jpb">При значении переменной <ph
+                    conref="../true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/> события о
+                появлении новых потоков, удалении отдельных потоков, одобрении и удалении групп
+                потоков не собираются</ph></p> 
+</body> 
+</topic> 

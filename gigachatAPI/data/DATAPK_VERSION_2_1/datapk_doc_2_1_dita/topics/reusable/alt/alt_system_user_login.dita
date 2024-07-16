@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nfw_rrc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ofw_rrc_2zb">Введите имя (логин) пользователя <codeph>datapk</codeph>.</cmd>
+            </step>
+        </steps>       
+    </taskbody>
+</task>

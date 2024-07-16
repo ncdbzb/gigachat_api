@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:warning_script-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ept_4lc_jwb">
+    <title/>
+    <body>
+        <note type="warning" id="note_fpt_4lc_jwb"><term keyref="script"/> необходимо сохранять в
+            файле формата <codeph>*.py</codeph> (кодировка – UTF-8 без BOM).</note>
+    </body>
+</topic>

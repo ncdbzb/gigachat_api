@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="assets_statuses">
+    <title>Статусы объектов защиты</title>
+    <body>
+        <p>В таблице на странице <cite keyref="prot_obj_fp"/> можно просматривать статусы
+            выполненных операций активного сбора данных с объектов защиты и статистику по
+            обнаруженным инцидентам и уязвимостям. Столбцы таблицы можно выбрать и отобразить по
+            кнопке <image href="../../../../images/icons/table_props.png" id="table_prop_icon"/> в
+            правом вернем углу страницы.</p>
+        <p>Описание статусов приведено в таблице ниже.</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_qsx_lhs_jyb" orient="land">
+            <title>Статусы объектов защиты на странице «Активы»</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="20%"/>
+                <colspec colname="c2" colnum="2" colwidth="40%"/>
+                <colspec colname="c3" colnum="3" colwidth="40%"/>
+                <thead>
+                    <row>
+                        <entry>Обозначение</entry>
+                        <entry>Описание</entry>
+                        <entry>Индикаторы</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Конфигурации</entry>
+                        <entry>
+                            <p>Статус отклонения последней собранной с ОЗ конфигурации от
+                                эталона.</p>
+                            <p><ph>При наведении на статус отображается количество собранных
+                                    конфигураций, сгруппированных по статусу их отклонения:</ph><ul
+                                    id="ul_nnk_jwy_lyb">
+                                    <li>нет отклонений — количество конфигураций объекта защиты,
+                                        соответствующих эталону в данный момент;</li>
+                                    <li>есть отклонения — количество конфигураций, не
+                                        соответствующих эталону в данный момент;</li>
+                                    <li>были отклонения — количество конфигураций, которые
+                                        соответствуют эталону в данный момент, но в их предыдущих
+                                        версиях были отклонения</li>
+                                </ul></p>
+                        </entry>
+                        <entry>
+                            <ul id="ul_eff_njt_jyb">
+                                <li><image href="../../../../images/icons/statuses/assets_red.png"
+                                        id="image_bm1_z43_kyb"/> Красный — последняя конфигурация не
+                                    соответствует эталону.</li>
+                                <li><image
+                                        href="../../../../images/icons/statuses/assets_orange.png"
+                                        id="image_d2g_v43_kyb"/> Оранжевый — последняя конфигурация
+                                    соответствует эталону, но в ее предыдущих версиях были
+                                    отклонения.</li>
+                                <li><image href="../../../../images/icons/statuses/assets_green.png"
+                                        id="image_wms_543_kyb"/> Зеленый — последняя конфигурация
+                                    соответствует эталону.</li>
+                                <li><image href="../../../../images/icons/statuses/assets_grey.png"
+                                        id="image_njp_z43_kyb"/> Серый — сбор конфигураций не
+                                    выполнялся</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Сбор данных</entry>
+                        <entry>
+                            <p>Процент успешно выполненных процессов сбора данных на ОЗ.</p>
+                            <p><ph>При наведении на статус отображается количество выполненных
+                                    попыток сбора данных с ОЗ по категориям:</ph><ul
+                                    id="ul_obk_bjj_lyb">
+                                    <li>количество процессов, выполненных успешно;</li>
+                                    <li>количество процессов, которые не удалось выполнить из-за
+                                        ошибок соединения;</li>
+                                    <li>количество процессов, которые не удалось выполнить из-за
+                                        ошибок сбора.</li>
+                                </ul></p>
+                            <p>Подробнее см. раздел «<xref
+                                    href="../../../control_config/data_collect_results_view.dita"
+                                />»</p>
+                        </entry>
+                        <entry>
+                            <ul id="ul_nww_wj5_jyb">
+                                <li><image href="../../../../images/icons/statuses/assets_red.png"
+                                        id="image_bz1_bp3_kyb"/> (красный) — 0-33% процессов сбора
+                                    данных выполнены успешно.</li>
+                                <li><image
+                                        href="../../../../images/icons/statuses/assets_orange.png"
+                                        id="image_ust_1p3_kyb"/> (оранжевый) — 33-99% процессов
+                                    сбора данных выполнены успешно.</li>
+                                <li><image href="../../../../images/icons/statuses/assets_green.png"
+                                        id="image_yxn_1p3_kyb"/> (зеленый) — 100% процессов сбора
+                                    данных выполнены успешно.</li>
+                                <li><image href="../../../../images/icons/statuses/assets_grey.png"
+                                        id="image_m3h_bp3_kyb"/> (серый) — сбор данных не
+                                    выполнялся.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Инциденты</entry>
+                        <entry>
+                            <p>Наивысший приоритет среди обнаруженных инцидентов с категорией
+                                    <codeph>Новый</codeph> на объекте защиты.</p>
+                            <p>При наведении на статус отображается количество обнаруженных
+                                инцидентов, сгруппированных по приоритету</p>
+                        </entry>
+                        <entry>
+                            <ul id="ul_aht_cp3_kyb">
+                                <li><image href="../../../../images/icons/statuses/critical.png"
+                                        id="image_qv2_wq3_kyb"/></li>
+                                <li><image href="../../../../images/icons/statuses/high.png"
+                                        id="image_cdp_wq3_kyb"/></li>
+                                <li><image href="../../../../images/icons/statuses/middle.png"
+                                        id="image_p21_xq3_kyb"/></li>
+                                <li><image href="../../../../images/icons/statuses/low.png"
+                                        id="image_okk_xq3_kyb"/></li>
+                                <li>пусто — инциденты с категорией <codeph>Новый</codeph> не
+                                    обнаружены, либо поиск не выполнялся</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Уязвимости</entry>
+                        <entry>
+                            <p>Наивысший приоритет среди уязвимостей из базы CVE, обнаруженных на
+                                объекте защиты.</p>
+                            <p>При наведении на статус отображается количество обнаруженных
+                                уязвимостей, сгруппированных по приоритету.</p>
+                            <p>По нажатию на статус откроется окно просмотра уязвимостей выбранного
+                                объекта защиты</p>
+                        </entry>
+                        <entry>
+                            <ul id="ul_lwd_zq3_kyb">
+                                <li><image href="../../../../images/icons/statuses/critical.png"
+                                        id="image_mwd_zq3_kyb"/></li>
+                                <li><image href="../../../../images/icons/statuses/high.png"
+                                        id="image_nwd_zq3_kyb"/></li>
+                                <li><image href="../../../../images/icons/statuses/middle.png"
+                                        id="image_owd_zq3_kyb"/></li>
+                                <li><image href="../../../../images/icons/statuses/low.png"
+                                        id="image_pwd_zq3_kyb"/></li>
+                                <li>пусто — уязвимости не обнаружены, либо поиск не выполнялся</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Результаты сканирования</entry>
+                        <entry>
+                            <p>Статус процессов всех задач сбора данных объекта защиты.</p>
+                            <p><ph>При наведении на статус отображается количество выполненных
+                                    процессов сбора данных с ОЗ по трем категориям:</ph><ul
+                                    id="ul_fly_vfk_lyb">
+                                    <li>назначено — общее количество процессов сбора данных,
+                                        выполненных на ОЗ;</li>
+                                    <li>количество процессов, которые не удалось выполнить из-за
+                                        ошибок соединения;</li>
+                                    <li>количество процессов, которые не удалось выполнить из-за
+                                        ошибок сбора.</li>
+                                </ul></p>
+                            <p>При нажатии на статус открывается страница <cite
+                                    keyref="data_collect_tasks_fp"/> с результатами сбора для
+                                выбранного объекта защиты</p>
+                        </entry>
+                        <entry>
+                            <ul id="ul_ywx_wnt_jyb">
+                                <li><image
+                                        href="../../../../images/icons/statuses/scan_results_red.png"
+                                        id="image_jlm_wpk_lyb"/> (красный) — присутствуют ошибки
+                                    сбора. Отображается количество всех результатов по
+                                    категориям.</li>
+                                <li><image
+                                        href="../../../../images/icons/statuses/scan_results_orange.png"
+                                        id="image_qg2_ypk_lyb"/> (оранжевый) — присутствуют ошибки
+                                    соединения, ошибок сбора нет. Отображается количество всех
+                                    результатов по категориям.</li>
+                                <li><image
+                                        href="../../../../images/icons/statuses/scan_results_black.png"
+                                        id="image_cqb_zpk_lyb"/> (черный) — успешный сбор всех
+                                    конфигураций или событий. Отображается только количество
+                                    назначенных процессов.</li>
+                                <li>Пусто — сбор конфигураций или событий не выполнялся.</li>
+                            </ul>
+                            <p>Подробнее см. раздел «<xref
+                                    href="../../../control_config/data_collect_results_view.dita"
+                                />»</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p><ph>Статусы <uicontrol>Конфигурации</uicontrol>, <uicontrol>Сбор данных</uicontrol>,
+                    <uicontrol>Инциденты</uicontrol> и <uicontrol>Уязвимости</uicontrol> можно
+                сортировать в порядке критичности. Порядок критичности по убыванию: темно-красный,
+                красный, оранжевый, зеленый, серый/нет данных.</ph></p>
+        <note id="note_sz1_r4j_lyb"><ph
+                conref="../../../reusable/prot_obj_problem_filter.dita#ReusableComponent_gyp_n4j_lyb/ph_lyp_n4j_lyb"
+                /><ph>, по которому можно фильтровать список объектов защиты. Проблемность для
+                каждого ОЗ принимает одно из следующих значений:</ph><ul
+                    conref="../../../reusable/prot_obj_problem_filter_values.dita#ReusableComponent_ilr_gck_lybqq/ul_pbv_pmj_lyb"
+                id="ul_zpr_gck_lyb">
+                <li/>
+            </ul><ph>Подробнее см. раздел «<xref href="../../../prot_obj/filter_prot_obj.dita"
+                />».</ph></note>
+    </body>
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1100007">
+    <title>Удалена группа инцидентов</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1100007">Обоснование: <codeph>{justification}</codeph>; Пользователь:
+                                    <codeph>{user}</codeph>; Количество удаленных инцидентов:
+                                    <codeph>{deleted_incident_count}</codeph>; Примененный фильтр:
+                                    <codeph>{filter_info}</codeph></p>
+                        </entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

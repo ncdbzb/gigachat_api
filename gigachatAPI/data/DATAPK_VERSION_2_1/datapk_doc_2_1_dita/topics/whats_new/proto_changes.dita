@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="proto_changes">
+    <title>Изменения в поддерживаемых сетевых протоколах</title>
+    <body>
+        <p><ph
+                conref="../reusable/whatsnew/DTPK-7949.dita#ReusableComponent_bzb_mgx_wxb/ph_czb_mgx_wxb"
+            />:</p>
+        <ul id="ul_wgl_ldq_sxb">
+            <li>CoDeSys PLC protocol</li>
+            <li>CoDeSys protocol CREATE APPLICATION command</li>
+            <li>CoDeSys protocol CREATE DEVICE APPLICATION command</li>
+            <li>CoDeSys protocol DELETE APPLICATION command</li>
+            <li>CoDeSys protocol DEVICE DOWNLOAD command</li>
+            <li>CoDeSys protocol DOWNLOAD command</li>
+            <li>CoDeSys protocol LOGIN command</li>
+            <li>CoDeSys protocol LOGOUT command</li>
+            <li>CoDeSys protocol ONLINE CHANGE command</li>
+            <li>CoDeSys protocol READ command</li>
+            <li>CoDeSys protocol RESET command</li>
+            <li>CoDeSys protocol SINGLE CYCLE command</li>
+            <li>CoDeSys protocol START command</li>
+            <li>CoDeSys protocol STOP command</li>
+            <li>CoDeSys_protocol_WRITE_command</li>
+            <li>Delta DVP PLC Run command</li>
+            <li>Delta DVP PLC Stop command</li>
+            <li>Digital Imaging and Communications in Medicine</li>
+            <li>DICOM_ABORT</li>
+            <li>DICOM ASSOCIATE connetcion accept</li>
+            <li>DICOM ASSOCIATE connetcion reject</li>
+            <li>DICOM ASSOCIATE connetcion requset</li>
+            <li>DICOM C-FIND command</li>
+            <li>DICOM C-MOVE command</li>
+            <li>DICOM DATA transfer</li>
+            <li>DICOM RELEASE request</li>
+            <li>DICOM RELEASE responce</li>
+            <li>DirectLogix ECOM protocol</li>
+            <li>EthernetIP CIP Request</li>
+            <li>EthernetIP CIP Response</li>
+            <li>EthernetIP Create Request</li>
+            <li>EthernetIP Create Response</li>
+            <li>EthernetIP Delete Request</li>
+            <li>EthernetIP Delete Response</li>
+            <li>EthernetIP Forward Close Connection Request</li>
+            <li>EthernetIP Forward Close Connection Response</li>
+            <li>EthernetIP Forward Open Connection Request</li>
+            <li>EthernetIP Forward Open Connection Response</li>
+            <li>EthernetIP Get Attribute All Request</li>
+            <li>EthernetIP Get Attribute All Response</li>
+            <li>EthernetIP Get Attribute List Request</li>
+            <li>EthernetIP Get Attribute List Response</li>
+            <li>EthernetIP Get Attribute Single Request</li>
+            <li>EthernetIP Get Attribute Single Response</li>
+            <li>EthernetIP Get Instance Attribute List Request</li>
+            <li>EthernetIP Get Instance Attribute List Response</li>
+            <li>EthernetIP HMI Read Tag Request</li>
+            <li>EthernetIP List Identity request/response command</li>
+            <li>EthernetIP List Interface request/response command</li>
+            <li>EthernetIP List Services request/response command</li>
+            <li>EthernetIP Multiple Service Request</li>
+            <li>EthernetIP Multiple Service Response</li>
+            <li>EthernetIP Read Fragment Request</li>
+            <li>EthernetIP Read Modify Write Service Request</li>
+            <li>EthernetIP Read Modify Write Service Response</li>
+            <li>EthernetIP Read Modify Write Tag Service Request</li>
+            <li>EthernetIP Read Request</li>
+            <li>EthernetIP Read Responce</li>
+            <li>EthernetIP Read Tag Fragment Request</li>
+            <li>EthernetIP Read Tag Fragment Responce</li>
+            <li>EthernetIP Read Tag Request</li>
+            <li>EthernetIP Register Session request/response command</li>
+            <li>EthernetIP RSlogix5000 Online Change Request</li>
+            <li>EthernetIP RSlogix5000 Service Request</li>
+            <li>EthernetIP RSlogix5000 Service Response</li>
+            <li>EthernetIP Set Attribute All Request</li>
+            <li>EthernetIP Set Attribute All Response</li>
+            <li>EthernetIP Set Attribute List Request</li>
+            <li>EthernetIP Set Attribute List Response</li>
+            <li>EthernetIP Set Attribute Single Request</li>
+            <li>EthernetIP Set Attribute Single Response</li>
+            <li>EthernetIP Set Password</li>
+            <li>EthernetIP T3 connected msg</li>
+            <li>EthernetIP unconnected msg</li>
+            <li>EthernetIP Unregister Session request/response command</li>
+            <li>EthernetIP Unsecure PLC</li>
+            <li>EthernetIP Write Fragment Request</li>
+            <li>EthernetIP Write Tag Fragment Request</li>
+            <li>EthernetIP Write Tag Fragment Responce</li>
+            <li>EthernetIP Write Request</li>
+            <li>EthernetIP Write Responce</li>
+            <li>EthernetIP Write Tag Request</li>
+            <li>General Electric Global Data</li>
+            <li>GE-SRTP (General Electric Service Request Transport Protocol)</li>
+            <li>GE-SRTP change PLC CPU Privilege Level command</li>
+            <li>GE-SRTP download to PLC command</li>
+            <li>GE-SRTP logon command</li>
+            <li>GE-SRTP read program memory command</li>
+            <li>GE-SRTP set control ID (CPU ID) command</li>
+            <li>GE-SRTP set PLC (run vs stop) command</li>
+            <li>GE-SRTP upload from PLC command</li>
+            <li>GE-SRTP write program memory command</li>
+            <li>Haiwell PLC connect</li>
+            <li>Haiwell PLC diagnostics</li>
+            <li>Haiwell PLC password change</li>
+            <li>Haiwell PLC project clear</li>
+            <li>Haiwell PLC project download</li>
+            <li>Haiwell PLC project upload</li>
+            <li>Haiwell PLC set parameters</li>
+            <li>ICPDAS MiniOS7 Utility protocol</li>
+            <li>ICPDAS bios1 command</li>
+            <li>ICPDAS research command</li>
+            <li>ICPDAS reset command</li>
+            <li>ICPDAS upload command</li>
+            <li>IEC 61850/MMS Confirmed Response PDU</li>
+            <li>IEC 61850/MMS Confirmed ResponsePDU read command</li>
+            <li>IEC 61850/MMS Confirmed ResponsePDU write command</li>
+            <li>IEC 61850/MMS Confirmed Request delete Program Invocation command</li>
+            <li>IEC 61850/MMS Confirmed Request Download command</li>
+            <li>IEC 61850/MMS Confirmed Request GetNameList command; </li>
+            <li>IEC 61850/MMS Confirmed Request GetNamedVariableListAttributes command</li>
+            <li>IEC 61850/MMS Confirmed Request Identify command</li>
+            <li>IEC 61850/MMS Confirmed Request Kill command</li>
+            <li>IEC 61850/MMS Confirmed Request PDU</li>
+            <li>IEC 61850/MMS Confirmed Request read command</li>
+            <li>IEC 61850/MMS Confirmed Request Rename command</li>
+            <li>IEC 61850/MMS Confirmed Request Reset command</li>
+            <li>IEC 61850/MMS Confirmed Request Resume command</li>
+            <li>IEC 61850/MMS Confirmed Request Start command</li>
+            <li>IEC 61850/MMS Confirmed Request status command</li>
+            <li>IEC 61850/MMS Confirmed Request status command</li>
+            <li>IEC 61850/MMS Confirmed Request Upload command</li>
+            <li>IEC 61850/MMS Confirmed Request Write command</li>
+            <li>ISO 8327-1 OSI Session Protocol</li>
+            <li>ISO 8823 OSI Presentation</li>
+            <li>MC Protocol for Mitsubishi PLC binary</li>
+            <li>MELSOFT connection for Mitsubishi PLC</li>
+            <li>Mitsubishi FX2N PLC protocol</li>
+            <li>Mitsubishi PLC REMOTE Latch Clear command</li>
+            <li>Mitsubishi PLC REMOTE Logon command</li>
+            <li>Mitsubishi PLC REMOTE PAUSE command</li>
+            <li>Mitsubishi PLC REMOTE RESET command</li>
+            <li>Mitsubishi PLC REMOTE RUN command</li>
+            <li>Mitsubishi PLC REMOTE STOP command</li>
+            <li>OWEN_PLC_Protocol</li>
+            <li>OWEN PLC Browser command</li>
+            <li>OWEN PLC Browser Delete password command</li>
+            <li>OWEN PLC Browser Set password command</li>
+            <li>OWEN PLC Browser Start program command</li>
+            <li>OWEN PLC Browser Stop program command</li>
+            <li>OWEN PLC Cold Read command</li>
+            <li>OWEN PLC Cold Reset command</li>
+            <li>OWEN PLC Cold Write command</li>
+            <li>OWEN PLC Download command</li>
+            <li>OWEN PLC Download full command</li>
+            <li>OWEN PLC Factory Reset command</li>
+            <li>OWEN PLC One Shot command</li>
+            <li>OWEN PLC Read File from PLC command</li>
+            <li>OWEN PLC Reset command</li>
+            <li>OWEN PLC Start command</li>
+            <li>OWEN PLC Stop command</li>
+            <li>OWEN PLC Write File to PLC command.</li>
+        </ul>
+    </body>
+    <related-links>
+        <link href="../reference_info/protocols.dita"/>
+    </related-links>
+</topic>

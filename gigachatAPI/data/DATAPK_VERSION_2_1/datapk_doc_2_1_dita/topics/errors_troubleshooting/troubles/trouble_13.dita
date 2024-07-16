@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_13">
+ <title>Сбор конфигураций осуществляется, но результаты сбора не отображаются</title>
+ <troublebody>
+ <condition>
+   <note conref="../../reusable/note_recommend.dita#note_recommend/note_recommend"
+    id="note_ebs_tjd_l1c"/>
+  </condition>
+ <troubleSolution>
+ <cause>
+ <title>Причина: некорректный Python-скрипт сбора данных, неверное регулярное выражение</title>
+ </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+ <step>
+      <cmd>Проверьте на корректность Python-скрипт из сканера, работа которого завершается с
+       ошибкой.</cmd>
+      <info>
+       <note>Для первого запуска рекомендуется отказаться от синтаксического разбора данных в
+        скрипте посредством регулярных выражений.</note>
+      </info>
+     </step>
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+</troubleshooting>

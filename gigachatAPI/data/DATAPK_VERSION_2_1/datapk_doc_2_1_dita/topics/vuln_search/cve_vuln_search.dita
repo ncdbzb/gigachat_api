@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cve_vuln_search">
+    <title>Поиск уязвимостей ПО и ОС в базах CVE, CPE и БДУ ФСТЭК России</title>
+    <body>
+        <p><ph> Пользователь с ролью <codeph>Администратор</codeph> или <codeph>Инженер</codeph>
+                может выполнить поиск уязвимостей с помощью справочников <abbreviated-form
+                    keyref="cve"/> и <abbreviated-form keyref="cpe"/> в следующем порядке:</ph><ol
+                id="ol_ltm_mlr_xyb">
+                <li>Убедиться в актуальности импортированных справочников <abbreviated-form
+                        keyref="cve"/>, <abbreviated-form keyref="cpe"/> и <abbreviated-form
+                        keyref="bdu_fstec"/> — подробнее см. раздел «<xref
+                        href="check_relevance.dita"/>». </li>
+                <li>Импортировать справочники <abbreviated-form keyref="cve"/>, <abbreviated-form
+                        keyref="cpe"/> — подробнее см. раздел «<xref
+                        href="../prot_obj/prot_obj_settings/cpe_cve_import.dita"/>».</li>
+                <li>При необходимости импортировать справочник <abbreviated-form keyref="bdu_fstec"
+                    /> — подробнее см. раздел «<xref
+                        href="../prot_obj/prot_obj_settings/bdu_import.dita"/>».<note
+                        id="note_iw3_mmh_tzb" type="note">Импорт справочника <abbreviated-form
+                            keyref="bdu_fstec"/> позволяет добавить в отчеты о проверках
+                        дополнительную информацию об уязвимостях, но не обязателен для успешного
+                        выполнения проверок.</note></li>
+                <li>Получить с объекта защиты информацию об установленных на нем <abbreviated-form
+                        keyref="OS"/> и <abbreviated-form keyref="software"/> с помощью сканеров с
+                    типами <codeph>Версия ОС</codeph> и <codeph>Установленное ПО</codeph> —
+                    подробнее см. раздел «<xref
+                        href="../control_config/os_soft/os_soft_collection.dita"/>».<note
+                        id="note_gyz_wf3_d1c" type="attention">
+                        <p>Полученная информация об ОС сохраняется в блоке <uicontrol>Информация об
+                                ОС</uicontrol>
+                            <cite keyref="prot_obj_profile_fp">карточки объекта защиты</cite>
+                            (подробнее см. раздел «<xref href="../prot_obj/edit_prot_obj.dita"
+                            />»).</p>
+                        <div
+                            conref="../reusable/notes/os_for_plc_attent.dita#ReusableComponent_jvm_qm3_d1c/div_kvm_qm3_d1c"
+                        />
+                    </note></li>
+                <li><ph>Запустить поиск уязвимостей. Поиск уязвимостей можно запустить для одного
+                        или нескольких объектов защиты разными способами — подробнее см. раздел
+                            «<xref href="../prot_obj/prot_obj_settings/cve_report.dita"/>». На
+                        данном этапе <term keyref="appliance"/>:</ph><ol id="ul_pxl_bjz_jzb">
+                        <li>Сопоставляет наименования и версии <abbreviated-form keyref="OS"/> и
+                                <abbreviated-form keyref="software"/>, полученные с объекта защиты,
+                            со справочником <abbreviated-form keyref="cpe"/>.</li>
+                        <li>Сравнивает результаты сопоставления со справочниками <abbreviated-form
+                                keyref="cve"/> и <abbreviated-form keyref="bdu_fstec"/>.</li>
+                    </ol></li>
+            </ol></p>
+        <p><ph>Результаты поиска уязвимостей с помощью <abbreviated-form keyref="cve"/>,
+                    <abbreviated-form keyref="cpe"/> и <abbreviated-form keyref="bdu_fstec"/> можно
+                просмотреть в <term keyref="appliance"/>е несколькими способами:</ph><ul
+                id="ul_aqx_jjh_myb">
+                <li>Скачать отчет формата <codeph>*.csv</codeph>, который будет содержать список
+                    уязвимостей объектов защиты, для которых выполнялся последний поиск. Подробнее
+                    см. раздел «<xref href="../prot_obj/prot_obj_settings/cve_report.dita"/>».</li>
+                <li>Просмотреть диаграмму и список уязвимостей <cite keyref="prot_obj_profile_fp">в
+                        карточке объекта защиты</cite>, для которого когда-либо выполнялся
+                    поиск.</li>
+                <li>Просмотреть статистику по обнаруженным уязвимостям для каждого объекта защиты.
+                    Статистика отображается на странице <cite keyref="prot_obj_fp"/> в столбце
+                        <uicontrol>Уязвимости</uicontrol>. Подробнее см. раздел «<xref
+                        href="../reference_info/datapk_architecture/color_indication/assets_statuses.dita"
+                    />».</li>
+                <li>Скачать отчет формата <codeph>*.csv</codeph>, который будет содержать результаты
+                    сопоставления <abbreviated-form keyref="OS"/> и <abbreviated-form
+                        keyref="software"/> со справочником <abbreviated-form keyref="cpe"/>.
+                    Подробнее см. раздел «<xref
+                        href="../prot_obj/prot_obj_settings/cpe_software_not_found.dita"/>».</li>
+            </ul></p>
+        <p><ph
+                conref="../reusable/cpe_soft_list_upload_ph.dita#ReusableComponent_xfv_vrr_xyb/ph_zfv_vrr_xyb"
+                /><note id="note_exd_d2k_qyb" type="tip">Точность, с которой для <abbreviated-form
+                    keyref="software"/> подобран элемент <abbreviated-form keyref="cpe"/>,
+                указывается в отчете в виде относительного коэффициента
+                    <uicontrol>map_confidence</uicontrol> в диапазоне от 0 до 1.</note></p>
+    </body>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="exp_imp_stream_rules_file">
+ <title>Экспорт и импорт правил управления потоками данных</title>
+ <body>
+ <p>Экспорт и импорт правил управления потоками данных осуществляется на странице <ph
+        conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+      /> на панели <uicontrol>Правила потоков</uicontrol>.</p>
+ 
+ <fig id="fig_p4x_ppp_5pb">
+ <title>Панель управления экспортом и импортом правил потоков</title>
+ <image href="../../../images/streams/exp_imp/flow_rules_exp_imp.png"
+ id="image_q4x_ppp_5pb">
+ <alt>Панель управления экспортом и импортом правил потоков</alt>
+ </image>
+ </fig>
+ 
+ <p>В этом разделе:</p>
+ <ul id="ul_jnp_3vz_pnb">
+ <li><xref href="export_stream_rules.dita"/></li>
+ <li><xref href="import_stream_rules.dita"/></li>
+ </ul>
+ </body>
+</topic>

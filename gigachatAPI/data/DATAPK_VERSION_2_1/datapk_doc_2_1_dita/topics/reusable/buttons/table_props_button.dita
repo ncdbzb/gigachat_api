@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="table_props_button">
+    <title>Кнопка настройки таблицы</title>
+    <body>
+        <p><ph id="table_props"><image href="../../../images/icons/table_props.png"
+                    id="image_checkbox"/></ph></p>
+    </body>
+</topic>

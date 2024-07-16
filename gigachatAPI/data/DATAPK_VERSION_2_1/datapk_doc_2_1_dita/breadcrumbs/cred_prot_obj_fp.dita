@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="cred_prot_obj_fp">
+    <glossterm>Учетные данные</glossterm>
+    <glossdef><p>Подраздел настроек активов, где можно просмотреть, добавить, отредактировать учетные данные для
+            сбора событий и конфигураций с объектов защиты. Пароль просмотреть нельзя.</p><fig id="fig_dkm_5mh_npb">
+            <title>Страница «Учетные данные ОЗ»</title>
+            <image href="../images/pages/prot_obj_cred_page_scr.png" id="image_ekm_5mh_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/cred_prot_obj_settings/cred_prot_obj_settings.dita"/>
+    </related-links>
+</glossentry>

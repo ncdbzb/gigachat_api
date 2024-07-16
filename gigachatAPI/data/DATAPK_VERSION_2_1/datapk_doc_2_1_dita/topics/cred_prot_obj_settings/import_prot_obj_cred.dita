@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_prot_obj_cred">
+ <title>Импорт учетных данных объектов защиты</title>
+ <taskbody>
+ <context>
+ <p>Для импорта списка учетных записей объектов защиты из файла формата <codeph>*.json</codeph> в <term keyref="appliance"/>е:</p>
+ </context>
+ <steps>
+   <step>
+    <cmd
+     conref="../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+    />
+   </step>
+ <step>
+        <cmd>На панели <uicontrol>Сбор данных</uicontrol> в строке <uicontrol>Учетные данные
+            объектов защиты</uicontrol> нажмите кнопку <ph
+            conref="../reusable/buttons/import_button.dita#ReusableComponent_bj1_d1p_pyb/ph_dj1_d1p_pyb"
+          />.</cmd>
+      </step>
+ <step><cmd>В открывшемся окне укажите расположение импортируемого файла формата <codeph>*.json</codeph> и подтвердите выбор.</cmd></step>
+ <step
+ conref="../reusable/import_action_step.dita#import_action_step/import_action_step">
+ <cmd/>
+ </step>
+ <step>
+        <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol> для выполнения импорта
+          справочника.</cmd>
+      </step>
+ <step>
+ <cmd>Убедитесь, что список учетных данных был успешно загружен.</cmd>
+ <stepresult>сразу после загрузки файла в правом вернем углу страницы <cite keyref="exchange_fp"/>
+          появится уведомление: <systemoutput>Список «Учетные данные объектов защиты» успешно
+            обновлен</systemoutput>, и на странице <ph
+            conref="../reusable/pages_breadcrumbs/cred.dita#ReusableComponent_gfw_vnk_qxb/ph_hfw_vnk_qxb"
+          /> появится импортированный список учетных записей.</stepresult>
+ </step>
+ </steps>
+ </taskbody>
+</task>

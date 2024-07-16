@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_hz1_5w4_lrb">
+
+ <title>grok_example</title>
+ <body> 
+ <codeblock id="codeblock_mz1_5w4_lrb">%{TIMESTAMP_ISO8601:date} %{WORD:method} %{IPV4:client} %{NUMBER:size} %{WORD:def} (?&lt;VerOs>.*)</codeblock> 
+</body> 
+</topic> 

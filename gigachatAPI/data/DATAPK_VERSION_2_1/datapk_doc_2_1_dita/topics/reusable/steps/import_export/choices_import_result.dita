@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dyy_zjd_gyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <choices id="choices_wr1_wff_wnb">
+                    <choice>Если файл импортирован успешно, в правом вернем углу под заголовком
+                            <uicontrol>Результат последнего импорта</uicontrol> появится
+                        уведомление: <systemoutput>Успешно</systemoutput>.</choice>
+                    <choice>Если произошла ошибка, в правом верхнем углу под заголовком
+                            <uicontrol>Результат последнего импорта</uicontrol> появится уведомление
+                            <systemoutput>Ошибка</systemoutput>. Для просмотра информации об ошибке
+                        нажмите ссылку <uicontrol>Подробнее</uicontrol> в подсказке <image
+                            href="../../../../images/icons/import_result_info.png"
+                            id="image_or2_fzx_lyb"/> рядом с уведомлением.</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

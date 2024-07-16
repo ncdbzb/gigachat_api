@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id_10">
+        <title>Описание
+уровней
+иерархии</title>
+        <body>
+          <p>В <term keyref="cert_appliance_name_short"/>
+реализован
+механизм,
+предоставляющий
+возможности
+по
+выстраиванию
+3 уровней
+иерархии.
+Каждый
+уровень
+иерархии
+представлен
+отдельным
+вариантом
+исполнения
+<term keyref="cert_appliance_name_short"/>:</p>
+          <ul>
+            <li>
+        <i>
+          <u><term keyref="cert_appliance_name_short"/> уровня Sensor</u>
+        </i> — обладает базовым набором функций по анализу сетевого трафика и получению информации с
+        объектов защиты технологического комплекса. Не может функционировать без подключения к
+        уровню Management.</li>
+            <li>
+        <i>
+          <u><term keyref="cert_appliance_name_short"/> уровня Management</u>
+        </i> — обладает функционалом управления <term keyref="cert_appliance_name_short"/> уровня
+        Sensor, а также возможностью анализа и корреляции событий безопасности. Не может
+        функционировать при отсутствии подключенных к нему уровней Sensor.</li>
+            <li>
+        <i>
+          <u><term keyref="cert_appliance_name_short"/> уровня SuperVision</u>
+        </i> — обладает функционалом, предоставления сводной информации о состоянии ИБ всех систем,
+        защищаемых <term keyref="cert_appliance_name_short"/> уровней Management и Sensor,
+        осуществляет централизованное обновление, настройку анализа защищенности, парольной
+        политики, правил потоков данных всей инсталляции <term keyref="cert_appliance_name_short"
+        />.</li>
+          </ul>
+          <p>Допустимо на одной аппаратной платформе размещать <term
+        keyref="cert_appliance_name_short"/> уровня Sensor и <term
+        keyref="cert_appliance_name_short"/> уровня Management.</p>
+          <p>Лицензионные ограничения на количество сетевых интерфейсов на аппаратной платформе или
+      виртуальной машине отсутствуют.</p>
+          <p>В
+минимальной
+инсталляции
+необходимо
+приобретать
+<term keyref="cert_appliance_name_short"/> уровня Sensor и
+<term keyref="cert_appliance_name_short"/> уровня
+Management.</p>
+          <p>Функционирование <term keyref="cert_appliance_name_short"/> уровня Sensor невозможно без подключения к <term keyref="cert_appliance_name_short"/> уровня
+      Management.</p>
+          <p>Функционирование <term keyref="cert_appliance_name_short"/> уровня Management невозможно при отсутствии хотя бы одного
+      подключенного к нему <term keyref="cert_appliance_name_short"/> уровня Sensor.</p>
+          <p>Функционирование <term keyref="cert_appliance_name_short"/> уровня SuperVision невозможно при отсутствии хотя бы одного
+      подключенного к нему <term keyref="cert_appliance_name_short"/> уровня Management. Рекомендуется приобретать <term keyref="cert_appliance_name_short"/> уровня
+      SuperVision при наличии хотя бы 2 <term keyref="cert_appliance_name_short"/> уровня Management.</p>
+
+          <p>
+      <fig id="cl_datapk_hierarchy">
+        <title>Структурная схема иерархии ПК CL DATAPK</title>
+        <image href="../../../images/deployment/cl_datapk/cl_datapk_hierarchy.png"
+          id="image_g23_jj3_g5b"/>
+      </fig>
+      <fig id="cl_datapk_levels">
+        <title>Схема информационных потоков на различных уровнях иерархии ПК CL DATAPK</title>
+        <image href="../../../images/deployment/cl_datapk/cl_datapk_levels.png" id="image_h23_jj3_g5b"
+        />
+      </fig>
+    </p>
+        </body>
+      </topic>

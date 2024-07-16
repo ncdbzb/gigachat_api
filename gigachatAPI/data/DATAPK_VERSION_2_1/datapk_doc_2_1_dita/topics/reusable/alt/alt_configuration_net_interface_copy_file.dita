@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_h3z_c2d_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_i3z_c2d_2zb">
+                        <cmd>Скопируйте файл конфигурации настроенного сетевого интерфейса управления <codeph>options</codeph> (в данном примере это <codeph>ens192</codeph>) в созданную ранее директорию по команде:</cmd><info><codeblock id="codeblock_g1z_m1g_myb">cp /etc/net/ifaces/ens192/options /etc/net/ifaces/ens224/</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

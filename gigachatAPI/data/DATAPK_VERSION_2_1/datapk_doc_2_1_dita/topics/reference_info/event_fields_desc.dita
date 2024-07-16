@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="event_fields_desc">
+    <title>Описание полей событий</title>
+    <body>
+        <p>Для каждого события предусмотрен набор полей в которых отображается уникальная для
+            события информация.</p>
+        <p>
+            <table id="table_ts1_lvs_mtb">
+                <title>Основные поля событий</title>
+                <tgroup cols="3">
+                    <colspec colnum="1" colwidth="15%" colname="col1"/>
+                    <colspec colnum="2" colwidth="42%" colname="col2"/>
+                    <colspec colnum="3" colwidth="42%" colname="col3"/>
+                    <thead>
+                        <row>
+                            <entry>Поле</entry>
+                            <entry>Описание</entry>
+                            <entry>Примеры значения поля</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>action</entry>
+                            <entry>Краткое описание действия</entry>
+                            <entry>detect, block, permit, audit_success, connection success,
+                                connection failure, auth success </entry>
+                        </row>
+                        <row>
+                            <entry>additional_information </entry>
+                            <entry>Дополнительная информация о действии или его результате</entry>
+                            <entry>rpc_s_access_denied</entry>
+                        </row>
+                        <row>
+                            <entry>category</entry>
+                            <entry>Классификация события по результату или источнику</entry>
+                            <entry>OK</entry>
+                        </row>
+                        <row>
+                            <entry>create_time </entry>
+                            <entry>Время регистрации события на источнике. Может не совпадать с
+                                часовым поясом Комплекса</entry>
+                            <entry>11.05.2022 @ 18:42:33.789</entry>
+                        </row>
+                        <row>
+                            <entry>recieve_time</entry>
+                            <entry>Время регистрации события в Комплексе</entry>
+                            <entry>11.05.2022 @ 18:45:06.123</entry>
+                        </row>
+                        <row>
+                            <entry>description</entry>
+                            <entry>Краткое описание события</entry>
+                            <entry>Create incoming message</entry>
+                        </row>
+                        <row>
+                            <entry>event_code</entry>
+                            <entry>
+                                <p>Идентификатор или классификатор типа события</p>
+                            </entry>
+                            <entry>1170004</entry>
+                        </row>
+                        <row>
+                            <entry>event_type</entry>
+                            <entry>Тип события</entry>
+                            <entry>info_exchange</entry>
+                        </row>
+                        <row>
+                            <entry>observer_id</entry>
+                            <entry>ID регистратора события: ОЗ, сенсора или Комплекса</entry>
+                            <entry>9429058a-835a-4f9e-a666-ee5799b33db0</entry>
+                        </row>
+                        <row>
+                            <entry>observer_name</entry>
+                            <entry>Сетевое имя регистратора события: ОЗ, сенсора или Комплекса</entry>
+                            <entry>datapk-vm-tk2-test-244-36</entry>
+                        </row>
+                        <row>
+                            <entry>id</entry>
+                            <entry>Уникальный идентификатор события</entry>
+                            <entry>019b35f6-2b98-47de-a3d0-c37c554029a6</entry>
+                        </row>
+                        <row>
+                            <entry>observer_ip</entry>
+                            <entry>IP-адрес регистратора события: ОЗ, сенсора или Комплекса</entry>
+                            <entry>10.51.203.99</entry>
+                        </row>
+                        <row>
+                            <entry>message </entry>
+                            <entry>Исходное (оригинальное) событие</entry>
+                            <entry>Выявлена ошибка подключения к объекту защиты 192.168.243.80 по
+                                MSRPC: rpc_s_access_denied</entry>
+                        </row>
+                        <row>
+                            <entry>protocol</entry>
+                            <entry>Протокол взаимодействия/API/ID канала инфообмена</entry>
+                            <entry>ssh</entry>
+                        </row>
+                        <row>
+                            <entry>receive_time </entry>
+                            <entry>Время регистрации события на <term keyref="appliance"/>е</entry>
+                            <entry>11.05.2022 @ 18:30:11.960</entry>
+                        </row>
+                        <row>
+                            <entry>severity </entry>
+                            <entry>Важность события</entry>
+                            <entry>critical</entry>
+                        </row>
+                        <row>
+                            <entry>listener</entry>
+                            <entry>Наименование служебного источника событий</entry>
+                            <entry>event_log_sensor</entry>
+                        </row>
+                        <row>
+                            <entry>source_ip </entry>
+                            <entry>IP-адрес отправителя (объекта защиты)</entry>
+                            <entry>10.51.203.19</entry>
+                        </row>
+                        <row>
+                            <entry>source_mac</entry>
+                            <entry>MAC-адрес отправителя (объекта защиты)</entry>
+                            <entry>00:50:56:B7:2C:3C</entry>
+                        </row>
+                        <row>
+                            <entry>source_id</entry>
+                            <entry>Идентификатор отправителя (объекта защиты)</entry>
+                            <entry>f37b0f20-c1f5-4401-9240-0cfccd9daa58</entry>
+                        </row>
+                        <row>
+                            <entry>source_hostname</entry>
+                            <entry>Наименование отправителя (объекта защиты)</entry>
+                            <entry>datapk-vm-tk2-test-244-36</entry>
+                        </row>
+                        <row>
+                            <entry>source_port</entry>
+                            <entry>Порт отправителя (объекта защиты)</entry>
+                            <entry>5353</entry>
+                        </row>
+                        <row>
+                            <entry>target_ip </entry>
+                            <entry>IP-адрес получателя (объекта защиты)</entry>
+                            <entry>10.51.203.9</entry>
+                        </row>
+                        <row>
+                            <entry>target_mac </entry>
+                            <entry>MAC-адрес получателя (объекта защиты)</entry>
+                            <entry>00:50:56:B7:2C:3C</entry>
+                        </row>
+                        <row>
+                            <entry>target_id</entry>
+                            <entry>Идентификатор получателя (объекта защиты)</entry>
+                            <entry>2098ebf1-7e32-4d8f-8b0e-3cfc92e9e921</entry>
+                        </row>
+                        <row>
+                            <entry>target_hostname</entry>
+                            <entry>Наименование получателя (объекта защиты)</entry>
+                            <entry>WIN-7</entry>
+                        </row>
+                        <row>
+                            <entry>target_port</entry>
+                            <entry>Порт получателя (объекта защиты)</entry>
+                            <entry>80</entry>
+                        </row>
+                        <row>
+                            <entry>type</entry>
+                            <entry>Тип</entry>
+                            <entry>event</entry>
+                        </row>
+                        <row>
+                            <entry>user</entry>
+                            <entry>Логин пользователя, инициировавшего событие</entry>
+                            <entry>aivanov</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

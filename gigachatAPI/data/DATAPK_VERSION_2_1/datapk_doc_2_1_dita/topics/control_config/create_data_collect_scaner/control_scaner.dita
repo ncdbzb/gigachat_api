@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="control_scaner">
+    <title>Управление сканерами сбора данных</title>
+    <task id="task_ozt_jbh_myb">
+        <title>Просмотр информации о сканере</title>
+        <taskbody>
+            <context id="context_mnn_lbh_myb">Для просмотра:</context>
+            <steps id="steps_fhk_lbh_myb">
+                <step>
+                    <cmd>Наведите курсор на строку со сканером, информацию о котором необходимо
+                        просмотреть.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../../images/icons/info.png"
+                            id="image_ntj_4bh_myb"/> (<uicontrol>Просмотреть информацию о сканере</uicontrol>) напротив
+                        него.</cmd>
+                    <stepresult>появится окно <uicontrol>Просмотр информации о сканере</uicontrol>.<fig
+                            id="fig_x3v_4bh_myb">
+                            <title>Окно просмотра информации о сканере</title>
+                            <image
+                                href="../../../images/control_config/scaners/scaner_view_window.png"
+                                id="image_y3v_4bh_myb">
+                                <alt>Окно просмотра информации о сканере</alt>
+                            </image>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>Для выхода из окна нажмите <uicontrol>Закрыть</uicontrol>.</cmd>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_kmy_rbh_myb">
+        <title>Запуск сканера</title>
+        <taskbody>
+            <context id="context_wql_tbh_myb">Для запуска:</context>
+            <steps id="steps_ycj_tbh_myb">
+                <step>
+                    <cmd>Наведите курсор на строку со сканером, который необходимо запустить.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../../images/icons/play_2.png"
+                            id="image_o2c_lys_m5b"/> (<uicontrol>Запустить сканирование</uicontrol>) напротив
+                        него.</cmd>
+                    <stepresult>появится окно <uicontrol>Запуск сканера</uicontrol>.</stepresult>
+                </step>
+                <step>
+                    <cmd>Выберите <term keyref="appliance"/> и объект защиты для сбора данных. </cmd>
+                    <info>
+                        <fig>
+                            <title>Окно «Запуск сканера»</title>
+                            <image href="../../../images/control_config/scaners/scaner_run.png"
+                                id="image_kwx_zbh_myb"/>
+                        </fig>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Нажмите <uicontrol>Запустить</uicontrol> или <uicontrol>Запустить и перейти к ОЗ</uicontrol>.</cmd>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_ehf_nrk_xzb">
+        <title>Повторный запуск сканера</title>
+        <taskbody>
+            <context id="context_dbh_4rk_xzb">Для повторного запуска однократного сбора данных на
+                объекте защиты:</context>
+            <steps id="steps_jrg_prk_xzb">
+                <step>
+                    <cmd>Перейдите в раздел <uicontrol>Инспекция активов</uicontrol> ->
+                            <uicontrol>Статус сбора</uicontrol>.</cmd>
+                    <stepresult>откроется таблица <uicontrol>Статус сбора</uicontrol>.</stepresult>
+                </step>
+                <step>
+                    <cmd>При необходимости отфильтруйте список статусов, чтобы найти строку с
+                        требуемым объектом защиты и сканером, который ранее запускался на этом
+                        ОЗ.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../../images/icons/restore_indicies.png"
+                            id="image_xqr_gvk_xzb"/>(<uicontrol>Запустить сканирование
+                            повторно</uicontrol>) справа в выбранной строке таблицы. </cmd>
+                    <stepresult>появится уведомление об успешном запуске сканирования.<fig
+                            id="fig_czs_qxk_xzb">
+                            <title>Уведомление о запуске сканирования</title>
+                            <image
+                                href="../../../images/control_config/scaners/scaner_notification.png"
+                                id="image_dzs_qxk_xzb"/>
+                        </fig></stepresult>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_rfw_cch_myb">
+        <title>Редактирование сканера</title>
+        <taskbody>
+            <context id="context_omd_dch_myb">Для редактирования:</context>
+            <steps id="steps_t3b_dch_myb">
+                <step>
+                    <cmd>Наведите курсор на строку со сканером, который необходимо изменить.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <ph
+                            conref="../../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                        /> напротив него.</cmd>
+                    <stepresult>появится окно <uicontrol>Редактирование сканера</uicontrol>.</stepresult>
+                </step>
+                <step>
+                    <cmd>Измените необходимые параметры сканера.</cmd>
+                    <info>
+                        <fig id="fig_k5p_hch_myb">
+                            <title>Окно «Редактирование сканера»</title>
+                            <image
+                                href="../../../images/control_config/scaners/scaner_settings_window.png"
+                                id="image_l5p_hch_myb">
+                                <alt>Окно «Редактирование сканера»</alt>
+                            </image>
+                        </fig>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_v1w_kch_myb">
+        <title>Удаление сканера</title>
+        <taskbody>
+            <context id="context_pvd_lch_myb">Для удаления:</context>
+            <steps id="steps_rlb_lch_myb">
+                <step>
+                    <cmd>Наведите курсор на строку со сканером, который необходимо удалить.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <ph
+                            conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                        /><uicontrol> сканер</uicontrol>) напротив него.</cmd>
+                    <stepresult>появится окно ввода обоснования удаления сканера.</stepresult>
+                </step>
+                <step>
+                    <cmd>Введите обоснование удаление сканера и нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+                    <info>
+                        <fig id="fig_qv1_pch_myb">
+                            <title>Окно ввода обоснования удаления</title>
+                            <image href="../../../images/windows/approve_del_window.png"
+                                id="image_rv1_pch_myb">
+                                <alt>Окно ввода обоснования удаления</alt>
+                            </image>
+                        </fig>
+                    </info>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_d1z_pch_myb">
+        <title>Групповое удаление сканеров</title>
+        <taskbody>
+            <context id="context_wkf_qch_myb">Для удаления группы сканеров:</context>
+            <steps id="steps_thd_qch_myb">
+                <step>
+                    <cmd>Получите необходимую выборку сканеров:</cmd>
+                    <substeps id="substeps_znn_rch_myb">
+                        <substep>
+                            <cmd>Выберите группу сканеров в левой части страницы.</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>При необходимости отфильтруйте список сканеров: нажмите кнопку
+                                    <image href="../../../images/icons/filter.png"
+                                    id="image_pq1_r1g_vzb"/>,  выберите настройки фильтрации и
+                                нажмите кнопку <uicontrol>Применить</uicontrol>.</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Отметьте все отфильтрованные сканеры на удаление с помощью чекбокса
+                                в заголовке таблицы, либо отметьте отдельные сканеры с помощью
+                                чекбоксов рядом со сканерами.</cmd>
+                        </substep>
+                    </substeps>
+                </step>
+                <step>
+                    <cmd>Нажмите кнопку <image href="../../../images/icons/delete_scaners.png"
+                            id="image_yv3_5ch_myb"/> в верхней части страницы.</cmd>
+                </step>
+                <step>
+                    <cmd>В открывшемся окне введите обоснование удаления сканеров и нажмите кнопку
+                            <uicontrol>Подтвердить</uicontrol>.</cmd>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+</task>

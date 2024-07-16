@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id_6">
+      <title>Системные
+требования
+и
+характеристики
+базовых
+платформ</title>
+      <body>
+
+        <p>Системные характеристики рекомендуемых к выбору базовых платформ <term keyref="cert_appliance_name_short"/> приведены в
+          таблице <xref href="#id_6/Ref42248687"/>. Требования к аппаратной платформе при инсталляции <term keyref="cert_appliance_name_short"/>
+          в виде <abbreviated-form keyref="software"/> соответствуют системным требованиям
+          базовых платформ <term keyref="cert_appliance_name_short"/>. Ограничения производительности <term keyref="cert_appliance_name_short"/> в рамках базовых платформ
+      приведены в разделе <xref href="cl_datapk_restrictions.dita#Ref98841373"/>.</p>
+       
+        <table id="Ref42248687">
+          <title>Системные
+            характеристики
+            базовых
+            платформ <term keyref="cert_appliance_name_short"/></title>
+          <tgroup cols="4">
+            <colspec colname="col1" colnum="1"/>
+            <colspec colname="col2" colnum="2"/>
+            <colspec colname="col3" colnum="3"/>
+            <colspec colname="col4" colnum="4"/>
+            <thead>
+              <row>
+                <entry>
+Характеристика</entry>
+                <entry nameend="col3" namest="col2">Платформа
+уровня Sensor</entry>
+                <entry>Платформа
+уровня Management /
+SuperVision</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Форм-фактор</entry>
+                <entry nameend="col3" namest="col2">Малогабаритная платформа промышленного
+              исполнения</entry>
+                <entry>
+Высокопроизводительная
+платформа
+уровня
+предприятия</entry>
+              </row>
+              <row>
+                <entry>Процессор</entry>
+                <entry nameend="col3" namest="col2">Intel Core i7, 4 ядра, не
+менее 3.2 ГГц</entry>
+                <entry>Intel Xeon, не менее 8
+ядер, не
+менее 2.5 ГГц</entry>
+              </row>
+              <row>
+                <entry>Оперативная память</entry>
+                <entry nameend="col3" namest="col2">32 ГБ</entry>
+                <entry>Не менее 64
+ГБ</entry>
+              </row>
+              <row>
+                <entry>Дисковая
+подсистема</entry>
+                <entry nameend="col3" namest="col2">512 ГБ SSD</entry>
+                <entry>
+                  <p>2×960 ГБ SSD (RAID1) для
+уровня Management</p>
+                  <p>4×960 ГБ SSD (RAID10) для уровня SuperVision</p>
+                </entry>
+              </row>
+              <row>
+                <entry>Сетевые
+адаптеры</entry>
+                <entry nameend="col3" namest="col2">От 6×100/1000
+Мбит/с Ethernet</entry>
+                <entry>
+                  <p>2×1000 Мбит/с Ethernet</p>
+                  <p>2×100/1000 Мбит/с Ethernet</p>
+                </entry>
+              </row>
+              <row>
+                <entry>Электропитание</entry>
+                <entry nameend="col3" namest="col2">120 Вт,
+внешний,
+евророзетка</entry>
+                <entry>Отказоустойчивое питание, C13-C14</entry>
+              </row>
+              <row>
+                <entry>Тип
+охлаждения</entry>
+                <entry nameend="col3" namest="col2">Пассивное</entry>
+                <entry>Активное</entry>
+              </row>
+              <row>
+                <entry>Рабочая
+температура</entry>
+                <entry nameend="col3" namest="col2">-40...+50 °С</entry>
+                <entry>+10…+35 °С</entry>
+              </row>
+              <row>
+                <entry>Сертификаты</entry>
+                <entry>
+                  <p>RoHS, FCC, CE, ЕАС</p>
+                  <p>IEC 60068-2-64 (СКО 3G, 5 — 500 Гц)</p>
+                  <p>IEC 60068-2-27 (50G,
+полусинусоида,
+длительность
+11 мс)</p>
+                </entry>
+                <entry nameend="col4" namest="col3">RoHS, FCC, CE, ЕАС</entry>
+              </row>
+              <row>
+                <entry>Размеры</entry>
+                <entry nameend="col3" namest="col2">280 × 210 × 79,6 мм</entry>
+                <entry>43 мм × 447 мм × 748
+мм</entry>
+              </row>
+              <row>
+                <entry>Монтаж</entry>
+                <entry nameend="col3" namest="col2">На полку,
+на DIN-рейку</entry>
+                <entry>Монтажная
+стойка 19”</entry>
+              </row>
+              <row>
+                <entry>Масса</entry>
+                <entry nameend="col3" namest="col2">6 кг</entry>
+                <entry>25 кг</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </body>
+    </topic>

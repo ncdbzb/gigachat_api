@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_xdf_vw4_lrb">
+
+ <title>grok_example_1</title>
+ <body> 
+ <codeblock id="codeblock_d2f_vw4_lrb">filter {
+ if [type] == "event" and [message] =~ "EventLog" {
+ grok {
+ # События SCADA
+ #
+ # Пример:
+ # type="Info" message="TrainView session is ended" result="" source="User: admin"
+ match => {"[message]" => "type=\"%{WORD:SCADA_type}\" message=\"%{GREEDYDATA:SCADA_message}\" result=\"%{GREEDYDATA:SCADA_result}\" source=\"%{GREEDYDATA:SCADA_sourse}\"" }
+ add_field => {"event_type" => "eventlog" }
+ tag_on_failure => []
+ }
+ }
+}</codeblock> 
+</body> 
+</topic> 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="edit_or_del_group">
+ <title>Редактирование и удаление классификаторов</title>
+ <taskbody>
+   <context>
+ <p>Для управления созданными ранее классификаторами доступны следующие возможности:</p>
+     </context>
+    <steps id="steps_yy2_2wh_ssb">
+      <step>
+        <cmd>Редактирование. Для редактирования классификатора:</cmd>
+        <substeps id="substeps_c1h_pwh_ssb">
+          <substep>
+            <cmd><ph
+                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><ph
+                conref="../reusable/pages_breadcrumbs/ref.dita#ReusableComponent_psy_wz2_qxb/ph_qsy_wz2_qxb"
+              />.</cmd>
+          </substep>
+          <substep>
+            <cmd>Напротив классификатора, который необходимо изменить, нажмите <image
+              href="../../images/icons/edit.png" id="image_ozr_swh_ssb"/> (<uicontrol>Редактировать</uicontrol>). </cmd>
+            <info>
+              <fig id="fig_cxh_5wh_ssb">
+                <title>Кнопка редактирования классификатора</title>
+                <image href="../../images/hosts/groups_edit_del/new_group.png"
+                  id="image_dxh_5wh_ssb"/>
+              </fig>
+            </info>
+            <stepresult>появится окно <uicontrol>Редактирование метки</uicontrol>, либо <uicontrol>Редактирование АСУ ТП</uicontrol>, в
+              зависимости от выбора типа классификатора.</stepresult>
+          </substep>
+          <substep>
+            <cmd>В окне редактирования классификатора измените необходимые параметры.</cmd>
+            <info>
+              <fig id="fig_kdb_3xh_ssb">
+                <title>Окно «Редактирование метки»</title>
+                <image href="../../images/hosts/create_group/edit_group_window.png"
+                  id="image_ldb_3xh_ssb">
+                  <alt>Окно «Редактирование метки»</alt>
+                </image>
+              </fig>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Удаление. Для удаления классификатора:</cmd>
+        <substeps id="substeps_del">
+          <substep>
+            <cmd><ph
+                conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><cite keyref="ref_fp"/>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Напротив классификатора, который необходимо удалить, нажмите <ph
+                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"/>). </cmd>
+            <stepresult><p>появится окно подтверждения удаления АСУ ТП, либо метки, в зависимости от выбора типа
+                  классификатора.<fig id="fig_fpn_tzz_vyb">
+                  <title>Окно подтверждения удаления АСУ ТП</title>
+                  <image href="../../images/windows/approve_del_window_ICS.png"
+                    id="image_gpn_tzz_vyb"/>
+                </fig></p>
+              <fig id="fig_dnw_rtg_wyb">
+                <title>Окно подтверждения удаления метки</title>
+                <image href="../../images/windows/approve_del_window_tag.png" id="image_uzc_rtg_wyb"
+                />
+              </fig>
+            </stepresult>
+          </substep>
+          <substep>
+            <cmd>Нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+    </steps>
+ </taskbody>
+</task>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_y35_rmd_gyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult id="stepresult_cj5_rmd_gyb"><p>будет запущен процесс импорта: в правом
+                        верхнем углу появится уведомление <systemoutput>Запущен импорт
+                            справочника</systemoutput>, а под заголовком <uicontrol>Результат
+                            последнего импорта</uicontrol> будет символ
+                            <systemoutput>-</systemoutput>.</p><note type="tip"
+                        id="note_rzx_y3d_gyb">Операции импорта являются фоновыми — со страницы можно
+                        безопасно уходить.</note></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

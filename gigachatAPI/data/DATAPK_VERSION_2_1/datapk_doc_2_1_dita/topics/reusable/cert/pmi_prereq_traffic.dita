@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wqy_ckz_zxb">
+    <title/>
+    <taskbody>
+        <prereq id="prereq_h5s_thy_zxb">При отсутствии возможности подачи трафика с активного
+            сетевого оборудования стенда проверка может проводиться с использованием дампов трафика
+            (*.pcap).</prereq>
+    </taskbody>
+</task>

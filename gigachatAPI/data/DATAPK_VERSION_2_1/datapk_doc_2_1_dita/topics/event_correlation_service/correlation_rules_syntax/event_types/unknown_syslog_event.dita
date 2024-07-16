@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="unknown_syslog_event">
+ <title>События syslog</title>
+ <body>
+ <p>Доступные для событий syslog поля приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#unknown_syslog_event/table_svz_5zw_vnb"/>)</ph>.</p>
+ <table id="table_svz_5zw_vnb">
+ <title>Поля для событий syslog</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" align="center" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>event_code</entry>
+ <entry>Уникальный идентификатор события. Используется facility+severity из
+ protocol_specific_data.</entry>
+ </row>
+ <row>
+ <entry>ip</entry>
+ <entry>IP-адрес <abbreviated-form keyref="host"/>.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </body>
+</topic>

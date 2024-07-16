@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="exp_imp_events">
+ <title>Экспорт и импорт источников событий</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_t52_jhm_rnb">
+ <li><xref href="export_events_source.dita"/></li>
+ <li><xref href="import_events_source.dita"/></li>
+ </ul>
+ </body>
+</topic>

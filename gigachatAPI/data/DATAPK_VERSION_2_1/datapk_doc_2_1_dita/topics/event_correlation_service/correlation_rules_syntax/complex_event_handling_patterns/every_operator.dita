@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="every_operator">
+ <title>Оператор «EVERY»</title>
+ <body>
+ <p>Рассмотренное в разделе «<xref href="pattern_command.dita"/>» правило «каждое совпадение
+ событий A → B» представляется возможным благодаря оператору «EVERY».</p>
+ <example>
+ <p>Для примера возьмем поток событий: «A<sub>1</sub> B<sub>1</sub> C<sub>1</sub>
+ B<sub>2</sub> A<sub>2</sub> D<sub>1</sub> A<sub>3</sub> B<sub>3</sub>
+ E<sub>1</sub> A<sub>4</sub> F<sub>1</sub> B<sub>4</sub>», где буква обозначает
+ событие, а индекс — номер события данного типа.</p>
+ <p>При написании следующей конструкции:</p>
+ <p>
+ <codeblock outputclass="language-sql">EVERY ( A → B )</codeblock>
+ </p>
+ <p>совпадения будут в следующих комбинациях:</p>
+ <p>
+    <codeblock conref="../../../reusable/code_examples/corr_every_1.dita#ReusableComponent_wzv_cw4_lrb/codeblock_b1w_cw4_lrb"/>
+   </p>
+ <p>При конструкции:</p>
+ <p>
+ <codeblock outputclass="language-sql">EVERY A → B</codeblock>
+ </p>
+ <p>будут комбинации:</p>
+   <codeblock conref="../../../reusable/code_examples/corr_every_2.dita#ReusableComponent_zqg_2w4_lrb/codeblock_grg_2w4_lrb"/>
+ <p>Следующая конструкция:</p>
+ <codeblock outputclass="language-sql">A → EVERY B</codeblock>
+ <p>выберет данные комбинации:</p>
+   <codeblock conref="../../../reusable/code_examples/corr_every_3.dita#ReusableComponent_jp3_fw4_lrb/codeblock_pp3_fw4_lrb"/>
+ <p>И при заключительном варианте:</p>
+ <codeblock outputclass="language-sql">EVERY A → EVERY B</codeblock>
+ <p>результат будет следующим:</p>
+   <codeblock conref="../../../reusable/code_examples/corr_every_4.dita#ReusableComponent_ds5_gw4_lrb/codeblock_js5_gw4_lrb"/>
+ </example>
+ </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gwp_c1m_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step >
+                <cmd></cmd>
+               <substeps>
+                   <substep id="substep_lwp_c1m_21c">
+                       <cmd>Выберите пункт меню <uicontrol>Install Alt Server 10.1 x86_64</uicontrol> и 
+                           нажмите клавишу <uicontrol>E</uicontrol>.</cmd>
+                       <info><fig id="fig_fpr_q5x_lyb">
+                           <title>Экран выбора действия после монтирования образа ОС Альт Сервер</title>
+                           <image href="../../../images/deployment/alt/after_mounting.png" id="image_zxq_m5x_lyb"/>
+                       </fig>
+                       </info>
+                   </substep>
+               </substeps>
+            </step>
+        </steps>     
+    </taskbody>
+</task>

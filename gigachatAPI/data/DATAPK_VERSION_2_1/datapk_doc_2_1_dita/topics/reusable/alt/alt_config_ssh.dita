@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_w24_3zv_dzb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_x24_3zv_dzb">
+                <cmd>Настройте доступ по протоколу SSH:</cmd>
+                <substeps id="substeps_ywt_mcv_dzb"><substep>
+                    <cmd>Откройте конфигурационный файл <codeph>sshd_config</codeph>: </cmd>
+                    <info>
+                        <codeblock>nano /etc/openssh/sshd_config</codeblock>
+                    </info>
+                </substep>
+                    <substep>
+                        <cmd> Раскомментируйте следующие параметры, удалив символ
+                            <codeph>#</codeph>:</cmd>
+                        <info>
+                            <codeblock>GSSAPIAuthentication no
+UseDNS no</codeblock>
+                            <note id="note_pjx_khg_fzb">В конфигурационном файле
+                                    <codeph>sshd_config</codeph> можно также настроить доступ к
+                                комплексу по протоколу SSH для учетной записи суперпользователя. Для
+                                этого необходимо раскомментировать параметр <codeph>PermitRootLogin
+                                    without-password</codeph> и изменить его на
+                                    <codeph>PermitRootLogin yes</codeph>, но делать это не
+                                рекомендуется.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd> Закройте конфигурационный файл <codeph>sshd_config</codeph> с сохранением изменений.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для применения новых настроек перезапустите службу SSH:</cmd>
+                        <info>
+                            <codeblock id="codeblock_tqn_5sv_41c">systemctl restart sshd</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+       
+    </taskbody>
+</task>

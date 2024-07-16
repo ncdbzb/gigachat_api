@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="group_scaner">
+    <title>Группировка сканеров сбора данных</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_gh1_wty_vsb">
+            <li><xref keyref="create_scaner"/></li>
+            <li><xref keyref="add_scaner_to_group"/></li>
+            <li><xref keyref="control_scaner_group"/></li>
+        </ul>
+        
+            <p>Для использования сканеров в задачах необходима группировка существующих сканеров
+            сбора данных. Группы сканеров отображаются на странице <cite keyref="scaners_fp"/> в
+            левой части страницы.</p>
+        <fig id="fig_bsz_ryf_wsb">
+            <title>Панель управления сканерами сбора данных</title>
+            <image href="../../../images/control_config/scaners/scaner_groups.png"
+                id="image_csz_ryf_wsb">
+                <alt>Панель управления сканерами сбора данных</alt>
+            </image>
+        </fig>
+        <p>Если в списке выбрана конкретная группа сканеров, то фильтры будут применяться только для
+            элементов этой группы.</p>
+    </body>
+</topic>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="create_backups_by_export">
+ <title>Экспорт отдельных справочников</title>
+ <body>
+
+<p>В качестве дополнительного способа создания резервных копий в веб-интерфейсе можно выгружать
+   справочники объектов в файлы и сохранять их. В таблице ниже<ph outputclass="onlypdf"> (<xref href="#create_backups_by_export/table_l2z_l4h_snb"/>)</ph> приведены ссылки на разделы с
+   описанием выполнения резервных копий объектов <term keyref="appliance"/>а путем экспорта.</p>
+ <table frame="all" rowsep="1" colsep="1"
+ id="table_l2z_l4h_snb">
+ <title>Ссылки на разделы документа с описанием экспорта
+ объектов <term keyref="appliance"/>а</title>
+ <tgroup cols="3">
+ <colspec colname="c1" colnum="1" colwidth="30%"/>
+ <colspec colname="c2" colnum="2" colwidth="60%"/>
+ <colspec colname="c3" colnum="3" colwidth="10%"/>
+ <thead>
+ <row>
+  <entry>Наименование</entry>
+  <entry>Ссылка</entry>
+  <entry>Формат</entry>
+ </row>
+ </thead>
+ <tbody>
+     <row>
+      <entry>Правила разбора событий</entry>
+      <entry><xref
+        href="../../work_with_kibana/exp_imp_normalization/export_event_normalization.dita"
+       /></entry>
+      <entry><codeph>zip</codeph></entry>
+     </row>
+     <row>
+      <entry>Правила обогащения событий</entry>
+      <entry><xref href="../../work_with_kibana/exp_imp_normalization/export_event_enhancement.dita"
+       /></entry>
+      <entry><codeph>zip</codeph></entry>
+     </row>
+     <row>
+      <entry>Схема событий</entry>
+      <entry><xref href="../../work_with_kibana/exp_imp_normalization/export_event_mapping.dita"
+       /></entry>
+      <entry><codeph>zip</codeph></entry>
+     </row>
+     <row>
+      <entry>Иерархия <abbreviated-form keyref="ACS_and_TP"/></entry>
+      <entry><xref href="../../prot_obj/groups/exp_imp_ref/exp_ref.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Иерархия меток <abbreviated-form keyref="host"/></entry>
+      <entry><xref href="../../prot_obj/groups/exp_imp_ref/exp_tags.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Группы объектов защиты (без объектов защиты)</entry>
+      <entry><xref href="../../prot_obj/exp_imp_hosts/export_host_groups.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Политика корреляции</entry>
+      <entry><xref
+        href="../../event_correlation_service/exp_imp_correlation/export_policy_correlation.dita"
+       /></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Сканеры в составе групп сканеров</entry>
+      <entry><xref keyref="export_scanner"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Задачи сбора данных</entry>
+      <entry><xref keyref="export_task"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Статусы инцидентов</entry>
+      <entry><xref href="../../incidents/export_incident_statuses.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Правила службы обнаружения вторжений</entry>
+      <entry><xref href="../../IDS/exp_imp_IDS_rules/export_IDS_rules.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Группы <abbreviated-form keyref="oval_def"/>-определений</entry>
+      <entry><xref href="../../oval/exp_imp_oval/export_oval_definitions_group.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Скрипты <abbreviated-form keyref="oval_def"/></entry>
+      <entry><xref keyref="export_oval_script"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Настройки <abbreviated-form keyref="oval_def"/></entry>
+      <entry><xref keyref="export_oval_settings"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Правила потоков</entry>
+      <entry><xref href="../../streams/exp_imp/export_stream_rules.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Источники событий</entry>
+      <entry><xref href="../../control_prot_obj_events/exp_imp_events/export_events_source.dita"
+       /></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Сохраненные запросы, визуализации, панели мониторинга</entry>
+      <entry><xref href="../../work_with_kibana/exp_imp_kibana/export_kibana.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+     <row>
+      <entry>Объекты защиты</entry>
+      <entry><xref href="../../prot_obj/exp_prot_obj.dita"/></entry>
+      <entry><codeph>json</codeph></entry>
+     </row>
+    </tbody>
+ </tgroup>
+ </table>
+  <note id="note_gkq_pd3_nyb" type="attention"><ph>Экспорт следующих справочников недоступен в
+    веб-интерфейсе:</ph><ul id="ul_e54_sd3_nyb">
+    <li>учетные данные объектов защиты;</li>
+    <li>справочники ПО и уязвимостей (CPE и CVE) и база сопоставления собранного сканерами ПО со
+     справочником CPE. Экспорт этих справочников доступен только в операционной системе <term
+      keyref="appliance"/>а путем копирования директории <codeph><codeph
+       conref="../../reusable/filepath/cve.dita#ReusableComponent_lmf_mcd_zyb/codeph_mmf_mcd_zyb"
+      /></codeph> вместе с содержимым (по умолчанию расположена в директории <codeph
+      conref="../../reusable/filepath/opt.dita#opt/opt"/>);</li>
+    <li>правила корреляции и схема корреляции — экспорт доступен только в составе политики
+     корреляции;</li>
+    <li>наборы сигнатур правил обнаружения вторжений в формате Suricata — экспорт доступен только в
+     составе правил обнаружения вторжений;</li>
+    <li>OVAL-определения — экспорт доступен только в составе групп OVAL-определений.</li>
+   </ul></note>
+ 
+ </body>
+</topic>

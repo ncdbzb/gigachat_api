@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="ReusableComponent_yxq_4fr_pyb">
+    <glossterm/>
+    <glossdef><ph id="ph_nyq_4fr_pyb">Лимит памяти для обработки одного процесса сбора данных. При
+            превышении лимита в результаты сбора выводится ошибка <ph
+                conref="../systemoutputs/error_big_data_sysout.dita#ReusableComponent_ml5_2fr_pyb/ph_nl5_2fr_pyb"
+            />. Задается в мегабайтах</ph></glossdef>
+</glossentry>

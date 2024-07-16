@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="imp_oval_settings">
+ <title>Импорт настроек OVAL</title>
+ <taskbody>
+    <prereq id="prereq_xfr_34d_gyb">
+      <p>Убедитесь, что настройки <abbreviated-form keyref="oval_def"/> в импортируемом файле
+        подготовлены для корректной загрузки, а именно:</p>
+      <ul id="ul_axj_v2l_wnb">
+        <li>
+          <p>В <term keyref="appliance"/> уже импортированы скрипты <abbreviated-form
+              keyref="oval_def"/>, id которых указаны в каждой импортируемой настройке
+              <abbreviated-form keyref="oval_def"/>.</p>
+          <note id="note_qtm_zrd_gyb">Подробнее об импорте <abbreviated-form keyref="oval_def"/>
+            скриптов см. раздел «<xref href="import_oval_script.dita"/>».</note>
+        </li>
+        <li>
+          <p>В каждой настройке <abbreviated-form keyref="oval_def"/> указан хотя бы один из
+            следующих параметров, который будет связывать скрипты <abbreviated-form
+              keyref="oval_def"/> с существующими объектами защиты:</p>
+          <ul id="ul_tvq_z2l_wnb">
+            <li>метка ОЗ;</li>
+            <li>параметр <uicontrol>По умолчанию</uicontrol> (<codeph>is_default</codeph>);</li>
+            <li>список объектов защиты.</li>
+          </ul>
+        </li>
+      </ul>
+      <note type="warning" id="note_arr_xqd_gyb">Если в импортируемом файле присутствуют не все
+        параметры (метка, параметр <uicontrol>По умолчанию</uicontrol>, список объектов защиты),
+        настройка будет импортирована без них.</note>
+    </prereq>
+ <context id="context_cdk_czf_wnb">
+ <p>Для импорта групп настроек <abbreviated-form keyref="oval_def"/> из файла формата <codeph>*.json</codeph> в <term keyref="appliance"/>:</p>
+ </context>
+ <steps id="steps_ddk_czf_wnb">
+ <step>
+        <cmd
+          conref="../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+        />
+      </step>
+ <step>
+        <cmd>В блоке <uicontrol>OVAL</uicontrol> в строке <uicontrol>Настройки OVAL</uicontrol>
+          нажмите кнопку <ph
+            conref="../../reusable/buttons/import_button.dita#ReusableComponent_bj1_d1p_pyb/ph_dj1_d1p_pyb"
+          />.</cmd>
+      </step>
+ <step>
+ <cmd>В открывшемся окне укажите расположение импортируемого файла формата <codeph>*.json</codeph> и
+ подтвердите выбор.</cmd>
+ </step>
+   <step id="import_action_step">
+        <cmd
+          conref="../../reusable/steps/import_export/prepare_import_cmd.dita#ReusableComponent_d4n_1nd_gyb/cmd_e4n_1nd_gyb"/>
+        <choices
+          conref="../../reusable/steps/import_export/choices_import_same_elements.dita#ReusableComponent_gg1_grd_gyb/choices_syg_3vd_wnb"
+          id="choices_bl1_grd_gyb">
+          <choice/>
+        </choices>
+        <info>
+          <fig id="fig_thk_sby_vnb">
+            <title>Окно подготовки к импорту настроек OVAL</title>
+            <image href="../../../images/oval/oval_settings_import_window.png"
+              id="image_w1p_sby_vnb"/>
+          </fig>
+        </info>
+      </step>
+      <step id="step_mkr_pxd_wnb">
+        <cmd>Нажмите кнопку <uicontrol>Импортировать</uicontrol> для выполнения импорта.</cmd>
+        <stepresult
+          conref="../../reusable/steps/import_export/import_process_stepresult.dita#ReusableComponent_y35_rmd_gyb/stepresult_cj5_rmd_gyb"
+        />
+      </step>
+ <step>
+    <cmd>Убедитесь, что настройки <abbreviated-form keyref="oval_def"/> были успешно
+     загружены.</cmd>
+        <choices
+          conref="../../reusable/steps/import_export/choices_import_result.dita#ReusableComponent_dyy_zjd_gyb/choices_wr1_wff_wnb"
+          id="choices_pcz_zjd_gyb">
+          <choice/>
+        </choices>
+    <stepresult>в результате успешного импорта на странице <ph
+            conref="../../reusable/pages_breadcrumbs/oval_settings.dita#ReusableComponent_gtk_v4k_qxb/ph_htk_v4k_qxb"
+          /> появится импортированный справочник.</stepresult>
+   </step>
+ </steps>
+ </taskbody>
+</task>

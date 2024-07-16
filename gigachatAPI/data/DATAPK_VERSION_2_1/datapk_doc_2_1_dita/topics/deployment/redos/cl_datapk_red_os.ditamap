@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка и настройка ПК <term keyref="appliance_name_short"/> на базе RedOS</title>
+    <topicref href="install_datapk_redos.dita"/>
+    <topicref href="redos_settings.dita"/>
+    <topicref href="install_datapk_in_configured_redos.dita"/>
+    <topicref href="safe_way_to_work_w_appliance_redos.dita"/>
+</map>

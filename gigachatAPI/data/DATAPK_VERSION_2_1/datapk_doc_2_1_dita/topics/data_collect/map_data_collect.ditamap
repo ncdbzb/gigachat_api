@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Активный сбор данных с объектов защиты</title>
+    <topicref href="../control_config/view_config_summary.dita"/>
+    <topicref href="../control_config/control_config.dita">
+        <mapref href="../control_config/map_config.ditamap"/>
+    </topicref>
+    <topicref href="event_collection/event_collection.dita" keys="event_collection"/>
+    <topicref href="../control_config/os_soft/os_soft.dita">
+        <topicref href="../control_config/os_soft/os_soft_collection.dita" keys="os_soft_collection"
+        />
+    </topicref>
+</map>

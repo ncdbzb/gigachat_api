@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="edit_datapk_info">
+ <title>Изменение сведений о Комплексе и сенсорах</title>
+  <task id="task_w3f_1vv_fyb">
+    <title>Изменение сведений о текущем Комплексе</title>
+    <taskbody>
+      <steps id="steps_qc1_2vv_fyb">
+        <step>
+          <cmd><ph
+              conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+              /><cite keyref="appliance_control_fp"/> → <cite keyref="main_settings"/> → <cite
+              keyref="main_settings_fp"/>.</cmd>
+        </step>
+        <step>
+          <cmd>В блоке <uicontrol>Сведения о Комплексе</uicontrol> введите описание <term
+              keyref="appliance"/>а, наименование эксплуатирующей организации и место установки.
+            Наименование Комплекса настраивается автоматически.</cmd>
+          <info>
+            <fig id="fig_ll1_hvr_tnb">
+              <title>Страница «О системе»</title>
+              <image href="../../../images/pages/general_settings_page.png" id="image_ml1_hvr_tnb">
+                <alt>Страница основных сведений о <term keyref="appliance"/>е</alt>
+              </image>
+            </fig>
+          </info>
+        </step>
+        <step>
+          <cmd>Нажмите кнопку <uicontrol>Сохранить</uicontrol> для подтверждения изменений.</cmd>
+        </step>
+      </steps>
+    </taskbody>
+  </task>
+  <task id="task_pvy_3vv_fyb">
+    <title>Изменение сведений о сенсорах, подключенных к Комплексу</title>
+    <taskbody>
+      <steps id="steps_d5w_kvv_fyb">
+        <step>
+          <cmd><ph
+              conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+            <cite keyref="sensors_fp"/>.</cmd>
+        </step>
+        <step
+          conref="../../reusable/steps/hierarchy/choose_sensor_step.dita#ReusableComponent_zcc_1d2_czb/step_cdc_1d2_czb">
+          <cmd/>
+        </step>
+        <step>
+          <cmd>В открывшейся панели нажмите кнопку <image href="../../../images/icons/edit.png"
+              id="image_twy_gwv_wxb"/> (<uicontrol>Редактировать</uicontrol>) напротив наименования
+            сенсора.</cmd>
+          <info>
+            <fig id="fig_dmc_gz5_fyb">
+              <title>Страница «Сенсоры»</title>
+              <image href="../../../images/pages/sensors_page_scr.png" id="image_yht_jz5_fyb">
+                <alt>Страница сенсоров</alt>
+              </image>
+            </fig>
+          </info>
+        </step>
+        <step>
+          <cmd>Введите описание сенсора, наименование эксплуатирующей организации и место
+            установки.</cmd>
+          <info>
+            <fig id="fig_tjn_rz5_fyb">
+              <title>Блок редактирования информации о сенсоре</title>
+              <image href="../../../images/sensor/sensor_descr_edit.png" id="image_z2v_11v_fyb"/>
+            </fig>
+          </info>
+        </step>
+        <step>
+          <cmd>Нажмите кнопку <uicontrol>Сохранить</uicontrol> для подтверждения изменений.</cmd>
+        </step>
+      </steps>
+    </taskbody>
+  </task>
+</task>

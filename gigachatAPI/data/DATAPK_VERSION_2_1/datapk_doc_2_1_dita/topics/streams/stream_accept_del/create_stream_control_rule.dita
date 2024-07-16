@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_stream_control_rule">
+ <title>Создание правила потоков</title>
+ <taskbody>
+ <context>
+ <p>Для создания правила управления потоками данных:</p>
+ </context>
+ <steps>
+ <step>
+    <cmd><ph
+      conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../../reusable/pages_breadcrumbs/adfh_rules.dita#ReusableComponent_m1d_vwc_qxb/ph_n1d_vwc_qxb"
+     />.</cmd>
+    <info>
+     <fig>
+      <title>Страница «Правила потоков»</title>
+      <image href="../../../images/pages/stream_control_rules_page.png"/>
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать правило</uicontrol>.</cmd>
+    <stepresult>появится окно <uicontrol>Создание правила потоков</uicontrol>.</stepresult>
+   </step>
+ <step>
+    <cmd>В открывшемся окне задайте следующие параметры:</cmd>
+    <substeps id="substeps_rt3_5nz_pnb">
+     <substep>
+      <cmd>номер правила; </cmd>
+     </substep>
+     <substep>
+      <cmd>маркирующий текст в поле <uicontrol>Текстовая метка</uicontrol>;</cmd>
+     </substep>
+     <substep>
+      <cmd>выберите из списка <term keyref="appliance"/>ы, на которых необходимо применить
+       создаваемое правило;</cmd>
+      <info>
+       <note id="note_bth_tmh_ltb" type="tip">Чтобы применить правило на всех <term
+         keyref="appliance"/>ах, оставьте поле пустым.</note>
+      </info>
+     </substep>
+     <substep>
+      <cmd>наименование нового правила; </cmd>
+     </substep>
+     <substep>
+      <cmd>выберите из списка действие, которое будет применяться к потокам:
+        <codeph>Одобрить</codeph> или<codeph> Временно одобрить</codeph>;</cmd>
+      <info>
+       <note id="note_rmt_x14_rwb" type="warning">При выборе действия <codeph>Временно
+         одобрить</codeph> выберите дату и время окончания одобрения потоков.</note>
+      </info>
+     </substep>
+     <substep>
+      <cmd>введите обоснование, которое будет отображаться в событиях при выполнении действия с
+       ними. </cmd>
+     </substep>
+     <substep>
+      <cmd>установите чекбокс <uicontrol>Активность правила</uicontrol> для включения работы
+       правила; </cmd>
+     </substep>
+     <substep>
+      <cmd>настройте фильтры для определения потоков, к которым необходимо применять правило в
+       разделе <uicontrol>Фильтр</uicontrol>. Доступны следующие фильтры:</cmd>
+      <info>
+       <ul id="ul_hn5_3g3_znb">
+        <li><term keyref="appliance"/>ы;</li>
+        <li>MAC-адреса получателя;</li>
+        <li>MAC-адреса отправителя;<note
+                    conref="../../reusable/notes/mac_separator.dita#ReusableComponent_rz1_jsj_31c/note_hkm_csj_31c"
+                    id="note_ipq_ysj_31c"/></li>
+        <li>IP-адреса получателя;</li>
+        <li><ph>IP-адреса отправителя;</ph><note
+                    conref="../../reusable/notes/IP_separator.dita#ReusableComponent_ilr_gck_lyb/note_cbv_hgb_wyb"
+                    id="note_pxh_4jb_wyb"/></li>
+        <li>порты отправителя;</li>
+        <li>порты получателя;</li>
+        <li>чекбоксы использования IP и MAC-адресов;</li>
+        <li>последние протоколы;</li>
+        <li>дата и время обнаружения.</li>
+       </ul>
+       <note type="warning" id="note_pgj_jmh_ltb">Фильтры <uicontrol>Комментарий</uicontrol>,
+         <uicontrol>Дата и время изменения статуса</uicontrol>, <uicontrol>Только
+         одобренные</uicontrol> не нуждаются в заполнении, так как новому потоку не могут быть
+        присвоены эти атрибуты.</note>
+      </info>
+     </substep>
+    </substeps>
+    <info>
+     <fig>
+      <title>Окно «Создание правила потоков»</title>
+      <image href="../../../images/streams/stream_accept_del/create_control_stream_rule_window.png"
+      />
+     </fig>
+    </info>
+   </step>
+ <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений.</cmd>
+    <stepresult>при успешном создании правила в правом верхнем углу страницы появится уведомление:
+     <systemoutput>Правило успешно создано</systemoutput>.</stepresult>
+   </step>
+ </steps>
+ </taskbody>
+</task>

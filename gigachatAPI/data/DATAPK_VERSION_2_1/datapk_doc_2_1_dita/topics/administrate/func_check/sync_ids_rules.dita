@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="sync_ids_rules">
+    <title>Запуск обнаружения вторжений и синхронизация правил с сенсорами</title>
+    <taskbody>
+        <prereq id="prereq_ntc_qbm_4yb">Импортируйте правила обнаружения вторжений в <term
+                keyref="appliance"/> на странице <cite keyref="exchange_fp"/>. Варианты импорта в
+            разных форматах приведены в разделах «<xref
+                href="../../IDS/exp_imp_IDS_rules/import_IDS_rules.dita"/>» и «<xref
+                href="../../IDS/exp_imp_IDS_rules/import_suricata_rules.dita"/>».</prereq>
+        <context>
+            <p>После импорта правил обнаружения вторжений необходимо включить сервис обнаружения
+                вторжений на сенсорах и передать на них новые правила. Для этого:</p>
+        </context>
+        <steps>
+            <step id="step_v3w_bkm_4yb">
+                <cmd><ph
+                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+                    <cite keyref="sensors_fp"/>.</cmd>
+            </step>
+            <step id="choose_sens_step">
+                <cmd>Нажмите на строку с сенсором, для которого нужно проверить статус службы
+                    обнаружения вторжений.</cmd>
+                <stepresult
+                    conref="../../reusable/steps/hierarchy/sensor_sidebar_stepresult.dita#ReusableComponent_s5x_snc_zyb/stepresult_u5x_snc_zyb"/>
+            </step>
+            <step id="step_jjw_bkm_4yb">
+                <cmd
+                    conref="../../reusable/steps/ids/enable_sensor_ids_cmd.dita#ReusableComponent_fpt_ykm_4yb/cmd_gpt_ykm_4yb"
+                />
+            </step>
+            <step>
+                <cmd><ph
+                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+                    <ph
+                        conref="../../reusable/pages_breadcrumbs/ids_rules.dita#ReusableComponent_ykq_l4c_pxb/ph_zkq_l4c_pxb"
+                    />.</cmd>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/sync_ids_rules_step.dita#ReusableComponent_tln_fyc_zyb/step_fmn_fyc_zyb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

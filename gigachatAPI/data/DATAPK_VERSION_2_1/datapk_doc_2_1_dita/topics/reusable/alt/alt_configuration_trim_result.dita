@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wr2_ygd_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult id="stepresult_xr2_ygd_2zb">в параметры загрузки <term keyref="alt_name"/> добавлена поддержка <codeph>TRIM</codeph> для SSD-диска <term keyref="appliance_name_short"/>.
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

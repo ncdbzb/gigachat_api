@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1080016">
+    <title>
+На <term keyref="appliance"/>е обнаружено дублирование IP-адреса</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <p id="e_1080016">Объекты защиты 1: <codeph>{target_name}</codeph>
+                                    (<codeph>{target_id}</codeph>, <codeph>{target_ip}</codeph>,
+                                    <codeph>{target_mac}</codeph>); ' 'Объекты защиты 2:
+                                    <codeph>{source_name}</codeph> (<codeph>{source_id}</codeph>,
+                                    <codeph>{source_ip}</codeph>, <codeph>{source_mac}</codeph>); '
+                                'Сенсор: <codeph>{observer_id}</codeph>
+                                    (<codeph>{observer_name}</codeph>).</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

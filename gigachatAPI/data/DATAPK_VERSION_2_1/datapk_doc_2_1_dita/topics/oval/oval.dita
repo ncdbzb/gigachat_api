@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="oval">
+ <title>Проверки на уязвимости и соответствие требованиям информационной безопасности с помощью
+    OVAL</title>
+ <body>
+ <p>В этом разделе приведен порядок настройки и выполнения проверок объектов защиты на уязвимости и
+      соответствие требованиям информационной безопасности с помощью <abbreviated-form
+        keyref="oval_def"/>:</p>
+    <ol id="ul_mpm_45y_rnb">
+      <li><xref href="exp_imp_oval/exp_imp_oval.dita"/></li>
+      <li><xref href="setup_prot_obj_check_is/setup_prot_obj_check_is.dita"/></li>
+      <li><xref href="checkup_prot_obj_to_is_requirements.dita"/></li>
+      <li><xref href="view_checkup_prot_obj_to_is_requirements.dita"/></li>
+      <li><xref href="restart_checkup_prot_obj_to_is_requirements.dita"/></li>
+      <li><xref href="delete_checkup_prot_obj_to_is_requirements.dita"/></li>
+    </ol>
+ <p>Пример содержимого файла формата <codeph>*.xml</codeph>, содержащего <abbreviated-form keyref="oval_def"/>-определения для оценки
+ соответствия парольной политики Windows:</p>
+  <codeblock conref="../reusable/code_examples/oval.dita#ReusableComponent_cr4_wlx_jrb/codeblock_hr4_wlx_jrb"/>
+ </body>
+</topic>

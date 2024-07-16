@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_tpk_lbx_yxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_upk_lbx_yxb">ФБО должны осуществлять [ролевую политику
+                                управления доступом], предусматривающую
+                                    <i><u>ограничительные</u></i> значения по умолчанию для
+                                атрибутов безопасности, которые используются для осуществления
+                                ПФБ.</div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

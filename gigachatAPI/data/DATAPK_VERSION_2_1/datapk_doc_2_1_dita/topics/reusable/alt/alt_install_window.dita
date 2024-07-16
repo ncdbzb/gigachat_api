@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_s4n_myl_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info>
+                    <fig id="fig_cdn_f3j_lyb"><title>Окно установки ОС Альт Сервер</title><image href="../../../images/deployment/alt/alt_install.png" id="image_ddn_f3j_lyb"/></fig>
+                </info>
+            </step>
+        </steps>
+        </taskbody>
+</task>

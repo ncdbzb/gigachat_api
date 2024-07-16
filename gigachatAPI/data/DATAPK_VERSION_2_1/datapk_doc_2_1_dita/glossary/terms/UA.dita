@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="UA">
+    <glossterm>Несанкционированный доступ</glossterm>
+    <glossdef>Несанкционированный доступ (НСД) — доступ к информации, нарушающий правила
+        разграничения доступа с использованием штатных средств, предоставляемых средствами
+        вычислительной техники или автоматизированными системами.<note>Под штатными средствами
+            понимается совокупность программного, микропрограммного и технического обеспечения
+            средств вычислительной техники или автоматизированных систем.</note></glossdef>
+    <glossBody>
+        <glossSurfaceForm>НСД</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>НСД</glossAbbreviation>
+        </glossAlt>  
+    </glossBody>
+</glossentry>

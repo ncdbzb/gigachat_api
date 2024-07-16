@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:flow_rules-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ej1_qgk_qxb">
+    <title/>
+    <body>
+        <ul>
+            <li><ph id="ph_gj1_qgk_qxb"><cite keyref="network_inspection_fp"/> → <cite
+                        keyref="dataflow_rules_fp"/></ph></li>
+        </ul>
+    </body>
+</topic>

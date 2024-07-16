@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:1080023-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_olp_gqq_55b">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_qlp_gqq_55b">ОЗ: <codeph>{host_netbios_name}</codeph>;
+                                Учетные данные: <codeph>{cred_name}</codeph>; Пользователь:
+                                    <codeph>{user_login}</codeph></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_ad_cred">
+ <title>Создание учетной записи службы каталогов</title>
+ <taskbody>
+ <context>
+      <note id="note_zgg_bdv_rvb" outputclass="only_cert">учетные записи службы каталогов в <term
+          keyref="appliance"/>е будут работать только для тех ОЗ, у которых в ОС уже подключена и
+        используется LDAP-авторизация.</note>
+ <p>Для создания учетной записи службы каталогов:</p>
+ </context>
+ <steps>
+      <step id="step_h55_2fw_zrb">
+        <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а.</cmd>
+      </step>
+      <step>
+        <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а (по умолчанию путь к рабочей
+          директории <term keyref="appliance"/>а — <codeph
+            conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>):</cmd>
+        <info>
+          <codeblock id="codeblock_jnd_3ql_vsb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+        </info>
+      </step>
+      <step id="step_q55_2fw_zrb">
+        <cmd>Остановите работу контейнеров без удаления данных следующей командой:</cmd>
+        <info>
+          <codeblock id="codeblock_zhq_2rp_pyb">docker-compose down</codeblock>
+        </info>
+      </step>
+      <step id="step_u55_2fw_zrb">
+        <cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+      </step>
+      <step>
+        <cmd>Для подключения по протоколу LDAPS добавьте в файл <codeph><term keyref="env"/></codeph> переменную
+            <cmdname keyref="DATAPK_USER_SERVICE_LDAP_TLS"/> и присвойте ей значение <ph
+            conref="../../reusable/true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/>.</cmd>
+        <info>
+          <codeblock id="codeblock_qd3_kql_vsb"><cmdname keyref="DATAPK_USER_SERVICE_LDAP_TLS"/>=<ph conref="../../reusable/true.dita#ReusableComponent_j5t_rgk_hpb/ph_o5t_rgk_hpb"/></codeblock>
+        </info>
+      </step>
+   <step>
+        <cmd>Добавьте в конфигурационный файл <ph
+            conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+          переменную <cmdname keyref="DATAPK_USER_SERVICE_LDAP_CONNECTION_STRING"/>:</cmd>
+        <info>
+          <codeblock conref="../../reusable/code_examples/create_ad_user_codeblock1.dita#ReusableComponent_fvs_fpl_vsb/codeblock_lxk_pnl_vsb" id="codeblock_hdt_fpl_vsb"/>
+          <p>где <codeph>[protocol]</codeph> — протокол для соединения с сервером,
+              <codeph>[domain_or_IP-address]</codeph> — доменное имя или IP-адрес сервера службы
+            каталогов, <codeph>[port]</codeph> — порт назначения (при необходимости).</p>
+        </info>
+        <info>
+          <note id="note_uyc_r4l_vsb" type="tip">
+            <p>Если в вашей сети настроена служба DNS, разрешающая адреса внутри домена, то вы
+              можете указать полное имя домена в качестве адреса для соединения со службой
+              каталогов. В этом случае <term keyref="appliance"/> будет перебирать все контроллеры
+              домена, пока не найдет доступный.</p>
+            <p>Например, для подключения по протоколу LDAPS с использованием доменного имени
+                <codeph>udv.dev</codeph> через порт <codeph>636</codeph> значение переменных будет
+              следующим:</p>
+            <codeblock conref="../../reusable/code_examples/create_ad_user_codeblock2.dita#ReusableComponent_fxq_gpl_vsb/codeblock_qcw_bpl_vsb" id="codeblock_q2r_gpl_vsb"/>
+            <p>Для подключения по протоколу LDAPS с использованием IP-адреса
+                <codeph>192.168.0.110</codeph> значение переменных будет следующим:</p>
+            <codeblock conref="../../reusable/code_examples/create_ad_user_codeblock3.dita#ReusableComponent_o3l_h4n_ysb/codeblock_ldaps" id="codeblock_jtl_h4n_ysb"/>
+          </note>
+        </info>
+      </step>
+      <step
+        conref="../../reusable/start_cont_steps.dita#ReusableComponent_ith_q2k_pyb/step_rqf_hfw_zrb">
+        <cmd/>
+      </step>
+      <step id="step_vqf_hfw_zrb">
+        <cmd
+          conref="../../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+        />
+      </step><step><cmd>Откройте веб-интерфейс <term keyref="appliance"/>а.
+ </cmd></step><step><cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="appliance_control_fp"/> → <cite keyref="users_fp"/>.
+ </cmd></step><step>
+   <cmd>Нажмите кнопку <uicontrol>Создать учетную запись</uicontrol>. </cmd>
+ </step><step><cmd>В открывшемся окне <uicontrol>Создание учетной записи</uicontrol> задайте следующие параметры:</cmd>
+        <info>
+          <ul id="ul_hcn_2gp_rwb">
+            <li>тип учетной записи — <codeph>Служба каталогов</codeph>;</li>
+            <li>логин;</li>
+            <li>имя учетной записи в службе каталогов в формате <codeph
+                conref="../../reusable/create_ad_user_name.dita#ReusableComponent_tsk_fll_vsb/codeph_vsk_fll_vsb"
+              />, где вместо <codeph>[...]</codeph> укажите промежуточные доменные имена, если
+              доменных имен больше двух;</li>
+            <li>фамилию, имя, отчество пользователя;</li>
+            <li>роль;</li>
+            <li>для изменения активности учетной записи выберите или отмените выбор параметра <uicontrol><term
+              keyref="cred"/> пользователя активна</uicontrol>.<note id="note_lxh_jgp_rwb" type="attention"
+                >При отмене выбора данного параметра учетная запись пользователя будет
+                заблокирована.</note></li>
+          </ul>
+        </info>
+ <info><fig>
+ <title>Окно «Создание учетной записи» при создании учетной записи службы
+ каталогов</title>
+ <image href="../../../images/users_roles/creation_ad_cred_window.png"/>
+ </fig></info>
+ 
+ </step><step>
+    <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений.</cmd>
+   </step>
+ </steps>
+ </taskbody>
+</task>

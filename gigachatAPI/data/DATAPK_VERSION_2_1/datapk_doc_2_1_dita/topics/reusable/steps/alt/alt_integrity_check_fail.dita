@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ehm_npf_4vb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info id="info_fhm_npf_4vb">Если после перезагрузки ОС выводится ошибка
+                            нарушения целостности и система загружается в однопользовательском
+                            режиме с запросом пароля суперпользователя root, введите пароль и
+                            выполните следующую
+                            команду:<codeblock id="codeblock_ww1_dpf_4vb">integalert fix</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

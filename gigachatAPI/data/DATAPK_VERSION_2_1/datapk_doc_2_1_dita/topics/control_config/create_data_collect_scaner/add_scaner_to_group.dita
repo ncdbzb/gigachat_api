@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_scaner_to_group">
+    <title>Добавление сканеров в группу</title>
+    <taskbody>
+        <context id="context_swn_syj_xsb">
+            <note id="note_k5j_pxj_xsb" type="tip">Сканер может быть добавлен в несколько
+                групп.</note>
+            <p>Для добавления сканеров в ранее созданную группу:</p>
+        </context>
+        <steps id="steps_twn_syj_xsb">
+            <step>
+                <cmd><ph
+                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                        /><ph
+                        conref="../../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Добавьте сканеры в группу. Для этого:</cmd>
+                <substeps id="substeps_tq4_5lr_vsb">
+                    <substep>
+                        <cmd>Выделите при помощи курсора сканеры, которые будут добавлены в
+                            группу.</cmd>
+                        <info>
+                            <note id="note_edl_cqn_ysb" type="tip">Для выделения множества строк
+                                выше или ниже выбранной нажмите клавишу <uicontrol>Shift</uicontrol>
+                                и выделите строку с последним сканером, который необходимо добавить
+                                в группу.</note>
+                        
+                            <note id="note_nj2_zck_xsb" type="attention">Рекомендуется добавлять в
+                                группу не более 30 сканеров сбора данных.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Наведите курсор на один из выделенных сканеров и зажмите левую кнопку
+                            мыши.</cmd>
+                        <stepresult>появится полупрозрачный квадрат с количеством выделенных
+                            сканеров.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Не отпуская левую кнопку мыши, перетащите сканеры в левую часть
+                            страницы так, чтобы курсор оказался на наименовании группы, в которую
+                            будут перемещены сканеры. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Отпустите левую кнопку мыши.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig id="fig_um3_cnr_vsb">
+                        <title>Добавление сканеров в группу</title>
+                        <image href="../../../images/control_config/scaners/add_scaner_to_group.png"
+                            id="image_vm3_cnr_vsb">
+                            <alt>Добавление сканеров в группу</alt>
+                        </image>
+                    </fig>
+                </info>
+                <stepresult>появится окно подтверждения добавления сканеров в группу.</stepresult>
+            </step>
+            <step>
+                <cmd>Для подтверждения переноса нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+                <info>
+                    <fig id="fig_hwp_54r_vsb">
+                        <title>Окно подтверждения перемещения сканеров</title>
+                        <image
+                            href="../../../images/control_config/scaners/approve_adding_to_group.png"
+                            id="image_iwp_54r_vsb">
+                            <alt>Окно подтверждения перемещения сканеров</alt>
+                        </image>
+                    </fig>
+                </info>
+                <stepresult>в правом вернем углу появится уведомление: <systemoutput>Добавление в
+                        группу выбранных сканеров успешно завершено</systemoutput>, и сканеры будут
+                    добавлены в группу. Если некоторые сканеры уже были в выбранной группе,
+                    отобразится предупреждение: <systemoutput>Объект уже существует</systemoutput>,
+                    и в группу будут добавлены сканеры, которых не было в группе.</stepresult>
+            </step>
+            <step>
+                <cmd>При необходимости изменить группу можно также в окне редактирования сканера.
+                    См. подробнее в разделе «<xref keyref="control_scaner"/>».</cmd>
+            </step>
+        </steps>
+        <postreq id="postreq_pnp_fyj_xsb">Если необходимо исключить сканер из группы, измените
+            соответствующее поле в окне <uicontrol>Редактирование сканера</uicontrol>.</postreq>
+    </taskbody>
+</task>

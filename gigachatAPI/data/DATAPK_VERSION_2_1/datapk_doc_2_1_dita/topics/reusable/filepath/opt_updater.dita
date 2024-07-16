@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="opt_updater">
+
+ <title>updater dir</title>
+ <body> 
+ <p><codeph id="opt_updater"><codeph conref="opt.dita#opt/opt"/>/updater</codeph></p> 
+ </body> 
+</topic> 

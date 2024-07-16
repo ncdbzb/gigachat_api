@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id" outputclass="wide">
+  <title>Анкета при обращении в сервисный центр</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="c1" colwidth="2.54*"/>
+        <colspec colnum="2" colname="c2" colwidth="1*"/>
+        <colspec colnum="3" colname="c3" colwidth="8.04*"/>
+        <thead>
+          <row>
+            <entry>
+              Параметр
+            </entry>
+            <entry>
+              Значение
+            </entry>
+            <entry>
+              Пример заполнения
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+         
+          <row>
+            <entry>ФИО, должность обратившегося, контактные данные *</entry>
+            <entry/>
+            <entry>Иванов Иван Иванович, системный инженер, ООО «Партнер», <xref format="html"
+                href="mailto:partner@partner.ru" scope="external">partner@partner.ru</xref>,
+              +7(900)-012-34-56</entry>
+          </row>
+          <row>
+            <entry>Проект/место установки, уровень в иерархии *</entry>
+            <entry/>
+            <entry>ООО «Заказчик», КС-1, уровень <abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry>Сертификат технической поддержки *</entry>
+            <entry/>
+            <entry>CI-12345678</entry>
+          </row>
+          <row>
+            <entry>Версия <term keyref="appliance"/>а *</entry>
+            <entry/>
+            <entry><ph conref="../reusable/version.dita#version/version"/>.0.0</entry>
+          </row>
+          <row>
+            <entry>Общее количество <abbreviated-form keyref="host"/>, потоков, событий в сутки на
+              проблемном <term keyref="cert_appliance_name_short"/> (включая полученные
+              снизу)</entry>
+            <entry/>
+            <entry>150 ОЗ, 300 тыс. потоков, 250 тыс. событий в сутки</entry>
+          </row>
+          <row>
+            <entry>Количество подчиненных <term keyref="cert_appliance_name_short"/></entry>
+            <entry/>
+            <entry>2 уровня <abbreviated-form keyref="sensor"/></entry>
+          </row>
+          <row>
+            <entry>Краткое описание ошибки (словесное) *</entry>
+            <entry/>
+            <entry>Не создается правило потоков данных</entry>
+          </row>
+          <row>
+            <entry>Действия, которые привели к ошибке (подробное описание шагов, приведших к ошибке)
+              *</entry>
+            <entry/>
+            <entry>Перешел на страницу правил потоков, создал новое правило, задал диапазон
+              IP-адресов и последний распознанный протокол, при сохранении ошибка валидации.</entry>
+          </row>
+          <row>
+            <entry>Скриншот ошибки в веб-интерфейсе</entry>
+            <entry/>
+            <entry>
+              <image
+                href="../../images/errors_troubleshooting/service_center_form/error_screenshot.png"
+              />
+            </entry>
+          </row>
+          <row>
+            <entry>Результаты ошибочных запросов (панель разработчика в браузере, вкладка response у
+              проблемного запроса)</entry>
+            <entry/>
+            <entry>
+              <image
+                href="../../images/errors_troubleshooting/service_center_form/err_response_results.png"
+              />
+            </entry>
+          </row>
+          <row>
+            <entry>Логи сопутствующих контейнеров *</entry>
+            <entry/>
+            <entry>Во вложении логи automated_data_flow_handler, godpi</entry>
+          </row>
+          <row>
+            <entry>Архив всех логов контейнеров (скрипт <codeph>get_logs.bash</codeph> на файловом
+              сервере)</entry>
+            <entry/>
+            <entry>Архив во вложении</entry>
+          </row>
+          <row>
+            <entry>Данные по аппаратной платформе (сервер, процессор, объем оперативной памяти,
+              объем дискового пространства, тип дисков)*</entry>
+            <entry/>
+            <entry>Сервер Huawei X6000, Xeon Bronze 3104, 1.7 GHz. 16 ГБ RAM, 4 ТБ HDD (SATA 7200
+              rpm)</entry>
+          </row>
+          <row>
+            <entry>Версия <abbreviated-form keyref="OS"/> *</entry>
+            <entry/>
+            <entry>Centos 8.1</entry>
+          </row>
+          <row>
+            <entry>Вывод таблицы маршрутизации (<codeph>route -n</codeph> или <codeph>ip route
+                show</codeph>)</entry>
+            <entry/>
+            <entry>
+              <image href="../../images/errors_troubleshooting/service_center_form/route_table.png"
+              />
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <p>Свободное место на корневом разделе диска (<codeph>df -h /</codeph>)</p>
+              <p>Свободная оперативная память, текущий список процессов (<codeph>htop</codeph>)</p>
+              <p>Значение Load Average</p>
+              <p>Загрузка диска (<codeph>iotop</codeph>)</p>
+            </entry>
+            <entry/>
+            <entry>
+              <p>Свободное место на корневом разделе: 2.5 ТБ</p>
+              <p>Свободная оперативная память: 1 МБ</p>
+              <p>Load Average: 14</p>
+              <p>
+                <image
+                  href="../../images/errors_troubleshooting/service_center_form/load_average.png"/>
+              </p>
+              <p>
+                <image href="../../images/errors_troubleshooting/service_center_form/disk_read.png"
+                />
+              </p>
+            </entry>
+          </row>
+          <row>
+            <entry>Наличие сетевых доступов до проблемного <abbreviated-form keyref="host"/>/<term
+                keyref="cert_appliance_name_short"/> (<codeph>curl
+              [ip_addr]:[port_number]</codeph>)</entry>
+            <entry/>
+            <entry>
+              <image href="../../images/errors_troubleshooting/service_center_form/net_datapk.png"/>
+            </entry>
+          </row>
+          <row>
+            <entry>Запись трафика (pcap-файл) для ошибок, связанных с обнаружением
+              потоков/IDS</entry>
+            <entry/>
+            <entry>Во вложении</entry>
+          </row>
+          <row>
+            <entry>Сведения о проблемном <abbreviated-form keyref="host"/> (тип, версия
+                <abbreviated-form keyref="OS"/>, настроенные протоколы сбора данных) для заявок с
+              проблемами в запуске сканеров сбора данных</entry>
+            <entry/>
+            <entry>АРМ оператора, Windows XP SP2, сбор данных по WMI и WINEXE</entry>
+          </row>
+          <row>
+            <entry>Проблемные скрипты (Python-файлы) для заявок с проблемами в запуске сканеров
+              сбора данных</entry>
+            <entry/>
+            <entry>Во вложении</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

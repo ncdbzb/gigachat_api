@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="setup_normalization_rules">
+    <title>Создание шаблона индекса</title>
+    <taskbody>
+        <prereq id="prereq_ur1_tkd_jxb">
+            <p>Для создания шаблона индекса необходимо, чтобы был настроен сбор событий. Служебные
+                источники событий по умолчанию генерирует события безопасности, если они не были
+                отключены вручную перед запуском <term keyref="appliance"/>а.</p>
+            <note type="tip" id="note_x3l_tkd_jxb">
+                <ul id="ul_tvm_ws4_wzb">
+                    <li>События, которые <term keyref="appliance"/> генерирует по умолчанию, и их
+                        настройка описаны в разделах «<xref
+                            href="../control_prot_obj_events/event_source_desc/datapk_sensor.dita"
+                        />» и «<xref
+                            href="../control_prot_obj_events/setup_collect_events_policy/toggle_datapk_sensor.dita"
+                        />».</li>
+                    <li>Создание источников для пассивного сбора событий описано в разделе «<xref
+                            href="../control_prot_obj_events/setup_collect_events_policy/create_syslog_manual.dita"
+                        />», настройка активного сбора событий описана в разделе «<xref
+                            href="../data_collect/event_collection/event_collection.dita"/>».</li>
+                </ul>
+            </note>
+        </prereq>
+        <context>
+            <p>Для создания шаблона индекса:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd><ph
+                        conref="../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                        /><ph
+                        conref="../reusable/pages_breadcrumbs/monitoring_settings.dita#ReusableComponent_ks1_35x_3xb/ph_ls1_35x_3xb"
+                    /> и откройте вкладку <uicontrol>Шаблоны индексов</uicontrol>.</cmd>
+                <info>
+                    <fig>
+                        <title>Страница «Настройки мониторинга»</title>
+                        <image
+                            href="../../images/work_with_kibana/normalization/create_index_template.png"
+                        />
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите <uicontrol>Create index pattern</uicontrol>.</cmd>
+                <stepresult>Откроется окно <uicontrol>Create index pattern</uicontrol>.</stepresult>
+            </step>
+            <step>
+                <cmd>В окне <uicontrol>Create index pattern</uicontrol>:</cmd>
+                <substeps id="substeps_rgg_pf2_jxb">
+                    <substep>
+                        <cmd>Введите название предустановленного шаблона
+                            <codeph>datapk-events-*</codeph> в поле <uicontrol>Index pattern name</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Next step</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig>
+                        <title>Окно создания нового шаблона нормализации событий</title>
+                        <image
+                            href="../../images/work_with_kibana/normalization/new_normalization_template_window.png"
+                        />
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В поле <uicontrol>Time field</uicontrol> выберите из списка поле фильтра
+                    времени <codeph>create_time</codeph> (время создания события).</cmd>
+                <info>
+                    <note type="warning">Если в вашей инсталляции не используется активный сбор
+                        событий, допускается выбор сортировки по времени получения события
+                            (<codeph>receive_time</codeph>).</note>
+                </info>
+                <info>
+                    <fig>
+                        <title>Окно настройки атрибута временного фильтра в интерфейсе
+                            визуализации</title>
+                        <image
+                            href="../../images/work_with_kibana/normalization/create_index_template_window.png"
+                        />
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите кнопку <uicontrol>Create index pattern</uicontrol>. </cmd>
+            </step>
+            <step>
+                <cmd>Откройте страницу <ph
+                        conref="../reusable/pages_breadcrumbs/events_expert_mode.dita#ReusableComponent_sdg_tqp_wzb/ph_udg_tqp_wzb"
+                    />.</cmd>
+                <info>
+                    <fig>
+                        <title>Страница «События» → «Экспертный режим»</title>
+                        <image href="../../images/pages/events_em_page_scr.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что в список полей <uicontrol>Available fields</uicontrol> были загружены поля из
+                    предустановленного шаблона.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

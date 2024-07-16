@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_oval_script">
+    <title>Импорт скриптов OVAL</title>
+    <taskbody>
+        <context id="context_opd_ckx_5sb">
+            <p>Для импорта скриптов <abbreviated-form keyref="oval_def"/> из файла формата
+                    <codeph>*.json</codeph> в <term keyref="appliance"/>:</p>
+        </context>
+        <steps id="steps_ppd_ckx_5sb">
+            <step>
+                <cmd
+                    conref="../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+                />
+            </step>
+            <step>
+                <cmd>В блоке <uicontrol>OVAL</uicontrol> в строке <uicontrol>Скрипты
+                        OVAL</uicontrol> нажмите кнопку <image
+                        href="../../../images/icons/import.png" id="image_esg_3bd_gyb"/>.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне укажите расположение импортируемого файла формата
+                        <codeph>*.json</codeph> и подтвердите выбор.</cmd>
+            </step>
+            <step
+                conref="../../reusable/import_action_step.dita#import_action_step/import_action_step"
+                conrefend="../../reusable/import_action_step.dita#import_action_step/step_mkr_pxd_wnb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь, что скрипты <abbreviated-form keyref="oval_def"/> были успешно
+                    загружены.</cmd>
+                <choices
+                    conref="../../reusable/steps/import_export/choices_import_result.dita#ReusableComponent_dyy_zjd_gyb/choices_wr1_wff_wnb"
+                    id="choices_pcz_zjd_gyb">
+                    <choice/>
+                </choices>
+                <stepresult>в результате успешного импорта на странице <ph
+                        conref="../../reusable/pages_breadcrumbs/oval_scripts.dita#ReusableComponent_chs_5lk_qxb/ph_dhs_5lk_qxb"
+                    /> появится импортированный справочник.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

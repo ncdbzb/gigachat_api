@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mxs_bkj_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult><ul>
+                        <li><codeph id="codeph_nxs_bkj_nyb"
+                                >dtpk-backup-[версия_Комплекса]-[дата_и_время].tar</codeph></li>
+                    </ul></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

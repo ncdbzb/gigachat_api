@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jz1_hn2_1yb">
+    <title/>
+    <taskbody>
+        <result><ul>
+                <li id="li_uz1_hn2_1yb"><term keyref="cert_appliance_name_short"/> успешно
+                    осуществил сбор данных.</li>
+                <li id="li_vz1_hn2_1yb">Присутствует событие об изменении конфигурации.</li>
+                <li id="li_wz1_hn2_1yb">На странице конфигураций отображается отклонение
+                    конфигурации от эталонной.</li>
+            </ul></result>
+    </taskbody>
+</task>

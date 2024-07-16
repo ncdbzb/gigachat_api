@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="classifier">
+    <glossterm>Классификаторы</glossterm>
+    <glossdef><p>Подраздел настроек активов, где можно создавать, редактировать и удалять классификаторы типов
+            «Метки» и «АСУ ТП».</p><fig id="fig_mxz_tlh_npb">
+            <title>Страница «Классификаторы»</title>
+            <image href="../images/pages/references_page_scr.png" id="image_nxz_tlh_npb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/prot_obj/groups/group_acs_create.dita"/>
+        <link href="../topics/prot_obj/groups/create_tag.dita"/>
+        <link href="../topics/prot_obj/edit_or_del_group.dita"/>
+    </related-links>
+</glossentry>

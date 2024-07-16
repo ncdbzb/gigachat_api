@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_afr_jsl_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info>
+                    <fig id="fig_lqv_xwf_mvb">
+                        <title>Окно установки ОС Альт Сервер в режиме Rescue LiveCD</title>
+                        <image href="../../../images/deployment/alt/alt_install_rescue_liveCD.png" id="image_mqv_xwf_mvb"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

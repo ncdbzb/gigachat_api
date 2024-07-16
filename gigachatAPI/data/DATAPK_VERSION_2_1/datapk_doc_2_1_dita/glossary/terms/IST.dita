@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="IST">
+    <glossterm>Средство защиты информации</glossterm>
+    <glossdef>Средство защиты информации (СрЗИ) — техническое, программное, программно-техническое
+        средство, вещество и (или) материал, предназначенные или используемые для защиты
+        информации.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>СрЗИ</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>СрЗИ</glossAbbreviation>
+        </glossAlt>        
+    </glossBody>
+</glossentry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_jvm_qm3_d1c">
+    <title/>
+    <body>
+        <p><ol>
+                <li><note><div id="div_kvm_qm3_d1c"><p id="p_os_plc_1">Тип информации, сохраняемой в блоке <uicontrol>Информация об ОС</uicontrol>,
+                                зависит от настроенного типа объекта защиты: для ОЗ с типом
+                                    <codeph>ПЛК</codeph> собирается и сохраняется информация о
+                                прошивке, для остальных ОЗ — информация об операционной системе.</p><p><ph>Тип ОЗ и информация в блоке <uicontrol>Информация
+                                        об ОС</uicontrol> влияют на список уязвимостей, которые
+                                    возможно обнаружить на ОЗ с помощью справочников
+                                        <abbreviated-form keyref="cve"/> и <abbreviated-form
+                                        keyref="cpe"/>:</ph><ul id="ul_j2y_v23_d1c">
+                                    <li>для ОЗ с типом <codeph>ПЛК</codeph> поиск уязвимостей
+                                        выполняется только для прошивки. Поиск уязвимостей ПО и ОС
+                                        не выполняется;</li>
+                                    <li>для остальных ОЗ поиск уязвимостей выполняется для ОС и ПО,
+                                        но не выполняется для прошивки.</li>
+                                </ul></p><p id="p_os_plc_2"><ph id="ph_os_plc_2">При изменении типа ОЗ на <codeph>ПЛК</codeph> или обратно
+                                    необходимо обновить информацию в блоке <uicontrol>Информация об
+                                        ОС</uicontrol>.</ph></p></div></note></li>
+            </ol></p>
+    </body>
+</topic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:cred-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_gfw_vnk_qxb">
+    <title/>
+    <body>
+        <ul>
+            <li><ph id="ph_hfw_vnk_qxb"><cite keyref="appliance_control_fp"/> → <cite
+                        keyref="prot_obj_settings_fp"/> → <cite keyref="cred_prot_obj_fp"
+                /></ph></li>
+        </ul>
+    </body>
+</topic>

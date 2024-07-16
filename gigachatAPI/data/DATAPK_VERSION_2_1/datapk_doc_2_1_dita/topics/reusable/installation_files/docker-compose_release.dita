@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_w5g_x4k_x5b">
+    <title/>
+    <body>
+        <ul>
+            <li id="li_xp5_11q_g5b"><codeph>docker-compose.release.yml</codeph> — основной
+                stand-файл.</li>
+        </ul>
+    </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_u3j_nrq_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_v3j_nrq_g1c">
+                <cmd>Создайте директорию, содержащую наименование выбранного сетевого интерфейса и
+                    идентификатор создаваемого VLAN (должен совпадать с идентификатором VLAN
+                    сетевого устройства):</cmd>
+                <info>
+                    <codeblock id="codeblock_lr2_prs_21c">mkdir [iface_name].[vlan_id]</codeblock>
+                    <p><ph>где:</ph><ul id="ul_dhj_hsy_21c">
+                            <li><codeph>[iface_name]</codeph> — наименование выбранного сетевого
+                                интерфейса;</li>
+                            <li><codeph>[vlan_id]</codeph> — идентификатор создаваемого VLAN, равный
+                                идентификатору VLAN сетевого устройства.</li>
+                        </ul></p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

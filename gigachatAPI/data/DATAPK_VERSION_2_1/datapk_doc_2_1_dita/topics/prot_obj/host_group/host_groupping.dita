@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="host_groupping">
+    <title>Группировка объектов защиты</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_lh4_ccs_vsb">
+            <li><xref keyref="create_group"/></li>
+            <li><xref keyref="add_hosts_into_group"/></li>
+            <li><xref keyref="control_host_group"/></li>
+        </ul>
+        <p>Объекты защиты с типом, отличным от неизвестного, можно собирать в группы. Эти группы
+            используются в задачах сбора данных и для упрощения управления объектами защиты. </p>
+        <p>По умолчанию доступны следующие группы:<ul id="ul_pjc_3zc_gyb">
+                <li><uicontrol>Неизвестные ОЗ</uicontrol> — группа, в которую автоматически
+                    добавляются все <term keyref="host"/> с типом «неизвестный»;</li>
+                <li><uicontrol>ОЗ без групп</uicontrol> — группа, в которую автоматически
+                    добавляются все <term keyref="host"/>, у которых не заполнено поле
+                        <uicontrol>Группа</uicontrol>.</li>
+            </ul></p>
+        <p>Удаление и редактирование этих групп, а также добавление <term keyref="host"/> в эти
+            группы вручную и удаление <term keyref="host"/> из этих групп недоступно.</p>
+        <p>Список групп отображается на панели в левой части экрана. Если в списке выбрана
+            конкретная группа <term keyref="host"/>, то фильтры будут применяться только для
+            элементов этой группы.</p>
+    </body>
+</topic>

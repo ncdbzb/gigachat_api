@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_ysr_yv4_lrb">
+ <title>log_example_db</title>
+ <body> <codeblock id="codeblock_gtr_yv4_lrb">Creating datapk_backupper_run ... done
+[INFO    ] 2023-07-07 08:02:28,906 [1    ]MainThread@'backup_manager.operations.restore.restore_backup:336': Recovery from backup /var/backups/dtpk-backup-v<ph conref="../version.dita#version/version"/>.0.0-20230707065544.tar started
+…
+ [INFO    ] 2023-07-07 08:03:15,633 [1    ]MainThread@'backup_manager.operations.restore.restore_backup:384': Recovery from backup took  46.727 sec
+[INFO    ] 2023-07-07 08:03:15,634 [1    ]MainThread@'__main__.main:102': Backup restored</codeblock></body> 
+</topic> 

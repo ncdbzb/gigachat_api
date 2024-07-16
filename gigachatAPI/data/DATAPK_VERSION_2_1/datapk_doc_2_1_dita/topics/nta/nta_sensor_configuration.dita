@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="nta_sensor_configuration">
+    <title>Настройка UDV NTA уровня Sensor</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Создайте рабочую директорию для UDV NTA уровня Sensor и установите необходимые
+                    права:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/sensor/
+chmod -R 755 /opt/</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Используя протокол прикладного уровня передачи файлов поместите compose-файлы
+                        <codeph>docker-compose.sensor.yml</codeph>,
+                        <codeph>docker-compose.sensor_zeek.yml</codeph>,
+                        <codeph>docker-compose.sensor_stand.yml</codeph> в директорию
+                        <codeph>/home/dpi</codeph>, затем переместите их в директорию
+                        <codeph>/opt/sensor</codeph> командой:</cmd>
+                <info>
+                    <codeblock>mv /home/dpi/docker-compose* /opt/sensor/</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Используя протокол прикладного уровня передачи файлов поместите архив словарей
+                    SNMP <codeph>snmp_mibs.tar.gz</codeph> в директорию <codeph>/home/dpi</codeph>,
+                    затем переместите его в необходимую директорию и разархивируйте:</cmd>
+                <info>
+                    <codeblock>mkdir -p /var/backups/snmp_mibs
+chmod -R 755 /var/backups/snmp_mibs
+mv /home/dpi/snmp_mibs.tar.gz /var/backups/snmp_mibs
+cd /var/backups/snmp_mibs
+tar xvzf snmp_mibs.tar.gz</codeblock>
+                </info>
+            </step>
+            <step
+                conref="../reusable/alt/delete_snmp_archive.dita#ReusableComponent_kz1_cdn_f1c/step_nz1_cdn_f1c">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Создайте рабочие директории UDV NTA и установите необходимые права:</cmd>
+                <info>
+                    <codeblock>mkdir -p /opt/datapk/scripts-certs
+chmod -R 755 /opt/datapk/scripts-certs</codeblock>
+                </info>
+                <info
+                    conref="../reusable/alt/alt_rights_info.dita#ReusableComponent_fp2_hbh_f1c/info_hp2_hbh_f1c"
+                />
+            </step>
+            <step conref="../reusable/alt/alt_move_ca_datapk_script.dita#ReusableComponent_nqh_tbh_f1c/step_pqh_tbh_f1c">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../reusable/alt/docker_sensor_cmd.dita#ReusableComponent_l2d_4dn_f1c/cmd_n2d_4dn_f1c"/>
+                <info>
+                    <codeblock conref="../reusable/alt/alt_docker_home_dpi.dita#ReusableComponent_gxc_kch_f1c/codeblock_hxc_kch_f1c"/>
+                </info>
+            </step>
+            <step>
+                <cmd>Сгенерируйте конфигурационный файл <codeph>.env</codeph> и файл
+                        <codeph>node-id</codeph> с уникальным идентификатором UDV NTA. Для
+                    этого:</cmd>
+                <substeps id="substeps_oss_1dh_f1c">
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/alt/execute_gen_env_cmd.dita#ReusableComponent_umx_5qn_4yb/cmd_vmx_5qn_4yb"/>
+                        <info>
+                            <codeblock>bash /home/dpi/generate_env-2.1.0.0.bash S [ip_addr] #ip_addr - адрес UDV NTA уровня Management, к которому подключается сенсор</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd
+                            conref="../reusable/steps/alt/check_env_cmd.dita#ReusableComponent_rqt_xtn_4yb/cmd_sqt_xtn_4yb"/>
+                        <info>
+                            <codeblock>ls -la /opt/sensor/ | grep .env</codeblock>
+                        </info>
+                    </substep>
+                    <substep
+                        conref="../reusable/steps/alt/check_node_id_step.dita#ReusableComponent_kwv_m43_pyb/substep_nwv_m43_pyb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/alt/alt_delete_generate_env.dita#ReusableComponent_kwq_sdh_f1c/substep_lwq_sdh_f1c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step
+                conref="../reusable/alt/config_traffic_files.dita#ReusableComponent_ekn_3fn_f1c/step_jkn_3fn_f1c">
+                <cmd/>
+            </step>
+            <step>
+                <cmd conref="../reusable/steps/alt/config_iptables_cmd.dita#ReusableComponent_kbs_ptn_4yb/cmd_lbs_ptn_4yb"/>
+                <substeps id="substeps_php_g4h_f1c">
+                    <substep conref="../reusable/steps/alt/check_efw_substep.dita#ReusableComponent_lpb_ttn_4yb/substep_mpb_ttn_4yb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/steps/alt/iptables_open_config_substep.dita#ReusableComponent_wmm_mtn_4yb/substep_xmm_mtn_4yb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd conref="../reusable/steps/alt/add_iptables_rules_cmd.dita#ReusableComponent_z2n_bsn_4yb/cmd_afn_bsn_4yb"/>
+                        <info>
+                            <codeblock>*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:DOCKER - [0:0]
+:DOCKER-USER - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 172.31.255.0/24 -j ACCEPT
+-A INPUT -p udp -m udp --dport 514 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 514 -j ACCEPT
+-A INPUT -p udp -m udp --dport 515 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 515 -j ACCEPT
+-A INPUT -p udp -m udp --dport 162 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+ 
+COMMIT</codeblock>
+                        </info>
+                    </substep>
+                    <substep conref="../reusable/steps/alt/iptables_restart_substep.dita#ReusableComponent_lnt_jtn_4yb/substep_nnt_jtn_4yb">
+                        <cmd/>
+                    </substep>
+                    <substep conref="../reusable/steps/alt/iptables_nvl_substep.dita#ReusableComponent_ajb_kqh_f1c/substep_cjb_kqh_f1c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd><ph
+                    conref="../reusable/alt/alt_change_var_cmd.dita#ReusableComponent_qyq_xqh_f1c/ph_syq_xqh_f1c"
+                /></cmd>
+                <substeps
+                    conref="../reusable/alt/change_var_sensor_substeps.dita#ReusableComponent_kcb_1hn_f1c/substeps_hvb_sqh_f1c"
+                    id="substeps_ohb_1hn_f1c">
+                    <substep>
+                        <cmd/>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

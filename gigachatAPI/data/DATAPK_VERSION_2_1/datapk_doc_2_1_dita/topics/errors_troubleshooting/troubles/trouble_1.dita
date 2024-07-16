@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_1">
+ <title>При попытке запуска Комплекса появляется предупреждение об отсутствии файла node-id</title>
+ <troublebody>
+ <troubleSolution>
+ <cause>
+ <title>Причина: не создан файл node-id при установке Комплекса</title>
+ </cause>
+ <remedy>
+ <title>Способ устранения</title>
+ <responsibleParty>Для устранения затруднения:</responsibleParty>
+ <steps>
+     <step>
+      <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а. </cmd>
+     </step>
+     <step>
+      <cmd>Убедитесь, что в процессе установки <term keyref="appliance"/>а были созданы файлы
+         <codeph><term keyref="env"/></codeph> и <codeph><term keyref="node-id"/></codeph>:</cmd>
+      <info>
+       <ul id="ul_o4x_21w_pyb">
+        <li><ph><ph
+           conref="../../reusable/steps/hierarchy/for_m.dita#ReusableComponent_rh5_nbw_pyb/ph_sh5_nbw_pyb"
+          />:</ph><codeblock id="codeblock_nqs_5zv_pyb">ls -la <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/ | grep <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+ls -la <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/ | grep <ph conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"/></codeblock></li>
+        <li><ph><ph
+         conref="../../reusable/steps/hierarchy/for_s.dita#ReusableComponent_dnx_4bw_pyb/ph_gnx_4bw_pyb"
+          />:</ph><codeblock id="codeblock_hrs_h1w_pyb">ls -la <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor | grep <ph conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>
+ls -la <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/ | grep <ph conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"/></codeblock></li>
+       </ul>
+      </info>
+     </step>
+     <step>
+      <cmd><ph>Если оба файла отсутствуют, создайте их и настройте согласно инструкциям</ph><ph
+        outputclass="only_main_pdf_html"> Руководства по внедрению и поддержке</ph><ph>:</ph></cmd>
+      <info>
+       <ul id="ul_zdk_m1w_pyb">
+        <li><ph><ph
+           conref="../../reusable/steps/hierarchy/for_m.dita#ReusableComponent_rh5_nbw_pyb/ph_sh5_nbw_pyb"
+          /> — «<xref href="../../deployment/alt/preliminary_mgmt.dita"/>»;</ph></li>
+        <li><ph><ph
+           conref="../../reusable/steps/hierarchy/for_s.dita#ReusableComponent_dnx_4bw_pyb/ph_gnx_4bw_pyb"
+          /> — «<xref href="../../deployment/alt/preliminary_sensor.dita"/>»;</ph></li>
+        <li><ph><ph
+           conref="../../reusable/steps/hierarchy/for_s_and_m.dita#ReusableComponent_tpb_rbw_pyb/ph_vpb_rbw_pyb"
+          /> на одной аппаратной платформе — «<xref
+           href="../../deployment/alt/preliminary_sensor_and_mgmt.dita"/>».</ph></li>
+       </ul>
+      </info>
+     </step>
+     <step>
+      <cmd>Если отсутствует только файл <codeph><term keyref="node-id"/></codeph>, создайте его по
+       команде:</cmd>
+      <info>
+       <codeblock id="codeblock_jyt_dbw_pyb">openssl rand -hex 16 > <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/<ph conref="../../reusable/filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"/></codeblock>
+      </info>
+     </step>
+     <step>
+      <cmd>Запустите сервисы <term keyref="appliance"/>а:</cmd>
+      <info>
+       <ul id="ul_qj3_kbw_pyb">
+        <li><ph><ph
+           conref="../../reusable/steps/hierarchy/for_m.dita#ReusableComponent_rh5_nbw_pyb/ph_sh5_nbw_pyb"
+          />:</ph><codeblock id="codeblock_ilt_wbw_pyb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> &amp;&amp; docker-compose up -d</codeblock></li>
+        <li><ph><ph
+           conref="../../reusable/steps/hierarchy/for_s.dita#ReusableComponent_dnx_4bw_pyb/ph_gnx_4bw_pyb"
+          />:</ph><codeblock id="codeblock_mzx_wbw_pyb">cd <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor &amp;&amp; docker-compose up -d</codeblock></li>
+        <li><ph
+          conref="../../reusable/steps/hierarchy/for_s_and_m.dita#ReusableComponent_tpb_rbw_pyb/ph_vpb_rbw_pyb"
+          /><ph> последовательно выполните
+         команды:</ph><codeblock id="codeblock_qpz_wbw_pyb">cd <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor &amp;&amp; docker-compose up -d
+cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> &amp;&amp; docker-compose up -d</codeblock></li>
+       </ul>
+      </info>
+     </step>
+     <step>
+      <cmd
+       conref="../../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+      />
+     </step>
+ 
+ 
+ </steps>
+ </remedy>
+ </troubleSolution>
+ </troublebody>
+</troubleshooting>

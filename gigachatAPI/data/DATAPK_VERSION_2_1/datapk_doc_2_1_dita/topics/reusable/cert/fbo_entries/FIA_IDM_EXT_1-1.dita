@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ih3_51x_yxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_lh3_51x_yxb"><p>ФБО должны реализовывать следующие
+                                    функции управления идентификаторами пользователей
+                                    ОО:</p><p>[</p><p>- формирование идентификатора, который
+                                    однозначно идентифицирует пользователя;</p><p>- присвоение
+                                    идентификатора пользователю</p><p>].</p></div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

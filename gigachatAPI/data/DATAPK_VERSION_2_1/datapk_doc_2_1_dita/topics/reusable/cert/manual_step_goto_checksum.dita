@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_itg_kws_hwb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_jtg_kws_hwb">
+                <cmd>Перейдите в директорию <codeph>/opt</codeph>, где расположен скрипт <ph
+                        conref="checksum_script.dita#ReusableComponent_xxz_wc1_rvb/ph_yxz_wc1_rvb"
+                    /></cmd>
+                <info><codeblock id="codeblock_zg2_ncn_hwb">cd /opt</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="host_setup_4data_collect">
+    <title>Настройка объектов защиты для сбора данных</title>
+    <shortdesc>Для сбора данных необходимо убедиться, что на объектах защиты добавлены и применены
+        учетные данные и выбран сетевой интерфейс сбора данных.</shortdesc>
+    <taskbody>
+        <context>
+            <p>Для подготовки объекта защиты к активному сбору данных:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Убедитесь, что учетные данные для доступа к объекту защиты были добавлены
+                    ранее. Для этого перейдите на страницу <cite keyref="prot_obj_fp"/> → <cite
+                        keyref="prot_obj_settings_fp"/>→ <cite keyref="cred_prot_obj_fp"/>. </cmd>
+                <info>
+                    <note id="note_rq4_wdx_5sb">Подробнее о добавлении учетных данных см. в разделе
+                            «<xref href="../../cred_prot_obj_settings/add_prot_obj_cred.dita"
+                        />».</note>
+                </info>
+            </step>
+            <step>
+                <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="prot_obj_fp"/>. </cmd>
+            </step>
+            <step>
+                <cmd>Выберите из списка объект защиты, для которого будет настроен сбор данных, и
+                    нажмите на его иконку или наименования. </cmd>
+                <stepresult>откроется карточка объекта защиты.</stepresult>
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/creds/cred_step1.dita#ReusableComponent_czy_2mp_gtb/cmd_fzy_2mp_gtb"
+                />
+            </step>
+            <step>
+                <cmd
+                    conref="../../reusable/steps/creds/cred_step2.dita#ReusableComponent_lg4_4mp_gtb/cmd_og4_4mp_gtb"/>
+                <info>
+                    <fig id="fig_c5c_trg_wpb">
+                        <title>Окно «Настройка учетных данных»</title>
+                        <image
+                            href="../../../images/control_config/data_collect_module/setup_access_to_prot_obj_window_no_policy.png"
+                            id="image_d5c_trg_wpb"/>
+                    </fig>
+                </info>
+                <info>
+                    <note type="warning">Невозможно назначить объекту защиты учетные записи с
+                        одинаковыми тегами.</note>
+                </info>
+            </step>
+            <step
+                conref="../../reusable/data_collect_interface_step.dita#ReusableComponent_w1k_zmg_wpb/step_cbk_zmg_wpb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

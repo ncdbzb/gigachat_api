@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="control_scaner_group">
+    <title>Управление группами сканеров</title>
+    <taskbody>
+        <context>
+            <p>На странице <ph
+                    conref="../../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+                /> предусмотрены следующие возможности для управления группами сканеров:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Изменение группы. Для изменения:</cmd>
+                <substeps id="substeps_plw_tcs_vsb">
+                    <substep>
+                        <cmd>Над панелью с группами сканеров в левой части страницы нажмите
+                            <uicontrol>Редактировать</uicontrol>.</cmd>
+                        <stepresult>появится окно <uicontrol>Редактирование групп
+                                сканеров</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку <image href="../../../images/icons/edit.png"
+                                id="image_w4v_tdr_vsb" width="15px"/> напротив группы, которую
+                            необходимо изменить.</cmd>
+                        <info>
+                            <fig id="fig_lmr_rdr_vsb">
+                                <title>Окно «Редактирование групп сканеров»</title>
+                                <image
+                                    href="../../../images/control_config/scaners/edit_scaner_groups.png"
+                                    id="image_mmr_rdr_vsb">
+                                    <alt>Окно «Редактирование групп сканеров»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                        <stepresult>появится окно <uicontrol>Редактирование группы сканеров</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените необходимые параметры группы сканеров.</cmd>
+                        <info>
+                            <fig id="fig_l3t_mfs_vsb">
+                                <title>Окно «Редактирование группы сканеров»</title>
+                                <image
+                                    href="../../../images/control_config/scaners/edit_scaner_group_window.png"
+                                    id="image_m3t_mfs_vsb">
+                                    <alt>Окно «Редактирование группы сканеров»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку <uicontrol>Сохранить</uicontrol> для подтверждения изменений.</cmd>
+                        <info>
+                            <note id="note_s2t_fgr_vsb" type="attention">Без сохранения всех
+                                изменений групп в <xref href="#control_scaner_group/fig_lmr_rdr_vsb"
+                                    format="dita">в окне редактирования групп сканеров</xref>
+                                изменения не будут отражены в <term keyref="appliance"/>е.</note>
+                        </info>
+                        <stepresult>изменения названия группы появятся в окне <uicontrol>Редактирование групп
+                                <abbreviated-form keyref="host"/></uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости измените другие группы сканеров.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В окне <uicontrol>Редактирование групп сканеров</uicontrol> нажмите <uicontrol>Сохранить</uicontrol>. </cmd>
+                        <stepresult>появится предупреждение о неизменности задач сбора данных в
+                            результате изменения состава групп. </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Подтвердить</uicontrol> для сохранения изменения состава групп.</cmd>
+                        <stepresult>окно редактирования групп будет закрыто, изменения появятся в
+                                <term keyref="appliance"/>е.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Удаление группы. Для удаления:</cmd>
+                <substeps id="substeps_del_group">
+                    <substep>
+                        <cmd>Над панелью с группами сканеров в левой части страницы нажмите
+                            <uicontrol>Редактировать</uicontrol>.</cmd>
+                        <stepresult>появится окно <uicontrol>Редактирование групп сканеров</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите кнопку <image href="../../../images/icons/del.png"
+                                width="15px" id="image_ers_sgs_vsb"/> напротив группы, которую
+                            необходимо удалить.</cmd>
+                        <info>
+                            <fig id="fig_frs_sgs_vsb">
+                                <title>Окно «Редактирование групп сканеров»</title>
+                                <image
+                                    href="../../../images/control_config/scaners/edit_scaner_groups.png"
+                                    id="image_grs_sgs_vsb">
+                                    <alt>Окно «Редактирование групп сканеров»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                        <stepresult>группа сканеров будет удалена, но данные изменения не будут
+                            сохранены до нажатия <uicontrol>Сохранить</uicontrol> <xref
+                                href="#control_scaner_group/fig_lmr_rdr_vsb" format="dita">в окне
+                                редактирования групп сканеров</xref>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости измените другие группы сканеров.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В окне «Редактирование групп сканеров» нажмите <uicontrol>Сохранить</uicontrol>. </cmd>
+                        <stepresult><p>появится предупреждение о неизменности задач сбора данных в
+                                результате изменения состава групп. Это значит, что удаляемые группы
+                                останутся в задачах сбора данных, если такие были созданы. Для
+                                возобновления периодического сбора измените или создайте задачи
+                                заново, в том числе при помощи копирования.</p>
+                            <fig id="fig_wzx_3wy_vsb">
+                                <title>Окно подтверждения изменений групп</title>
+                                <image
+                                    href="../../../images/control_config/scaners/scaner_warning.png"
+                                    id="image_xzx_3wy_vsb">
+                                    <alt>Окно подтверждения изменений групп</alt>
+                                </image>
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Подтвердить</uicontrol> для сохранения изменения состава групп.</cmd>
+                        <stepresult>окно редактирования групп будет закрыто, изменения появятся в
+                                <term keyref="appliance"/>е.</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

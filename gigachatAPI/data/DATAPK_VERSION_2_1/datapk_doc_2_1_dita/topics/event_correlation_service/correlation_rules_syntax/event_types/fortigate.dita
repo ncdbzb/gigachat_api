@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="fortigate">
+ <title>События FortiGate</title>
+ <body>
+ <p>Доступные для событий FortiGate поля приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#fortigate/table_svz_5zw_vnb"/>)</ph>.</p>
+ <table id="table_svz_5zw_vnb">
+ <title>Поля для событий FortiGate</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="35%"/>
+ <colspec colnum="2" colname="col2" colwidth="65%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>action</entry>
+ <entry>Значение поля action события.</entry>
+ </row>
+ <row>
+ <entry>additional_information</entry>
+ <entry>Поле msg или название vpn-тоннеля.</entry>
+ </row>
+ <row>
+ <entry>category</entry>
+ <entry>Тип события.</entry>
+ </row>
+ <row>
+ <entry>description</entry>
+ <entry>Описание события.</entry>
+ </row>
+ <row>
+ <entry>event_code</entry>
+ <entry>Значение поля logid.</entry>
+ </row>
+ <row>
+ <entry>observer_name</entry>
+ <entry>Сетевое имя регистратора события: ОЗ (МЭ fortigate), сенсора или Комплекса.</entry>
+ </row>
+ <row>
+ <entry>observer_ip</entry>
+ <entry>IP-адрес регистратора события: ОЗ (МЭ fortigate), сенсора или Комплекса.</entry>
+ </row>
+ <row>
+ <entry>protocol</entry>
+ <entry>Наименование протокола из события.</entry>
+ </row>
+ <row>
+ <entry>source_ip</entry>
+ <entry>Значение поля srcip или locip.</entry>
+ </row>
+ <row>
+ <entry>source_port</entry>
+ <entry>Значение поля srcport или locport.</entry>
+ </row>
+ <row>
+ <entry>target_ip</entry>
+ <entry>Значение поля dstip или remip.</entry>
+ </row>
+ <row>
+ <entry>target_port</entry>
+ <entry>Значение поля dstport или remport.</entry>
+ </row>
+ <row>
+ <entry>user</entry>
+ <entry>Значение поля user.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </body>
+</topic>

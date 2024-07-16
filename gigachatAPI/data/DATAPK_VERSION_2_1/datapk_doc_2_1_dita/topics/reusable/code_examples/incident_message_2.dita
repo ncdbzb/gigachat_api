@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_dhs_kw4_lrb">
+
+ <title>incident_message_2</title>
+ <body> 
+ <codeblock outputclass="language-sql" id="codeblock_ihs_kw4_lrb">На <abbreviated-form keyref="host"/> ${observer_name} (${observer_ip}) обнаружен подбор пароля к учетной записи пользователя ${user}</codeblock> 
+</body> 
+</topic> 

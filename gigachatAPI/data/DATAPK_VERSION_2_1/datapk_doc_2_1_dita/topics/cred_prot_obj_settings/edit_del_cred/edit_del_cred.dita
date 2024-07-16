@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="edit_del_cred">
+ <title>Редактирование и удаление учетных данных объекта защиты</title>
+ <taskbody><context>
+ <p>Для изменения состава учетных данных ОЗ в веб-интерфейсе предусмотрено несколько способов:</p>
+ </context>
+    <steps id="steps_fjp_dkx_cqb">
+      <step>
+        <cmd>Редактирование учетных данных на странице <cite keyref="cred_prot_obj_fp"/>. Для
+          редактирования:</cmd>
+        <substeps>
+          <substep>
+            <cmd><ph
+                conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><ph
+                conref="../../reusable/pages_breadcrumbs/cred.dita#ReusableComponent_gfw_vnk_qxb/ph_hfw_vnk_qxb"
+              />.</cmd>
+          </substep>
+          <substep>
+            <cmd>Выберите учетную запись в списке и нажмите кнопку <image
+                href="../../../images/icons/edit.png" id="image_urq_qxz_tnb"/>
+                (<uicontrol>Редактировать учетные данные</uicontrol>).</cmd>
+            <stepresult><ph
+                conref="../../reusable/steps/creds/config_cred_window_stepresult.dita#ReusableComponent_vc3_yqt_jyb/ph_wc3_yqt_jyb"
+              /></stepresult>
+          </substep>
+          <substep>
+            <cmd>
+              <ph
+                conref="../../reusable/steps/creds/change_param_save.dita#ReusableComponent_ubp_rpt_jyb/cmd_wbp_rpt_jyb"
+              />
+            </cmd>
+          </substep>
+        </substeps>
+        <info>
+          <fig id="fig_knl_dsl_ftb">
+            <title>Окно «Редактирование учетных данных объекта защиты»</title>
+            <image href="../../../images/cred_prot_obj_settings/edit_prot_obj_cred_window.png"
+              id="image_lnl_dsl_ftb"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Редактирование учетных данных в карточке объекта защиты. Для редактирования:</cmd>
+        <substeps id="substeps_u1h_tpm_jyb">
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/go_to_prot_obj_profile.dita#ReusableComponent_gkn_5rt_jyb/ph_hkn_5rt_jyb"
+              />
+            </cmd>
+          </substep>
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/go_to_cred.dita#ReusableComponent_kzy_3tt_jyb/ph_mzy_3tt_jyb"
+              /></cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите <image href="../../../images/icons/edit.png" id="image_kzj_vpm_jyb"/>
+                (<uicontrol>Редактировать учетные данные</uicontrol>) напротив учетной записи,
+              которую нужно изменить.</cmd>
+            <stepresult><ph
+                conref="../../reusable/steps/creds/config_cred_window_stepresult.dita#ReusableComponent_vc3_yqt_jyb/ph_wc3_yqt_jyb"
+              /></stepresult>
+          </substep>
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/change_param_save.dita#ReusableComponent_ubp_rpt_jyb/cmd_wbp_rpt_jyb"
+              /></cmd>
+          </substep>
+        </substeps>
+      </step>
+     
+      <step>
+        <cmd>Удаление одной записи об учетных данных на странице <cite keyref="cred_prot_obj_fp"/>.
+          Для удаления:</cmd>
+        <substeps>
+          <substep>
+            <cmd>
+              <ph
+                conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><ph
+                conref="../../reusable/pages_breadcrumbs/cred.dita#ReusableComponent_gfw_vnk_qxb/ph_hfw_vnk_qxb"
+              />.</cmd>
+          </substep>
+          <substep>
+            <cmd>Нажмите <ph
+                conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+              />) напротив учетных данных, которые необходимо удалить.</cmd>
+            <stepresult><ph
+                conref="../../reusable/steps/creds/confirm_delete_window_stepresult.dita#ReusableComponent_gfv_pqt_jyb/ph_hfv_pqt_jyb"
+              /></stepresult>
+          </substep>
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/confirm_delete.dita#ReusableComponent_gxn_2qt_jyb/ph_hxn_2qt_jyb"
+              /></cmd>
+            <info>
+              <fig id="fig_hcy_prj_ynb">
+                <title>Окно обоснования удаления учетных данных</title>
+                <image href="../../../images/windows/approve_del_window.png" id="image_icy_prj_ynb">
+                  <alt>Окно обоснования удаления учетных данных</alt>
+                </image>
+              </fig>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Удаление учетных данных, отфильтрованных на странице <cite keyref="cred_prot_obj_fp"/>.
+          Для удаления:</cmd>
+        <substeps>
+          <substep>
+            <cmd>
+              <ph
+                conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                /><ph
+                conref="../../reusable/pages_breadcrumbs/cred.dita#ReusableComponent_gfw_vnk_qxb/ph_hfw_vnk_qxb"
+              />.</cmd>
+          </substep>
+          <substep>
+            <cmd>Воспользуйтесь фильтрами для получения списка учетных данных, подлежащих
+              удалению.</cmd>
+          </substep>
+          <substep>
+            <cmd>В верхней части страницы нажмите <ph
+                conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+            /><uicontrol> учетные данные ОЗ)</uicontrol>.</cmd>
+            <stepresult><ph
+                conref="../../reusable/steps/creds/confirm_delete_window_stepresult.dita#ReusableComponent_gfv_pqt_jyb/ph_hfv_pqt_jyb"
+              /></stepresult>
+          </substep>
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/confirm_delete.dita#ReusableComponent_gxn_2qt_jyb/ph_hxn_2qt_jyb"
+              /></cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Удаление учетной записи в карточке объекта защиты. Для удаления:</cmd>
+        <substeps id="substeps_rqr_ybs_jyb">
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/go_to_prot_obj_profile.dita#ReusableComponent_gkn_5rt_jyb/ph_hkn_5rt_jyb"
+              /></cmd>
+          </substep>
+          <substep>
+            <cmd
+              conref="../../reusable/steps/creds/cred_step1.dita#ReusableComponent_czy_2mp_gtb/cmd_fzy_2mp_gtb"/>
+            <stepresult><ph
+                conref="../../reusable/steps/creds/window_cred_settings.dita#ReusableComponent_ryy_rtt_jyb/ph_tyy_rtt_jyb"
+              /></stepresult>
+          </substep>
+          <substep>
+            <cmd>Нажмите <ph
+                conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+              />) напротив учетной записи, которую нужно удалить. </cmd>
+            <stepresult><ph
+                conref="../../reusable/steps/creds/confirm_delete_window_stepresult.dita#ReusableComponent_gfv_pqt_jyb/ph_hfv_pqt_jyb"
+              /></stepresult>
+          </substep>
+          <substep>
+            <cmd><ph
+                conref="../../reusable/steps/creds/confirm_delete.dita#ReusableComponent_gxn_2qt_jyb/ph_hxn_2qt_jyb"
+              /></cmd>
+          </substep>
+        </substeps>
+      </step>
+    </steps></taskbody>
+</task>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="control_event_correlation_service">
+ <title>Управление службой корреляции событий</title>
+ <taskbody>
+ <context>
+ <p>В верхней части страницы <ph
+          conref="../reusable/pages_breadcrumbs/corr_rules.dita#ReusableComponent_hjr_w2c_pxb/ph_jjr_w2c_pxb"
+        /> доступны следующие возможности по управлению службой:</p>
+ </context>
+ <steps>
+   <step>
+        <cmd>Запуск службы корреляции событий. Для запуска нажмите <image
+            href="../../images/icons/play.png" id="image_wb4_w5g_wrb"/> (<uicontrol>Запустить службу</uicontrol>).</cmd>
+      </step>
+   <step>
+        <cmd>Остановка службы корреляции событий. Для остановки нажмите <image
+            href="../../images/icons/stop.png" id="image_sd4_x5g_wrb"/> (<uicontrol>Остановить службу</uicontrol>).</cmd>
+      </step>
+   <step>
+        <cmd>Перезапуск службы корреляции событий. Для перезапуска нажмите <image
+            href="../../images/icons/restart_1.png" id="image_dyf_y5g_wrb"/> (<uicontrol>Перезапустить службу</uicontrol>).</cmd>
+        <stepresult>появится уведомление <systemoutput>Служба корреляции событий перезапущена</systemoutput>.</stepresult>
+      </step>
+   <step>
+    <cmd>Просмотр событий и текущего состояния службы корреляции событий. Для просмотра:</cmd>
+    <substeps id="substeps_szj_d1d_1qb">
+     <substep>
+                        <cmd>Нажмите <image href="../../images/icons/to_service_info.png"
+                                id="to_service_info_corr"/> (<uicontrol>Состояние службы
+                                корреляции</uicontrol>).</cmd>
+                        <stepresult>откроется окно <uicontrol>Состояние службы
+                                корреляции</uicontrol>.</stepresult>
+                    </substep>
+     <substep>
+      <cmd>Ознакомьтесь со списком событий службы корреляции.</cmd>
+      <info>
+       <fig id="fig_cyq_ykd_1qb">
+        <title>Окно «Состояние службы корреляции»</title>
+        <image href="../../images/event_correlation_service/correlation_service_events.png"
+         id="image_dyq_ykd_1qb">
+         <alt>Окно «Состояние службы корреляции»</alt>
+        </image>
+       </fig>
+       <note>В случае появления ошибок в работе компонентов службы корреляции можно просмотреть
+                                подробности в колонке <uicontrol>Описание</uicontrol>.</note>
+      </info>
+     </substep>
+    </substeps>
+   </step>
+ 
+ </steps>
+ </taskbody>
+</task>

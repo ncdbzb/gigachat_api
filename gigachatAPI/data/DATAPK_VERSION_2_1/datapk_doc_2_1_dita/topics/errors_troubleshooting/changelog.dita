@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="changelog">
+  <title>Полный список изменений в новых версиях</title>
+  <body>
+    <p>В этом разделе:<ul id="ul_oxz_3tb_kzb">
+        <li><xref href="changelog_21.dita"/></li>
+        <li><xref href="changelog_20.dita"/></li>
+      </ul></p>
+
+  </body>
+</topic>

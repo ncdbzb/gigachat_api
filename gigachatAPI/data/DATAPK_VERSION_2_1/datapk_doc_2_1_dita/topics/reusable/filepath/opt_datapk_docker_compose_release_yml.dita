@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:/opt/datapk/docker-compose.release.yml-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_kzp_n3z_mtb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><codeph id="codeph_nzp_n3z_mtb"
+                            ><codeph conref="opt_datapk.dita#opt_datapk/opt_datapk"
+                                id="codeph_lzp_n3z_mtb"/>/<codeph
+                                conref="../docker_compose_release_yml.dita#docker_compose_release_yml/docker_compose_release_yml"
+                                id="codeph_pzp_n3z_mtb"/></codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

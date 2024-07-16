@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wdw_mg4_55b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><ol>
+                                <li><ol>
+                                        <li id="li_whiptail">Установите пакеты с ПО
+                                                <codeph>docker</codeph>, <codeph>whiptail</codeph> и
+                                            <codeph>curl</codeph>:<codeblock id="codeblock_whiptail">sudo apt update &amp;&amp; sudo apt install docker-compose curl whiptail -y</codeblock></li>
+                                    </ol></li>
+                            </ol></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

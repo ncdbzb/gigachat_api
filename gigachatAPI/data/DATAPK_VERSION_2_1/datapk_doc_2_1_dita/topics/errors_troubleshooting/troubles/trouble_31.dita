@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="trouble_31">
+    <title>Ошибки поиска уязвимостей в базах CVE, CPE и БДУ ФСТЭК России</title>
+    <body>
+        <p><ph>Возможны следующие ошибки поиска уязвимостей в базах <abbreviated-form keyref="cve"/>
+                и <abbreviated-form keyref="cpe"/>:</ph><ul id="ul_k3h_fgp_snb">
+                <li><xref href="trouble_31_cause1.dita"/></li>
+                <li><xref href="trouble_31_cause2.dita"/></li>
+                <li><xref href="trouble_31_cause3.dita"/></li>
+                <li><xref href="trouble_31_cause4.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

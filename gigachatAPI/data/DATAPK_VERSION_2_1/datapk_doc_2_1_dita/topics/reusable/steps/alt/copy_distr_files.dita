@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_syg_pwq_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_vyg_pwq_nyb">
+                <cmd>С помощью приложения для обмена файлами  по протоколу SFTP скопируйте все файлы
+                    дистрибутива <term keyref="appliance"/>а в директорию
+                        <codeph>/home/datapk</codeph> операционной системы.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

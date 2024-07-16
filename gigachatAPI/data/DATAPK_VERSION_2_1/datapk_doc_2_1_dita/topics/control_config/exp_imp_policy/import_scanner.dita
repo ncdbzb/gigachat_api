@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_scanner">
+    <title>Импорт сканеров и их групп</title>
+    <taskbody>
+        <context id="context_opd_ckx_5sb">
+            <p>Для импорта сканеров из файла формата <codeph>*.json</codeph> в <term
+                    keyref="appliance"/>:</p>
+        </context>
+        <steps id="steps_ppd_ckx_5sb">
+            <step>
+                <cmd
+                    conref="../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+                />
+            </step>
+            <step>
+                <cmd>На панели <uicontrol>Сбор данных</uicontrol> в строке <uicontrol>Группы
+                        сканеров</uicontrol> нажмите кнопку <ph
+                        conref="../../reusable/buttons/import_button.dita#ReusableComponent_bj1_d1p_pyb/ph_dj1_d1p_pyb"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне укажите расположение импортируемого файла формата
+                        <codeph>*.json</codeph> и подтвердите выбор.</cmd>
+            </step>
+            <step
+                conref="../../reusable/import_action_step.dita#import_action_step/import_action_step"
+                conrefend="../../reusable/import_action_step.dita#import_action_step/step_mkr_pxd_wnb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь, что сканеры и их группы были успешно загружены. Для этого перейдите
+                    на страницу <ph
+                        conref="../../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+                    />.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

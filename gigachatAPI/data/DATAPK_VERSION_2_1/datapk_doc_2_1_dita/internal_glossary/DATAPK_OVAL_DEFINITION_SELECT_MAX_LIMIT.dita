@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="DATAPK_OVAL_DEFINITION_SELECT_MAX_LIMIT">
+    <glossterm>DATAPK_OVAL_DEFINITION_SELECT_MAX_LIMIT</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/datapk_oval_definition_select_max_limit_desc.dita#ReusableComponent_ht5_mfp_5sb/p_jt5_mfp_5sb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+        <link href="../topics/reference_info/env_variables_reccomendations.dita"/>
+    </related-links>
+</glossentry>

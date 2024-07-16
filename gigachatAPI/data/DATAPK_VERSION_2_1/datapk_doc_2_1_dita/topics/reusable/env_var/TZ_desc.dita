@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_vdr_1t3_jpb">
+
+ <title>TZ</title>
+ <body> 
+ <p id="p_a2r_1t3_jpb">Регион часового пояса (Time Zone). Должен совпадать с наименованием часового пояса на ОС устройства.</p> 
+ <p id="p_f2r_1t3_jpb">При генерации файла <ph
+            conref="../filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/> значение
+         переменной заполняется автоматически</p> 
+</body> 
+</topic> 

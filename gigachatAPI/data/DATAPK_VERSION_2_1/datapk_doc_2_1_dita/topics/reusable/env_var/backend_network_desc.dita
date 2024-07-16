@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_e5z_xhq_dyb" outputclass="wide">
+    <title>BACKEND_NETWORK</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p><ph id="ph_i5z_xhq_dyb">IP-адрес сети backend в Docker в формате <term keyref="cidr"/>. Для <term
+                                        keyref="appliance"/>ов уровня <abbreviated-form
+                                        keyref="sensor"/> и <abbreviated-form keyref="management"/>
+                                    значение переменной отличается</ph></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

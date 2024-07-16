@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="var_backups">
+
+ <title>/var/backups</title>
+ <body> 
+ <p><codeph id="var_backups">/var/backups</codeph></p> 
+ </body> 
+</topic> 

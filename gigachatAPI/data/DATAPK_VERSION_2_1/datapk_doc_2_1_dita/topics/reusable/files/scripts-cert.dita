@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fvh_z3t_jbc">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><codeph><ph id="ph_hvh_z3t_jbc">scripts-certs</ph></codeph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

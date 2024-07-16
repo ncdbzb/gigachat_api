@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_a1f_4wb_dzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_b1f_4wb_dzb">
+                <cmd>Если в правом верхнем углу отобразится ошибка: <systemoutput>Непредвиденная
+                        ошибка. Перезапустить синхронизацию</systemoutput>, нажмите на ссылку
+                        <uicontrol>Перезапустить синхронизацию</uicontrol> для перезапуска
+                    синхронизации сенсоров с <term keyref="appliance"/>ом.</cmd>
+                <info>
+                    <fig id="fig_gdb_wvb_dzb">
+                        <title>Ошибка синхронизации сенсоров с Комплексом</title>
+                        <image href="../../../../images/sensor/restart_sync_error.png"
+                            id="image_klp_bwb_dzb"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

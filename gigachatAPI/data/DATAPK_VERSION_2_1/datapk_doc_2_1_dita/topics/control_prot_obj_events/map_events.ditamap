@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Управление событиями объектов защиты</title>
+ <topicref href="event_source_desc/event_source_desc.dita">
+ <topicref href="event_source_desc/datapk_sensor.dita"/>
+ <topicref href="event_source_desc/syslog_desc.dita"/>
+ <topicref href="event_source_desc/eventlog_desc.dita"/>
+ </topicref>
+ <topicref
+ href="setup_collect_events_policy/setup_collect_events_policy.dita">
+ <topicref
+ href="setup_collect_events_policy/toggle_datapk_sensor.dita"/>
+ <topicref
+ href="setup_collect_events_policy/create_syslog_manual.dita"/>
+ <topicref
+ href="setup_collect_events_policy/play_stop_del_event_source.dita">
+ <topicref
+ href="setup_collect_events_policy/play_event_source.dita"/>
+ <topicref
+ href="setup_collect_events_policy/stop_event_source.dita"/>
+ <topicref href="setup_collect_events_policy/del_event_source.dita"/>
+ </topicref>
+ <topicref
+ href="setup_collect_events_policy/create_scaner_when_create_script.dita"/>
+ <topicref
+ href="setup_collect_events_policy/setup_data_collection_with_policy.dita"/>
+ <topicref
+ href="setup_collect_events_policy/setup_data_collection_with_scaner.dita"
+ />
+ </topicref>
+ <topicref href="events_incidents/events_incidents.dita">
+ <topicref href="events_incidents/incident_status.dita"/>
+ <topicref href="events_incidents/edit_incident.dita"/>
+ <topicref href="events_incidents/del_incident.dita"/>
+ <topicref
+ href="events_incidents/group_oper_incidents.dita"/>
+ </topicref>
+ <topicref href="exp_imp_events/exp_imp_events.dita">
+ <topicref href="exp_imp_events/export_events_list.dita"/>
+ <topicref href="exp_imp_events/export_events_source.dita"/>
+ <topicref href="exp_imp_events/import_events_source.dita"
+ />
+ </topicref>
+</map>

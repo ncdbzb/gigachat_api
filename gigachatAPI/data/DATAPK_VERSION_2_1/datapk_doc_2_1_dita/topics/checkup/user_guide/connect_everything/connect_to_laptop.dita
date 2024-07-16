@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="connect_to_laptop">
+    <title>Подключение питающих и соединительных кабелей к компактному компьютеру и соединение с ПЭВМ типа ноутбук «Lenovo LEGION»</title>
+    <taskbody>
+        <steps id="steps_idc_gws_j5b">
+            <step>
+                <cmd>Подключите в промышленный разъем питания 24В блок питания компактного
+                    компьютера (<xref href="#connect_to_laptop/Ref85838653"/>).</cmd>
+                <info>
+                    <fig id="Ref85838653">
+                        <title>Пример подключения блока питания компактного компьютера в
+                            промышленный разъем питания</title>
+                        <image href="../../../../images/checkup/computer_3.jpg"
+                            id="image_tx5_zbs_j5b" height="300"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В разъем RJ-45, соответствующий управляющему порту (первый порт) подключите коммутационный кабель RJ-45 – RJ-45 от ПЭВМ типа ноутбук «Lenovo LEGION» (<xref href="#connect_to_laptop/Ref85838577"/>).</cmd>
+                
+                <info>
+                    <fig id="Ref85838577">
+                        <title>Пример подключения кабеля RJ-45 – RJ-45 в разъем, соответствующий упр. порту</title>
+                        <image href="../../../../images/checkup/computer_2.jpg"
+                            id="computer_2" height="300"/>
+                    </fig>
+                </info>
+                
+            </step>
+            <step>
+                <cmd>Подключите в разъем USB универсальный адаптер для приема и передачи сигнала
+                    Wi-Fi «ALFA Network» (<xref href="#connect_to_laptop/fig_mfj_xts_m5b"
+                        format="dita"/>).</cmd>
+                <info>
+                    <fig id="fig_mfj_xts_m5b">
+                        <title>Пример подключения универсального адаптера для приема и передачи
+                            сигнала Wi-Fi</title>
+                        <image href="../../../../images/checkup/wifi.jpg" id="image_nfk_zts_m5b"
+                            height="700"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

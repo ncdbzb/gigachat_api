@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_interface_main_topic">
+ <title>Страницы интерфейса</title>
+ <body>
+ <p>В подразделе описаны все содержащиеся в интерфейсе страницы.</p>
+  <ul id="ul_a1t_dzx_3xb">
+   <li><xref keyref="monitoring_fp"/><ul id="ul_k5d_fzx_3xb">
+     <li><xref keyref="dashboard_fp"/></li>
+     <li><xref keyref="visualize_fp"/></li>
+    </ul></li>
+   <li><xref keyref="incidents_fp"/></li>
+   <li><xref keyref="prot_obj_fp"/><ul id="ul_nsv_gzx_3xb">
+     <li><xref keyref="prot_obj_profile_fp"/></li>
+    </ul></li>
+   <li><xref keyref="events_fp"/><ul id="ul_ds2_bnf_vzb">
+          <li><xref keyref="events_em_fp"/></li>
+        </ul></li>
+   <li><xref keyref="network_inspection_fp"/><ul id="ul_xqr_hzx_3xb">
+     <li><xref keyref="maps_fp"/></li>
+     <li><xref keyref="dataflow_fp"/></li>
+     <li><xref keyref="dataflow_rules_fp"/></li>
+    </ul></li>
+   <li><xref keyref="prot_obj_inspection_fp"/><ul id="ul_a4r_3zx_3xb">
+     <li><xref keyref="data_collect_tasks_fp"/></li>
+     <li><xref keyref="data_collect_results_fp"/></li>
+     <li><xref href="../../../../breadcrumbs/soft_list.dita"/></li>
+     <li><xref keyref="config_fp"/><ul id="ul_nlq_jzx_3xb">
+       <li><xref keyref="config_prot_obj_fp"/></li>
+      </ul></li>
+     <li><xref keyref="check_report_fp"/></li>
+    </ul></li>
+   <li><xref href="../../../../breadcrumbs/sensors_fp.dita"/></li>
+   <li><xref keyref="appliance_control_fp"/><ul id="ul_cst_kzx_3xb">
+     <li><xref keyref="main_settings_fp"/><ul id="ul_ejb_lzx_3xb">
+       <li><xref href="../../../../breadcrumbs/main_settings_fp.dita"/></li>
+       <li><xref keyref="exchange_fp"/></li>
+       <li><xref keyref="diagnostics_fp"/></li>
+       <li><xref keyref="monitoring_control_fp"/></li>
+      </ul></li>
+     <li><xref keyref="check_report_settings_fp"/><ul id="ul_apb_qzx_3xb">
+       <li><xref keyref="scaners_fp"/></li>
+       <li><xref keyref="definitions_group_fp"/></li>
+       <li><xref keyref="definitions_list_fp"/></li>
+       <li><xref keyref="oval_settings_fp"/></li>
+       <li><xref keyref="scripts_fp"/></li>
+      </ul></li>
+     <li><xref keyref="incidents_menu_fp"/><ul id="ul_esj_4zx_3xb">
+       <li><xref keyref="retro_fp"/></li>
+       <li><xref keyref="correlation_rules_fp"/></li>
+       <li><xref keyref="scheme_correlation_fp"/></li>
+       <li><xref keyref="incident_statuses_fp"/></li>
+       <li><xref keyref="notification_fp"/></li>
+       <li><xref keyref="event_index_fp"/></li>
+      </ul></li>
+     <li><xref keyref="users_settings_fp"/><ul id="ul_jcx_nzx_3xb">
+       <li><xref keyref="users_fp"/></li>
+       <li><xref keyref="password_policy_fp"/></li>
+      </ul></li>
+     <li><xref href="../../../../breadcrumbs/signature.dita"/><ul id="ul_pb2_szx_3xb">
+       <li><xref keyref="ids_detection_fp"/></li>
+      </ul></li>
+     <li><xref keyref="prot_obj_settings_fp"/><ul id="ul_fqw_rzx_3xb">
+       <li><xref keyref="cred_prot_obj_fp"/></li>
+       <li><xref keyref="ref_fp"/></li>
+       <li><xref keyref="event_source_fp"/></li>
+      </ul></li>
+    </ul></li>
+      <li><xref href="../../../../breadcrumbs/404_page.dita"/></li>
+  </ul>
+ </body>
+
+</topic>

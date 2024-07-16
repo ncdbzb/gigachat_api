@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Порядок первичной настройки комплекса</title>
+ <topicref href="steps_connect_datapk.dita">
+  <topicref href="steps_connect_web.dita"/>
+  <topicref href="steps_first_setup.dita"/>
+ </topicref>
+ <topicref href="../cred_and_network/cred_and_network.ditamap" format="ditamap"/>
+ <topicref href="../password_policy.dita"/>
+ <topicref href="../import_catalog.dita"/>
+ <topicref href="../func_check/sync_ids_rules.dita"/>
+ <topicref href="../func_check/func_check.ditamap" format="ditamap"/>
+</map>

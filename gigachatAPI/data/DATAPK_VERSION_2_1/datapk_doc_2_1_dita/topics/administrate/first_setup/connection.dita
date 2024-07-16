@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?xml-stylesheet type="text/css" href="../../../css/main.css"?>
+<topic id="connection">
+ <title>Первичная настройка Комплекса</title>
+ <body>
+ <p>Для выполнения первичной настройки <term keyref="appliance"/> подключается к рабочей станции администратора и к
+ подсети управляющего контура.</p>
+ <p>Рекомендуется производить первичную настройку в предложенном порядке.</p>
+        <p outputclass="only_cert">
+            <ol id="ol_nxs_3pw_5tb">
+                <li><xref href="steps_connect_datapk.dita"/></li>
+                <li>
+                    <xref href="../cred_and_network/cred_and_network.dita"/></li>
+                <li><xref href="../password_policy.dita"/></li>
+                <li><xref href="../import_catalog.dita"/></li>
+                <li><xref href="../versions.dita"/></li>
+                <li><xref href="../func_check/func_check.dita"/></li>
+            </ol>
+        </p>
+ </body>
+</topic>

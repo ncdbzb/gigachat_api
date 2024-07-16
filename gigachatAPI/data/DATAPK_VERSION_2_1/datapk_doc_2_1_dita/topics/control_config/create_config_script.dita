@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="create_config_script">
+ <title>Содержание Python-скриптов</title>
+ <body>
+   <p><term keyref="script">Скрипты</term> для сбора данных выполняются в среде, поддерживающей подмножество
+      синтаксиса языка Python (RestrictedPython).</p>
+    <note
+      conref="../reusable/notes/warning_script.dita#ReusableComponent_ept_4lc_jwb/note_fpt_4lc_jwb"
+      id="note_wst_4lc_jwb"/>
+ <p>В скриптах запрещен импорт произвольных пакетов, по умолчанию в среду выполнения
+ импортированы следующие пакеты из стандартной библиотеки Python: <codeph>re, string,
+ unicodedata, hashlib, datetime, textwrap, struct, dbfread, dateutil,
+ dateutil.tz</codeph>.</p>
+ <p>В скриптах доступны следующие переменные:</p>
+ <ul id="ul_p1t_gqq_qnb">
+ <li><codeph>host</codeph> – IP-адрес объекта защиты, на котором выполняется сбор данных;</li>
+ <li><codeph>domain</codeph> – имя домена (используется в том случае, если с помощью скрипта
+ осуществляется доступ к объектам защиты, находящимся в домене);</li>
+ <li><codeph>host_id</codeph> – идентификатор объекта защиты, на котором выполняется сбор
+ данных;</li>
+ <li><codeph>credentials</codeph> – словарь (<codeph>dict</codeph>) с реквизитами доступа к объекту
+    защиты; значение данной переменной – словарь с двумя ключами (<codeph>user</codeph>,
+     <codeph>password</codeph>). <term keyref="scan"/> получает данные о ключах из учетной записи
+    объекта защиты <term keyref="appliance"/>а, тег которой совпадает с названием словаря;</li>
+ <li><codeph>store</codeph> – (<codeph>any</codeph>, <codeph>dict</codeph>) сохраненные данные с
+    предыдущего запуска скрипта. Если скрипт запускается первый раз, то <codeph>store =
+     None</codeph>;</li>
+ <li><codeph>expiration</codeph> – максимальное время выполнения скрипта;</li>
+ <li><codeph>execute</codeph> – метод, выполняющий запрос к коннектору.</li>
+ </ul>
+ <p>Результат выполнения скрипта возвращается с помощью оператора <codeph>return</codeph>.</p>
+ <p>Ниже приведен пример скрипта для сбора ARP-таблицы в <abbreviated-form keyref="OS"/> семейства
+      Unix по протоколу SSH с помощью учетной записи с тегом
+      <codeph>admin</codeph>:<codeblock conref="../reusable/code_examples/create_config_script.dita#ReusableComponent_w3j_rv4_lrb/codeblock_cjj_rv4_lrb"/></p>
+ <p>Для возможности сбора конфигурации с объектов защиты необходимо создать и настроить
+ учетные записи на объектах защиты с соответствующими правами. Учетную запись,
+ настроенную в операционной системе объекта защиты, необходимо добавить в список учетных
+ данных в веб-интерфейсе <term keyref="appliance"/>а. Порядок настройки учетных данных в <term keyref="appliance"/>е приведен в
+ разделе «<xref href="../cred_prot_obj_settings/cred_prot_obj_settings.dita"/>».</p>
+ <note type="tip">Создание сканера описано в разделе «<xref
+        href="create_data_collect_scaner/create_data_collect_scaner.dita"/>». Создание скрипта
+        <abbreviated-form keyref="oval_def"/> описано в разделе «<xref
+        href="../oval/manage_oval_scripts.dita"/>».</note>
+ </body>
+</topic>

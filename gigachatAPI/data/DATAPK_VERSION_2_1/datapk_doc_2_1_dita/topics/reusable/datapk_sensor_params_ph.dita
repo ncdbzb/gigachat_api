@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_q25_g31_wyb">
+    <title/>
+    <body>
+        <p><ph id="ph_w25_g31_wyb">Администратор <term keyref="appliance"/>а, имеющий доступ к
+                консольному управлению, может настроить включение и отключение, а также критичность
+                служебных событий. Для этого в файл <codeph><term keyref="env"/></codeph>
+                добавляются соответствующие переменные</ph></p>
+    </body>
+</topic>

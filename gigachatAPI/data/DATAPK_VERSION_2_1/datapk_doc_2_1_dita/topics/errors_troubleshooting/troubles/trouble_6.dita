@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_6">
+ <title>502-я ошибка при загрузке страницы авторизации, 500-е ошибки сразу после авторизации</title>
+ <troublebody>
+  <condition id="condition_hbj_zjw_pyb">
+   <p><ph>В качестве причин ошибок в веб-интерфейсе <term keyref="appliance"/>а рассмотрены
+     следующие:</ph><ul id="ul_i3m_w5t_45b">
+     <li><xref href="#trouble_6/cause_non_iniz" format="dita"/></li>
+     <li><xref href="#trouble_6/cause_incorr_fw" format="dita"/></li>
+     <li><xref href="#trouble_6/cause_no_free_space" format="dita"/></li>
+    </ul></p>
+  </condition>
+  <troubleSolution>
+   <cause id="cause_non_iniz">
+    <title>Комплекс не до конца инициализировался после запуска работы контейнеров</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps>
+     <step>
+      <cmd>Подождите 3-5 минут после запуска контейнеров.</cmd>
+     </step>
+     <step>
+      <cmd>При повторяющихся ошибках перейдите в рабочую директорию и выполните команду:</cmd>
+      <info>
+       <codeblock>docker ps</codeblock>
+      </info>
+     </step>
+     <step>
+      <cmd><ph>Все контейнеры должны быть в состоянии <codeph>up</codeph>. </ph><ph
+        conref="../../reusable/steps/container_errors_references_step.dita#ReusableComponent_hl4_ysd_l1c/ph_jl4_ysd_l1c"
+       /></cmd>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_incorr_fw">
+    <title>Некорректно настроены правила межсетевого экрана для доступа к сервисам Комплекса</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps id="steps_hqr_2kw_pyb">
+     <step id="iptables_rules_step">
+      <cmd>Убедитесь, что на <term keyref="appliance"/>е уровня установлены корректные правила
+       межсетевого экранирования <codeph>iptables</codeph> в файле
+        <codeph>/etc/sysconfig/iptables</codeph>:</cmd>
+      <info>
+       <ul id="ul_jbx_1nw_pyb">
+        <li><ph>правила <ph
+           conref="../../reusable/steps/hierarchy/for_m.dita#ReusableComponent_rh5_nbw_pyb/ph_sh5_nbw_pyb"
+          />:</ph><codeblock id="codeblock_cbk_wlg_myb">*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:DOCKER - [0:0]
+:DOCKER-USER - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+
+# Правило, когда M выступает в роли ntp-сервера для S:
+-A INPUT -p udp -m udp --dport 123 -j ACCEPT
+
+-A INPUT -s 172.31.254.0/24 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 16379 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 19091 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 15673 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+
+COMMIT
+
+# Правила ниже создаются под каждый физический сетевой интерфейс, к которым подключаются S
+
+*nat
+
+-A PREROUTING -i ens192 -p tcp -m tcp --dport 16379 -j DNAT --to-destination 172.31.254.1:16379
+-A PREROUTING -i ens192 -p tcp -m tcp --dport 19091 -j DNAT --to-destination 172.31.254.1:19091
+-A PREROUTING -i ens192 -p tcp -m tcp --dport 15673 -j DNAT --to-destination 172.31.254.1:15673
+
+COMMIT</codeblock></li>
+        <li><ph>правила <ph
+           conref="../../reusable/steps/hierarchy/for_s_and_m.dita#ReusableComponent_tpb_rbw_pyb/ph_vpb_rbw_pyb"
+          />:</ph><codeblock id="codeblock_zrs_wlg_myb">*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:DOCKER - [0:0]
+:DOCKER-USER - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 172.31.254.0/24 -j ACCEPT
+-A INPUT -s 172.31.255.0/24 -j ACCEPT
+-A INPUT -p udp -m udp --dport 514 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 514 -j ACCEPT
+-A INPUT -p udp -m udp --dport 515 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 515 -j ACCEPT
+-A INPUT -p udp -m udp --dport 162 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+
+COMMIT</codeblock></li>
+       </ul>
+      </info>
+     </step>
+     <step>
+      <cmd>При необходимости настройте правила <codeph>iptables</codeph>:</cmd>
+      <substeps id="substeps_fzz_dqw_pyb">
+       <substep>
+        <cmd>Остановите работу контейнеров без удаления данных:</cmd>
+        <info>
+         <ul id="ul_yqh_vhx_pyb">
+          <li><ph><ph
+             conref="../../reusable/steps/hierarchy/for_m.dita#ReusableComponent_rh5_nbw_pyb/ph_sh5_nbw_pyb"
+            /> выполните
+           команду:</ph><codeblock id="codeblock_mxy_yhx_pyb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> &amp;&amp; docker-compose down</codeblock></li>
+          <li><ph><ph
+             conref="../../reusable/steps/hierarchy/for_s_and_m.dita#ReusableComponent_tpb_rbw_pyb/ph_vpb_rbw_pyb"
+            />последовательно выполните
+           команды:</ph><codeblock id="codeblock_nn2_zhx_pyb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> &amp;&amp; docker-compose down
+cd <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor &amp;&amp; docker-compose down</codeblock></li>
+         </ul>
+        </info>
+       </substep>
+       <substep
+        conref="../../reusable/steps/alt/iptables_open_config_substep.dita#ReusableComponent_wmm_mtn_4yb/substep_xmm_mtn_4yb">
+        <cmd/>
+       </substep>
+       <substep>
+        <cmd>Добавьте правила в конфигурационный файл <codeph>iptables</codeph> в зависимости от
+         конфигурации <term keyref="appliance"/>а согласно шагу <xref
+          href="#trouble_6/iptables_rules_step" format="dita"/>.</cmd>
+       </substep>
+       <substep>
+        <cmd>Перезапустите сервис <codeph>iptables</codeph>: </cmd>
+        <info>
+         <codeblock id="codeblock_vjd_dmg_myb">systemctl restart iptables</codeblock>
+        </info>
+       </substep>
+       <substep>
+        <cmd>Перезапустите <codeph>Docker</codeph>:</cmd>
+        <info>
+         <codeblock id="codeblock_tkf_qjr_s1c">systemctl restart docker</codeblock>
+        </info>
+       </substep>
+       <substep>
+        <cmd>Остановите работу контейнеров без удаления данных:</cmd>
+        <info>
+         <ul id="ul_bnk_w3x_pyb">
+          <li><ph><ph
+             conref="../../reusable/steps/hierarchy/for_m.dita#ReusableComponent_rh5_nbw_pyb/ph_sh5_nbw_pyb"
+            /> выполните
+           команду:</ph><codeblock id="codeblock_cnk_w3x_pyb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> &amp;&amp; docker-compose up -d</codeblock></li>
+          <li><ph><ph
+             conref="../../reusable/steps/hierarchy/for_s_and_m.dita#ReusableComponent_tpb_rbw_pyb/ph_vpb_rbw_pyb"
+            />последовательно выполните
+           команды:</ph><codeblock id="codeblock_dnk_w3x_pyb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> &amp;&amp; docker-compose up -d
+cd <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor &amp;&amp; docker-compose up -d</codeblock></li>
+         </ul>
+        </info>
+       </substep>
+      </substeps>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+  <troubleSolution>
+   <cause id="cause_no_free_space">
+    <title>Отсутствие свободной оперативной памяти или места на диске</title>
+   </cause>
+   <remedy>
+    <title>Способ устранения</title>
+    <responsibleParty>Для устранения затруднения:</responsibleParty>
+    <steps id="steps_qyn_dlw_pyb">
+     <step>
+      <cmd>Проверьте свободное место на диске, выполнив команду:</cmd>
+      <info>
+       <codeblock id="codeblock_ryn_dlw_pyb">df -h /</codeblock>
+      </info>
+     </step>
+     <step>
+      <cmd>При отсутствии свободного места:</cmd>
+      <substeps id="substeps_syn_dlw_pyb">
+       <substep>
+        <cmd>Остановите контейнеры <term keyref="appliance"/>а.</cmd>
+       </substep>
+       <substep>
+        <cmd>Удалите ненужные данные с диска.</cmd>
+       </substep>
+       <substep>
+        <cmd>Запустите контейнеры <term keyref="appliance"/>а.</cmd>
+       </substep>
+      </substeps>
+     </step>
+    </steps>
+   </remedy>
+  </troubleSolution>
+ </troublebody>
+</troubleshooting>

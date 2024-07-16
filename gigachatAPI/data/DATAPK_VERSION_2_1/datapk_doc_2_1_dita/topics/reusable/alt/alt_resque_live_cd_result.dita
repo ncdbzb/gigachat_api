@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lhj_tsl_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <stepresult id="stepresult_mhj_tsl_21c">появится оболочка bash LiveCD <term keyref="alt_name"/>.</stepresult>
+            </step>
+        </steps>
+        </taskbody>
+</task>

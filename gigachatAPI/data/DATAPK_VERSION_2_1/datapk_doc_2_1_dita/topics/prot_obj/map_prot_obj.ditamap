@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Работа с объектами защиты</title>
+ <topicref href="exp_imp_hosts/export_import_prot_obj.dita">
+  <topicref href="exp_prot_obj.dita"/>
+  <topicref href="exp_imp_hosts/export_host_groups.dita" keys="export_host_groups"/>
+  <topicref href="exp_imp_hosts/import_prot_obj.dita"/>
+  <topicref href="exp_imp_hosts/import_host_groups.dita" keys="import_host_groups"/>
+ </topicref>
+ <topicref href="control_prot_obj.dita">
+  <topicref href="control_buttons_prot_obj.dita"/>
+  <topicref href="filter_prot_obj.dita"/>
+ </topicref>
+ <topicref href="create_prot_obj.dita"/>
+ <topicref href="host_group/host_groupping.dita" keys="host_groupping">
+  <topicref href="host_group/create_group.dita" keys="create_group"/>
+  <topicref href="host_group/add_hosts_into_group.dita" keys="add_hosts_into_group"/>
+  <topicref href="host_group/control_host_group.dita" keys="control_host_group"/>
+ </topicref>
+ <topicref href="edit_prot_obj.dita"/>
+ <topicref href="del_prot_obj.dita"/>
+ <topicref href="prot_obj_settings/prot_obj_settings.dita" >
+  <topicref href="../cred_prot_obj_settings/cred_prot_obj_settings.dita">
+   <mapref href="../cred_prot_obj_settings/map_cred.ditamap"/>
+  </topicref>
+  <topicref href="ref_and_classifiers.dita">
+   <topicref href="groups/group_acs_create.dita"/>
+   <topicref href="groups/create_tag.dita"/>
+   <topicref href="edit_or_del_group.dita"/>
+   <topicref href="groups/exp_imp_ref/exp_imp_ref.dita">
+    <topicref href="groups/exp_imp_ref/exp_ref.dita"/>
+    <topicref href="groups/exp_imp_ref/exp_tags.dita"/>
+    <topicref href="groups/exp_imp_ref/import_ref.dita"/>
+    <topicref href="groups/exp_imp_ref/import_tags.dita"/>
+   </topicref>
+  </topicref>
+ </topicref>
+</map>

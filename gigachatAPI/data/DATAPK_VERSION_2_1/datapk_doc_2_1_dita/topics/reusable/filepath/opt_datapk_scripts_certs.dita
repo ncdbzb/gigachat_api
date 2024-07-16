@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:opt_datapk_scripts_certs-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_pwm_zzy_mtb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><codeph id="codeph_twm_zzy_mtb"><codeph
+                                    conref="opt_datapk.dita#opt_datapk/opt_datapk"
+                                    id="codeph_qwm_zzy_mtb"/>/<ph
+                                    conref="../files/scripts-cert.dita#ReusableComponent_fvh_z3t_jbc/ph_hvh_z3t_jbc"
+                                /></codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

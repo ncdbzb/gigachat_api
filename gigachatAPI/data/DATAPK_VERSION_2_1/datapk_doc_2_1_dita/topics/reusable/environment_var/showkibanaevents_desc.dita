@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_utr_byc_jpb">
+
+ <title>showkibanaevents</title>
+ <body> 
+ <p id="p_ztr_byc_jpb">Доступ к страницам <cite keyref="event_index_fp"/> и <cite keyref="events_fp"
+        />→<cite keyref="events_em_fp"/>.</p> 
+</body> 
+</topic> 

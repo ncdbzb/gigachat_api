@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fp3_5ry_zxb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><div id="div_gp3_5ry_zxb">ФБО должны осуществить информирование
+                                уполномоченного лица <i>
+                                    <u>в интерфейсе ОО</u>
+                                </i>, <i>
+                                    <u>по электронной почте</u>
+                                </i> или [на OPC-сервер] при выявлении и регистрации компьютерного
+                                инцидента.</div></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

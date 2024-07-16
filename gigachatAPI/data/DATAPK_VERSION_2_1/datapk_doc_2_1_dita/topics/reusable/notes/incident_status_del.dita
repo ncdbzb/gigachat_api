@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hbs_nyc_gyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <stepresult><note id="note_vyd_pgp_35b">В окне может появиться
+                                предупреждение: <systemoutput>Внимание! В системе присутствуют
+                                    инциденты с данным статусом. Вы действительно хотите удалить
+                                    статус?</systemoutput>. Это значит, что статус на момент
+                                удаления еще назначен хотя бы одному инциденту. После удаления
+                                такого статуса инциденты, которым он был назначен, будут иметь тот
+                                же статус, но с отметкой «(удален)».</note></stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

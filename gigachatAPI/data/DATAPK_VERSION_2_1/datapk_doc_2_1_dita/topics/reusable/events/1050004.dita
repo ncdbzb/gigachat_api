@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1050004">
+    <title>
+Конфигурация удалена</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1050004">Наименование сканера: <codeph>{scanner_name}</codeph>; Пользователь:
+                                    <codeph>{user_login}</codeph>; Обоснование:
+    <codeph>{justification}</codeph>; Собрана: <codeph>{collected_at}</codeph></p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

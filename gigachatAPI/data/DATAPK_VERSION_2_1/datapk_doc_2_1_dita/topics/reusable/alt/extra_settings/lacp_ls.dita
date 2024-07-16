@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ovz_s4q_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_check_iface_dir">
+                <cmd>Убедитесь, что в директории <codeph>/etc/net/ifaces</codeph> присутствуют две
+                    директории сетевых интерфейсов, которые планируется объединить. Для этого
+                    введите команду:</cmd>
+                <info><codeblock id="codeblock_nqc_ffs_21c">ls</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

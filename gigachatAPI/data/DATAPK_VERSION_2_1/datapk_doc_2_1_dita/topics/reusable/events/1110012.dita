@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e_1110012">
+    <title>
+Удалена проверка</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+<p id="e_1110012">
+Пользователь: <codeph>{user_login}</codeph>; Обоснование: <codeph>{justification}</codeph>; Проверка: [Название: <codeph>{assessment_title}</codeph>; Наименование ОЗ: <codeph>{host_netbios_name}</codeph>; Инициатор: <codeph>{assessment_created_by}</codeph>; Статус: <codeph>{assessment_status}</codeph>]</p></entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_b53_ww4_lrb">
+
+ <title>grok_example_2</title>
+ <body>
+  <p>
+   <codeph id="codeph_g53_ww4_lrb">${N}-${NAME}-{TYPE}.conf</codeph></p>
+</body> 
+</topic> 

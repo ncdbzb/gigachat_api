@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_udn_v1d_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_vdn_v1d_2zb">
+                        <cmd>Удалите или закомментируйте строку <codeph>pool pool.ntp.org
+                                iburst</codeph>. Добавьте адреса существующих NTP-серверов, добавив
+                            для каждого сервера следующую строку: </cmd>
+                        <info>
+                            <codeblock id="codeblock_djn_xsf_myb">server [IP-адрес_NTP-сервера] iburst</codeblock>
+                            <fig id="fig_p2n_d1r_lyb">
+                                <title>Файл конфигурации службы chronyd</title>
+                                <image href="../../../images/deployment/alt/chronyd.png"
+                                    id="image_e4j_xyq_lyb"/>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

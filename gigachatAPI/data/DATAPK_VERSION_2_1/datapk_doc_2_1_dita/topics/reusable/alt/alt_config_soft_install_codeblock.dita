@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cfj_xdg_fzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <info><codeblock id="codeblock_qrw_ntq_lyb">apt-get install docker-ce docker-compose nano tcpreplay htop chrony newt52 auto-fstrim syslog-ng syslog-ng-journal -y</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

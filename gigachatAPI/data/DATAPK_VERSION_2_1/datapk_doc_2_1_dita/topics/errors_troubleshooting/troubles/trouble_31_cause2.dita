@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_31_2">
+    <title>Ошибка вида «Не удалось сохранить отчет. Убедитесь в работоспособности Комплекса или
+        обратитесь к администратору»</title>
+    <troublebody>
+        <condition id="condition_kjh_4l1_yyb">
+            <p><ph>Возможны следующие причины:</ph><ul id="ul_k3h_fgp_snb">
+                    <li><xref href="#trouble_31_2/cause_full_disk" format="dita"/></li>
+                    <li><xref href="#trouble_31_2/cause_container_errors" format="dita"/></li>
+                </ul></p>
+        </condition>
+        <troubleSolution>
+            <cause id="cause_full_disk">
+                <title>Отсутствие свободного места на диске</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps conref="trouble_2.dita#trouble_2/steps1" id="steps_qkn_xp1_yyb">
+                    <step>
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause id="cause_container_errors">
+                <title>Ошибки в контейнере vulnerability_backend</title>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Для устранения затруднения:</responsibleParty>
+                <steps id="steps_eh3_4mw_pyb">
+                    <step>
+                        <cmd>Убедитесь, что в логах контейнера
+                                <codeph>vulnerability_backend</codeph> нет ошибок, по команде:</cmd>
+                        <info>
+                            <codeblock id="codeblock_cz3_nrf_yyb">docker logs -f vulnerability_backend</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd><ph
+                                conref="../../reusable/steps/container_errors_references_step.dita#ReusableComponent_hl4_ysd_l1c/ph_jl4_ysd_l1c"
+                            /></cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

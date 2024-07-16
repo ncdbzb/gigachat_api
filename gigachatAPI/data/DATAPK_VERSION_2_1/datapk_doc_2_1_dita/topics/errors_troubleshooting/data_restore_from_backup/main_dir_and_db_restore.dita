@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="main_dir_and_db_restore">
+ <title>Восстановление из резервной копии рабочей директории и баз данных Комплекса уровня
+        Management</title>
+ <taskbody>
+        <prereq id="prereq_hhl_1wk_nyb">Убедитесь, что выполнена подготовка к восстановлению из
+            резервной копии согласно разделу «<xref href="prepare_restore_from_backup.dita"
+            />».</prereq>
+ <context>
+ <p>Для восстановления рабочей директории (по умолчанию <codeph
+                    conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>) и базы
+                данных локального <term keyref="appliance"/>а уровня <abbreviated-form
+                    keyref="management"/> из резервной копии:</p>
+ </context>
+ <steps>
+ <step>
+                <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а.</cmd>
+            </step>
+ <step>
+ <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а.</cmd>
+                <info>
+                    <codeblock id="codeblock_gjz_nq1_ptb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                </info>
+ </step>
+            <step>
+                <cmd>Остановите работу контейнеров и запустите сервисы <codeph>db</codeph> и
+                        <codeph>pg</codeph>:</cmd>
+                <info>
+                    <codeblock id="codeblock_vmw_drq_qwb">docker-compose down &amp;&amp; docker-compose up -d db pg</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Дождитесь остановки работы всех контейнеров и запуска сервисов
+                        <codeph>db</codeph> и <codeph>pg</codeph>.</cmd>
+                <info>
+                    <note id="note_q5l_5wk_nyb"><ph>Чтобы убедиться, что сервисы <codeph>db</codeph>
+                            и <codeph>pg</codeph> полностью запустились, проверьте системные
+                            сообщения сервисов с помощью
+                            команд:</ph><codeblock id="codeblock_an1_ywk_nyb">docker logs -f db
+docker logs -f pg</codeblock><ph>Cистемные сообщения запущенного сервиса
+                                <codeph>db</codeph> должны содержать следующие
+                            сообщения:</ph><codeblock id="codeblock_t1d_hxk_nyb">2023-07-07T05:54:15.676263Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/lib/mysql/mysqlx.sock
+2023-07-07T05:54:15.676404Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.30-alt1.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  (ALT p10).
+2023-07-07T05:54:15.676656Z 0 [System] [MY-013292] [Server] Admin interface ready for connections, address: '127.0.0.1'  port: 33062</codeblock><ph>Cистемные
+                            сообщения запущенного сервиса <codeph>pg</codeph> должны содержать
+                            следующие
+                        сообщения:</ph><codeblock id="codeblock_als_jxk_nyb">2023-07-07 10:54:00.173 +05 [29] LOG:  database system is ready to accept connections</codeblock></note>
+                </info>
+            </step>
+ <step>
+                <cmd>Запустите средство восстановления баз данных <term keyref="appliance"/>а из
+                    резервной копии:</cmd>
+                <info>
+                    <note> Пароль от баз данных (и MySQL, и PostgreSQL) хранится в переменной
+                            <cmdname keyref="DATAPK_DB_PASS"/> конфигурационного файла <ph
+                            conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        />.</note>
+                    <codeblock>docker-compose -f docker-compose.release.yml -f docker-compose.backup.yml \
+run --rm backupper --restore \
+--file="<codeph conref="../../reusable/files/backup_archive_file.dita#ReusableComponent_mxs_bkj_nyb/codeph_nxs_bkj_nyb"/>" \
+--password [пароль_от_архива_резервной_копии] \
+--mysql_db_user=root \
+--mysql_db_pass="[значение переменной <cmdname keyref="DATAPK_DB_PASS"/>]" \
+--mysql_db_host=db \
+--mysql_db_port=3306 \
+--postgres_db_user=postgres \
+--postgres_db_pass="[значение переменной <cmdname keyref="DATAPK_DB_PASS"/>]" \
+--postgres_db_host=pg \
+--postgres_db_port=5432</codeblock>
+                    <p><ph>где:</ph><ul id="ul_ub2_ggj_nyb">
+                            <li><codeph>--file</codeph> – название файла с резервной копией. Файл
+                                должен располагаться в директории, указанной в переменной <cmdname
+                                    keyref="DATAPK_BACKUP_DIR"/> текущего файла <codeph
+                                    conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"
+                                    />/<ph
+                                    conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                                />;</li>
+                            <li><codeph>--password</codeph> — пароль от архива резервной копии,
+                                который был задан при его создании;</li>
+                            <li><ph><codeph>--mysql_db_pass</codeph> и
+                                        <codeph>--postgres_db_pass</codeph> — пароли к базам данных
+                                    MySQL и Postgres текущего <term keyref="appliance"/>а. Пароли
+                                    одинаковые и принимают значение переменной <cmdname
+                                        keyref="DATAPK_DB_PASS"/> конфигурационного файла <ph
+                                        conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                                    />, взятого из архива резервной копии.</ph><note
+                                    conref="../../reusable/notes/db_pass_note.dita#ReusableComponent_ncg_vyk_nyb/note_ttf_hhj_nyb"
+                                    id="note_igg_vyk_nyb"/></li>
+                        </ul></p>
+                </info>
+                <stepresult>при успешном выполнении восстановления данных должны быть получены
+                    следующие сообщения:
+                    <codeblock conref="../../reusable/code_examples/log_example_db.dita#ReusableComponent_ysr_yv4_lrb/codeblock_gtr_yv4_lrb"/></stepresult>
+            </step>
+            <step>
+                <note id="note_cjf_nmc_nwb" type="warning">После выполнения предыдущего шага
+                    операционная система изменит директорию, в которой находился пользователь. Это
+                    происходит в результате замены директории <codeph
+                        conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> из
+                    которой выполнялись команды.</note>
+                <cmd>Повторно перейдите в основную директорию <term keyref="appliance"/>а:</cmd>
+                <info>
+                    <codeblock id="codeblock_m4m_p2g_ptb">cd <codeph conref="../../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Перенесите из сохраненного файла <ph
+                        conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    /> необходимые настройки в текущий файл <ph
+                        conref="../../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    />. Не меняйте значение переменной <cmdname keyref="DATAPK_DB_PASS"/> (пароль
+                    для баз данных) — после восстановления баз данных из резервной копии текущий
+                        <term keyref="appliance"/> будет использовать для запуска баз пароль с <term
+                        keyref="appliance"/>а, на котором был создан архив резервной копии. </cmd>
+            </step>
+            <step id="restore_cve_step">
+                <cmd>При необходимости скопируйте в директорию <codeph
+                        conref="../../reusable/filepath/opt.dita#opt/opt"/> директорию
+                        <codeph>cve</codeph> вместе с содержимым, которая была сохранена вручную при
+                    создании резервной копии <term keyref="appliance"/>а.</cmd>
+                <info>
+                    <note id="note_ogj_2yd_zyb">
+                        <p>Сохраненная директория <codeph>cve</codeph> содержит резервную копию
+                            справочника ПО и уязвимостей (CPE и CVE), базу сопоставления собранного
+                            сканерами ПО со справочником CPE и отчет формата <codeph>*.csv</codeph>
+                            с последними результатами поиска уязвимостей на момент создания
+                            резервной копии.</p>
+                        <p>Если восстанавливать справочник CPE и CVE и базу сопоставления из
+                            резервной копии не требуется, импортируйте их позже в веб-интерфейсе
+                                <term keyref="appliance"/>а на шаге <xref
+                                href="#main_dir_and_db_restore/import_cve_step" format="dita"/>.</p>
+                    </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Удалите директорию <codeph>/opt/datapk/nginx/sites-enabled.d/</codeph>:</cmd>
+                <info>
+                    <codeblock id="codeblock_dtz_cnk_21c">rm -rf /opt/datapk/nginx/sites-enabled.d/</codeblock>
+                </info>
+            </step>
+ <step>
+                <cmd>Перезапустите работу всех запущенных контейнеров командой:</cmd>
+                <info>
+                    <codeblock>docker-compose down &amp;&amp; docker-compose up -d</codeblock>
+                </info>
+            </step>
+ <step>
+                <cmd
+                    conref="../../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+                />
+            </step>
+ <step><cmd>Убедитесь, что при запуске работы контейнеров и при работе в веб-интерфейсе <term keyref="appliance"/>а не возникают ошибки.</cmd></step>
+            <step>
+                <cmd>При необходимости удалите директории <codeph>/opt/datapk.prev</codeph> и
+                        <codeph>/opt/datapk.restore</codeph> в которых хранится рабочая директория
+                    до восстановления и директория, скопированная из архива резервной копии: </cmd>
+                <info>
+                    <codeblock id="codeblock_z4b_wvf_ptb">rm -rdf /opt/datapk.prev</codeblock>
+                    <codeblock id="codeblock_ok1_f1g_ptb">rm -rdf /opt/datapk.restore</codeblock>
+                </info>
+            </step>
+            <step>
+                <note
+                    conref="../../reusable/notes/sensor_management_diff_versions_note.dita#ReusableComponent_fzc_p14_rzb/note_izc_p14_rzb"/>
+                <cmd>Перезапустите связь текущего <term keyref="appliance"/>а с подключенными к нему
+                    сенсорами. Для этого:</cmd>
+                <substeps id="substeps_nkf_r1l_nyb">
+                    <substep id="restart_sensor_1">
+                        <cmd>Подключитесь к операционной системе сенсора.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите в рабочую директорию сенсора:</cmd>
+                        <info>
+                            <codeblock id="codeblock_o53_t1l_nyb">cd <codeph conref="../../reusable/filepath/opt.dita#opt/opt"/>/sensor</codeblock>
+                        </info>
+                    </substep>
+                    <substep id="restart_sensor_3">
+                        <cmd>Перезапустите сервисы сенсора по команде:</cmd>
+                        <info>
+                            <codeblock id="codeblock_rlk_v1l_nyb">docker-compose down &amp;&amp; docker-compose up -d</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd> Дождитесь перезагрузки каждого сенсора (5-7 минут).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните шаги <xref href="#main_dir_and_db_restore/restart_sensor_1"
+                                format="dita"/>-<xref
+                                href="#main_dir_and_db_restore/restart_sensor_3" format="dita"/> для
+                            остальных сенсоров, подключенных к <term keyref="appliance"/>у.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Откройте веб-интерфейс <term keyref="appliance"/>а.</cmd>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/restart_sync_step.dita#ReusableComponent_a1f_4wb_dzb/step_b1f_4wb_dzb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/sensor_sidebar_big_step.dita#ReusableComponent_rz2_wyc_zyb/step_tz2_wyc_zyb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd><ph
+                        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+                    <ph
+                        conref="../../reusable/pages_breadcrumbs/ids_rules.dita#ReusableComponent_ykq_l4c_pxb/ph_zkq_l4c_pxb"
+                    />.</cmd>
+            </step>
+            <step
+                conref="../../reusable/steps/hierarchy/sync_ids_rules_step.dita#ReusableComponent_tln_fyc_zyb/step_fmn_fyc_zyb">
+                <cmd/>
+            </step>
+            <step id="import_cve_step">
+                <cmd>Если справочник ПО и уязвимостей (CPE и CVE) и база сопоставления собранного
+                    сканерами ПО со справочником CPE не были восстановлены на шаге <xref
+                        href="#main_dir_and_db_restore/restore_cve_step" format="dita"/>,
+                    импортируйте их заново из файлов. Для этого:</cmd>
+                <substeps id="substeps_tjn_g12_zyb">
+                    <substep>
+                        <cmd><ph
+                                conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+                                /><ph
+                                conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+                            />. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>На панели <uicontrol>Обнаружение уязвимостей (CVE)</uicontrol> в
+                            строках <uicontrol>Справочники ПО и уязвимостей (CPE и CVE)</uicontrol>
+                            и <uicontrol>Сопоставление собранного сканерами ПО со справочником
+                                CPE</uicontrol> импортируйте соответствующие справочники.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+ </steps>
+        <postreq id="postreq_tj5_fzk_nyb">При необходимости восстановите индексы событий из архивов
+            — подробнее см. раздел «<xref href="event_indexes_restore.dita"/>».</postreq>
+ </taskbody>
+</task>

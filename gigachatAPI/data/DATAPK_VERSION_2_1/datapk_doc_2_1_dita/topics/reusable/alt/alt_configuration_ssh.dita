@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_uhv_zzc_2zb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_vhv_zzc_2zb">
+                <cmd>Подключитесь к виртуальной машине <term keyref="appliance_name_short"/> по
+                    протоколу SSH:</cmd>
+                <substeps id="substeps_itx_zqf_myb">
+                    <substep>
+                        <cmd>Откройте программу-клиент SSH.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните команду для подключения к <term keyref="appliance_name_short"
+                            /> и нажмите клавишу <uicontrol>Enter</uicontrol>:</cmd>
+                        <info><codeblock id="codeblock_qlq_j5q_lyb">ssh datapk@[ip_addr]</codeblock>Где
+                                <codeph>[ip_addr]</codeph> — IP-адрес сетевого интерфейса управления
+                                <term keyref="appliance_name_short"/>. </info>
+                    </substep>
+                    <substep
+                        conref="alt_enter_password.dita#ReusableComponent_qsp_f4y_21c/substep_ssp_f4y_21c">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="alt_priv.dita#ReusableComponent_ymr_m4y_21c/substep_zmr_m4y_21c">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="alt_root_password.dita#ReusableComponent_mrb_t4y_21c/substep_nrb_t4y_21c">
+                        <cmd/>
+                    </substep>
+                </substeps>
+                <stepresult
+                    conref="alt_root_ssh_result.dita#ReusableComponent_tqn_z4y_21c/stepresult_uqn_z4y_21c"
+                />
+            </step>
+        </steps>    
+    </taskbody>
+</task>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_hqp_dd3_jpb">
+
+ <title>DATAPK_HOST_DATA_COLLECTOR_MAX_COLLECTED_CONFIGS</title>
+ <body> 
+ <p id="p_lqp_dd3_jpb">Максимальное количество хранимых конфигураций</p> 
+</body> 
+</topic> 

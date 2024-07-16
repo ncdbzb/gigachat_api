@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="environment_json" outputclass="wide">
+ <title>Основные переменные файла environment.json</title>
+ <body>
+ <p>Список переменных, содержащийся в файле <codeph>environment.json</codeph>, вы можете видеть в
+   таблице<ph outputclass="onlypdf"> (<xref href="#environment_json/table_environment_var"/>)</ph>.</p>
+ 
+ 
+ <table id="table_environment_var" outputclass="sortable">
+ <title>Переменные файла environment.json</title>
+ <tgroup cols="3">
+ <colspec colnum="1" colname="col1" colwidth="40%" align="center"/>
+ <colspec colnum="2" colname="col2" colwidth="45%"/>
+ <colspec colnum="3" colname="col3" colwidth="15%" align="justify"/>
+ <thead>
+ <row>
+ <entry>Переменная</entry>
+ <entry>Описание</entry>
+ <entry>Значение по умолчанию</entry>
+ </row>
+ </thead>
+ <tbody>
+     <row>
+      <entry>
+       <cmdname keyref="mainPage"/>
+      </entry>
+      <entry>
+       <p
+        conref="../reusable/environment_var/mainpage_desc.dita#ReusableComponent_fdq_bzc_jpb/p_kdq_bzc_jpb"
+       />
+      </entry>
+      <entry>нет значения</entry>
+     </row>
+ <row>
+ <entry>
+ <cmdname keyref="showMaps"/>
+ </entry>
+ <entry>
+ <p
+ conref="../reusable/environment_var/showmaps_desc.dita#ReusableComponent_xqd_zxc_jpb/p_drd_zxc_jpb"
+ />
+ </entry>
+ <entry morerows="8"><codeph>true</codeph></entry>
+ </row>
+ <row>
+ <entry>
+ <cmdname keyref="showKibanaEvents"/>
+ </entry>
+ <entry>
+ <p
+        conref="../reusable/environment_var/showkibanaevents_desc.dita#ReusableComponent_utr_byc_jpb/p_ztr_byc_jpb"/>
+ </entry>
+ </row>
+ <row>
+ <entry>
+ <cmdname keyref="showCorrelation"/>
+ 
+ </entry>
+ <entry>
+ <p
+ conref="../reusable/environment_var/showcorrelation_desc.dita#ReusableComponent_edv_dyc_jpb/p_tdv_dyc_jpb"
+ />
+ </entry>
+ </row>
+     <row>
+      <entry><cmdname keyref="showIncidentStatuses"/></entry>
+      <entry>
+       <p
+        conref="../reusable/environment_var/showIncidentStatuses_desc.dita#ReusableComponent_sqq_jk4_gtb/p_dnp_fyc_jpb"
+       />
+      </entry>
+     </row>
+ <row>
+ <entry>
+ <cmdname keyref="showIncidents"/>
+ 
+ </entry>
+ <entry>
+ <p
+ conref="../reusable/environment_var/showincidents_desc.dita#ReusableComponent_ymp_fyc_jpb/p_dnp_fyc_jpb"
+ />
+ </entry>
+ </row>
+ <row>
+ <entry>
+ <cmdname keyref="showDataFlows"/>
+ 
+ </entry>
+ <entry>
+ <p
+ conref="../reusable/environment_var/showdataflows_desc.dita#ReusableComponent_rgf_jyc_jpb/p_wgf_jyc_jpb"
+ />
+ </entry>
+ </row>
+ <row>
+ <entry>
+ <cmdname keyref="showSuricata"/>
+ 
+ </entry>
+ <entry>
+ <p
+ conref="../reusable/environment_var/showsuricata_desc.dita#ReusableComponent_bb5_kyc_jpb/p_fb5_kyc_jpb"
+ />
+ </entry>
+ </row>
+ <row>
+ <entry>
+ <cmdname keyref="showAlerting"/>
+ </entry>
+ <entry>
+ <p
+ conref="../reusable/environment_var/showalerting_desc.dita#ReusableComponent_m2b_1zc_jpb/p_q2b_1zc_jpb"
+ />
+ </entry>
+ </row>
+ <row>
+ <entry><cmdname keyref="esperRetroEnabled"/></entry>
+ <entry><ph
+ conref="../reusable/environment_var/esperRetroEnabled_desc.dita#ReusableComponent_m11_sz5_wpb/ph_r11_sz5_wpb"
+ /></entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ 
+ 
+ </body>
+</topic>

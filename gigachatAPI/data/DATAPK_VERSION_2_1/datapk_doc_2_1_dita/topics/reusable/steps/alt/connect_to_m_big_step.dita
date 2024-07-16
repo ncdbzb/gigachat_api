@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qjs_3wn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_ujs_3wn_4yb">
+                <cmd>Проверьте возможность подключения к <term keyref="appliance_name_short"/>
+                    уровня <abbreviated-form keyref="management"/> по протоколу HTTPS. Для этого: </cmd>
+                <substeps id="substeps_gcd_ppg_myb">
+                    <substep>
+                        <cmd>Откройте веб-браузер на клиентской машине.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Введите адрес для подключения в веб-интерфейсу в формате
+                                <codeph>https://[IP-адрес]</codeph>, где <codeph>[IP-адрес]</codeph>
+                            — IP-адрес интерфейса управления <term keyref="appliance"/>а уровня
+                                <abbreviated-form keyref="management"/>.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult><ph>отобразится окно входа в веб-интерфейс <term keyref="appliance"
+                        />а.</ph><fig id="fig_lxs_hvr_nyb">
+                        <title>Окно входа в веб-интерфейс Комплекса</title>
+                        <image href="../../../../images/administrate/authorization_window.png"
+                            id="image_mxs_hvr_nyb"/>
+                    </fig></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_n4p_mws_hwb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_p4p_mws_hwb">
+                <cmd>Назначьте права на исполнение скрипту <ph
+                        conref="checksum_script.dita#ReusableComponent_xxz_wc1_rvb/ph_yxz_wc1_rvb"
+                    />:</cmd>
+                <info><codeblock id="codeblock_zzq_skc_jsb"><ph outputclass="no_sudo">sudo </ph>chmod +x <ph conref="checksum_script.dita#ReusableComponent_xxz_wc1_rvb/ph_yxz_wc1_rvb"/></codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

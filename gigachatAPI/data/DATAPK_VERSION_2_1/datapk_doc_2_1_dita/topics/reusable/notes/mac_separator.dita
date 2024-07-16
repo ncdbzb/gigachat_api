@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_rz1_jsj_31c">
+    <title/>
+    <body>
+        <ol>
+            <li><note id="note_hkm_csj_31c" type="attention">Для октетов MAC-адресов допускается использовать
+                    следующие разделители: <uicontrol>.</uicontrol>, <uicontrol>-</uicontrol>,
+                        <uicontrol>:</uicontrol>, либо не использовать разделители.</note></li>
+        </ol>
+    </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:go_to_config-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_q2k_k1l_4tb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd id="cmd_u2k_k1l_4tb">Перейдите к конфигурациям объекта защиты из
+                            карточки объекта защиты. Для этого нажмите на ссылку <image
+                                href="../../../../images/icons/to_configs.png"
+                                id="image_sgq_c2l_tnb"/>
+                            <uicontrol>Конфигурации</uicontrol> в разделе <uicontrol>Связанные
+                                данные</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

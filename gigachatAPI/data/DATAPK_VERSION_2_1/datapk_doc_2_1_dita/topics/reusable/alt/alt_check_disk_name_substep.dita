@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_pym_lqd_q1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_rym_lqd_q1c">
+                        <cmd>Просмотрите наименование диска, для которого будет выполняться разметка
+                            дискового пространства:</cmd>
+                        <info><codeblock id="codeblock_kzr_52h_yyb">fdisk -lu</codeblock></info>
+                        <info><note id="note_w3d_11j_31c" type="attention">Разметка дискового
+                                пространства для установки <term keyref="alt_name"/> должна
+                                выполняться на пустом и не размеченном ранее диске.</note></info>
+                        <stepxmp><ph>Результат команды:</ph><fig id="fig_vlx_dgh_yyb">
+                                <image href="../../../images/deployment/alt/fdisk_lu_black.png"
+                                    id="image_otv_rdd_p1c"/>
+                            </fig><ph>где <codeph>/dev/nvme0n1</codeph> — наименование
+                            диска.</ph></stepxmp>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

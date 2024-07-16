@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="env_var_changes">
+    <title>Изменения в переменных файла .env</title>
+    <body>
+        <section id="section_lqh_xg5_fyb">
+            <title>Добавлены</title>
+            <ul id="ul_f43_ncq_dyb">
+                <li><ph>Для <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"
+                        />:</ph><ul id="ul_d1q_mw2_4yb">
+                        <li><cmdname keyref="DATAPK_USE_SESSION_LIMIT"/> со значением по умолчанию
+                                <codeph>true</codeph></li>
+                        <li><cmdname keyref="DATAPK_PUSHGATEWAY_MAX_DELAY_METRICS"/> со значением по
+                            умолчанию <codeph>600</codeph></li>
+                        <li><cmdname keyref="DATAPK_RMQ_LOW_AVAILABLE_MEMORY_WATERMARK_BYTES"/> со
+                            значением по умолчанию <codeph>500000000</codeph></li>
+                        <li><cmdname keyref="DATAPK_RMQ_LOW_AVAILABLE_DISK_SPACE_WATERMARK_BYTES"/>
+                            со значением по умолчанию <codeph>500000000</codeph></li>
+                        <li><cmdname keyref="CVE_DATA_DIR"/> со значением по умолчанию
+                                <codeph>/opt/cve</codeph></li>
+                        <li><cmdname keyref="FSTEC_MAPPINGS_ENABLED"/> со значением по умолчанию
+                                <codeph>true</codeph></li>
+                        <li><cmdname keyref="OVAL_IMPORT_TIMEOUT_MINUTES"/> со значением по
+                            умолчанию <codeph>30</codeph></li>
+                    </ul>
+                </li>
+                <li><ph>Для <term keyref="appliance"/>а уровня <abbreviated-form keyref="sensor"
+                        />:</ph><ul id="ul_skg_4w2_4yb">
+                        <li><cmdname keyref="MANAGER_NODE_ADDRESS"/> со значением по умолчанию
+                                <codeph>172.31.254.1</codeph></li>
+                        <li><cmdname keyref="DATAPK_TERMINAL_CONNECTOR_SSH_TIMEOUT"/> со значением
+                            по умолчанию <codeph>30</codeph></li>
+                        <li><cmdname keyref="SNMP_MIBS_DIR"/> со значением по умолчанию
+                                <codeph>/var/backups/snmp_mibs</codeph></li>
+                        <li><cmdname keyref="LOG_LEVEL"/> со значением по умолчанию
+                                <codeph>INFO</codeph></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="section_cm1_yg5_fyb">
+            <title>Переименованы</title>
+            <ul id="ul_zgt_r12_lxb">
+                <li><codeph>DATAPK_BACKEND_NETWORK</codeph> — в <cmdname
+                        keyref="BACKEND_NETWORK"/></li>
+                <li><codeph>DATAPK_BACKEND_NETWORK_GATEWAY</codeph> — в <cmdname
+                        keyref="BACKEND_NETWORK_GATEWAY"/></li>
+                <li><codeph>DATAPK_SNMP_SERVER_PORT</codeph> — в <cmdname
+                        keyref="DATAPK_SNMP_SERVER_PORT"/></li>
+                <li><codeph>DATAPK_REPORT_GENERATOR_MAX_ROWS_PER_REPORT</codeph> — в <cmdname
+                        keyref="DATAPK_MAX_ROWS_PER_REPORT"/></li>
+                <li><codeph>DATAPK_SYSLOG_RFC3164_SERVER_PORT</codeph> — в <cmdname
+                        keyref="DATAPK_SYSLOG_RFC3164_SERVER_PORT"/></li>
+                <li><codeph>DATAPK_SYSLOG_RFC3164_TCP_SERVER_PORT</codeph> — в <cmdname
+                        keyref="DATAPK_SYSLOG_RFC3164_TCP_SERVER_PORT"/></li>
+                <li><codeph>DATAPK_SYSLOG_RFC5424_SERVER_PORT</codeph> — в <cmdname
+                        keyref="DATAPK_SYSLOG_RFC5424_SERVER_PORT"/></li>
+                <li><codeph>DATAPK_SYSLOG_RFC5424_TCP_SERVER_PORT</codeph> — в <cmdname
+                        keyref="DATAPK_SYSLOG_RFC5424_TCP_SERVER_PORT"/></li>
+                <li><codeph>DATAPK_HOST_DATA_COLLECTOR_MAX_COLLECTED_CONFIGS</codeph> — в <cmdname
+                        keyref="DATAPK_HOST_DATA_COLLECTOR_MAX_COLLECTED_CONFIGS"/></li>
+            </ul>
+        </section>
+        <section id="section_wk1_zg5_fyb">
+            <title>Изменены значения по умолчанию</title>
+            <ul id="ul_lqc_qqc_lxb">
+                <li><cmdname keyref="DATAPK_API_SKIP_FIRST_INITIALIZATION"/> — c
+                        <codeph>true</codeph> на <codeph>false</codeph></li>
+                <li><ph><cmdname keyref="BACKEND_NETWORK"/> — с
+                            <codeph>172.10.0.0/16</codeph>:</ph><ul id="ul_wwk_c1f_4yb">
+                        <li>на <codeph>172.31.254.0/24</codeph> для <term keyref="appliance"/>а
+                            уровня <abbreviated-form keyref="management"/>;</li>
+                        <li>на <codeph>172.31.255.0/24</codeph> для <term keyref="appliance"/>а
+                            уровня <abbreviated-form keyref="sensor"/>.</li>
+                    </ul></li>
+                <li><cmdname keyref="BACKEND_NETWORK_GATEWAY"/> — с
+                        <codeph>172.10.0.1</codeph>:<ul id="ul_m2p_g1f_4yb">
+                        <li>на <codeph>172.31.254.1</codeph> для <term keyref="appliance"/>а уровня
+                                <abbreviated-form keyref="management"/>;</li>
+                        <li>на <codeph>172.31.255.1</codeph> для  <term keyref="appliance"/>а уровня
+                                <abbreviated-form keyref="sensor"/>.</li>
+                    </ul></li>
+                <li><cmdname keyref="DATAPK_DISABLE_AUTOMATIC_HOST_CREATION_BY_MAC"/> — c
+                        <codeph>false</codeph> на <codeph>true</codeph></li>
+                <li><cmdname keyref="DATAPK_HOST_MANAGER_INACTIVITY_INTERVAL"/> — с
+                        <codeph>120</codeph> до <codeph>600</codeph></li>
+            </ul>
+        </section>
+        <section id="section_n35_hhb_gyb">
+            <title>Удалены</title>
+            <ul id="ul_avq_3hb_gyb">
+                <li><codeph>DATAPK_MAX_COMPLETE_EXPORT_FILES</codeph></li>
+                <li><codeph>DATAPK_HIERARCHY_LEVEL</codeph></li>
+                <li><codeph>DATAPK_ADFH_EDITING_ENABLED</codeph></li>
+                <li><codeph>DATAPK_PINGER_ENABLED</codeph></li>
+                <li><codeph>DATAPK_AVIABILITY_CHECK_INTERVAL</codeph></li>
+                <li><codeph>DATAPK_CURRENT_BOX_ID</codeph></li>
+                <li><codeph>DATAPK_BOX_MANAGER_DB_ENCRYPTION_KEY</codeph></li>
+                <li><codeph>DATAPK_BOX_MANAGER_INCOMING_MESSAGES_QUEUE_MAX_SIZE</codeph></li>
+                <li><codeph>DATAPK_BOX_MANAGER_OUTGOING_MESSAGES_TTL_MIN</codeph></li>
+                <li><codeph>DATAPK_BOX_MANAGER_LAST_USER_MESSAGES_QUEUE_SIZE</codeph></li>
+                <li><codeph>DATAPK_USER_SERVICE_PASSWORD_POLICY_EDITING_ENABLED</codeph></li>
+                <li><codeph>DATAPK_DISABLE_SCRIPT_VERIFICATION_EVENTS</codeph></li>
+                <li><codeph>DATAPK_DISABLE_RESTART_CONTROL_EVENTS</codeph></li>
+                <li><codeph>DATAPK_RESTART_CONTROL_EVENTS_SEVERITY</codeph></li>
+                <li><codeph>DATAPK_EVENT_CONTROL_EVENTS_SEVERITY</codeph></li>
+                <li><codeph>DATAPK_EVENT_MANAGER_EVENTS_QUEUE_SIZE</codeph></li>
+                <li><codeph>DATAPK_SCRIPT_VERIFICATION_EVENTS_SEVERITY</codeph></li>
+                <li><codeph>DATAPK_SERVER_CERT_VERIFICATION_ENABLED</codeph></li>
+                <li><codeph>DATAPK_LOCAL_DATAPK_DIR</codeph></li>
+                <li><codeph>DATAPK_PARENT_DATAPK_DIR</codeph></li>
+                <li><codeph>DATAPK_RABBITMQ_USER</codeph></li>
+                <li><codeph>DATAPK_RABBITMQ_PASSWORD</codeph></li>
+                <li><codeph>DATAPK_HOST_DATA_COLLECTOR_HOST_WORKERS_COUNT</codeph></li>
+                <li><codeph>DATAPK_EVENT_MANAGER_SYSLOG_TCP_KEEP_ALIVE_TIMEOUT</codeph></li>
+                <li><codeph>DATAPK_MAP_MAX_UNKNOWN_ELEMENTS_ON_MAP</codeph></li>
+                <li><codeph>DATAPK_OVAL_GROUPS_EDITING_ENABLED</codeph></li>
+                <li><codeph>DATAPK_OVAL_DEFINITIONS_IMPORT_ENABLED</codeph></li>
+                <li><codeph>DATAPK_HOSTS_TREE_EDITABLE</codeph></li>
+                <li><codeph>DATAPK_COLLECTION_TASKS_EDITING_ENABLED</codeph></li>
+                <li><codeph>DATAPK_SCANNER_GROUPS_EDIT_ENABLED</codeph></li>
+                <li><cmdname keyref="DATAPK_NIDS_HOME_NET"/></li>
+                <li><cmdname keyref="DATAPK_SERVICES_BIND_IP"/></li>
+                <li><cmdname>DATAPK_PLC_CONNECTOR_DEFAULT_INTERFACE</cmdname></li>
+                <li><codeph>HOSTS_TREE_MAX_DEPTH</codeph></li>
+            </ul>
+        </section>
+        <!--<p><!-\-
+Названия переменных возможно будут изменены в DTPK-9730, проверить, как будет сделана-\->Добавлены
+            переменные файла .env:</p>
+        <ul id="ul_pgp_s3g_hxb">
+            <li>DATAPK_GUNICORN_WORKERS:-2</li>
+            <li>EVENT_MANAGER_API_ADDRESS: event_manager</li>
+            <li>DATAPK_HOST_DATA_COLLECTOR_HOST_COUNT:-5</li>
+            <li>DATAPK_HOST_DATA_COLLECTOR_DEFAULT_EXPIRATION:-600</li>
+            <li>DATAPK_OVAL_HOST_DATA_COLLECTOR_ANALYZE_EXPIRATION:-15</li>
+            <li>DATAPK_IM_DATABASE_CLEANER_MAX_ITEMS_AGE, default: '86400'</li>
+            <li>DATAPK_HDC_DATABASE_CLEANER_MAX_ITEMS_AGE, default: '86400'</li>
+            <li>MAX_PASSWORD_HISTORY_LENGTH, default: '24'</li>
+            <li>DATAPK_PAGE_VIEWS_SERVICE_PORT, default: '10103'</li>
+            <li>DATAPK_MAX_COLUMNS_FOR_DEFAULT_SCALE, default: '3'</li>
+            <li>DATAPK_USER_SERVICE_PORT, default: '10102'</li>
+            <li>DATAPK_REPORT_PAGE_ZOOM, default: '0.5'</li>
+            <li>DATAPK_HDC_FILTERED_COUNT_THRESHOLD, default: '-1'</li>
+            <li>DATA_FLOWS_SERVICE_WORKER_TIMEOUT, default: '120'</li>
+            <li>DATAPK_FORCE_USE_POLLING_OBSERVER, default: 'false'</li>
+            <li>DATAPK_VULNERABILITY_BACKEND_PORT, default: '10005'</li>
+            <li>FILTERED_EVENTS_MAX_ATTEMPTS_VALUE, default: '10'</li>
+            <li>DATAPK_DFS_DATABASE_CLEANER_MAX_ITEMS_AGE, default: '86400'</li>
+            <li>DATAPK_LOGSTASH_JAVA_OPTS, default: '1024m'</li>
+            <li>DATAPK_DFS_DELETE_CHUNK_SIZE, default: '1000'</li>
+            <li>DATAPK_IM_RABBITMQ_PREFETCH_COUNT, default: '1'</li>
+            <li>DATAPK_HDC_EXACT_COUNT_THRESHOLD, default: '-1'</li>
+            <li>DATAPK_OVAL_DATABASE_CLEANER_MAX_ITEMS_AGE, default: '86400'</li>
+        </ul>
+        <p>Исключены переменные файла .env:</p>
+        <ul id="ul_hfx_vsz_lxb">
+            <li>DATAPK_OPERATIONAL_DATA_HOST_DIR</li>
+            <li>DATAPK_EVENT_MANAGER_REPORT_METRICS_TASK_DELAY</li>
+            <li>DATAPK_IM_INCIDENT_NAME_FIELD_NAME</li>
+            <li>DATAPK_IM_INCIDENT_ID_FIELD_NAME</li>
+            <li>DATAPK_PAGE_VIEWS_BACKEND_PORT</li>
+            <li>DATAPK_EM_MIBS_TO_COMPILE</li>
+            <li>DATAPK_OPERATIONAL_DATA_DELETER_DELETE_TIMEOUT</li>
+            <li>DATAPK_OPERATIONAL_DATA_DELETER_REQUEST_PERIOD</li>
+            <li>DATAPK_OPERATIONAL_DATA_DELETER_DELETE_LIMIT</li>
+            <li>DATAPK_IM_INCIDENT_DESCRIPTION_FIELD_NAME</li>
+            <li>DATAPK_API_IMPORT_EXPORT_REQUEST_TIMEOUT</li>
+            <li>PROMETHEUS_API_ADDRESS</li>
+            <li>DATAPK_IM_INCIDENT_HOST_IDS_FIELD_NAME</li>
+            <li>DATAPK_IM_INCIDENT_ADDITIONAL_INFO_FIELD_NAME</li>
+            <li>DATAPK_IM_INCIDENT_SOURCE_EVENTS_FIELD_NAME</li>
+            <li>DATAPK_IM_INCIDENT_CREATED_AT_FIELD_NAME</li>
+        </ul>-->
+<!--<p>Перенесены в compose-файл сенсора:</p>
+<ul>
+            <li>DATAPK_GODPI_TCP_SKIP_SESSION_WITHOUT_HANDSHAKE</li>
+            <li>DATAPK_SYSLOG_NGINX_UDP_SERVER_PORT</li>
+            <li>)DATAPK_SYSLOG_SURICATA_UDP_SERVER_PORT</li>
+        </ul>-->
+    </body>
+    <related-links>
+        <link href="../reference_info/env_variables.dita"/>
+    </related-links>
+</topic>

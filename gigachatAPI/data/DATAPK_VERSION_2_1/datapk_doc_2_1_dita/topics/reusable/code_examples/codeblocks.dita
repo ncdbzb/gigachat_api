@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:codeblocks for english-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="codeblocks">
+    <title>codeblocks for english</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <info>
+                    <codeblock id="codeblock_notifications_email">Описание события: [описание события].
+Инцидент: [наименование инцидента].
+Дата создания: [дата и время с указанием часового пояса в формате UTC].
+Комплекс: [идентификатор Комплекса].
+Объекты защиты: [наименования объектов защиты].
+Описание инцидента: [текст с описанием].
+Ссылка на инцидент: https://[IP-адрес текущего Комплекса]/app/incidents/[идентификатор инцидента]</codeblock>
+                    <ph id="data_collect_results_view">4/1/2</ph>
+                    <codeblock id="intrusion_detection_service" outputclass="language-bourne">[Действие] [Протокол] [IP-адреса отправителей] [Порты отправителей] [Оператор направления] [IP-адреса получателей] [Порты получателей] (ключ_1 : значение_1; ключ_2 : значение_2; ... ключ_N : значение_N;)</codeblock>
+                    <codeblock id="backup_main_directory_and_db_in_cmd">docker-compose \
+-f docker-compose.release.yml \
+-f docker-compose.backup.yml \
+run --rm backupper \
+--create \
+--justification "[комментарий]" \
+--username "[имя_пользователя]" \
+--password [пароль_для_архива] \
+--mysql_db_user root \
+--mysql_db_pass [значение переменной <cmdname keyref="DATAPK_DB_PASS"/>] \
+--mysql_db_host db \
+--mysql_db_port 3306 \
+--postgres_db_user postgres \
+--postgres_db_pass [значение переменной <cmdname keyref="DATAPK_DB_PASS"/>] \
+--postgres_db_host pg \
+--postgres_db_port 5432</codeblock>
+                    <ph id="cron_recomendation">0 0 */2 * *</ph>
+                    <codeph id="rule_number">{rule_number}</codeph>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

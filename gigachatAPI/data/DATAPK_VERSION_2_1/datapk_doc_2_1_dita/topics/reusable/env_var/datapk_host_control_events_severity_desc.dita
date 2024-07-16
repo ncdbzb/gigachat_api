@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_zlk_zdj_jpb">
+
+ <title>DATAPK_HOST_CONTROL_EVENTS_SEVERITY</title>
+ <body> 
+ <p><ph id="ph_emk_zdj_jpb">Уровень критичности событий появления новых узлов</ph></p> 
+</body> 
+</topic> 

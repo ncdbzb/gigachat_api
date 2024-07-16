@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ztq_shk_vnb">
+ <title>Создание фильтров на панелях мониторинга</title>
+ <taskbody>
+ <context>
+ <p>Чтобы создать фильтр на страницах мониторинга:</p>
+ </context>
+ <steps>
+ 
+ <step>
+        <cmd>Нажмите <uicontrol>+ Add filter</uicontrol> под строкой поиска.</cmd>
+      </step>
+ <step>
+        <cmd>В появившемся окне выберите поле для фильтрации.</cmd>
+      </step>
+ <step>
+        <cmd>Выберите из выпадающего списка логическую операцию.</cmd>
+        <info>
+          <note type="tip">
+            <p>Доступны следующие операции:</p>
+            <ul id="ul_df1_gqb_j4b">
+              <li><codeph>is</codeph> — будут выведены все события точно подходящие под
+                условие;</li>
+              <li><codeph>is not</codeph> — события, подходящие под условие будут исключены из
+                выборки;</li>
+              <li><codeph>is one of</codeph> — события, подходящие хотя бы под одно из условий будут
+                выведены;</li>
+              <li><codeph>is not one of</codeph> — события, подходящие хотя бы под одно из условий
+                не будут выведены;</li>
+              <li><codeph>exists</codeph> — будут выведены события, в которых искомое поле
+                присутствует;</li>
+              <li><codeph>does not exist</codeph> — события с искомым полем выведены не будут.</li>
+            </ul>
+          </note>
+        </info>
+      </step>
+ <step>
+        <cmd>Введите или выберите из списка значение фильтра, если выбранная логическая операция это
+          предусматривает.</cmd>
+      </step>
+ <step>
+        <cmd>При необходимости нажмите на переключатель <uicontrol>Create custom label?</uicontrol>
+          и введите текстовое описание фильтра.</cmd>
+      </step>
+ <step>
+        <cmd>Нажмите кнопку <uicontrol>Save</uicontrol>.</cmd>
+        <info>
+          <note type="tip">Для сохранения фильтров или их набора без закрепления сохраните страницу
+            в закладки браузера.</note>
+        </info>
+        <stepresult>после сохранения отобразятся данные, соответствующие запросу фильтра. Сам фильтр
+          не будет закреплен.</stepresult>
+      </step>
+ 
+ </steps>
+ </taskbody>
+</task>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_auto_data_collect_scaner">
+ <title>Создание сканера сбора данных</title>
+ <taskbody>
+  <context id="context_gyz_vsq_ssb">
+   <p>Для создания сканера вручную:</p>
+  </context>
+  <steps id="steps_hyz_vsq_ssb">
+   <step>
+    <cmd>Создайте или получите от сервисного центра <ph
+      conref="../../reusable/Company_name.dita#ReusableComponent_vl1_dsp_g5b/ph_wl1_dsp_g5b"/> файл
+     формата <codeph>*.py</codeph>, содержащий скрипт для сбора необходимых данных. См. подробнее о
+     содержании скрипта в разделе «<xref href="../create_config_script.dita"/>».</cmd>
+   </step>
+   <step>
+    <cmd>Если вы создали файл формата <codeph>*.py</codeph> вручную, обратитесь в сервисный центр
+      <ph conref="../../reusable/Company_name.dita#ReusableComponent_vl1_dsp_g5b/ph_wl1_dsp_g5b"/>
+     или к вашему администратору безопасности для получения закрытого ключа от сертификата
+      <codeph>datapk_script.crt</codeph> и создайте цифровую подпись файла. См. подробнее о цифровой
+     подписи в разделе «<xref href="../data_collect_script_sign.dita"/>».</cmd>
+   </step>
+   <step>
+    <cmd><ph
+      conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../../reusable/pages_breadcrumbs/scanners.dita#ReusableComponent_gh1_l3d_qxb/ph_hh1_l3d_qxb"
+     />.</cmd>
+   </step>
+   <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать сканер</uicontrol>. В открывшемся окне <uicontrol>Настройки сканера</uicontrol> задайте следующие
+     параметры:</cmd>
+    <substeps id="substeps_kyz_vsq_ssb">
+     <substep>
+      <cmd>наименование и описание сканера;</cmd>
+     </substep>
+     <substep>
+      <cmd>тип сканера (конфигурации, события, версия ОС или установленное ПО);</cmd>
+     </substep>
+     <substep>
+      <cmd>группы сканеров (подробнее см. в разделе «<xref keyref="group_scaner"/>»);</cmd>
+     </substep>
+     <substep>
+      <cmd>цифровую подпись (подробнее см. в разделе «<xref href="../data_collect_script_sign.dita"
+       />»);</cmd>
+     </substep>
+     <substep>
+      <cmd>максимальное время ожидания выполнения задачи в секундах, при достижении которого сбор
+       завершится <xref
+        href="../data_collect_results_view.dita#data_collect_results_view/table_umd_ktf_tsb">ошибкой
+        соединения</xref>;</cmd>
+     </substep>
+     <substep>
+      <cmd>нажмите кнопку <uicontrol>Импортировать</uicontrol> для загрузки скрипта из файла. В проводнике выберите и
+       откройте подписанный ранее файл скрипта формата <codeph>*.py</codeph>;</cmd>
+     </substep>
+    </substeps>
+    <info>
+     <fig id="fig_lyz_vsq_ssb">
+      <title>Окно «Создание сканера»</title>
+      <image href="../../../images/control_config/scaners/create_scaner_window.png"
+       id="image_myz_vsq_ssb"/>
+     </fig>
+    </info>
+   </step>
+   <step>
+    <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений.</cmd>
+   </step>
+  </steps>
+ </taskbody>
+</task>

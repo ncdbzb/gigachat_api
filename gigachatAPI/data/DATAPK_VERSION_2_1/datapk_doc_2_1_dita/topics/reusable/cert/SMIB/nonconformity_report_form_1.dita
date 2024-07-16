@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:nonconformity_report_form_1-->
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_zv1_xjk_jsb">
+    <title>отчет о несоответствии</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_cw1_xjk_jsb"><table frame="all" rowsep="1" colsep="1"
+                                    id="table_kgt_gdk_jsb">
+                                    <tgroup cols="4">
+                                        <colspec colname="c1" colnum="1" colwidth="2.1*"/>
+                                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                                        <colspec colname="c3" colnum="3" colwidth="1.38*"/>
+                                        <colspec colname="c4" colnum="4" colwidth="2.58*"/>
+                                        <tbody>
+                                            <row valign="middle">
+                                                <entry>
+                                                  <p><sup>Название:</sup></p>
+                                                  <p>Отчет о несоответствии</p>
+                                                </entry>
+                                                <entry>№ отчета</entry>
+                                                <entry>Дата и время</entry>
+                                                <entry>Отметка об успешном/неуспешном
+                                                  результате</entry>
+                                            </row>
+                                        </tbody>
+                                    </tgroup>
+                                </table></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

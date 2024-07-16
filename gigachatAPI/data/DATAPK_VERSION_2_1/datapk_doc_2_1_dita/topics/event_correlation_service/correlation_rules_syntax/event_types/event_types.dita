@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="event_types">
+ <title>Поддерживаемые типы событий</title>
+ <body>
+ <p>Для создания правил корреляции необходимо добавлять поля данных, по которым будут
+ происходить запросы. Доступны следующие типы событий:</p>
+ <ul id="ul_gv4_22w_vnb">
+ <li>События генерируемые <term keyref="appliance"/>ом: <ul>
+                    <li>резервное копирование данных (<codeph>backup_control</codeph>);</li>
+                    <li>поток данных (<codeph>datapk_data_flow</codeph>);</li>
+                    <li>действие пользователя (<codeph>user_action_detected</codeph>);</li>
+                    <li>аутентификация (<codeph>appliance_authentication</codeph>);</li>
+                    <li>нарушение эталонного состояния конфигурации объекта защиты (далее –
+                            <abbreviated-form keyref="host"/>)
+                            (<codeph>datapk_host_config_changed</codeph>);</li>
+                    <li>изменение эталонного состояния конфигурации <abbreviated-form keyref="host"
+                        /> (<codeph>datapk_reference_config_changed</codeph>);</li>
+                    <li>восстановление эталонного состояния конфигурации <abbreviated-form
+                            keyref="host"/> (<codeph>datapk_host_config_restored</codeph>);</li>
+                    <li>обнаружение неизвестного <abbreviated-form keyref="host"/>
+                            (<codeph>datapk_unknown_host_detected</codeph>);</li>
+                    <li>обнаружение действия пользователя с <abbreviated-form keyref="host"/>
+                            (<codeph>host_user_action_detected</codeph>);</li>
+                    <li><ph id="_Hlk48919487">изменение статуса доступности <abbreviated-form
+                                keyref="host"/> (<codeph>availability_control</codeph>);</ph></li>
+                    <li>события о настройке, запуске и остановке сбора данных
+                            (<codeph>host_connection</codeph>);</li>
+                    <li>результаты проверок на соответствие требованиям <abbreviated-form
+                            keyref="IS"/> (<codeph>oval_control</codeph>);</li>
+                    <li>верификация импортированного Python-скрипта
+                            (<codeph>script_verification_event</codeph>);</li>
+                    <li>контроль событий <term keyref="appliance"/>а
+                        (<codeph>event_control</codeph>);</li>
+                    <li>события контроля инцидентов (<codeph>incident_control</codeph>);</li>
+                    <li>события службы обнаружения вторжений (<codeph>suricata_event</codeph>);</li>
+                    <li>события сканирования домашней сети
+                        (<codeph>home_net_scan_control</codeph>)</li>
+                </ul>
+            </li>
+ <li>События KICS4Net (<codeph>kics4net_event</codeph>);<ul id="ul_ld4_pww_vnb">
+                    <li>Потоки KICS4Net(<codeph>kics4net_data_flow</codeph>);</li>
+                </ul></li>
+ <li>События Linux (<codeph>linux_event</codeph>);</li>
+ <li>События Cisco (<codeph>cisco_event</codeph>);</li>
+ <li>События RuggedCOM (<codeph>ruggedcom_event</codeph>);</li>
+ <li>События Eltex (<codeph>eltex_event</codeph>);</li>
+ <li>События FortiGate (<codeph>fortigate_event</codeph>);</li>
+ <li>События Hirschmann (<codeph>hirschmann_event</codeph>);</li>
+ <li>События Enterasys (<codeph>enterasys_event</codeph>);</li>
+ <li>События Windows (<codeph>windows_event</codeph>);</li>
+ <li>События, полученные по SNMP (<codeph>snmp_event</codeph>);</li>
+ <li>События, полученные по Syslog (<codeph>unknown_syslog_event</codeph>).</li>
+ 
+ </ul>
+ </body>
+</topic>

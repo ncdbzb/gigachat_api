@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="oval_settings_fp">
+    <glossterm>Настройки OVAL</glossterm>
+    <glossdef><p>Подраздел настроек проверок и отчетов, в котором можно создавать, редактировать и
+        удалять настройки скриптов OVAL по отношению к объектам защиты и меткам.</p><fig
+            id="fig_gjv_241_snb">
+            <title>Страница «Настройки OVAL»</title>
+            <image href="../images/pages/oval_settings_page_scr.png" id="image_hjv_241_snb"/>
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/oval/setup_prot_obj_check_is/setup_access_to_prot_obj_4oval.dita"/>
+    </related-links>
+</glossentry>

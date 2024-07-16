@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Регламентные работы</title>
+ <topicref href="data_backup/data_backup.dita">
+  <topicref href="data_backup/backup_mgmt.dita">
+   <topicref href="data_backup/archive_main_directory_and_db_content.dita"/>
+   <topicref href="data_backup/checking_settings_4backup.dita"/>
+   <topicref href="data_backup/backup_main_directory_and_db_in_cmd.dita"/>
+  </topicref>
+  <topicref href="data_backup/backup_sensor.dita"/>
+ <topicref href="data_backup/upload_event_index_archive.dita"/>
+ <topicref href="data_backup/create_backups_by_export.dita"/>
+ <topicref href="data_backup/export_ref_data_tar.dita"/>
+ </topicref>
+ <topicref href="changing_passwords/changing_passwords.dita">
+ <topicref href="changing_passwords/change_admin_password.dita"/>
+ <topicref href="changing_passwords/change_user_password.dita"/>
+ </topicref>
+ <topicref href="replacing_certificates/replacing_certificates_w_no_internet.dita"/>
+</map>

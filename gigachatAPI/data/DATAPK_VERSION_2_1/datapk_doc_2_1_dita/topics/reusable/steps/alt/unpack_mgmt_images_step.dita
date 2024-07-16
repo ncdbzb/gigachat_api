@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fkd_2xq_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_gkd_2xq_nyb">
+                <cmd>Поместите архив <codeph>datapk-v<ph conref="../../version.dita#version/version"
+                        />.0.0-m.tar.gz</codeph> с образами <term keyref="appliance"/>а уровня
+                        <abbreviated-form keyref="management"/> в директорию <codeph>/opt</codeph> и
+                    загрузите образы в Docker:</cmd>
+                <info>
+                    <p>
+                        <codeblock outputclass="language-bourne" id="codeblock_fcg_b2k_lyb">mv /home/datapk/datapk-v<ph conref="../../version.dita#version/version"/>.0.0-m.tar.gz <codeph conref="../../filepath/opt.dita#opt/opt"/>
+docker load -i <codeph conref="../../filepath/opt.dita#opt/opt"/>/datapk-v<ph conref="../../version.dita#version/version"/>.0.0-m.tar.gz</codeblock>
+                    </p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

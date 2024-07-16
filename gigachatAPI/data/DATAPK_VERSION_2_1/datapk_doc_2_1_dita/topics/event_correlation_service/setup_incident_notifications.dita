@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="setup_incident_notifications">
+ <title>Настройка оповещений при появлении инцидентов</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_oyv_z5t_rnb">
+ <li><xref href="notifications/notifications_email.dita"/></li>
+ <li><xref href="notifications/notifications_opc.dita"/></li>
+ </ul>
+  <p>После того, как служба корреляции событий сформирует инциденты, можно автоматически отправлять
+   оповещения пользователям по E-mail или на OPC-сервер.</p>
+  <p>Управление отправкой оповещений осуществляется на странице <cite keyref="notification_fp"
+   />.</p>
+  <p>
+   <fig id="fig_t2l_3sq_cqb">
+    <title>Страница «Оповещения об инцидентах»</title>
+    <image href="../../images/pages/actions_page_scr.png" id="image_u2l_3sq_cqb"/>
+   </fig>
+  </p>
+ </body>
+</topic>

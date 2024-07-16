@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="events_em_fp">
+    <glossterm>Экспертный режим</glossterm>
+    <glossdef>
+        <p>Страница для работы с событиями <term keyref="appliance"/>а в расширенном режиме.</p>
+        <p>Не является разделом основного интерфейса. Перейти в экспертный режим можно со страницы
+                <cite keyref="events_fp"/> по кнопке <image href="../images/icons/expert_mode.png"
+                id="image_t1r_d4g_vzb"/>.</p>
+        <fig id="fig_c41_rpf_vzb">
+            <title>Страница «Экспертный режим»</title>
+            <image href="../images/pages/events_em_page_scr.png" id="image_qyx_rpf_vzb"/>
+        </fig>
+    </glossdef>
+    <related-links>
+        <link href="../topics/work_with_kibana/filters_and_queries.dita"/>
+    </related-links>
+</glossentry>

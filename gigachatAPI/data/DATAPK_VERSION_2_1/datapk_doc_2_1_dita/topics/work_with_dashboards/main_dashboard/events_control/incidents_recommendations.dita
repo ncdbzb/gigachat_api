@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="incidents_recommendations">
+ <title>Рекомендуемые действия в случае обнаружения событий</title>
+ <taskbody>
+ <context>
+ <p>Нужно обработать новый инцидент на панели мониторинга <uicontrol>Инциденты ИБ</uicontrol>. Для
+                                этого:</p>
+ </context>
+ <steps>
+ 
+ <step>
+            <cmd><ph
+                  conref="../../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+               /> основного интерфейса <cite keyref="incidents_fp"/>, воспользовавшись
+               соответствующей ссылкой в верхней части страницы.</cmd>
+         </step>
+ <step>
+            <cmd>Найдите интересующие инциденты при помощи фильтров в правой части страницы.</cmd>
+         </step>
+ <step>
+            <cmd>Ознакомьтесь с подробностями инцидентов и примите решение об их легитимности.</cmd>
+         </step>
+ <step>
+            <cmd>Измените статус и приоритет инцидентов.</cmd>
+            <info>
+               <note>Подробнее см. в разделе «<xref
+                     href="../../../control_prot_obj_events/events_incidents/edit_incident.dita"
+                  />».</note>
+            </info>
+         </step>
+ <step>
+            <cmd>Для удаления инцидентов воспользуйтесь кнопкой <image
+                  href="../../../../images/icons/del.png" id="image_pyz_gdr_vnb"/>.</cmd>
+         </step>
+ <step>
+            <cmd>Для создания отчета по инцидентам нажмите <image
+                  href="../../../../images/icons/report.png" id="image_hjs_hdr_vnb"/>.</cmd>
+         </step>
+ 
+ </steps>
+ </taskbody>
+</task>

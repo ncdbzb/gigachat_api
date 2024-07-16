@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_wbt_vqw_dzb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ybt_vqw_dzb">Выберите пункт меню <uicontrol>Rescue LiveCD</uicontrol> и нажмите клавишу 
+                    <uicontrol>Enter</uicontrol>.</cmd>
+            </step>
+        </steps>      
+    </taskbody>
+</task>

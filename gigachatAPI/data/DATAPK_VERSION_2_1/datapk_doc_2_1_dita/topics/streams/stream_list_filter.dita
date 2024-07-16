@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="stream_list_filter">
+ <title>Фильтрация списка потоков данных</title>
+ <body>
+        <p><term keyref="appliance"/> позволяет фильтровать отображаемые потоки данных. На странице
+                <cite keyref="dataflow_fp"/> по кнопке <image href="../../images/icons/filter.png"
+                id="image_axp_15j_lyb"/> доступны следующие фильтры:</p>
+        <ol id="ol_xpm_4z5_pnb">
+            <li><uicontrol>MAC-адреса отправителя</uicontrol>. <term keyref="filtering"/>
+                выполняется по распознанным MAC-адресам источника.</li>
+            <li><uicontrol>Использовать условие «AND»</uicontrol>. Позволяет отображать только те
+                потоки данных, в которых одновременно присутствуют указанные IP и (или) MAC-адреса
+                для источника и получателя. При отмене параметра <uicontrol>Использовать условие
+                    «AND»</uicontrol> будут отображены потоки данных, в которых присутствуют
+                указанные параметры хотя бы для одного из узлов.<note type="attention">Нельзя указывать суммарно
+                    более 10000 IP-адресов отправителей и получателей.</note></li>
+            <li><uicontrol>MAC-адреса получателя</uicontrol>. <term keyref="filtering"/> выполняется
+                по распознанным MAC-адресам получателя.<note
+                    conref="../reusable/notes/mac_separator.dita#ReusableComponent_rz1_jsj_31c/note_hkm_csj_31c"
+                    id="note_kdb_jsj_31c"/></li>
+            <li><uicontrol>IP-адреса отправителя</uicontrol>. <term keyref="filtering"/> выполняется
+                по распознанным IP-адресам источника.</li>
+            <li><ph><uicontrol>IP-адреса получателя</uicontrol>. <term keyref="filtering"/>
+                    выполняется по распознанным IP-адресам получателя.</ph><note
+                    conref="../reusable/notes/IP_separator.dita#ReusableComponent_ilr_gck_lyb/note_cbv_hgb_wyb"
+                    id="note_pxh_4jb_wyb"/></li>
+            <li><uicontrol>Только содержащие IP</uicontrol>. Позволяет отфильтровать только потоки с
+                IP-адресами. Фильтр не влияет на наличие MAC-адресов в потоках.</li>
+            <li>
+                <p><uicontrol>Только без IP</uicontrol>. Позволяет отфильтровать только потоки, не
+                    имеющие IP-адресов. Фильтр не влияет на наличие MAC-адресов в потоках.</p>
+                <note id="note_s2c_mlw_dyb">Фильтры <uicontrol>Только содержащие IP</uicontrol> и
+                        <uicontrol>Только без IP</uicontrol> взаимоисключающие.</note>
+            </li>
+            <li><uicontrol>Использовать "AND" для пар IP и MAC</uicontrol>. <term keyref="filtering"
+                /> выполняется только при наличии указанных IP и MAC-адресов отправителя и
+                получателя. </li>
+            <li><uicontrol>Источник не находится в подсетях</uicontrol>. Позволяет фильтровать
+                только отправителей, которые находятся в подсетях, отличных от указанных.</li>
+            <li><uicontrol>Получатель не находится в подсетях</uicontrol>. Позволяет фильтровать
+                только получателей, которые находятся в подсетях, отличных от указанных.</li>
+            <li>
+                <p><uicontrol>Порты отправителя</uicontrol>. <term keyref="filtering"/> выполняется
+                    по распознанным портам, к которым обращался источник.</p>
+                <note type="tip" id="note_zky_1gy_4tb">Между фильтрами по портам источника и
+                    получателя располагается текст <codeph>Или</codeph>. Это означает, что
+                    фильтрация потоков будет осуществлена, если найдется хотя бы один порт,
+                    принадлежащий источнику или получателю.</note>
+            </li>
+            <li><uicontrol>Порты получателя</uicontrol>. <term keyref="filtering"/> выполняется по
+                распознанным портам, к которым обращался получатель.</li>
+            <li><uicontrol>Изменил статус</uicontrol>. <term keyref="filtering"/> выполняется по
+                субъекту, выполнившему изменение статуса потока данных.</li>
+            <li><uicontrol>Одобренные/неодобренные</uicontrol>. <term keyref="filtering"/>
+                выполняется по статусу потока данных.</li>
+            <li><uicontrol>Сенсор</uicontrol>. Фильтр содержит наименования сенсоров, подключенных к
+                    <term keyref="appliance"/>у. Можно выбирать несколько наименований. При
+                применении фильтра отобразятся потоки, обнаруженные выбранными сенсорами.</li>
+            <li><uicontrol>Последние протоколы</uicontrol>. <term keyref="filtering"/> выполняется
+                по распознанному протоколу.</li>
+            <li><uicontrol>Дата и время обнаружения</uicontrol>. <term keyref="filtering"/>
+                выполняется по потокам данных, обнаруженным в указанный временной период. Существует
+                возможность указания текущих суток в качестве быстрого фильтра.</li>
+            <li><uicontrol>Дата и время изменения статуса</uicontrol>. <term keyref="filtering"/>
+                выполняется по потокам данных, чей статус был изменен в указанный временной
+                период.</li>
+            <li><uicontrol>Комментарий</uicontrol>. <term keyref="filtering"/> выполняется по
+                потокам данных, которым добавлен указанный комментарий или его часть.<note
+                    id="note_jjk_tj1_f1c">Поле <uicontrol>Комментарий</uicontrol> является
+                    регистронезависимым.</note></li>
+        </ol>
+        <fig id="fig_ak2_g5j_lyb">
+            <title>Панель фильтров на странице «Потоки данных»</title>
+            <image href="../../images/streams/filters_on_stream_page_1.png" id="image_gwk_sz5_pnb"/>
+        </fig>
+        <p><term keyref="appliance"/> позволяет выполнять групповые операции над потоками,
+            выбранными фильтрами, а именно:</p>
+        <ul id="ul_bk2_g5j_lyb">
+            <li>одобрить потоки;</li>
+            <li>временно одобрить потоки;</li>
+            <li>убрать одобрение с потоков;</li>
+            <li>создать отчет;</li>
+            <li>удалить потоки.</li>
+        </ul>
+    </body>
+</topic>

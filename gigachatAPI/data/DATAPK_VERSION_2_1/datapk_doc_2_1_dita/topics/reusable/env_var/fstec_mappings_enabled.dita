@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_njw_qxm_tzb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_gr5_s2j_jpb"><ph>При значении переменной <ph
+                                        conref="../false.dita#ReusableComponent_jh1_5gk_hpb/ph_qh1_5gk_hpb"
+                                    />:</ph><ul id="ul_tmm_twm_tzb">
+                                    <li>скрывает на странице <cite keyref="exchange_fp"/> импорт
+                                        справочника <abbreviated-form keyref="bdu_fstec"/>;</li>
+                                    <li><ph>скрывает в окне <uicontrol>Просмотр
+                                                уязвимостей</uicontrol> столбец <uicontrol>БДУ
+                                                ФСТЭК</uicontrol> с дополнительной информацией об
+                                            уязвимостях из <abbreviated-form keyref="bdu_fstec"
+                                            /></ph>;</li>
+                                    <li><ph>скрывает в CSV-отчете результатов поиска уязвимостей
+                                            столбцы c дополнительной информацией об уязвимостях из
+                                                <abbreviated-form keyref="bdu_fstec"/></ph></li>
+                                </ul></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

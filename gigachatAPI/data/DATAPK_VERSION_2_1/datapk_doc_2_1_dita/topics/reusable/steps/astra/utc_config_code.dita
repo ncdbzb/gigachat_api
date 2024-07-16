@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fms_4d4_55b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info id="info_dv3_22y_j5b"
+                            ><codeblock id="codeblock_tpy_mtw_3sb" outputclass="language-bourne">sudo timedatectl set-local-rtc 0 --adjust-system-clock
+sudo timedatectl set-local-rtc 0</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

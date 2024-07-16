@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mcj_tlh_yyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><note id="note_qqs_lhh_yyb" type="warning">Для возможности дальнейшего подключения сенсоров к <term
+                                    keyref="appliance"/>у уровня <abbreviated-form
+                                    keyref="management"/> и их стабильного взаимодействия должны
+                                выполняться следующие условия:<ul id="ul_jl4_qnh_yyb">
+                                    <li>Правила <codeph>DNAT</codeph> и сам сервис
+                                            <codeph>iptables</codeph> должны быть всегда включены на
+                                            <term keyref="appliance"/>е уровня <abbreviated-form
+                                            keyref="management"/>.</li>
+                                    <li>Если планируется подключать сенсоры к нескольким сетевым
+                                        интерфейсам одного <term keyref="appliance"/>а уровня
+                                            <abbreviated-form keyref="management"/>, правила
+                                            <codeph>DNAT</codeph> должны быть продублированы в
+                                        конфигурационном файле <codeph>iptables</codeph> для каждого
+                                        сетевого интерфейса. </li>
+                                </ul>
+                            </note></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

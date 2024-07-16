@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="adminer">
+    <title>Установка и использование сервиса управления БД Adminer</title>
+    <taskbody>
+        <context id="context_acs_kmw_dzb">
+            <p>Для работы с базами данных Комплекса уровня Management доступен дополнительный сервис
+                управления базами данных Adminer. Сервис не входит в набор по умолчанию.</p>
+            <note id="note_dbq_ywf_1vb" type="caution">Сервис предназначен только для отладки; его
+                использование в продуктивных инсталляциях запрещено.</note>
+            <p><ph>Файлы, которые необходимы для запуска Adminer</ph>:<ul id="ul_r13_xlq_dzb">
+                    <li>архив <codeph
+                            conref="../reusable/files/adminer_tar.dita#ReusableComponent_w1p_21w_dzb/codeph_x1p_21w_dzb"
+                        /> с docker-образом adminer;</li>
+                    <li>файл <codeph>docker-compose.adminer.yml</codeph> для запуска и остановки
+                        Adminer и вспомогательных сервисов.</li>
+                </ul></p>
+        </context>
+    </taskbody>
+    <task id="task_esy_fmw_dzb">
+        <title>Установка и запуск Adminer</title>
+        <taskbody>
+            <context id="context_m3s_jmw_dzb">Для установки и запуска сервиса Adminer:</context>
+            <steps id="steps_n3s_jmw_dzb">
+                <step>
+                    <cmd>С помощью приложения для обмена файлами скопируйте файлы <codeph
+                            conref="../reusable/files/adminer_tar.dita#ReusableComponent_w1p_21w_dzb/codeph_x1p_21w_dzb"
+                        /> и <codeph>docker-compose.adminer.yml</codeph> в директорию <codeph
+                            conref="../reusable/filepath/opt.dita#opt/opt"/> операционной системы
+                            <term keyref="appliance"/>а.</cmd>
+                </step>
+                <step>
+                    <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а.</cmd>
+                </step>
+                <step>
+                    <cmd>Перейдите в основную директорию <term keyref="appliance"/>а: </cmd>
+                    <info>
+                        <codeblock id="codeblock_dct_hg2_1vb">cd <codeph conref="../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Остановите сервисы <term keyref="appliance"/>а без удаления накопленных
+                        данных: </cmd>
+                    <info>
+                        <codeblock id="codeblock_g3j_4k2_1vb">docker-compose down</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Установите сервис Adminer:</cmd>
+                    <info>
+                        <codeblock id="codeblock_v3b_pk2_1vb">docker load -i <codeph conref="../reusable/files/adminer_tar.dita#ReusableComponent_w1p_21w_dzb/codeph_x1p_21w_dzb"/></codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Откройте файл <ph
+                            conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /> для редактирования.</cmd>
+                </step>
+                <step>
+                    <cmd>Добавьте в значение переменной <cmdname keyref="COMPOSE_FILE"/> файла <ph
+                            conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /> название файла <codeph>docker-compose.adminer.yml</codeph> через
+                        двоеточие. Для сохранения старого значения переменной можно его
+                        закомментировать и ввести в новой строке наименование переменной с новым
+                        значением
+                            <codeph>docker-compose.release.yml:docker-compose.adminer.yml</codeph>:</cmd>
+                    <info>
+                        <codeblock id="codeblock_env"><cmdname keyref="COMPOSE_FILE"/>=docker-compose.release.yml:docker-compose.adminer.yml
+#<cmdname keyref="COMPOSE_FILE"/>=docker-compose.release.yml</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd
+                        conref="../reusable/steps/close_env_cmd.dita#ReusableComponent_xtg_hpw_dzb/cmd_a5g_hpw_dzb"
+                    />
+                </step>
+                <step>
+                    <cmd>Запустите сервис Adminer:</cmd>
+                    <info>
+                        <codeblock id="codeblock_i1f_pk2_1vb">docker-compose up -d adminer</codeblock>
+                    </info>
+                </step>
+                <step id="step_vqf_hfw_zrb">
+                    <cmd
+                        conref="../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"/>
+                    <stepresult>будут запущены сервисы <codeph>adminer</codeph> и дополнительные
+                        сервисы; веб-сервер <codeph>nginx</codeph>, базы данных <codeph>db</codeph>
+                        и <codeph>pg</codeph>.</stepresult>
+                </step>
+                <step>
+                    <cmd>Воспользуйтесь сервисом Adminer. Для этого:</cmd>
+                    <substeps id="substeps_h3w_kn2_1vb">
+                        <substep>
+                            <cmd>Перейдите по адресу <codeph>https://[IP-адрес
+                                    Комплекса]/adminer/</codeph>.</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>В выпадающем списке <uicontrol>Движок</uicontrol> выберите СУБД:
+                                    <codeph>PostgeSQL</codeph> или <codeph>MySQL</codeph>. </cmd>
+                        </substep>
+                        <substep>
+                            <cmd>При необходимости введите название базы данных в поле
+                                    <uicontrol>База данных</uicontrol> и нажмите
+                                    <uicontrol>Войти</uicontrol>.</cmd>
+                            <stepresult>Откроется интерфейс выбранной СУБД.</stepresult>
+                        </substep>
+                    </substeps>
+                    <info>
+                        <fig id="fig_rxh_x4f_1vb">
+                            <title>Интерфейс сервиса Adminer</title>
+                            <image href="../../images/deployment/adminer.png" id="image_sxn_x4f_1vb"
+                            />
+                        </fig>
+                    </info>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="task_hd5_qmw_dzb">
+        <title>Отключение Adminer и запуск Комплекса</title>
+        <taskbody>
+            <context id="context_yks_tmw_dzb">Для запуска <term keyref="appliance"/>а после
+                завершения выполнения работ в сервисе Adminer:</context>
+            <steps id="steps_gn4_tmw_dzb">
+                <step>
+                    <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а.</cmd>
+                </step>
+                <step>
+                    <cmd>Перейдите в основную директорию <term keyref="appliance"/>а: </cmd>
+                    <info>
+                        <codeblock id="codeblock_tdk_tnw_dzb">cd <codeph conref="../reusable/filepath/opt_datapk.dita#opt_datapk/opt_datapk"/></codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Остановите сервисы <term keyref="appliance"/>а без удаления накопленных
+                        данных: </cmd>
+                    <info>
+                        <codeblock id="codeblock_fts_f4w_dzb">docker-compose down</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Откройте файл <ph
+                            conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /> для редактирования.</cmd>
+                </step>
+                <step>
+                    <cmd>В значении переменной <cmdname keyref="COMPOSE_FILE"/> файла <ph
+                            conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                        /> оставьте только название файла
+                            <codeph>docker-compose.release.yml</codeph>. Если необходимо сохранить
+                        значение переменной с <codeph>docker-compose.adminer.yml</codeph>, можно
+                        закомментировать строку с <codeph>docker-compose.adminer.yml</codeph> и
+                        раскомментировать ранее сохраненную строку с
+                            <codeph>docker-compose.release.yml</codeph>:</cmd>
+                    <info>
+                        <codeblock id="codeblock_kry_g4w_dzb">#<cmdname keyref="COMPOSE_FILE"/>=docker-compose.release.yml:docker-compose.adminer.yml
+<cmdname keyref="COMPOSE_FILE"/>=docker-compose.release.yml</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd
+                        conref="../reusable/steps/close_env_cmd.dita#ReusableComponent_xtg_hpw_dzb/cmd_a5g_hpw_dzb"
+                    />
+                </step>
+                <step>
+                    <cmd>Запустите сервисы <term keyref="appliance"/>а:</cmd>
+                    <info>
+                        <codeblock id="codeblock_gyb_s4g_myb">docker-compose up -d</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd
+                        conref="../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+                    />
+                </step>
+                <step>
+                    <cmd>Перейдите в веб-интерфейс <term keyref="appliance"/>а.</cmd>
+                </step>
+                <step
+                    conref="../reusable/steps/hierarchy/restart_sync_step.dita#ReusableComponent_a1f_4wb_dzb/step_b1f_4wb_dzb">
+                    <cmd/>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+</task>

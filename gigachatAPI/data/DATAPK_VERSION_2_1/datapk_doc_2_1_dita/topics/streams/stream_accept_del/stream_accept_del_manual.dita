@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="stream_accept_del_by_hands">
+ <title>Одобрение и удаление потоков данных в ручном режиме</title>
+ <body>
+ <p>Интерфейс <term keyref="appliance"/>а предоставляет широкие возможности по работе с потоками данных:</p>
+ <ol id="ol_xn3_r2v_pnb">
+ <li><xref href="accept_stream.dita">Одобрение, в том числе групповое</xref>.</li>
+ <li><xref href="temporary_approve.dita">Временное одобрение, в том числе
+ групповое</xref>.</li>
+ <li><xref href="cancel_approve.dita">Отмена одобрения, в том числе
+ групповая</xref>.</li>
+ <li><xref href="del_stream.dita">Удаление, в том числе групповое</xref>.</li>
+ </ol>
+ 
+ 
+ 
+ </body>
+</topic>

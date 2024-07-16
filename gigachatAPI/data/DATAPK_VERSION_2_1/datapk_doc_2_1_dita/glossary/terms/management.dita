@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="management">
+    <glossterm>CL DATAPK уровня Management</glossterm>
+    <glossdef><term keyref="appliance_name_short"/> уровня Management с функциями управления
+        сенсорами и анализа полученных с них данными.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>Management</glossSurfaceForm>
+        <glossAlt id="glossAlt_pdp_tf3_wxb">
+            <glossAbbreviation>Management</glossAbbreviation>
+        </glossAlt>
+    </glossBody>
+    <related-links outputclass="only_html">
+        <link href="../../internal_glossary/appliance.dita"/>
+    </related-links>
+</glossentry>

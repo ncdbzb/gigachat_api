@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Toc86071540">
+    <title>Настройка
+инфраструктуры
+проверяемой
+среды</title>
+    <taskbody>
+    
+        <context id="section_nlr_hhp_35b">
+            <p>Произведите настройки SPAN-порта на сетевом оборудовании (коммутаторе) для корректного сбора
+                данных Комплексом.</p>
+            <p>Изменения конфигурации вносятся для выполнения следующих требований:</p>
+            <ul id="ul_orz_hhp_35b">
+                <li>настройка зеркалирования сетевого трафика;</li>
+                <li>настройка отправки Syslog в адрес Комплекса;</li>
+                <li>создание служебной учетной записи для опроса коммутатора по SSH.</li>
+            </ul>
+            <p>Настройка на примере сетевого оборудования Cisco</p>
+          
+            
+          
+        </context>
+       <steps>
+           <step>
+                <cmd>Перейдите в привилегированный режим:</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">enable</codeblock>
+                </info>
+            </step>
+           <step>
+                <cmd>Перейдите в режим конфигурирования:</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">configure terminal</codeblock>
+                </info>
+            </step>
+           <step>
+                <cmd> Укажите порты или VLAN, с которых зеркалируется сетевой трафик:</cmd>
+                <info>
+                    <codeblock id="codeblock_prz_hhp_35b" outputclass="language-bourne">monitor session [number] source interface|vlan [name]</codeblock>
+                </info>
+            </step>
+           <step>
+                <cmd>Укажите интерфейс, куда направляется копия сетевого трафика;</cmd>
+                <info>
+                    <codeblock id="codeblock_qrz_hhp_35b" outputclass="language-bourne">monitor session [number] destination interface [name]               </codeblock>
+                </info>
+            </step>
+           <step>
+               <cmd>При подключении Комплекса с интерфейсом сбора данных:</cmd>
+               <substeps>
+                   <substep>
+                        <cmd>включите режим логирования:</cmd>
+                        <info>
+                            <codeblock outputclass="language-bourne">logging on</codeblock>
+                        </info>
+                    </substep>
+                   <substep>
+                        <cmd>укажите уровни важности, с которыми коммутатор будет отправлять
+                            события:</cmd>
+                        <info>
+                            <note id="note_gz4_drp_35b"><codeph>debugging</codeph> отправляет
+                                сообщения с любым уровнем важности.</note>
+                            <codeblock id="codeblock_fpq_sqp_35b" outputclass="language-bourne">logging trap notifications</codeblock>
+                        </info>
+                    </substep>
+                   <substep>
+                        <cmd> включите аудит успешных попыток входа:</cmd>
+                        <info>
+                            <codeblock id="codeblock_mn2_tqp_35b" outputclass="language-bourne">login on-success log</codeblock>
+                        </info>
+                    </substep>
+                   <substep>
+                        <cmd>включите аудит неуспешных попыток входа:</cmd>
+                        <info>
+                            <codeblock outputclass="language-bourne">login on-failure log</codeblock>
+                        </info>
+                    </substep>
+                   <substep>
+                        <cmd>создайте служебную учетную запись:</cmd>
+                        <info>
+                            <codeblock id="codeblock_srz_hhp_35b" outputclass="language-bourne">username [имя пользователя] secret [пароль]</codeblock>
+                        </info>
+                    </substep>
+                   
+               </substeps>
+           </step>
+           <step>
+               <cmd>Выйдите из режима конфигурирования:</cmd>
+               <info>
+                   <codeblock id="codeblock_rsh_xqp_35b" outputclass="language-bourne">exit</codeblock>
+               </info>
+           </step>
+           <step>
+               <cmd>Запишите настройки в начальную конфигурацию:</cmd>
+               <info>
+                   <codeblock outputclass="language-bourne">wr mem</codeblock>
+               </info>
+           </step>
+       </steps>
+    </taskbody>
+   </task>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:opt_datapk_docker_compose_backup_yml-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xpj_bdz_mtb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><codeph id="codeph_dqj_bdz_mtb"
+                            ><codeph conref="opt_datapk.dita#opt_datapk/opt_datapk"
+                                id="codeph_aqj_bdz_mtb"/>/docker-compose.backup.yml</codeph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="try">
+ <title>Подключение Комплекса</title>
+ <taskbody>
+ <context>
+ <p>В этом разделе:</p>
+   <ul id="ul_ynb_wqx_vsb">
+    <li><xref href="steps_connect_web.dita"/></li>
+    <li><xref href="steps_first_setup.dita"/></li>
+   </ul>
+ <p>Порядок включения аппаратной платформы установленного <term keyref="appliance"/>а для выполнения
+        первичной настройки:</p>
+ </context>
+ <steps>
+ <step>
+
+
+ <cmd>Соедините сетевым кабелем разъем управляющего контура <term keyref="appliance"/>а с разъемом
+ сетевой карты рабочей станции администратора.</cmd></step>
+ <step><cmd>Один конец кабеля питания вставьте в разъем питания <term keyref="appliance"/>а, другой – в
+ заземленную сетевую розетку.</cmd></step>
+ <step>
+ <cmd>Включите <term keyref="appliance"/>. Для этого кратковременно нажмите кнопку
+ питания. Комплекс издаст одиночный звуковой сигнал, запустится операционная
+ система, системное и прикладное <abbreviated-form keyref="software"/>.</cmd>
+ </step>
+ </steps>
+ </taskbody>
+</task>

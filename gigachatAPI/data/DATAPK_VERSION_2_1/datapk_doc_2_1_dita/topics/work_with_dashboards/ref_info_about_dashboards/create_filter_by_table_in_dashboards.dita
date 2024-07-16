@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_filter_by_table_in_dashboards">
+ <title>Фильтр по значениям из таблицы</title>
+ <taskbody>
+ <context>
+ <p>Помимо базового способа создания фильтров существует возможность взять данные из таблицы любой
+                страницы мониторинга. Для создания фильтров по значениям полей таблицы:</p>
+ </context>
+ <steps>
+ 
+ 
+ <step>
+                <cmd>Наведите курсор мыши на любой (кроме даты) столбец интересующей строки таблицы.
+                    Справа от курсора вы увидите две кнопки: <image
+                        href="../../../images/icons/kibana/plus.png" id="image_fgs_2qp_vnb"/> и
+                        <image href="../../../images/icons/kibana/minus.png" id="image_ik1_fqp_vnb"
+                    />.</cmd>
+                <info>
+                    <fig id="fig_qqd_rvb_j4b">
+                        <title>Создание фильтра по значению таблицы «Изменения конфигураций объектов
+                            защиты»</title>
+                        <image href="../../../images/dashboards_kibana/filter_example.png"
+                            id="image_rqd_rvb_j4b">
+                            <alt>Создание фильтра по значению таблицы «Изменения конфигураций
+                                объектов защиты»</alt>
+                        </image>
+                    </fig>
+                    <note id="note_tdr_myq_wzb" type="tip">Нажмите кнопку <image
+                            href="../../../images/icons/kibana/show_content.png"
+                            id="image_r2k_pzq_wzb"/> рядом с кнопками <image
+                            href="../../../images/icons/kibana/plus.png" id="image_kn3_5yq_wzb"/> и
+                            <image href="../../../images/icons/kibana/minus.png"
+                            id="image_ln3_5yq_wzb"/>, чтобы целиком отобразить значение, по которому
+                        будет выполнена фильтрация, и продублированные кнопки фильтрации.<fig
+                            id="fig_zkn_1zq_wzb">
+                            <title>Отображение значения, выбранного для фильтрации</title>
+                            <image href="../../../images/dashboards_kibana/show_full_value.png"
+                                id="image_fm3_bzq_wzb"/>
+                        </fig></note>
+                </info>
+            </step>
+ <step>
+                <cmd>В зависимости от необходимого типа фильтрации нажмите на одну из кнопок:</cmd>
+                <choices id="choices_mq5_bpp_pyb">
+                    <choice><image href="../../../images/icons/kibana/plus.png"
+                            id="image_uxk_fqp_vnb"/> (<uicontrol>Filter for value</uicontrol>) — для
+                        создания фильтра, включающего значения полей по запросу;</choice>
+                    <choice><image href="../../../images/icons/kibana/minus.png"
+                            id="image_kqv_fqp_vnb"/> (<uicontrol>Filter out value</uicontrol>) — для
+                        создания фильтра, исключающего значения полей по запросу.</choice>
+                </choices>
+                <stepresult>в результате применения фильтров отобразится страница с событиями,
+                    содержащими только выбранные значения полей. В некоторых визуализациях может не
+                    быть результатов.</stepresult>
+            </step>
+ </steps>
+ </taskbody>
+</task>

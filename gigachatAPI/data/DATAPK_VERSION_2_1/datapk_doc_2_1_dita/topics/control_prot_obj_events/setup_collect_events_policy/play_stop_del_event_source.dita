@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="play_stop_del_event_source">
+ <title>Управление источниками событий</title>
+ <taskbody><context>
+  <p>Для управления источниками событий присутствуют следующие возможности:</p>
+ </context>
+  <steps id="steps_adg_ygd_trb">
+   <step>
+    <cmd>Запуск сбора событий от источника. Для возобновления процесса получения событий от
+     определенного источника:</cmd>
+    <substeps>
+     <substep>
+      <cmd><ph
+        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+        /><ph
+        conref="../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+       />.</cmd>
+     </substep>
+     <substep>
+            <cmd>Нажмите кнопку <ph
+                conref="../../reusable/buttons/play_now_button.dita#play_now_button/play_now_button"
+              />) в строке с выбранным источником событий.</cmd>
+          </substep>
+    </substeps>
+   </step>
+  
+   <step>
+    <cmd>Приостановка сбора событий от источника. Для временной остановки процесса получения событий
+     от источника, созданного вручную:</cmd>
+    <substeps>
+     <substep>
+      <cmd><ph
+        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+        /><ph
+        conref="../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+       />.</cmd>
+     </substep>
+     <substep>
+      <cmd>Нажмите кнопку <ph
+       conref="../../reusable/buttons/pause_button.dita#pause_button/pause_button"/> в строке с
+       выбранным источником событий.</cmd>
+     </substep>
+    </substeps>
+   </step>
+   
+   <step>
+    <cmd>Удаление источника событий. Для прекращения получения событий от источника:</cmd>
+    <substeps>
+     <substep>
+      <cmd><ph
+        conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+        /><ph
+        conref="../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+       />.</cmd>
+     </substep>
+     <substep>
+            <cmd>Нажмите кнопку <ph
+                conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                /><uicontrol> источник</uicontrol>).</cmd>
+          </substep>
+     <substep>
+      <cmd>Введите текст обоснования удаления источника.</cmd>
+     </substep>
+    </substeps>
+   </step>
+   
+  </steps></taskbody>
+</task>

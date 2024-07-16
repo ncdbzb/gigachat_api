@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="definitionsCountToSelecting">
+    <glossterm>definitionsCountToSelecting</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/environment_var/definitionscounttoselecting_desc.dita#ReusableComponent_qcw_m1d_jpb/p_ucw_m1d_jpb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/environment_json.dita"/>
+    </related-links>
+</glossentry>

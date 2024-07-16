@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ilr_gck_lybqq">
+    <title/>
+    <body>
+        <ol>
+            <li><ul id="ul_pbv_pmj_lyb">
+                    <li><uicontrol>Критический</uicontrol>: хотя бы один из статусов объекта защиты
+                        — <uicontrol>Сбор данных</uicontrol> или <uicontrol>Конфигурации</uicontrol>
+                        — имеет красный индикатор.</li>
+                    <li><uicontrol>Важный</uicontrol>: хотя бы один из статусов объекта защиты —
+                            <uicontrol>Сбор данных</uicontrol> или
+                            <uicontrol>Конфигурации</uicontrol> — имеет оранжевый индикатор, но
+                        красные индикаторы отсутствуют.</li>
+                    <li><uicontrol>ОК</uicontrol>: оба статуса имеют зеленый индикатор.</li>
+                    <li><uicontrol>Нет данных</uicontrol>: сбор данных не выполнялся.</li>
+                </ul></li>
+        </ol>
+    </body>
+</topic>

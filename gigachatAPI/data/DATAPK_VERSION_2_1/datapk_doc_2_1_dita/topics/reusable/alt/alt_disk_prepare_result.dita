@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jyl_h5w_dzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <stepresult id="stepresult_kyl_h5w_dzb">выполнена подготовка к разметке дискового пространства <term keyref="alt_name"/>. Платформа будет перезагружена.</stepresult>
+            </step>
+        </steps>
+       </taskbody>
+</task>

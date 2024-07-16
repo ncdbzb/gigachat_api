@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="time_window">
+ <title>Временное окно</title>
+ <body>
+ <p>Для выявления инцидента, основанного на цепочке событий в течение временного диапазона,
+   рекомендуется использовать конструкцию:</p>
+ <p>
+ <codeblock outputclass="language-sql">[тип события]([фильтр событий]).win:time([отслеживаемое время])</codeblock>
+ </p>
+ <example>
+ <p>Например, </p>
+ <p>
+ <codeblock outputclass="language-sql">windows_event(event_code="4625" OR event_code="529").win:time(180 sec)</codeblock>
+ </p>
+ <p>Поэлементно данное выражение означает следующее:</p>
+ <ul id="ul_cxg_4gx_vnb">
+ <li>точка «.» после описания типа событий и фильтров подразумевает использование
+ какого-либо свойства;</li>
+ <li>«win:» - в данном случае пространство имен обозначает «data window» или окно
+ данных;</li>
+ <li>«time()» - функция, принимающая значение временного диапазона окна данных, по
+ умолчанию принимает значение в секундах.</li>
+ </ul>
+ </example>
+ <p>Функция time может принимать явно указанные значения: </p>
+ <ul id="ul_dxg_4gx_vnb">
+ <li>дни (days или day);</li>
+ <li>часы (hours или hour);</li>
+ <li>минуты (min);</li>
+ <li>секунды (sec);</li>
+ <li>миллисекунды (msec).</li>
+ </ul>
+ <p>Работа функции представлена на рисунке.</p>
+ 
+ <fig id="fig_xmz_vgx_vnb">
+ <title>Работа функции time()</title>
+ <image href="../../../images/event_correlation_service/time_func.png"
+ id="image_zld_zgx_vnb"/>
+ </fig>
+ <p>На данном рисунке отображены приходящие события (Incoming Events) в виде символов
+ «W<sub>n</sub>», где n – номер события. По временному отрезку движется окно данных с
+ диапазоном в 4 секунды и ведет счет полученных событий. Так, на восьмой секунде
+ отбрасывается первое пришедшее событие, и число событий становится на единицу меньше.</p>
+ <section id="section_fxg_4gx_vnb">
+ <p> </p>
+ </section>
+ </body>
+</topic>

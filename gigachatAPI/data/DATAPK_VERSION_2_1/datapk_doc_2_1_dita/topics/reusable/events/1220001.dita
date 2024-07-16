@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:1220001-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xrv_yhw_mxb" outputclass="wide">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_yrv_yhw_mxb">Диапазон сканирования:
+                                    <codeph>{first_ip}</codeph> - <codeph>{last_ip}</codeph>;
+                                Пользователь: <codeph>{user}</codeph></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

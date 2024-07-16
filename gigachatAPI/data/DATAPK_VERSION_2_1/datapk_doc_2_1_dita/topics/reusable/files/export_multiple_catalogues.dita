@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_z4h_nbj_wxb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><codeph id="codeph_aph_nbj_wxb">export_[дата_и_время].tar</codeph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="Toc86071551">
+    <title>Проверка
+наличия
+событий и
+графического
+отображения
+измерений
+скорости
+сетевого
+трафика на
+прослушиваемом
+интерфейсе</title>
+    <taskbody><steps>
+      <step>
+    <cmd id="Hlk84520928"><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite>События</cite> и выберите запрос «!CheckUP
+     скорость трафика на слушающем интерфейсе» (<xref href="#Toc86071551/Ref84520937"/>).</cmd>
+    <info>
+     <fig id="Ref84520937">
+      <title>Выбор запроса на странице «События»</title>
+      <image href="../../../../../images/checkup/img(15).png"/>
+     </fig>
+    </info>
+   </step>
+     
+
+      <step>
+    <cmd>Убедитесь, что события эксплуатационного мониторинга в части измерения скорости сетевого
+     трафика на прослушиваемом интерфейсе присутствуют (<xref href="#Toc86071551/Ref84521426"
+     />).</cmd>
+    <info>
+     <fig id="Ref84521426">
+      <title>Пример события эксплуатационного мониторинга</title>
+      <image href="../../../../../images/checkup/img(16).png"/>
+     </fig>
+    </info>
+   </step>
+     
+      <step>
+       <cmd>Перейдите на панель мониторинга <uicontrol>!Общая сводка</uicontrol> (<xref href="#Toc86071551/main_dashboard_checkup"/>).</cmd>
+    <info>
+     <fig id="main_dashboard_checkup">
+      <title>Панель мониторинга «!Общая сводка»</title>
+      <image href="../../../../../images/checkup/main_dashboard_checkup.png" id="image_pdg_qz2_ytb"
+      />
+     </fig>
+    </info>
+   </step>
+
+      <step>
+    <cmd>Убедитесь, что отображается график изменения скорости сетевого трафика на прослушиваемом
+     интерфейсе (<xref href="#Toc86071551/Ref84521519"/>).</cmd>
+    <info>
+     <fig id="Ref84521519">
+      <title>Пример отображения графика изменения скорости сетевого трафика на прослушиваемом
+       интерфейсе</title>
+      <image href="../../../../../images/checkup/img(17).png"/>
+     </fig>
+    </info>
+   </step>
+    </steps>
+    </taskbody>
+   </task>

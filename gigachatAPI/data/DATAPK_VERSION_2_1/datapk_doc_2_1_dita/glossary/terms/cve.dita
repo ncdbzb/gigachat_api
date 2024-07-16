@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="cve">
+    <glossterm>Common Vulnerabilities and Exposures</glossterm>
+    <glossdef>Common Vulnerabilities and Exposures (CVE) — база данных общеизвестных уязвимостей
+        информационной безопасности.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>Common Vulnerabilities and Exposures</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>CVE</glossAbbreviation>
+        </glossAlt>
+    </glossBody>
+</glossentry>

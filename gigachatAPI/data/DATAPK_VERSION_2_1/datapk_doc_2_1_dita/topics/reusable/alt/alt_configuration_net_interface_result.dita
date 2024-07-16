@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gmk_sfd_2zb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult id="stepresult_hmk_sfd_2zb">сетевой интерфейс для прослушивания трафика переключен в режим прослушивания всех пакетов.</stepresult>
+            </step>
+        </steps>
+       </taskbody>
+</task>

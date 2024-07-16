@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ubp_rpt_jyb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>
+                    <ph id="cmd_wbp_rpt_jyb">Измените необходимые параметры и нажмите кнопку <uicontrol>Сохранить</uicontrol>.</ph>
+                </cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

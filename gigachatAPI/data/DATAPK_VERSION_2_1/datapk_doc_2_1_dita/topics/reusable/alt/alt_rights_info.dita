@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fp2_hbh_f1c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info id="info_hp2_hbh_f1c">Для корректной работы UDV NTA необходимы следующие
+                        условия:<ul id="ul_crb_gh1_f1c">
+                        <li>права на директорию <codeph>opt</codeph> — <codeph>755</codeph>
+                                (<codeph>drwxr-xr-x</codeph>);</li>
+                        <li>владелец — <codeph>root</codeph>;</li>
+                        <li>группа владельца — <codeph>root</codeph>.</li>
+                    </ul></info>
+            </step>
+        </steps>
+        </taskbody>
+</task>

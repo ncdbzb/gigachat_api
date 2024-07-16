@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="recommendations_4">
+ <title>Рекомендуемые действия в случае обнаружения событий на странице «Контроль
+ конфигураций»</title>
+ <taskbody>
+ <context>
+ <p>Необходимо проверить легитимность изменений на странице <cite keyref="prot_obj_fp"/>. Для
+ этого:</p></context>
+ <steps>
+ <step>
+    <cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="prot_obj_fp"/>.</cmd>
+   </step>
+ <step>
+    <cmd>Найдите интересующий объект защиты при помощи фильтров в правой части страницы.</cmd>
+   </step>
+ <step>
+        <cmd>Нажмите <image href="../../../images/icons/to_configs.png" id="image_phv_gbr_vnb"/>
+            (<uicontrol>Конфигурация объекта защиты</uicontrol>) в разделе <uicontrol>Связанные
+            данные</uicontrol> для просмотра подробностей конфигурации. На странице вы можете
+          сравнить текущую конфигурацию с эталонной при помощи соответствующего чекбокса.</cmd>
+      </step>
+ <step>
+        <cmd>Если изменения легитимны, нажмите <uicontrol>Принять за эталонную</uicontrol>.</cmd>
+      </step>
+ <step><cmd>Если изменения нелегитимны, предпримите действия вне интерфейса <term keyref="appliance"/>а по
+ возвращению эталонной конфигурации. Чтобы убедиться в корректности проведенных
+ изменений:</cmd><substeps>
+ <substep><cmd>Просканируйте конфигурацию в карточке <abbreviated-form keyref="host"/>. Для этого:</cmd>
+ <info><ol
+ id="ol_icw_tzq_vnb">
+ <li>Перейдите в карточку <abbreviated-form keyref="host"/>.</li>
+ <li>В разделе <uicontrol>Результаты сбора данных</uicontrol> напротив интересующей конфигурации
+                  нажмите <image href="../../../images/icons/play.png" id="image_x2k_fbr_vnb"/>
+                    (<uicontrol>Запустить сканер</uicontrol>).</li>
+ </ol></info></substep>
+ <substep><cmd>Убедитесь, что между новой конфигурацией и эталонной нет различий. Для
+ этого:</cmd>
+ <info><ol id="ol_kcw_tzq_vnb">
+  <li><ph
+                    conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"/>
+                  <cite keyref="config_prot_obj_fp"/>;</li>
+  <li>Установите чекбокс <uicontrol>Сравнить с эталонной</uicontrol>.</li>
+ </ol></info></substep>
+ <substep>
+            <cmd>Если различий не найдено, нажмите <uicontrol>Принять за
+              эталонную</uicontrol>.</cmd>
+          </substep>
+ </substeps></step>
+ </steps>
+ </taskbody>
+</task>

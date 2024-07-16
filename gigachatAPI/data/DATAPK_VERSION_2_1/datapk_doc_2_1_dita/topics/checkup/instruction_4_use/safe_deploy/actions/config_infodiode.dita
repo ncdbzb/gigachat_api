@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="config_infodiode">
+    <title>Настройка конфигурации переключателей АК «InfoDiode»</title>
+    <taskbody>
+        <context>
+            <p>Настройки режимов работы входного (IN) и выходного (OUT) портов производятся при
+                выключенном питании.</p>
+            <p>Конфигурацию переключателей скорости портов IN и OUT необходимо выбирать в
+                соответствии со скоростью SPAN-порта сетевого оборудования (коммутатора)
+                подключаемого к АК «InfoDiode».</p>
+            <p>При этом необходимым условием корректной работы является одинаковая настройка
+                параметров входного (IN) и выходного (OUT) контуров.</p>
+            <p>
+                <note id="note_kh2_2bz_c5b" type="attention">При несоответствии скоростных режимов
+                    SPAN-порта сетевого устройства (коммутатора) и портов IN и OUT устройства АК
+                    «InfoDiode» передача данных не осуществляется.</note>
+            </p>
+            <p>В зависимости от скорости SPAN-порта коммутатора, выполните следующие действия:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Если скорость SPAN-порта коммутатора работает в режиме 100Mbps (<xref
+                        href="#config_infodiode/fig_tts_zzy_c5b" format="dita"/>):</cmd>
+                <substeps id="substeps_xkd_j1z_c5b">
+                    <substep>
+                        <cmd>Переведите переключатели входного (IN) контура в положение
+                                <b>100/ANEG/OFF.</b></cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Переведите переключатели выходного (OUT) контура в положение
+                                <b>100/ANEG</b>.</cmd>
+                        <info>
+                            <fig id="fig_tts_zzy_c5b">
+                                <title>Конфигурация переключателей АК «InfoDiode»</title>
+                                <image
+                                    href="../../../../../images/checkup/infodiode_switch_config.png"
+                                    id="image_uts_zzy_c5b">
+                                    <alt>Конфигурация переключателей АК «InfoDiode»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Если скорость SPAN-порта коммутатора работает в режиме 1000Mbps, выполните
+                    следующие действия (<xref href="#config_infodiode/fig_c3j_1bz_c5b" format="dita"
+                    />):</cmd>
+                <substeps id="substeps_nxf_51z_c5b">
+                    <substep>
+                        <cmd>Переведите переключатели входного (IN) контура в положение
+                                <b>1000/ANEG/OFF</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Переведите переключатели выходного (OUT) контура в положение
+                                <b>1000/ANEG</b>.</cmd>
+                        <info>
+                            <fig id="fig_c3j_1bz_c5b">
+                                <title>Конфигурация переключателей АК «InfoDiode»</title>
+                                <image
+                                    href="../../../../../images/checkup/infodiode_switch_config1.png"
+                                    id="image_d3j_1bz_c5b">
+                                    <alt>Конфигурация переключателей АК «InfoDiode»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

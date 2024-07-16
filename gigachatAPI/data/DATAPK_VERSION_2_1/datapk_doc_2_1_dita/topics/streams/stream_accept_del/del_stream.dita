@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="del_stream">
+ <title>Удаление потоков данных</title>
+ <taskbody>
+ <context>
+ <p>В интерфейсе <term keyref="appliance"/>а возможно удаление как одного, так и нескольких потоков данных. Порядок действий:</p>
+ </context>
+ <steps>
+ <step><cmd><ph conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb" /><cite keyref="network_inspection_fp"/> → <cite keyref="dataflow_fp"/>.</cmd></step>
+ <step>
+ <cmd>Для удаления потока:</cmd>
+ <substeps>
+ <substep>
+      <cmd>Выберите из списка необходимый поток и в правой колонке нажмите кнопку <ph
+        conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+        /><uicontrol> поток</uicontrol>).</cmd>
+     </substep>
+ <substep>
+      <cmd>В открывшемся окне введите обоснование удаления потока данных и нажмите кнопку
+        <uicontrol>Подтвердить</uicontrol>.</cmd>
+      <info>
+       <fig id="fig_vqk_chn_5pb">
+        <title>Подтверждение удаления потока</title>
+        <image href="../../../images/windows/approve_del_window.png" id="image_wqk_chn_5pb">
+         <alt>Подтверждение удаления потока</alt>
+        </image>
+       </fig>
+      </info>
+     </substep>
+ </substeps>
+ </step>
+ <step>
+ <cmd>Для группового удаления потоков:</cmd>
+ <substeps>
+ <substep>
+      <cmd>На странице <cite keyref="dataflow_fp"/> выполните необходимую настройку фильтров и
+       нажмите кнопку <uicontrol>Применить</uicontrol>.</cmd>
+     </substep>
+ <substep>
+      <cmd>Нажмите кнопку <ph
+        conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+        /><uicontrol> потоки</uicontrol>) над областью фильтров.</cmd>
+     </substep>
+ <substep>
+      <cmd>В появившемся окне введите обоснование удаления списка потоков данных и нажмите кнопку
+        <uicontrol>Подтвердить</uicontrol>.</cmd>
+     </substep>
+ </substeps>
+ </step>
+ </steps>
+ </taskbody>
+</task>

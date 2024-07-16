@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_i5t_prj_pyb">
+    <title/>
+    <body>
+        <ul id="ul_umy_jpf_snb">
+            <li><codeph>data.tar.bz2</codeph> — архив с незашифрованной директорией <codeph
+                    conref="filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> и ее содержимым, в том
+                числе конфигурационный файл <ph
+                    conref="filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"/>, файлы
+                    <codeph>docker-compose.release.yml</codeph> и
+                    <codeph>docker-compose.backup.yml</codeph>, файл <ph
+                    conref="filepath/node_id.dita#ReusableComponent_ssw_cp3_pyb/ph_tsw_cp3_pyb"/> с
+                идентификатором текущего <term keyref="appliance"/>а.</li>
+            <li><codeph>mysql_dump.aes</codeph> и <codeph>postgresql_dump.aes</codeph> — резервные
+                копии баз данных, зашифрованные паролем, который задается при запуске резервного
+                копирования (в ключе <codeph>--password</codeph>);</li>
+            <li><codeph>info.json</codeph> — метаданные, включающие контрольные суммы файлов
+                резервной копии.</li>
+        </ul>
+    </body>
+</topic>

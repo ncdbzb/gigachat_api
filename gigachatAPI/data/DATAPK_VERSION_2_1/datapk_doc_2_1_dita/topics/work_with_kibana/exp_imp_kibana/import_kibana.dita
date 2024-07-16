@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_kibana">
+ <title>Импорт сохраненных объектов</title>
+ <taskbody>
+ <context>
+ <p>Для импорта объектов раздела <cite keyref="monitoring_fp"/> из файлов формата
+     <codeph>*.ndjson</codeph>:</p>
+ </context>
+ <steps>
+ <step>
+ <cmd>Создайте новый индекс событий или восстановите индексы из архива.</cmd>
+ <info>
+ <note>
+ Создание
+ индексов описано в подразделе «<xref href="../setup_normalization_rules.dita"
+ />».<ph outputclass="no_en"> Восстановление индексов событий из архивов описано в подразделе «<xref
+ href="../../errors_troubleshooting/data_restore_from_backup/data_restore_from_backup.dita"
+ />».</ph>
+ </note>
+ </info>
+ </step>
+ <step
+ conref="../../reusable/to_saved_obj.dita#ReusableComponent_i51_243_qpb/step_n51_243_qpb"
+ conrefend="../../reusable/to_saved_obj.dita#ReusableComponent_i51_243_qpb/step_t51_243_qpb">
+ <cmd/>
+ </step><step>
+        <cmd>Нажмите кнопку <uicontrol>Import</uicontrol>. </cmd>
+        <stepresult>появится окно импорта сохраненных объектов.</stepresult>
+      </step><step>
+    <cmd>В открывшемся окне:</cmd>
+	<substeps>
+	<substep>
+	  <cmd>Оставьте включенным переключатель <uicontrol>Automatically overwrite conflicts</uicontrol>.</cmd>
+          </substep>
+	<substep>
+            <cmd>Перетащите или выберите по нажатию на <uicontrol>Import</uicontrol> файл формата
+                <codeph>*.ndjson</codeph> с объектами раздела <cite keyref="monitoring_fp"/>.</cmd>
+          </substep>
+	  </substeps>
+    <info>
+     <fig id="fig_lws_kzv_znb">
+      <title>Область выбора файла для импорта</title>
+      <image href="../../../images/work_with_kibana/exp_imp/choose_import_file.png"
+       id="image_qyy_kzv_znb"/>
+     </fig>
+     
+    </info>
+   </step><step>
+        <cmd>Нажмите <uicontrol>Import</uicontrol>.</cmd>
+        <info>
+          <fig id="fig_otk_vyv_znb">
+            <title>Окно импорта сохраненных объектов</title>
+            <image
+              href="../../../images/work_with_kibana/exp_imp/import_saved_obj_kibana_window.png"
+              id="image_shs_vyv_znb"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>При отображении предупреждения <systemoutput>Index Pattern Conflicts. The following
+            saved objects use index patterns that do not exist</systemoutput> выберите из
+          выпадающего списка в столбце <uicontrol>New Index Pattern</uicontrol> наименование
+          существующего шаблона индекса и нажмите кнопку <uicontrol>Confirm all
+          changes</uicontrol>.</cmd>
+        <info>
+          <fig id="fig_nds_x5b_b1c">
+            <title>Список шаблонов индекса в столбце «New Index Pattern»</title>
+            <image href="../../../images/work_with_kibana/exp_imp/choose_pattern_while_import.png"
+              id="image_dq5_gvb_b1c"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>В открывшемся окне с результатами импорта нажмите кнопку <uicontrol>Done</uicontrol>.
+        </cmd>
+      </step><step>
+        <cmd>Убедитесь, что на вкладке <uicontrol>Saved Objects</uicontrol> страницы <cite
+            keyref="monitoring_control_fp"/> отобразились импортированные объекты.</cmd>
+      </step>
+ </steps>
+ </taskbody>
+</task>

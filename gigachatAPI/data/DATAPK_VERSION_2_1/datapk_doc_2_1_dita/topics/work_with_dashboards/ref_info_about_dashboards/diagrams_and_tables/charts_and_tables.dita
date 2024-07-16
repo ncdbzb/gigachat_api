@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="diagrams_and_tables">
+ <title>Диаграммы и таблицы на панелях мониторинга</title>
+ <body>
+ <p>
+ <div><p>Основными инструментами мониторинга событий в <term keyref="appliance"/>е являются
+     визуализации, которые могут быть в виде диаграмм и таблиц. Диаграммы предназначены для быстрого
+     просмотра количества событий, а <xref href="tables.dita">таблицы</xref> — для более тщательного
+     анализа. Диаграммы, в свою очередь, могут быть трех видов:</p><ul id="ul_dgr_stp_vnb">
+     <li><xref href="charts.dita">Графики (диаграммы-линии)</xref></li>
+     <li><xref href="pie_charts.dita">Круговые диаграммы</xref></li>
+     <li><xref href="column_charts.dita">Столбчатые диаграммы</xref></li>
+    </ul>Все визуализации можно развернуть — для этого нажмите кнопку <image
+     href="../../../../images/icons/kibana/options.png" id="image_cqj_r2r_wzb"/> в правом верхнем
+    углу визуализации и выберите <image href="../../../../images/icons/kibana/expand.png"
+     id="image_v4z_vtp_vnb"/> (<uicontrol>Maximize panel</uicontrol>) из выпадающего списка.</div>
+ </p>
+ </body>
+</topic>

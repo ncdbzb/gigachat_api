@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="script_term"><glossterm>Скрипт</glossterm><glossdef><ph>Скрипт — </ph><ph id="script_def_ph">исполняемый файл, содержащий последовательность
+            действий на скриптовом языке программирования Python. Предназначен для сбора данных с
+            объектов защиты с помощью сканеров.</ph></glossdef></glossentry>

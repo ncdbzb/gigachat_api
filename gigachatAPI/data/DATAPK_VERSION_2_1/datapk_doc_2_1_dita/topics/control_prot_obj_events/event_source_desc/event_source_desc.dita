@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="event_source_desc">
+ <title>Описание источников событий</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_fxf_sdk_rnb">
+ <li><xref href="datapk_sensor.dita"/></li>
+ <li><xref href="eventlog_desc.dita"/></li>
+ </ul>
+ </body>
+</topic>

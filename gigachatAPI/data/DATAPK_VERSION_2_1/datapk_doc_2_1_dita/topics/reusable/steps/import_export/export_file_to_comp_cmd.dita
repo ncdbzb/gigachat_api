@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jmq_rh3_nyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_kmq_rh3_nyb">В открывшемся окне укажите расположение для
+                    экспортируемого файла, введите название файла и нажмите кнопку
+                        <uicontrol>Сохранить</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

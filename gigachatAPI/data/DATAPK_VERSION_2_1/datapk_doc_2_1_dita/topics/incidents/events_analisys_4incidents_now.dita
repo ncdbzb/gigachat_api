@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="events_analisys_4incidents_now">
+    <title>Текущий анализ событий</title>
+    <taskbody>
+        <context>
+            <p>Для запуска текущего анализа событий:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Убедитесь в наличии элементов схемы корреляции. Для этого перейдите на страницу
+                        <ph
+                        conref="../reusable/pages_breadcrumbs/corr_scheme.dita#ReusableComponent_df3_ffc_pxb/ph_ff3_ffc_pxb"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Активируйте один или несколько элементов схем корреляции. Для этого: </cmd>
+                <substeps id="substeps_v41_dnc_cqb">
+                    <substep>
+                        <cmd>Воспользуйтесь фильтрами на странице <cite
+                                keyref="scheme_correlation_fp"/>. Для этого нажмите <image
+                                href="../../images/icons/filter.png" id="image_obj_qvc_cqb"/> в
+                            верхнем правом углу страницы.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации элемента схемы:</cmd>
+                        <info>
+                            <ol id="ol_nkc_bxc_cqb">
+                                <li>наведите курсор на строку с элементом схемы и нажмите <ph
+                                        conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                                    />;</li>
+                                <li>установите чекбокс <uicontrol>Применение в текущем
+                                        анализе</uicontrol>;</li>
+                                <li>нажмите <uicontrol>Сохранить</uicontrol>.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации всех выбранных в фильтре элементов схемы нажмите <image
+                                href="../../images/icons/check.png" id="image_k1m_j4c_cqb"/>
+                                (<uicontrol>Включить элементы схемы для текущего
+                            анализа</uicontrol>).</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Убедитесь в наличии правил корреляции. Для этого перейдите на страницу <cite
+                        keyref="incidents_fp"/> → <cite keyref="correlation_rules_fp"/>. </cmd>
+            </step>
+            <step>
+                <cmd>Активируйте одно или несколько правил корреляции. Для этого: </cmd>
+                <substeps id="substeps_q24_tyc_cqb">
+                    <substep>
+                        <cmd>Воспользуйтесь фильтрами в левой части страницы <cite
+                                keyref="correlation_rules_fp"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации отдельных правил:</cmd>
+                        <info>
+                            <ol id="ol_s24_tyc_cqb">
+                                <li>в строке с правилом нажмите <ph
+                                        conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                                    />;</li>
+                                <li>установите чекбокс <uicontrol>Активно в текущем
+                                        анализе</uicontrol>;</li>
+                                <li>нажмите <uicontrol>Сохранить</uicontrol>.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Для активации всех выбранных в фильтре правил нажмите <image
+                                href="../../images/icons/check.png" id="image_t24_tyc_cqb"/>
+                                (<uicontrol>Применить правила для текущего
+                            анализа</uicontrol>).</cmd>
+                    </substep>
+                </substeps>
+                <stepresult>правила будут задействованы в текущем анализе без необходимости
+                    перезапуска службы.</stepresult>
+            </step>
+            <step>
+                <cmd>Убедитесь в том, что произведенные настройки были применены. Для этого:</cmd>
+                <substeps id="substeps_zzf_ybd_cqb">
+                    <substep>
+                        <cmd>В верхней части страницы <cite keyref="correlation_rules_fp"/> нажмите
+                                <image href="../../images/icons/to_service_info.png"
+                                id="to_service_info_corr"/> (<uicontrol>Состояние службы
+                                корреляции</uicontrol>). </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь, что список последних событий службы не содержит ошибок.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <steptroubleshooting>Для устранения ошибок, связанных с применением правил, вы
+                    можете перезапустить службу корреляции. Для этого в верхней части страницы <cite
+                        keyref="correlation_rules_fp"/> нажмите <image
+                        href="../../images/icons/restart_1.png" id="image_c51_1yg_3qb"/>
+                        (<uicontrol>Перезапустить службу</uicontrol>).</steptroubleshooting>
+            </step>
+        </steps>
+    </taskbody>
+</task>

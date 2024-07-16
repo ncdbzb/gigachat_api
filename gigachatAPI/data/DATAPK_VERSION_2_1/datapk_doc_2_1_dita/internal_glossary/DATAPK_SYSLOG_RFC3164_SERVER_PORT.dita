@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="DATAPK_SYSLOG_RFC3164_SERVER_PORT">
+    <glossterm>SYSLOG_RFC3164_SERVER_PORT</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/datapk_syslog_rfc3164_server_port_desc.dita#ReusableComponent_pyc_5t3_jpb/p_uyc_5t3_jpb"
+        />
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_s.dita"/>
+    </related-links>
+</glossentry>

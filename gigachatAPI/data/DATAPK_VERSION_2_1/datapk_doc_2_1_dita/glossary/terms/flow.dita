@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+ <glossentry id="flow_term"><glossterm>Информационный поток</glossterm><glossdef>Информационный поток — зарегистрированное взаимодействие между двумя узлами сети. Потоки
+  данных регистрируются <term keyref="appliance"/>ом автоматически на основе известных системе интерфейсов от объектов
+  защиты.</glossdef></glossentry>

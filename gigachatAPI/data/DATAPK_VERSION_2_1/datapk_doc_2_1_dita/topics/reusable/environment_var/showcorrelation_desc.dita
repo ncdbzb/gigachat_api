@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+ <topic id="ReusableComponent_edv_dyc_jpb">
+
+ <title>showcorrelation</title>
+ <body> 
+ <p id="p_tdv_dyc_jpb"><ph>Доступ к странице <cite keyref="correlation_rules_fp"/>.</ph>
+   <note type="warning">При значении переменной <codeph>false</codeph> доступ к странице <ph
+     conref="../pages_breadcrumbs/incident_notification.dita#ReusableComponent_tzp_gz2_qxb/ph_uzp_gz2_qxb"
+    /> запрещен вне зависимости от значения переменной <cmdname keyref="showAlerting"/>.</note>
+  </p> 
+</body> 
+</topic> 

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="correlation_scheme_control">
+    <title>Управление схемой корреляции</title>
+    <taskbody>
+        <context>
+            <p>
+                <note type="tip">Для применения изменений перезапуск службы не требуется. При
+                    редактировании или удалении элемента схемы, задействованного в текущем анализе,
+                    происходит автоматический перезапуск службы.</note>
+            </p>
+            <p>Веб-интерфейс предоставляет следующие возможности по изменению состава элементов
+                схемы корреляции:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Создание. Для создания элемента схемы:</cmd>
+                <substeps id="substeps_gr2_rwj_cqb">
+                    <substep>
+                        <cmd>На странице <cite keyref="scheme_correlation_fp"/> нажмите <uicontrol>Создать
+                            элемент схемы</uicontrol>.</cmd>
+                        <info>
+                            <fig id="fig_nch_1hk_cqb">
+                                <title>Страница «Схема корреляции»</title>
+                                <image href="../../images/pages/corr_scheme_page_scr.png"
+                                    id="image_och_1hk_cqb">
+                                    <alt>Страница «Схема корреляции»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                        <stepresult>появится окно <uicontrol>Создание элемента схемы</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Заполните следующие обязательные поля:</cmd>
+                        <info>
+                            <ol>
+                                <li><uicontrol>Наименование</uicontrol> — отображаемое название элемента схемы;</li>
+                                <li><uicontrol>Содержание</uicontrol> — состав схемы: переменные, контексты, окна;</li>
+                                <li><p><uicontrol>Номер</uicontrol> — номер по порядку применения схемы.</p>
+								<note type="tip"
+                                        >Если необходимости в определении порядка нет, введите в
+								    поле значение <codeph>0</codeph>.</note></li>
+                            </ol>
+                            <fig id="fig_vv4_jzj_cqb">
+                                <title>Окно «Создание элемента схемы»</title>
+                                <image
+                                    href="../../images/event_correlation_service/create_corr_scheme.png"
+                                    id="image_wv4_jzj_cqb">
+                                    <alt>Окно «Создание элемента схемы»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>При необходимости введите описание и установите чекбоксы для применения
+                            в текущем или ретроспективном анализах. </cmd>
+                        <info>
+                            <note>Подробнее о запуске анализа см. в разделе «<xref
+                                    href="../incidents/events_analisys_4incidents.dita"/>».</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Создать</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Проверка — позволяет оценить корректность созданных элементов схемы без запуска
+                    анализа. Для проверки схемы:</cmd>
+                <substeps id="substeps_sgf_gyj_cqb">
+                    <substep>
+                        <cmd>Воспользуйтесь фильтрами на странице <cite
+                                keyref="scheme_correlation_fp"/>. Для этого нажмите <image
+                                href="../../images/icons/filter.png" id="image_zys_jyj_cqb"/> в
+                            правом верхнем углу.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Проверить схему</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Дождитесь окончания проверки.</cmd>
+                        <stepresult><p>В правом верхнем углу появится уведомление <systemoutput>Отфильтрованные элементы схемы
+                                    корректны</systemoutput>.</p>
+							<note type="attention">В случае получения ошибок измените элементы схемы.</note></stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Редактирование. Для редактирования элемента схемы:</cmd>
+                <substeps id="substeps_fp2_wyj_cqb">
+                    <substep>
+                        <cmd>Наведите курсор на строку с элементом схемы, который нужно
+                            отредактировать.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В правой части страницы нажмите <ph
+                                conref="../reusable/buttons/edit_button.dita#edit_button/edit_button"
+                            />.</cmd>
+                        <stepresult>откроется окно <uicontrol>Редактирование элемента схемы</uicontrol>.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Измените необходимые параметры и нажмите <uicontrol>Сохранить</uicontrol>.</cmd>
+                        <info>
+                            <fig id="fig_dvv_pzj_cqb">
+                                <title>Окно «Редактирование элемента схемы»</title>
+                                <image
+                                    href="../../images/event_correlation_service/edit_corr_scheme.png"
+                                    id="image_evv_pzj_cqb">
+                                    <alt>Окно «Редактирование элемента схемы»</alt>
+                                </image>
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Удаление. Для удаления одного элемента схемы:</cmd>
+                <substeps id="substeps_pm5_tzj_cqb">
+                    <substep>
+                        <cmd>Наведите курсор на строку с элементом, который нужно удалить.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <ph
+                                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                        /><uicontrol> элемент схемы</uicontrol>). </cmd>
+                        <stepresult><p>появится окно подтверждения удаления.</p>
+                            <fig id="fig_y1k_zbl_ftb">
+                                <title>Окно подтверждения удаления элемента схемы корреляции</title>
+                                <image
+                                    href="../../images/event_correlation_service/del_scheme_window.png"
+                                    id="image_z1k_zbl_ftb">
+                                    <alt>Окно подтверждения удаления элемента схемы</alt>
+                                </image>
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Групповое удаление. Для удаления всех отображаемых на странице элементов:</cmd>
+                <substeps id="substeps_ux2_y2k_cqb">
+                    <substep>
+                        <cmd>Воспользуйтесь фильтрами на странице <cite
+                                keyref="scheme_correlation_fp"/>. Для этого нажмите <image
+                                href="../../images/icons/filter.png" id="image_e3q_1fk_cqb"/> в
+                            правом верхнем углу.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В верхней части страницы нажмите <ph
+                                conref="../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+                            />).</cmd>
+                        <stepresult><p>появится окно подтверждения удаления.</p>
+                            <fig id="fig_cvh_2cl_ftb">
+                                <title>Окно подтверждения удаления элементов схемы
+                                    корреляции</title>
+                                <image
+                                    href="../../images/event_correlation_service/bulk_del_scheme_window.png"
+                                    id="image_dvh_2cl_ftb">
+                                    <alt>Окно подтверждения удаления элементов схемы
+                                        корреляции</alt>
+                                </image>
+                            </fig>
+                        </stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите <uicontrol>Подтвердить</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

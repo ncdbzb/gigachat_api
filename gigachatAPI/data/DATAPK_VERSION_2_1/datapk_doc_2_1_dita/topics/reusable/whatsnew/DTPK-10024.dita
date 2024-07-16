@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_jrs_jmq_31c" outputclass="wide">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_lrs_jmq_31c">Добавлена поддержка правил корреляции событий, которые начинаются с
+                                    <codeph>select window(*)</codeph>. При использовании данной
+                                конструкции в детализации инцидента будут отображаться значения
+                                полей всех событий, по которым сформирован инцидент, и каждое поле
+                                будет иметь наименование
+                                    <codeph>window(*)_N.[наименование_поля]</codeph>, где
+                                    <codeph>N</codeph> — номер события</p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="operational_monitoring">
+ <title>Эксплуатационный мониторинг</title>
+ <body>
+<p><term keyref="dashboard"/>
+   <uicontrol>Эксплуатационный мониторинг</uicontrol> содержит таблицы, которые позволяют отследить
+   события между <term keyref="appliance"/>ом и сенсорами, найти ошибки сбора событий, просмотреть
+   события режима функционирования <term keyref="appliance"/>а.</p>
+ 
+ <fig
+ id="fig_cms_g2r_vnb">
+ <title>Панель мониторинга «Эксплуатационный мониторинг»</title>
+ <image href="../../../images/pages/operational_monitoring_page_scr.png"
+ id="image_nmb_32r_vnb"/>
+ </fig>
+ 
+ <p>Подробнее о назначении визуализаций — в таблице ниже<ph outputclass="onlypdf"> (<xref
+     href="#operational_monitoring/table_rh4_kcr_vnb"/>)</ph>.</p>
+ 
+ <table
+ id="table_rh4_kcr_vnb">
+ <title>Описание визуализаций на странице «Эксплуатационный мониторинг»</title>
+ <tgroup cols="3">
+ <colspec colnum="1" colname="col1" align="center" colwidth="15%"/>
+ <colspec colnum="2" colname="col2" colwidth="30%"/>
+ <colspec colnum="3" colname="col3"/>
+ <thead>
+ <row>
+ <entry>Название</entry>
+ <entry>Описание</entry>
+ <entry namest="col3" nameend="col3">Содержание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry namest="col1" nameend="col3">Таблицы</entry>
+ </row>
+ <row>
+ <entry>Системные оповещения</entry>
+ <entry>Содержит список событий об изменении состояния служб текущего <term keyref="appliance"/>а
+              или о существенном изменении нагрузки на текущий <term keyref="appliance"/></entry>
+ <entry><term keyref="appliance"/>, Описание, Count, Дата и время</entry>
+ </row>
+ <row>
+ <entry>Оповещения о недостаточном количестве событий</entry>
+ <entry>Содержит список событий об отклонении количества событий от источников от ожидаемого
+              количества</entry>
+ <entry><term keyref="appliance"/>, Описание, Count, Дата и время</entry>
+ </row>
+ <row>
+ <entry>Оповещения инфообмена Комплексов</entry>
+ <entry>Содержит список событий об изменении состояния информационного обмена между текущим <term
+                keyref="appliance"/>ом и подключенными к нему сенсорами</entry>
+ <entry><term keyref="appliance"/>, Описание, Детализация, Кол-во, Дата и время</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table><p>В случае обнаружения ошибок сбора данных следует обратиться в главный
+ интерфейс <term keyref="appliance"/>а для дальнейшего расследования и устранения ошибок.</p>
+ <p>Для оповещений инфообмена <term keyref="appliance"/>а действия требуются только в случае
+   обнаружения событий, не свойственных нормальному функционированию системы.</p>
+
+ </body>
+</topic>

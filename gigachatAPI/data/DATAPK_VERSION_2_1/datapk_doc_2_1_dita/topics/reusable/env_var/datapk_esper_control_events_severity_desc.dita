@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Description:datapk_esper_control_events_severity-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_zgh_kqn_5sb">
+    <title/>
+    <body>
+        <p><div><table>
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry><p><ph id="ph_bhh_kqn_5sb">Уровень критичности событий сервиса обработки событий</ph></p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></div></p>
+    </body>
+</topic>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nqg_ys1_kzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><ph id="ph_oqg_ys1_kzb"><image
+                            href="../../../images/icons/restore_indicies.png" id="image_g1v_ydm_4yb"
+                        /> (<uicontrol>Синхронизация правил</uicontrol>)</ph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="export_ref_data_tar">
+ <title>Экспорт нескольких справочников</title>
+ <taskbody>
+ <context>В <term keyref="appliance"/>е возможен экспорт справочных данных в единый архив формата
+        <codeph
+        conref="../../reusable/filepath/tar.dita#ReusableComponent_i2n_jld_hqb/codeph_q2n_jld_hqb"
+      />. Список доступных для экспорта справочников приведен в разделе «<xref
+        href="create_backups_by_export.dita"/>». Для экспорта:</context>
+ <steps>
+   <step>
+        <cmd>Перейдите на страницу <ph
+            conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+          />.</cmd>
+      </step>
+ <step>
+        <cmd>Нажмите кнопку <image href="../../../images/icons/export.png" id="image_kxp_zl4_dyb"/>
+            (<uicontrol>Экспортировать...</uicontrol>) в верхней части страницы.</cmd>
+        <stepresult>откроется боковая панель <uicontrol>Экспорт справочных
+          данных</uicontrol>.</stepresult>
+      </step>
+   <step>
+        <cmd>В открывшейся панели измените при необходимости набор справочников для выгрузки.</cmd>
+        <info>
+          <note id="note_m3b_lvk_htb">По умолчанию выбраны все справочники, кроме справочников
+              <uicontrol>Правила разбора событий</uicontrol>, <uicontrol>Правила обогащения
+              событий</uicontrol> и <uicontrol>Схема событий</uicontrol>. Такой выбор рекомендован,
+            если планируется дальнейший импорт файла на другие <cite keyref="appliance"/>ы, так как
+            при импорте настроек событий могут проявляться проблемы с формированием
+            инцидентов.</note>
+        </info>
+        <info>
+          <fig id="fig_avk_sdj_xnb">
+            <title>Окно «Экспорт справочных данных»</title>
+            <image href="../../../images/windows/export_ref_data_window.png" id="image_bvk_sdj_xnb"
+            />
+          </fig>
+        </info>
+      </step>
+   <step>
+        <cmd>Нажмите <uicontrol>Экспортировать</uicontrol>.</cmd>
+        <stepresult>появится уведомление <systemoutput>Запущен экспорт
+          справочников</systemoutput>.</stepresult>
+      </step>
+      <step>
+        <cmd>Дождитесь подготовки архива формата <codeph
+            conref="../../reusable/files/export_multiple_catalogues.dita#ReusableComponent_z4h_nbj_wxb/codeph_aph_nbj_wxb"
+          /> в поле <uicontrol>Результат последнего экспорта</uicontrol> в правом верхнем углу
+          страницы.</cmd>
+      </step>
+ <step>
+        <cmd>Нажмите на подготовленный архив для его скачивания.</cmd>
+        <stepresult>файл с архивом справочников формата <codeph
+            conref="../../reusable/files/export_multiple_catalogues.dita#ReusableComponent_z4h_nbj_wxb/codeph_aph_nbj_wxb"
+          /> будет загружен.</stepresult>
+      </step>
+ </steps>
+ </taskbody>
+</task>

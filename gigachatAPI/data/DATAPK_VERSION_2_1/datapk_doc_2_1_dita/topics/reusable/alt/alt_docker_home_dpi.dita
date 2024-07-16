@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gxc_kch_f1c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <info>
+                    <codeblock id="codeblock_hxc_kch_f1c">mv /home/dpi/[Название архива] /opt
+docker load -i /opt/[Название архива]</codeblock>
+                </info>
+            </step>
+        </steps>
+        </taskbody>
+</task>

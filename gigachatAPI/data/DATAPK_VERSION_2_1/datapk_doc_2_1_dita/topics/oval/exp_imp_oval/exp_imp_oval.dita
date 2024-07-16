@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="exp_imp_oval">
+ <title>Экспорт и импорт скриптов, настроек, групп определений OVAL</title>
+ <body>
+ <p>В этом разделе:</p>
+ <ul id="ul_xmn_jt1_snb">
+ <li><xref href="export_oval_definitions_group.dita"/></li>
+   <li><xref keyref="export_oval_script"/></li>
+      <li><xref keyref="export_oval_settings"/></li>
+ <li><xref href="import_oval_definitions.dita"/></li>
+ <li><xref href="import_oval_group_definitions.dita"/></li>
+      <li><xref keyref="import_oval_script"/></li>
+ <li><xref href="imp_oval_settings.dita"/></li>
+ </ul>
+ <p>Экспорт и импорт <abbreviated-form keyref="oval_def"/>-объектов осуществляется на странице <ph
+        conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+      /> в блоке <uicontrol>OVAL</uicontrol>.</p>
+    <note id="note_lyr_kwc_gyb" type="attention">Экспорт <abbreviated-form keyref="oval_def"
+      />-определений доступен только в составе групп <abbreviated-form keyref="oval_def"
+      />-определений.</note>
+ <fig id="fig_nmd_2sd_wnb">
+ <title>Блок «OVAL» на странице «Импорт и экспорт»</title>
+ <image href="../../../images/oval/exp_imp_oval.png" id="image_ysr_2sd_wnb"/>
+ </fig>
+ </body>
+</topic>

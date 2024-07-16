@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bnd_hwj_g1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_dnd_hwj_g1c">Измените расширение сертификата с <codeph>.cert</codeph>
+                    на <codeph>.crt</codeph>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

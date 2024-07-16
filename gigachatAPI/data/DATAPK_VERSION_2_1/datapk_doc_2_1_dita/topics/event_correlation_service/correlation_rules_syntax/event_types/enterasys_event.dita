@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="enterasys_event">
+ <title>События Enterasys</title>
+ <body>
+       <p>Доступные для событий Enterasys поля приведены в таблице ниже<ph outputclass="onlypdf">
+                              (<xref href="#enterasys_event/table_svz_5zw_vnb"/>)</ph>.</p>
+ <table id="table_svz_5zw_vnb">
+ <title>Поля для событий Enterasys</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="45%"/>
+ <colspec colnum="2" colname="col2" colwidth="55%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>description </entry>
+ <entry> Описание события.</entry>
+ </row>
+ <row>
+ <entry>event_code</entry>
+ <entry>Уникальный идентификатор событий. Состоит из Facility+severity из
+       protocol_specific_data.</entry>
+ </row>
+ <row>
+ <entry>ip </entry>
+ <entry> IP-адрес <abbreviated-form keyref="host"/>.</entry>
+ </row>
+ <row>
+ <entry>protocol </entry>
+ <entry> Протокол подключения (только в событиях подключения).</entry>
+ </row>
+ <row>
+ <entry>source_ip </entry>
+ <entry> IP-адрес источника событий.</entry>
+ </row>
+ <row>
+ <entry>user </entry>
+ <entry> Имя пользователя в событии.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </body>
+</topic>

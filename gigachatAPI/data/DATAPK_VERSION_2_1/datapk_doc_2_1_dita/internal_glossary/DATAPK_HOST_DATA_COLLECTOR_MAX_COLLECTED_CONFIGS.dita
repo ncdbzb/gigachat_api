@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="DATAPK_HOST_DATA_COLLECTOR_MAX_COLLECTED_CONFIGS">
+    <glossterm>DATAPK_MAX_COLLECTED_CONFIGS</glossterm>
+    <glossdef>
+        <p
+            conref="../topics/reusable/env_var/datapk_host_data_collector_max_collected_configs_desc.dita#ReusableComponent_hqp_dd3_jpb/p_lqp_dd3_jpb"/>
+    </glossdef>
+    <related-links>
+        <link href="../topics/reference_info/env_variables_m.dita"/>
+    </related-links>
+</glossentry>

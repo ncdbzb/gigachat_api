@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+ <topic id="ReusableComponent_jhv_jw4_lrb">
+
+ <title>incident_message_1</title>
+ <body> 
+ <codeblock outputclass="language-sql" id="codeblock_ohv_jw4_lrb">SELECT event_code, observer_name, user, ip FROM windows_event(event_code ="4625" OR event_code ="529").win:time(180 sec) GROUP BY observer_name HAVING COUNT(event_code) = 3</codeblock> 
+</body> 
+</topic> 

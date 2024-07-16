@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_lnt_jtn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_nnt_jtn_4yb">
+                        <cmd>Выполните запуск службы <codeph>iptables</codeph> и добавьте в
+                            автозагрузку: </cmd>
+                        <info><codeblock id="codeblock_vjd_dmg_myb">systemctl enable --now iptables</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

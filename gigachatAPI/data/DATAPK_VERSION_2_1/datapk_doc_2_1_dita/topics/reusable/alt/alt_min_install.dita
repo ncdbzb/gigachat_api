@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cbp_tbs_21c">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ebp_tbs_21c">В поле <uicontrol>Профиль:</uicontrol> в раскрывающемся
+                    списке выберите <uicontrol>Минимальная установка</uicontrol>. Убедитесь, что отменен выбор 
+                    всех чекбоксов, и нажмите <uicontrol>Далее</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

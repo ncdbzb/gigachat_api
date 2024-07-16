@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="import_oval_definition_groupss">
+ <title>Импорт групп OVAL-определений</title>
+ <taskbody>
+ <context>
+  <p>Для импорта групп <abbreviated-form keyref="oval_def"/>-определений из
+   файла формата <codeph>*.json</codeph> в <term keyref="appliance"/>:</p>
+ </context>
+ <steps>
+      <step>
+        <cmd
+          conref="../../reusable/filepath/long/exchange.dita#ReusableComponent_nd4_q1z_lvb/cmd_od4_q1z_lvb"
+        />
+      </step><step>
+        <cmd>В блоке <uicontrol>OVAL</uicontrol> в строке <uicontrol>Группы
+            OVAL-определений</uicontrol> нажмите кнопку <image
+            href="../../../images/icons/import.png" id="image_esg_3bd_gyb"/>.</cmd>
+      </step>
+      <step>
+        <cmd>В открывшемся окне укажите расположение импортируемого файла формата
+            <codeph>*.xml</codeph> и подтвердите выбор.</cmd>
+      </step>
+ <step
+ conref="../../reusable/import_action_step.dita#import_action_step/import_action_step"
+ conrefend="../../reusable/import_action_step.dita#import_action_step/step_mkr_pxd_wnb">
+ <cmd/>
+ </step><step><cmd>Убедитесь, что группы <abbreviated-form keyref="oval_def"/>-определений был успешно загружены.</cmd>
+        <choices
+          conref="../../reusable/steps/import_export/choices_import_result.dita#ReusableComponent_dyy_zjd_gyb/choices_wr1_wff_wnb"
+          id="choices_pcz_zjd_gyb">
+          <choice/>
+        </choices>
+ <stepresult>в результате успешного импорта на странице <ph
+            conref="../../reusable/pages_breadcrumbs/oval_groups.dita#ReusableComponent_ybd_fgk_qxb/ph_zbd_fgk_qxb"
+          /> появится импортированный справочник.</stepresult>
+ 
+ </step>
+ </steps>
+ </taskbody>
+</task>

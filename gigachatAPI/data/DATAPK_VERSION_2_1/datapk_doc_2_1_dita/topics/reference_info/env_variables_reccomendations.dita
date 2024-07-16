@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="env_variables_reccomendations" outputclass="wide">
+ <title>Рекомендации по использованию переменных файла .env</title>
+ <body>
+ <p>Не все доступные для использования переменные, которые могут быть в env-файле, сразу
+ находятся в нем. Некоторые из них необходимо вводить самостоятельно или
+ раскомментировать.</p>
+ <p>При использовании переменных объема и времени рекомендуется использовать форматы,
+ предложенные производителем <term keyref="appliance"/>а. Значительные отклонения от значений по умолчанию
+ могут повлечь некорректную работу, недоступность системы или ее частей.</p>
+ <p><ph>Соблюдение предложенного формата переменных объема обязательно. Варианты написания
+          <codeph>10GB</codeph> или <codeph>10 Gb</codeph> некорректны и неизбежно повлекут за собой
+        ошибки. Примеры корректных вариантов:</ph><ul id="ul_j42_fxf_4yb">
+        <li><cmdname keyref="DATAPK_EVENT_MANAGER_EVENTS_LIFETIME"/><codeph>=30d</codeph></li>
+        <li><cmdname keyref="DATAPK_EVENT_MANAGER_ARCHIVES_LIFETIME"/><codeph>=45d</codeph></li>
+        <li><cmdname keyref="DATAPK_EVENT_MANAGER_ARCHIVES_SIZE"/><codeph>=500 GB</codeph></li>
+      </ul><ph>Список остальных рекомендаций приведен в таблице ниже<ph outputclass="onlypdf">
+            (<xref href="#env_variables_reccomendations/table_uk3_4rl_tnb"/>)</ph>.</ph></p>
+ <table id="table_uk3_4rl_tnb">
+ <title>Рекомендации по использованию переменных файла .env</title>
+ <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="35%"/>
+        <colspec colnum="2" colname="col2" colwidth="45%"/>
+        <colspec colname="col3" colnum="3" colwidth="20%"/>
+        <thead>
+          <row>
+            <entry>Переменная</entry>
+            <entry>Рекомендации по использованию</entry>
+            <entry>Применимо для уровня Комплекса</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><cmdname keyref="DATAPK_ELASTICSEARCH_ES_JAVA_OPTS"/>
+            </entry>
+            <entry>Для инсталляций с 32 ГБ RAM и выше рекомендуется выделять 8 ГБ (8192m), для
+              платформ с 16 ГБ RAM — не более 2 ГБ (2048m)</entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="DATAPK_EVENT_MANAGER_EVENTS_SIZE"/>
+            </entry>
+            <entry><ph
+                conref="../reusable/EM_ARCHIVES_SIZE_and_EVENTS_SIZE.dita#ReusableComponent_b2k_qvy_mpb/ph_g2k_qvy_mpb"
+                /><p
+                conref="../reusable/env_var/datapk_event_manager_events_size_desc_1.dita#ReusableComponent_u3k_vnx_gtb/p_w3k_vnx_gtb"
+              /></entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="DATAPK_EVENT_MANAGER_ARCHIVES_SIZE"/>
+            </entry>
+            <entry><ph
+                conref="../reusable/EM_ARCHIVES_SIZE.dita#ReusableComponent_bsw_cxy_mpb/ph_gsw_cxy_mpb"
+              /></entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="DATAPK_EVENT_MANAGER_EVENTS_LIFETIME"/>
+            </entry>
+            <entry>Установите адекватную системе длительность хранения оперативного архива</entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="DATAPK_EVENT_MANAGER_ARCHIVES_LIFETIME"/>
+            </entry>
+            <entry>Установите значение на 1-2 дня больше, чем <cmdname
+                keyref="DATAPK_EVENT_MANAGER_EVENTS_LIFETIME"/></entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry morerows="2">
+              <p><cmdname keyref="BACKEND_NETWORK"/></p>
+              <p><cmdname keyref="BACKEND_NETWORK_GATEWAY"/></p>
+            </entry>
+            <entry>
+              <p>При изменении добавить вручную переменную <cmdname keyref="BACKEND_NETWORK_GATEWAY"
+                />. Например, <cmdname keyref="BACKEND_NETWORK_GATEWAY"
+                  /><codeph>=172.31.254.1</codeph> при <cmdname keyref="BACKEND_NETWORK"
+                  /><codeph>=172.31.254.0/24</codeph>.</p>
+              <p>Адреса не должны пересекаться с адресацией на объекте внедрения</p>
+            </entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry>
+              <p>При изменении добавить вручную переменную <cmdname keyref="BACKEND_NETWORK_GATEWAY"
+                />. Например, <cmdname keyref="BACKEND_NETWORK_GATEWAY"
+                  /><codeph>=172.31.255.1</codeph> при <cmdname keyref="BACKEND_NETWORK"
+                  /><codeph>=172.31.255.0/24</codeph>.</p>
+              <p>Адреса не должны пересекаться с адресацией на объекте внедрения</p>
+            </entry>
+            <entry><abbreviated-form keyref="sensor"/></entry>
+          </row>
+          <row>
+            <entry><ph>Если сенсор подключен к <term keyref="appliance"/>у уровня <abbreviated-form
+                  keyref="management"/>, их адреса не должны пересекаться независимо от того,
+                развернуты они на одной платформе или нет</ph></entry>
+            <entry><abbreviated-form keyref="management"/> и <abbreviated-form keyref="sensor"
+              /></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="MANAGER_NODE_ADDRESS"/></entry>
+            <entry>Значение должно совпадать с <cmdname keyref="BACKEND_NETWORK_GATEWAY"/>
+              <term keyref="appliance"/>а уровня <abbreviated-form keyref="management"/>
+            </entry>
+            <entry><abbreviated-form keyref="sensor"/></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="IMAGES_TAG_FOR_STAND"/>
+            </entry>
+            <entry>При обновлении обязательно заполнять значение вручную</entry>
+            <entry><abbreviated-form keyref="management"/> и <abbreviated-form keyref="sensor"
+              /></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="DATAPK_HOST_DATA_COLLECTOR_MAX_COLLECTED_CONFIGS"/>
+            </entry>
+            <entry>Значение переменной по умолчанию (<codeph>5</codeph>) менять не
+              рекомендуется</entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+          <row>
+            <entry><cmdname keyref="DATAPK_DISABLE_DNS_PINNING_PROTECTION"/></entry>
+            <entry>
+              <p><ph>Нельзя прописывать данную переменную в следующих случаях:</ph><ul
+                  id="ul_f5b_qlb_lqb">
+                  <li>на <term keyref="appliance"/>е несколько активных интерфейсов (интерфейсов с
+                    IP-адресами), даже в случае, если они заданы через субинтерфейсы (trunk
+                    расщепляется на <term keyref="appliance"/>ы);</li>
+                  <li><ph>на <term keyref="appliance"/>е некорректный серверный сертификат
+                      (выпущенный под другой CN).</ph><note type="tip" id="note_y2w_nyf_4yb">У
+                      корректного сертификата CN сервера совпадает с IP-адресом, указанным в
+                      переменной <cmdname keyref="DATAPK_HOST_NAME"/>.</note></li>
+                </ul></p>
+            </entry>
+            <entry><abbreviated-form keyref="management"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+ </table>
+ </body>
+ <related-links outputclass="no_en">
+ <link href="env_variables.dita"/>
+ </related-links>
+</topic>

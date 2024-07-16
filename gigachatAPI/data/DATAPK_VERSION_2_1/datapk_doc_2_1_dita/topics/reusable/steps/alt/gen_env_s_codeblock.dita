@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bgh_drn_4yb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><ul>
+                                <li><codeblock id="codeblock_j5y_dqn_4yb">bash /home/datapk/generate_env-<ph conref="../../version.dita#version/version"/>.0.0.bash S [M_ip_addr]</codeblock></li>
+                            </ul></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

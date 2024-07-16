@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_u3n_ny2_2yb">
+    <title/>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><ph id="ph_w3n_ny2_2yb">Добавлена кнопка <image
+                                    href="../../../images/icons/to_config_info.png"
+                                    id="image_yg1_gdv_dyb"/> (<uicontrol>Просмотреть конфигурацию
+                                    ОЗ</uicontrol>) для перехода со страницы <cite
+                                    keyref="prot_obj_inspection_fp"/> → <cite keyref="config_fp"/>
+                                на страницу <cite keyref="config_prot_obj_fp"/></ph></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

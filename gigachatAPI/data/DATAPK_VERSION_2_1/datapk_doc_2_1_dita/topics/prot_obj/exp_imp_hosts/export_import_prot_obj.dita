@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="export_import_prot_obj">
+  <title>Экспорт и импорт объектов защиты и их групп</title>
+  <body>
+    <p>В этом разделе:</p>
+    <ul id="ul_wct_vsl_pnb">
+      <li><xref href="../exp_prot_obj.dita"/></li>
+      <li><xref href="export_host_groups.dita"/></li>
+      <li><xref href="import_prot_obj.dita"/></li>
+      <li><xref href="import_host_groups.dita"/></li>
+    </ul>
+    <p>Экспорт и импорт объектов защиты доступен на странице <cite keyref="prot_obj_fp"/> на панели
+      <uicontrol>Управление</uicontrol>.</p>
+    <p>Экспорт и импорт групп объектов защиты доступен на странице <ph
+        conref="../../reusable/pages_breadcrumbs/imp_exp.dita#ReusableComponent_vxy_1c4_kxb/ph_wxy_1c4_kxb"
+    /> на панели <uicontrol>Элементы иерархии</uicontrol>.</p>
+    <fig id="fig_yfl_m1f_wnb">
+      <title>Панель «Элементы иерархии» на странице «Импорт и экспорт»</title>
+      <image href="../../../images/hosts/exp_imp/ref_imp_exp.png" id="image_zbg_n1f_wnb"/>
+    </fig>
+  </body>
+</topic>

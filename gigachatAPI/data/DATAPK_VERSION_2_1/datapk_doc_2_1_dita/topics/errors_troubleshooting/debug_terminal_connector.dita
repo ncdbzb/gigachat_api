@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="debug_terminal_connector">
+    <title>Диагностика сервиса сбора данных по протоколам SSH, Telnet, WinRM, winexe</title>
+    <taskbody>
+        <context>
+            <p>Для расследования причин появления ошибок сбора данных по протоколам SSH, Telnet, WinRM, winexe:</p>
+        </context>
+        <steps id="steps_kmq_qqd_14b">
+            <step>
+                <cmd>Подключитесь к операционной системе <term keyref="appliance"/>а.</cmd>
+            </step>
+            <step>
+                <cmd>Перейдите в рабочую директорию <term keyref="appliance"/>а и остановите работу
+                    контейнеров командой:</cmd>
+                <info>
+                    <codeblock id="codeblock_rb2_l4m_45b">docker-compose down</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+            </step>
+            <step>
+                <cmd>Откройте конфигурационный файл <ph
+                        conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    /> на редактирование.</cmd>
+            </step>
+            <step>
+                <cmd>Задайте значение <codeph>DEBUG</codeph> переменной <cmdname
+                        keyref="DATAPK_TERMINAL_CONNECTORS_DEBUG_LEVEL"/>.</cmd>
+                <info>
+                    <codeblock id="codeblock_elm_k2r_45b"><cmdname keyref="DATAPK_TERMINAL_CONNECTORS_DEBUG_LEVEL"/>=<codeph>DEBUG</codeph></codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Сохраните и закройте файл <ph
+                        conref="../reusable/filepath/env.dita#ReusableComponent_clg_ywn_l4b/ph_flg_ywn_l4b"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Запустите работу контейнеров командой:</cmd>
+                <info>
+                    <codeblock id="codeblock_sb2_l4m_45b">docker-compose up -d</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd
+                    conref="../reusable/steps/alt/wait_start_containers_cmd.dita#ReusableComponent_xfv_xcw_pyb/cmd_yfv_xcw_pyb"
+                />
+            </step>
+            <step>
+                <cmd>Просмотрите журнал при помощи команды:</cmd>
+                <info>
+                    <codeblock id="codeblock_tb2_l4m_45b">docker logs <codeph>terminal_connector</codeph> -f --tail [количество последних строк журнала, которое нужно показать]</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

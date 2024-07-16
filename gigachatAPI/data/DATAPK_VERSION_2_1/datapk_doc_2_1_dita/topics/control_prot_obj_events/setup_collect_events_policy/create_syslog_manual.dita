@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_syslog_manual">
+ <title>Создание источника событий</title>
+ <taskbody>
+ <context>
+ <p>Для создания SNMP-trap и <term keyref="syslog"/>-источников для сбора событий объектов
+        защиты:</p>
+ </context>
+ <steps>
+     <step>
+        <cmd><ph
+            conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+            /><ph
+            conref="../../reusable/pages_breadcrumbs/sources.dita#ReusableComponent_bd3_rz2_jxb/ph_cd3_rz2_jxb"
+          />.</cmd>
+        <info>
+          <fig>
+            <title>Страница «Источники»</title>
+            <image href="../../../images/pages/sources_page_scr.png"/>
+          </fig>
+        </info>
+      </step>
+ 
+ <step><cmd>Нажмите кнопку <uicontrol>Создать источник</uicontrol>.
+ </cmd></step>
+ <step><cmd>
+ В открывшемся окне <uicontrol>Создание источника</uicontrol> задайте следующие параметры:</cmd>
+ <substeps id="substeps_aqf_frk_rnb">
+ <substep>
+ <cmd>наименование и описание источника;</cmd>
+ </substep>
+ <substep>
+            <cmd>объект защиты, который будет отправлять события на <term keyref="appliance"
+              />;</cmd>
+          </substep>
+ <substep>
+            <cmd>критичность получаемых событий;</cmd>
+          </substep>
+          <substep>
+            <cmd>чекбокс <uicontrol>Контроль активности источника</uicontrol> для автоматической проверки доступности
+              источника и формирования события при отсутствии указанного количества событий за
+              период.</cmd>
+            <stepresult>при установке чекбокса появятся два дополнительных поля:
+                <uicontrol>Минимальное количество событий за период</uicontrol> и <uicontrol>Период,
+                сек</uicontrol>.</stepresult>
+          </substep>
+ <substep>
+            <cmd>протокол <codeph>Syslog</codeph> или <codeph>SNMP</codeph>, по которому ОЗ будет
+              отправлять сообщения.</cmd>
+            <stepresult>При выборе <codeph>SNMP</codeph> появится дополнительное поле
+                <uicontrol>Community</uicontrol>, в которое нужно ввести пароль для приема сообщений
+              SNMP-trap. Для <codeph>Syslog</codeph> дополнительных полей нет.</stepresult>
+          </substep>
+ </substeps>
+ 
+ <info><fig>
+ <title>Окно «Создание источника» при создании источника
+ syslog_rfc3164_sensor</title>
+ <image
+ href="../../../images/control_prot_obj_events/service_syslog/create_source_window.png"
+ />
+ </fig></info>
+ 
+ </step>
+ <step>
+        <cmd>Нажмите кнопку <uicontrol>Создать</uicontrol> для подтверждения изменений.</cmd>
+        <stepresult>будет создан новый источник событий.</stepresult>
+      </step>
+ </steps>
+ </taskbody>
+</task>

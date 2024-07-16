@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+
+<glossentry id="definitions_list">
+    
+    <glossterm>Определения OVAL</glossterm>
+    <glossdef><p>Страница, где можно добавлять в группы, исключать из групп и удалять <abbreviated-form
+                keyref="oval_def"/>-определения.</p><fig id="fig_s4x_4x4_npb">
+            <title>Страница «Определения <abbreviated-form keyref="oval_def"/>»</title>
+            
+            <image href="../images/pages/oval_definitions_list_page_scr.png" id="image_t4x_4x4_npb"
+            />
+        </fig></glossdef>
+    <related-links>
+        <link href="../topics/oval/setup_prot_obj_check_is/add_oval_definitions_to_group.dita"/>
+        <link href="../topics/oval/exp_imp_oval/import_oval_definitions.dita"/>
+    </related-links>
+    
+</glossentry>

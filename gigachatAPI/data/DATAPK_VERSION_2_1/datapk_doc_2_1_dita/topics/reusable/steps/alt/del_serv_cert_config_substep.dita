@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ob5_qv1_yyb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_pb5_qv1_yyb">
+                        <cmd>Удалите файл <codeph>config.txt</codeph>:</cmd>
+                        <info><codeblock id="codeblock_pkj_lgg_myb">rm -f <codeph conref="../../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/>/nginx/certs/config.txt</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

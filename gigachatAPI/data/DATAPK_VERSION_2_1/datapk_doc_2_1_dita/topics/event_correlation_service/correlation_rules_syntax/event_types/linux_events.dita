@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="linux_events">
+ <title>События Linux</title>
+ <body>
+ <p>
+ <div>
+ <p>Доступные для событий Linux поля приведены в таблице ниже<ph outputclass="onlypdf"> (<xref href="#linux_events/table_rmj_hxw_vnb"/>)</ph>.</p>
+ <table id="table_rmj_hxw_vnb">
+ <title>Поля для событий Linux</title>
+ <tgroup cols="2">
+ <colspec colnum="1" colname="col1" colwidth="30%" align="center"/>
+ <colspec colnum="2" colname="col2" colwidth="70%"/>
+ <thead>
+ <row>
+ <entry>Поле</entry>
+ <entry>Описание</entry>
+ </row>
+ </thead>
+ <tbody>
+ <row>
+ <entry>event_code</entry>
+ <entry>Уникальный идентификатор события. Представляет собой
+  facility+severity из protocol_specific_data.</entry>
+ </row>
+ <row>
+ <entry>category</entry>
+ <entry>Название журнала или процесса Linux.</entry>
+ </row>
+ <row>
+ <entry>ip</entry>
+ <entry>IP-адрес <abbreviated-form keyref="host"/>.</entry>
+ </row>
+ <row>
+ <entry namest="col1" nameend="col2">Дополнительные поля</entry>
+ </row>
+ <row>
+ <entry>description</entry>
+ <entry>Описание события.</entry>
+ </row>
+ <row>
+ <entry>protocol</entry>
+ <entry>Протокол, использованный в событии Linux.</entry>
+ </row>
+ <row>
+ <entry>source_ip</entry>
+ <entry>IP-адрес источника события при воздействии на Linux.</entry>
+ </row>
+ <row>
+ <entry>source_port</entry>
+ <entry>Порт источника события при воздействии на Linux.</entry>
+ </row>
+ <row>
+ <entry>user</entry>
+ <entry>Пользователь, инициировавший событие.</entry>
+ </row>
+ </tbody>
+ </tgroup>
+ </table>
+ </div>
+ </p>
+ </body>
+</topic>

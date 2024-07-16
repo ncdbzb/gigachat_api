@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_onx_4zy_bzb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult><ul>
+                        <li><ph id="ph_pnx_4zy_bzb">Присвоенный сенсор будет отображаться в поле
+                                    <uicontrol>Сенсор</uicontrol> блока <uicontrol>Сетевые
+                                    атрибуты</uicontrol> в <cite keyref="prot_obj_profile_fp"
+                                    >карточке объекта защиты</cite>.</ph></li>
+                    </ul></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

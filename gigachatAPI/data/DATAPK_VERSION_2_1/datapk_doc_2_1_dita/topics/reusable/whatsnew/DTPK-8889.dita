@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_jpn_rsb_wyb">
+    <title>DTPK-8889</title>
+    <body>
+        <table>
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry><p id="p_lpn_rsb_wyb"><ph>Изменено создание и изменение источников сбора событий:</ph><ul
+                                    id="ul_ak1_crb_wyb">
+                                    <li>исключено разделение по версиям Syslog при выборе протокола
+                                            <codeph>Syslog</codeph>;</li>
+                                    <li>исключены поля <uicontrol>Субъект</uicontrol> и
+                                            <uicontrol>Важность</uicontrol> при выборе протокола
+                                            <codeph>Syslog</codeph>;</li>
+                                    <li>исключен чекбокс <uicontrol>строгий</uicontrol> — теперь
+                                        сообщения от ОЗ прослушиваются по наименованию объекта
+                                        защиты или по его IP-адресу</li>
+                                </ul></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

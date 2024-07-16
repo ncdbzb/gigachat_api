@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Внутренний словарь интерфейсов</title>
+    <topicref href="fspec_authorization_interface.dita" keys="management_iface_authorization" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_config_file.dita" keys="management_iface_config_file" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_docker-contain.dita"
+        keys="management_iface_docker_contain" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_collect_-_configs.dita"
+        keys="management_iface_page_configs" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_collect_-_oval_settings.dita"
+        keys="management_iface_page_oval_settings" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_collect_-_oz_creds.dita"
+        keys="management_iface_page_oz_creds" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_collect_-_policies.dita"
+        keys="management_iface_page_policies" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_collect_-_scanners.dita"
+        keys="management_iface_page_scanners" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_collect_-_sources.dita"
+        keys="management_iface_page_sources" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_mgmt_-_catalogs.dita"
+        keys="management_iface_page_catalogs" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_data_mgmt_-_data_export.dita"
+        keys="management_iface_page_export" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_dataflow_rules.dita"
+        keys="management_iface_page_dataflow_rules" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_dataflows.dita"
+        keys="management_iface_page_dataflows" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_event_correl_-_actions.dita"
+        keys="management_iface_page_actions" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_event_correl_-_correl_rules.dita"
+        keys="management_iface_page_correl_rules" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_events_and_incidents_-_event_indices.dita"
+        keys="management_iface_page_event_indices" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_events_and_incidents_-_incidents.dita"
+        keys="management_iface_page_incidents" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_general.dita" keys="management_iface_page_general" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_home_net.dita" keys="management_iface_page_home_net" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_ids_-_ids_rules.dita"
+        keys="management_iface_page_ids" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_net_-_channel_settings.dita"
+        keys="management_iface_page_channel_settings" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oval_check_-_checks_and_reports.dita"
+        keys="management_iface_page_checks_and_reports" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oval_check_-_groups_oval_defs.dita"
+        keys="management_iface_page_groups_oval_defs" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oval_check_-_oval_defs.dita"
+        keys="management_iface_page_oval_defs" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oz.dita" keys="management_iface_page_oz" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_pwd_policy.dita"
+        keys="management_iface_page_pwd_policy" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_roles.dita" keys="management_iface_page_roles" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_users.dita" keys="management_iface_page_users" processing-role="resource-only"/>
+    <topicref href="fspec_monitor_iface_page_events_and_incidents_-_events_-_monitor.dita"
+        keys="monitor_iface_page_monitor_panel" processing-role="resource-only"/>
+    <topicref href="fspec_monitor_iface_page_events_and_incidents_-_events_-_observ.dita"
+        keys="monitor_iface_page_events" processing-role="resource-only"/>
+    <topicref href="fspec_monitor_iface_page_maps.dita" keys="monitor_iface_page_maps" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oz_config.dita"
+        keys="management_iface_page_oz_config" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oz_card.dita" keys="management_iface_page_oz_card" processing-role="resource-only"/>
+    <topicref href="fspec_monitor_iface_page_prometheus.dita" keys="monitor_iface_page_prometheus" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_monitor_mgmt.dita"
+        keys="management_iface_page_monitor_mgmt" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_visual.dita" keys="management_iface_page_visual" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_retro.dita" keys="management_iface_page_retro" processing-role="resource-only"/>
+    <topicref href="fspec_monitor_iface_page_data_results.dita"
+        keys="monitor_iface_page_data_results" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_oval_check_-_oval_scripts.dita"
+        keys="management_iface_page_oval_scripts" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_event_correl_-_scheme.dita"
+        keys="management_iface_page_event_correl_scheme" processing-role="resource-only"/>
+    <topicref href="fspec_management_iface_page_event_correl_-_statuses.dita"
+        keys="management_iface_page_event_correl_statuses" processing-role="resource-only"/>
+</map>

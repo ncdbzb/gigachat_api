@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dbk_bpb_pvb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_ebk_bpb_pvb">
+                <cmd>Скопируйте с оптического диска с дистрибутивом <term
+                        keyref="cert_appliance_name_short"/> в директорию <codeph
+                        conref="../filepath/opt_datapk.dita#opt_datapk/opt_datapk"/> следующие
+                    скрипты:</cmd>
+                <info>
+                    <ul id="ul_d4p_21s_j5b">
+                        <li><codeph>datapk_setup_[название_ОС].sh</codeph> — скрипт, запускающий
+                            мастер настройки времени в ОС и <term keyref="appliance"/>e;</li>
+                        <li><ph
+                                conref="checksum_script.dita#ReusableComponent_xxz_wc1_rvb/ph_yxz_wc1_rvb"
+                            /> — скрипт, который ищет и копирует исполняемые файлы из
+                            Docker-контейнеров установленного <term keyref="appliance"/>а для
+                            расчета и проверки их контрольных сумм. </li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="all_doc_links">
+    <title>Все версии документации</title>
+    <body>
+        <section id="section_l5d_jyx_gbc">
+            <title>Версия 2.2</title>
+            <table class="- topic/table " outputclass="no_borders" id="table_m5d_jyx_gbc">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1" colwidth="200pt" align="left"/>
+                    <thead>
+                        <row>
+                            <entry>Сайт</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/datapk/ru/22/index.html"
+                                    format="html" scope="external">Руководство
+                                пользователя</xref></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_21">
+            <title>Версия 2.1</title>
+            <table id="table_glq_g1m_q1c" class="- topic/table " outputclass="no_borders">
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="200pt" align="left"/>
+                    <colspec colname="c2" colnum="2" colwidth="300pt" align="left"/>
+                    <thead>
+                        <row>
+                            <entry>Сайт</entry>
+                            <entry>PDF</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry morerows="1" align="left"><xref
+                                    href="https://docs.cyberlympha.com/datapk/ru/21/index.html"
+                                    format="html" scope="external">Руководство
+                                пользователя</xref></entry>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/pdf/datapk_implementation_support_2_1.pdf"
+                                    format="pdf" scope="external">Руководство по внедрению и
+                                    поддержке</xref></entry>
+                        </row>
+                        <row>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/pdf/datapk_user_guide_2_1.pdf"
+                                    format="pdf" scope="external">Руководство по
+                                эксплуатации</xref></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_19">
+            <title>Версия 1.19</title>
+            <table id="table_pyn_41m_q1c" outputclass="no_borders">
+                <tgroup cols="2" rowsep="0" colsep="0">
+                    <colspec colname="c1" colnum="1" colwidth="200pt" align="left"/>
+                    <colspec colname="c2" colnum="2" colwidth="300pt" align="left"/>
+                    <thead>
+                        <row>
+                            <entry>Сайт</entry>
+                            <entry>PDF</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry morerows="1"><xref
+                                    href="https://docs.cyberlympha.com/datapk/ru/19/index.html"
+                                    format="html" scope="external">Руководство
+                                пользователя</xref></entry>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/pdf/datapk_implementation_support_1_19.pdf"
+                                    format="pdf" scope="external">Руководство по внедрению и
+                                    поддержке</xref></entry>
+                        </row>
+                        <row>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/pdf/datapk_user_guide_1_19.pdf"
+                                    format="pdf" scope="external">Руководство по
+                                эксплуатации</xref></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_19_en">
+            <title>Версия 1.19 (на английском)</title>
+            <table id="table_z5w_4bm_q1c" outputclass="no_borders">
+                <tgroup cols="2" rowsep="0" colsep="0">
+                    <colspec colname="c1" colnum="1" colwidth="200pt" align="left"/>
+                    <colspec colname="c2" colnum="2" colwidth="300pt" align="left"/>
+                    <thead>
+                        <row>
+                            <entry>Сайт</entry>
+                            <entry>PDF</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry morerows="1"><xref
+                                    href="https://docs.cyberlympha.com/datapk/en/19/index.html"
+                                    format="html" scope="external">User guide</xref></entry>
+                            <entry align="left">Installation and support guide</entry>
+                        </row>
+                        <row>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/pdf/datapk_user_guide_en_1_19.pdf"
+                                    format="pdf" scope="external">User guide</xref></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_18">
+            <title>Версия 1.18</title>
+            <table id="table_ivq_41m_q1c" outputclass="no_borders">
+                <tgroup cols="3" rowsep="0" colsep="0">
+                    <colspec colname="c1" colnum="1" colwidth="200pt" align="left"/>
+                    <colspec colname="c2" colnum="2" colwidth="100pt" align="left"/>
+                    <colspec colname="c3" colnum="3" colwidth="100pt" align="left"/>
+                    <tbody>
+                        <row>
+                            <entry>Руководство по эксплуатации:</entry>
+                            <entry><xref href="https://docs.cyberlympha.com/datapk/ru/18/index.html"
+                                    format="html" scope="external">Сайт</xref></entry>
+                            <entry align="left"><xref
+                                    href="https://docs.cyberlympha.com/pdf/datapk_user_guide_1_18.pdf"
+                                    format="pdf" scope="external">PDF-версия</xref></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_18_en">
+            <title>Версия 1.18 (на английском)</title>
+        </section>
+        <table id="table_o54_gdm_q1c" outputclass="no_borders">
+            <tgroup cols="2" rowsep="0" colsep="0">
+                <colspec colname="c1" colnum="1" colwidth="100pt" align="left"/>
+                <colspec colname="c2" colnum="2" colwidth="100pt" align="left"/>
+                <tbody>
+                    <row>
+                        <entry>User guide:</entry>
+                        <entry><xref href="https://docs.cyberlympha.com/datapk/en/18/index.html"
+                                format="html" scope="external">Сайт</xref></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

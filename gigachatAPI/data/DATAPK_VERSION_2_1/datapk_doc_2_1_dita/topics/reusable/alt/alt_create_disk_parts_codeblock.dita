@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_etz_1sd_q1c">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><codeblock id="codeblock_qj4_4tb_p1c">wipefs -af $D
+parted $D mktable gpt
+parted $D mkpart primary 1MiB 255MiB set 1 esp on
+parted $D mkpart primary 256MiB 260MiB set 2 bios_grub on
+parted $D mkpart primary 261MiB 100% set 3 lvm on
+blockdev --flushbufs $D</codeblock></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

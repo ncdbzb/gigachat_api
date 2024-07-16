@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="nta_settings_dop">
+    <title>Дополнительные настройки UDV NTA</title>
+    <body>
+        <p>В этом разделе приведены настройки, которые можно выполнить при необходимости на любой
+            версии <term keyref="alt_name"/> 10 после ее установки и развертывания всех уровней
+            UDV NTA:</p>
+        <ul id="ul_r1t_hqn_f1c">
+            <li><xref href="nta_connect_s_to_m.dita"/></li>
+            <li><xref href="config_alt_server_without_internet.dita"/></li>
+            <li><xref href="nta_subnet_change.dita"/></li>
+            <li><xref href="nta_conf_network_interfaces.dita"/></li>
+            <li><xref href="nta_set_pass_policy_and_audit.dita"/></li>
+            <li><xref href="nta_hostname_change.dita"/></li>
+            <li><xref href="nta_changing_time_zone.dita"/></li>
+            <li><xref href="nta_add_static_route.dita"/></li>
+            <li><xref href="nta_setting_ntp.dita"/></li>
+            <li><xref href="nta_web_trusted_cert.dita"/></li>
+            <li><xref href="nta_lacp_channel.dita"/></li>
+            <li><xref href="nta_trunk_port.dita"/></li>
+        </ul>
+    </body>
+</topic>

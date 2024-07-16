@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="network_inspection_fp">
+    <glossterm><keyword>Инспекция сети</keyword></glossterm>
+    <glossdef><p>Пункт главного меню, содержащий страницы <cite keyref="maps_fp"/>, <cite keyref="dataflow_fp"/> и
+                <cite keyref="dataflow_rules_fp"/>.</p></glossdef>
+    <related-links>
+        <link  outputclass="no_cc" keyref="maps_fp"/>
+        <link  outputclass="no_cc" keyref="dataflow_fp"/>
+        <link href="dataflow_rules_fp.dita"/>
+    </related-links>
+</glossentry>

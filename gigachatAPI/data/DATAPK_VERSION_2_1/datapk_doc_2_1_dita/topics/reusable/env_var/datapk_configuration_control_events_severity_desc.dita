@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+
+ <topic id="ReusableComponent_v32_g2j_jpb">
+
+ <title>DATAPK_CONFIGURATION_CONTROL_EVENTS_SEVERITY</title>
+ <body> 
+ <p><ph id="ph_aj2_g2j_jpb">Уровень критичности событий изменения конфигурации</ph></p> 
+</body> 
+</topic> 

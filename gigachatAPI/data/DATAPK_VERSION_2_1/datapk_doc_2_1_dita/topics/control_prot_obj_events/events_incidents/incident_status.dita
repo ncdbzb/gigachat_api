@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="incident_status">
+ <title>Управление статусами инцидентов</title>
+ <taskbody>
+ <context>
+ <p>Для изменения состава статусов инцидентов:</p>
+ </context>
+ <steps>
+ <step>
+    <cmd><ph
+      conref="../../reusable/pages_breadcrumbs/go_to.dita#ReusableComponent_cph_k5x_3xb/ph_dph_k5x_3xb"
+      /><ph
+      conref="../../reusable/pages_breadcrumbs/incident_statuses.dita#ReusableComponent_flz_4y2_qxb/ph_glz_4y2_qxb"
+     />.</cmd>
+   </step>
+   <step>
+    <cmd>Для создания нового статуса инцидента:</cmd>
+    <substeps id="substeps_s4x_kb1_bqb">
+     <substep>
+      <cmd>Нажмите <uicontrol>Создать статус</uicontrol>.</cmd>
+      <stepresult>появится окно <uicontrol>Создание статуса инцидента</uicontrol>.</stepresult>
+     </substep>
+     <substep>
+      <cmd>В окне создания статуса задайте следующие параметры:</cmd>
+      <info>
+       <ol id="ol_flx_z5w_3tb">
+        <li>категорию статуса инцидента: <systemoutput>Новый</systemoutput>, <systemoutput>В работе</systemoutput> или <systemoutput>Закрыт</systemoutput>;</li>
+        <li>наименование;</li>
+        <li>обоснование создания.</li>
+       </ol>
+      </info>
+      <info>
+       <fig id="fig_kls_th1_bqb">
+        <title>Окно «Создание статуса инцидента»</title>
+        <image href="../../../images/incidents/create_incident_status.png" id="image_lls_th1_bqb">
+         <alt>Окно «Создание статуса инцидента»</alt>
+        </image>
+       </fig>
+      </info>
+     </substep>
+     <substep>
+      <cmd>Нажмите <uicontrol>Создать</uicontrol>.</cmd>
+      <stepresult>статус появится на странице и будет доступен для использования.</stepresult>
+     </substep>
+    </substeps>
+   </step>
+   <step>
+    <cmd>Для редактирования статуса инцидента:</cmd>
+    <substeps id="substeps_jmp_4g1_bqb">
+     <substep>
+      <cmd>Наведите курсор на строку со статусом, который нужно отредактировать.</cmd>
+     </substep>
+     <substep>
+      <cmd>Нажмите <image href="../../../images/icons/edit.png" id="image_a51_lz2_5nb"/>
+        (<uicontrol>Редактировать статус</uicontrol>).</cmd>
+      <stepresult>появится окно <uicontrol>Редактирование статуса
+       инцидента</uicontrol>.</stepresult>
+     </substep>
+     <substep>
+      <cmd>Измените параметры статуса, введите обоснование изменения и нажмите
+        <uicontrol>Сохранить</uicontrol>.</cmd>
+      <info>
+       <fig id="fig_i1d_zcc_jtb">
+        <title>Окно «Редактирование статуса инцидента»</title>
+        <image href="../../../images/incidents/edit_incident_status_window.png"
+         id="image_j1d_zcc_jtb">
+         <alt>Окно «Редактирование статуса инцидента»</alt>
+        </image>
+       </fig>
+      </info>
+     </substep>
+    </substeps>
+   </step>
+   <step>
+    <cmd>Для удаления одного из статусов инцидентов: </cmd>
+    <substeps id="substeps_krp_gh1_bqb">
+     <substep>
+      <cmd>Наведите курсор на строку со статусом, который нужно удалить.</cmd>
+     </substep>
+     <substep>
+      <cmd>Нажмите <ph
+        conref="../../reusable/buttons/delete_button.dita#delete_button_topic/delete_button"
+        /><uicontrol> статус</uicontrol>).</cmd>
+      <stepresult>
+       <p>появится окно ввода обоснования удаления.</p>
+       <note
+        conref="../../reusable/notes/incident_status_del.dita#ReusableComponent_hbs_nyc_gyb/note_vyd_pgp_35b"
+        id="note_cgs_nyc_gyb"/>
+      </stepresult>
+     </substep>
+     <substep>
+      <cmd>Введите обоснование удаления статуса и нажмите <uicontrol>Подтвердить</uicontrol>. </cmd>
+     </substep>
+    </substeps>
+   </step>
+ </steps>
+ </taskbody>
+</task>

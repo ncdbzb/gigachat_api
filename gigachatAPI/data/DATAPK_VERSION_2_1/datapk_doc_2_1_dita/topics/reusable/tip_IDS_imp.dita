@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Description:tip_IDS_imp-->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_nz3_jph_zsb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep>
+                        <cmd/>
+                        <info><ul>
+                                <li><note id="note_pnz_bph_zsb" type="tip">Данный вариант
+                                        рекомендован к выбору при наличии измененных
+                                    правил.</note></li>
+                            </ul></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>
