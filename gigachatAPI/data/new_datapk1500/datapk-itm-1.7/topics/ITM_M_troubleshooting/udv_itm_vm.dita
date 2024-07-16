@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
-<troubleshooting id="udv_itm_vm">
-    <title>Ошибка сервера при авторизации в веб-интерфейсе UDV-ITM-VM</title>
-    <troublebody
-        conref="../reusable/notes/ITM-M_web_interface_unavailable_info.dita#ReusableComponent_jxy_tvc_zwb/troublebody_mxy_tvc_zwb"/>
-</troubleshooting>

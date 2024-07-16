@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="trigger_configuration">
+    <title>Управление триггерами</title>
+    <taskbody><prereq>
+            <p>Доступны следующие возможности:</p>
+        </prereq><steps>
+            <step>
+                <cmd>Редактирование триггера. Для редактирования:</cmd>
+                <substeps id="substeps_asd_bty_xvb">
+                    <substep>
+                        <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                                keyref="templates"/> или <cite keyref="configuration"/> → <cite
+                                keyref="hosts"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на имя шаблона или узла сети, который включает в себя нужный
+                            триггер.</cmd>
+                        <stepresult>Откроется страница редактирования шаблона или узла
+                            сети.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Триггеры». </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Отредактируйте необходимые параметры. Подробнее см. в разделе <xref
+                                href="create_trigger.dita"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Обновить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Клонирование триггера. Для клонирования:</cmd>
+                <substeps id="substeps_j4v_pxl_hvb">
+                    <substep>
+                        <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                                keyref="templates"/> или <cite keyref="configuration"/> → <cite
+                                keyref="hosts"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на имя шаблона или узла сети, который включает в себя нужный
+                            триггер.</cmd>
+                        <stepresult>Откроется страница редактирования шаблона или узла
+                            сети.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Перейдите на вкладку «Триггеры». </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на имя нужного вам триггера.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Клонировать».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

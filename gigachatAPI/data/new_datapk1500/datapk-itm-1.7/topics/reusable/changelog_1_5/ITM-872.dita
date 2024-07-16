@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_jh5_r1x_z5b">
-    <title></title>
-    <body><p id="p_kh5_r1x_z5b">В файл <codeph>.srv.env</codeph> добавлена переменная <cmdname
-                keyref="zbx_listenport"/>, переменная <cmdname keyref="zbx_listenip_old"/> переименована в <cmdname
-                keyref="zbx_listenip"/>.</p></body>
-</topic>

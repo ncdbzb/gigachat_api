@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ldap">
+    <title>LDAP</title>
+    <body>
+        <p>Cтраница <cite keyref="itm_m_page_configuration"/> → <cite keyref="itm_m_config_ldap"/>
+            предназначена для настройки подключения к каталогу <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> и для предоставления пользователям возможности авторизации с использованием
+            корпоративной учетной записи <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            />. </p>
+        <p>При выключенном <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> возможна авторизация только с помощью локальных учетных записей, созданных
+            администратором в разделе «Пользователи».</p>
+        <p>При включенном режиме <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> администратор может добавить пользователей из корпоративного каталога <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> (подробнее см. в разделе <xref href="itm_m_config_create_ldap_user.dita"/>) и
+            настроить подключение. После этого пользователям будет доступна авторизация с
+            использованием корпоративной учетной записи.</p>
+        <fig>
+            <title>Настройки подключения к LDAP</title>
+            <div outputclass="html"><image href="../../../images/ITM_M_screens/ITM_M_LDAP_1.png"/></div>
+            <div outputclass="onlypdf"><image href="../../../images/ITM_M_screens/ITM_M_LDAP_1.png"/></div>
+            <div outputclass="udvpdf"><image href="../../../images/udv_itm_vm_pages/udv_ITM_M_LDAP_1.png"/></div>
+        </fig>
+        <p>Рекомендуемая версия ОС для сервера, где находится каталог <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> — Windows Server 2008 и выше. Для подключения <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> к <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            />-каталогу и входа в веб-интерфейс <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                outputclass="html"><term keyref="datapk_itm_vm"/></ph> необходимо, чтобы учетная
+            запись <ph
+                conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+            /> имела права на подключение к домену и чтение списка доменных пользователей. В
+            большинстве случаев достаточно членства в группе Domain Users (Пользователи домена).</p>
+        <note>Права пользователя могут отличаться в зависимости от настроек домена.</note>
+        <p>В этом разделе:<ul id="ul_jj5_5dr_xsb">
+                <li><xref href="ldap_connect.dita"/></li>
+                <li><xref href="ldap_change_users.dita"/></li>
+                <li><xref href="LDAP_clear.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

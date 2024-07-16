@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_sll_bw2_trb">
-    <title>zbx_tlscrlfile_info</title>
-    <body><div id="div_tll_bw2_trb"><p>Абсолютный путь к файлу, который содержит отозванные сертификаты. Значение переменной
-                используется для зашифрованных соединений между компонентами <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>.</p></div></body>
-</topic>

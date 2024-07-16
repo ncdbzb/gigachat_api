@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_v_1_2_0">
+    <title><ph id="_Toc81594703">Что нового?</ph></title>
+    <body>
+        <p>Обновления в текущей версии документации:<ul id="ul_ahq_ktv_ktb">
+                <li>Обновлены документы:<ul id="ul_hwf_dgy_xtb">
+                    <li><xref href="../ITM_M_function_description/ITM_M_configurations/ldap_change_config.dita"/></li>
+                    <li><xref href="../ITM_M_function_description/ITM_M_configurations/ldap.dita"/></li>
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_server_install.dita"
+                            /></li>
+                        <li><xref href="../ITM_M_troubleshooting/itm_m_net_conflict.dita"/></li>
+                        <li><xref href="../ITM_M_troubleshooting/troubleshooting.dita"/></li>
+                        <li><xref href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_redos_installation.dita"/></li>
+                    </ul></li>
+                <li>Добавлены документы:<ul id="ul_png_h3n_5tb">
+                        <li><xref href="../ITM_M_function_description/ITM_M_configurations/ldap_windows_server.dita"/></li>
+                        <li><xref href="../ITM_M_function_description/ITM_M_configurations/ldap_connect.dita"/></li>
+                        <li><xref href="../ITM_M_troubleshooting/security_profile_itm_vm.dita"/></li>
+                    </ul></li>
+            </ul></p>
+        <p>В версии 1.4.0.0 добавлены новые функции:<ul id="ul_nvm_jsj_vsb">
+                <li>На странице <cite keyref="itm_m_page_object_monitoring"/>:<ul
+                        id="ul_y3b_gh1_btb">
+                        <li>Добавлена возможность отключения автоматического сбора данных с сервера
+                            мониторинга на период пусконаладки или технического обслуживания.</li>
+                        <li>Для филиалов добавлено отображение имени DATAPK, подключенного к серверу
+                            мониторинга.</li>
+                        <li>В таблицу <abbreviated-form keyref="monitoring_object"/> добавлено
+                            отображение информации об <abbreviated-form keyref="asm_tp"/> и о
+                            техническом обслуживании объектов мониторинга.</li>
+                        <li>Добавлена возможность внепланового запроса данных об объектах
+                            мониторинга с сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</li>
+                        <li>Добавлена кнопка для обновления страницы.</li>
+                    </ul></li>
+                <li>На странице <cite keyref="itm_m_page_server_monitoring"/> добавлена возможность
+                    просмотра имени DATAPK, подключенного к серверу мониторинга.</li>
+                <li>На странице <cite keyref="itm_m_page_problems"/> добавлена возможность просмотра
+                    списка событий проблемы.</li>
+                <li>Страница настроек интеграций переименована в <cite
+                        keyref="itm_m_page_config_integration"/>.</li>
+                <li>На странице <cite keyref="itm_m_page_config_integration"/> добавлена возможность
+                    настройки периодичности получения с серверов мониторинга системных журналов и
+                    системных свойств.</li>
+                <li>На странице <cite keyref="itm_m_page_config_users"/> добавлена возможность
+                    просмотра и изменения роли пользователя.</li>
+                <li>На странице <cite keyref="itm_m_config_ldap"/> добавлена возможность настройки
+                    подключения к LDAP-серверу.</li>
+                <li>На странице <cite keyref="itm_m_notifications"/> добавлена возможность настройки
+                    email-оповещений.</li>
+                <li>В файл <codeph>.env</codeph> добавлены переменные: <ul id="ul_mlv_4l1_btb">
+                        <li><cmdname keyref="redis_port"/></li>
+                        <li><cmdname keyref="redis_address"/></li>
+                        <li><cmdname keyref="itmm_front_ssl_port"/></li>
+                        <li><cmdname keyref="itmm_jwt_expiration_minutes"/></li>
+                        <li><cmdname keyref="itmm_problem_age_in_days"/></li>
+                        <li><cmdname keyref="itmm_front_port"/></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

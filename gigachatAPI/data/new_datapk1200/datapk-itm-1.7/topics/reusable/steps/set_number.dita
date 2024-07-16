@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_s5h_33b_5vb">
-    <title></title>
-    <body><note id="note_t5h_33b_5vb">Включить отображение номеров строк в файле можно с помощью следующих действий: <ol id="ol_o2z_kcl_tvb"><li>Нажмите клавишу «Esc», чтобы перейти в командный режим. </li><li>Введите <codeph>:set number</codeph> или <codeph>:set nu</codeph> и нажмите «Enter».</li><li>Нажмите клавишу «i», чтобы перевести редактор в режим ввода текста.</li><li>После закрытия файла нумерация строк отключится автоматически. Чтобы отключить абсолютные номера строк на время редактирования файла, перейдите в командный режим и выполните команду <codeph>:set nonumber</codeph> или <codeph>:set nonu</codeph>.</li></ol></note></body>
-</topic>

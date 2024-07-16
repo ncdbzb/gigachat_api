@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_y1f_b4m_trb">
+    <title>ZBX_STARTPOLLERS UNREACHABLE note</title>
+    <body><div id="div_z1f_b4m_trb">По крайней мере один поллер для недоступных хостов должен быть запущен,
+            если запускаются обычные поллеры, <ph conref="../protocol_names/IPMI.dita#ReusableComponent_obb_zhf_4yb/ph_pbb_zhf_4yb"/> или Java.</div></body>
+</topic>

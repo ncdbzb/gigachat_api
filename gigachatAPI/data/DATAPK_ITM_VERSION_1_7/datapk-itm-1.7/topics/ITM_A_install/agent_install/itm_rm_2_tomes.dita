@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_rm_2_tomes">
+    <title>Установка сервера удаленного мониторинга с отдельным томом для БД</title>
+    <shortdesc></shortdesc>
+    <body>
+        <section>
+            <p>Этот раздел описывает последовательность действий для установки <ph
+                outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"
+                    ><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_a"/></ph> для случая, когда на сервере используются два
+                тома — первый том для операционной системы, второй том для базы данных.</p>
+            <p>Если вы планируете использовать только один том, перейдите в раздел <ph outputclass="onlypdf"><xref
+                href="../itm_a_install_agent_server_jatoba.dita"/></ph>
+                <ph outputclass="udvpdf"><xref
+                    href="../itm_rm_install_agent_server_jatoba.dita"/></ph>
+                <ph outputclass="html"><xref
+                    href="../itm_rm_install_agent_server_jatoba.dita"/></ph>
+                .</p>
+            <p>Все нижеописанные действия на сервере производятся после настройки RAID на дисках и
+                установки операционной системы и дополнительных пакетов согласно разделу <xref
+                    href="itm_a_extra_package_redos7_3.dita"/>.</p>
+            <p>В этом разделе:<ul id="ul_ugy_hzf_4xb">
+                <li><xref href="itm_a_mount.dita"/></li>
+                <li><xref href="itm_a_config_subd.dita"/></li>
+            </ul></p>
+        </section>
+    </body>
+</topic>

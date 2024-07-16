@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_cw3_jtl_trb">
-    <title>zbx_hostinterface_item_note</title>
-    <body><div id="div_dw3_jtl_trb">
-            <note>Значение данной переменной используется, только если значение переменной <cmdname
-                    keyref="zbx_hostinterface"/> не определено.</note>
-        </div></body>
-</topic>

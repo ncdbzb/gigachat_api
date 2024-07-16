@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_cck_gh2_trb">
-    <title>zbx_ipmipollers_info</title>
-    <body><div id="div_dck_gh2_trb"><p>Количество экземпляров пре-форков <ph
-                    conref="../protocol_names/IPMI.dita#ReusableComponent_obb_zhf_4yb/ph_pbb_zhf_4yb"
-                />-поллеров.</p></div></body>
-</topic>

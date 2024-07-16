@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_fcf_xyl_4wb">
-    <title></title>
-    <body><p id="p_gcf_xyl_4wb">Значение по умолчанию для переменной <cmdname keyref="db_server_host"/>
-            изменено на <codeph>host.docker.internal</codeph>.Обновлен файл
-                <codeph>docker-compose.release.yml</codeph>.</p></body>
-</topic>

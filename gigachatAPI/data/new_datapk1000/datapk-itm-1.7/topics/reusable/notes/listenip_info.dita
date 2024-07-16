@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_wkn_vnj_2tb">
-    <title></title>
-    <body><p id="p_ykn_vnj_2tb">Список IP-адресов, разделенных запятыми, которые должен слушать траппер.
-            Траппер будет слушать все сетевые интерфейсы, если этот параметр не указан.</p></body>
-</topic>

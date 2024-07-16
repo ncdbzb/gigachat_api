@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_sr3_42m_4wb">
+    <title></title>
+    <body><p id="p_tr3_42m_4wb">Добавлена обработка ошибки, возникаюшей при добавлении узла сети в группу DATAPK вручную: теперь при синхронизации такой узел сети будет пропущен, синхронизация продолжится, в логах появится предупреждение.</p></body>
+</topic>

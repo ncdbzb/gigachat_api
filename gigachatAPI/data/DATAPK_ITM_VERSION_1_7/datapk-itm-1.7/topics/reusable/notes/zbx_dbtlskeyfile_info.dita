@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_itq_cf2_trb">
+    <title>zbx_dbtlskeyfile_info</title>
+    <body><p id="p_jtq_cf2_trb">Полный путь к файлу, содержащему закрытый ключ для аутентификации в базе данных.</p></body>
+</topic>

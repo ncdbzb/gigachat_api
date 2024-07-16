@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_bqr_v42_trb">
-    <title>ZBX_CACHEUPDATE FREQUENCY_info</title>
-    <body><p id="p_cqr_v42_trb">Период обновления кэша конфигурации в секундах.</p></body>
-</topic>

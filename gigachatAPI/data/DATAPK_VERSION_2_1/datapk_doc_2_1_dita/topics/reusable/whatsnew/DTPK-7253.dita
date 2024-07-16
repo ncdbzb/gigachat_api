@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_kdm_jbq_bzb">
-    <title/>
-    <body>
-        <div id="div_rz3_fbq_bzb">Исключены события вида <systemoutput>Получить...</systemoutput> на
-            странице <cite keyref="events_fp"/></div>
-    </body>
-</topic>

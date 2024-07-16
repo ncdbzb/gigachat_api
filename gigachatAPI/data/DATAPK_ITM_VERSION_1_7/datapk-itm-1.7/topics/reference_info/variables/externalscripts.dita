@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="externalscripts">
+    <glossterm>ExternalScripts</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/externalscripts_info.dita#ReusableComponent_e3h_vhj_2tb/p_f3h_vhj_2tb"/>
+        <p><b>Значение по умолчанию:</b> <codeph>/usr/local/share/zabbix/externalscripts</codeph></p>
+    </glossdef>
+</glossentry>

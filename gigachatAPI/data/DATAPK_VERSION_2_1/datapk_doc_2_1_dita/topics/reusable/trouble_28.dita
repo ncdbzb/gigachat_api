@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
- <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
- <topic id="ReusableComponent_rgp_gxx_lrb">
- <title>trouble_28</title>
- <body> 
- <fig> <title id="title_wgp_gxx_lrb">Ошибки вида «&lt;...> Cannot start service &lt;...>. Bind for &lt;ip_address>:&lt;TCP/UDP_port> is ready allocated» при попытке запуска контейнеров</title>
- </fig> 
- </body> 
-</topic> 

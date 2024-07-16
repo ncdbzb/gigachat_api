@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_osq_fb2_trb">
+    <title>postgres_user_info</title>
+    <body><p id="p_psq_fb2_trb">Имя пользователя для управления базой данных <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>.</p></body>
+</topic>

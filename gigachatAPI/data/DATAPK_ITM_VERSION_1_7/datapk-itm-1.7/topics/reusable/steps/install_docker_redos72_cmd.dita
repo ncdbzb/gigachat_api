@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xj1_zvm_hwb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_ak1_zvm_hwb"><cmd>Перейдите в режим командной строки установленной ОС.</cmd></step> 
+        </steps>
+        </taskbody>
+</task>

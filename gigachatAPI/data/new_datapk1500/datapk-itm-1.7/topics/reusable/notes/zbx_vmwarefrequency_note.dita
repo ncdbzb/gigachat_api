@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_mtd_1gr_trb">
-    <title>ZBX_VMWAREFREQUENCY note</title>
-    <body><div id="div_ntd_1gr_trb">Установите в качестве значения данной переменной наименьшее значение
-            интервала обновления у любого элемента данных VMware мониторинга.</div></body>
-</topic>

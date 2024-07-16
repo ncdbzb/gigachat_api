@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_h1y_br2_trb">
-    <title>zbx_trappertimeout_info</title>
-    <body><div id="div_i1y_br2_trb"><p>Количество секунд, которое траппер может потратить на обработку новых данных.</p></div></body>
-</topic>

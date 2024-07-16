@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="logremotecommands">
+    <glossterm>PRXY_LOGREMCOMM</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/logremotecommands_info.dita#ReusableComponent_nf3_tx1_5tb/p_of3_tx1_5tb"/>
+        <p><b>Разрешенный диапазон значений:</b> 0, 1</p>
+    </glossdef>
+</glossentry>

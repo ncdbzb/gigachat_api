@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ekm_ycb_5rb">
-    <title>zbx cachesize info</title>
-    <body><div id="div_fkm_ycb_5rb"> Размер распределенной памяти (кэша) для хранения данных узлов сети,
-            элементов данных и триггеров.</div></body>
-</topic>

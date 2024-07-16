@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_fks_21m_trb">
-    <title>ZBX_STARTAGENTS_note</title>
-    <body><div id="div_gks_21m_trb"><note>Если <cmdname keyref="zbx_startagents"/> = 0, то пассивные проверки будут отключены и агент не
-                будет слушать какой-либо <ph
-                    conref="../../reusable/protocol_names/TCP.dita#ReusableComponent_s2p_3gl_4yb/ph_t2p_3gl_4yb"
-                />-порт.</note></div></body>
-</topic>

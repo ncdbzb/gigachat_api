@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_dmd_qrt_1tb">
-    <title></title>
-    <body><note type="attention" id="note_emd_qrt_1tb">Для корректной работы шаблонов <codeph>Linux агентный
-                сбор.yaml</codeph>, <codeph>Docker минимальный.yaml</codeph>,
-                <codeph>Datapk.yaml</codeph>, <codeph>Postgresql (Jatoba).yaml</codeph> и
-                <codeph>MySQL.yaml</codeph> требуется агент версии 2.</note></body>
-</topic>

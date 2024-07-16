@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_qcx_5g2_trb">
+    <title>ZBX_STARTPOLLERS_info</title>
+    <body><div id="div_scx_5g2_trb"><p>Количество экземпляров пре-форков поллеров.</p>
+        <p>Ненулевое значение требуется для работы внутренних, агрегированных и вычисляемых элементов данных.</p>
+    </div>
+        </body>
+    
+</topic>

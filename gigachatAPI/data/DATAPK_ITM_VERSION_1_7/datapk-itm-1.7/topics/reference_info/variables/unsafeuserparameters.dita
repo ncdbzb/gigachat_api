@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="unsafeuserparameters">
+    <glossterm>UnsafeUserParameters</glossterm>
+    <glossdef><div
+            conref="../../reusable/notes/zbx_unsafeuser_parameters_info.dita#ReusableComponent_kph_drk_trb/div_lph_drk_trb"/>
+        <b>Значение в конфигурации ITM-K при поставке:</b>0 <p><b>Разрешенный диапазон
+            значений:</b>0, 1</p></glossdef>
+</glossentry>

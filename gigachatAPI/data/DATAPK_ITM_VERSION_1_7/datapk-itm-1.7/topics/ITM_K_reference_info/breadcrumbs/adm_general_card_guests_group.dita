@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="adm_general_card_guests_group">
+    <glossterm>Карточка группы пользователей Гости</glossterm>
+    <glossdef>Страница создания и редактирования группы пользователей.
+        <fig>
+            <title>Карточка группы пользователей Гости</title>
+            <div outputclass="html"><image href="../../../images/Pages/adm_host_groups_guests.png"/></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/adm_host_groups_guests.png"/></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_adm_host_groups_guests.png"/></div>
+        </fig>
+    </glossdef>
+</glossentry>

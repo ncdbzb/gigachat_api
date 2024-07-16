@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_zt2_zgl_hsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps id="substeps_bwh_1hk_hsb"><substep>
+                    <cmd>Перейдите на вкладку «Теги».</cmd>
+                    <info> 
+                        <fig>
+                            <title>Вкладка «Теги»</title>
+                            <image href="../../../images/ITM_K_usage/itm_k_templates_tag.png"/>
+                        </fig>
+                    </info>
+                </substep>
+                    <substep>
+                        <cmd>Введите имя тега в поле «Имя».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Введите значение тега в поле «Значение».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Добавить»: <image href="../../../images/buttons/add_1.png"/>.</cmd>
+                        <stepresult>Строка с тегом будет добавлена в список на вкладке «Теги».</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
-<glossentry id="siem_syslog_port">
-    <glossterm>SIEM_SYSLOG_PORT</glossterm>
-    <glossdef>
-        <ph
-            conref="../../reusable/notes/siem_syslog_port_def.dita#ReusableComponent_vt2_qqd_yrb/ph_wt2_qqd_yrb"
-        /></glossdef>
-</glossentry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_appointment_application">
+    <title><ph id="_Toc81594702">Назначение и условия применения</ph></title>
+    <body>
+        <p>
+            <div><p>Сервер визуализации и управления <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> предназначен для осуществления контроля
+                    предоставляемых вычислительных ресурсов и каналов связи в автоматизированных
+                        системах управления путем реализации следующих функций:</p><ul
+                    id="ul_nfm_s12_krb">
+                    <li>Предоставление сводной информации о состоянии функционирования
+                        контролируемых ИТ-ресурсов <abbreviated-form keyref="asm_tp"/> в филиалах и
+                        на технологических комплексах предприятия.</li>
+                    <li>Передача консолидированных данных о свойствах и состоянии функционирования
+                        контролируемых ресурсов в смежные корпоративные системы: систему
+                        автоматизации процессов обеспечения безопасности (<abbreviated-form
+                            keyref="spas"/>) и систему мониторинга компьютерных инцидентов
+                            (<abbreviated-form keyref="smci"/>).</li>
+                </ul><p>Сервер визуализации и управления <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> используется в составе комплексной
+                    системы мониторинга и контроля ИТ-ресурсов <abbreviated-form keyref="asm_tp"/> <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>.</p>
+                <p>Архитектура системы <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph> приведена на рисунке.</p>
+                <fig>
+                    <title>Архитектура системы <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph></title>
+                    <div outputclass="html"><image href="../../images/ITM_M_intro/ITM_M_architecture.png"/></div>
+                    <div outputclass="onlypdf"><image href="../../images/ITM_M_intro/ITM_M_architecture.png"/></div>
+                    <div outputclass="udvpdf"><image href="../../images/udv_itm_vm_pages/udv_ITM_architecture_new.png"/></div>
+                </fig>
+            </div>
+        </p>
+    </body>
+</topic>

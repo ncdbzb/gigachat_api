@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_o44_k4c_cvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_q44_k4c_cvb">
+                        <cmd>Нажмите на кнопку «Создать группу пользователей» в верхнем правом углу.</cmd>
+                        <stepresult>Откроется страница «Группы пользователей».</stepresult>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

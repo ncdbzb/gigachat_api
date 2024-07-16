@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
-<glossentry id="ReusableComponent_xhk_klr_pyb">
-    <glossterm/>
-    <glossdef><ph id="ph_a3k_klr_pyb">Минимальный уровень свободной оперативной памяти для брокера
-            сообщений <codeph>rabbitmq</codeph>, при достижении которого в веб-интерфейсе появляется
-            соответствующее событие 1180011, а при его нормализации появляется событие 1180012.
-            Задается в байтах</ph></glossdef>
-</glossentry>

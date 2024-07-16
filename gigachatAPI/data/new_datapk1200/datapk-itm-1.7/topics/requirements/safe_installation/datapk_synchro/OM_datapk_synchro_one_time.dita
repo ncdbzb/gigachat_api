@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="OM_datapk_synchro_one_time">
-    <title>Настройка однократной синхронизации</title>
-    <shortdesc></shortdesc>
-    <taskbody conref="../../../reusable/synchro_datapk/datapk_synchro_one_time_info.dita#ReusableComponent_hdt_dnk_syb/taskbody_idt_dnk_syb"/>
-</task>

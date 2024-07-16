@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="hostmetadata">
-    <glossterm>HostMetadata</glossterm>
-    <glossdef><p
-            conref="../../reusable/notes/hostmetadata_info.dita#ReusableComponent_en2_ts5_ywb/p_fn2_ts5_ywb"
-            /><b>Диапазон разрешенных значений:</b> строка длиной 0-255 символов</glossdef>
-</glossentry>

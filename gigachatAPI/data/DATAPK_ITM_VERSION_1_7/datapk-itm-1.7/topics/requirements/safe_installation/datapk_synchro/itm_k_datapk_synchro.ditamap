@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Настройка синхронизации с DATAPK</title>
+    <topicref href="create_user_synchro_datapk.dita"/>
+    <topicref href="datapk_synchro_one_time.dita"/>
+    <topicref href="datapk_synchro_auto.dita"/>
+    <topicref href="datapk_synchro_logs.dita"/>
+</map>

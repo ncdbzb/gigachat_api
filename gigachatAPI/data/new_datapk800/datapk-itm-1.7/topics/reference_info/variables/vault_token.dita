@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
-<glossentry id="vault_token">
-    <glossterm>VAULT_TOKEN</glossterm>
-    <glossdef>
-        <div
-            conref="../../reusable/notes/zbx_vault_token_info.dita#ReusableComponent_c3f_fx2_trb/div_d3f_fx2_trb"/>
-    </glossdef>
-</glossentry>

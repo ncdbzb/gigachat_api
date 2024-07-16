@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="vmwareperffrequency">
+    <glossterm>ZBX_VMWAREPERFFREQUENCY</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/vmwareperffrequency_info.dita#ReusableComponent_bfx_hsb_5tb/p_cfx_hsb_5tb"
+        />
+    </glossdef>
+</glossentry>

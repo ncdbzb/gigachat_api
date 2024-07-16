@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="astra_itm">
+    <title>Установка сервера консолидации DATAPK ITM-K на ОС Astra Linux</title>
+    <shortdesc></shortdesc>
+    <taskbody
+        conref="../reusable/astra_itm_taskbody.dita#ReusableComponent_xfr_hd3_gxb/taskbody_agr_hd3_gxb"/>
+</task>

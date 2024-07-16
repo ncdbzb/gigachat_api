@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_jzp_2n2_trb">
+    <title>ZBX_VMWARETIMEOUT_info</title>
+    <body><div id="div_kzp_2n2_trb"><p>Максимальное количество секунд, которое коллектор VMware потратит на ожидание ответа от службы
+                VMware (vCenter или ESX гипервизора).</p></div></body>
+</topic>

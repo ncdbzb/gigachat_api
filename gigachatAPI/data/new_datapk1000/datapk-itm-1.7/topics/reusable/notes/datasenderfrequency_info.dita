@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_pdb_4gj_2tb">
-    <title></title>
-    <body>
-        <p id="p_qdb_4gj_2tb">Частота передачи данных на сервер в секундах. Параметр активного прокси.
-            Игнорируется пассивными прокси (смотрите параметр <cmdname keyref="proxymode"/>).</p>
-    </body>
-</topic>

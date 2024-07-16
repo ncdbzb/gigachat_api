@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка UDV-ITM-M на ОС РЕД ОС</title>
+    <topicref href="ntp.dita"/>
+    <topicref href="extra_pack_installation_redos7_3.dita"/>
+    <topicref href="redos_package_internet.dita"/>
+    <topicref href="udv_itm_m_2tomes.dita" collection-type="sequence">
+        <topicref href="itm_k_mount.dita"/>
+        <topicref href="itm_k_subd_config.dita"/>
+    </topicref>
+    <topicref href="udv_install_itm_m_redos.dita"/>
+</map>

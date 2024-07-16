@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_config_general">
+    <glossterm>Основные</glossterm>
+    <glossdef>Подраздел меню <cite keyref="itm_m_page_configuration"/>, содержащий список общих
+        свойств сервера <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>. <fig>
+            <title>Основные</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_config_general.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Description:DATAPK_IDS_CONTROL_EVENTS_SEVERITY-->
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
-<glossentry id="ReusableComponent_lh2_d5x_2tb">
-    <glossterm/>
-    <glossdef><p id="p_nh2_d5x_2tb">Уровень критичности событий службы обнаружения вторжений</p></glossdef>
-</glossentry>

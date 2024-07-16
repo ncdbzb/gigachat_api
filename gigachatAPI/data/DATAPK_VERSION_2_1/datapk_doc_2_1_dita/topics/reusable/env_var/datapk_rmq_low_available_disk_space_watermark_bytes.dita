@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
-<glossentry id="ReusableComponent_u2q_qlr_pyb">
-    <glossterm/>
-    <glossdef><ph id="ph_w2q_qlr_pyb">Минимальный уровень свободного дискового пространства для
-            брокера сообщений <codeph>rabbitmq</codeph>, при достижении которого в веб-интерфейсе
-            появляется соответствующее событие 1180013, а при его нормализации появляется событие
-            1180014. Задается в байтах</ph></glossdef>
-</glossentry>

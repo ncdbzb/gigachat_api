@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="heartbeatfrequency">
+    <glossterm>PRXY_HBFREQ</glossterm>
+    <glossdef>
+        <p
+            conref="../../reusable/notes/heartbeatFrequency_info.dita#ReusableComponent_wyp_sjj_2tb/p_xyp_sjj_2tb"/>
+        <p><b>Значение по умолчанию:</b> 60</p>
+        <p><b>Диапазон разрешенных значений:</b> 0-3600</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gk2_2cx_g5b">
+    <title>Введение</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_dvf_y3x_g5b">                
+                <li><xref href="../ITM_M_intoduction/itm_m_application_area.dita"/></li>
+                <li><xref href="../ITM_M_intoduction/itm_m_appointment_application.dita"/></li>
+                <li><xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_connect_web.dita"
+                    /></li>
+            </ul></p>
+    </body>
+</topic>

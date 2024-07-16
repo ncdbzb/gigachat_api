@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="server_0">
-    <glossterm>Server</glossterm>
-    <glossdef>
-        <p>IP-адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, если наблюдение осуществляется на уровне филиала, или
-            IP-адрес сервера <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph>, если наблюдение осуществляется на уровне ТО.</p>
-    </glossdef>
-</glossentry>

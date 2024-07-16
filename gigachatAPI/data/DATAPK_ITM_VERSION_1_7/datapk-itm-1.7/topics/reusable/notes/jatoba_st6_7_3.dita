@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_gxp_1hz_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_ixp_1hz_tsb">
+                <cmd>Для установки СУБД введите команду:</cmd>
+                <info>
+                    <codeblock>rpm -Uvh jatoba1-client-1.14.1-2318.x86_64.rpm jatoba1-contrib-1.14.1-2318.x86_64.rpm jatoba1-libs-1.14.1-2318.x86_64.rpm jatoba1-server-1.14.1-2318.x86_64.rpm jatoba1-securityprofile-1.14.1-2318.x86_64.rpm jatoba1-timescaledb-1.14.1-2318.x86_64.rpm</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

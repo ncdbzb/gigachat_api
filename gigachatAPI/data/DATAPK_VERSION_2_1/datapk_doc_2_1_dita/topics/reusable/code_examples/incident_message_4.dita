@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
- <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
- <topic id="ReusableComponent_vny_nw4_lrb">
-
- <title>incident_message_4</title>
- <body> 
- <codeblock outputclass="language-sql" id="codeblock_b4y_nw4_lrb">${<b> [наименование выводимого поля]</b> }</codeblock> 
-</body> 
-</topic> 

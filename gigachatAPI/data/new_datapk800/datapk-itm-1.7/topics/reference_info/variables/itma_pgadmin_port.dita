@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="itma_pgadmin_port">
-    <glossterm>ITMA_PGADMIN_PORT</glossterm>
-    <glossdef>
-        <p>Порт для подключение администратора postgres.</p>
-    </glossdef>
-</glossentry>

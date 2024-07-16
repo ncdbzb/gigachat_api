@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="udv_synchro_itm_vm">
-    <title>Настройка синхронизации с UDV-ITM-VM</title>
-    <shortdesc/>
-    <taskbody
-        conref="../../../reusable/notes/udv_synchro_itm_vm_info.dita#ReusableComponent_msm_myf_1xb/taskbody_nsm_myf_1xb"/>
-</task>

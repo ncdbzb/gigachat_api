@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="_2tomes">
-    <title>Установка DATAPK ITM-VM с отдельным томом для БД </title>
-    <body
-        conref="../../../reusable/notes/2tomes_info.dita#ReusableComponent_mfr_rwc_zwb/body_nfr_rwc_zwb"/>
-</topic>

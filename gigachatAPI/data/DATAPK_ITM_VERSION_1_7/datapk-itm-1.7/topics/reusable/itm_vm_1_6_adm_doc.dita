@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="whatsnew_doc">
+    <title>Обновления документации</title>
+    <body>
+        <p>Обновления в текущей версии документации:<ul id="ul_ahq_ktv_ktb">
+                <li>Добавлены разделы:<ul id="ul_hns_rxb_nxb">
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_update_1_4_to_1_6_.dita"
+                            /></li>
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_update_version.dita"
+                            /></li>
+                    </ul></li>
+                <li outputclass="">Часть информации со страницы <xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_server_install.dita"
+                    /> перенесена в новые разделы <xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_vm_subd_config.dita"
+                    /> и <xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_iptables_config.dita"
+                    />.</li>
+                <li>Часть информации со страницы <xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/centos_install_datapk_itm_vm.dita"
+                    /> перенесена в новые разделы <xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_subd_config_centos.dita"
+                    /> и <xref
+                        href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_iptables_config_centos.dita"
+                    />.</li>
+                <li>Обновлены разделы:<ul id="ul_edn_xns_hwb">
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_server_install.dita"
+                            /></li>
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/centos_install_datapk_itm_vm.dita"
+                            /></li>
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/itm_m_redos_installation.dita"
+                            /></li>
+                        <li><xref
+                                href="../ITM_M_prepare_work/ITM_M_data_program_download/datapk_itm_vm_centos_8_4_2105.dita"
+                            /></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

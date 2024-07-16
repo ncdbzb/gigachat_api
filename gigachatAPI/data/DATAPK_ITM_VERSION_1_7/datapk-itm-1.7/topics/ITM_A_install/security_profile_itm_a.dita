@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="security_profile">
+    <title>Сбой инициализации модуля управления парольными политиками «securityprofile»</title>
+    <troublebody>
+        <condition>
+            <p>После перезагрузки сервера СУБД или перезапуска службы jatoba-1 в логах СУБД,
+                расположенных в директории <codeph>/var/lib/jatoba/1/data/log</codeph>, содержится
+                ошибка «FATAL: Extension securityprofile need to be initialized by superuser.».</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p>Модуль управления парольными политиками «securityprofile» не был повторно
+                    инициализирован после перезагрузки сервера СУБД или перезапуска службы
+                    jatoba-1.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty>Повторно инициализируйте модуль управления парольными политиками
+                    пользователей СУБД «securityprofile». Для этого:</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Войдите в интерактивный терминал для работы с postgresql под
+                            пользователем <codeph>postgres</codeph>:</cmd>
+                        <info>
+                            <codeblock>sudo -u postgres psql -p 10265 -h 127.0.0.1 -U [имя пользователя] [имя базы]</codeblock>
+                            <p>Где:</p>
+                        </info>
+                        <info>
+                            <ul>
+                                <li><codeph>-u postgres</codeph> — пользователь ОС;</li>
+                                <li><codeph>-p 10265</codeph> — порт, через который будет произведено
+                                    подключение к базе данных;</li>
+                                <li><codeph>-h 127.0.0.1</codeph> — подключение к хосту 127.0.0.1;</li>
+                                <li><codeph>-U [имя пользователя]</codeph> — подключение от имени
+                                    указанного пользователя.</li>
+                            </ul>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Инициализируйте модуль «securityprofile» c помощью команды:</cmd>
+                        <info>
+                            <codeblock>SELECT SECURITYPROFILE.SYNCHRONIZE();</codeblock>
+                        </info>
+                    </step>
+                    <step>
+                        <cmd>Покиньте терминал:</cmd>
+                        <info>
+                            <codeblock>\q</codeblock>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>
+

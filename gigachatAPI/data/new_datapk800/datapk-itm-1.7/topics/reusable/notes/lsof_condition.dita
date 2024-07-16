@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_e2b_ws5_tvb">
-    <title></title>
-    <body><p id="p_h2b_ws5_tvb">При вызове команды <codeph>systemctl status jatoba-1</codeph> возникает ошибка «СООБЩЕНИЕ: не удалось привязаться к адресу IPv4 "172.16.238.1": Cannot assign requested address ПРЕДУПРЕЖДЕНИЕ: не удалось создать принимающий сокет для "172.16.238.1"»</p></body>
-</topic>

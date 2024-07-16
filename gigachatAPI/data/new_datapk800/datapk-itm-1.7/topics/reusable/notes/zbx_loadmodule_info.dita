@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_wnf_nv2_trb">
-    <title>zbx_loadmodule_info</title>
-    <body><div id="div_xnf_nv2_trb"><p>Модули, которые загружаются во время старта. Модули используются для расширения возможностей сервера.</p><p>Форматы: </p><ul id="ul_jpt_qzh_grb"><li>Loadmodule=&lt;module.so></li><li>LoadModule=&lt;path/module.so></li><li>LoadModule=&lt;/abs_path/module.so></li>
-    </ul>
-        <p>Модули должны находиться в директории, указанной в параметре LoadModulePath, либо должен быть указан путь до имени модуля. Если путь до модуля абсолютный (начинается с '/'), LoadModulePath игнорируется. </p>
-    </div></body>
-</topic>

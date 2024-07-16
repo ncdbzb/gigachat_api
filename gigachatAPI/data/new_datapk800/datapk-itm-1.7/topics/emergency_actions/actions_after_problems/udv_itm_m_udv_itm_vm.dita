@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
-<troubleshooting id="udv_itm_m_udv_itm_vm">
-    <title>Не передаются проблемы с UDV-ITM-M на UDV-ITM-VM</title>
-    
-            <troublebody
-                conref="../../reusable/notes/udv_itm_k_itm_vm_info.dita#ReusableComponent_rrb_4sf_1xb/troublebody_srb_4sf_1xb"/>
-           
-</troubleshooting>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
- <title>Настройка учетных данных объектов защиты</title>
- <topicref href="add_prot_obj_cred.dita"/>
- <topicref href="edit_del_cred/edit_del_cred.dita"/>
- <topicref href="import_prot_obj_cred.dita"/>
-</map>

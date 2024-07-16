@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_iy2_5x2_krb">
+    <title>extra_package_step1</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Установите docker 20 версии и пакеты к нему:</cmd>
+                <info>
+                    
+                    <codeblock>yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</codeblock>
+                    <codeblock>yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm</codeblock>
+                    <codeblock>yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/slirp4netns-0.4.3-4.el7_8.x86_64.rpm</codeblock>
+                    <codeblock>yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/fuse3-libs-3.6.1-4.el7.x86_64.rpm</codeblock>
+                    <codeblock>yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/fuse-overlayfs-0.7.2-6.el7_8.x86_64.rpm</codeblock>
+                    <codeblock>yum install docker-ce</codeblock>
+<codeblock>curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

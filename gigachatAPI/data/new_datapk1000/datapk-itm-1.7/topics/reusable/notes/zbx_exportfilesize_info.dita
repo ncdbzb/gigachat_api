@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_l3d_bt2_trb">
-    <title>zbx_exportfilesize_info</title>
-    <body><div id="div_m3d_bt2_trb"><p>Максимальный размер файла экспорта.</p>
-        <note>Используется только для чередования, ротации, если установлен ExportDir.</note>
-    </div></body>
-</topic>

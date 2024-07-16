@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_oyp_bk2_trb">
+    <title>zbx_start_alerters</title>
+    <body><div id="div_pyp_bk2_trb"><p>Количество экземпляров пре-форков процессов оповещений.</p></div></body>
+</topic>

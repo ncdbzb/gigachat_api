@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="extra_pack_installation_redos7_3">
+    <title>Установка дополнительных пакетов в ОС РЕД ОС 7.3</title>
+    <taskbody>
+        <context>Для установки дополнительных пакетов:</context>
+        <steps>
+            <step
+                conref="../../../reusable/notes/copy_dependencies.dita#ReusableComponent_xss_tgc_jtb/step_yss_tgc_jtb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd
+                    conref="../../../reusable/notes/cmd_OS.dita#ReusableComponent_dbb_1hc_jtb/cmd_ebb_1hc_jtb"
+                />
+            </step>
+            <step
+                conref="../../../reusable/notes/unpack_archive_dependencies.dita#ReusableComponent_ecx_chc_jtb/step_gcx_chc_jtb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/go_to_dependencies_docker.dita#ReusableComponent_idm_fhc_jtb/step_jdm_fhc_jtb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/install_packages.dita#ReusableComponent_y4w_hhc_jtb/step_apw_hhc_jtb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/move_docker_compose.dita#ReusableComponent_wxw_pt3_jtb/step_yxw_pt3_jtb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/extra_package_step2.dita#ReusableComponent_w3q_wx2_krb/step_x3q_wx2_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/enable_now_docker.dita#ReusableComponent_ghz_kdh_zsb/step_ihz_kdh_zsb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/extra_package_step4.dita#ReusableComponent_dfv_yx2_krb/step_efv_yx2_krb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

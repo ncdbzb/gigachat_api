@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_skp_dnk_trb">
+    <title>zbx_listenip0_info</title>
+    <body><div id="div_vkp_dnk_trb"><p>IP-адреса, которые слушает агент. При использовании нескольких IP-адресов они
+        перечисляются через запятую без пробелов.</p></div></body>
+</topic>

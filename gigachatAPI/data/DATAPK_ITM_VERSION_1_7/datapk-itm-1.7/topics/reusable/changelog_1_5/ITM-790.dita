@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_szk_1t3_nvb">
+    <title></title>
+    <body><p id="p_vzk_1t3_nvb">Добавлено отображение версии подключенного <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> или Zabbix в следующих окнах:<ul id="ul_s5s_ms3_nvb"><li>«Добавление сервера мониторинга»;</li><li>«Свойства сервера мониторинга»;</li><li>«Изменение свойств сервера мониторинга».</li></ul></p></body>
+</topic>

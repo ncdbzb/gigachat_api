@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_k_whatsnew_doc">
+    <title>Обновления документации</title>
+    <body>
+        <p>Обновления в текущей версии документации:</p>
+        <ul id="ul_gwj_1cn_mwb">
+            <li>Добавлены разделы:<ul id="ul_nf2_rmj_zyb">
+                    <li><xref
+                            href="../requirements/safe_installation/first_configuration/itm_m_connect_web.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/templates/template_configuration/prepare_OM_template.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/templates/template_configuration/template_temperature_linux_prepare_astra_debian.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/templates/template_configuration/template_temperature_prepare_redos_centos.dita"
+                        /></li>
+                    <li><xref href="../usage/monitoring_objects_and_hosts/mass_change_hosts.dita"
+                        /></li>
+                    <li><xref href="../requirements/itmm_cl_certif.dita"/></li>
+                    <li><xref href="../requirements/itmm_root_cert.dita"/></li>
+                    <li><xref href="../requirements/itmm_cert_key_web_interface.dita"/></li>
+                    <li><xref href="../requirements/itmm_cert_admin.dita"/></li>
+                    <li><xref
+                            href="../emergency_actions/actions_after_problems/error_postgresql_jatoba_yaml.dita"
+                        /></li>
+                <li><xref href="../usage/low_level_discovery/low_level_discovery.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/rule_parameters.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/discovery_rule.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/preprocessing.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/custom_macros.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/filter.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/override.dita"/></li>
+                <li><xref href="../usage/low_level_discovery/new_low_level_discovery.dita"/></li>
+                <li><xref href="../usage/templates/template_configuration/universal_template_for_moxa_eds_switches.dita"/></li>
+                </ul></li>
+            <li>Разделы <xref
+                    href="../requirements/safe_installation/first_configuration/template_prepare_psql.dita"
+                /> и <xref
+                    href="../requirements/safe_installation/first_configuration/template_prepare_mysql.dita"
+                /> перенесены в раздел <xref
+                    href="../usage/templates/template_configuration/prepare_OM_template.dita"/>. </li>
+            <li>Добавлены способы устранения нештатных ситуаций:<ul id="ul_czp_5lg_1zb">
+                    <li><xref
+                            href="../emergency_actions/unavailable_agents/invalid_syntax_itm_k.dita"
+                        />.</li>
+                    <li><xref
+                            href="../emergency_actions/actions_after_problems/encoding_err_template_import.dita"
+                        /></li>
+                </ul></li>
+            <li>Изменены разделы:<ul id="ul_as3_zkz_zyb">
+                    <li><xref
+                            href="../requirements/safe_installation/first_configuration/import_templates.dita"
+                        /></li>
+                    <li><xref
+                            href="../usage/templates/template_configuration/itm_k_import_new_templates.dita"
+                        /></li>
+                    <li><xref href="../reference_info/udv_datapk_itm_versions.dita"/></li>
+                    <li><xref
+                            href="../emergency_actions/DB_backup_and_restore/DB_backup_and_restore.dita"
+                        /></li>
+                    <li><xref
+                            href="../emergency_actions/DB_backup_and_restore/unloading_jatoba.dita"
+                        /></li>
+                    <li><xref href="../emergency_actions/DB_backup_and_restore/recovery_jatoba.dita"
+                        /></li>
+                    <li><xref href="../usage/monitoring_objects_and_hosts/host_configuration.dita"
+                        /></li>
+                    <li><xref
+                            href="../requirements/safe_installation/agent_installation/agent_installation_debian.dita"
+                        /></li>
+                    <li><xref
+                            href="../requirements/safe_installation/first_configuration/template_prepare_psql.dita"
+                        /></li>
+                    <li><xref href="../requirements/itmm_root_cert.dita"/></li>
+                    <li><xref href="../requirements/itmm_cert_key_web_interface.dita"/></li>
+                    <li><xref href="../certification/hardware_requirements.dita"/></li>
+                </ul></li>
+            <li>Исключены разделы:<ul id="ul_yzr_2hs_szb">
+                    <li>«Создание резервной копии всех БД и файлов журналов БД Jatoba»</li>
+                    <li>«Восстановление резервной копии всех БД и файлов журналов БД Jatoba»</li>
+                    <li>«Ошибка вида "pg_basebackup: не удалось подключиться к серверу: ВАЖНО: в
+                        pg_hba.conf нет записи, разрешающей подключение для репликации с компьютера
+                        "127.0.0.1" для пользователя "postgres", SSL выкл."»</li>
+                </ul></li>
+            <li>Разделы «Требования к аппаратному обеспечению» и «Требования к программному
+                обеспечению» объединены в раздел «Требования к аппаратному и программному
+                обеспечению».</li>
+        </ul>
+    </body>
+</topic>

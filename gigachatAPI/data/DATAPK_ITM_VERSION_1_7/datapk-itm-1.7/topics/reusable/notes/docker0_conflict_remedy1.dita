@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE troubleshooting  PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_frz_l4h_psb">
+    <title></title>
+    <troublebody>
+        <troubleSolution>
+        <remedy id="remedy_grz_l4h_psb">
+            <title>Способ устранения 1</title>
+            <steps>
+                <step>
+                    <cmd>Остановите все контейнеры:</cmd>
+                    <info>
+                        <codeblock>docker-compose down --remove-orphans</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Просмотрите список маршрутов одной из команд:</cmd>
+                    <info>
+                        <ul id="ul_zf5_3lh_psb">
+                            <li>
+                                <codeblock>route -n</codeblock>
+                                <fig id="fig_ag5_3lh_psb">
+                                    <title>Результат работы команды route -n</title>
+                                    <image href="../../../images/ITM_K_troubleshooting/route_n.jpg"/>
+                                </fig>
+                            </li>
+                            <li>
+                                <codeblock>ip r</codeblock>
+                                <fig id="fig_cg5_3lh_psb">
+                                    <title>Результат работы команды ip r</title>
+                                    <image href="../../../images/ITM_K_troubleshooting/ip_r.jpg" />
+                                </fig>
+                            </li>
+                        </ul>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Убедитесь, что отсутствуют контейнерные подсети, кроме docker0. Для этого просмотрите список контейнерных подсетей командой: </cmd>
+                    <info>
+                        <codeblock>docker network ls</codeblock>
+                    </info>
+                </step>
+                <step>
+                    <cmd>При наличии в списке других подсетей найдите их идентификаторы.</cmd>
+                </step>
+                <step>
+                    <cmd>При необходимости удалите контейнерные подсети, кроме docker0: </cmd>
+                    <info>
+                        <codeblock>docker network rm [идентификатор подсети]</codeblock>
+                        <note type="attention">рекомендуется удалять контейнерную подсеть только в случае проблем с инициализацией.</note>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Создайте файл <codeph>/etc/docker/daemon.json</codeph>.</cmd>
+                </step>
+                <step>
+                    <cmd>Добавьте в файл адрес узла сети и маску сети.</cmd>
+                    <stepxmp>
+                        <codeblock>{
+"bip": "172.17.77.1/24"
+}</codeblock>
+                    </stepxmp>
+                </step>
+                <step>
+                    <cmd>Перезапустите службу docker:</cmd>
+                    <info>
+                        <codeblock>systemctl restart docker</codeblock>
+                    </info>
+                </step>
+                <step conref="container_run.dita#ReusableComponent_prv_5ws_rrb/step_qrv_5ws_rrb"><cmd/></step>
+            </steps>
+        </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

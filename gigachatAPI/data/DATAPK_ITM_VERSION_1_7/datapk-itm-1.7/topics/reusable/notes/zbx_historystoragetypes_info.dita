@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_mvd_nc2_trb">
+    <title>zbx_historystoragetypes_info</title>
+    <body><div id="p_nvd_nc2_trb"><p>Типы значений для отправки в хранилище истории. При использовании нескольких типов значений они
+                перечисляются через запятую без пробелов.</p>
+            <p>
+                <div conref="elasticsearch_note.dita#ReusableComponent_yx5_npl_trb/div_ay5_npl_trb"
+                />
+            </p></div></body>
+</topic>

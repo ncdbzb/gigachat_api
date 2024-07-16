@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_deny_gui_access">
+    <glossterm>ZBX_DENY_GUI_ACCESS</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/zbx_deny_gui_access_info.dita#ReusableComponent_tzl_jgk_trb/div_uzl_jgk_trb"/>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>false </p>
+        <p><b>Разрешенный диапазон значений:</b>true, false</p></glossdef>
+</glossentry>

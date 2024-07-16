@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_wpf_khm_trb">
-    <title>zbx_allowkey_note</title>
-    <body><div id="div_xpf_khm_trb"><note>В сочетании с <cmdname keyref="zbx_denykey"/> можно определить несколько правил сопоставления ключей. Параметры обрабатываются один за другим в соответствии с порядком их появления.</note></div></body>
-</topic>

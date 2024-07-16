@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_v5l_qws_rrb">
+    <title/>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step id="step_w5l_qws_rrb">
+                        <cmd>Остановите работу контейнеров:</cmd>
+                        <info>
+                            <codeblock>docker-compose down</codeblock>
+                        </info>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_iy1_srj_qrb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <info><ul>
+                        <li><ph id="ph_ly1_srj_qrb">XXX.XXX.XXX.XXX</ph></li>
+                    </ul></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

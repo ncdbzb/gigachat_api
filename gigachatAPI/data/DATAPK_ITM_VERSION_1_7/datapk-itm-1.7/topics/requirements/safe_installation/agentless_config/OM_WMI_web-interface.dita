@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="OM_WMI_web_interface">
+    <title>Создание ОМ в веб-интерфейсе для безагентного мониторинга по протоколу WMI</title>
+    <taskbody>
+        <context id="context_w1t_sbn_1vb">После настройки безагентного сбора на узле сети с
+                <abbreviated-form keyref="OS"/> Windows с помощью протокола <ph
+                conref="../../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+            /> добавьте этот узел сети в веб-интерфейсе <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. Для
+            этого:</context>
+        <steps>
+            <step
+                conref="../../../reusable/steps/create_OM_1.dita#ReusableComponent_w3d_cym_1vb/step_x3d_cym_1vb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/steps/create_OM_2.dita#ReusableComponent_j5c_dym_1vb/step_k5c_dym_1vb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>На вкладке «Узел сети» настройте следующие параметры:</cmd>
+                <substeps id="substeps_ikj_jym_1vb">
+                    <substep>
+                        <cmd>Имя узла сети — сетевое имя объекта мониторинга.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Видимое имя — имя объекта мониторинга, которое отображается в
+                            интерфейсе <xref
+                                href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm.html"
+                                format="html" scope="external"><ph outputclass="udvpdf"><term
+                                        keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term
+                                        keyref="datapk_itm"/></ph><ph outputclass="html"><term
+                                        keyref="datapk_itm"/></ph></xref> (необязательное
+                            поле).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Группы — принадлежность объекта мониторинга к группе.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Интерфейсы — сетевые интерфейсы объекта мониторинга:</cmd>
+                        <info>
+                            <ul id="ul_iqt_nym_1vb">
+                                <li>тип интерфейса — укажите значение «Агент»;</li>
+                                <li>IP-адрес — заполните поле;</li>
+                                <li>порт — оставьте значение по умолчанию.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Описание.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Наблюдение через прокси — включите или отключите использование прокси.
+                            Если <abbreviated-form keyref="monitoring_object"/> расположен в сети
+                            уровня <abbreviated-form keyref="to"/>, выберите в выпадающем списке
+                            соответствующий сервер <ph outputclass="udvpdf"><term
+                                    keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_a"/></ph>, расположенный в той же сети
+                                <abbreviated-form keyref="to"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Активировано — режим мониторинга <abbreviated-form
+                                keyref="monitoring_object"/>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Перейдите на вкладку «Шаблоны».</cmd>
+            </step>
+            <step>
+                <cmd>В поле «Присоединение новых шаблонов» начните вводить «Windows WMI». </cmd>
+            </step>
+            <step>
+                <cmd>Выберите «Windows WMI» в выпадающем списке. </cmd>
+            </step>
+            <step
+                conref="../../../reusable/steps/create_OM_add_button.dita#ReusableComponent_oh3_fym_1vb/step_ph3_fym_1vb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь в работоспособности мониторинга подключенного <abbreviated-form
+                        keyref="monitoring_object"/>: </cmd>
+                <substeps id="substeps_idj_kpp_lvb">
+                    <substep>
+                        <cmd>Убедитесь в сетевой доступности <abbreviated-form
+                                keyref="monitoring_object"/>: </cmd>
+                        <info>
+                            <ol id="ol_wbd_rpp_lvb">
+                                <li>Перейдите на страницу <cite keyref="monitoring"/> → <cite keyref="hosts"/>. </li>
+                                <li>Нажмите на подключенный <abbreviated-form
+                                        keyref="monitoring_object"/>.</li>
+                                <li>Выберите в контекстном меню скрипт ping.</li>
+                            </ol>
+                        </info>
+                        <stepresult>Откроется окно с результатом команды ping.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь в получении параметров функционирования подключенного
+                                <abbreviated-form keyref="monitoring_object"/> с использованием
+                            протокола <ph
+                                conref="../../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                            />:</cmd>
+                        <info>
+                            <ol id="ol_fh4_2qp_lvb">
+                                <li>На странице <cite keyref="monitoring"/> → <cite keyref="hosts"/>
+                                    нажмите на подключенный <abbreviated-form
+                                        keyref="monitoring_object"/>.</li>
+                                <li>Выберите в контекстном меню пункт «Последние данные».</li>
+                            </ol>
+                        </info>
+                        <stepresult>Откроется страница «Последние данные» с таблицей, содержащей
+                            список параметров функционирования <abbreviated-form
+                                keyref="monitoring_object"/> с указанием времени последней проверки
+                            и полученного результата. По ссылке «График» можно просмотреть значения
+                            контролируемого параметра в виде графика.</stepresult>
+                    </substep>
+                </substeps>
+                <info>
+                    <note>Индикаторы статуса доступности объекта мониторинга в столбце «Доступность»
+                        на странице <cite keyref="hosts_configuration">«Узлы сети»</cite> при
+                        мониторинге по <ph
+                            conref="../../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                        /> не будут менять цвет. </note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

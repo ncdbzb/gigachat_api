@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
-<troubleshooting id="itm_k_itm_m">
-    <title>Не передаются проблемы с DATAPK ITM-K на DATAPK ITM-VM</title>
-    <troublebody
-        conref="../reusable/notes/udv_itm_k_itm_vm_info.dita#ReusableComponent_rrb_4sf_1xb/troublebody_srb_4sf_1xb"/>
-</troubleshooting>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_xcw_zy1_5rb">
-    <title>log level</title>
-    <body><ul id="ul_zcw_zy1_5rb"><li>0 — основная информация о запуске и остановке процессов <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>;</li><li>1 — критичная информация;</li><li>2 — информация об ошибках;</li><li>3 — предупреждения;</li><li>4 — для отладки;</li><li>5 — расширенная отладка.</li></ul></body>
-</topic>

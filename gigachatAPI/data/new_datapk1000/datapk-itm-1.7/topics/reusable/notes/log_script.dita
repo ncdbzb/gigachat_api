@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="ReusableComponent_cvx_bpn_pvb">
-    <title></title>
-    <taskbody><context id="context_gvx_bpn_pvb"><p>Скрипт <codeph>logs_collector.sh</codeph> собирает и упаковывает в архив следующие данные:<ul id="ul_m1w_sn2_1vb"><li>логи всех контейнеров, представленных в файле <codeph>docker-compose.release.yaml</codeph>;</li><li>логи СУБД Jatoba;</li><li>конфигурационные файлы;</li><li>данные о сетях, например, списки сетевых интерфейсов и сетей Docker, таблицу маршрутизации.</li></ul>Рекомендуется выполнить скрипт перед обращением в техподдержку, чтобы приложить к заявке полученный архив. </p><p>Для выполнения скрипта:</p></context></taskbody>
-</task>

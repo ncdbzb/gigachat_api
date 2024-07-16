@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="dbhost">
-    <glossterm>DBHost</glossterm>
-    <glossdef>Серверное имя базы данных. Доступные значения:<ul>
-            <li>localhost — сокет используется для MySQL;</li>
-            <li>"" — сокет используется для PostgreSQL.</li>
-        </ul><p><b>Значение по умолчанию:</b> localhost</p></glossdef>
-</glossentry>

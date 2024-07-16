@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_end_jxx_qvb">
-    <title></title>
-    <body><p id="p_gnd_jxx_qvb">Добавлен скрипт <codeph>env_generator.sh</codeph> для генерации env-файлов и
-            первичной настройки переменных.</p></body>
-</topic>

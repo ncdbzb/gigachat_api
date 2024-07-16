@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="ReusableComponent_qjd_bqk_syb">
-    <title></title>
-    <taskbody id="taskbody_ujd_bqk_syb"><context><p>Для проверки работы автоматического синхронизатора можно воспользоваться следующими возможностями:</p></context><steps><step><cmd>Просмотреть весь лог:</cmd><info><codeblock>docker logs synchronizer</codeblock></info></step><step><cmd>Вывести последних 10 строк лога синхронизатора:</cmd><info><codeblock>docker logs --tail 10 synchronizer</codeblock></info></step></steps></taskbody>
-</task>

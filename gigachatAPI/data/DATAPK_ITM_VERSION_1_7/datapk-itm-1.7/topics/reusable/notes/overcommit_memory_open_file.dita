@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ih4_d5v_wsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_jh4_d5v_wsb">
+                        <cmd>Откройте для редактирования файл
+                            <codeph>/etc/sysctl.conf</codeph>:</cmd>
+                        <info>
+                            <codeblock>vi /etc/sysctl.conf</codeblock>
+                            <note type="tip">В случае отсутствия файла
+                                    <codeph>/etc/sysctl.conf</codeph> используйте эту же команду для
+                                создания файла и перехода в режим редактирования.</note>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>  
+    </taskbody>
+</task>

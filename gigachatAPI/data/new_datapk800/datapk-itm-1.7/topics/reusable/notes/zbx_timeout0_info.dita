@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_jt1_vqk_trb">
-    <title>zbx_timeout0_info</title>
-    <body><div id="div_kt1_vqk_trb"><p>Максимальное количество секунд, которое можно потратить на обработку.</p></div></body>
-</topic>

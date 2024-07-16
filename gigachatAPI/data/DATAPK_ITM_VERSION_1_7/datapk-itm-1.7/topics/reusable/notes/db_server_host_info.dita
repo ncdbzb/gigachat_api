@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_vdq_p12_trb">
+    <title>db_server_host_info</title>
+    <body>
+      <p id="p_wdq_p12_trb">Адрес сервера в подсети docker0, на котором расположена СУБД с базой данных
+            <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>.</p>
+    </body>
+</topic>

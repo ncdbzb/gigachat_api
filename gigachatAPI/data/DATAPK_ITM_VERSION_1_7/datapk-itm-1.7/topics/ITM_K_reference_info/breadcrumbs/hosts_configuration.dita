@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="hosts_configuration">
+    <glossterm>Узлы сети</glossterm>
+    <glossdef>Подраздел настройки для создания и редактирования узлов сети. Содержит список
+        существующих узлов сети с подробной информацией о них. <fig>
+            <title>Страница «Узлы сети»</title>
+            <div outputclass="html"><image href="../../../images/Pages/configuration_hosts.png">
+                <alt>Страница «Узлы сети»</alt>
+            </image></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/configuration_hosts.png">
+                <alt>Страница «Узлы сети»</alt>
+            </image></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_configuration_hosts.png">
+                <alt>Страница «Узлы сети»</alt>
+            </image></div>
+        </fig>
+    </glossdef>
+</glossentry>

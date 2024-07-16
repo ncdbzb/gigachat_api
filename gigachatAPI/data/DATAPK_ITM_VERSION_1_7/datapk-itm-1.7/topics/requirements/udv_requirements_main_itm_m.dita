@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_requirements_main_itm_m">
+    <title>Установка и настройка</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_i35_bpn_hzb">
+                <li>
+                    <ul id="ul_xgk_dyf_bsb">
+                        <li><xref
+                                href="safe_installation/RedOS_installation/udv_installation_redos.dita"
+                                /><ul id="ul_xlc_xnw_gwb">
+                                <li><xref href="safe_installation/RedOS_installation/ntp.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/RedOS_installation/extra_pack_installation_redos7_3.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/RedOS_installation/redos_package_internet.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/RedOS_installation/udv_itm_m_2tomes.dita"
+                                        /><ul id="ul_gfx_xnw_gwb">
+                                        <li><xref
+                                                href="safe_installation/RedOS_installation/itm_k_mount.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/RedOS_installation/itm_k_subd_config.dita"
+                                            /></li>
+                                    </ul></li>
+                                <li><xref
+                                        href="safe_installation/RedOS_installation/udv_install_itm_m_redos.dita"
+                                    /></li>
+                            </ul></li>
+                        <li><xref href="udv_centos_itmm_install.dita"/><ul id="ul_rdd_d4w_gwb">
+                                <li><xref href="itm_k_install_centos_8.4_2105.dita"/></li>
+                                <li><xref href="itm_k_install_postgresql_v14.dita"/></li>
+                                <li><xref href="itm_k_centos_8_4_install_docker.dita"/></li>
+                                <li><xref href="centos_package_internet.dita"/></li>
+                                <li><xref href="selinux.dita"/></li>
+                                <li><xref href="udv_itm_m_install_server_centos.dita"/></li>
+                            </ul></li>
+                        <li><xref href="udv_itm_m_astra.dita"/><ul id="ul_ytz_yf2_2xb">
+                                <li><xref href="astra_linux_install.dita"/></li>
+                                <li><xref href="astra_linux_config.dita"/><ul id="ul_jkz_df3_gxb">
+                                        <li><xref href="astra_net_config.dita"/></li>
+                                        <li><xref href="astra_ssh_config.dita"/></li>
+                                        <li><xref href="astra_repo_config.dita"/></li>
+                                    </ul></li>
+                                <li><xref href="astra_docker.dita"/></li>
+                                <li><xref href="astra_jatoba.dita"/></li>
+                                <li><xref href="udv_itm_m_astra_linux.dita"/></li>
+                            </ul></li>
+                        <li><xref href="safe_installation/datapk_synchro/datapk_synchro.dita"/><ul
+                                id="ul_iyf_f4w_gwb">
+                                <li><xref
+                                        href="safe_installation/datapk_synchro/create_user_synchro_datapk.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/datapk_synchro/datapk_synchro_one_time.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/datapk_synchro/datapk_synchro_auto.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/datapk_synchro/datapk_synchro_logs.dita"
+                                    /></li>
+                            </ul></li>
+                        <li><xref
+                                href="safe_installation/first_configuration/udv_synchro_itm_vm.dita"
+                            /></li>
+                        <li><xref
+                                href="safe_installation/first_configuration/first_configuration.dita"
+                                /><ul id="ul_qdl_cpw_gwb">
+                                <li><xref
+                                        href="safe_installation/first_configuration/itm_m_connect_web.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/first_configuration/user_configurations_safe.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/first_configuration/import_templates.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/first_configuration/udv_add_templates_to_host_0.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/first_configuration/create_regexp.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/first_configuration/synchro_configuration_web.dita"
+                                    /></li>
+                            </ul></li>
+                        <li><xref
+                                href="safe_installation/agent_installation/agents_installation.dita"
+                                /><ul id="ul_gmd_kpw_gwb">
+                                <li><xref
+                                        href="safe_installation/agent_installation/agent_installation_windows.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/agent_installation/agent_configuration_windows.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/agent_installation/agent_installation_windows_2000.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/agent_installation/agent_installation_centos_7.dita"
+                                    /></li>
+                                <li><xref
+                                        href="safe_installation/agent_installation/agent_installation_debian.dita"
+                                    /></li>
+                            </ul></li>
+                        <li><xref href="safe_installation/agentless_config/agentless_config.dita"
+                                /><ul id="ul_qcc_mpw_gwb">
+                                <li><xref
+                                        href="safe_installation/agentless_config/itm_k_agentless_snmp.dita"
+                                        /><ul id="ul_x33_mpw_gwb">
+                                        <li><xref
+                                                href="safe_installation/agentless_config/agentless_snmp.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/agent_installation_centos_snmp.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/itm_k_centos_snmp_v3.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/snmp_windows_10_windows_7.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/windows_server_2012_snmp_v2.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/itm_k_windows_2000_snmp.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/itm_k_windows_xp_agentless.dita"
+                                            /></li>
+                                    </ul></li>
+                                <li><xref
+                                        href="safe_installation/agentless_config/itm_k_agentless_wmi.dita"
+                                        /><ul id="ul_agv_npw_gwb">
+                                        <li><xref
+                                                href="safe_installation/agentless_config/agentless_consolidation.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/agentless_windows_wmi.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/check_wmi.dita"
+                                            /></li>
+                                        <li><xref
+                                                href="safe_installation/agentless_config/OM_WMI_web-interface.dita"
+                                            /></li>
+                                    </ul></li>
+                            </ul></li>
+                        <li><xref href="udv_update_itm_m_to_1_6.dita"/></li>
+                        <li><xref href="../reusable/udv_itm_m_update_1_4_1_5_1_6_1.dita"/></li>
+                        <li><xref href="../reusable/udv_itm_m_update_1_6_to_1_6_1.dita"/></li>
+                        <li><xref href="itmm_cl_certif.dita"/><ul id="ul_gfy_nng_rzb">
+                                <li><xref href="itmm_root_cert.dita"/></li>
+                                <li><xref href="itmm_cert_key_web_interface.dita"/></li>
+                                <li><xref href="itmm_cert_admin.dita"/></li>
+                            </ul></li>
+                        <li><xref href="safe_environment_config.dita"/></li>
+                        <li><xref href="mib.dita"/></li>
+                        <li><xref href="encryption_config.dita"/><ul id="ul_cj5_b2n_bsb">
+                                <li><xref href="udv_encryption_passive_proxy.dita"/></li>
+                                <li><xref href="udv_itm_m_config_encryption_agents.dita"/></li>
+                            </ul></li>
+                        <li><xref href="ITM-K_LDAP.dita"/></li>
+                        <li><xref href="itmk_config_notifications.dita"/></li>
+                    </ul>
+                </li>
+            </ul></p>
+    </body>
+</topic>

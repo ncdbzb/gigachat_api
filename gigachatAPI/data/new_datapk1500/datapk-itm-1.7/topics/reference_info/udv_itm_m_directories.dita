@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="udv_itm_m_directories">
-    <title>Структура директорий UDV-ITM-M</title>
-    
-            <body
-                conref="../reusable/notes/udv_itm_k_directories_info.dita#ReusableComponent_of5_w4f_1xb/body_sf5_w4f_1xb"
-            />
-</topic>

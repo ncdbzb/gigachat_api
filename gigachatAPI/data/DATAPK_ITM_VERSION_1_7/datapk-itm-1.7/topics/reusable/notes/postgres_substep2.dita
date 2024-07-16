@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_rlv_54r_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_ulv_54r_tsb"><cmd>исправьте значения переменных, чтобы они соответствовали представленным ниже:</cmd><info><codeblock>listen_addresses = '127.0.0.1,172.16.238.1'
+                        port = 10265                          </codeblock><note>IP-адреса должны быть перечислены через запятую без пробелов.</note></info></substep>
+                </substeps>
+            </step>
+        </steps>
+        </taskbody>
+</task>

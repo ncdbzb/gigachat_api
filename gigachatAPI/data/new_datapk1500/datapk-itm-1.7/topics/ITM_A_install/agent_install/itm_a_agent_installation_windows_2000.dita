@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="agent_installation_windows_2000">
-    <title>Установка агента на ОС Windows 2000</title>
-    
-        <taskbody
-            conref="../../reusable/agents/agent_win_2000.dita#ReusableComponent_zrt_1ks_x5b/taskbody_bst_1ks_x5b"/>
-</task>

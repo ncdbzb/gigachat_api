@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
- <title>Настройка локальных реквизитов и домашней сети</title>
- <topicref href="cred_and_network.dita">
- <topicref href="edit_datapk_info.dita"/>
- <topicref href="home_network.dita"/>
- </topicref>
-</map>

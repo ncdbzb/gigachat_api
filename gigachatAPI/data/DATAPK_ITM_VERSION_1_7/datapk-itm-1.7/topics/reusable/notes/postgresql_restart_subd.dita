@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_bbx_pzd_m5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_cbx_pzd_m5b">
+                        <cmd>Перезапустите СУБД для применения настроек:</cmd>
+                        <info>
+                            <codeblock>systemctl restart jatoba-1*</codeblock>
+                        </info>
+                    </substep>  
+                </substeps>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

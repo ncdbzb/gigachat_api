@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_enp_btc_jxb">
-    <title></title>
-    <body><p id="p_knp_btc_jxb">Исправлена ошибка, при которой строки в таблице на странице <cite keyref="itm_m_page_it_services"/> не сохранялись в свернутом состоянии после перезагрузки страницы.</p></body>
-</topic>

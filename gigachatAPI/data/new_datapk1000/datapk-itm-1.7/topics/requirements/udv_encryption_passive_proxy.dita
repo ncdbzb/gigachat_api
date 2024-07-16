@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="udv_encryption_passive_proxy">
-    <title>Настройка шифрования между UDV-ITM-M и UDV-ITM-RM в режиме пассивного прокси</title>
-    <taskbody
-        conref="../reusable/notes/udv_encryption_passive_proxy_info.dita#ReusableComponent_xmy_cxf_1xb/taskbody_zmy_cxf_1xb"/>
-    
-</task>

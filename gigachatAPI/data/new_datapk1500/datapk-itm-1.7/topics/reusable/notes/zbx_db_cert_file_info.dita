@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_tbk_51k_trb">
-    <title>zbx_db_cert_file_info</title>
-    <body><div id="div_wbk_51k_trb"><p>Полный путь к файлу, содержащему сертификат сервера для аутентификации в базе данных.</p></div></body>
-</topic>

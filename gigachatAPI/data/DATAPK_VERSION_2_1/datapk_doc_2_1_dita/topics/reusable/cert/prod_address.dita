@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic
-  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="prod_address">
-    <title>Адрес производства</title>
-    <body>
-        <p><ph id="ph_prod_address">620100, г. Екатеринбург, ул. Ткачей, д. 6</ph></p>
-    </body>
-</topic>

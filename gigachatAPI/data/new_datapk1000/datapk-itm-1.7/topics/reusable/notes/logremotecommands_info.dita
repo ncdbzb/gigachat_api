@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_nf3_tx1_5tb">
-    <title></title>
-    <body><p id="p_of3_tx1_5tb">Включение журналирования выполняемых shell-команд как предупреждений. <ul id="ul_xgy_qx1_5tb"><li>0 — отключено;</li><li>1 — включено.</li></ul></p></body>
-</topic>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="buffersend">
-    <glossterm>BufferSend</glossterm>
-    <glossdef><p
-            conref="../../reusable/notes/buffersend_info.dita#ReusableComponent_y3l_w45_ywb/p_z3l_w45_ywb"
-            /><b>Диапазон допустимых значений:</b> 1-3600<p><b>Значение по умолчанию:</b>
-        5</p></glossdef>
-</glossentry>

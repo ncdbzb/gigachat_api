@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_k31_mtk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_l31_mtk_tsb">
+                <cmd>Проинициализируйте установленную версию СУБД. Для этого:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Перейдите в директорию расположения исполняемых файлов СУБД, выполнив
+                            команду:</cmd>
+                        <info>
+                            <codeblock>cd /usr/jatoba-1/bin</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Выполните команду инициализации СУБД:</cmd>
+                        <info>
+                            <codeblock>./jatoba-setup initdb jatoba-1</codeblock>
+                            <fig>
+                                <title>Инициализация СУБД</title>
+                                <image
+                                    href="../../../images/safe_installation/safe_installation_redOS_2_2.png"
+                                />
+                            </fig>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        </taskbody>
+</task>

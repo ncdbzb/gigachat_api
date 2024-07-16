@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_oy2_zbh_mxb">
-    <title></title>
-    <body><p id="p_py2_zbh_mxb">На странице <cite keyref="itm_m_page_configuration"/> → <cite keyref="itm_m_page_config_general"/>: <ul id="ul_ckb_v1h_mxb"><li>добавлена возможность настройки периода хранения истории в журнале событий;</li><li>раздел «Общие параметры» переименован в «Параметры пользовательской сессии»;</li><li>поле «Блокировка сеанса, мин:» переименовано в «Период неактивности пользователя для блокировки
-                    сеанса, мин».</li></ul></p></body>
-</topic>

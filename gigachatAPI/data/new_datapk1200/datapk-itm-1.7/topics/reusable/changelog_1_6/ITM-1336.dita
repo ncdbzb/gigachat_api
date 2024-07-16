@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_rbn_snd_jxb">
-    <title></title>
-    <body><p id="p_tbn_snd_jxb">Исправлена ошибка синхронизации с сервером мониторинга при некорректном
-            значении поля «Порт» у объекта мониторинга. Теперь некорректное значение поля «Порт» при
-            синхронизации заменяется на пустое значение, в логи записывается ошибка, синхронизация
-            продолжается.</p></body>
-</topic>

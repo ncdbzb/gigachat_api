@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_server_name_err_remedy">
+    <title>add_server_name_err_remedy</title>
+    <taskbody>
+        <steps id="add_server_name_err_remedy_reuse">
+            <step>
+                <cmd>Перейдите в режим командной строки <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. </cmd>
+            </step>
+            <step>
+                <cmd>Задайте серверу <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> новое значение hostname без
+                    использования заглавных букв:</cmd>
+                <info>
+                    <codeblock>hostnamectl set-hostname [name]</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Перезапустите сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> для применения
+                    значения hostname:</cmd>
+                <info>
+                    <codeblock>reboot</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>После запуска сервера перейдите в рабочий каталог <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/datapkitm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Перезагрузите и пересоздайте контейнер synchronizer:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d --force-recreate synchronizer</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что все контейнеры запущены:</cmd>
+                <info>
+                    <codeblock>docker ps</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>При необходимости запустите контейнеры с помощью команды:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

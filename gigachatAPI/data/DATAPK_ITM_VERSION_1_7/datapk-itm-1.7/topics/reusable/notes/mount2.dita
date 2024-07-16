@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dcv_m1p_psb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_ecv_m1p_psb">
+                <cmd>Просмотрите существующие диски:</cmd>
+                <info>
+                    <codeblock>fdisk -l</codeblock>
+                </info>
+                <stepresult>В выведенном списке должно быть устройство «Диск /dev/sdb».</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

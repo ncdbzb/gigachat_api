@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>Настройка шифрования соединений между DATAPK ITM-K и агентом DATAPK ITM-A</title>
-    <topicref href="config_encryption_datapk_itm_k_agents.dita"/>
-    <topicref href="encryption_passive_proxy.dita"/>
-</map>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_g3x_qqg_yyb">
-    <title></title>
-    <body><p id="p_h3x_qqg_yyb">На ОС Windows служба агента версии 2 не запускается либо останавливается сразу после запуска. В логах агента версии 2 содержится ошибка «cannot load os dependent items: strconv.Atoi: parsing "имя_службы": invalid syntax».</p></body>
-</topic>

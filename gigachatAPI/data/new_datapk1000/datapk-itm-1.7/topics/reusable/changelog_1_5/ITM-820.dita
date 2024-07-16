@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_nbx_kw1_pvb">
-    <title></title>
-    <body><p id="p_pbx_kw1_pvb">Изменены названия полей в интерфейсе на странице <cite keyref="itm_k_config_hosts_card"/>:<ul id="ul_xfy_fv1_pvb"><li>«Заполнение поля инвентаря узла сети» на «Заполнение инвентарного поля узла сети» на вкладке редактирования элемента данных;</li><li>«Этикетка» на «ID объекта в DATAPK» на вкладке «Инвентаризация»;</li><li>«Этикетка владельца» на «ID DATAPK» на вкладке «Инвентаризация».</li></ul></p></body>
-</topic>

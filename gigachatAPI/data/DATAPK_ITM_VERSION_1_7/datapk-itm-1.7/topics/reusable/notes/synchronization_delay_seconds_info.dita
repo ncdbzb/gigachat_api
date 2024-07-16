@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ewb_gck_xsb">
+    <title></title>
+    <body>
+        <p id="p_fwb_gck_xsb">Периодичность в секундах, с которой будет проводиться
+                синхронизация.<note>Комментирование этой строки не приводит к выключению
+                синхронизатора, а устанавливает значение по умолчанию.</note></p>
+    </body>
+</topic>

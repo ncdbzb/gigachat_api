@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="loadmodule_zabbix_agentd">
+    <glossterm>LoadModule</glossterm>
+    <glossdef>Модули, которые загружаются во время старта и используются для расширения возможностей
+        сервера. Формат: <codeph>Loadmodule=&lt;module.so></codeph>. Модули должны находиться в
+        папке указанной в параметре LoadModulePath. Допускается добавлять несколько параметров
+        LoadModule.</glossdef>
+</glossentry>

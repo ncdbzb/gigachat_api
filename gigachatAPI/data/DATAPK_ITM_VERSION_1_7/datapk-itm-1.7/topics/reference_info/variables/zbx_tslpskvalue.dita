@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="zbx_tslpskvalue">
+    <glossterm>ZBX_TLSPSKVALUE</glossterm>
+    <glossdef>
+        <p>Значение_ключа_шифрования.</p>
+    </glossdef>
+</glossentry>

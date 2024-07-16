@@ -1,7 +1,4 @@
 import zipfile
-from typing import Optional
-
-import yaml
 import os
 
 
@@ -14,28 +11,10 @@ async def get_doc_length(path_doc: str) -> int:
     with open(path_doc, 'r', encoding='utf-8') as file:
         content = file.read()
         return len(content)
-
-
-async def get_tokens(s1: int, s2: int, ln: Optional[int] = 0) -> int:
-    sm = sum((s1, s2, ln))
-    return (sm // 3 + sm // 4) // 2
-
-
-async def len_yaml(path_yaml: str) -> int:
-    with open(path_yaml, encoding='utf-8') as fh:
-        dict_data = yaml.safe_load(fh)
-        result = sum(map(len, filter(None, dict_data.values())))
-        return result
     
 
-async def get_actual_doc_list():
-    data_dir = "gigachatAPI/data"
-
-    all_items = os.listdir(data_dir)
-
-    filtered_dirs = [
-        item for item in all_items
-        if os.path.isdir(os.path.join(data_dir, item)) and item not in "chroma, test_chroma"
-    ]
-
-    return filtered_dirs
+def rename_directory(old_name: str, new_name: str) -> None:
+    old_path = os.path.join('gigachatAPI', 'data', old_name)
+    new_path = os.path.join('gigachatAPI', 'data', new_name)
+    os.rename(old_path, new_path)
+    return

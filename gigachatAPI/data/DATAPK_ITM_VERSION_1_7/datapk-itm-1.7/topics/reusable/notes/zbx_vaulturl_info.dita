@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_qfw_1x2_trb">
+    <title>ZBX_VAULTURL_info</title>
+    <body><div id="div_rfw_1x2_trb"><p>URL-адрес HTTP[S]-сервера хранилища. </p>
+            <p>
+                <div conref="zbx_vaulturl.dita#ReusableComponent_whc_dzs_trb/div_xhc_dzs_trb"/>
+            </p></div></body>
+</topic>

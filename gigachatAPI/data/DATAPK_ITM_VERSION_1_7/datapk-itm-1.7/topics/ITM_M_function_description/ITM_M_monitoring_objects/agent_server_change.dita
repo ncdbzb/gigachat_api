@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agent_server_change">
+    <title>Изменение названия ТО сервера удаленного мониторинга</title>
+    <taskbody
+        conref="../../reusable/notes/agent_server_change_info.dita#ReusableComponent_xxw_wy5_1xb/taskbody_yxw_wy5_1xb"/>
+</task>

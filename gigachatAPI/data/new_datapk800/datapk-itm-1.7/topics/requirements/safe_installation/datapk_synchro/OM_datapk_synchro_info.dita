@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="OM_datapk_synchro_info">
-    <title>Объекты мониторинга, полученные в результате автоматической синхронизации</title>
-    <body conref="../../../reusable/synchro_datapk/datapk_synchro_information.dita#ReusableComponent_q2j_pqk_syb/body_s2j_pqk_syb"/>
-</topic>

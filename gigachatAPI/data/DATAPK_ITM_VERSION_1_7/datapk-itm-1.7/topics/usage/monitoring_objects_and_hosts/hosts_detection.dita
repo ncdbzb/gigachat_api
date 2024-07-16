@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hosts_detection">
+    <title>Автоматическое обнаружение узлов сети</title>
+    <body>
+        <section>
+            <p><ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> осуществляет автоматическое обнаружение <term
+                    keyref="monitoring_object">объектов мониторинга</term> путем сканирования
+                диапазона IP-адресов, указанного в правилах сетевого обнаружения. Доступна настройка
+                расписания сканирования для каждого правила обнаружения. Подробнее см. в разделе
+                    <xref href="OM_auto_detection.dita"/>. <note
+                    conref="../../reusable/notes/autodetection.dita#ReusableComponent_fxr_fgn_ytb/note_gxr_fgn_ytb"
+                /></p>
+            <p>Каждое правило обнаружения имеет заданный набор проверок, которые будут выполняться
+                по диапазону IP-адресов. Доступны следующие проверки: <ph
+                    conref="../../reusable/protocol_names/SSH.dita#ReusableComponent_ujf_ttf_4yb/ph_vjf_ttf_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/LDAP.dita#ReusableComponent_jnq_hm4_pyb/ph_knq_hm4_pyb"
+                />, <ph
+                    conref="../../reusable/protocol_names/SMTP.dita#ReusableComponent_mss_sdg_4yb/ph_nss_sdg_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/FTP.dita#ReusableComponent_czr_lsf_4yb/ph_dzr_lsf_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/HTTP.dita#ReusableComponent_qbp_fzf_4yb/ph_rbp_fzf_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/HTTPS.dita#ReusableComponent_l2g_xwf_4yb/ph_m2g_xwf_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/POP.dita#ReusableComponent_avx_vnf_4yb/ph_bvx_vnf_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/NNTP.dita#ReusableComponent_bdq_c4f_4yb/ph_cdq_c4f_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/IMAP.dita#ReusableComponent_ez1_m4f_4yb/ph_fz1_m4f_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/TCP.dita#ReusableComponent_s2p_3gl_4yb/ph_t2p_3gl_4yb"
+                />, <ph
+                    conref="../../reusable/protocol_names/Telnet.dita#ReusableComponent_rsc_w4f_4yb/ph_tsc_w4f_4yb"
+                />, Zabbix agent, <ph
+                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                />v1 agent, <ph
+                    conref="../../reusable/protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"
+                /> agent, <ph
+                    conref="../../reusable/protocol_names/SNMPv3.dita#ReusableComponent_pmm_t5l_4yb/ph_qmm_t5l_4yb"
+                /> agent, <ph
+                    conref="../../reusable/protocol_names/ICMP.dita#ReusableComponent_rk1_vpf_4yb/ph_sk1_vpf_4yb"
+                /> ping.</p>
+            <p>Проверки обрабатываются независимо друг от друга. Если какие-либо проверки не находят
+                сервис или завершаются с ошибкой, то другие проверки все равно выполняются.</p>
+            <p>В результате проверки каждого узла сети и сервиса генерируется событие обнаружения.
+                Типы событий представлены в таблице <xref href="#hosts_detection/table_xfq_g2t_frb"/>. </p>
+            <table id="table_xfq_g2t_frb" frame="all" colsep="1" rowsep="1">
+                <title>Типы событий обнаружения узлов сети и состояния сервисов</title>
+                <tgroup cols="2">
+                    <colspec colnum="1" colname="col1"/>
+                    <colspec colnum="2" colname="col2"/>
+                    <thead>
+                        <row>
+                            <entry>Событие</entry>
+                            <entry>Описание проверки сервиса</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Сервис обнаружен</entry>
+                            <entry>Сервис доступен после того, как был недоступен, либо сервис
+                                обнаружен первый раз</entry>
+                        </row>
+                        <row>
+                            <entry>Сервис доступен</entry>
+                            <entry>
+                                <p>Текущий статус сервиса: доступен</p>
+                                <p>Предыдущий статус: доступен</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Сервис потерян</entry>
+                            <entry>Текущий статус сервиса: недоступен<p>Предыдущий статус:
+                                    доступен</p></entry>
+                        </row>
+                        <row>
+                            <entry>Сервис недоступен</entry>
+                            <entry>
+                                <p>Текущий статус сервиса: недоступен</p>
+                                <p>Предыдущий статус: недоступен</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Узел сети обнаружен</entry>
+                            <entry>
+                                <p>Текущий статус: хотя бы один сервис на узле сети доступен</p>
+                                <p>Предыдущий статус: все сервисы узла сети недоступны</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Узел сети доступен</entry>
+                            <entry>
+                                <p>Текущий статус: хотя бы один сервис на узле сети доступен</p>
+                                <p>Предыдущий статус: хотя бы один сервис на узле сети доступен</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Узел сети потерян</entry>
+                            <entry>
+                                <p>Текущий статус: хотя бы один сервис на узле сети доступен</p>
+                                <p>Предыдущий статус: все сервисы на узле сети недоступны</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Узел сети недоступен</entry>
+                            <entry>
+                                <p>Предыдущий статус: все сервисы на узле сети недоступны</p>
+                                <p>Текущий статус: все сервисы на узле сети недоступны</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <title>Создание интерфейсов при добавлении узлов сети</title>
+            <p>При автоматическом добавлении узлов сети им будут присвоены интерфейсы в соответствии
+                со следующими правилами:</p>
+            <ul id="ul_zfq_g2t_frb">
+                <li>Если обнаружен сервис, то будет создан соответствующий интерфейс. <p>Например,
+                        если проверка на обнаружение сервиса <ph
+                            conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        /> прошла успешно, то будет создан <ph
+                            conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-интерфейс.</p></li>
+                <li>Если узел сети отвечает и на запросы агента, и на запросы <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />, будут созданы интерфейсы обоих типов.</li>
+                <li>Если критерием уникальности — проверка «Zabbix агент» или «<ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    /> агент», первый найденный интерфейс, который будет создан для узла сети, будет
+                    интерфейсом по умолчанию. Другие IP-адреса добавляются дополнительными
+                    интерфейсами.</li>
+                <li>Если узел сети отвечает только на проверки агентов, для него будет создан только
+                    агентский интерфейс. Если в дальнейшем узел сети начнет отвечать на <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />, дополнительно будет создан <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />-интерфейс.</li>
+                <li>Если 3 различных узла сети были обнаружены по критерию уникальности «IP», а
+                    затем критерий уникальности в правиле обнаружения изменили на другой и при этом
+                    результат нового критерия уникальности одинаковый для узлов сети A, B и C, то B
+                    и C будут созданы, как дополнительные интерфейсы к первому узлу сети А.
+                    Доступность IP-адресов B и C не будет проверяться. На странице <cite
+                        keyref="monitoring"/> → <cite keyref="detection"/> в колонке «Обнаруженное
+                    устройство» будут отображаться все добавленные интерфейсы A, B и C, а в колонке
+                    «Наблюдаемый узел сети» — только первый созданный узел сети A. </li>
+            </ul>
+        </section>
+        <section id="section_rb4_mtm_ytb">
+            <title>Действия обнаружения</title>
+            <p>На основе событий обнаружения можно создать соответствующие действия, такие как:</p>
+            <ul id="ul_yfq_g2t_frb">
+                <li>отправить сообщение;</li>
+                <li>удаленная команда;</li>
+                <li>добавить узел сети;</li>
+                <li>удалить узел сети;</li>
+                <li>добавить в группу узлов сети;</li>
+                <li>удалить из группы узлов сети;</li>
+                <li>присоединить к шаблону;</li>
+                <li>отсоединить от шаблона;</li>
+                <li>активировать узел сети;</li>
+                <li>деактивировать узел сети;</li>
+                <li>установить режим инвентарных данных узлов сети.</li>
+            </ul>
+            <p>Настройка действий, которые будут выполняться в соответствии с каждым событием,
+                описана в разделе <xref href="itm_k_config_actions_detection.dita"/>.</p>
+        </section>
+    </body>
+</topic>

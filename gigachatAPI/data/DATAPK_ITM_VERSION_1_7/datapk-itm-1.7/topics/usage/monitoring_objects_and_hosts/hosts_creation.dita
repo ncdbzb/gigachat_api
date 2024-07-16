@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="hosts_creation">
+    <title>Создание узлов сети вручную</title>
+    <taskbody><prereq/>
+        <context>Чтобы создать новый узел сети:</context>
+        <steps>
+            <step
+                conref="../../reusable/steps/create_OM_1.dita#ReusableComponent_w3d_cym_1vb/step_x3d_cym_1vb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/steps/create_OM_2.dita#ReusableComponent_j5c_dym_1vb/step_k5c_dym_1vb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Заполните следующие параметры:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Имя узла сети — сетевое имя объекта мониторинга.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Видимое имя — имя объекта мониторинга, которое отображается в
+                            интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm"/></ph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Группы — принадлежность объекта мониторинга к группе.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Интерфейсы — сетевые интерфейсы объекта мониторинга. Для выбора
+                            интерфейса:</cmd>
+                        <info>
+                            <ol id="ol_mnp_hpc_syb">
+                                <li>Нажмите на кнопку «Добавить».</li>
+                                <li>В выпадающем списке выберите тип интерфейса.<fig
+                                        id="fig_odh_qy5_tyb">
+                                        <title>Выбор типа интерфейса</title>
+                                        <image href="../../../images/ITM_K_usage/choose_OM_interface.png"/>
+                                    </fig></li>
+                                <li>Независимо от выбранного типа интерфейса заполните следующие
+                                        параметры:<ul id="ul_m5h_4pc_syb">
+                                        <li>IP-адрес;</li>
+                                        <li>DNS-имя;</li>
+                                        <li>Способ подключения (через IP или DNS);</li>
+                                        <li>Порт.</li>
+                                    </ul></li>
+                                <li>Если выбран тип «SNMP», дополнительно заполните следующие
+                                        параметры:<ul id="ul_dgf_vpc_syb">
+                                        <li>Версия SNMP;</li>
+                                        <li>Для версий SNMPv2 и SNMPv1 укажите SNMP community;</li>
+                                        <li>Для версии SNMPv3 укажите:<ul id="ul_qvb_zqc_syb">
+                                                <li>Имя контекста — имя для определения элемента
+                                                  данных в SNMP-подсети;</li>
+                                                <li>Имя безопасности — наименование учетной записи
+                                                  для доступа по SNMPv3</li>
+                                                <li>Уровень безопасности:<ul id="ul_ivq_2rc_syb">
+                                                  <li><b>noAuthNoPriv</b> — ни аутентификация, ни
+                                                  протокол безопасности не используются.</li>
+                                                  <li><b>AuthNoPriv</b> — используется протокол
+                                                  аутентификации, протокол безопасности нет. Для
+                                                  этого уровня безопасности необходимо выбрать
+                                                  протокол аутентификации и задать пароль
+                                                  аутентификации. </li>
+                                                  <li><b>AuthPriv</b> — используются и протокол
+                                                  аутентификации, и протокол безопасности. Для этого
+                                                  уровня безопасности необходимо выбрать протокол
+                                                  аутентификации и задать пароль аутентификации, а
+                                                  также выбрать протокол безопасности и ключевую
+                                                  фразу безопасности.</li>
+                                                  </ul></li>
+                                            </ul></li>
+                                        <li>Чтобы отменить запрос всех элементов данных SNMP
+                                            одновременно, снимите чекбокс «Использовать массовые
+                                            запросы».</li>
+                                    </ul></li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Описание.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Наблюдение через прокси — включение или отключение использования
+                            прокси. Если <abbreviated-form keyref="monitoring_object"/> расположен в
+                            сети уровня <abbreviated-form keyref="to"/>, то необходимо выбрать в
+                            выпадающем списке соответствующий сервер <ph outputclass="udvpdf"><term
+                                    keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_a"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_a"/></ph>, расположенный в той же сети
+                                <abbreviated-form keyref="to"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Активировано — режим мониторинга <abbreviated-form
+                                keyref="monitoring_object"/>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Перейдите на вкладку «Шаблоны» и добавьте подходящий шаблон для сбора данных.
+                </cmd>
+            </step>
+            <step
+                conref="../../reusable/steps/create_OM_add_button.dita#ReusableComponent_oh3_fym_1vb/step_ph3_fym_1vb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Убедитесь в работоспособности мониторинга подключенного <abbreviated-form
+                        keyref="monitoring_object"/>: </cmd>
+                <substeps id="substeps_nsy_psj_syb">
+                    <substep>
+                        <cmd>Убедитесь в сетевой доступности <abbreviated-form
+                                keyref="monitoring_object"/>: </cmd>
+                        <info>
+                            <ol id="ol_osy_psj_syb">
+                                <li>Перейдите на страницу <cite keyref="monitoring"/> → <cite
+                                        keyref="hosts"/>. </li>
+                                <li>Нажмите на подключенный <abbreviated-form
+                                        keyref="monitoring_object"/>.</li>
+                                <li>Выберите в контекстном меню скрипт ping.</li>
+                            </ol>
+                        </info>
+                        <stepresult>Откроется окно с результатом команды ping.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Убедитесь в получении параметров функционирования подключенного
+                                <abbreviated-form keyref="monitoring_object"/>:</cmd>
+                        <info>
+                            <ol id="ol_psy_psj_syb">
+                                <li>На странице <cite keyref="monitoring"/> → <cite keyref="hosts"/>
+                                    нажмите на подключенный <abbreviated-form
+                                        keyref="monitoring_object"/>.</li>
+                                <li>Выберите в контекстном меню пункт «Последние данные».</li>
+                            </ol>
+                        </info>
+                        <stepresult>Откроется страница «Последние данные» с таблицей, содержащей
+                            список параметров функционирования <abbreviated-form
+                                keyref="monitoring_object"/> с указанием времени последней проверки
+                            и полученного результата. По ссылке «График» можно просмотреть значения
+                            контролируемого параметра в виде графика.</stepresult>
+                    </substep>
+                </substeps>
+                <info>
+                    <note>Индикаторы статуса доступности объекта мониторинга в столбце «Доступность»
+                        на странице <cite keyref="hosts_configuration">«Узлы сети»</cite> при
+                        мониторинге по <ph
+                            conref="../../reusable/protocol_names/WMI.dita#ReusableComponent_cgz_tkf_4yb/ph_dgz_tkf_4yb"
+                        /> не будут менять цвет. </note>
+                </info>
+            </step>
+        </steps>
+        
+        
+        </taskbody>
+</task>

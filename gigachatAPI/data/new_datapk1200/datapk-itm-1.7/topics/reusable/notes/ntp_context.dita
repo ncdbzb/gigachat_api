@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="ReusableComponent_p3z_qjk_qrb">
-    <title>ntp_context</title>
-    <taskbody>
-        <context id="context_axr_z3k_qrb"><p>Для настройки NTP-клиента:</p></context>
-    </taskbody>
-</task>

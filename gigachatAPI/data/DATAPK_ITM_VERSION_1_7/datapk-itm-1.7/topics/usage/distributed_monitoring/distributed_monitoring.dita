@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="distributed_monitoring">
+    <title>Распределенный мониторинг</title>
+    <body>
+        <div
+            conref="../../reusable/notes/distributed_monitoring_info.dita#ReusableComponent_dd4_w2m_1xb/div_fd4_w2m_1xb"/>
+        <p>В этом разделе:</p>
+        <ul id="ul_usw_lck_hrb">
+            <li><xref href="agent_server/agent_server.dita"/></li>
+            <li><xref href="agent_server/agent_server_configuration.dita"/></li>
+        </ul>
+    </body>
+</topic>

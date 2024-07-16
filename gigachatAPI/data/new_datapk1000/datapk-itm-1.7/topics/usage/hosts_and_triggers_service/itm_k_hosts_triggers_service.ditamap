@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>Обслуживание узлов сети и триггеров</title>
-    <topicref href="service_period_configuration.dita"/>
-    <topicref href="service_status_review.dita"/>
-</map>

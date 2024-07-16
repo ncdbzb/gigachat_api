@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="itmvm_datapkitm_versions">
-    <title>Совместимость компонентов решения для DATAPK ITM-VM</title>
-    <body
-        conref="../reusable/notes/udv_itmvm_versions_info.dita#ReusableComponent_wr4_hbd_zwb/body_xr4_hbd_zwb"/>
-</topic>

@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_tnv_jt2_trb">
-    <title>zbx_startproxypollers_info</title>
-    <body><div id="div_unv_jt2_trb"><p>Количество экземпляров пре-форков поллеров для работы с пассивными серверами <ph
-                    outputclass="udvpdf">удаленного мониторинга</ph><ph outputclass="onlypdf"
-                    >агентов</ph><ph outputclass="html">агентов</ph> (прокси).</p></div></body>
-</topic>

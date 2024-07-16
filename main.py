@@ -7,11 +7,11 @@ from aiohttp import web
 from gigachatAPI.answer_questions import get_answer
 from gigachatAPI.generate_test import generate_test
 from gigachatAPI.process_files.process_paths import process_and_take_path
-from gigachatAPI.chromadb.chromadb_handler import initialize_chroma
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager
-from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
+from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list, CHUNK_SIZE
 from gigachatAPI.utils.delete_doc import delete_doc
-from gigachatAPI.utils.help_methods import get_actual_doc_list
+from gigachatAPI.utils.get_actual_docs import get_actual_doc_list
+from gigachatAPI.utils.help_methods import rename_directory
 
 
 async def handle_doc(request):
@@ -35,12 +35,17 @@ async def handle_doc(request):
 
     split_docs = await get_result_docs_list(path, doc_name, 'initialize_chroma')
 
-    # vectordb_manager = VectordbManager()
-    # vectordb_manager.create_collection(doc_name, split_docs, use_cycle=True)
-    await initialize_chroma(split_docs, doc_name)
+    vectordb_manager = VectordbManager()
+    vectordb_manager.create_collection(doc_name, split_docs, use_cycle=False)
     print(f'time: {time.time() - start_time}')
 
-    return web.json_response({"result": "File was received"})
+    return web.json_response({
+    "result": "success",
+    "info": {
+        "chunk_size": CHUNK_SIZE,
+        "embedding_model": vectordb_manager.embeddings.__class__.__name__
+        }
+    })
 
 
 async def handle_delete_doc(request):
@@ -48,6 +53,7 @@ async def handle_delete_doc(request):
     doc_name = data['doc_name']
     await delete_doc(doc_name)
     return web.json_response({"result": "Doc was deleted"})
+
 
 async def handle_test(request):
     data = await request.json()
@@ -68,6 +74,31 @@ async def handle_get_actual_doc_list(request):
     return web.json_response(result)
 
 
+async def handle_change_doc_name(request):
+    data = await request.json()
+    vectordb_manager = VectordbManager()
+    vectordb_manager.change_collection_name(data['cur_name'], data['new_name'])
+    rename_directory(data['cur_name'], data['new_name'])
+    return web.json_response({"result": "Name has been changed"})
+
+
+async def handle_add_data(request):
+    data = await request.post()
+    file = data['file']
+    doc_name = '.'.join(file.filename.split('.')[:-1])
+    save_path = os.path.join('gigachatAPI', 'data', 'temp', f'{file.filename}')
+    with open(save_path, 'wb') as file_object:
+        file_object.write(file.file.read())
+
+    split_docs = await get_result_docs_list(save_path, doc_name, 'initialize_chroma')
+    split_docs_txt = list(map(lambda x: x.page_content, split_docs))
+
+    vectordb_manager = VectordbManager()
+    vectordb_manager.add_data(doc_name, split_docs_txt)
+    await asyncio.to_thread(os.remove, save_path)
+    return web.json_response({"result": "Data was added"})
+
+
 async def main():
     app = web.Application(client_max_size=100*1024*1024)
     app.router.add_post('/process_data', handle_test)
@@ -75,7 +106,8 @@ async def main():
     app.router.add_post('/process_doc', handle_doc)
     app.router.add_post('/process_delete_doc', handle_delete_doc)
     app.router.add_post('/process_get_actual_doc_list', handle_get_actual_doc_list)
-
+    app.router.add_post('/process_change_doc_name', handle_change_doc_name)
+    app.router.add_post('/process_add_data', handle_add_data)
 
     runner = web.AppRunner(app)
     await runner.setup()

@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_y4r_fj2_trb">
-    <title>ZBX_STARTHTTPPOLLERS_info</title>
-    <body><div id="div_z4r_fj2_trb"><p>Количество экземпляров пре-форков <ph
-                    conref="../protocol_names/HTTP.dita#ReusableComponent_qbp_fzf_4yb/ph_rbp_fzf_4yb"
-                />-поллеров.</p></div></body>
-</topic>

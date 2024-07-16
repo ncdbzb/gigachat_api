@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_itm_vm_centos_8_4_2105">
+    <title>Установка DATAPK ITM-VM на ОС Centos 8</title>
+    <body
+        conref="../../reusable/notes/datapk_itm_vm_centos_8_4_info.dita#ReusableComponent_bfh_lwc_zwb/body_cfh_lwc_zwb"/>
+</topic>

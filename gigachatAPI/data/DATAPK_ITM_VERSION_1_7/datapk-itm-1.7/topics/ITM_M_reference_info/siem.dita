@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="siem">
+    <title>Механизм интеграции с SIEM</title>
+    <body>
+        <p>Интеграция с SIEM происходит на уровне администрации <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>. Для интеграции
+            должно выполняться одно из условий:<ul>
+                <li>На сервере <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> происходит действие
+                    пользователя, которое ведет к каким-либо изменениям в
+                    системе.<p><b>или</b></p></li>
+                <li><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> получает проблемы и
+                    действия пользователей с сервера <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph> в процессе синхронизации. </li>
+            </ul></p>
+        <p>При интеграции с SIEM <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"
+                    ><term keyref="datapk_itm_vm"/></ph> создает для проблемы или действия событие
+            соответствующего типа:</p>
+        <p>
+            <ul id="ul_f4f_hqx_nvb">
+                <li><b>AuditLog</b> — для всех действий пользователя в <ph outputclass="udvpdf"
+                            ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph> и <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>, которые ведут к каким-либо изменениям в
+                    системе;</li>
+                <li><b>Problems</b> — для всех проблем с <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>.</li>
+            </ul>
+        </p>
+        <p>
+            <note type="tip">Подробнее см. в разделе <xref href="siem_events.dita"/>.</note>
+        </p>
+        
+    </body>
+</topic>

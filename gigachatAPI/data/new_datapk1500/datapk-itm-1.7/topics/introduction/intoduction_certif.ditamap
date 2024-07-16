@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>Описание работы программного комплекса</title>
-    <topicref href="general_info.dita"/>
-    <topicref href="func_opportunities_certif.dita"/>
-    <topicref href="work_modes.dita"/>
-    <topicref href="certif_safe_collection_measures.dita"/>
-</map>

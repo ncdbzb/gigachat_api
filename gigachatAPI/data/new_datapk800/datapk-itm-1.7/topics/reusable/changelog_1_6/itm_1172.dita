@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="itm_1172">
-    <title>ITM-1172</title>
-    <body>
-        <p id="p_ITM_1172">Исправлена ошибка, при которой не отображался IP-адрес <abbreviated-form
-                keyref="monitoring_object"/> после повторной синхронизации.</p>
-    </body>
-</topic>

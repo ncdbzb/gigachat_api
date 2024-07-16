@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_k_config_hosts_card">
+    <glossterm>Карточка узла сети</glossterm>
+    <glossdef>Страница для настройки параметров узла сети.
+        <fig>
+            <title>Карточка узла сети</title>
+            <div outputclass="html"><image href="../../../images/Pages/itm_k_config_hosts_card.png"/></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/itm_k_config_hosts_card.png"/></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_itm_k_config_hosts_card.png"/></div>
+        </fig>
+    </glossdef>
+</glossentry>

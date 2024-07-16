@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_h3d_mdf_trb">
-    <title>ZBX_DBTLSCIPHER_note</title>
-    <body><div id="note_j3d_mdf_trb"><note>Поддерживается только для MySQL.</note></div></body>
-</topic>

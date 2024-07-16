@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ytr_bv3_2tb">
+    <title></title>
+    <body><p id="p_ztr_bv3_2tb">Размер кэша конфигурации, в байтах. Размер распределенной памяти для хранения данных узлов сети, элементов данных и триггеров. Максимальный предел был 2G до Zabbix 2.2.3.</p></body>
+</topic>

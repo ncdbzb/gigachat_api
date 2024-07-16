@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_aqp_b3z_xyb">
-    <title></title>
-    <body><div id="div_bqp_b3z_xyb">Исправлена ошибка в названии версии <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, при которой некорректно работала сортировка в столбце «Версия ПО» на странице <cite keyref="itm_m_page_server_monitoring"/></div></body>
-</topic>

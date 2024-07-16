@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_op5_ryr_trb">
+    <title>zbx_dbtlsconnect_note</title>
+    <body><div id="div_pp5_ryr_trb"><p>В MySQL начиная с 5.7.11 и PostgreSQL поддерживаются следующие значения: «required», «verify_ca», «verify_full».</p><p>В MariaDB, начиная с версии 10.2.6, поддерживаются значения «required» и «verify_full».</p></div></body>
+</topic>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="refreshactivechecks">
-    <glossterm>RefreshActiveChecks</glossterm>
-    <glossdef><div
-            conref="../../reusable/notes/zbx_refreshactive_checks_info.dita#ReusableComponent_zpy_gpk_trb/div_aqy_gpk_trb"/>
-        <b>Значение в конфигурации ITM-K при поставке:</b>120<p><b>Разрешенный диапазон
-                значений:</b>60-3600</p></glossdef>
-</glossentry>

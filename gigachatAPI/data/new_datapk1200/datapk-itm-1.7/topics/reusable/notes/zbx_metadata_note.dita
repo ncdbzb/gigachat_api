@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ltk_qbm_trb">
-    <title>zbx_metadata_note</title>
-    <body><div id="div_mtk_qbm_trb"><note>Если значение данной переменной не определено, то используется значение
-        переменной <cmdname keyref="zbx_metadataitem"/>.</note></div></body>
-</topic>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_wyp_sjj_2tb">
-    <title></title>
-    <body><p id="p_xyp_sjj_2tb">Частота контрольных сообщений в секундах. Используется для мониторинга доступности прокси на стороне сервера. 0 — контрольные сообщения отключены. Параметр активного прокси. Игнорируется пассивными прокси (смотрите параметр <cmdname keyref="proxymode"/>).</p></body>
-</topic>

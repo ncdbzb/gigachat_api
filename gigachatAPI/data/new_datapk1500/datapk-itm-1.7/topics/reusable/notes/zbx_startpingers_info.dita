@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_jfm_s32_trb">
-    <title>zbx_startpingers_info</title>
-    <body><div id="div_kfm_s32_trb"><p>Количество экземпляров пре-форков <ph
-                    conref="../protocol_names/ICMP.dita#ReusableComponent_rk1_vpf_4yb/ph_sk1_vpf_4yb"
-                />-pingers.</p></div></body>
-</topic>

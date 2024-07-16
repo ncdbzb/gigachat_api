@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ezp_rfp_bvb">
-    <title></title>
-    <body><p id="p_fzp_rfp_bvb">Реализовано завершение открытых сессий пользователя при смене пароля этого
-            пользователя. При этом сессия, в которой был изменен пароль, остается активной.</p></body>
-</topic>

@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_fwz_ghy_nvb">
-    <title></title>
-    <body><p id="p_gwz_ghy_nvb">Добавлено выделение серым цветом отключенных серверов мониторинга и их
-                <abbreviated-form keyref="monitoring_object"/> на странице <ph outputclass="html"
-                    ><cite keyref="itm_m_page_object_monitoring"/></ph><ph outputclass="onlypdf"
-                >«Объекты мониторинга»</ph>.</p></body>
-</topic>

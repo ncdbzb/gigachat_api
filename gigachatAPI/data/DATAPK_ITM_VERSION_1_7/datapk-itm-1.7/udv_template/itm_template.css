@@ -1,0 +1,698 @@
+/*Стили PDF UDV*/
+/*Версия!*/
+*[class ~= "front-page/front-page-title"]:after(1) 
+{
+	content: "Версия документа: 2.0\0aДата выгрузки: " oxy_xpath('format-date(current-date(), "[D].[M].[Y]", "en", (), ())');
+	color: white;
+}
+/*Главная страница*/
+
+
+@page front-page {
+	background-image: url("UDV_ITM.png"); 
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+	background-size: 100% 100%;
+}
+
+
+.mainbooktitle {
+	color:white;
+	font-weight:bold;
+}
+
+.booktitlealt{
+	font-size:29px;
+	
+}
+
+.d-sm-block img {border: none;}
+
+@font-face {
+    font-family: Roboto; /* Имя шрифта */
+    src: url(resources/fonts/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+/*Формат страницы*/
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+
+/*-------------------------------
+ * The page layout for large tables.
+ *-------------------------------*/	
+    
+	@page landscape-page:right {
+	    size: landscape;
+	
+	
+	    @right-bottom {
+	        font-size:8pt;
+			color:#808080;
+	    }
+	}
+	
+	 @page landscape-page:left {
+	   
+	    @right-top {
+	        font-size:8pt;
+			color:#808080;
+	    }
+	}
+
+
+/*Стили элементов*/
+
+
+/*Номера разделов в ссылках*/
+*[class ~= "topic/xref"]:before {
+	content: target-counters(attr(href), chapter-and-sections, ".")" " !important;	
+}
+
+/*текст по ширине*/
+body {text-align:justify;}
+p{text-align:justify;}
+li {text-align:justify;}
+
+/*таблицы*/
+table {
+border-collapse: collapse;
+border: 1px solid light-grey;
+text-align:justify;
+}
+th, td {border: 1px solid light-grey;
+}
+
+table {
+    font-size:10px;
+}
+table > li {
+	margin:0.1px;
+	padding:0.1px;
+}
+
+table > ul {
+    
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 2px;
+}
+
+
+
+/*Таблицы больше 5 колонок разворачиваются в широкую ориентацию*/
+
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='5'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='6'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='7'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='8'] {
+    max-width: 100%;
+    table-layout:auto;
+}
+
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']){
+      page: landscape-page;
+} 
+
+*[class ~= "topic/table"] {
+  /*overflow-wrap: break-word;*/
+}
+
+*[class ~= "topic/table"] {
+    margin-left:auto;
+    margin-right:auto;
+}
+*[class ~= "topic/table"] *[class ~= "topic/title"]{
+    text-align:center;
+}
+
+td {
+	vertical-align:middle;
+	
+}
+
+
+/*Рисунки*/
+
+figure {
+	page-break-inside: avoid;
+	text-align: center;
+}
+
+figure > title {
+	page-break-before: avoid;
+}
+
+figure > img
+{
+page-break-after: avoid;
+margin:auto;
+text-align: center;
+
+}
+
+
+/*Глоссарий*/
+.glossAlt > .glossAbbreviation {font-weight: normal;}
+.glossAlt > .glossAbbreviation:before {
+	content:"Аббревиатура: ";
+}
+
+.glossAlt > .glossSynonym {font-weight: normal;}
+.glossAlt > .glossSynonym:before {
+	content:"Синоним: ";
+}
+.glossSurfaceForm {display:none;}
+.glossdef {}
+
+.abbreviated-form {
+	font: normal;
+	color:inherit;
+    font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+dfn {
+    font-style: normal;
+	text-decoration: none;
+}
+
+a {
+	font-style: normal;
+	text-decoration: none;
+	color:inherit;
+}
+
+/*Стили отдельных страниц*/
+
+#whatsnew figure {
+	max-width:200px;
+	padding: 1px;
+}
+
+#whatsnew img {
+	padding: 1px;
+}
+
+#big_pic img {
+	padding: 1px;
+}
+
+/*примечания: цвета, скругление, отступы*/
+.stepxmp
+{
+   background-color: rgba(217, 252, 255, 0.4);
+   border-radius: 7px;
+   padding:10px;
+}
+.stepxmp:before
+{
+	content:"Пример: ";
+}
+.note_tip
+{
+   background-color: rgba(00, 80, 00, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_warning
+{
+   background-color: rgba(255, 225, 0, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_caution
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_attention
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+}
+.note_note
+{
+   background-color: rgba(255, 85, 0, 0.025);
+   border-radius: 7px;
+   padding:10px;
+}
+.note_fastpath
+{
+   background-color: rgba(0, 50, 255, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.stepresult, .li_result 
+{
+   background-color: rgba(0,80, 0, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+.stepresult:before, .li_result:before{
+	content:"Результат шага: ";
+	font-weight: bold;
+}
+
+.codeblock
+{
+	
+	word-wrap: break-word;
+	direction: ltr;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+	font-size: 85%;
+}
+.pre
+{
+	font-size: medium;	
+}
+pre
+{
+	font-size: medium;
+}
+
+/*титульник*/
+
+
+/*Не показывать в pdf*/
+
+#whatsnew .note {
+	
+display: none;
+}
+
+
+
+.forimgs .figpic img {
+  width: 200px;
+  }
+
+.cite {
+	
+	 all: inherit;
+}
+
+/*Разрыв перед заголовком 2 уровня, нельзя разрывать сразу после*/
+/*
+.topictitle2
+{
+	page-break-before: always;
+	page-break-after:avoid;
+}
+*/
+*[class~="cmdname"]{
+	font-size:10px;	
+}
+/*  #itm_m_env table th, td{
+    font-size:10px;
+    }*/
+
+*[class~="- topic/ul ul"]{
+	padding-left:0px;	
+}
+
+/*Стили PDF*/
+/*Главная страница*/
+
+@page front-page {
+	
+	white-space: pre-line;
+}
+
+/*Стили элементов*/
+
+/*Номера разделов в ссылках*/
+*[class ~= "topic/xref"]:before {
+	content: target-counters(attr(href), chapter-and-sections, ".")" " !important;	
+}
+
+/*текст по ширине*/
+body {text-align:justify;}
+p{text-align:justify;}
+li {text-align:justify;}
+
+/*таблицы*/
+table {
+border-collapse: collapse;
+border: 1px solid light-grey;
+text-align:justify;
+line-height: 1.2;
+}
+th, td {
+border: 1px solid light-grey;
+}
+
+
+table > li {
+	margin:0.1px;
+	padding:0.1px;
+}
+
+table > ul {
+    
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 2px;
+}
+
+
+
+/*Таблицы больше 5 колонок разворачиваются в широкую ориентацию*/
+
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='5'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='6'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='7'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='8'] {
+    max-width: 100%;
+    table-layout:auto;
+}
+
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']){
+      page: landscape-page;
+} 
+
+/**[class ~= "topic/table"] {
+  overflow-wrap: anywhere;
+}*/
+
+*[class ~= "topic/table"] {
+    margin-left:auto;
+    margin-right:auto;
+}
+*[class ~= "topic/table"] *[class ~= "topic/title"]{
+    text-align:center;
+}
+
+td {
+	vertical-align:middle;	
+}
+
+
+/*Рисунки*/
+
+figure {
+	page-break-inside: avoid;
+	text-align: center;
+}
+
+figure > title {
+	page-break-before: avoid;
+}
+
+figure > img
+{
+	page-break-after: avoid;
+	margin:auto;
+	text-align: center;
+
+}
+
+
+/*Глоссарий*/
+.glossAlt > .glossAbbreviation {font-weight: normal;}
+.glossAlt > .glossAbbreviation:before {
+	content:"Аббревиатура: ";
+}
+
+.glossAlt > .glossSynonym {font-weight: normal;}
+.glossAlt > .glossSynonym:before {
+	content:"Синоним: ";
+}
+.glossSurfaceForm {display:none;}
+.glossdef {}
+
+.abbreviated-form {
+	font: normal;
+	color:inherit;
+    font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+dfn {
+    font-style: normal;
+	text-decoration: none;
+}
+
+a {
+	font-style: normal;
+	text-decoration: none;
+	color:inherit;
+}
+
+/*Стили отдельных страниц*/
+
+
+
+#whatsnew figure {
+	max-width:200px;
+	padding: 1px;
+}
+
+#whatsnew img {
+	padding: 1px;
+}
+/*Страница «»*/
+#datapk_sensor table {
+	white-space: pre-line;
+}
+/* страница «Цветовая индикация и виды уведомлений»*/
+#big_pic figure {
+	max-width:200px;
+	padding: 1px;
+}
+
+#big_pic img {
+	padding: 1px;
+}
+
+/*примечания: цвета, скругление, отступы*/
+.stepxmp
+{
+   background-color: rgba(217, 252, 255, 0.4);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+.stepxmp:before
+{
+	content:"Пример: ";
+}
+.stepxmp .fig{
+	width:98%;
+}
+.note_tip
+{
+   background-color: rgba(00, 80, 00, 0.05);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+
+.note_warning
+{
+   background-color: rgba(255, 225, 0, 0.05);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+
+.note_caution
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+
+.note_attention
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+.note_note
+{
+   background-color: rgba(255, 85, 0, 0.025);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+.note_fastpath
+{
+   background-color: rgba(0, 50, 255, 0.05);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+
+
+.stepresult 
+{
+   background-color: rgba(0, 50, 255, 0.05);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+.stepresult:before{
+	content:"Результат шага: ";
+	font-weight:bold;
+}
+
+.stepresult .fig {
+	width:98%;
+}
+
+.codeblock
+{
+	
+	word-wrap: break-word;
+	direction: ltr;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+	font-size: 85%;
+}
+.pre
+{
+	font-size: medium;	
+}
+pre
+{
+	font-size: medium;
+}
+
+/*титульник*/
+.d-sm-block img {border: none;}
+
+
+/*Не показывать в pdf*/
+
+#whatsnew .note {
+	
+display: none;
+}
+
+
+
+.forimgs .figpic img {
+  width: 200px;
+  }
+
+.cite {
+	
+	 all: inherit;
+}
+
+/*Разрыв перед заголовком 2 уровня, нельзя разрывать сразу после*/
+/*
+.topictitle2
+{
+	page-break-before: always;
+	page-break-after:avoid;
+}
+*/
+*[class~="cmdname"]{
+	font-size:10px;	
+}
+
+
+*[class~="- topic/ul ul"]{
+	padding-left:0px;	
+}
+
+p{
+    /*text-indent: 25px;*/
+	page-break-inside: avoid;
+}
+table td p {
+	 text-indent: 0px;
+}
+/*  li{
+    page-break-inside: avoid;
+}*/
+/*img{
+    min-width: 800px;
+}*/
+/*figure{
+   
+    width: 650px;
+    margin-left:0px;
+}*/
+.fig{
+	width:100%;
+	padding:0px;
+	margin:0px;
+}
+.substep .fig{
+	width:98%;
+}
+.li .fig{
+	width:98%;
+}
+.step .fig{
+	width:98%;
+}
+
+.codeph, code, pre, codeblock, pre > code {
+    
+    font-size: 1em!important;
+    font-family:Consolas!important;
+    text-indent:0px;
+    direction: ltr;
+}
+
+.result:before{
+	content:"Результат: ";
+	font-weight: bold;
+}
+.result 
+{
+   background-color: rgba(00, 80, 00, 0.05);
+   border-radius: 7px;
+   padding:10px;
+   page-break-inside:avoid;
+}
+
+/*.udvpdf{
+	display:none;
+}*/
+
+/*Настройка отображения бокового меню:
+ 1. Меню перемещается при пролистывании страницы.
+ 2. У меню фиксированная ширина и высота, если раскрое меню становится длинным,
+	то появляется полоса прокрутки.
+ */

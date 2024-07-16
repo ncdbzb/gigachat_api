@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_jzj_ggf_fvb">
-    <title></title>
-    <body><p id="p_kzj_ggf_fvb">По умолчанию отключена функция запоминания логина и пароля пользователя на 30 дней, исключена настройка этой функции в окне авторизации. При необходимости включить функцию можно при редактировании пользователя на странице <cite keyref="administration"/> → <cite keyref="users"/>.</p></body>
-</topic>

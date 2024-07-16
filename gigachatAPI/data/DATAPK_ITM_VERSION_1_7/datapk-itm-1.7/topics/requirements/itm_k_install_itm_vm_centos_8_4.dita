@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id_5">
+    <title>Установка
+сервера
+визуализации
+и
+управления
+<ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph></title>
+    <body>
+      <ol>
+        <li>Перейдите
+в режим
+командной
+строки
+операционной
+системы, на
+которой
+будет
+установлен
+сервер
+визуализации
+и
+управления.</li>
+        <li>Создайте
+директорию
+для
+установки <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref>
+        </li>
+      </ol>
+      <p>mkdir /opt/datapkitm_vm</p>
+      <ol>
+        <li>
+Скопируйте
+следующие
+файлы в
+директорию /opt/datapkitm_vm:
+<ul>
+            <li>.env</li>
+            <li>docker-compose.release.yaml</li>
+            <li>
+datapk_itm-vm_[версия_сервера_визуализации_и_управления].tar.gz</li>
+          </ul>
+        </li>
+        <li>Перейдите
+в
+директорию /opt/datapkitm_vm:</li>
+      </ol>
+      <p>cd /opt/datapkitm_vm</p>
+      <ol>
+        <li>Загрузите
+образы в
+операционную
+систему, на
+которой
+установлен
+сервер
+визуализации
+и
+управления:</li>
+      </ol>
+      <p>docker load -i
+datapk_itm-vm_[версия_сервера_визуализации_и_управления].tar.gz</p>
+      <ol>
+        <li>Измените
+пароль
+пользователя
+базы
+данных и
+при
+необходимости
+добавьте
+нового
+пользователя.
+Для этого:
+<ul>
+            <li>измените
+текущего
+пользователя
+на postgres:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>su postgres</p>
+      <ul>
+        <li>
+          <ul>
+            <li>войдите в
+интерактивный
+терминал
+для работы
+с postgresql:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>psql</p>
+      <p>
+или psql -p 10265 -h 127.0.0.1 -U postgres
+postgres</p>
+      <ul>
+        <li>
+          <ul>
+            <li>измените
+пароль
+пользователя postgres,
+так как по
+умолчанию
+пароль не
+задан:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ALTER USER postgres WITH PASSWORD
+'[пароль]';</p>
+      <p>
+        <b>Подсказка:</b> При
+создании
+пароля к
+учетной
+записи
+рекомендуется
+следовать
+требованиям
+парольной
+политики:</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li>длина — не
+менее 16
+символов;</li>
+                <li>символы —
+буквы в
+нижнем и
+верхнем
+регистрах,
+цифры и
+специальные
+символы;</li>
+                <li>
+минимальное
+количество
+цифр — 2.</li>
+              </ul>
+            </li>
+            <li>для
+работы <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref> не
+обязательно
+подключаться
+к БД под
+пользователем postgres,
+подойдет
+любой
+пользователь
+с правами
+на
+создание
+БД. При
+необходимости
+создайте
+такого
+пользователя
+с помощью
+команды:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>create user
+[имя_пользователя]
+with createdb password
+'[пароль]';</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+убедитесь,
+что
+пользователь datapkitm_vm создан:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>\du</p>
+      <ul>
+        <li>
+          <ul>
+            <li>покиньте
+терминал:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>\q</p>
+      <ol>
+        <li>Убедитесь
+в
+корректных
+значениях
+переменных
+в файле postgresql.conf.
+Для этого:
+<ul>
+            <li>перейдите
+в режим
+редактирования
+файла postgresql.conf:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>nano /var/lib/pgsql/14/data/postgresql.conf</p>
+      <ul>
+        <li>
+          <ul>
+            <li>исправьте
+значения
+переменных,
+чтобы они
+соответствовали
+представленным
+ниже:</li>
+            <li>listen_addresses = '127.0.0.1,172.17.0.1'</li>
+          </ul>
+        </li>
+      </ul>
+      <p>port = 10265</p>
+      <p>Где</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li>127.0.0.1 —
+локальный
+IP-адрес
+сервера <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref>;</li>
+                <li>172.17.0.1 — IP-адрес
+подсети docker0;</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <b>Прим.:</b> IP-адреса
+должны
+быть
+перечислены
+через
+запятую
+без
+пробелов.</p>
+      <p>
+
+        <b>Подсказка:</b> Если
+IP-адрес
+подсети docker0
+уже
+используется
+в вашей
+инфраструктуре,
+его нужно
+изменить.
+Подробнее
+см. в
+разделе <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/ITM_M_troubleshooting/itm_m_net_conflict.html" scope="external">Конфликт
+подсети
+контейнеров</xref>.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+убедитесь,
+что
+переменные log_timezone и timezone соответствуют
+текущему
+часовому
+поясу;</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+корректным
+значением
+для
+Екатеринбурга
+будет Asia/Yekaterinburg.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>сохраните
+файл и
+выйдите из
+режима
+редактирования:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ctrl+o, ctrl+x</p>
+      <ol>
+        <li>
+Сгенерируйте
+ключ
+шифрования
+паролей:</li>
+      </ol>
+      <p>LC_ALL=C tr -dc 'A-Za-z0-9!$%^*' &lt;/dev/urandom | head -c 32 ;
+echo ''</p>
+      <p>
+        <b>Прим.:</b> полученный
+ключ нужно
+будет
+записать в
+переменную ITMM_PASSWORD_SECRET_KEY на
+следующем
+шаге.</p>
+      <ol>
+        <li>
+Отредактируйте
+файл .env для
+корректного
+подключения
+к
+веб-интерфейсу
+<ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>. Для
+этого:
+<ul>
+            <li>перейдите
+в режим
+редактирования
+файла:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>nano /opt/datapkitm_vm/.env</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+раскомментируйте
+переменную ITMM_DB_HOST,
+убрав знак
+«#» в начале
+строки, и
+убедитесь,
+что
+переменная
+имеет
+значение host.docker.internal.</li>
+            <li>
+раскомментируйте
+следующие
+переменные
+и измените
+их
+значения:
+<ul>
+                <li>ITMM_DB_PORT — порт
+СУБД,
+должен
+совпадать
+с
+значением
+переменной
+port= в
+файле postgresql.conf.
+По
+умолчанию
+значение 5432;</li>
+                <li>ITMM_DB_USER — имя
+пользователя
+базы
+данных;</li>
+                <li>ITMM_DB_PASSWORD —
+пароль
+пользователя
+базы
+данных;</li>
+
+                <li>ITMM_PASSWORD_SECRET_KEY —
+ключ
+шифрования
+и
+дешифрования
+паролей,
+полученный
+на шаге <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_server_install.html#itm_m_server_install__itmm_generate_key" scope="external">8</xref>.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <image href="media/img(22).png"/>
+      </p>
+      <p>
+
+        <b>Внимание:</b> При
+повторном
+изменении
+или утере
+значения
+переменной ITMM_PASSWORD_SECRET_KEY локальные
+пользователи
+не смогут
+войти в
+веб-интерфес <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref>,
+перестанет
+работать
+синхронизация
+с ITM-K, LDAP и SMTP.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>при
+необходимости
+раскомментируйте
+другие
+переменные
+и измените
+их
+значения.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+
+        <b>Прим.:</b> Рекомендуемые
+и
+возможные
+значения
+переменных
+приведены
+в разделе <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/ITM_M_reference_info/itm_m_env.html" scope="external">Переменные
+файла .env</xref>.</p>
+      <p>
+        <b>Прим.:</b> Если
+при
+запуске
+контейнеров <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref> указать
+корректный
+IP-адрес
+syslog-сервера
+спустя
+некоторое
+время, то на
+корректный
+IP-адрес
+будут
+отправлены
+только те
+события,
+которые
+возникнут
+после
+установки
+нового
+значения
+переменной SIEM_SYSLOG_HOST.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>сохраните
+файл и
+выйдите из
+режима
+редактирования:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ctrl+o, ctrl+x</p>
+      <ol>
+        <li>Настройте
+разрешения
+по
+подключению
+docker-контейнера
+и
+пользователей
+к базам
+данных. Для
+этого:
+<ul>
+            <li>войдите в
+режим
+редактирования
+файла pg_hba.conf с
+помощью
+команды:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>nano /var/lib/pgsql/14/data/pg_hba.conf</p>
+      <p>
+        <b>Внимание:</b> при
+использовании
+двух томов
+замените
+директорию
+файла
+на /storage/base.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>найдите
+раздел #IPv4 local
+connections;</li>
+            <li>
+измените ident на md5 в
+строке host all all
+127.0.0.1/32 ident;</li>
+            <li>измените
+настройки
+ограничений
+на
+подключение
+локальных
+и
+удаленных
+пользователей
+к базам
+данных. Для
+этого
+добавьте в
+раздел #IPv4 local
+connections строки в
+следующем
+формате:</li>
+            <li>host all [имя
+пользователя
+БД] [IP-адрес
+docker-сети/маска
+в формате CIDR]
+[метод
+аутентификации]</li>
+          </ul>
+        </li>
+      </ul>
+      <p>host all [имя
+пользователя
+БД] [IP-адрес
+подсети
+docker0/маска в
+формате CIDR]
+[метод
+аутентификации]</p>
+      <p>Где:</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li>all —
+значение,
+позволяющее
+подключиться
+к
+нескольким
+БД: postgres, itmm, user_service, notifier_service;</li>
+                <li>[имя
+пользователя
+БД] — ранее
+созданный
+пользователь
+БД,
+которому
+разрешен
+доступ к
+БД;</li>
+                <li>[IP-адрес
+docker-сети/маска
+в формате CIDR]
+— IP-адрес
+для
+удаленного
+подключения,
+зависит от
+переменной ITMM_NETWORK в
+файле /opt/datapkitm_vm/.env;</li>
+                <li>[IP-адрес
+подсети
+docker0/маска в
+формате CIDR] —
+IP-адрес
+подсети docker0
+для
+удаленного
+подключения,
+по
+умолчанию
+имеет
+значение 172.17.0.1/24.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <b>Прим.:</b> Отступ
+между
+колонками
+в одной
+строке
+выполняется
+клавишей
+«Tab».</p>
+      <p>Например,
+для
+применения
+настроек
+ко всем
+базам
+данных (all),
+пользователя
+БД postgres,
+IP-адреса
+подсети
+контейнера
+сервера
+консолидации
+по
+умолчанию 172.15.0.1/24,
+IP-адреса
+подсети docker0
+по
+умолчанию 172.17.0.1/24 и
+метода
+аутентификации md5 строки
+будут
+выглядеть
+следующим
+образом:</p>
+      <p>host all postgres 172.15.0.1/24 md5</p>
+      <p>host all postgres 172.17.0.1/24 md5</p>
+      <p>
+        <image href="media/img(23).png"/>
+      </p>
+      <p>
+Рис. 195Содержимое
+файла pg_hba.conf</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+закомментируйте
+строки во
+всех
+разделах,
+кроме # IPv4 local
+connections:.</li>
+            <li>сохраните
+и выйдите
+из режима
+редактирования:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ctrl+o, ctrl+x</p>
+      <ol>
+        <li>Настройте
+запуск
+службы
+СУБД после
+службы docker.
+Для этого:
+<ul>
+            <li>Перейдите
+в режим
+редактирования
+службы
+СУБД:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>systemctl edit postgresql-14.service</p>
+      <ul>
+        <li>
+          <ul>
+            <li>Добавьте
+блок [Unit]:</li>
+            <li>[Unit]</li>
+            <li>After=docker.service</li>
+            <li>BindsTo=docker.service</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ReloadPropagatedFrom=docker.service</p>
+      <ul>
+        <li>
+          <ul>
+            <li>Если база
+данных
+хранится
+на
+отдельном
+томе,
+добавьте
+после
+блока [Unit]
+блок [Service]:</li>
+            <li>[Service]</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Environment=PGDATA=/storage/base</p>
+
+      <p>Где /storage/base —
+путь к базе
+данных,
+который
+был
+настроен
+на шаге <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.html#subd_config__create_dir" scope="external">1</xref> раздела <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/ITM_M_prepare_work/ITM_M_data_program_download/2tomes/subd_config.html#subd_config" scope="external">Настройка
+СУБД</xref>.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>Для
+применения
+изменений
+в
+настройках
+службы
+СУБД
+выполните
+команду:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>systemctl daemon-reload</p>
+      <ol>
+        <li>Для
+применения
+настроек в
+файлах
+конфигурации
+перезапустите
+СУБД с
+помощью
+команды:</li>
+      </ol>
+      <p>systemctl restart postgresql-14</p>
+      <p>
+        <b>Прим.:</b> после
+перезапуска
+СУБД и
+автоматического
+применения
+настроек
+из
+файла pg_hba.conf,
+команда
+для входа в
+режим
+редактирования
+базы
+данных
+изменится.
+Она будет
+иметь
+следующий
+вид:</p>
+      <p>psql -p 10265 -h 127.0.0.1 -U [имя
+пользователя]
+[имя базы]</p>
+      <p>Где -p 10265 —
+порт, через
+который
+будет
+произведено
+подключение
+к базе
+данных; -h
+127.0.0.1 —
+подключение
+к хосту 127.0.0.1; -U
+[имя
+пользователя] —
+подключение
+от имени
+указанного
+пользователя.</p>
+      <ol>
+        <li>
+Последовательно
+добавьте в
+iptables правила
+для
+корректной
+работы
+межсетевого
+экрана:
+<ul>
+            <li>для
+разрешения
+существующих
+пакетов и
+новых
+соединений,
+связанных
+со
+старыми:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j
+ACCEPT</p>
+      <ul>
+        <li>
+          <ul>
+            <li>для
+разрешения
+входящих
+ICMP-соединений:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>iptables -I INPUT 2 -p icmp -j ACCEPT</p>
+      <ul>
+        <li>
+          <ul>
+            <li>для
+разрешения
+всех
+соединений:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>iptables -I INPUT 3 -j ACCEPT</p>
+      <ul>
+        <li>
+          <ul>
+            <li>для
+разрешения
+соединений
+по порту tcp/22:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>iptables -A INPUT -p tcp --dport 22 -j ACCEPT</p>
+      <ul>
+        <li>
+          <ul>
+            <li>для
+использования
+порта,
+указанного
+в
+файле /var/lib/jatoba/1/data/postgresql.conf:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>iptables -A INPUT -p tcp --dport [ваш
+порт] -j ACCEPT</p>
+      <p>если был
+указан
+порт 10265,
+команда
+будет
+выглядеть
+следующим
+образом:</p>
+      <p>iptables -A INPUT -p tcp --dport 10265 -j ACCEPT</p>
+      <ul>
+        <li>
+          <ul>
+            <li>для
+сброса
+входящих
+запрещенных
+соединений:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>iptables -A INPUT -j REJECT --reject-with
+icmp-host-prohibited</p>
+      <ul>
+        <li>
+          <ul>
+            <li>для
+сброса
+запрещенных
+соединений:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>iptables -A FORWARD -j REJECT --reject-with
+icmp-host-prohibited</p>
+      <ol>
+        <li>Если во
+время
+настройки
+межсетевого
+экрана
+была
+допущена
+ошибка,
+удалите
+правило с
+помощью
+команды:</li>
+      </ol>
+      <p>iptables -D [имя
+цепочки,
+содержащей
+команды]
+[номер
+правила в
+цепочке]</p>
+      <p>команда
+для
+удаления
+правила
+номер 5 в
+цепочке INPUT
+будет
+выглядеть
+следующим
+образом:</p>
+      <p>iptables -D INPUT 5</p>
+      <ol>
+        <li>Сохраните
+настройки
+межсетевого
+экрана:</li>
+      </ol>
+      <p>service iptables save</p>
+      <ol>
+        <li>
+Посмотрите
+вывод
+правил
+межсетевого
+экрана с
+помощью
+команды:</li>
+      </ol>
+      <p>iptables -nL</p>
+      <p>На рисунке
+отображаются
+настроенные
+правила
+межсетевого
+экрана в
+цепочке INPUT.</p>
+      <p>
+        <image href="media/img(24).png">
+          <alt>https://docs.cyberlympha.com/ITM/14/all/images/ITM_M_prepare_work/itm_m_server_install_input.png</alt>
+        </image>Рис. 196Настроенная
+цепочка INPUT в
+межсетевом
+экране</p>
+      <ol>
+        <li>Включите
+и добавьте
+межсетевой
+экран в
+автозагрузку:</li>
+      </ol>
+      <p>systemctl enable iptables --now</p>
+      <ol>
+        <li>
+Сгенерируйте
+сертификат
+для входа в
+веб-интерфейс:</li>
+      </ol>
+      <p>domain=127.0.0.1;</p>
+      <p>mkdir -p env/nginx/certs;</p>
+      <p>openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout
+env/nginx/certs/nginx.key -out env/nginx/certs/nginx.crt -subj
+"/C=RU/CN=$domain/O=USSC"</p>
+      <p>Где в
+значении
+переменной domain нужно
+указать
+IP-адрес
+сервера
+вместо
+значения
+127.0.0.1.</p>
+      <ol>
+        <li>Измените
+права на
+ключ
+сертификата:</li>
+      </ol>
+      <p>chmod 644 env/nginx/certs/nginx.key</p>
+      <ol>
+        <li>Измените
+настройку
+выделения
+памяти vm.overcommit_memory.
+Для этого:
+<ul>
+            <li>откройте
+для
+редактирования
+файл /etc/sysctl.conf:</li>
+          </ul>
+        </li>
+      </ol>
+      <p>nano /etc/sysctl.conf</p>
+      <p>
+        <b>Подсказка:</b> в
+случае
+отсутствия
+файла /etc/sysctl.conf используйте
+эту же
+команду
+для
+создания
+файла и
+перехода в
+режим
+редактирования.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>добавьте
+в
+содержимое
+файла
+следующее
+значение:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>vm.overcommit_memory=1</p>
+      <ul>
+        <li>
+          <ul>
+            <li>сохраните
+файл и
+выйдите из
+режима
+редактирования:</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ctrl+o, ctrl+x</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+перезагрузите
+сервер для
+применения
+изменений.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+
+        <b>Подсказка:</b> Вы
+можете
+перезагрузить
+сервер
+сразу либо
+после
+выполнения
+пункта <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/ITM_M_prepare_work/ITM_M_data_program_download/itm_m_server_install.html#itm_m_server_install__itmm_run_docker" scope="external">23</xref>.</p>
+      <ul>
+        <li>
+          <ul>
+            <li>в логах
+контейнера
+itm_m_redis нет
+ошибки «WARNING
+overcommit_memory is set to 0!»;</li>
+            <li>
+              <p>в
+файле /etc/sysctl.conf установлено
+значение vm.overcommit_memory=1;</p>
+              <p>
+                <image href="media/img(25).png"/>
+              </p>
+            </li>
+            <li>в
+файле /proc/sys/vm/overcommit_memory установлено
+значение 1.</li>
+          </ul>
+        </li>
+      </ul>
+      <ol>
+        <li>Убедитесь
+в
+корректности
+значения
+переменной $HOSTNAME:
+<ul>
+
+            <li>Выполните
+команду echo $HOSTNAME.
+Вывод
+команды
+должен
+совпадать
+с сетевым
+именем <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref>.</li>
+            <li>Выполните
+команду export.
+Убедитесь,
+что
+переменная $HOSTNAME присутствует
+в выводе.</li>
+            <li>Если
+переменная
+отсутствует,
+то:
+<ul>
+                <li>откройте
+файл /etc/profile:</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>nano /etc/profile</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li>в
+открывшемся
+файле
+допишите
+строку:</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>export $HOSTNAME</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li>сохраните
+файл и
+выйдите из
+режима
+редактирования:</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>ctrl+o, ctrl+x</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li>
+перезапустите
+сеанс
+пользователя.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ol>
+        <li>Перейдите
+в каталог,
+содержащий
+compose-файлы:</li>
+      </ol>
+      <p>cd /opt/datapkitm_vm</p>
+      <ol>
+        <li>Запустите
+контейнеры:</li>
+      </ol>
+      <p>docker-compose up -d</p>
+      <ol>
+
+        <li>Для входа
+в
+веб-интерфейс
+в адресной
+строке
+введите
+IP-адрес <xref format="html" href="https://docs.cyberlympha.com/ITM/14/all/topics/reference_info/glossary/terms/datapk_itm_vm.html" scope="external"><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></xref>.</li>
+      </ol>
+      <p>Для
+первичной
+настройки
+в окне
+авторизации
+введите
+логин и
+пароль
+учетной
+записи по
+умолчанию:</p>
+      <ul>
+        <li>
+          <ul>
+            <li>
+логин: <b>itm</b>;</li>
+            <li>
+пароль: <b>P@ssw0rd1234</b>.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <image href="media/img(26).png"/>
+      </p>
+      <p>Рис. 197 Окно
+авторизации <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></p>
+      <p>
+        <b>Внимание:</b> При
+первой
+настройке
+комплекса
+необходимо
+изменить
+логин и
+пароль
+встроенной
+учетной
+записи</p>
+      <p>
+        <image href="media/img(27).png"/>
+      </p>
+    </body>
+  </topic>

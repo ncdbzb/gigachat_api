@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_oxl_dhk_tsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd></cmd>
+                <substeps>
+                    <substep id="substep_qxl_dhk_tsb">
+                        <cmd>Перейдите в режим редактирования файла <codeph
+                                conref="../filepath/postgresql_conf.dita#ReusableComponent_jvp_3wd_yrb/codeph_mvp_3wd_yrb"
+                            />: </cmd>
+                        <info>
+                            <codeblock>vi /var/lib/jatoba/[версия jatoba]/data/postgresql.conf</codeblock>
+                            <p>В этой команде <codeph>[версия jatoba]</codeph> — первая цифра в
+                                версии Jatoba.</p>
+                        </info>
+                        <stepxmp>Для Jatoba версии 4.5 выполните
+                            команду:<codeblock>vi /var/lib/jatoba/4/data/postgresql.conf</codeblock></stepxmp>
+                        <info>
+                            <note type="attention">При использовании двух томов замените директорию
+                                файла на <codeph>/storage/base</codeph>.</note>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

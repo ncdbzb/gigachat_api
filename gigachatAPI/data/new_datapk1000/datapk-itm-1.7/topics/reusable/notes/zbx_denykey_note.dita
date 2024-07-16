@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_vvt_zgm_trb">
-    <title>ZBX_DENYKEY note</title>
-    <body><div id="div_wvt_zgm_trb"><note>В сочетании с <cmdname keyref="zbx_allowkey"/> можно определить несколько правил сопоставления ключей. Параметры обрабатываются один за другим в соответствии с порядком их появления.</note></div></body>
-</topic>

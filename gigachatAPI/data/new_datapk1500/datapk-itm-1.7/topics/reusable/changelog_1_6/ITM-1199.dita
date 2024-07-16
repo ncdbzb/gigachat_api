@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_c3j_lwc_nxb">
-    <title></title>
-    <body><div id="div_e3j_lwc_nxb"><p>В объект <codeph>user_action</codeph> добавлено поле <codeph>client_ip_address</codeph>, которое содержит IP-адрес клиента.</p><p>Изменено значение поля <codeph>severity</codeph> объекта <codeph>user_action</codeph> в случае,
-                если клиент неправильно ввел логин/пароль 5 раз подряд и его IP-адрес был
-                заблокирован на 5 минут.</p><p>Исправлена ошибка, при которой в поле <codeph>user</codeph> объекта <codeph>user_action</codeph> отображался IP-адрес вместо имени.</p></div></body>
-</topic>

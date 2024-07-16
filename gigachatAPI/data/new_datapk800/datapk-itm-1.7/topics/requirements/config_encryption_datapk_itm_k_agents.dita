@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="config_encryption_datapk_itm_k_agents">
-    <title>Настройка шифрования между DATAPK ITM-K и агентами</title>
-    <taskbody
-        conref="../reusable/notes/udv_encryption_agents_info.dita#ReusableComponent_hnv_dyf_1xb/taskbody_jnv_dyf_1xb"/>
-</task>

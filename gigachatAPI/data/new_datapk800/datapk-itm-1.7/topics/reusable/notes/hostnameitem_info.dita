@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_qq5_clj_2tb">
-    <title></title>
-    <body><p id="p_sq5_clj_2tb">Имя хоста. Элемент данных используется, только если параметр <cmdname
-                keyref="hostname_0"/> не задан. Не поддерживает UserParameters, счетчики производительности и
-            алиасы, но поддерживает system.run[] независимо от значения параметра <cmdname keyref="enableremotecommands_zabbix_agentd"/>. </p></body>
-</topic>

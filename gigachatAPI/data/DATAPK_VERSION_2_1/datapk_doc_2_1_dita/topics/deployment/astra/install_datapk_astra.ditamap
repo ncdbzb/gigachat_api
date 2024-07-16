@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>Установка и настройка Комплекса на базе ОС Astra Linux Special Edition 1.7</title>
-    <topicref href="manual_instruct_safe_install_astra.dita"/>
-    <topicref href="manual_config_astra.dita"/>
-    <topicref href="manual_install_datapk_on_astra.dita"/>
-</map>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>db_backup_restore_itm_a</title>
-    <topicref href="unloading_jatoba_itm_a.dita"/>
-    <topicref href="recovery_jatoba_itm_a.dita"/>
-</map>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="datapk_itm_vm_directories">
-    <title>Структура директорий DATAPK ITM-VM</title>
-    <body
-        conref="../reusable/notes/udv_itm_vm_directories_info.dita#ReusableComponent_obn_bbd_zwb/body_pbn_bbd_zwb"/>
-</topic>

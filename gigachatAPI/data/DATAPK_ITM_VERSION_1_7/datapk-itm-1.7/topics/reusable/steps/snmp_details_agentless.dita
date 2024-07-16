@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_pzc_mbm_y5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_qzc_mbm_y5b">
+                <cmd>Выполните более детальную настройку SNMP агента. Для этого: </cmd>
+                <substeps id="substeps_zcx_g1f_y5b">
+                    <substep>
+                        <cmd>Нажмите правой кнопкой мыши на «Служба SNMP» и выберите «Свойства».</cmd>
+                        <stepresult>Откроется окно «Служба SNMP».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В открывшемся окне откройте вкладку «Безопасность».</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «Добавить» в разделе «Приемлемые имена сообществ».</cmd>
+                        <stepresult>Откроется окно «Настройка службы SNMP».</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>В открывшемся окне: </cmd>
+                        <info><ol id="ol_fy5_v2f_y5b">
+                            <li>выберите права сообщества;<note>Рекомендуемое значение — READ ONLY.</note></li>
+                            <li>введите имя сообщества;</li>
+                            <li>нажмите на кнопку «Добавить».</li>
+                        </ol>
+                        </info>
+                        <info>
+                            <fig>
+                                <title>Настройка службы SNMP</title>
+                                <image href="../../../images/agentless_installation/win2000_SNMP.png"/>
+                            </fig>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите на кнопку «ОК» в окне «Служба SNMP».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

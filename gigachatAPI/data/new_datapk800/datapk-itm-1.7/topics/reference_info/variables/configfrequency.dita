@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="configfrequency">
-    <glossterm>PRXY_CONFFREQ</glossterm>
-    <glossdef>Частота получения конфигурации с сервера. Актуально только для прокси в активном
-        режиме. <p><b>Значение по умолчанию:</b> 3600</p><p><b>Разрешенный диапазон значений:</b>
-            128K-8G</p></glossdef>
-</glossentry>

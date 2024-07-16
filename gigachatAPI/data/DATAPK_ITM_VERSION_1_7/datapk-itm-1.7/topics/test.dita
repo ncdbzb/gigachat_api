@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="test">
+    <title>Обслуживание узлов сети</title>
+    <body>
+        <p>
+            <div><p>Во время обслуживания администратор может выполнять с узлом сети действия,
+                    которые могут повлиять на сбор данных. В <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph> можно указать периоды обслуживания для
+                    узлов сети или групп узлов сети. В этот период в узел сети в интерфейсе будет
+                    отмечен иконкой <image href="../images/ITM_K_usage/service_icon.png"
+                        id="image_ddt_rzk_2xb"/>.</p>Чтобы периоды обслуживания на разных
+                компонентах <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm"/></ph> совпадали, используйте общий часовой
+                пояс для всех компонентов <ph outputclass="udvpdf"><term keyref="udv_itm"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm"/></ph>.</div>
+            <div><p>Сервер <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_k"/></ph> должен работать во
+                    время обслуживания. Включение и выключение режима обслуживания происходит в
+                    нулевую секунду каждой минуты. </p>Когда узел сети переходит в режим
+                обслуживания, <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_k"/></ph> перечитывает все открытые проблемы для
+                проверки того, требуется ли их подавить. Такое поведение может повлиять на
+                производительность, если открытых проблем много. <p>Если к узлу сети, который
+                    находится в обслуживании, добавить элемент данных для сбора логов, то этот
+                    элемент будет собирать только те данные, которые попадут в логи уже после
+                    завершения обслуживания.</p>Если пользователь меняет период обслуживания, узлы
+                сети, группы или теги, эти изменения вначале попадают в кэш конфигурации и
+                применяются только после обновления кэша. Период обновления кэша конфигурации
+                задается в секундах и хранится в переменной <cmdname
+                    keyref="zbx_cacheupdate_frequency"/>. <p><b>Пример:</b> если <codeph><cmdname
+                            keyref="zbx_cacheupdate_frequency"/>=60</codeph>, то обновления вступят
+                    в силу через 60 секунд.</p></div>
+        </p>
+        <!-- ?Сделать таблицу со сравнением двух режимов: со сбором данных и без. -->
+        <p>Имеется два типа обслуживания: со сбором данных и без сбора данных.</p>
+        <section id="section_g2x_ctj_2xb">
+            <title>Режим «со сбором данных»</title>
+            <p>В режиме «со сбором данных» данные с узла сети передаются на сервер <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph>. Триггеры обрабатываются как обычно.</p>
+        </section>
+        
+        <section>
+            <title>Режим «без сбора данных»</title>
+            <p>В режиме «без сбора данных» данные с узла сети не передаются на сервер <ph
+                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                        ><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph> в течение всего периода обслуживания. Триггеры
+                этого узла сети не будут срабатывать в течение периода обслуживания, так как
+                обновления данных не происходит.</p>
+            <p>Данные, которые передаются на узел сети, могут содержать временную метку. Временная
+                метка — набор символов, показывающий дату и время. Если данные с временной меткой
+                передаются на узел сети в режиме обслуживания «без сбора данных», то будут ли
+                приняты данные, зависит от метки:<ul id="ul_fgr_mrj_2xb">
+                    <li>если временная метка входит в период обслуживания, то данные не будут
+                        приняты;</li>
+                    <li>если временная метка входит в период, который был до начала обслуживания, то
+                        данные будут приняты. </li>
+                </ul></p>
+            <p>После завершения обслуживания «без сбора данных» триггеры узла сети, которые
+                используют функцию <codeph>nodata(time)</codeph>, не активируются до момента
+                следующей проверки, который зависит от параметра <codeph>time</codeph>.</p>
+            <p>
+                <note>
+                    <codeph>nodata(time)</codeph> — это функция, которая проверяет, были ли получены
+                    данные за указанный период времени <codeph>time</codeph>. </note>
+            </p>
+        </section>
+        <p>В этом разделе:<ul id="ul_jpy_nhj_2xb">
+                <li><xref href="service_period_configuration.dita">Настройка периода
+                        обслуживания</xref></li>
+                <li><xref href="service_status_review.dita">Просмотр состояния
+                    обслуживания</xref></li>
+            </ul></p>
+    </body>
+</topic>

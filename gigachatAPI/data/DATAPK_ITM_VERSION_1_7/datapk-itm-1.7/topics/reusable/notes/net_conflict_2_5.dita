@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_sfj_qcn_rsb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_vfj_qcn_rsb"><cmd>Загрузите docker командой:</cmd><info><codeblock>docker load -i [имя_архива].tar.gz</codeblock></info></step>
+        </steps>
+        </taskbody>
+</task>

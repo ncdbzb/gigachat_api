@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
-<troubleshooting id="web-interface_loading_problem">
-    <title>Веб-интерфейс DATAPK ITM-K не загружается</title>
-    <troublebody
-        conref="../../reusable/notes/udv_itm_m_web-iterface_loading_problem_info.dita#ReusableComponent_m3s_xrf_1xb/troublebody_o3s_xrf_1xb"/>
-</troubleshooting>

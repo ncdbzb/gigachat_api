@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
- <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
- <topic id="ReusableComponent_dqw_nrp_lrb">
-
- <title>grok</title>
- <body> 
-  <p><codeph id="codeph_iqw_nrp_lrb">%{ТИП_ДАННЫХ:значение_поля_события}</codeph></p> 
- </body> 
-</topic> 

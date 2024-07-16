@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hardware_requirements">
+    <title>Требования к аппаратному и программному обеспечению</title>
+    <body>
+        <p>Каждый экземпляр сертифицированной версии программного комплекса 
+            <ph outputclass="html"><term keyref="datapk_itm"/></ph>
+            <ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph>
+            <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph>
+            устанавливается на аппаратную платформу с характеристиками,
+            достаточными для работы на данном уровне иерархии. </p>
+        <p>Требования к аппаратному обеспечению уровней филиала и предприятия приведены в
+            таблице.</p>
+        
+        <table id="table_ysr_q3h_btb" frame="all" rowsep="1" colsep="1">
+            <title>Минимальные требования к производительности серверов</title>
+            <tgroup cols="7">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <colspec colnum="3" colname="col3"/>
+                <colspec colnum="4" colname="col4"/>
+                <colspec colnum="5" colname="col5"/>
+                <colspec colnum="6" colname="col6"/>
+                <colspec colnum="7" colname="col7"/>
+                <thead>
+                    <row>
+                        <entry>Вариант исполнения</entry>
+                        <entry>Суммарный объем объектов мониторинга с учетом подчиненных
+                            серверов</entry>
+                        <entry>
+                            <p>Кол-во CPU (шт.) /</p>
+                            <p>кол-во ядер (шт.) / частота (ГГц)</p>
+                        </entry>
+                        <entry>Объем ОЗУ</entry>
+                        <entry>Объем дисковой подсистемы</entry>
+                        <entry>Объем дисковой подсистемы для ОС</entry>
+                        <entry>Сетевой адаптер</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Малая инсталляция <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph></entry>
+                        <entry>Менее 250</entry>
+                        <entry>1 CPU / 2 ядра / 2 ГГц</entry>
+                        <entry>16</entry>
+                        <entry>250 ГБ, от 7200 SATA</entry>
+                        <entry> 120 ГБ</entry>
+                        <entry>1х100/1000 Мбит/с</entry>
+                    </row>
+                    <row>
+                        <entry>Средняя инсталляция <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></entry>
+                        <entry>250 - 2500</entry>
+                        <entry>1 CPU / 4 ядра / 2 ГГц</entry>
+                        <entry>32</entry>
+                        <entry>1 ТБ, от 10К SAS</entry>
+                        <entry>240 ГБ</entry>
+                        <entry>1х100/1000 Мбит/с</entry>
+                    </row>
+                    <row>
+                        <entry>Большая инсталляция <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph></entry>
+                        <entry>2500 - 10000</entry>
+                        <entry>1 CPU / 4 ядра / 2 ГГц</entry>
+                        <entry>64</entry>
+                        <entry>
+                            <p>3 ТБ, от 10К SAS,</p>
+                            <p>RAID6</p>
+                        </entry>
+                        <entry> 240 ГБ</entry>
+                        <entry>1х1000 Мбит/с</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        
+        <p>Требования, которым должны удовлетворять АРМ управления (или оператора) для подключения к
+            <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"><term keyref="datapk_itm"/></ph>, приведены в таблице.</p>
+       
+        <table id="table_tk5_1vm_frb" frame="all" rowsep="1" colsep="1">
+            <title>Минимальные системные требования для АРМ управления (или оператора) для
+                подключения к <ph outputclass="udvpdf"><term keyref="udv_itm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm"/></ph></title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="1.41*"/>
+                <thead>
+                    <row>
+                        <entry>Компонент</entry>
+                        <entry>Требования</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Процессор</entry>
+                        <entry>По характеристикам не ниже Pentium IV и с тактовой частотой не менее
+                            2 ГГц</entry>
+                    </row>
+                    <row>
+                        <entry>ОЗУ</entry>
+                        <entry>1 ГБ</entry>
+                    </row>
+                    <row>
+                        <entry>Свободное пространство на жестком диске</entry>
+                        <entry>1 ГБ</entry>
+                    </row>
+                    <row>
+                        <entry>Скорость работы сетевой карты</entry>
+                        <entry>10/100/1000 Мбит/с</entry>
+                    </row>
+                    <row>
+                        <entry>Дисплей</entry>
+                        <entry>Разрешающая способность: 1024x768 точек или больше</entry>
+                    </row>
+                    <row>
+                        <entry>Устройства ввода</entry>
+                        <entry>Клавиатура, компьютерная мышь</entry>
+                    </row>
+                    <row>
+                        <entry>Операционные системы</entry>
+                        <entry>Microsoft Windows 8.1 и новее, Microsoft Windows Server 2012 и новее,
+                            CentOS 7, Red Hat Enterprise Linux 7 и новее</entry>
+                    </row>
+                    <row>
+                        <entry>Браузеры</entry>
+                        <entry>Google Chrome, Яндекс браузер</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Сертифицированная версия <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                    keyref="datapk_itm_k"/></ph> функционирует на серверах под управлением следующих
+                <abbreviated-form keyref="OS"/>:</p>
+        <ul id="ul_y51_q1k_jrb">
+            <li>РЕД ОС версии 7.3;</li>
+            <li>Astra Linux Special Edition (Смоленск) версии 1.7.</li>
+        </ul>
+        <p>Обязательным условием функционирования сертифицированной версии <ph outputclass="udvpdf"
+                    ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                /></ph> является наличие установленного ПО системы управления базами данных Jatoba
+            DB.</p>
+        <p>Для мониторинга узла сети с помощью <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                outputclass="html"><term keyref="datapk_itm_k"/></ph> необходимо установить агента
+            на узле сети. Требования, которым должен удовлетворять объект мониторинга для установки
+            на него агента, приведены в таблице ниже.</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_mzm_5nz_c1c">
+            <title>Системные требования к объекту мониторинга для установки агента</title>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Компонент</entry>
+                        <entry>Требования</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Операционные системы</entry>
+                        <entry>Windows, Linux</entry>
+                    </row>
+                    <row>
+                        <entry>Архитектура процессора</entry>
+                        <entry>i386 или AMD64</entry>
+                    </row>
+                    <row>
+                        <entry>Место в памяти для установки агента</entry>
+                        <entry>RAM 1.5 Мб</entry>
+                    </row>
+                    <row>
+                        <entry>Место на диске для установки агента</entry>
+                        <entry>HDD 8 Мб</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

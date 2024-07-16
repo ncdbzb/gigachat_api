@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itmm_cl_certif">
+    <title>Выпуск SSL-сертификатов</title>
+    <body>
+        <p>В этом разделе рассмотрен выпуск доверенных сертификатов для доступа к веб-интерфейсу
+                <abbreviated-form keyref="udv_itm_k"/> по сетевому имени. </p>
+        <p>Перед выпуском сертификатов остановите <abbreviated-form keyref="udv_itm_k"/>
+            командой:<codeblock>cd /opt/itm-k &amp;&amp; docker-compose down</codeblock></p>
+        <p>Выпуск сертификатов для <abbreviated-form keyref="udv_itm_k"/> состоит из следующих
+                этапов:<ul id="ul_egr_fdg_rzb">
+                <li><xref href="itmm_root_cert.dita"/></li>
+                <li><xref href="itmm_cert_key_web_interface.dita"/></li>
+                <li><xref href="itmm_cert_admin.dita"/></li>
+            </ul></p>
+    </body>
+</topic>

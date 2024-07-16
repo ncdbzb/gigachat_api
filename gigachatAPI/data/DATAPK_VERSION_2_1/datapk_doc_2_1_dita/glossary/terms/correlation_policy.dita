@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="correlation_policy_term">
-    <glossterm>Политика корреляции событий</glossterm>
-    <glossdef>Политика корреляции событий — справочник, который содержит схему и правила
-        корреляции.</glossdef>
-</glossentry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="invalid_syntax_itm_a">
+    <title>Ошибка при запуске агента вида «cannot load os dependent items: strconv.Atoi: parsing
+        "имя_службы": invalid syntax»</title>
+    <troublebody>
+        <condition>
+            <p
+                conref="../reusable/errors/invalid_syntax_condition.dita#ReusableComponent_g3x_qqg_yyb/p_h3x_qqg_yyb"
+            />
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Причина</title>
+                <p
+                    conref="../reusable/errors/invalid_syntax_cause.dita#ReusableComponent_zxx_crg_yyb/p_ayx_crg_yyb"/>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty></responsibleParty>
+                <steps
+                    conref="../reusable/errors/invalid_syntax_remedy.dita#ReusableComponent_ffg_3rg_yyb/steps_gfg_3rg_yyb"
+                    id="steps_hkg_3rg_yyb">
+                    <step>
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

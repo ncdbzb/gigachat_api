@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="queue_proxy_overview">
+    <glossterm>Обзор очереди по прокси</glossterm>
+    <glossdef>Страница, где показано количество элементов данных, ожидающих обновления, для каждого
+        сервера <ph outputclass="udvpdf">удаленного мониторинга</ph>
+        <ph outputclass="onlypdf">агентов</ph>
+        <ph outputclass="html">агентов</ph>. <fig>
+            <title>Обзор очереди по прокси</title>
+            <div outputclass="html"><image href="../../../images/Pages/queue_proxy.png"/></div>
+			<div outputclass="onlypdf"><image href="../../../images/Pages/queue_proxy.png"/></div>
+			<div outputclass="udvpdf"><image href="../../../images/udv_itm_k_pages/udv_queue_proxy.png"/></div>
+        </fig>
+    </glossdef>
+</glossentry>

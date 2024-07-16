@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_mgb_vzj_trb">
-    <title>zbx_db_key_file_info</title>
-    <body><div id="div_ogb_vzj_trb"><p>Полный путь к файлу, содержащему закрытый ключ для аутентификации в базе данных.</p></div></body>
-</topic>

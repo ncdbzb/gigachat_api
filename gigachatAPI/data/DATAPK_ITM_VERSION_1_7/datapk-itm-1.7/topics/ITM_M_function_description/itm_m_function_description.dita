@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_function_description">
+    <title>Описание функций</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_dlj_nkj_lrb">
+                <li><xref href="ITM_M_main_screen_interface/itm_m_main_screen_web_interface.dita"
+                    /></li>
+                <li><xref href="itm_m_info_panel.dita"/></li>
+                <li><xref href="ITM_M_monitoring_servers/itm_m_monitoring_servers.dita"/></li>
+                <li><xref href="ITM_M_monitoring_objects/itm_m_monitoring_objects.dita"/></li>
+                <li><xref href="ITM_M_monitoring_services/itm_m_monitoring_it_services.dita"/></li>
+                <li><xref href="ITM_M_problems/itm_m_problems.dita"/></li>
+                <li><xref href="itm_vm_administration.dita"/><ul id="ul_hfr_45g_hzb">
+                        <li><xref href="itm_vm_audit_log.dita"/></li>
+                    </ul></li>
+                <li><xref href="ITM_M_configurations/itm_m_config.dita"/><ul id="ul_rkh_qlj_lrb">
+                        <li><xref href="ITM_M_configurations/itm_m_config_general.dita"/></li>
+                        <li><xref href="ITM_M_configurations/itm_m_config_users.dita"/></li>
+                        <li><xref href="ITM_M_configurations/ldap.dita"/></li>
+                        <li><xref href="ITM_M_configurations/ITM_VM_notification_rules.dita"/></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="datapk_itm_a_antivirus">
+    <title>Рекомендации по использованию антивируса на сервере DATAPK ITM-A</title>
+    <body>
+        <div conref="../reusable/notes/antivirus.dita#ReusableComponent_jnt_glf_rvb/div_knt_glf_rvb"
+        />
+    </body>
+</topic>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="udv_agent_server_configuration">
-    <title>Добавление сервера удаленного мониторинга</title>
-<taskbody
-                conref="../../../reusable/notes/agent_server_configuration_info.dita#ReusableComponent_sxw_5fm_1xb/taskbody_txw_5fm_1xb"
-            />
-</task>

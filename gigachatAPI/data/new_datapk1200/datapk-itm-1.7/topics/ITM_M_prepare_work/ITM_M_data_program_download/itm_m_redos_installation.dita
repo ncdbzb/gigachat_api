@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="itm_m_redos_installation">
-    <title>Установка DATAPK ITM-VM на ОС РЕД ОС</title>
-    <body
-        conref="../../reusable/notes/itm_m_redos_installation_info.dita#ReusableComponent_v3v_zwc_zwb/body_w3v_zwc_zwb">
-        <p>Установите ОС РЕД ОС 7.3 по инструкции от производителя. В процессе установки ОС:</p>
-    </body>
-</topic>

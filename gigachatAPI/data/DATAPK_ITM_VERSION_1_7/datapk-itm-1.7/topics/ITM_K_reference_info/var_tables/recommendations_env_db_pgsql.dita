@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="recommendations_env_db_pgsql">
+    <title>Рекомендации по использованию переменных файла .db.env</title>
+    <body>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_dzy_y2l_trb">
+                <title>Рекомендации по использованию переменных файла .db.env</title>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Переменная</entry>
+                            <entry>Рекомендации по использованию</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><cmdname keyref="postgres_user"/></entry>
+                            <entry>
+                                <div
+                                    conref="../../reusable/notes/postgres_user_note_info.dita#ReusableComponent_msc_lzk_trb/note_nsc_lzk_trb"
+                                />
+                            </entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="postgres_password"/></entry>
+                            <entry>
+                                <div
+                                    conref="../../reusable/notes/postgres_password_note_info.dita#ReusableComponent_b44_lfl_trb/div_c44_lfl_trb"
+                                />
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

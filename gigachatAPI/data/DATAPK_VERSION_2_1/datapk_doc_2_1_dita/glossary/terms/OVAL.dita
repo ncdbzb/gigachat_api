@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-<glossentry id="oval_def_term"><glossterm>Open Vulnerability and Assessment Language</glossterm><glossdef>OVAL — основанный на xml формат, предназначенный для автоматизированной оценки
-        безопасности систем и предоставляющий средства для описания исследуемой системы, анализа ее
-        состояния и формирования отчетов о результатах проверки.</glossdef><glossBody>
-        <glossSurfaceForm>Open Vulnerability and Assessment Language</glossSurfaceForm><glossAlt><glossAbbreviation>OVAL</glossAbbreviation></glossAlt></glossBody></glossentry>
-

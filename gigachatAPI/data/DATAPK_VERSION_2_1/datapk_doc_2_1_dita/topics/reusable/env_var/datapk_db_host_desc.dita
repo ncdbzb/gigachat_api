@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
-<glossentry id="ReusableComponent_mfh_drf_4yb">
-    <glossterm/>
-    <glossdef><div id="div_nfh_drf_4yb"><p><ph>Название сервиса, управляющего базой
-                данных.</ph></p><note
-                conref="../notes/caution_db.dita#ReusableComponent_kzf_fpl_2wb/note_ltw_d4l_2wb"
-                id="note_cdg_fpl_2wb"/></div></glossdef>
-</glossentry>

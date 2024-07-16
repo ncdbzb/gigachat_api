@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>Анализ и настройка проблем</title>
-    <topicref href="usage/triggers/triggers.dita">
-        <topicref href="usage/triggers/itm_k_triggers.ditamap" format="ditamap"/>
-    </topicref>
-    <topicref href="requirements/itmk_config_notifications.dita"/>
-</map>

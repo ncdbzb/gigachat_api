@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_mx5_nnj_2tb">
+    <title></title>
+    <body><p id="p_nx5_nnj_2tb">Порт, который слушает Zabbix Java gateway. Этот параметр поддерживается начиная с Zabbix 2.0.0.</p></body>
+</topic>

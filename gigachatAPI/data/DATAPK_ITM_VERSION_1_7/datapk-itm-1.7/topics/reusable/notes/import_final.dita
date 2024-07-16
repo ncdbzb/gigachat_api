@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dt2_3pq_xrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_et2_3pq_xrb">
+                        <cmd>Нажмите кнопку «Импорт» в нижней части страницы.</cmd>
+                        <stepresult>Появится окно, сообщающее об успешности или обнаруженных проблемах импорта.</stepresult>
+                    </substep> 
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_gsh_45b_pxb">
-    <title></title>
-    <body><p id="p_ish_45b_pxb">В скрипте генерации переменных <codeph>env_generator.sh</codeph> актуализированы значения переменных по умолчанию.</p></body>
-</topic>

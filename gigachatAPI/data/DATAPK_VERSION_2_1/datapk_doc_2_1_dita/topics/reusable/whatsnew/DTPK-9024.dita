@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_iqn_bkl_lyb">
-    <title></title>
-    <body><div id="div_jqn_bkl_lyb">Исключена возможность использования кнопки <image href="../../../images/icons/del_2.png" id="image_ipj_jfl_lyb"/> (<uicontrol>Групповое удаление</uicontrol>) при следующих условиях:<ul id="ul_fvr_nfl_lyb"><li>Применен хотя бы один из фильтров: <uicontrol>Статус проблемности</uicontrol>,
-                        <uicontrol>Производитель ОС</uicontrol>, <uicontrol>ОС</uicontrol>,
-                        <uicontrol>Версия ОС</uicontrol>;</li><li>По результатам фильтрации получилось больше 100 записей;</li><li>Применено действие <uicontrol>Выбрать все записи (>100) в данной таблице</uicontrol></li></ul></div></body>
-</topic>

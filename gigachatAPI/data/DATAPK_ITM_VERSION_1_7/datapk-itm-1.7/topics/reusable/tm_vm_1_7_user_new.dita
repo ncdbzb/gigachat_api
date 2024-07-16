@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_vm_whats_new">
+    <title>Что нового?</title>
+    <body>
+        <p>Основные изменения, касающиеся эксплуатации ПО сервера <ph outputclass="udvpdf"><term
+                    keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> версии
+            1.7.0.0:</p>
+      <table frame="all" rowsep="1" colsep="1" id="table_jn1_qwx_z5b">
+                <title>Изменения <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> версии
+                    1.7.0.0</title>
+                <tgroup cols="3">
+                    <colspec colname="c3" colnum="1" colwidth="1*"/>
+                    <colspec colname="c1" colnum="2" colwidth="1*"/>
+                    <colspec colname="c2" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Категория</entry>
+                            <entry>Изменения в продукте</entry>
+                            <entry>Разделы документации</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Серверы мониторинга</entry>
+                            <entry>На странице <cite keyref="itm_m_page_server_monitoring"/>:<ol
+                                    id="ul_n15_krq_pzb">
+                                    <li>В таблицу добавлена информация о серверах удаленного
+                                        мониторинга.</li>
+                                    <li>Добавлена возможность просмотра карточки сервера удаленного
+                                        мониторинга.</li>
+                                    <li>Добавлена возможность свернуть или развернуть сразу все
+                                        записи в таблице.</li>
+                                    <li>Добавлена возможность внеочередного сбора данных с сервера
+                                        мониторинга.</li>
+                                    <li>Добавлена возможность настройки сбора данных. В связи с этим
+                                        исключен раздел «Настройки» → «Сбор данных». </li>
+                                    <li>Добавлено автоматическое обновление до новой версии серверов
+                                        мониторинга, подключенных к <ph outputclass="udvpdf"><term
+                                                keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"
+                                                ><term keyref="datapk_itm_vm"/></ph><ph
+                                            outputclass="html"><term keyref="datapk_itm_vm"/></ph>.
+                                        После обновления сбор данных с серверов мониторинга
+                                        продолжится.</li>
+                                    <li>Исправлена ошибка, при которой можно было добавить несколько
+                                        одинаковых серверов при повторном нажатии кнопки
+                                        «Подключить» в окне «Подключение сервера мониторинга».</li>
+                                    <li>Исправлена ошибка в названии версии <ph outputclass="udvpdf"
+                                                ><term keyref="udv_itm_k"/></ph><ph
+                                            outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                            /></ph><ph outputclass="html"><term
+                                                keyref="datapk_itm_k"/></ph>, при которой
+                                        некорректно работала сортировка в столбце «Версия ПО».</li>
+                                </ol>В карточке сервера мониторинга:<ol id="ul_vtd_4rq_pzb">
+                                    <li>Добавлена таблица с параметрами конфигурации сервера
+                                        мониторинга.</li>
+                                    <li>Добавлена ссылка для перехода на страницу этого сервера
+                                        мониторинга.</li>
+                                </ol>Во всплывающем окне со статусами синхронизаций на странице
+                                параметр «Системные свойства» переименован в «Свойства сервера
+                                мониторинга»</entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_info_added_server.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_monitoring_servers.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/ITM_VM_data_collect_configuration.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_add_new_monitoring_server.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_m_config.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/itm_m_function_description.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Объекты мониторинга</entry>
+                            <entry>На странице <cite keyref="itm_m_page_object_monitoring"/>:<ol
+                                    id="ol_t2g_2pq_pzb">
+                                    <li>Исключено дерево филиалов и <abbreviated-form keyref="to"/>,
+                                        теперь по умолчанию в списке отображаются все
+                                            <abbreviated-form keyref="monitoring_object"/>.</li>
+                                    <li>Добавлена возможность фильтрации <abbreviated-form
+                                            keyref="monitoring_object"/> по филиалу и
+                                            <abbreviated-form keyref="to"/>.</li>
+                                    <li>В таблицу со списком <abbreviated-form
+                                            keyref="monitoring_object"/> добавлены столбцы «Тип
+                                            <abbreviated-form keyref="monitoring_object"/>» и
+                                        «Ссылки».</li>
+                                    <li>Добавлен счетчик количества <abbreviated-form
+                                            keyref="monitoring_object"/>.</li>
+                                    <li>Добавлена возможность просмотра наиболее критичных проблем
+                                        выбранного <abbreviated-form keyref="monitoring_object"/>
+                                        при нажатии на значение в столбце «Проблемы».</li>
+                                    <li>Столбец таблицы «Филиал/ТО» разделен на два: «Филиал» и
+                                            «<abbreviated-form keyref="to"/>».</li>
+                                    <li>Добавлена возможность сортировки по филиалу.</li>
+                                    <li>Изменены настройки сортировки по умолчанию.</li>
+                                </ol>В карточке <abbreviated-form keyref="monitoring_object"/>:<ol
+                                    id="ul_xgq_wg5_4zb">
+                                    <li>Параметр «Состояние» переименован в «Статус».</li>
+                                    <li>Добавлены параметры «Обновление статуса» и «Обновление
+                                        свойств ОМ».</li>
+                                    <li>Исключен параметр «Дата обновления».</li>
+                                    <li>Добавлена возможность отображения внешних ссылок,
+                                        добавленных в качестве значения полей «URL A», «URL B», «URL
+                                        C» в инвентарных данных <ph outputclass="udvpdf"><term
+                                                keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"
+                                                ><term keyref="datapk_itm_k"/></ph><ph
+                                            outputclass="html"><term keyref="datapk_itm_k"/></ph>
+                                        или Zabbix.</li>
+                                    <li>Исправлено отображение IP-адресов с 12 символами. </li>
+                                    <li>Изменено отображение состояния для объектов мониторинга на
+                                        техническом обслуживании</li>
+                                </ol></entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_objects.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_objects_list.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_object_info.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Объекты мониторинга, серверы мониторинга, проблемы</entry>
+                            <entry>
+                                
+                                        <p>Добавлена возможность просмотра окон «Свойства сервера
+                                удаленного мониторинга» и «Свойства сервера мониторинга» на
+                                страницах <cite keyref="itm_m_page_object_monitoring"/>, <cite
+                                    keyref="itm_m_page_problems"/>.</p>
+                                        <p>Добавлена возможность просмотра окна «Свойства сервера
+                                удаленного мониторинга» при нажатии в любом месте строки конкретного
+                                    <abbreviated-form keyref="to"/> на странице <cite
+                                    keyref="itm_m_page_server_monitoring"/>.</p>
+                                        <p>Изменено поведение на странице <cite
+                                            keyref="itm_m_page_problems"/>:</p>
+                                            <ul
+                                                id="ul_zzc_mc1_fzb">
+                                                <li>При нажатии на значение в столбце «Филиал,
+                                                  <abbreviated-form keyref="to"/>» выводится окно
+                                                  просмотра свойств сервера мониторинга.</li>
+                                                <li>При нажатии на значение в столбце «Объект»
+                                                  выводится окно просмотра информации об объекте
+                                                  мониторинга</li>
+                                            </ul>
+                            </entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_info_added_server.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_monitoring_servers.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_objects.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_objects_list.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/agent_server_info.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/agent_server_change.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_problems/itm_m_problem_OM_list.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_problems/problem_info.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_object_info.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Проблемы</entry>
+                            <entry>
+                                На странице <cite keyref="itm_m_page_problems"/>:
+                                <ul id="ul_bms_45n_fzb">
+                                        <li>Изменен счетчик записей.</li>
+                                        <li>Добавлена возможность сортировки по длительности
+                                            проблем.</li>
+                                        <li>Добавлена возможность фильтрации списка по состоянию
+                                            проблем и по объектам мониторинга.</li>
+                                        <li>Добавлена возможность поиска <abbreviated-form
+                                                keyref="monitoring_object"/> в фильтре «Объект»</li>
+                                    </ul>
+                            </entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_problems/itm_m_problem_OM_list.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Отчет о проблемах</entry>
+                            <entry>Изменен шаблон письма с отчетом о проблемах:<ul
+                                    id="ul_xfs_x3c_zyb">
+                                    <li>Добавлены столбцы с нумерацией строк и состоянием
+                                        проблемы.</li>
+                                    <li>Добавлена строка с информацией об общем количестве событий и
+                                        о количестве нерешенных проблем.</li>
+                                    <li>Добавлено наименование оповещения</li>
+                                </ul></entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/create_detection_rule.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>ИТ-услуги</entry>
+                            <entry>
+                                <ol id="ol_shm_spq_pzb">
+                                    <li>Исправлена ошибка, возникавшая при попытке пользователя
+                                        включить ИТ-услугу, отключенную администратором.</li>
+                                    <li>
+                                        <div id="ph_tw3_3y2_xyb">Исправлена ошибка, при которой на
+                                            странице <cite keyref="itm_m_page_it_services"/>
+                                            отключалось несколько услуг вместо одной</div>
+                                    </li>
+                                </ol>
+                            </entry>
+                            <entry>—</entry>
+                        </row>
+                        <row>
+                            <entry>Роли пользователей</entry>
+                            <entry>
+                                <ol id="ol_rvf_p4q_pzb">
+                                    <li>Для авторизованных пользователей исключена возможность
+                                        перехода на страницу авторизации без завершения текущей
+                                        сессии.</li>
+                                    <li>Для роли «Пользователь» добавлены следующие возможности:<ul
+                                        id="ul_i4z_mgd_zyb">
+                                        <li>просмотр списка и карточек правил оповещений на странице
+                                                <cite keyref="itm_m_page_configuration"/> → <cite
+                                                keyref="itm_m_pages_notification_rules"/>;</li>
+                                        <li>создание, изменение, включение, выключение и удаление
+                                            собственных правил оповещений на странице <cite
+                                                keyref="itm_m_page_configuration"/> → <cite
+                                                keyref="itm_m_pages_notification_rules"/></li>
+                                    </ul>
+                                </li>
+                                </ol>
+                            </entry>
+                            <entry><xref href="../ITM_M_reference_info/itmm_roles.dita"/></entry>
+                        </row>
+                        
+                        <row>
+                            <entry>Email-оповещения, внешний вид</entry>
+                            <entry>
+                                <div
+                                    conref="../reusable/changelog_1_7/ITM-865.dita#ReusableComponent_q1f_jbk_zyb/div_s1f_jbk_zyb"
+                                />
+                            </entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_m_config_general.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Переменные, основные настройки</entry>
+                            <entry> На страницу <cite keyref="itm_m_page_configuration"/> → <cite
+                                keyref="itm_m_page_config_general"/> добавлена возможность настройки
+                            параметров: <ul id="ul_nzh_pbw_pzb">
+                                <li>Период хранения истории проблем , дней; </li>
+                                <li>Период хранения истории синхронизаций, дней  </li>
+                            </ul></entry>
+                            <entry><xref
+                                href="../ITM_M_function_description/ITM_M_configurations/itm_m_config_general.dita"
+                            />, <xref
+                                href="../ITM_M_function_description/ITM_M_configurations/itmm_general_change.dita"
+                            /></entry>
+                        </row>
+                        <row>
+                            <entry>Оповещения</entry>
+                            <entry>
+                                <div
+                                    conref="../reusable/changelog_1_7/ITM-1859.dita#ReusableComponent_jqd_2gw_fzb/div_lqd_2gw_fzb"
+                                />
+                            </entry>
+                            <entry>—</entry>
+                        </row>
+                        <row>
+                            <entry>Администрирование, журнал событий</entry>
+                            <entry>
+                                <div
+                                    conref="../reusable/changelog_1_7/ITM-1431.dita#ReusableComponent_qvr_vtg_hzb/div_rvr_vtg_hzb"
+                                />
+                            </entry>
+                            <entry><xref href="../ITM_M_function_description/itm_vm_audit_log.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/itm_vm_administration.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Панель информации</entry>
+                            <entry>На странице <cite keyref="itm_m_page_info_panel"/>:<ol
+                                    id="ol_trv_xpq_pzb">
+                                    <li>Добавлена возможность изменения размера графиков: <ul
+                                            id="ul_bfv_hqq_pzb">
+                                            <li>«Количество объектов мониторинга по статусу»;</li>
+                                            <li>«Количество объектов мониторинга по
+                                                проблемности»;</li>
+                                            <li>«Изменение количества объектов мониторинга»;</li>
+                                            <li>«Количество нерешенных проблем по важности»;</li>
+                                            <li>«Изменение количества проблем».</li>
+                                        </ul></li>
+                                    <li>Изменен внешний вид графиков:<ul id="ul_p1y_3qq_pzb">
+                                            <li>«Количество нерешенных проблем по важности»;</li>
+                                            <li>«Изменение количества объектов мониторинга»;</li>
+                                            <li>«Изменение количества проблем».</li>
+                                        </ul></li>
+                                    <li>Изменен тип графиков «Количество объектов мониторинга по
+                                        статусу» и «Количество объектов мониторинга по
+                                        проблемности», а также пояснения к этим графикам.</li>
+                                    <li>
+                                        <div id="div_azz_cdr_lzb">Добавлена возможность выбора
+                                            отображаемых графиков.</div>
+                                    </li>
+                                    <li>
+                                        <div id="div_etw_jvr_lzb">Добавлена возможность перемещения
+                                            графиков.</div>
+                                    </li>
+                                    <li>Исправлена ошибка, при которой некорректно отображались
+                                        подписи к графикам</li>
+                                </ol>
+                            </entry>
+                            <entry><xref href="../ITM_M_function_description/itm_m_info_panel.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_main_screen_interface/itm_m_main_screen_web_interface.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Внешний вид</entry>
+                            <entry>
+                                <ol id="ol_pnt_mqq_pzb">
+                                    <li>Изменено отображение процесса загрузки данных на следующих
+                                            страницах:<ul id="ul_ahg_nqq_pzb">
+                                            <li><cite keyref="itm_m_page_object_monitoring"/>;</li>
+                                            <li><cite keyref="itm_m_page_audit"/>;</li>
+                                            <li><cite keyref="itm_m_page_problems"/>;</li>
+                                            <li><cite keyref="itm_m_page_info_panel"/>;</li>
+                                            <li><cite keyref="itm_m_config_ldap"/>;</li>
+                                            <li>страница авторизации.</li>
+                                        </ul></li>
+                                    <li>Исправлено отображение полосы прокрутки при загрузке
+                                        данных.</li>
+                                    <li>Изменен внешний вид таблиц при отсутствии данных и при
+                                        возникновении ошибки 502.</li>
+                                    <li>Добавлено оповещение «Сервер не отвечает» при отсутствии
+                                        ответа от сервера в течение 30 секунд.</li>
+                                    <li>Обновлен внещний вид ряда всплывающих окон:<ul
+                                            id="ul_pmn_tqq_pzb">
+                                            <li>окно удаления правила оповещения;</li>
+                                            <li>окно удаления сервера;</li>
+                                            <li>окно очистки настроек LDAP;</li>
+                                            <li>окно свойств сервера мониторинга;</li>
+                                            <li>окно изменения свойств сервера мониторинга;</li>
+                                            <li>окно информации об ИТ-услуге;</li>
+                                            <li>окно настройки сбора данных;</li>
+                                            <li>окно просмотра информации об объекте
+                                                мониторинга;</li>
+                                            <li>окно очистки настроек email-оповещений;</li>
+                                            <li>окно подтверждения удаления пользователя;</li>
+                                            <li>окно подтверждения изменения периода неактивности
+                                                пользователя для блокировки сеанса;</li>
+                                            <li>карточка проблемы.</li>
+                                        </ul></li>
+                                    <li>
+                                        <div id="div_w1n_y5f_yyb">Исправлена ошибка во всплывающей
+                                            подсказке к полю «Пароль» в окне «Добавление
+                                            пользователя»</div>
+                                    </li>
+                                </ol>
+                            </entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_vm_detection_rule_options.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_delete_monitoring_server.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/LDAP_clear.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_info_added_server.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/itm_m_change_monitoring_server.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_services/itm_m_service_card.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_servers/ITM_VM_data_collect_configuration.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_object_info.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_vm_clear_email_notifications.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_m_config_change_user.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itmm_general_change.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_problems/problem_info.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Фильтры, панель информации</entry>
+                            <entry>
+                                <div
+                                    conref="../reusable/changelog_1_7/ITM-1650.dita#ReusableComponent_p53_rfs_lzb/div_q53_rfs_lzb"
+                                />
+                            </entry>
+                            <entry><xref href="../ITM_M_function_description/itm_m_info_panel.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Фильтры, объекты мониторинга, проблемы</entry>
+                            <entry>Добавлена возможность отмены сразу всех фильтров на страницах:<ul
+                                    id="ul_osc_jpd_nzb">
+                                    <li><cite keyref="itm_m_page_object_monitoring"/>;</li>
+                                    <li><cite keyref="itm_m_page_problems"/></li>
+                                </ul></entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_monitoring_objects/itm_m_monitoring_objects_list.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_problems/itm_m_problem_OM_list.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Фильтры, проблемы</entry>
+                            <entry>Добавлена возможность фильтрации по <abbreviated-form keyref="to"
+                                /> на странице <cite keyref="itm_m_page_problems"/></entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_problems/itm_m_problem_OM_list.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Правила оповещений</entry>
+                            <entry>Добавлена иконка, которая показывает состояние работоспособности
+                                канала Email-оповещений на странце <cite
+                                    keyref="itm_m_pages_notification_rules"/></entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/ITM_VM_notification_rules.dita"
+                                /></entry>
+                        </row>
+                        <row>
+                            <entry>Синхронизация</entry>
+                            <entry>Исправлена ошибка синхронизации метаданных</entry>
+                            <entry>—</entry>
+                        </row>
+                        <row>
+                            <entry>Настройки, SIEM</entry>
+                            <entry>Добавлена возможность настройки подключения к SIEM на странице
+                                    <cite keyref="itm_m_page_configuration"/> → <cite
+                                    keyref="itm_m_page_config_general"/></entry>
+                            <entry><xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_m_config_general.dita"
+                                />, <xref
+                                    href="../ITM_M_function_description/ITM_M_configurations/itm_vm_siem_config.dita"
+                                /></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+    </body>
+</topic>

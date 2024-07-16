@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_fcr_vw2_trb">
-    <title>ZBX_VAULTDBPATH_info</title>
-    <body><div id="div_gcr_vw2_trb"><p>Путь к хранилищу, откуда будут извлечены учетные данные для базы данных с помощью ключей «пароль» и «имя пользователя».</p></div></body>
-</topic>

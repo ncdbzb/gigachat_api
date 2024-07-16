@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="net_interactions">
+    <title>Сетевые взаимодействия</title>
+    <body><p>В этом разделе:<ul id="ul_w4h_fsy_1tb">
+                <li><xref href="ITM_net_interactions.dita"/></li>
+                <li><xref href="calculate_channel.dita"/><ul id="ul_hp1_5ty_1tb">
+                        <li><xref href="ITM_itm_k_itm_a_OM_traffic.dita"/></li>
+                        <li><xref href="ITM_traffic_between_itm_k_itm_a.dita"/></li>
+                        <li><xref href="ITM_traffic_itm_vm_itm_k.dita"/></li>
+                    </ul></li>
+            </ul></p></body>
+</topic>

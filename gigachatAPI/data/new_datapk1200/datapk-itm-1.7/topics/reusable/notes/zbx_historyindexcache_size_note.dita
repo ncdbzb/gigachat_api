@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_nj5_3jr_trb">
-    <title>ZBX_HISTORYINDEXCACHE SIZE note</title>
-    <body><div id="div_oj5_3jr_trb"><note>Кэшу индекса необходимо около 100 байт на кэширование одного элемента данных.</note></div></body>
-</topic>

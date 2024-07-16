@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ars_ymj_2tb">
-    <title></title>
-    <body><p id="p_drs_ymj_2tb">IP-адрес (или имя хоста) Zabbix Java gateway. Требуется только, если запущены Java поллеры. Этот параметр поддерживается начиная с Zabbix 2.0.0.</p></body>
-</topic>

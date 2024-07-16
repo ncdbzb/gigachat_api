@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_msx_q3j_2tb">
-    <title></title>
-    <body><p id="p_nsx_q3j_2tb">Размещение fping6. <note type="tip">Убедитесь, что владельцем бинарного файла fping6 является root и флаг SUID установлен. Оставьте пустым ("Fping6Location="), если ваша утилита fping поддерживает обработку IPv6 адресов.</note></p></body>
-</topic>

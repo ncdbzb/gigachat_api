@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_fxl_h2k_trb">
+    <title>ZBX_POSTMAXSIZE_info</title>
+    <body><div id="div_hxl_h2k_trb"><p>Максимально допустимый размер данных, отправляемых методом POST.</p></div></body>
+</topic>

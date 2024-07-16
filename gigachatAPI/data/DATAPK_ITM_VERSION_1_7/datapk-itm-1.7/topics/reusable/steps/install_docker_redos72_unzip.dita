@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_s3m_1wm_hwb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_t3m_1wm_hwb">
+                <cmd>Распакуйте архив с помощью команды:</cmd>
+                <info><codeblock>unzip /opt/dependencies_redos72.zip -d /opt/</codeblock></info>
+            </step> 
+        </steps>     
+    </taskbody>
+</task>

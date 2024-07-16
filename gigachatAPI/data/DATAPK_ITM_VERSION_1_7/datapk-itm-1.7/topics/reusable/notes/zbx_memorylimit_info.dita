@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_c4z_12k_trb">
+    <title>ZBX_MEMORYLIMIT_info</title>
+    <body>
+        <div id="div_d4z_12k_trb"><p>Максимальный объем памяти в байтах, который разрешается использовать скрипту PHP.</p></div>
+    </body>
+</topic>

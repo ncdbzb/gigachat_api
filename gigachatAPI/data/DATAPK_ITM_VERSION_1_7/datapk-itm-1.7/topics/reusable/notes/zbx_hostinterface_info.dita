@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_i3w_kkk_trb">
+    <title>ZBX_HOSTINTERFACE_info</title>
+    <body><div id="div_l3w_kkk_trb"><p>Интерфейс хоста, который используется в процессе авторегистрации хоста. Необязательный параметр. </p>
+            <p>
+                <div
+                    conref="../../reusable/notes/zbx_hostinterface_note.dita#ReusableComponent_llw_rrl_trb/div_mlw_rrl_trb"
+                />
+            </p></div></body>
+</topic>

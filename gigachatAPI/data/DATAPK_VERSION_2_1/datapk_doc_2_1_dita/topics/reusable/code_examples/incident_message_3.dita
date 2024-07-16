@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
- <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
- <topic id="ReusableComponent_lx3_lw4_lrb">
-
- <title>incident_message_3</title>
- <body> 
- <codeblock outputclass="language-sql" id="codeblock_px3_lw4_lrb">На <abbreviated-form keyref="host"/> GasStation ( <codeph>192.168.0.100</codeph>) обнаружен подбор пароля к учетной записи пользователя Администратор</codeblock> 
-</body> 
-</topic> 

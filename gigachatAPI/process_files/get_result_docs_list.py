@@ -23,7 +23,7 @@ async def get_result_docs_list(file_path: str, filename: str, operation: str) ->
     if operation == 'initialize_chroma':
         split_docs = await get_dita_docs(file_path, chunk_size=CHUNK_SIZE, without_large_chunks=True)
         if not split_docs:
-            split_docs = await get_text_docs_list(file_path, separator='\n', chunk_size=800, chunk_overlap=100)
+            split_docs = await get_text_docs_list(file_path, separator='\n', chunk_size=CHUNK_SIZE, chunk_overlap=100)
     else:
         split_docs = await get_dita_docs(file_path, min_doc_length=1000, max_doc_length=7000)
         if not split_docs:

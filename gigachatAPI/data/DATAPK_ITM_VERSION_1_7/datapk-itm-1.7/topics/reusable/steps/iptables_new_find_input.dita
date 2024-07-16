@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_spw_3ly_svb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_upw_3ly_svb">
+                <cmd>Найдите список добавленных правил в цепочке «INPUT». </cmd>
+                <info>
+                    <fig>
+                        <title>Правила iptables</title>
+                        <image href="../../../images/iptables_update/itm_new_input.png"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_whc_dzs_trb">
-    <title>zbx_vaulturl_note</title>
-    <body><div id="div_xhc_dzs_trb"><note>Если параметр SSLCALocation не указан, в качестве значения данной переменной будет использоваться общесистемный каталог сертификатов центра сертификации.</note></div></body>
-</topic>

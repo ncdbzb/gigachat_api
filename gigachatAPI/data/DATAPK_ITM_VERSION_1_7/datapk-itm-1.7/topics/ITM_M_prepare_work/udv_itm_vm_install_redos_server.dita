@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="udv_itm_vm_install_redos_server">
+    <title>Установка сервера визуализации и управления UDV-ITM-VM на ОС РЕД ОС</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+             <context id="context_hy1_knw_bvb"><note conref="../reusable/notes/itm_vm_itm_k_reuse.dita#ReusableComponent_jgq_bqw_bvb/note_mgq_bqw_bvb"/>Для установки <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph>:</context><steps>
+            <step>
+                <cmd>Перейдите в режим командной строки операционной системы, на которой будет
+                    установлен сервер визуализации и управления.</cmd>
+            </step>
+            <step>
+                <cmd>Создайте директорию для установки <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>:</cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-vm</codeblock>
+                </info>
+                <info>
+                    <note
+                        conref="../reusable/notes/itm_vm_itm_k_diff_dir.dita#ReusableComponent_xcw_l3w_bvb/note_adw_l3w_bvb"
+                    />
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте следующие файлы из комплекта поставки в директорию
+                        <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <ul id="ul_sjv_1jf_krb">
+                        <li><codeph>env_generator.sh</codeph>;</li>
+                        <li><codeph
+                                conref="../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                            />;</li>
+                        <li><ph outputclass="udvpdf"
+                                ><codeph>udv_itm-vm_1.7.0.0.tar.gz</codeph></ph><ph
+                                outputclass="onlypdf"
+                                ><codeph>ussc_itm-vm_1.7.0.0.tar.gz</codeph></ph><ph
+                                outputclass="html"
+                            ><codeph>ussc_itm-vm_1.7.0.0.tar.gz</codeph></ph>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Загрузите образы в операционную систему, на которой установлен сервер
+                    визуализации и управления:</cmd>
+                <info>
+                    <codeblock>docker load -i <ph outputclass="udvpdf"><codeph>udv_itm-vm_1.7.0.0.tar.gz</codeph></ph></codeblock>
+                </info>
+            </step>
+            <step
+                conref="../reusable/steps/itm_vm_generate_env.dita#ReusableComponent_h3x_fbw_pxb/step_i3x_fbw_pxb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Подготовьте сертификаты для входа в веб-интерфейс. Подробнее см. в разделе
+                        <xref href="itmvm_cl_certif.dita"/>.</cmd>
+                <info>
+                    <note
+                        conref="../reusable/notes/itm_k_vm_cert.dita#ReusableComponent_ws5_rmy_qwb/note_xs5_rmy_qwb"
+                    />
+                </info>
+            </step>
+            <step>
+                <cmd
+                    conref="../reusable/notes/overcommit_memory_cmd.dita#ReusableComponent_shm_15v_wsb/cmd_uhm_15v_wsb"/>
+                <substeps id="substeps_yfq_5v5_wsb">
+                    <substep
+                        conref="../reusable/notes/overcommit_memory_open_file.dita#ReusableComponent_ih4_d5v_wsb/substep_jh4_d5v_wsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/overcommit_memory_change.dita#ReusableComponent_xkx_g5v_wsb/substep_ykx_g5v_wsb">
+                        <cmd/>
+                    </substep>
+                    <substep
+                        conref="../reusable/notes/save_and_exit.dita#ReusableComponent_n4j_pxx_xrb/substep_p4j_pxx_xrb">
+                        <cmd/>
+                    </substep>
+                    <substep>
+                        <cmd>перезагрузите сервер для применения изменений.</cmd>
+                        <info>
+                            <note type="tip">Вы можете перезагрузить сервер сразу либо после
+                                выполнения пункта <xref
+                                    href="#udv_itm_vm_install_redos_server/itmm_run_docker"
+                                />.</note>
+                        </info>
+                    </substep>
+                </substeps>
+                <stepresult>
+                    <ol id="ol_ldv_swv_wsb">
+                        <li>в логах контейнера itm_m_redis нет ошибки «WARNING overcommit_memory is
+                            set to 0!»;</li>
+                        <li>в файле <codeph>/etc/sysctl.conf</codeph> установлено значение
+                                <codeph>vm.overcommit_memory=1</codeph>;</li>
+                        <li>в файле <codeph>/proc/sys/vm/overcommit_memory</codeph> установлено
+                            значение 1.</li>
+                    </ol>
+                </stepresult>
+            </step>
+            <step
+                conref="../reusable/steps/itm_vm_hostname_change.dita#ReusableComponent_vlq_qbc_qvb/step_wlq_qbc_qvb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Перейдите в каталог, содержащий compose-файлы:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step id="itmm_run_docker"
+                conref="../reusable/notes/server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для входа в веб-интерфейс в адресной строке введите IP-адрес <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph>.</cmd>
+                <info><note
+                        conref="../reusable/notes/itm_vm_itm_k_addr.dita#ReusableComponent_onl_fnw_bvb/note_qnl_fnw_bvb"
+                    />Для первичной настройки в окне авторизации введите логин и пароль учетной
+                    записи по умолчанию:<ul id="ul_hkt_yzh_qrb">
+                        <li>логин: <b>itm</b>;</li>
+                        <li>пароль: <b>P@ssw0rd1234</b>. </li>
+                    </ul><fig>
+                        <title>Окно авторизации ITM-VM</title>
+                        <image href="../../images/ITM_M_prepare_work/itm_m_autorization.png"/>
+                    </fig>
+                    <note type="attention">При первой настройке комплекса необходимо изменить пароль
+                        встроенной учетной записи.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cqc_1nm_k5b">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd/>
+                <substeps>
+                    <substep id="substep_eqc_1nm_k5b">
+                        <cmd>убедитесь, что база данных <codeph>datapkitm</codeph> создана:</cmd>
+                        <info><codeblock>\l</codeblock><fig><title>Список созданных БД</title><image href="../../../images/safe_installation/db_check.png"/></fig></info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

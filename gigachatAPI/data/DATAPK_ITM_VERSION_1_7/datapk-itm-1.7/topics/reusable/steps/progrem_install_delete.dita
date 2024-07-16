@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_vgg_2zf_y5b">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_ygg_2zf_y5b">
+                <cmd>Перейдите в раздел «Установка и удаление программ».</cmd>
+                <stepresult>Откроется окно «Установка и удаление программ».</stepresult>
+            </step>
+        </steps> 
+    </taskbody>
+</task>

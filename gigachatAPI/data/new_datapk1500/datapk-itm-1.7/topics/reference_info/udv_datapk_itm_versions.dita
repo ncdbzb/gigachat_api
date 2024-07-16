@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="udv_datapk_itm_versions">
-    <title>Совместимость компонентов решения для UDV-ITM-M</title>
-    
-            <body
-                conref="../reusable/notes/udv_itm_versions_info.dita#ReusableComponent_wxq_mmf_1xb/body_yxq_mmf_1xb"
-            />
-</topic>

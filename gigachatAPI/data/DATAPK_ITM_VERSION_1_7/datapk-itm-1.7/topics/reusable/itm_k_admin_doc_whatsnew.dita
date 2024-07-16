@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_k_admin_doc_whatsnew">
+    <title>Обновления документации</title>
+    <body>
+        <p>Обновления в текущей версии документации:<ul id="ul_dm5_gnq_xsb">
+                <li>Добавлены разделы:<ul id="ul_q22_qzr_x5b">
+                        <li><xref href="../ITM_K_reference_info/datapk_itm_k_antivirus.dita"/></li>
+                        <li><xref href="../reference_info/datapk_itm_versions.dita"/></li>
+                        <li><xref href="../requirements/itm_k_update_version.dita"/></li>
+                        <li><xref
+                                href="../requirements/safe_installation/datapk_synchro/create_user_synchro_datapk.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agentless_config/OM_WMI_web-interface.dita"
+                            /></li>
+                        <li><xref href="../emergency_actions/log_script_itm_k.dita"/></li>
+                        <li><xref href="../requirements/datapk_itm_k_centos_8_4_2105.dita"/></li>
+                        <li><xref href="../requirements/itm_k_install_centos_8.4_2105.dita"/></li>
+                        <li><xref href="../requirements/itm_k_install_postgresql_v14.dita"/></li>
+                        <li><xref href="../requirements/itm_k_centos_8_4_install_docker.dita"/></li>
+                        <li><xref href="../requirements/centos_itmk_install.dita"/></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agent_installation/agent_installation_windows_2000.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agentless_config/itm_k_windows_xp_agentless.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agentless_config/windows_server_2012_snmp_v2.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agentless_config/itm_k_agentless_wmi.dita"
+                            /></li>
+                        <li><xref href="../requirements/selinux.dita"/></li>
+                        <li><xref href="../emergency_actions/itm_k_hostname_change.dita"/></li>
+                    </ul></li>
+                <li>Обновлены разделы:<ul id="ul_cy2_zlg_w5b">
+                        <li><xref
+                                href="../requirements/safe_installation/datapk_synchro/datapk_synchro_one_time.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/RedOS_installation/installation_server_datapk_itm_k.dita"
+                            /></li>
+                        <li><xref
+                                href="../emergency_actions/unavailable_agents/itm_k_interrupted_sys_call.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/datapk_synchro/datapk_synchro_auto.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/RedOS_installation/itm_k_subd_config.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agent_installation/agent_installation_windows.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agent_installation/agent_configuration_windows.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agent_installation/agents_installation.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agent_installation/agent_installation_centos_7.dita"
+                            /></li>
+                        <li><xref
+                                href="../requirements/safe_installation/agent_installation/agent_installation_debian.dita"
+                            /></li>
+                        <li><xref href="../requirements/itm_k_centos_8_4_install_docker.dita"/></li>
+                    </ul></li>
+                <li>Обновлены рекомендации по использованию переменной <cmdname
+                        keyref="zbx_startpollers"/> в разделах <xref
+                        href="../ITM_K_reference_info/var_tables/recommendation_env_srv.dita"/> и
+                        <xref href="../emergency_actions/actions_after_problems/big_queue.dita"/>
+                    .</li>
+                <li>Добавлены новые способы устранения нештатных ситуаций:<ul id="ul_sp3_qsv_pvb">
+                        <li>
+                            <xref
+                                href="../emergency_actions/actions_after_problems/web-interface_loading_problem.dita"
+                            /></li>
+                        <li><xref
+                                href="../emergency_actions/actions_after_problems/problem_zbx_proxyconfigfrequency.dita"
+                            /></li>
+                        <li>Причина 9 в разделе <xref
+                                href="../emergency_actions/actions_after_problems/web-interface_loading_problem.dita"
+                            /></li>
+                    </ul></li>
+                <li>В разделы <xref
+                        href="../requirements/safe_installation/RedOS_installation/installation_server_datapk_itm_k.dita"
+                    /> и <xref href="../requirements/datapk_itm_k_centos_8_4_2105.dita"/> добавлена
+                    информация об установке <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> и <term
+                        keyref="datapk_itm_vm"/> на один сервер.</li>
+            </ul></p>
+    </body>
+</topic>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_fzd_gfk_trb">
-    <title>zbx_maxinputtime_info</title>
-    <body><div id="div_gzd_gfk_trb"><p>Максимальное количество времени, которое каждый сценарий может потратить на анализ данных запроса.</p></div></body>
-</topic>

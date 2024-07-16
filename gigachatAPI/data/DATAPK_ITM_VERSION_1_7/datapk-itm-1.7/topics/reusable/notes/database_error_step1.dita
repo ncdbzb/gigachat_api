@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_fzz_cty_hrb">
+    <title>database error step 1</title>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step>
+                        <cmd id="cmd_gzz_cty_hrb">Перейдите в режим командной строки операционной
+                            системы, на которой установлен <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

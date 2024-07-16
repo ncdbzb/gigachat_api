@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="startsnmptrapper">
+    <glossterm>StartSNMPTrapper</glossterm>
+    <glossdef>
+        <p>Состояние процесса SNMP-траппера:<ul>
+                <li>1 — запущен;</li>
+                <li>0 — не запущен.</li>
+            </ul></p>
+        <p><b>Значение по умолчанию:</b> 0</p>
+        <p><b>Разрешенный диапазон значений:</b> 0-1</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="udv_itm_vm_1_4_1_5_0_0">
+    <title>Обновление UDV-ITM-VM с версии 1.6.0.0 до версии 1.7.0.0</title>
+    <shortdesc></shortdesc>
+    <taskbody
+        conref="../reusable/notes/itm_vm_update_version_info.dita#ReusableComponent_xrb_1wc_zwb/taskbody_asb_1wc_zwb"/>
+</task>

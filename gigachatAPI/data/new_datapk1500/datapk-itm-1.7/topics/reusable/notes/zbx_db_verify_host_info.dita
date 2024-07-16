@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_bbq_kbk_trb">
-    <title>zbx_db_verify_host_info</title>
-    <body><div id="div_dbq_kbk_trb"><p>Активация или деактивация сравнения узла сети с именем хоста, указанного в сертификате.</p></div></body>
-</topic>

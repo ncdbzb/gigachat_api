@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_rw3_3y2_xyb">
-    <title></title>
-    <body>
-        <div id="ph_tw3_3y2_xyb">Исправлена ошибка, при которой на странице <cite keyref="itm_m_page_it_services"/> отключалось несколько услуг вместо одной</div>
-    </body>
-</topic>

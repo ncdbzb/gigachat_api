@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="macros">
+    <title>Макросы</title>
+    <shortdesc></shortdesc>
+    <body>
+        <p>Макросы позволяют автоматически подставить изменяемое значение в парметр, где они
+            используются. Пример: для триггера <codeph>{New host:
+                system.cpu.load[percpu,avg1].last()}>5</codeph> имя «Загрузка процессора превышает
+            $1 на {HOST.NAME}» будет автоматически изменено на «Загрузка процессора превышает 5 на
+            New host». </p>
+        <section>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_yxt_gtm_hvb">
+                    <title>Макросы, поддерживаемые в <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph></title>
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Макрос</entry>
+                                <entry>Где поддерживается</entry>
+                                <entry>Описание</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>{HOST.HOST}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги событий,
+                                    подписи к иконкам на картах сети</entry>
+                                <entry>Имя узла сети</entry>
+                            </row>
+                            <row>
+                                <entry>{HOST.NAME}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги событий,
+                                    подписи к иконкам на картах сети</entry>
+                                <entry>Видимое имя узла сети</entry>
+                            </row>
+                            <row>
+                                <entry>{HOST.CONN}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги событий,
+                                    подписи к иконкам на картах сети</entry>
+                                <entry>IP или DNS имя узла сети, в зависимости от настроек узла
+                                    сети</entry>
+                            </row>
+                            <row>
+                                <entry>{HOST.DNS}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги событий,
+                                    подписи к иконкам на картах сети</entry>
+                                <entry>DNS имя узла сети</entry>
+                            </row>
+                            <row>
+                                <entry>{HOST.IP}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги событий,
+                                    подписи к иконкам на картах сети</entry>
+                                <entry>IP-адрес узла сети</entry>
+                            </row>
+                            <row>
+                                <entry>{ITEM.VALUE}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги
+                                    событий</entry>
+                                <entry>Последнее значение N-го элемента данных:<ul
+                                        id="ul_mr5_pvm_hvb">
+                                        <li>из истории, если используется в контексте изменения
+                                            состояния триггера;</li>
+                                        <li>из выражения триггера, если используется не в контексте
+                                            изменения состояния триггера.</li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>{ITEM.LASTVALUE}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги
+                                    событий</entry>
+                                <entry>Последнее значение N-го элемента данных из выражения
+                                    триггера, который вызвал оповещение.</entry>
+                            </row>
+                            <row>
+                                <entry>{$MACRO}</entry>
+                                <entry>Имя триггера, URL триггера, описание триггера, теги
+                                    событий</entry>
+                                <entry>Пользовательский макрос. Должен начинаться с символа «$»,
+                                    «MACRO» — название, заданное пользователем.</entry>
+                            </row>
+                            <row>
+                                <entry>$N<p>Где N — число от 1 до 9.</p></entry>
+                                <entry>Имя триггера, описание триггера</entry>
+                                <entry>Ссылка на N-ую константу из выражения.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.ID}</entry>
+                                <entry>URL триггера</entry>
+                                <entry>ID триггера, который вызвал действие.</entry>
+                            </row>
+                            <row>
+                                <entry>{MAP.ID}</entry>
+                                <entry>URL карты сети</entry>
+                                <entry>ID карты сети.</entry>
+                            </row>
+                            <row>
+                                <entry>{HOSTGROUP.ID}</entry>
+                                <entry>URL карты сети</entry>
+                                <entry>ID группы узлов сети.</entry>
+                            </row>
+                            <row>
+                                <entry>{HOST.ID}</entry>
+                                <entry>URL карты сети</entry>
+                                <entry>ID узла сети.</entry>
+                            </row>
+                            <row>
+                                <entry>{HOST.DESCRIPTION}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Описание узла сети.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.EVENTS.ACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество подтвержденных событий у элемента карты на картах
+                                    сети или в оповещениях на триггер, который сгенерировал текущее
+                                    событие.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.EVENTS.PROBLEM.ACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество подтвержденных ПРОБЛЕМА событий у всех триггеров
+                                    вне зависимости от их состояния.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.EVENTS.PROBLEM.UNACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество неподтвержденных ПРОБЛЕМА событий у всех триггеров
+                                    вне зависимости от их состояния.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.EVENTS.UNACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество неподтвержденных событий у элемента карты на карте
+                                    сети или в оповещениях на триггер, который сгенерировал текущее
+                                    событие.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.PROBLEM.EVENTS.PROBLEM.ACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество подтвержденных ПРОБЛЕМА событий у триггеров в
+                                    состоянии ПРОБЛЕМА.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGER.PROBLEM.EVENTS.PROBLEM.UNACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество неподтвержденных ПРОБЛЕМА событий у триггеров в
+                                    состоянии ПРОБЛЕМА.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGERS.UNACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество неподтвержденных триггеров у элемента карты
+                                    независимо от состояния триггеров. Триггер считается
+                                    неподтвержденным, если по крайней мере одно из всех его ПРОБЛЕМА
+                                    событий не подтверждено.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGERS.PROBLEM.UNACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество неподтвержденных триггеров в состоянии ПРОБЛЕМА у
+                                    элемента карты сети. Триггер считается неподтвержденным, если по
+                                    крайней мере одно из всех его ПРОБЛЕМА событий не
+                                    подтверждено.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGERS.ACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество подтвержденных триггеров у элемента карты сети
+                                    независимо от состояния триггеров. Триггер считается
+                                    подтвержденным, если все его ПРОБЛЕМА события являются
+                                    подтвержденными.</entry>
+                            </row>
+                            <row>
+                                <entry>{TRIGGERS.PROBLEM.ACK}</entry>
+                                <entry>Подписи к иконкам на картах сети</entry>
+                                <entry>Количество подтвержденных триггеров в состоянии ПРОБЛЕМА у
+                                    элемента карты сети. Триггер считается подтвержденным, если все
+                                    его ПРОБЛЕМА события являются подтвержденными.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+</topic>

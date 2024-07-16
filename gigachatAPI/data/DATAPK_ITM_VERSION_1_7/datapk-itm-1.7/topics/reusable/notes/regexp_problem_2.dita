@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_os5_ytg_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_ps5_ytg_wrb">Нажмите на кнопку <image href="../../../images/buttons/icon_arrow_down.png"/> рядом с заголовком страницы.</cmd> 
+            </step>
+        </steps>
+        </taskbody>
+</task>

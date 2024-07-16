@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_tb2_f4d_4vb">
-    <title></title>
-    <body><p id="p_vb2_f4d_4vb">Для переменной <cmdname keyref="synchronization_delay_seconds"/> значение по
-            умолчанию изменено на 3600 секунд.</p></body>
-</topic>

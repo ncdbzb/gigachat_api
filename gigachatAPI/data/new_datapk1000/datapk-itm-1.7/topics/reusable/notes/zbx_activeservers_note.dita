@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_cpj_rzl_trb">
-    <title></title>
-    <body><div id="div_dpj_rzl_trb"><note>Вы можете указать порт сервера в таком синтаксисе: zabbix-server: 10061.</note></div></body>
-</topic>

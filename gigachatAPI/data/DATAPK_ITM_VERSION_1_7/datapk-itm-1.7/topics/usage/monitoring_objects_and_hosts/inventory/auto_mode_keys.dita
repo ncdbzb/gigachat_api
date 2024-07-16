@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="auto_mode">
+    <title>Ключи для сбора инвентарных данных</title>
+    <body>
+        <p>Ключ — это выражение, которое определяет, какую информацию будет собирать элемент данных
+            с узла сети.</p>
+        <p>В таблице ниже перечислены ключи, которые наиболее полезны для автоматического сбора
+            инвентарных данных:</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_abm_qfx_5wb">
+            <title>Ключи для сбора инвентарных данных</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="newCol3" colnum="3" colwidth="1*"/>
+                
+                <thead>
+                    <row>
+                        <entry>Ключ для сбора инвентарных данных</entry>
+                        <entry>Значение ключа по умолчанию</entry>
+                        <entry>Описание</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph>system.hw.chassis[full|type|vendor|model|serial]</codeph></entry>
+                        <entry><codeph>system.hw.chassis[info]</codeph></entry>
+                        <entry>Информация о шасси. Возвращает строку. Требуются права root</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>system.hw.cpu[all|cpunum,full|maxfreq|vendor|model|curfreq]</codeph></entry>
+                        <entry><codeph>system.hw.cpu[cpu,info]</codeph></entry>
+                        <entry>Информация о ЦПУ. Возвращает строку или число</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>system.hw.devices[pci|usb]</codeph></entry>
+                        <entry><codeph>system.hw.devices[type]</codeph></entry>
+                        <entry>Список PCI и USB устройств. Возвращает текст</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>system.hw.macaddr[interface,short|full]</codeph>, где
+                            interface — регулярное выражение</entry>
+                        <entry><codeph>system.hw.macaddr[interface,format]</codeph></entry>
+                        <entry>Список MAC-адресов, у которых имена интерфейсов соответствуют
+                            заданному регулярному выражению. Возвращает строку.<p><b>Пример:</b>
+                                Ключ <codeph>system.hw.macaddr["eth0$",full]</codeph> позволяет
+                                найти МАС-адрес <codeph>[eth0] 00:11:22:33:44:55</codeph>.
+                                </p><p>Если формат задан как <codeph>short</codeph>, имена
+                                интерфейсов и одинаковые MAC-адреса не попадают в список</p></entry>
+                    </row>
+                    <row>
+                        <entry><codeph>system.sw.arch</codeph></entry>
+                        <entry><codeph>system.sw.arch</codeph></entry>
+                        <entry>Информация об архитектуре программного обеспечения. Возвращает
+                            строку</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>system.sw.os[name|short|full]</codeph></entry>
+                        <entry><codeph>system.sw.os[info]</codeph></entry>
+                        <entry>Информация об операционной системе. Возвращает строку</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>system.sw.packages[package,manager,short|full]</codeph>, где
+                            package — регулярное выражение</entry>
+                        <entry><codeph>system.sw.packages[package,manager,format]</codeph></entry>
+                        <entry>Список установленных пакетов, имена которых совпадают с заданным
+                            регулярным выражением. Список пакетов выводится в алфавитном
+                                    порядке.<p><b>Пример:</b> Ключ
+                                    <codeph>system.sw.packages[mini,dpkg,short]</codeph> может найти
+                                пакеты <codeph>python-minimal</codeph>,
+                                    <codeph>python2.6-minimal</codeph>,
+                                    <codeph>ubuntu-minimal</codeph>.</p><p>Поддерживаются менеджеры
+                                пакетов (выполняемые команды):<ul id="ul_pxc_stx_5wb">
+                                    <li><codeph>dpkg</codeph> (<codeph>dpkg
+                                            --get-selections</codeph>)</li>
+                                    <li><codeph>pkgtool</codeph> (<codeph>ls
+                                            /var/log/packages</codeph>)</li>
+                                    <li><codeph>rpm</codeph> (<codeph>rpm -qa</codeph>)</li>
+                                    <li><codeph>pacman</codeph> (<codeph>pacman -Q</codeph>)</li>
+                                </ul></p><p>Форматы:<ul id="ul_br4_wtx_5wb">
+                                    <li><codeph>full</codeph> — пакеты группируются по менеджерам
+                                        пакетов, каждая группа отображается с новой строки. В начале
+                                        строки указано имя менеджера пакетов в квадратных скобках. </li>
+                                    <li><codeph>short</codeph> — пакеты не группируются и
+                                        отображаются одной строкой</li>
+                                </ul></p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

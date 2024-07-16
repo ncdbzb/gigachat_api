@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ipj_vjr_z5b">
-    <title></title>
-    <body>
-        <p id="entry_jpj_vjr_z5b">Исправлена ошибка, при которой сервер мониторинга не переходил в состояние «Недоступен» после остановки его контейнеров и обновления страницы <cite keyref="itm_m_page_server_monitoring"/>.</p></body>
-</topic>

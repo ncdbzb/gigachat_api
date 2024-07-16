@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="cannot_connect_to_timeout">
+    <title>Ошибка вида «Cannot connect to &lt;...>: Timeout.»</title>
+    <troublebody>
+        <condition>
+            <p>В веб-интерфейсе <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> индикатор статуса доступности узла
+                сети по протоколу <ph conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"/> имеет красный цвет: <image
+                    href="../../../images/ITM_K_troubleshooting/snmp_red.png" id="image_btg_zxz_msb"
+                />. При наведении курсора на индикатор появляется всплывающая подcказка с ошибкой
+                вида «Cannot connect to &lt;...>: Timeout.».</p>
+            <p>В качестве причин недоступности узла сети рассмотрены следующие:<ul
+                    id="ul_tnt_lw1_nsb">
+                    <li>Закрыты порты 161/<ph
+                            conref="../../reusable/protocol_names/UDP.dita#ReusableComponent_nmm_qgg_4yb/ph_pmm_qgg_4yb"
+                        /> и 162/<ph
+                            conref="../../reusable/protocol_names/UDP.dita#ReusableComponent_nmm_qgg_4yb/ph_pmm_qgg_4yb"
+                        /> на межсетевом экране узла сети.</li>
+                    <li>Превышено время ожидания ответа от узла сети.</li>
+                </ul></p>
+        </condition>
+        <troubleSolution>
+            <cause
+                conref="../../reusable/notes/timeout_cause_1.dita#ReusableComponent_f5m_mr1_5tb/cause_i5m_mr1_5tb"
+                id="cause_tym_mr1_5tb"/>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty/>
+                <steps
+                    conref="../../reusable/notes/timeout_remedy_1.dita#ReusableComponent_op1_wr1_5tb/steps_pp1_wr1_5tb"
+                    >
+                    <step>
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause
+                conref="../../reusable/notes/timeout_cause_2.dita#ReusableComponent_rwz_4r1_5tb/cause_uwz_4r1_5tb"
+                id="cause_l11_pr1_5tb"/>
+            <remedy>
+                <title>Способ устранения</title>
+                <responsibleParty/>
+                <steps>
+                    <step>
+                        <cmd>Перейдите в режим командной строки сервера <ph outputclass="udvpdf"
+                                    ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                                    keyref="datapk_itm_k"/></ph> или другого компьютера с
+                                <abbreviated-form keyref="OS"/> Linux и установленными пакетами
+                            net-snmp и net-snmp-utils.</cmd>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/timeout_remedy_2-1.dita#ReusableComponent_zwm_ps1_5tb/step_axm_ps1_5tb">
+                        <cmd/>
+                    </step>
+                    <step
+                        conref="../../reusable/notes/timeout_remedy_2-2.dita#ReusableComponent_cq4_rs1_5tb/step_dq4_rs1_5tb">
+                        <cmd/>
+                    </step>
+                    <step>
+                        <cmd>Отредактируйте значение переменной <cmdname keyref="zbx_timeout"/> в
+                            соответствии с найденным значением таймаута. Для этого:</cmd>
+                        <substeps id="substeps_usq_lxh_nsb">
+                            <substep>
+                                <cmd>Перейдите в режим командной строки сервера <ph
+                                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                        outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                        outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+                            </substep>
+                            <substep>
+                                <cmd>Остановите работу контейнеров:</cmd>
+                                <info>
+                                    <codeblock>docker-compose down</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Перейдите в режим редактирования файла
+                                        <codeph>.srv.env</codeph>:</cmd>
+                                <info>
+                                    <codeblock>vi /opt/itm-k/env/.srv.env</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Увеличьте значение переменной <cmdname keyref="zbx_timeout"
+                                    />.</cmd>
+                                <info>
+                                    <note>Максимальное возможное значение <cmdname
+                                            keyref="zbx_timeout"/> равно 30.</note>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Сохраните файл и выйдите из режима редактирования:</cmd>
+                                <info>
+                                    <codeblock>:wq</codeblock>
+                                </info>
+                            </substep>
+                            <substep>
+                                <cmd>Запустите контейнеры командой:</cmd>
+                                <info>
+                                    <codeblock>docker-compose up -d</codeblock>
+                                </info>
+                            </substep>
+                        </substeps>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

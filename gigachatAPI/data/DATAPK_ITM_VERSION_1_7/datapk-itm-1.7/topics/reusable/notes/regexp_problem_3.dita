@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xlm_c5g_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+        <step id="step_ylm_c5g_wrb">
+            <cmd>В выпадающем списке выберите «Регулярные выражения». </cmd>
+            <stepresult>Откроется страница <cite keyref="adm_general_regexp"/>. 
+                <fig id="fig_regexp_2_17">
+                    <title> Страница «Регулярные выражения» </title>
+                    <image href="../../../images/first_configuration/regexp_2_17.png"/>
+                </fig>
+            </stepresult>
+        </step>
+        </steps>
+    </taskbody>
+</task>

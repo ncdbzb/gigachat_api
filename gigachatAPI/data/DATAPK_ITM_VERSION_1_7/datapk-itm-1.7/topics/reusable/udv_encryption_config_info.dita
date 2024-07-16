@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_tqn_1wf_1xb">
+    <title></title>
+    <body><div id="div_uqn_1wf_1xb"><p><ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> поддерживает два варианта подключения с использованием шифрования:</p><ul id="ul_i3v_5zm_bsb"><li>PSK — шифрование с предварительно созданным общим ключом.</li><li>Сертификат — шифрование с использованием сертификатов. </li></ul><p>Далее рассматривается настройка шифрования с использованием PSK, так как этот вариант обеспечивает удовлетворительный уровень безопасности при более простой настройке.</p></div></body>
+</topic>

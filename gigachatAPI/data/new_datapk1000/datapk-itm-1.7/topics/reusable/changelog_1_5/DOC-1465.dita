@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_w3n_x1w_nvb">
-    <title></title>
-    <body><p id="p_x3n_x1w_nvb">Реализовано отображение даты и времени последнего успешного обновления статуса
-                <abbreviated-form keyref="monitoring_object"/> или полных данных об
-                <abbreviated-form keyref="monitoring_object"/>.</p></body>
-</topic>

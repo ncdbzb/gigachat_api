@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ypj_bbm_xzb">
-    <title></title>
-    <body><div>
-        <ph id="ph_zpj_bbm_xzb">Настройте мониторинг сервера, на котором установлен <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. Подробнее см. в п. <xref href="../../usage/monitoring_objects_and_hosts/host_configuration.dita#host_configuration/config_server"/> раздела <xref href="../../usage/monitoring_objects_and_hosts/host_configuration.dita"/>.</ph>
-    </div>
-    </body>
-</topic>

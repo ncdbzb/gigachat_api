@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_wtp_nq2_trb">
-    <title>zbx_valuecachesize_info</title>
-    <body><div id="div_xtp_nq2_trb"><p>Размер разделяемой памяти (кэша) для хранения запросов к данным истории элементов данных. </p></div></body>
-</topic>

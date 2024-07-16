@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ggg_hsr_trb">
-    <title>zbx_loadmodule_note</title>
-    <body><div id="div_hgg_hsr_trb"><note>При необходимости можно добавить несколько параметров <cmdname
-        keyref="zbx_loadmodule"/>.</note></div></body>
-</topic>

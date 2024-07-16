@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
-    <glossentry id="dashboard_term"><glossterm>Панель мониторинга</glossterm><glossdef>Панель мониторинга — тип графического интерфейса, использующий интерактивные визуализации
-        для обзора ключевых показателей.</glossdef><glossBody>
-        <glossAlt>
-            <glossSynonym>Dashboard</glossSynonym>
-        </glossAlt></glossBody></glossentry>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_cm2_ml2_trb">
-    <title>ZBX_VMWAREFREQUENCY_info</title>
-    <body><div id="div_dm2_ml2_trb"><p>Задержка в секундах между сбором данных с одной службы VMware. </p></div></body>
-</topic>

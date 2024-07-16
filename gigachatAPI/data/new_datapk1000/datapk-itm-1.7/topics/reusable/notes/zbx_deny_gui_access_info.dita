@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_tzl_jgk_trb">
-    <title>ZBX_DENY_GUI_ACCESS_info</title>
-    <body><div id="div_uzl_jgk_trb"><p>Включить или выключить режим обслуживания для веб-интерфейса Zabbix.</p></div></body>
-</topic>

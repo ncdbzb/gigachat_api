@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_qvr_vtg_hzb">
-    <title></title>
-    <body><div id="div_rvr_vtg_hzb"><p>Добавлен раздел основного меню <cite keyref="itm_vm_page_admin"/>, куда перенесен раздел <cite
-                    keyref="itm_m_page_audit"/>.</p><p>Изменен внешний вид иконок для отображения важности событий</p></div></body>
-</topic>

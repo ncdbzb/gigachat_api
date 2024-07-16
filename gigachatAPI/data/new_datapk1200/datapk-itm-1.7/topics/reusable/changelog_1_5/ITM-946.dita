@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_t1z_p1f_fvb">
-    <title></title>
-    <body><p id="p_v1z_p1f_fvb">В столбце «Доступность» в таблице на странице <ph outputclass="html"><cite
-                    keyref="itm_m_page_server_monitoring"/></ph><ph outputclass="onlypdf">«Серверы
-                мониторинга»</ph> добавлен статус «Ошибка» и всплывающие подсказки с текстом ошибки
-            для статусов «Ошибка» и «Недоступен».</p></body>
-</topic>

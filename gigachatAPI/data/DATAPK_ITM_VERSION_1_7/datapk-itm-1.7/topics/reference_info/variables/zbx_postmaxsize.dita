@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_postmaxsize">
+    <glossterm>ZBX_POSTMAXSIZE</glossterm>
+    <glossdef><div
+            conref="../../reusable/notes/zbx_postmaxsize_info.dita#ReusableComponent_fxl_h2k_trb/div_hxl_h2k_trb"/>
+        <b>Значение в конфигурации ITM-K при поставке:</b>16M</glossdef>
+</glossentry>

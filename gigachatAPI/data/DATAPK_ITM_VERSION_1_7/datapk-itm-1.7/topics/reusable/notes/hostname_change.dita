@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_xcj_vbc_qvb">
+    <title></title>
+    <body id="body_zcj_vbc_qvb"><bodydiv>Переменная окружения <cmdname keyref="hostname"/>, даже если она задана, не передается
+                автоматически как переменная окружения в контейнер. Если переменная не передана, то
+                в качестве имени сервера (hostname) <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> или <term
+                    keyref="datapk_itm_k"/> будет отображаться имя контейнера в виде случайного
+                набора символов. <p>Имя сервера присваивается при установке ОС и хранится в файле
+                        <codeph>/etc/hostname</codeph>.</p><p>Чтобы имя сервера было присвоено
+                    контейнерам, нужно, чтобы выполнялся экспорт переменной окружения <cmdname
+                        keyref="hostname"/>, значение которой берется из файла
+                        <codeph>/etc/hostname</codeph>.</p><p>По умолчанию, экспорт переменной
+                        <cmdname keyref="hostname"/> уже настроен, убедиться в этом можно, выполнив
+                    команду <b>export </b>. В выводе результата команды должна быть переменная
+                        <cmdname keyref="hostname"/> и ее актуальное значение.</p>
+                <section>
+                    <title>Изменение имени сервера (hostname) <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> или <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph></title>
+                    <p>
+                        <ol id="ol_e1y_rfc_qvb">
+                            <li>Перейдите в режим командной строки.</li>
+                            <li>Перейдите в директорию с контейнерами:<ol id="ol_gmc_wfc_qvb">
+                                    <li>для <term keyref="datapk_itm_vm"
+                                        />:<codeblock>cd /opt/itm-vm</codeblock></li>
+                                    <li>для <term keyref="datapk_itm_k"
+                                        />:<codeblock>cd /opt/itm-k</codeblock></li>
+                                </ol></li>
+                            <li>Остановите
+                                контейнеры:<codeblock>docker-compose down</codeblock></li>
+                            <li>Измените имя
+                                сервера:<codeblock>hostnamectl set-hostname &lt;новое имя сервера></codeblock>
+                            </li>
+                            <li>Перезагрузите ОС.</li>
+                            <li>Запустите
+                                контейнеры:<codeblock>docker-compose up -d</codeblock></li>
+                        </ol>
+                    </p>
+                </section>
+                <section>
+                    <title>Экспорт переменной окружения HOSTNAME</title>
+                    <p>Выполняется в случае отсутствия переменной <cmdname keyref="hostname"/> в
+                        выводе команды export. Для экспорта переменной:<ol id="ol_lbr_5gc_qvb">
+                            <li>откройте файл
+                                <codeph>/etc/profile</codeph>:<codeblock>vi /etc/profile</codeblock></li>
+                            <li>в конце открывшегося файла добавьте
+                                строку:<codeblock>export $HOSTNAME</codeblock></li>
+                            <li>сохраните файл и выйдите из режима
+                                редактирования:<codeblock>:wq</codeblock></li>
+                        </ol></p>
+                </section>
+            </bodydiv></body>
+</topic>

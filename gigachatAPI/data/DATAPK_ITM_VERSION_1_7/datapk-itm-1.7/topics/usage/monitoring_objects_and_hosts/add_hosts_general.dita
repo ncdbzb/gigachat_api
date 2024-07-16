@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add_hosts_general">
+    <title>Добавление узлов сети</title>
+    <body>
+        <p>В <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"
+                /></ph> доступны следующие способы добавления <abbreviated-form
+                keyref="monitoring_object"/>:<ul id="ul_bt4_klc_syb">
+                <li><xref href="hosts_detection.dita"/> — автоматическое обнаружение <term
+                        keyref="monitoring_object">объектов мониторинга</term> путем сканирования
+                    диапазона IP-адресов, указанного в правилах сетевого обнаружения.</li>
+                <li><xref
+                        href="../../requirements/safe_installation/datapk_synchro/datapk_synchro.dita"
+                    /> — получение <term keyref="monitoring_object">объектов мониторинга</term> из
+                    DATAPK, подключенного к <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                        /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_k"/></ph>. Доступны два вида
+                    синхронизации с DATAPK:<ul id="ul_p2b_cmc_syb">
+                        <li>Однократная — <term keyref="monitoring_object">объектов
+                                мониторинга</term> будут получены из DATAPK один раз.</li>
+                        <li>Автоматическая — <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>
+                            будет регулярно получать <term keyref="monitoring_object">объектов
+                                мониторинга</term> из DATAPK по указанному расписанию.</li>
+                    </ul></li>
+                <li><xref href="host_import.dita"/> — импорт имеющихся на компьютере файлов с <term
+                        keyref="monitoring_object">объектов мониторинга</term>. Такие файлы могут
+                    быть получены в результате экспорта <term keyref="monitoring_object">объектов
+                        мониторинга</term> с другого <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>.</li>
+                <li><xref href="hosts_creation.dita"/> — добавление <term keyref="monitoring_object"
+                        >объектов мониторинга</term> в веб-интерфейсе <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph> с указанием имени, группы узлов сети, типа
+                    интерфейса для сбора данных, IP-адреса, порта и других параметров.</li>
+            </ul><note>Для корректного сбора данных перед добавлением узла сети необходимо
+                установить агента на этот узел сети либо настроить узел сети для безагентного сбора.
+                Подробнее см. в разделах <xref
+                    href="../../requirements/safe_installation/agent_installation/agents_installation.dita"
+                /> и <xref
+                    href="../../requirements/safe_installation/agentless_config/agentless_config.dita"
+                />.</note></p>
+    </body>
+</topic>

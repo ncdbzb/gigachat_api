@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_z5y_tl2_trb">
-    <title>ZBX_VMWAREPERFFREQUENCY_info</title>
-    <body><div id="div_avy_tl2_trb"><p>Задержка в секундах между получением статистики по счётчикам производительности с одной службы
-                VMware.</p></div></body>
-</topic>

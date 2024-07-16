@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/pdf.css"?>
+<bookmap  xml:lang="ru" collection-type="sequence">
+    <booktitle>
+        <mainbooktitle>Руководство по проектированию и внедрению</mainbooktitle>
+    </booktitle>
+    <bookmeta>
+        <bookrights>
+            <copyrfirst><year>2022</year></copyrfirst>
+            <copyrlast>
+                <year>2023</year>
+            </copyrlast>
+            <bookowner><organization>ООО «СайберЛимфа»</organization></bookowner>
+        </bookrights>
+    </bookmeta>
+    <chapter href="topics/ITM_design_implementation/staff_requirements/ITMglossaryList.dita" collection-type="sequence"/>
+    <chapter href="topics/ITM_design_implementation/ITM_general/ITM_general_info.dita" collection-type="sequence">
+        <topicref
+            href="topics/ITM_design_implementation/ITM_general/datapk_itm_general_function.dita"/>
+        <topicref href="topics/ITM_design_implementation/ITM_general/ITM_general_functions.dita"/>
+        <topicref href="topics/ITM_design_implementation/ITM_general/ITM_architecture.dita" collection-type="sequence">
+            <topicref href="topics/ITM_design_implementation/ITM_general/ITM_datapk_itm_vm.dita"/>
+            <topicref href="topics/ITM_design_implementation/ITM_general/ITM_datapk_itm_k.dita"/>
+            <topicref href="topics/ITM_design_implementation/ITM_general/ITM_datapk_itm_a.dita"/>
+        </topicref>
+    </chapter>
+    <chapter
+        href="topics/ITM_design_implementation/ITM_hardware_software/hardware_software_requirements.dita" collection-type="sequence">
+        <topicref href="topics/ITM_design_implementation/ITM_hardware_software/ITM_hardware.dita"/>
+        <topicref href="topics/ITM_design_implementation/ITM_hardware_software/ITM_software.dita"/>
+        <topicref
+            href="topics/ITM_design_implementation/ITM_hardware_software/ITM_disk_subsistem_size.dita"
+        />
+    </chapter>
+    <chapter href="topics/ITM_design_implementation/net_interactions/net_interactions.dita" collection-type="sequence">
+        <topicref href="topics/ITM_design_implementation/net_interactions/ITM_net_interactions.dita"/>
+        <topicref href="topics/ITM_design_implementation/net_interactions/calculate_channel.dita" collection-type="sequence">
+            <topicref
+                href="topics/ITM_design_implementation/net_interactions/ITM_itm_k_itm_a_OM_traffic.dita"/>
+            <topicref
+                href="topics/ITM_design_implementation/net_interactions/ITM_traffic_between_itm_k_itm_a.dita"/>
+            <topicref
+                href="topics/ITM_design_implementation/net_interactions/ITM_traffic_itm_vm_itm_k.dita"
+            />
+        </topicref>
+    </chapter>
+    <chapter href="topics/ITM_design_implementation/license_politics/license_politics.dita" collection-type="sequence"/>
+    <chapter href="topics/ITM_design_implementation/recommendations/recommendations.dita" collection-type="sequence">
+        <topicref href="topics/ITM_design_implementation/recommendations/ITM_K_recommend.dita"/>
+        <topicref href="topics/ITM_design_implementation/recommendations/ITM_algorithm_add_OM.dita"/>
+        <topicref href="topics/ITM_design_implementation/recommendations/ITM_M_recommend.dita"/>
+    </chapter>
+    <chapter href="topics/ITM_design_implementation/staff_requirements/staff_requirements.dita" collection-type="sequence"/>
+    <chapter
+        href="topics/ITM_design_implementation/staff_requirements/ITM_design_impl_service_monitoring.dita" collection-type="sequence"/>
+</bookmap>

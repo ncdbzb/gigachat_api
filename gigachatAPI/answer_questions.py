@@ -2,7 +2,7 @@ import time
 from langchain.chains.retrieval_qa.base import RetrievalQA
 from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
-from gigachatAPI.chromadb.chromadb_handler import get_chroma
+from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.prompts.create_prompts import qna_prompt
 from gigachatAPI.sentence_bleu.sentence_bleu import get_bleu_score
 from gigachatAPI.sentence_bleu.bleu_config import ques_for_check, references
@@ -23,13 +23,16 @@ async def get_answer(
 
     question_start_time = time.time()
 
-    vectordb = await get_chroma(filename)
+    vectordb_manager = VectordbManager()
+    vectordb = vectordb_manager.get_langchain_chroma(filename)
 
     logger_info.info(f'Вопрос по документации: {filename}')
 
-    docs_with_scores = await vectordb.asimilarity_search_with_score(que, k=4)
-    sim_scores = [d[1] for d in docs_with_scores]
-    docs = [d[0].page_content for d in docs_with_scores]
+    docs, sim_scores = vectordb_manager.sim_search(filename, que, k=4, with_sim_scores=True)
+
+    # docs_with_scores = await vectordb.asimilarity_search_with_score(que, k=4)
+    # sim_scores = [d[1] for d in docs_with_scores]
+    # docs = [d[0].page_content for d in docs_with_scores]
     logger_context.debug(f'Контекст: {docs}')
 
     logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')

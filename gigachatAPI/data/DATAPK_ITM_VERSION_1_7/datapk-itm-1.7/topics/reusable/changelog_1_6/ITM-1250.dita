@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_glg_wfd_lxb">
+    <title></title>
+    <body><p id="p_hlg_wfd_lxb">Обновлены значения по умолчанию для переменных <cmdname keyref="itmm_db_port"/>, <cmdname keyref="itmm_db_user"/>, <cmdname keyref="itmm_db_password"/> в скрипте <codeph>env_prod_generator.sh</codeph>.</p></body>
+</topic>

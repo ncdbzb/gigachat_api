@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="configuring_iptables">
+    <title>Настройка межсетевого экрана iptables</title>
+    <taskbody>
+        <context>
+            <p>Настройте межсетевой экран iptables для корректной работы <ph
+                outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"
+                    ><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_vm"/></ph>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Из комплекта поставки перенесите файл <codeph>iptables</codeph> в каталог <codeph>/etc</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Загрузите правила из файла <codeph>iptables</codeph>:</cmd>
+                <info>
+                    <codeblock>sudo iptables-restore &lt; /etc/iptables</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Перезагрузите сервис docker:</cmd>
+                <info>
+                    <codeblock>sudo systemctl restart docker</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Выгрузите все текущие правила межсетевого экрана в файл <codeph>/etc/iptables.rules</codeph>:</cmd>
+                <info>
+                    <codeblock>sudo iptables-save > /etc/iptables.rules</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Ограничьте права на чтение файла <codeph>iptables.rules</codeph>:</cmd>
+                <info>
+                    <codeblock>sudo chmod 640 /etc/iptables.rules</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Настройте автоматическое восстановление правил межсетевого экрана при запуске сетевого интерфейса:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Создайте файл <codeph>/etc/network/if-pre-up.d/iptables</codeph> и войдите в его режим редактирования:</cmd>
+                        <info>
+                            <codeblock>sudo nano /etc/network/if-pre-up.d/iptables</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Добавьте следующие строки:</cmd>
+                        <info>
+                            <codeblock>#!/bin/sh
+iptables-restore &lt; /etc/iptables.rules
+exit 0</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните изменения и выйдите из режима редактирования файла.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Установите разрешение на запуск файла <codeph>/etc/network/if-pre-up.d/iptables</codeph> при включении сетевого интерфейса:</cmd>
+                        <info>
+                            <codeblock>sudo chmod +x /etc/network/if-pre-up.d/iptables</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Посмотрите настройки сетевого интерфейса одной из следующих команд:</cmd>
+                <info>
+                    <codeblock>ifconfig [название интерфейса]</codeblock>
+                    или
+                    <codeblock>ip -s -s link show [название интерфейса]</codeblock>
+                    <note>Если счетчик входящих пакетов растет, значит интерфейс подключен.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

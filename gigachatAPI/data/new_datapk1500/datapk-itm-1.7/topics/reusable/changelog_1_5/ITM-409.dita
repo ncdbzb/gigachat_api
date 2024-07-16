@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_w52_vyw_pvb">
-    <title></title>
-    <body><p id="p_x52_vyw_pvb">Создан скрипт <codeph>env_prod_generator.sh</codeph> для генерации env-файла и настройки переменных.</p></body>
-</topic>

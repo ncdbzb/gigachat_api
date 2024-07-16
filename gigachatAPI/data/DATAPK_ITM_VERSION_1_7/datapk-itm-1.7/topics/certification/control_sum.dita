@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="control_sum">
+    <title>Расчет контрольных сумм для файлов из дистрибутива</title>
+    <taskbody>
+        <context>Чтобы рассчитать контрольные суммы для файлов из дистрибутива, выполните следующие
+            шаги: </context>
+        <steps>
+            <step>
+                <cmd>Подключите диск с сертифицированным дистрибутивом к компьютеру, на котором планируется установить <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>.</cmd>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию, куда был примонтирован диск с сертифицированным дистрибутивом.</cmd>
+            </step>
+            <step>
+                <cmd>Запишите в текстовый файл <codeph>listfile</codeph> список файлов, для которых
+                    нужно рассчитать контрольные суммы:</cmd>
+                <info>
+                    <codeblock>ufix -jRa . >> /opt/listfile</codeblock>
+                    <p>В этой команде <codeph>.</codeph> — текущая директория, куда был
+                        примонтирован диск с сертифицированным дистрибутивом.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Исключите файл «Руководство администратора <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>» из списка файлов, для которых нужно
+                    рассчитать контрольные суммы. Для этого:</cmd>
+                <substeps id="substeps_fpp_drr_gxb">
+                    <substep>
+                        <cmd>Откройте файл <codeph>listfile</codeph> для редактирования:</cmd>
+                        <info>
+                            <codeblock>vi /opt/listfile</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите строку с упоминанием Руководства. </cmd>
+                        <info>Для этого в редакторе vi установите курсор на нужную строку и дважды
+                            нажмите на клавишу «d».</info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните изменения и закройте файл.</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Рассчитайте контрольные суммы файлов из списка <codeph>listfile</codeph> и
+                    создайте файл проекта с контрольными суммами
+                    <codeph>listfile.prj</codeph>:</cmd>
+                <info>
+                    <codeblock>ufix -eN /opt/listfile</codeblock>
+                </info>
+                <stepresult>Будет создан файл <codeph>listfile.prj</codeph> в директории
+                        <codeph>/opt</codeph>, в терминале также появятся контрольные
+                    суммы.</stepresult>
+            </step>
+            <step>
+                <cmd>Получите из проекта файл <codeph>listfile.html</codeph>, содержащий отчет с
+                    информацией об итоговых контрольных суммах для каждой вложенной директории, в
+                    том числе и корневой, а также размеры файлов и итоговые размеры
+                    директорий:</cmd>
+                <info>
+                    <codeblock>ufix -h /opt/listfile.prj</codeblock>
+                </info>
+                <stepresult>Будет создан файл <codeph>listfile.html</codeph> в директории
+                        <codeph>/opt</codeph>.</stepresult>
+            </step>
+            <step>
+                <cmd>Проверьте целостность дистрибутива: сравните полученные контрольные суммы с
+                    эталонными, приведенными в документе «УЦЛК.468244.26 30. Формуляр». При
+                    совпадении контрольных сумм файлов дистрибутива скопируйте файлы с диска на
+                    компьютер.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_cdb_2dm_trb">
+    <title>zbx_metadataitem_note</title>
+    <body><div id="div_ddb_2dm_trb"><note>Значение данной переменной используется, только если значение переменной <cmdname
+                    keyref="zbx_metadata"/> не определено.</note></div></body>
+</topic>

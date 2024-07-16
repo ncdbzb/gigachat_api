@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="udv_itm_hardware">
+    <title>Рекомендуемые характеристики аппаратного обеспечения</title>
+    <body>
+        <table id="table_tvy_y5t_1tb" frame="all" colsep="1" rowsep="1">
+            <title>Минимальные требования к производительности и характеристикам серверов</title>
+            <tgroup cols="7">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="1.03*"/>
+                <colspec colnum="3" colname="col3" colwidth="1*"/>
+                <colspec colnum="4" colname="col4" colwidth="1*"/>
+                <colspec colnum="5" colname="col5" colwidth="1.45*"/>
+                <colspec colnum="6" colname="col6" colwidth="1*"/>
+                <colspec colnum="7" colname="col7" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Вариант исполнения</entry>
+                        <entry>Суммарный объем объектов мониторинга с учетом подчиненных
+                            серверов</entry>
+                        <entry>
+                            <p>Кол-во CPU (шт.) /</p>
+                            <p>кол-во ядер (шт.) / частота (ГГц)</p>
+                        </entry>
+                        <entry>Объем ОЗУ</entry>
+                        <entry>Дисковая подсистема*</entry>
+                        <entry>Объем дисковой подсистемы для ОС</entry>
+                        <entry>Сетевой адаптер</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Малая инсталляция ITM-M, ITM-RM, ITM-VM</entry>
+                        <entry>Менее 250</entry>
+                        <entry>1 CPU / 2 ядра / 2 ГГц</entry>
+                        <entry>16</entry>
+                        <entry>ITM-RM — 100 ГБ<p>ITM-VM — 250 ГБ</p><p>ITM-M — 500 ГБ, от 7200
+                                SATA</p></entry>
+                        <entry>120 ГБ</entry>
+                        <entry>1х100/1000 Мбит/с</entry>
+                    </row>
+                    <row>
+                        <entry>Средняя инсталляция ITM-M, ITM-VM</entry>
+                        <entry>250 - 2500</entry>
+                        <entry>1 CPU / 4 ядра / 2 ГГц</entry>
+                        <entry>32</entry>
+                        <entry morerows="1">
+                            <p>Производительность: от 10K SAS</p>
+                            <p>Объем: Кратно объему для малой инсталляции в соответствии с
+                                количеством ОМ.</p>
+                        </entry>
+                        <entry>240 ГБ</entry>
+                        <entry>1х100/1000 Мбит/с</entry>
+                    </row>
+                    <row>
+                        <entry>Большая инсталляция ITM-M, ITM-VM</entry>
+                        <entry>2500 - 10000</entry>
+                        <entry>1 CPU / 4 ядра / 2 ГГц</entry>
+                        <entry>64</entry>
+                        <entry>240 ГБ</entry>
+                        <entry>1х1000 Мбит/с</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>*Соответствует типовому сценарию использования с параметрами «по умолчанию». При
+            проектировании нетиповых решений требуется расчет в соответствии с методикой. </p>
+        <p>Возможно развертывание сервера мониторинга ITM-M (малая инсталляция) и сервера ITM-VM на
+            одном физическом сервере, при этом требования к аппаратным ресурсам такого сервера
+            следует суммировать.</p>
+        <p>Сервер мониторинга ITM-M для мониторинга 250 и более объектов мониторинга рекомендуется
+            развертывать на отдельном сервере. </p>
+        <p>Установка UDV-ITM-M и UDV-ITM-RM на один сервер не реализует преимущества использования
+            ITM-RM на удаленных площадках и не является рекомендованным сценарием применения
+            комплекса.</p>
+    </body>
+</topic>

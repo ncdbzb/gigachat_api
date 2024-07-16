@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_ygd_rdh_bvb">
-    <title></title>
-    <body><p id="p_ahd_rdh_bvb">Установлен период отправки данных конфигурации с <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>
-            на <ph outputclass="udvpdf"><term keyref="udv_itm_rm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_a"/></ph><ph outputclass="html"><term keyref="datapk_itm_a"/></ph>, равный 15 минутам. Для этого изменено значение
-            переменной <cmdname keyref="zbx_proxyconfig_frequency"/> в файле
-                <codeph>.srv.env</codeph>.</p></body>
-</topic>

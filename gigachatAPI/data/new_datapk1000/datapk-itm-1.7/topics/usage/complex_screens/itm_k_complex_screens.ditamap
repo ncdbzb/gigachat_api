@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>Комплексные экраны</title>
-    <topicref href="create_complex_screen.dita"/>
-    <topicref href="complex_screen_add_items.dita"/>
-    <topicref href="complex_screen_dynamic_items.dita"/>
-</map>

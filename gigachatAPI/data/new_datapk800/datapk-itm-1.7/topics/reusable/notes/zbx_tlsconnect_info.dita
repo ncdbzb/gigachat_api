@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_j5g_yrk_trb">
-    <title>zbx_tlsconnect_info</title>
-    <body><div id="div_k5g_yrk_trb"><p>Способ подключения агента к серверу. Значение переменной используется активными проверками и
-                игнорируется пассивным прокси. Можно указать только одно значение:</p><ul><li><codeph>unencrypted</codeph> — подключаться без шифрования (по умолчанию);</li><li><codeph>psk</codeph> — подключаться, используя TLS и pre-shared ключ (PSK);</li><li><codeph>cert</codeph> — подключаться, используя TLS и сертификат.</li></ul></div></body>
-</topic>

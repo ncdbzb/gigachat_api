@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="users_and_user_groups">
+    <title>Пользователи, группы и роли пользователей</title>
+    <body>
+        <p>Все пользователи в <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> работают с системой <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> через веб-интерфейс.
+            Каждому пользователю в <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> присвоены уникальные имя пользователя и пароль.</p>
+        <p>Все пароли пользователей зашифрованы и хранятся в базе данных <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>. Пользователи
+            <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> не могут использовать свои имя пользователя и пароль для авторизации
+            непосредственно на сервере UNIX, за исключением ситуации, когда они были заведены
+            соответственно также и в UNIX. Соединение между веб-сервером и браузером пользователя
+            может быть защищено с помощью SSL.</p>
+        <p>При наличии гибкой схемы прав доступа пользователя можно ограничить и разграничить права
+            доступа к:</p>
+        <ul id="ul_qkt_4tz_frb">
+            <li>административным функциям веб-интерфейса <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>;</li>
+            <li>наблюдаемым узлам сети в группах узлов сети.</li>
+        </ul>
+        <p>Начальная установка <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> содержит двух предустановленных пользователей —
+            «datapkitm» и «guest». На <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> сертифицированной версии пользователь «guest» по
+            умолчанию отключен.</p>
+        <p>В случае пяти последовательных неудачных попыток входа c одной учетной записью в
+            веб-интерфейс <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph> (кроме учетной записи «guest», которая не требует ввода
+            пароля) данная учетная запись блокируется на 30 секунд для предотвращения компьютерных
+            атак методом перебора пароля. Сообщение с IP-адресом, с которого были осуществлены
+            неудачные попытки входа, будет отображено на стартовой странице в разделе боковой панели
+            <cite keyref="monitoring"/> → <cite keyref="panel"/> (при первом входе) или последней открытой странице (если вход
+            ранее выполнялся) после успешного входа в систему. Событие неудачного входа также
+            фиксируется в журнале аудита с указанием пользователя, IP-адреса, с которого
+            осуществлялось подключение, действие и примечание.</p>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref href="user_groups/users.dita"/><ul id="ul_yw2_3rl_v5b">
+                        <li><xref href="create_user.dita"/></li>
+                        <li><xref href="user_configuration/user_configuration.dita"/>
+                              </li>
+                        <li><xref href="user_access_rights/user_type.dita"/></li>
+                        <li><xref href="user_access_rights/user_rights.dita"/></li>
+                    </ul></li>
+                <li><xref href="user_groups/user_groups.dita"/><ul id="ul_pkw_yhj_hrb">
+                        <li><xref href="user_groups/create_user_group.dita"/></li>
+                    </ul></li>
+                <li><xref href="user_groups/itm_k_user_roles.dita"/><ul id="ul_wps_m54_ywb">
+                        <li><xref href="user_groups/itm_k_user_roles_create.dita"/></li>
+                        <li><xref href="user_groups/itm_k_user_role_config.dita"/></li>
+                    </ul></li>
+            </ul>
+        </p>
+    </body>
+</topic>

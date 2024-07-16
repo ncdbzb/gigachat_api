@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_tmk_tc1_fzb">
-    <title></title>
-    <body><div id="div_vmk_tc1_fzb">Изменено поведение на странице <cite keyref="itm_m_page_problems"/>:<ul id="ul_zzc_mc1_fzb"><li>При нажатии на значение в столбце «Филиал, <abbreviated-form keyref="to"/>» выводится окно
-                    просмотра свойств сервера мониторинга.</li><li>При нажатии на значение в столбце «Объект» выводится окно просмотра информации об объекте
-                    мониторинга</li></ul></div></body>
-</topic>

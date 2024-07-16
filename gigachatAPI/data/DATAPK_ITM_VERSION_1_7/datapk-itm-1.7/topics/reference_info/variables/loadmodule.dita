@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="loadmodule">
+    <glossterm>ZBX_LOADMODULE</glossterm>
+    <glossdef>
+        <div
+            conref="../../reusable/notes/loadmodule_info.dita#ReusableComponent_opp_cv1_5tb/div_ppp_cv1_5tb"
+        />
+    </glossdef>
+</glossentry>

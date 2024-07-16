@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="snmp_monitoring">
+    <title>Настройка мониторинга по SNMP</title>
+    <taskbody>
+        <context>Настройка мониторинга устройства по протоколу <ph
+                conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+            /> состоит из следующих этапов:</context>
+        <steps id="steps_u51_gdm_41c">
+            <step>
+                <cmd><xref href="#create_host"/></cmd>
+            </step>
+            <step>
+                <cmd><xref href="#oid"/></cmd>
+            </step>
+            <step>
+                <cmd><xref href="#create_element"/></cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <task id="create_host">
+        <title>Создание узла сети для устройства с <ph
+                conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+            />-интерфейсом</title>
+        <taskbody>
+            <context id="context_ohq_yjz_51c">В первую очередь для настройки мониторинга по
+                протоколу <ph
+                    conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                /> нужно создать узел сети для устройства, с которого нужно получать
+                данные.</context>
+            <steps>
+                <step>
+                    <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                            keyref="hosts_configuration"/>.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите на кнопку «Создать узел сети» в верхнем правом углу.</cmd>
+                    <stepresult>Откроется страница создания узла сети.</stepresult>
+                </step>
+                <step>
+                    <cmd>Введите имя узла сети.</cmd>
+                </step>
+                <step>
+                    <cmd>Выберите группу узла сети.</cmd>
+                </step>
+                <step>
+                    <cmd>В разделе «Интерфейсы» нажмите «Добавить» и выберите в выпадающем списке
+                        «SNMP».</cmd>
+                    <info>
+                        <fig id="fig_txw_3vl_41c">
+                            <title>Выбор SNMP в качестве интерфейса</title>
+                            <image href="../../../../images/ITM_K_usage/snmp_host1.png"
+                                id="image_uxw_3vl_41c"/>
+                        </fig>
+                    </info>
+                    <stepresult>Появятся параметры настройки SNMP.<fig id="fig_vxw_3vl_41c">
+                            <title>Раздел настройки SNMP</title>
+                            <image href="../../../../images/ITM_K_usage/snmp_host2.png"
+                                id="image_wxw_3vl_41c"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>В разделе настройки SNMP введите IP адрес.</cmd>
+                </step>
+                <step>
+                    <cmd>Выберите версию SNMP и выполните дополнительные настройки в зависимости от
+                        версии:</cmd>
+                    <substeps id="substeps_lkq_lxj_51c">
+                        <substep>
+                            <cmd>Для версий SNMPv2 и SNMPv1 укажите SNMP community.</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Для версии SNMPv3 укажите:</cmd>
+                            <info>
+                                <ul>
+                                    <li>Имя контекста — имя для определения элемента данных в
+                                        SNMP-подсети;</li>
+                                    <li>Имя безопасности — наименование учетной записи для доступа
+                                        по SNMPv3</li>
+                                    <li>Уровень безопасности:<ul id="ul_lsd_nxj_51c">
+                                            <li><b>noAuthNoPriv</b> — ни аутентификация, ни протокол
+                                                безопасности не используются.</li>
+                                            <li><b>AuthNoPriv</b> — используется только протокол
+                                                аутентификации. Для этого уровня безопасности
+                                                  укажите:<ul id="ul_ltp_qxj_51c">
+                                                  <li>протокол аутентификации;</li>
+                                                  <li>пароль аутентификации.</li>
+                                                </ul></li>
+                                            <li><b>AuthPriv</b> — используются и протокол
+                                                аутентификации, и протокол безопасности. Для этого
+                                                уровня безопасности укажите:<ul id="ul_kvv_rxj_51c">
+                                                  <li>протокол аутентификации;</li>
+                                                  <li>пароль аутентификации;</li>
+                                                  <li>протокол безопасности;</li>
+                                                  <li>ключевую фразу безопасности.</li>
+                                                </ul></li>
+                                        </ul></li>
+                                </ul>
+                            </info>
+                        </substep>
+                    </substeps>
+                </step>
+                <step>
+                    <cmd>Чтобы отменить запрос всех элементов данных SNMP одновременно, снимите
+                        чекбокс «Использовать массовые запросы».</cmd>
+                </step>
+                <step>
+                    <cmd>При необходимости перейдите на вкладку «Шаблоны» и подключите один из
+                        поставляемых шаблонов <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        /> (например, <codeph>Сетевое универсальное устройство SNMP.yaml</codeph>),
+                        которые автоматически добавят некоторый набор элементов данных. Тем не
+                        менее, шаблон может быть не совместим с узлом сети.</cmd>
+                </step>
+                <step>
+                    <cmd>Нажмите на кнопку <image href="../../../../images/buttons/add_button.png"
+                            id="image_zxw_3vl_41c"/> для сохранения узла сети.</cmd>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="oid">
+        <title>Поиск SNMP-строки (OID) элемента</title>
+        <taskbody>
+            <context id="context_okx_wvl_41c">После создания узла сети для устройства, с которого
+                нужно получать данные по протоколу <ph
+                    conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                />, нужно будет создать элемент данных. Элемента данных определяет, какую именно
+                информацию <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_k"/></ph> будет запрашивать с узла сети. Для
+                корректной настройки элемента данных необходимо вначале найти SNMP-строку (OID)
+                элемента. Для этого:</context>
+            <steps>
+                <step>
+                    <cmd>Получите список <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-строк, используя утилиту <codeph>snmpwalk</codeph> в командной
+                        строке:</cmd>
+                    <info><codeblock id="codeblock_nmh_3wl_41c">shell> snmpwalk -v 2c -c public&lt;IP хоста></codeblock>
+                        В этой команде <codeph>2c</codeph> — версия <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />, <codeph>public</codeph> — значение <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"/>
+                        <codeph>community</codeph>.</info>
+                    <stepxmp>Чтобы использовать <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        /> версии 1, используйте
+                        команду:<codeblock id="codeblock_gwl_5wj_51c">shell> snmpwalk -v 1 -c public&lt;IP хоста></codeblock></stepxmp>
+                    <stepresult>Появится список <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-строк и их последних значений. <p>Если список
+                            строк и их значений не отображается, уточните значение <ph
+                                conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"/>
+                            <codeph>community</codeph>. </p></stepresult>
+                </step>
+                <step>
+                    <cmd>Просмотрите полученный список <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-строк и найдите строку для мониторинга.</cmd>
+                    <stepxmp>Чтобы мониторить входящее количество байт на коммутаторе на 3 порту,
+                        используйте <codeph>IF-MIB::ifInOctets.3</codeph> из
+                        строки:<codeblock id="codeblock_zyq_swl_41c">IF-MIB::ifInOctets.3 = Counter32:3409739121</codeblock></stepxmp>
+                </step>
+                <step>
+                    <cmd>Определите цифровой OID для найденной строки с помощью команды
+                            <codeph>snmpget</codeph>:</cmd>
+                    <info><codeblock id="codeblock_xrb_sdn_41c">shell> snmpget -v 2c -c public -On 10.62.1.22 [SNMP-string]</codeblock>
+                        В этой команде последнее число в строке — это номер порта, который
+                        используется для мониторинга. </info>
+                    <stepxmp>Для строки <codeph>'IF-MIB::ifInOctets.3'</codeph> используйте
+                        команду:<codeblock id="codeblock_wwx_xdn_41c">shell> snmpget -v 2c -c public -On 10.62.1.22 IF-MIB::ifInOctets.3</codeblock>
+                        Пример вывода
+                        команды:<codeblock id="codeblock_ysf_b2n_41c">.1.3.6.1.2.1.2.2.1.10.3 = Counter32:3472126941</codeblock>Последнее
+                        число в строке OID — это номер порта, который используется для мониторинга.
+                            <note id="note_czq_swl_41c">В 3COM перед номером порта указывается 10,
+                            например: 1 порт = 101 порт, 3 порт = 103 порт. В Cisco используются
+                            обычные номера, например, 3 порт =3. <p>Некоторые <ph
+                                    conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                />-строки автоматически конвертируются сервером <ph
+                                    outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                                    outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                                    outputclass="html"><term keyref="datapk_itm_k"/></ph> в числовое
+                                представление. Подробнее см. в таблице:<table frame="all" rowsep="1"
+                                    colsep="1" id="table_fwl_21n_41c">
+                                    <title>Конвертация SNMP-строк</title>
+                                    <tgroup cols="2">
+                                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                                        <thead>
+                                            <row>
+                                                <entry>SNMP-строка</entry>
+                                                <entry>Числовое представление</entry>
+                                            </row>
+                                        </thead>
+                                        <tbody>
+                                            <row>
+                                                <entry><codeph>ASN_COUNTER</codeph></entry>
+                                                <entry><codeph>Counter32</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_COUNTER64</codeph></entry>
+                                                <entry><codeph>Counter64</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_UINTEGER</codeph></entry>
+                                                <entry><codeph>UInteger32</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_UNSIGNED64</codeph></entry>
+                                                <entry><codeph>UInteger32</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_INTEGER</codeph></entry>
+                                                <entry><codeph>INTEGER</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_INTEGER64</codeph></entry>
+                                                <entry><codeph>INTEGER</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_FLOAT</codeph></entry>
+                                                <entry><codeph>Float</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_DOUBLE</codeph></entry>
+                                                <entry><codeph>Double</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_TIMETICKS</codeph></entry>
+                                                <entry><codeph>Timeticks</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_GAUGE</codeph></entry>
+                                                <entry><codeph>Gauge32</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_IPADDRESS</codeph></entry>
+                                                <entry><codeph>IpAddress</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_OCTET_STR</codeph></entry>
+                                                <entry><codeph>OCTET STRING</codeph></entry>
+                                            </row>
+                                            <row>
+                                                <entry><codeph>ASN_OBJECT_ID</codeph></entry>
+                                                <entry><codeph>OBJECT IDENTIFIER</codeph></entry>
+                                            </row>
+                                        </tbody>
+                                    </tgroup>
+                                </table></p></note><note id="note_qtf_4dn_41c">Типы, в которые
+                            конвертируются SNMP-строки, могут измениться в зависимости от наличия
+                            полученной подсказки.</note></stepxmp>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    <task id="create_element">
+        <title>Создание элемента данных для мониторинга узла сети по протоколу SNMP</title>
+        <taskbody>
+            <context>Перед выполнением данного этапа нужно:<ul id="ul_ps5_llz_51c">
+                    <li>Создать узла сети для устройства, с которого нужно получать данные по
+                        протоколу <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />.</li>
+                    <li>Определить SNMP-строки (OID) для того элемента, с помощью которого
+                        планируется собирать данные.</li>
+                </ul><p>После этого необходимо создать элемент данных, который определяет, какую
+                    именно информацию <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_k"/></ph> будет запрашивать с
+                    узла сети. Для этого:</p></context>
+            <steps>
+                <step>
+                    <cmd>Перейдите на страницу <cite keyref="configuration"/> → <cite
+                            keyref="hosts_configuration"/>.</cmd>
+                </step>
+                <step>
+                    <cmd>Найдите строку с созданным ранее узлом сети <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        /> и нажмите на ссылку «Элементы данных» в этой строке.</cmd>
+                    <stepresult>Откроется страница «Элементы данных».<fig id="fig_yjv_cxl_41c">
+                            <title>Страница «Элементы данных»</title>
+                            <image href="../../../../images/ITM_K_usage/data_item_page.png"
+                                id="image_zjv_cxl_41c"/>
+                        </fig></stepresult>
+                </step>
+                <step>
+                    <cmd>Нажмите на кнопку «Создать элемент данных» в верхнем правом углу
+                        страницы.</cmd>
+                </step>
+                <step>
+                    <cmd>Введите имя нового элемента данных.</cmd>
+                </step>
+                <step>
+                    <cmd>В поле «Тип» установите значение «<ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        /> агент».</cmd>
+                </step>
+                <step>
+                    <cmd>В поле «Ключ» введите название, отображающее сведения о получаемых данных,
+                        например, <codeph><ph
+                                conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />-InOctets-Bps</codeph>.</cmd>
+                </step>
+                <step>
+                    <cmd>Убедитесь, что в поле «Интерфейс узла сети» указаны адрес и порт выбранного
+                        коммутатора или роутера в формате <codeph>ip_address : port</codeph>. </cmd>
+                </step>
+                <step>
+                    <cmd>В поле «SNMP OID» введите полученную ранее <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />-строку.</cmd>
+                </step>
+                <step>
+                    <cmd>В выпадающем списке «Тип информации» выберите значение «Числовой (с
+                        плавающей точкой)».</cmd>
+                </step>
+                <step>
+                    <cmd>При необходимости измените параметры «Интервал обновления» и «Период
+                        хранения истории».</cmd>
+                </step>
+                <step>
+                    <cmd>Введите описание элемента данных.</cmd>
+                    <info>
+                        <fig>
+                            <title>Пример заполнения параметров на странице создания элемента
+                                данных</title>
+                            <image href="../../../../images/ITM_K_usage/data_item_param.png"
+                                id="image_gck_4xl_41c"/>
+                        </fig>
+                    </info>
+                </step>
+                <step>
+                    <cmd>Добавьте шаг предобработки, чтобы видеть последнее изменение значения. Для
+                        этого:</cmd>
+                    <substeps id="substeps_vdv_2jz_51c">
+                        <substep>
+                            <cmd>Перейдите на вкладку «Предобработка».</cmd>
+                        </substep>
+                        <substep>
+                            <cmd>Нажмите на кнопку <image
+                                    href="../../../../images/buttons/add_1.png"
+                                    id="image_psy_fjz_51c"/>.</cmd>
+                            <stepresult>появятся поля для выбора шага предобработки.</stepresult>
+                        </substep>
+                        <substep>
+                            <cmd>Выберите шаг «Изменение в секунду».</cmd>
+                            <info>
+                                <fig id="fig_uzs_qjz_51c">
+                                    <title>Выбор шага предобработки «Изменение в секунду»</title>
+                                    <image
+                                        href="../../../../images/ITM_K_usage/change_per_second.png"
+                                        id="image_vfp_rjz_51c"/>
+                                </fig>
+                            </info>
+                        </substep>
+                    </substeps>
+                </step>
+                <step>
+                    <cmd>Нажмите на кнопку <image href="../../../../images/buttons/add_button.png"
+                            id="image_qcn_kjz_51c"/>, чтобы сохранить элемент данных.</cmd>
+                </step>
+                <step>
+                    <cmd>Перейдите в раздел боковой панели <cite keyref="monitoring"/> → <cite
+                            keyref="latest_data"/>, чтобы увидеть полученные данные <ph
+                            conref="../../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                        />. </cmd>
+                </step>
+            </steps>
+        </taskbody>
+    </task>
+    
+</task>

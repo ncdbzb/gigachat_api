@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_hrr_kml_trb">
-    <title>zbx_db_encryption_note</title>
-    <body><div id="div_jrr_kml_trb"><note>Если значение данной переменной равно true, соединения будут зашифрованы TLS, даже если другие переменные среды не указаны.</note></div></body>
-</topic>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_iyt_qb2_tvb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_jyt_qb2_tvb">
+                <cmd>Замените файл <codeph>/etc/sysconfig/iptables</codeph> на файл
+                    <codeph>iptables</codeph> из комплекта поставки:</cmd>
+                <info>
+                    <codeblock>mv iptables /etc/sysconfig/</codeblock>
+                </info>
+            </step>
+        </steps>
+        </taskbody>
+</task>

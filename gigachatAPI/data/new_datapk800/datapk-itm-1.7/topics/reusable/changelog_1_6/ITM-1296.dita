@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_b4c_tjd_jxb">
-    <title></title>
-    <body><p id="p_e4c_tjd_jxb">Исправлена ошибка, при которой проблемы с <abbreviated-form keyref="monitoring_object"/>, который переведен в режим технического обслуживания на сервере <ph outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph outputclass="html"><term keyref="datapk_itm_k"/></ph>, отображались на странице <cite keyref="itm_m_page_problems"/> и передавались в SIEM.</p></body>
-</topic>

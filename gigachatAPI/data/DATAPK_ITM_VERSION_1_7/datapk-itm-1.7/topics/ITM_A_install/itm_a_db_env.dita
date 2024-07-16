@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_db_env">
+    <title>Переменные файла .db.env</title>
+    <body>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_ygv_kjy_qvb">
+                <title>Переменные для работы с БД</title>
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c4" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Название переменной</entry>
+                            <entry>Описание</entry>
+                            <entry>Значение по умолчанию (жирным) или пример</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><cmdname keyref="db_server_host"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/db_server_host_info.dita#ReusableComponent_vdq_p12_trb/p_wdq_p12_trb"
+                                />
+                            </entry>
+                            <entry><b>172.17.0.1</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="db_server_port"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/db_server_port_info.dita#ReusableComponent_bgx_v12_trb/p_cgx_v12_trb"
+                                />
+                            </entry>
+                            <entry><b>10265</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="postgres_user"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/postgres_user_info.dita#ReusableComponent_osq_fb2_trb/p_psq_fb2_trb"
+                                />
+                            </entry>
+                            <entry><b>itma_user</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="postgres_password"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/postgres_password_info.dita#ReusableComponent_pxz_lb2_trb/p_qxz_lb2_trb"
+                                />
+                            </entry>
+                            <entry><b>P@ssw0rd</b></entry>
+                        </row>
+                        <row>
+                            <entry><cmdname keyref="postgres_db"/></entry>
+                            <entry>
+                                <p
+                                    conref="../reusable/notes/postgres_db_info.dita#ReusableComponent_jyv_rb2_trb/p_kyv_rb2_trb"
+                                />
+                            </entry>
+                            <entry><b>itma_db</b></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_wvk_qyj_qwb">
-    <title></title>
-    <body><p id="p_xvk_qyj_qwb">Изменен скрипт генерации переменных <codeph>env_generator.sh</codeph>: добавлена переменная <cmdname keyref="synchronization_enabled"/> для возможности включения и отключения синхронизации с DATAPK, предлагаемое название базы данных изменено на <codeph>datapkitm</codeph>.</p></body>
-</topic>

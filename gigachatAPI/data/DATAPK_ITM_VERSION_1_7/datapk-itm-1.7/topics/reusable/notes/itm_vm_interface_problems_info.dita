@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_es3_fvc_zwb">
+    <title></title>
+    <body id="body_gs3_fvc_zwb"><p>В этом разделе рассматриваются следующие нештатные ситуации, при которых веб-интерфейс <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> не загружается:<ul id="ul_gfc_343_5wb"><li><xref href="../../ITM_M_troubleshooting/itm_m_lsof.dita"/></li><li><xref href="../../ITM_M_troubleshooting/web-interface_problem_hostname.dita"/></li></ul></p></body>
+</topic>

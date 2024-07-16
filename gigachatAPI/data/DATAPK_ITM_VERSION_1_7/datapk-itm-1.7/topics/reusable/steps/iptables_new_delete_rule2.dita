@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ghy_lly_svb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step id="step_ihy_lly_svb">
+                <cmd>Удалите правило на открытие порта 10265, которое находится на третьей позиции в списке после удаления предыдущего правила:</cmd>
+                <info><codeblock>iptables -D INPUT 3</codeblock></info>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

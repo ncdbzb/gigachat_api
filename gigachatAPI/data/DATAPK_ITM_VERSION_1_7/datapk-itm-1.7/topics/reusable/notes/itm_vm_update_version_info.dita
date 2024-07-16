@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_xrb_1wc_zwb">
+    <title></title>
+    <taskbody id="taskbody_asb_1wc_zwb"><context><p>Для обновления сервера <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                    outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph outputclass="html"
+                        ><term keyref="datapk_itm_vm"/></ph> с версии 1.6.0.0 до версии 1.7.0.0:</p></context><steps>
+            <step>
+                <cmd>Перейдите в рабочую директорию <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>:</cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Остановите работу сервера:</cmd>
+                <info>
+                    <codeblock>docker-compose down</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Переименуйте старую рабочую директорию <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>: </cmd>
+                <info>
+                    <codeblock>mv /opt/itm-vm /opt/itm-vm-bkp</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Создайте директорию для новой версии <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph>: </cmd>
+                <info>
+                    <codeblock>mkdir /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step id="itm_vm_download_archive">
+                <cmd>Загрузите в директорию<codeph>/opt/itm-vm</codeph> на сервере <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> следующие файлы из
+                    каталога с обновленным дистрибутивом:</cmd>
+                <substeps id="substeps_hzp_rfp_btb">
+                    <substep>
+                        <cmd><ph outputclass="onlypdf"
+                                ><codeph>ussc_itm-vm_1.7.0.0.tar.gz</codeph></ph><ph
+                                outputclass="udvpdf"
+                                ><codeph>udv_itm-vm_1.7.0.0.tar.gz</codeph></ph><ph
+                                outputclass="html"
+                            ><codeph>udv_itm-vm_1.7.0.0.tar.gz</codeph></ph>;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>docker-compose.release.yaml</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Перейдите в директорию, куда были перемещены файлы с обновленным дистрибутивом
+                        <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph>: </cmd>
+                <info>
+                    <codeblock>cd /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите обновленные образы командой:</cmd>
+                <info>
+                    <codeblock>docker load -i udv_itm-vm_1.7.0.0.tar.gz</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте данные из старой рабочей директории <codeph>/opt/itm-vm-bkp</codeph>
+                    в новую директорию <codeph>/opt/itm-vm</codeph>:</cmd>
+                <info>
+                    <codeblock>cp -r /opt/itm-vm-bkp/.env /opt/itm-vm-bkp/env /opt/itm-vm-bkp/.itmm_password_secret_key /opt/itm-vm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Удалите из файла <codeph>.env</codeph> переменные, которые теперь будут
+                    настраиваться в веб-интерфейсе.   </cmd>
+                <info>
+                    <note type="tip">Если вы изменяли значения переменных на отличные от значений по
+                        умолчанию, зафиксируйте их перед изменением файла <codeph>.env</codeph> и
+                        потом укажите эти значения в интерфейсе.</note>
+                </info>
+                <substeps id="substeps_px5_1np_wzb">
+                    <substep>
+                        <cmd>Откройте файл <codeph>.env</codeph> для редактирования: </cmd>
+                        <info>
+                            <codeblock>vi .env</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменную «Срок хранения проблем»: </cmd>
+                        <info><codeblock>ITMM_PROBLEM_AGE_IN_DAYS=180</codeblock></info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменную для обозначения часового пояса
+                            <codeph>TZ=</codeph>.</cmd>
+                        <info>
+                            <note>Значение часового пояса устанавливается автоматически на основе
+                                данных из ОС.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменную «Срок хранения истории задач синхронизации»:</cmd>
+                        <info>
+                            <codeblock>ITMM_SYNC_HISTORY_LIFETIME_IN_DAYS=4</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Удалите переменные для настройки интеграции с SIEM:</cmd>
+                        <info>
+                            <codeblock>#----------Настройка интеграции с SIEM----------
+SIEM_INTEGRATION=true
+SIEM_SYSLOG_HOST=127.0.0.1
+SIEM_SYSLOG_PORT=514
+SIEM_SYSLOG_PROTOCOL=TCP
+ITMM_IP_ADDRESS=</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Сохраните и закройте файл:</cmd>
+                        <info>
+                            <codeblock>:wq</codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Запустите контейнеры:</cmd>
+                <info>
+                    <codeblock>docker-compose up -d</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте результат обновления. Для этого перейдите в веб-интерфейс <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> по ранее
+                    использовавшемуся адресу.</cmd>
+            </step>
+            <step>
+                <cmd>Если обновление прошло успешно, удалите директорию с предыдущей версией <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_vm"/></ph> 1.6.0.0: </cmd>
+                <info>
+                    <codeblock>rm -rf /opt/itm-vm-bkp/</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Настройте в веб-интерфейсе следующие параметры, если в <ph outputclass="udvpdf"
+                            ><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_vm"/></ph> версии 1.6.0.0 меняли их значения в файле
+                        <codeph>.env</codeph>:</cmd>
+                <info>
+                    <ul id="ul_unp_g4p_wzb">
+                        <li>Настройка интеграции с SIEM. Подробнее см. в Руководстве по эксплуатации
+                                <ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph
+                                outputclass="onlypdf"><term keyref="datapk_itm_vm"/></ph><ph
+                                outputclass="html"><term keyref="datapk_itm_vm"/></ph> в разделе
+                            «Настройка интеграции с SIEM».</li>
+                        <li>Период хранения истории проблем. Подробнее см. в Руководстве по
+                            эксплуатации <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> в
+                            разделе «Изменение основных свойств сервера».</li>
+                        <li>Период хранения истории синхронизаций. Подробнее см. в Руководстве по
+                            эксплуатации <ph outputclass="udvpdf"><term keyref="udv_itm_vm"
+                                /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_vm"
+                                /></ph><ph outputclass="html"><term keyref="datapk_itm_vm"/></ph> в
+                            разделе «Изменение основных свойств сервера».</li>
+                    </ul>
+                </info>
+            </step>
+        </steps></taskbody>
+</task>

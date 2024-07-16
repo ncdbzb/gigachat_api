@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="create_user_synchro_datapk">
-    <title>Создание пользователя для синхронизации с DATAPK</title>
-    <shortdesc></shortdesc>
-    <taskbody
-        conref="../../../reusable/synchro_datapk/create_user_synchro_datapk_info.dita#ReusableComponent_qkw_mmk_syb/taskbody_rkw_mmk_syb"/>
-</task>

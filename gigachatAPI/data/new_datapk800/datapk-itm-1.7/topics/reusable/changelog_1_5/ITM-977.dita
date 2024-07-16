@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_sgn_lbf_4vb">
-    <title></title>
-    <body><p id="p_tgn_lbf_4vb">Добавлена возможность поиска <abbreviated-form keyref="monitoring_object"/> по
-            полям «Наименование», «АСУ ТП», «IP-адрес», «OC» на странице <ph outputclass="html"
-                    ><cite keyref="itm_m_page_object_monitoring"/></ph><ph outputclass="onlypdf"
-                >«Объекты мониторинга»</ph>.</p></body>
-</topic>

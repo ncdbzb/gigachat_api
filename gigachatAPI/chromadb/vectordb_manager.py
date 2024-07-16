@@ -13,14 +13,14 @@ from gigachatAPI.logs.logs import upload_doc_info
 class VectordbManager:
     def __init__(self):
         self.config: Config = load_config()
-        self.chroma_path = 'gigachatAPI/data/test_chroma/'
+        self.chroma_path = 'gigachatAPI/data/chroma/'
         self.client = chromadb.PersistentClient(path=self.chroma_path)
         self.embeddings = GigaChatEmbeddings(credentials=self.config.GIGA_CREDENTIALS,
                                              verify_ssl_certs=False)
 
-    def create_collection(self, collection_name: str, split_docs: list[Document], use_cycle: bool = False) -> None:
-        if self.get_collection_length(collection_name):
-            raise ValueError(f'collection with name \"{collection_name}\" already exists')
+    def create_collection(self, collection_name: str, split_docs: list[Document], use_cycle: bool) -> None:
+        if collection_name in self.get_list_collections() or collection_name == 'chroma':
+            raise ValueError('Collection with this name is already exists')
         try:
             Chroma.from_documents(
                 documents=split_docs,
@@ -30,11 +30,10 @@ class VectordbManager:
             )
             upload_doc_info.debug(f'created chroma collection in {self.chroma_path} with name {collection_name}')
         except ResponseError:
+            upload_doc_info.debug('Ошибка при загрузке!')
             if use_cycle:
-                upload_doc_info.debug('Ошибка при загрузке! Пробуем загрузить в цикле...')
+                upload_doc_info.debug('Пробуем загрузить в цикле...')
                 self._create_collection_cycle(collection_name, split_docs)
-            else:
-                raise ResponseError
 
     def _create_collection_cycle(self, collection_name: str, split_docs: list[Document]) -> None:
 
@@ -114,12 +113,23 @@ class VectordbManager:
         return
 
     def delete_collection(self, collection_name: str) -> None:
+        if collection_name not in self.get_list_collections():
+            raise ValueError('Collection with this name is not exist')
         collection = self.get_langchain_chroma(collection_name)
         collection.delete_collection()
+        return
 
-    def get_collection_length(self, collection_name: str) -> int:
-        collection = self.get_langchain_chroma(collection_name)
-        return collection._collection.count()
+    def get_list_collections(self) -> list[str]:
+        list_collections = self.client.list_collections()
+        return list(map(lambda x: x.name, list_collections))
+
+    def change_collection_name(self, current_collection_name: str, new_collection_name: str) -> None:
+        if new_collection_name in self.get_list_collections():
+            raise ValueError('Collection with this name is already exists')
+
+        collection = self.client.get_collection(current_collection_name)
+        collection.modify(new_collection_name)
+        return
 
     def get_langchain_chroma(self, collection_name: str) -> Chroma:
         return Chroma(
@@ -129,11 +139,11 @@ class VectordbManager:
         )
 
     def sim_search(
-            self,
-            collection_name: str,
-            query: str,
-            k: int = 4,
-            with_sim_scores: bool = False
+        self,
+        collection_name: str,
+        query: str,
+        k: int = 4,
+        with_sim_scores: bool = False
     ) -> list[str] | tuple[list[str], list[float]]:
         collection = self.get_langchain_chroma(collection_name)
         if with_sim_scores:
@@ -148,3 +158,8 @@ class VectordbManager:
     def get_sim_scores(self, collection_name: str, query: str, k: int = 4):
         sim_scores = self.sim_search(collection_name, query, k, with_sim_scores=True)[1]
         return sim_scores
+
+    def add_data(self, collection_name: str, texts: list[str]) -> None:
+        collection = self.get_langchain_chroma(collection_name)
+        collection.add_texts(texts)
+        return

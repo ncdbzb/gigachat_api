@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_bxh_w3j_2tb">
-    <title></title>
-    <body><p id="p_exh_w3j_2tb">Размещение fping. <note type="tip">Убедитесь, что владельцем бинарного файла fping является root и флаг SUID установлен!</note></p></body>
-</topic>

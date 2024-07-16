@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="ReusableComponent_rrv_mk2_trb">
-    <title>zbx_javagateway_info</title>
-    <body><div id="div_srv_mk2_trb"><p>IP-адрес или имя хоста Java gateway. Требуется только, если запущены Java поллеры.</p></div></body>
-</topic>

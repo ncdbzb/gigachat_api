@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство администратора</mainbooktitle>
+        <booktitlealt>DATAPK ITM-K версии 1.6.0.1</booktitlealt>
+    </booktitle>
+    <bookmeta>
+        <bookrights>
+            <copyrfirst><year>2021</year></copyrfirst>
+            <copyrlast><year>2021</year></copyrlast>
+            <bookowner><organization>ООО «СайберЛимфа»</organization></bookowner>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <booklists>
+            <toc/>
+            <!-- <tablelist/> -->
+        </booklists>       
+    </frontmatter>
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/glossary/topics_glossary.dita">
+            <topicref href="topics/reference_info/glossary/glossary.ditamap" format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.dita">
+            <topicref href="topics/ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_K_reference_info/breadcrumbs/breadcrumbs.dita">
+            <topicref href="topics/ITM_K_reference_info/breadcrumbs/breadcrumbs.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/reference_info/var_itm_k_admin.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_K_reference_info/itm_k_empty_glossary.dita">
+        <topicref href="topics/reference_info/glossary/glossary.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/itm_k_pdf_admin_whatsnew.dita">
+        <topicref href="topics/reusable/itm_k_admin_doc_whatsnew_v2.dita"/>
+    </chapter>
+    <chapter href="topics/introduction/introduction.dita">
+        <topicref href="topics/introduction/functional_opportunities.dita"/>
+        <topicref href="topics/introduction/safe_collection_measures.dita"/>
+    </chapter>
+    <chapter href="topics/requirements/safe_installation/RedOS_installation/installation_redos.dita">
+        <topicref
+            href="topics/requirements/safe_installation/RedOS_installation/itm_k_install_redos.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/centos_itmk_install.dita">
+        <topicref href="topics/requirements/datapk_itm_k_centos_8_4.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/datapk_itm_k_astra_linux.dita">
+        <topicref href="topics/requirements/astra_linux_install.dita"/>
+        <topicref href="topics/requirements/astra_linux_config.dita">
+            <topicref href="topics/requirements/astra_net_config.dita"/>
+            <topicref href="topics/requirements/astra_ssh_config.dita"/>
+            <topicref href="topics/requirements/astra_repo_config.dita"/>
+        </topicref>
+        <topicref href="topics/requirements/astra_docker.dita"/>
+        <topicref href="topics/requirements/astra_jatoba.dita"/>
+        <topicref href="topics/requirements/astra_itm.dita"/>
+    </chapter>
+    <chapter href="topics/requirements/itm_k_update_1_4_1_5_to_1_6_1.dita"/>
+    <chapter href="topics/requirements/itm_k_update_1_6_to_1_6_1.dita"/>
+    <chapter href="topics/reusable/datapkitm_k_certif.dita">
+        <topicref href="topics/requirements/itmm_root_cert.dita"/>
+        <topicref href="topics/requirements/datapk_itmm_cert_key_web_interface.dita"/>
+        <topicref href="topics/requirements/itmm_cert_admin.dita"/>
+    </chapter>
+    <chapter href="topics/requirements/safe_installation/datapk_synchro/datapk_synchro.dita">
+        <topicref
+            href="topics/requirements/safe_installation/datapk_synchro/itm_k_datapk_synchro.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/safe_installation/synchro_datapk_itm_vm.dita"/>
+    <chapter
+        href="topics/requirements/safe_installation/first_configuration/first_configuration.dita">
+        <topicref
+            href="topics/requirements/safe_installation/first_configuration/itm_m_connect_web.dita"/>
+        <topicref
+            href="topics/requirements/safe_installation/first_configuration/itm_k_first_configuration.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter
+        href="topics/requirements/safe_installation/agent_installation/agents_installation.dita">
+        <topicref
+            href="topics/requirements/safe_installation/agent_installation/itm_k_agents_installation.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/safe_installation/agentless_config/agentless_config.dita">
+        <topicref
+            href="topics/requirements/safe_installation/agentless_config/itm_k_agentless_config.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/safe_environment_config.dita"/>
+    <chapter href="topics/requirements/mib.dita"/>
+    <chapter href="topics/requirements/encryption_config.dita">
+        <topicref href="topics/requirements/encryption_passive_proxy.dita"/>
+        <topicref href="topics/requirements/itm_k_itm_a_encryption_1_3.dita"/>
+        <topicref href="topics/requirements/config_encryption_datapk_itm_k_agents.dita"/>
+    </chapter>
+    <chapter href="topics/requirements/ldaps_config.dita"/>
+    <chapter href="topics/requirements/ITM-K_LDAP.dita"/>
+    <chapter href="topics/requirements/itmk_config_notifications.dita"/>
+    <chapter href="topics/usage/monitoring_objects_and_hosts/monitoring_objects_hosts.dita">
+        <topicref href="topics/usage/monitoring_objects_and_hosts/itm_k_OM.ditamap" format="ditamap"
+        />
+    </chapter>
+    <chapter href="topics/emergency_actions/DB_backup_and_restore/data_backup.dita">
+        <topicref href="topics/emergency_actions/DB_backup_and_restore/data_backup.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/emergency_actions/emergency_actions.dita">
+        <topicref href="topics/emergency_actions/emergency_actions.ditamap" format="ditamap"/>
+    </chapter>
+    
+    <chapter href="topics/reference_info/reference_info.dita">
+        <topicref href="topics/reference_info/datapk_itm_versions.dita"/>
+        <topicref href="topics/reference_info/datapkitm_k_directories.dita"/>
+        <topicref href="topics/ITM_K_reference_info/rus_templates.dita"/>
+        <topicref href="topics/ITM_K_reference_info/roles/roles.dita"/>
+        <topicref href="topics/ITM_K_reference_info/var_tables/var_tables.dita">
+            <topicref href="topics/ITM_K_reference_info/var_tables/var_tables.ditamap"
+                format="ditamap"/>
+        </topicref>
+        <topicref href="topics/ITM_K_reference_info/datapk_itm_k_antivirus.dita"/>
+        <topicref href="topics/ITM_K_reference_info/challenges/challenges.dita"/>
+        <topicref href="topics/reference_info/macros.dita"/>
+        <topicref href="topics/reference_info/measurement_units.dita"/>
+        <topicref href="topics/reference_info/item_key_format.dita"/>
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap"
+        processing-role="resource-only"/>
+</bookmap>

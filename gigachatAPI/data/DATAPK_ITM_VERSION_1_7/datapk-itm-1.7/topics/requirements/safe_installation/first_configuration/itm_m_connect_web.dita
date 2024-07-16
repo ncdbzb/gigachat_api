@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_connect_web">
+    <title>Подключение к веб-интерфейсу</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>Для подключения к веб-интерфейсу <ph outputclass="udvpdf"><term keyref="udv_itm_k"
+                    /></ph><ph outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                    outputclass="html"><term keyref="datapk_itm_k"/></ph>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>В браузере в адресной строке введите IP-адрес <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>. </cmd>
+                <stepresult>отобразится окно входа в веб-интерфейс <ph outputclass="udvpdf"><term
+                            keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                            keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                            keyref="datapk_itm_k"/></ph>.<fig id="fig_w5r_pdj_zyb">
+                        <title>Окно авторизации</title>
+                        <div outputclass="onlypdf"><image
+                                href="../../../../images/Pages/itm_log_in.png"/></div>
+                        <div outputclass="html"><image
+                                href="../../../../images/Pages/itm_log_in.png"/></div>
+                        <div outputclass="udvpdf"><image
+                                href="../../../../images/udv_itm_k_pages/udv_log_in.png"/></div>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>В окне входа введите имя пользователя и пароль.</cmd>
+                <info outputclass="admin">Для встроенной учетной записи по умолчанию заданы имя пользователя
+                        <b>datapkitm</b> и пароль <b>datapkitm</b>. При первой настройке комплекса
+                    необходимо изменить логин и пароль встроенной учетной записи.</info>
+                <info><note type="attention">В случае 5 неудачных попыток входа учетная запись пользователя блокируется.
+                        Обратитесь к администратору системы для разблокировки учетной записи.</note></info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Войти».</cmd>
+                <stepresult>выполнен вход на главную страницу веб-интерфейса <ph
+                        outputclass="udvpdf"><term keyref="udv_itm_k"/></ph><ph
+                        outputclass="onlypdf"><term keyref="datapk_itm_k"/></ph><ph
+                        outputclass="html"><term keyref="datapk_itm_k"/></ph>. </stepresult>
+            </step>
+        </steps>
+        <postreq id="postreq_bpl_vjj_zyb">
+            <note type="tip">Чтобы завершить сеанс работы в веб-интерфейсе <ph outputclass="udvpdf"
+                        ><term keyref="udv_itm_k"/></ph><ph outputclass="onlypdf"><term
+                        keyref="datapk_itm_k"/></ph><ph outputclass="html"><term
+                        keyref="datapk_itm_k"/></ph>, нажмите на кнопку <image
+                    href="../../../../images/buttons/exit.png" id="image_pjx_gkj_zyb"/> («Выход»)  в
+                нижней части главного меню.</note>
+        </postreq>
+    </taskbody>
+</task>

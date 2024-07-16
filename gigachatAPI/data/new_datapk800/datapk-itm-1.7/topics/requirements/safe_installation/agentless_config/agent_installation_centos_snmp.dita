@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="agent_installation_centos_snmp">
-    <title>Настройка ОМ с ОС Centos по протоколу SNMPv2</title>
-    <taskbody
-        conref="../../../reusable/agentless/centos_snmp2.dita#ReusableComponent_cnj_pvn_y5b/taskbody_dnj_pvn_y5b"/>
-</task>

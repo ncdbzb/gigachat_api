@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_fcl_kwg_wrb">
+    <title></title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd id="cmd_hcl_kwg_wrb">Нажмите «Добавить».</cmd>
+            </step>
+        </steps>      
+    </taskbody>
+</task>

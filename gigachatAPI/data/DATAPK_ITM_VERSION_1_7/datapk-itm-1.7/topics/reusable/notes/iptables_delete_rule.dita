@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_qv4_1y2_fsb">
+    <title>iptables_delete_rule</title>
+    <taskbody>
+        <steps>
+        <step id="step_rv4_1y2_fsb">
+            <cmd>Если во время настройки межсетевого экрана была допущена ошибка, удалите правило с помощью команды:</cmd>
+            <info><codeblock>iptables -D [имя цепочки, содержащей команды] [номер правила в цепочке]</codeblock></info>
+            <stepxmp>команда для удаления правила номер 5 в цепочке INPUT будет выглядеть следующим образом:<codeblock>iptables -D INPUT 5 </codeblock></stepxmp>
+        </step>
+        </steps>
+    </taskbody>
+</task>

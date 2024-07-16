@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_agentless_win2000_snmp">
+    <title>Настройка ОМ с ОС Windows 2000</title>
+    <body>
+        <note id="note_ttr_4km_rvb">Для <abbreviated-form keyref="monitoring_object"/> с этой ОС
+            настройка происходит с помощью протокола <ph
+                conref="../../reusable/protocol_names/SNMPv2.dita#ReusableComponent_sb5_cnl_4yb/ph_tb5_cnl_4yb"
+            />.</note>
+        <section id="section_s13_mg4_rvb">
+            <title>Настройка ОМ</title>
+            <note>Для настройки ОМ должна быть установлена служба <ph conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"/>. Подробнее про установку см.
+                в разделе <xref href="#itm_a_agentless_win2000_snmp/snmp"/>.</note>
+            <ol id="ol_dzt_hrn_rvb">
+                <li>Найдите соответствующие службы в панели управления. Для этого:<ol
+                        id="ol_fsg_hsn_rvb">
+                        <li>Зайдите в панель управления. </li>
+                        <li>Перейдите в раздел «Администрирование».<fig id="fig_il3_3sn_rvb">
+                                <title>Панель управления</title>
+                                <image
+                                    href="../../../images/agentless_installation/win2000_panel_adm.png"
+                                    id="image_jl3_3sn_rvb"/>
+                            </fig><p>Результат шага: Откроется окно «Администрирование».</p></li>
+                        <li>В открывшемся окне нажмите на кнопку «Управление компьютером».<fig
+                                id="fig_t13_mg4_rvb">
+                                <title>Управление компьютером</title>
+                                <image
+                                    href="../../../images/agentless_installation/win2000_computer_adm.png"
+                                    id="image_vgl_ksn_rvb"/>
+                            </fig></li>
+                        <li>В разделе «Службы и приложения» перейдите в подраздел «Службы» и найдите
+                            в списке «Служба SNMP».<fig id="fig_u13_mg4_rvb">
+                                <title>Раздел «Службы»</title>
+                                <image
+                                    href="../../../images/agentless_installation/win2000_find_snmp.png"
+                                    id="image_ybf_lsn_rvb"/>
+                            </fig><note>Если службы <ph
+                                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                /> нет в списке, необходимо ее установить. Подробнее про установку
+                                см. в разделе <xref href="#itm_a_agentless_win2000_snmp/snmp"
+                                />.</note></li>
+                    </ol></li>
+                <li>Выполните более детальную настройку <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    /> агента. Для этого: <ol id="ol_adx_ssn_rvb">
+                        <li>Нажмите правой кнопкой мыши на «Служба <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />» и выберите «Свойства».<p>Результат шага: Откроется окно «Служба <ph
+                                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                />».</p></li>
+                        <li>В открывшемся окне откройте вкладку «Безопасность».</li>
+                        <li>Нажмите на кнопку «Добавить» в разделе «Приемлемые имена
+                                сообществ».<p>Результат шага: Откроется окно «Настройка службы <ph
+                                    conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                                />».</p></li>
+                        <li>В открывшемся окне: <ol id="ol_zvx_xsn_rvb">
+                                <li>выберите права сообщества;<note>Рекомендуемое значение — READ
+                                        ONLY.</note></li>
+                                <li>введите имя сообщества;</li>
+                                <li>нажмите на кнопку «Добавить».</li>
+                            </ol><fig id="fig_dlq_1tn_rvb">
+                                <title>Настройка службы SNMP</title>
+                                <image
+                                    href="../../../images/agentless_installation/win2000_SNMP.png"
+                                    id="image_elq_1tn_rvb"/>
+                            </fig></li>
+                        <li>Нажмите на кнопку «ОК» в окне «Служба <ph
+                                conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                            />».</li>
+                    </ol></li>
+                <li>Перезапустите службу <ph
+                        conref="../../reusable/protocol_names/SNMP.dita#ReusableComponent_jcs_34h_pyb/ph_lcs_34h_pyb"
+                    />.</li>
+            </ol>
+        </section>
+        <section id="snmp">
+            <title>Установка службы SNMP</title>
+            <ol id="ol_q4b_jrn_rvb">
+                <li>Зайдите в панель управления.</li>
+                <li>Перейдите в раздел «Установка и удаление программ».<p>Результат шага: Откроется
+                        окно «Установка и удаление программ».</p></li>
+                <li>В открывшемся окне нажмите на кнопку «Добавление и удаление компонентов
+                        Windows».<fig id="fig_v13_mg4_rvb">
+                        <title>Добавление и удаление компонентов Windows</title>
+                        <image href="../../../images/agentless_installation/win2000_add_del.png"
+                            id="image_t2h_prn_rvb"/>
+                    </fig><p>Результат шага: Откроется окно «Мастер компонентов Windows».</p></li>
+                <li>В открывшемся окне выберите компонент «Средства управления и наблюдения» в конце
+                    списка. <fig id="fig_xvy_jt2_y5b">
+                        <title>Установка компонента</title>
+                        <image
+                            href="../../../images/agentless_installation/win2000_master_component.png"
+                            id="image_jf1_kt2_y5b"/>
+                    </fig>
+                </li>
+                <li>Нажмите на кнопку «Состав».<p>Результат шага: Откроется окно с содержимым
+                        компонента «Средства управления и наблюдения». </p></li>
+                <li>Нажмите «ОК» в окне «Средства управления и наблюдения».<fig id="fig_wcp_yrn_rvb">
+                        <title>Окно «Средства управления и наблюдения»</title>
+                        <image href="../../../images/agentless_installation/win2000_control.png"
+                            id="image_xcp_yrn_rvb"/>
+                    </fig></li>
+                <li>Нажмите «Далее» в окне «Мастер компонентов Windows». <p>Результат шага: Начнется
+                        установка компонента. <fig id="fig_w13_mg4_rvb">
+                            <title>Установка компонента</title>
+                            <image
+                                href="../../../images/agentless_installation/win2000_install_component.png"
+                                id="image_nw1_bsn_rvb"/>
+                            
+                        </fig><note>В процессе установки вам понадобится вставить диск с дистрибутивом
+                            Windows в CD-ROM.</note></p></li>
+            </ol>
+        </section>
+    </body>
+</topic>

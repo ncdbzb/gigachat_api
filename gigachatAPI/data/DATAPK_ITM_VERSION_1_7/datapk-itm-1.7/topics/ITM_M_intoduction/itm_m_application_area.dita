@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_application_area">
+    <title>Область применения</title>
+    <body>
+        <p><ph outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                /></ph> — cервер визуализации и управления, который используется в корпоративных
+            вертикально-интегрированных решениях по мониторингу и контролю ИТ-ресурсов. <ph
+                outputclass="udvpdf"><term keyref="udv_itm_vm"/></ph><ph outputclass="onlypdf"><term
+                    keyref="datapk_itm_vm"/></ph><ph outputclass="html"><term keyref="datapk_itm_vm"
+                /></ph> работает на верхнем уровне иерархии, как правило, в администрации
+            предприятия.</p>
+    </body>
+</topic>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_cgl_mqk_trb">
+    <title>zbx_alias_info</title>
+    <body><div id="div_dgl_mqk_trb"><p>Псевдоним ключа элемента данных. </p>
+            <note>Можно добавить несколько параметров псевдонима, в том числе с одинаковым ключом
+                Alias. Несколько ключей Alias могут ссылаться на один и тот же ключ. Псевдонимы
+                можно использовать в HostMetadataItem, но нельзя в HostnameItem параметрах.</note></div></body>
+</topic>
