@@ -2,6 +2,7 @@ import chromadb
 import time
 from langchain.schema import Document
 from langchain_community.embeddings.gigachat import GigaChatEmbeddings
+from sentence_transformers import SentenceTransformer
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_chroma import Chroma
 from gigachatAPI.config_data.config import load_config, Config
@@ -12,11 +13,29 @@ from gigachatAPI.logs.logs import upload_doc_info
 
 class VectordbManager:
     def __init__(self):
+        def _get_embeddings(model_name: str):
+            if model_name == 'GigaChatEmbeddings':
+                return GigaChatEmbeddings(credentials=self.config.GIGA_CREDENTIALS, 
+                                          verify_ssl_certs=False)
+            else:
+                class HuggingFaceEmbeddings:
+                    def __init__(self, model):
+                        self.model = SentenceTransformer(model, trust_remote_code=True)
+
+                    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+                        return [self.model.encode(t).tolist() for t in texts]
+
+                    def embed_query(self, query: str) -> list[float]:
+                        return self.model.encode([query]).tolist()[0]
+                    
+                return HuggingFaceEmbeddings(model_name)
+                    
+                
         self.config: Config = load_config()
         self.chroma_path = 'gigachatAPI/data/chroma/'
         self.client = chromadb.PersistentClient(path=self.chroma_path)
-        self.embeddings = GigaChatEmbeddings(credentials=self.config.GIGA_CREDENTIALS,
-                                             verify_ssl_certs=False)
+        self.embeddings_model_name: str = 'deepvk/USER-base'
+        self.embeddings = _get_embeddings(self.embeddings_model_name)
 
     def create_collection(self, collection_name: str, split_docs: list[Document], use_cycle: bool) -> None:
         if collection_name in self.get_list_collections() or collection_name == 'chroma':
@@ -163,3 +182,12 @@ class VectordbManager:
         collection = self.get_langchain_chroma(collection_name)
         collection.add_texts(texts)
         return
+    
+    def get_embeddings_name(self) -> str:
+        embeddings_name = self.embeddings.__class__.__name__
+        if embeddings_name == 'GigaChatEmbeddings':
+            return embeddings_name
+        elif embeddings_name == 'HuggingFaceEmbeddings':
+            return f'{embeddings_name}({self.embeddings_model_name})'
+        else:
+            return 'Unknown'

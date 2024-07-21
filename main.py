@@ -43,7 +43,7 @@ async def handle_doc(request):
     "result": "success",
     "info": {
         "chunk_size": CHUNK_SIZE,
-        "embedding_model": vectordb_manager.embeddings.__class__.__name__
+        "embedding_model": vectordb_manager.get_embeddings_name()
         }
     })
 
