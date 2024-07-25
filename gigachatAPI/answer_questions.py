@@ -76,11 +76,14 @@ async def get_answer(
 
     # tokens = response.response_metadata['token_usage'].total_tokens
 
+    embedding_tokens = int(0.5246 * len(que) + 28.063)
+
     logger_info.info(f'Время работы GigaChat: {gigachat_time} секунд')
     
     lead_time = time.time() - start_time
     logger_info.info(f'Общее время: {lead_time}')
-    logger_info.info(f'Токенов потрачено: {tokens}')
+    logger_info.info(f'Токенов генерации текста потрачено: {tokens}')
+    logger_info.info(f'Токенов эмбеддингов потрачено: {embedding_tokens}')
 
     metrics_dict = {"similarity_scores": sim_scores}
 
@@ -109,6 +112,7 @@ async def get_answer(
         },
         "prompt_path": 'gigachatAPI/prompts/prompt_templates/qna_new.py',
         "tokens": tokens,
+        "embedding_tokens": embedding_tokens,
         "total_time": round(lead_time, 3),
         "gigachat_time": round(gigachat_time, 3),
         "metrics": metrics_dict

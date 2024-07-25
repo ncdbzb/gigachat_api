@@ -33,11 +33,13 @@ async def generate_test(
 
     questions_dict = {}
     tokens = 0
+    generation_attemps = 0
     elems_num = 5 if len(split_docs) >= 5 else len(split_docs)
     for doc_part in sample(split_docs, elems_num): 
         result = await chain.ainvoke({"text": doc_part})
         tokens += result.response_metadata['token_usage'].total_tokens 
         questions_dict = await get_questions_dict(result.content + '\n')
+        generation_attemps += 1
         if 'result' in questions_dict.keys():
             logger_info.info(f'Тест успешно сгенерирован')
             options = [questions_dict['result'][f'{i} option'] for i in range(1, 5)]
@@ -46,6 +48,8 @@ async def generate_test(
                 questions_dict['result'][f'{i} option'] = options[i - 1]
             break
         logger_info.debug(f'Ошибка! Генериурю тест заново...')
+
+    questions_dict["result"]["generation_attemps"] = generation_attemps
 
     if 'error' in questions_dict.keys():
         logger_info.info(f'Тест сгенерирован с ошибкой')
