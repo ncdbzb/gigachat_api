@@ -27,6 +27,6 @@ async def get_result_docs_list(file_path: str, filename: str, operation: str) ->
     else:
         split_docs = await get_dita_docs(file_path, min_doc_length=1000, max_doc_length=7000)
         if not split_docs:
-            split_docs = await get_text_docs_list(os.path.join(file_path, filename+'.txt'), chunk_size=7000)
+            split_docs = await get_text_docs_list(file_path, chunk_size=7000)
 
     return split_docs

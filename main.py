@@ -11,7 +11,8 @@ from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list, CHUNK_SIZE
 from gigachatAPI.utils.delete_doc import delete_doc
 from gigachatAPI.utils.get_actual_docs import get_actual_doc_list
-from gigachatAPI.utils.help_methods import rename_directory
+from gigachatAPI.utils.help_methods import rename_directory, documents_to_txt
+from gigachatAPI.logs.logs import upload_doc_info
 
 
 async def handle_doc(request):
@@ -21,23 +22,26 @@ async def handle_doc(request):
     doc_name, extension = '.'.join(file.filename.split('.')[:-1]), file.filename.split('.')[-1]
     
     if extension != 'txt':
-        save_path = os.path.join('gigachatAPI', 'data', f'{doc_name}.{extension}')
+        save_path = os.path.join('gigachatAPI', 'data', 'initial_docs', f'{doc_name}.{extension}')
     else:
-        save_path = os.path.join('gigachatAPI', 'data', f'{doc_name}', f'{doc_name}.{extension}')
+        save_path = os.path.join('gigachatAPI', 'data', 'initial_docs', f'{doc_name}', f'{doc_name}.{extension}')
         dir_path = os.path.dirname(save_path)
         os.makedirs(dir_path, exist_ok=True)
 
     with open(save_path, 'wb') as file_object:
         file_object.write(file.file.read())
-    print(f'saved {doc_name}.{extension} with time {time.time() - start_time}')
+    upload_doc_info.debug(f'saved {doc_name}.{extension} with time {time.time() - start_time}')
 
     path = await process_and_take_path(doc_name, extension, save_path)
 
-    split_docs = await get_result_docs_list(path, doc_name, 'initialize_chroma')
+    split_docs_for_chroma = await get_result_docs_list(path, doc_name, 'initialize_chroma')
+    split_docs_for_test_system = await get_result_docs_list(path, doc_name, 'generate_test')
+
+    documents_to_txt(doc_name, split_docs_for_test_system)
 
     vectordb_manager = VectordbManager()
-    vectordb_manager.create_collection(doc_name, split_docs, use_cycle=False)
-    print(f'time: {time.time() - start_time}')
+    vectordb_manager.create_collection(doc_name, split_docs_for_chroma, use_cycle=False)
+    upload_doc_info.debug(f'time: {time.time() - start_time}')
 
     return web.json_response({
     "result": "success",
@@ -57,14 +61,12 @@ async def handle_delete_doc(request):
 
 async def handle_test(request):
     data = await request.json()
-    print("Received data:", data)
     result = await generate_test(data['filename'])
     return web.json_response(result)
 
 
 async def handle_questions(request):
     data = await request.json()
-    print("Received data:", data)
     result = await get_answer(data['filename'], data['question'])
     return web.json_response(result)
 
@@ -114,7 +116,7 @@ async def main():
     site = web.TCPSite(runner, '0.0.0.0', 8080)
     await site.start()
 
-    print("gigachatAPI started")
+    upload_doc_info.debug("gigachatAPI started")
 
 
 if __name__ == '__main__':

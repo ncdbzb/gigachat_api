@@ -5,6 +5,7 @@ from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.prompts.create_prompts import gen_que_prompt
 from gigachatAPI.utils.output_parser import get_questions_dict
+from gigachatAPI.utils.help_methods import get_split_docs_from_txt, documents_to_txt
 from gigachatAPI.process_files.get_result_docs_list import get_result_docs_list
 from gigachatAPI.logs.logs import logger_info
 
@@ -18,8 +19,10 @@ async def generate_test(
 
     start_time = time.time()
 
-    path_for_splitting = os.path.join('gigachatAPI', 'data', filename)
-    split_docs = await get_result_docs_list(path_for_splitting, filename, 'generate_test')
+    # path_for_splitting = os.path.join('gigachatAPI', 'data', filename)
+    # split_docs = await get_result_docs_list(path_for_splitting, filename, 'generate_test')
+    
+    split_docs = get_split_docs_from_txt(filename)
 
     data_process_time = time.time() - start_time
 
@@ -66,5 +69,5 @@ async def generate_test(
         "total_time": round(lead_time, 3),
         "gigachat_time": round(gigachat_time, 3)
     }
-    
+
     return result_dict

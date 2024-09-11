@@ -14,7 +14,7 @@ async def process_and_take_path(doc_name: str, extension: str, file_path: str) -
     :return: Новый путь
     """
     if extension == 'zip':
-        unpack_path = f'gigachatAPI/data/{doc_name}'
+        unpack_path = f'gigachatAPI/data/initial_docs/{doc_name}'
 
         await extract_zip(file_path, unpack_path)
 

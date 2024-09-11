@@ -36,7 +36,7 @@ def vectordb_manager():
 @pytest.fixture
 def filename():
     """Название документации, по которой проводится тестирование"""
-    return "new_datapk800_tests"
+    return "DATAPK_ITM_VERSION_1_7"
 
 
 @pytest.mark.parametrize("question, expected_answer", zip(questions, expected_answers), ids=ids)
