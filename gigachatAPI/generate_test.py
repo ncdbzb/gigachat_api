@@ -1,4 +1,3 @@
-import os
 import time
 from random import sample, shuffle
 from langchain_community.chat_models.gigachat import GigaChat
@@ -50,7 +49,7 @@ async def generate_test(
             for i in range(1, 5):
                 questions_dict['result'][f'{i} option'] = options[i - 1]
             break
-        logger_info.debug(f'Ошибка! Генериурю тест заново...')
+        logger_info.debug(f'Ошибка! Генерирую тест заново...')
 
     questions_dict["result"]["generation_attemps"] = generation_attemps
 

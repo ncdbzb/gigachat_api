@@ -1,3 +1,6 @@
+from gigachatAPI.logs.logs import error_test_logger
+
+
 async def get_questions_dict(test: str) -> dict[str: str]:
     splittt = list(filter(None, test.split('\n')))
     splitt = list(filter(None, map(lambda x: x.strip(), splittt)))
@@ -38,5 +41,6 @@ async def get_questions_dict(test: str) -> dict[str: str]:
             raise ValueError("Not all values unique")
         return {f'result': result}     
     except Exception as e:
-        print(e)
+        error_test_logger.warning(f'Test failed by reason: {e}')
+        error_test_logger.info(f'{test}\n')
         return {f'error': test}
