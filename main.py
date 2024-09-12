@@ -93,10 +93,16 @@ async def handle_add_data(request):
         file_object.write(file.file.read())
 
     split_docs = await get_result_docs_list(save_path, doc_name, 'initialize_chroma')
-    split_docs_txt = list(map(lambda x: x.page_content, split_docs))
+    split_docs_for_chroma = list(map(lambda x: x.page_content, split_docs))
 
     vectordb_manager = VectordbManager()
-    vectordb_manager.add_data(doc_name, split_docs_txt)
+    vectordb_manager.add_data(doc_name, split_docs_for_chroma)
+    upload_doc_info.debug(f'new data was added to {doc_name} (chroma)')
+
+    split_docs_for_test_system = await get_result_docs_list(save_path, doc_name, 'generate_test')
+    documents_to_txt(doc_name, split_docs_for_test_system)
+    upload_doc_info.debug(f'new data was added to {doc_name} (txt)')
+    
     await asyncio.to_thread(os.remove, save_path)
     return web.json_response({"result": "Data was added"})
 

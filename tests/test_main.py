@@ -1,8 +1,7 @@
 import pytest
-import asyncio
 from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
-from gigachatAPI.sentence_bleu.sentence_bleu import get_bleu_score
+from gigachatAPI.metrics.sentence_bleu.sentence_bleu import get_bleu_score
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.prompts.create_prompts import qna_prompt
 from tests.data_for_check import question_for_check, right_answers

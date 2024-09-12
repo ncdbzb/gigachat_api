@@ -38,7 +38,7 @@ def rename_directory(old_name: str, new_name: str) -> None:
 
 
 def documents_to_txt(filename: str, split_docs: list, delimiter='|*|*|*|') -> None:
-    with open(os.path.join('gigachatAPI', 'data', 'test_system_docs', f'{filename}.txt'), 'w', encoding='utf-8') as file:
+    with open(os.path.join('gigachatAPI', 'data', 'test_system_docs', f'{filename}.txt'), 'a', encoding='utf-8') as file:
         for line in split_docs:
             file.write(line.page_content + delimiter)
     

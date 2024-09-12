@@ -4,8 +4,8 @@ from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.prompts.create_prompts import qna_prompt
-from gigachatAPI.sentence_bleu.sentence_bleu import get_bleu_score
-from gigachatAPI.sentence_bleu.bleu_config import ques_for_check, references
+from gigachatAPI.metrics.sentence_bleu.sentence_bleu import get_bleu_score
+from gigachatAPI.metrics.sentence_bleu.bleu_config import ques_for_check, references
 from gigachatAPI.logs.logs import logger_info, logger_context
 from gigachatAPI.utils.path_to_doc.path_to_doc import get_path_to_doc
 
