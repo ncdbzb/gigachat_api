@@ -1,0 +1,12 @@
+﻿questions;ref_answers;ref_dita
+Почему не загружается web интерфейс сервера?;"Опечатки в значениях IP-адресов в в файле pg_hba.conf.
+    Опечатки в значении порта в файле postgresql.conf.
+    Неверные учетные данные для подключения к БД в конфигурационном файле .db.env.
+    Некорректная инициализация контейнеров docker.
+    UDV-ITM-M не до конца инициализировался после запуска работы контейнеров.
+    Недоступность сервера.
+    Проблема с загрузкой ключа сертификата.
+    Переполнение кэша из-за разового скачка нагрузки.
+    Запуск службы docker после службы СУБД.";datapk-itm-1.7\topics\reusable\notes\udv_itm_m_web-iterface_loading_problem_info
+Почему происходит перезапуск контейнера itm_m_siem_connector?;Отсутствие переменных SIEM_SYSLOG_HOST и ITMM_IP_ADDRESS в файле .env при включенной интеграции с SIEM;datapk-itm-1.7\topics\ITM_M_troubleshooting\itm_m_troubleshooting_siem
+Из за чего появляется ошибка вида: WARNING overcommit_memory? ;Значение vm.overcommit_memory=0, из-за чего при недостатке памяти может не работать автосохранение в фоновом режиме.;datapk-itm-1.7\topics\ITM_M_troubleshooting\overcommit_memory_itm_m

@@ -1,10 +1,11 @@
+import os
 from gigachatAPI.process_files.split_dita_docs import get_dita_docs
 from gigachatAPI.process_files.process_paths import get_partial_path
 from gigachatAPI.utils.path_to_doc.tf_idf_search import tf_idf_search
 
 
 async def get_path_to_doc(source_documents: list, filename: str, answer: str) -> str:
-    docs_with_paths = await get_dita_docs(f'gigachatAPI/data/{filename}', with_xml_paths=True)
+    docs_with_paths = await get_dita_docs(os.path.join('gigachatAPI', 'data', 'initial_docs', filename), with_xml_paths=True)
 
     most_relevant_source_document = (await tf_idf_search(source_documents, answer))[1]
 
