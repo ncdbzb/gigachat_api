@@ -45,6 +45,6 @@ error_test_logger.addHandler(error_test_console_handler)
 if 'pytest' in sys.argv[0]:
     logger_info.removeHandler(console_handler_info)
     logger_context.removeHandler(file_handler_context)
-    upload_doc_info.removeHandler(console_handler_info)
+    # upload_doc_info.removeHandler(console_handler_info)
     error_test_logger.removeHandler(error_test_console_handler)
     error_test_logger.removeHandler(error_test_file_handler)

@@ -17,8 +17,6 @@ def get_data_from_csv(limit: int=0):
         csvreader.fieldnames = [name.replace('\ufeff', '') for name in csvreader.fieldnames]
 
         for row_num, row in enumerate(csvreader, start=1):
-            if row_num == limit:
-                break
 
             questions.append(row['questions'])
             ref_answers.append(row['ref_answers'])
@@ -27,6 +25,9 @@ def get_data_from_csv(limit: int=0):
                 rf_dt = f'{rf_dt}.dita'
             ref_dita.append(rf_dt)
 
+            if row_num == limit:
+                break
+
     return {
         "questions": questions,
         "ref_answers": ref_answers,
@@ -34,13 +35,13 @@ def get_data_from_csv(limit: int=0):
     }
 
 
-def log_result_to_csv(filename, question, sim_scores, answer, dita_path):
+def log_result_to_csv(*args):
     # Установка временной зоны UTC+5 (Екатеринбург)
     tz_offset = timedelta(hours=5)
     current_time = datetime.now(timezone.utc) + tz_offset
     timestamp = current_time.strftime('%Y-%m-%d %H:%M:%S')
 
-    result_file = os.path.join('tests', 'result.csv')
+    result_file = os.path.join('gigachatAPI', 'data', 'result.csv')
 
     file_is_new = not os.path.exists(result_file) or os.path.getsize(result_file) == 0
 
@@ -48,6 +49,11 @@ def log_result_to_csv(filename, question, sim_scores, answer, dita_path):
         writer = csv.writer(csvfile, delimiter=';')
 
         if file_is_new:
-            writer.writerow(['timestamp', 'filename', 'question', 'similarity_score', 'answer', 'dita_path'])
+            writer.writerow(
+                ['timestamp', 'filename', 'question', 'similarity_score',
+                 'dita_path', 'bleu_score', 'rouge_1_f1', 'rouge_2_f1',
+                 'rouge_l_f1', 'answer'
+                ]
+            )
 
-        writer.writerow([timestamp, filename, question, sim_scores, answer, dita_path])
+        writer.writerow([timestamp, *args])

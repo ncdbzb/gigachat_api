@@ -1,4 +1,5 @@
 import os
+from gigachatAPI.logs.logs import upload_doc_info
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 
 
@@ -12,8 +13,9 @@ async def get_actual_doc_list():
         if os.path.isdir(os.path.join(data_dir, item))
     ]
 
-    # vectordb_manager = VectordbManager()
-    # chroma_collections = vectordb_manager.get_list_collections()
+    vectordb_manager = VectordbManager()
+    chroma_collections = vectordb_manager.get_list_collections()
+    upload_doc_info.debug(chroma_collections)
 
     # for collection in chroma_collections:
     #     if collection not in filtered_dirs:

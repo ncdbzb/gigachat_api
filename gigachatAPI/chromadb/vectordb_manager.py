@@ -1,5 +1,6 @@
-import chromadb
 import time
+import chromadb
+from chromadb.config import Settings
 from langchain.schema import Document
 from langchain_community.embeddings.gigachat import GigaChatEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
@@ -13,8 +14,15 @@ from gigachatAPI.logs.logs import upload_doc_info
 class VectordbManager:
     def __init__(self):
         self.config: Config = load_config()
-        self.chroma_path = 'gigachatAPI/data/chroma/'
-        self.client = chromadb.PersistentClient(path=self.chroma_path)
+        # self.client = chromadb.PersistentClient(path=self.config.PERSIST_DIRECTORY)
+        self.client = chromadb.HttpClient(host="chromadb", port=8800,
+                          settings = Settings(
+                              is_persistent=True,
+                              persist_directory=self.config.PERSIST_DIRECTORY,
+                              chroma_client_auth_provider=self.config.CHROMA_CLIENT_AUTH_PROVIDER,
+                              chroma_client_auth_credentials=self.config.CHROMA_SERVER_AUTHN_CREDENTIALS,
+                          )
+                      )
         self.embeddings = GigaChatEmbeddings(credentials=self.config.GIGA_CREDENTIALS,
                                              verify_ssl_certs=False)
 
@@ -28,7 +36,7 @@ class VectordbManager:
                 collection_name=collection_name,
                 client=self.client
             )
-            upload_doc_info.debug(f'created chroma collection in {self.chroma_path} with name {collection_name}')
+            upload_doc_info.debug(f'created chroma collection in {self.config.PERSIST_DIRECTORY} with name {collection_name}')
         except ResponseError:
             upload_doc_info.debug('Ошибка при загрузке!')
             if use_cycle:
@@ -108,7 +116,7 @@ class VectordbManager:
                     continue
 
         # Раз вышли из цикла, значит все чанки добавлены в бд
-        upload_doc_info.debug(f'created chroma collection in {self.chroma_path} with name {collection_name}')
+        upload_doc_info.debug(f'created chroma collection in {self.config.PERSIST_DIRECTORY} with name {collection_name}')
 
         return
 
@@ -132,6 +140,8 @@ class VectordbManager:
         return
 
     def get_langchain_chroma(self, collection_name: str) -> Chroma:
+        if collection_name not in self.get_list_collections():
+            raise ValueError('Collection with this name is not exist')
         return Chroma(
             client=self.client,
             collection_name=collection_name,

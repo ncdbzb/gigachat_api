@@ -24,9 +24,13 @@ async def delete_doc(doc_name) -> None:
         if is_deleted:
             upload_doc_info.debug(f'{delete_path_file} has been deleted')
         else:
-            upload_doc_info.warning(f'Something went wrong while deleting file {delete_file_path}')
+            upload_doc_info.error(f'Something went wrong while deleting file {delete_path_file}')
 
     vectordb_manager = VectordbManager()
-    vectordb_manager.delete_collection(doc_name)
+    try:
+        vectordb_manager.delete_collection(doc_name)
+        upload_doc_info.debug(f'Collection {doc_name} has been deleted')
+    except ValueError as e:
+        raise e
     
     return 
