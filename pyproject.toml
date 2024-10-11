@@ -130,6 +130,7 @@ wrapt = "1.16.0"
 yarl = "1.9.4"
 zipp = "3.18.1"
 spacy = "^3.8.0"
+redisvl = "^0.3.4"
 
 
 [tool.poetry.group.dev.dependencies]

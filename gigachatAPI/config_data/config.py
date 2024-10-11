@@ -9,6 +9,7 @@ class Config:
     CHROMA_SERVER_AUTHN_PROVIDER: str
     CHROMA_SERVER_AUTHN_CREDENTIALS: str
     CHROMA_CLIENT_AUTH_PROVIDER: str
+    USE_SEMANTIC_CACHE: bool
 
 def load_config(path: str | None = None) -> Config:
     env = Env()
@@ -19,4 +20,5 @@ def load_config(path: str | None = None) -> Config:
         CHROMA_SERVER_AUTHN_PROVIDER=env('CHROMA_SERVER_AUTHN_PROVIDER'),
         CHROMA_SERVER_AUTHN_CREDENTIALS=env('CHROMA_SERVER_AUTHN_CREDENTIALS'),
         CHROMA_CLIENT_AUTH_PROVIDER=env('CHROMA_CLIENT_AUTH_PROVIDER'),
+        USE_SEMANTIC_CACHE=env('USE_SEMANTIC_CACHE')
     )

@@ -4,7 +4,7 @@ import time
 
 from aiohttp import web
 
-from gigachatAPI.answer_questions import get_answer
+from gigachatAPI.rag.answer_questions import get_answer
 from gigachatAPI.generate_test import generate_test
 from gigachatAPI.process_files.process_paths import process_and_take_path
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager

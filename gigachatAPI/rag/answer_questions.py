@@ -8,7 +8,7 @@ from gigachatAPI.metrics.sentence_bleu.sentence_bleu import get_bleu_score
 from gigachatAPI.metrics.sentence_bleu.bleu_config import ques_for_check, references
 from gigachatAPI.logs.logs import logger_info, logger_context
 from gigachatAPI.utils.path_to_doc.path_to_doc import get_path_to_doc
-
+from gigachatAPI.rag.semantic_cache import init_llmcache
 
 async def get_answer(
         filename: str,
@@ -16,12 +16,30 @@ async def get_answer(
         return_path_to_file: bool = True
 ) -> dict:
     config: Config = load_config()
+    start_time = time.time()
+
+    if config.USE_SEMANTIC_CACHE:
+        llmcache = init_llmcache(distance_threshold=0.05)
+        results = llmcache.check(prompt=que)
+        if results:
+            logger_info.info(f'ANSWER FROM SEMANTIC CACHE!\nVector distance: {results[0]["vector_distance"]}')
+            return {
+                "result": {
+                    "question": que,
+                    "answer": results[0]["response"]
+                },
+                "prompt_path": '',
+                "tokens": 0,
+                "embedding_tokens": 0,
+                "total_time": round(time.time() - start_time, 3),
+                "gigachat_time": 0,
+                "metrics": {'None': 'None'},
+                "from_cache": True
+            }
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False, temperature=0.2, verbose=True)
 
-    start_time = time.time()
-
-    question_start_time = time.time()
+    chroma_start_time = time.time()
 
     vectordb_manager = VectordbManager()
     vectordb = vectordb_manager.get_langchain_chroma(filename)
@@ -35,7 +53,7 @@ async def get_answer(
     # docs = [d[0].page_content for d in docs_with_scores]
     logger_context.debug(f'Контекст: {docs}')
 
-    logger_info.info(f'Время работы Chroma: {time.time() - question_start_time} секунд')
+    logger_info.info(f'Время работы Chroma: {time.time() - chroma_start_time} секунд')
 
     chain = RetrievalQA.from_chain_type(
         llm=giga,
@@ -59,6 +77,12 @@ async def get_answer(
     # answer = response.content
 
     gigachat_time = time.time() - gigachat_start_time
+
+    if config.USE_SEMANTIC_CACHE:
+        llmcache.store(
+        prompt=que,
+        response=answer
+        )
 
     try:
         if sim_scores[0] > 290:
@@ -97,11 +121,12 @@ async def get_answer(
         else:
             logger_info.info(f'Время работы tf-idf time: {tf_idf_time}')
 
-    if que in ques_for_check:
-        right_answer = references[que]
-        bleu_score = get_bleu_score(answer, right_answer)
-        metrics_dict.update({"bleu_score": bleu_score})
-        logger_info.info(f'bleu score ответа: {bleu_score}')
+    # DEPRECATED
+    # if que in ques_for_check:
+    #     right_answer = references[que]
+    #     bleu_score = get_bleu_score(answer, right_answer)
+    #     metrics_dict.update({"bleu_score": bleu_score})
+    #     logger_info.info(f'bleu score ответа: {bleu_score}')
 
     logger_info.info(f'Similarity scores для выбранных документов: {sim_scores}\n\n')
 
@@ -115,7 +140,8 @@ async def get_answer(
         "embedding_tokens": embedding_tokens,
         "total_time": round(lead_time, 3),
         "gigachat_time": round(gigachat_time, 3),
-        "metrics": metrics_dict
+        "metrics": metrics_dict,
+        "from_cache": False
     }
 
     return result
