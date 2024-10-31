@@ -19,23 +19,30 @@ async def get_answer(
     start_time = time.time()
 
     if config.USE_SEMANTIC_CACHE:
-        llmcache = init_llmcache(distance_threshold=0.05)
-        results = llmcache.check(prompt=que)
-        if results:
-            logger_info.info(f'ANSWER FROM SEMANTIC CACHE!\nVector distance: {results[0]["vector_distance"]}')
-            return {
-                "result": {
-                    "question": que,
-                    "answer": results[0]["response"]
-                },
-                "prompt_path": '',
-                "tokens": 0,
-                "embedding_tokens": 0,
-                "total_time": round(time.time() - start_time, 3),
-                "gigachat_time": 0,
-                "metrics": {'None': 'None'},
-                "from_cache": True
-            }
+        llmcache = init_llmcache(
+            distance_threshold=0.05,
+            # embedding_model="sentence-transformers/all-mpnet-base-v2"
+            embedding_model="sergeyzh/rubert-tiny-turbo"
+        )
+        results = llmcache.check(prompt=que, num_results=5)
+
+        for record in results:
+            if record['metadata']['doc_name'] == filename:
+                logger_info.info(f'RESULTS: {results}')
+                logger_info.info(f'ANSWER FROM SEMANTIC CACHE!\nVector distance: {record["vector_distance"]}')
+                return {
+                    "result": {
+                        "question": que,
+                        "answer": record['response']
+                    },
+                    "prompt_path": '',
+                    "tokens": 0,
+                    "embedding_tokens": 0,
+                    "total_time": round(time.time() - start_time, 3),
+                    "gigachat_time": 0,
+                    "metrics": {'None': 'None'},
+                    "from_cache": True
+                }
 
     giga: GigaChat = GigaChat(credentials=config.GIGA_CREDENTIALS, verify_ssl_certs=False, temperature=0.2, verbose=True)
 
@@ -80,8 +87,9 @@ async def get_answer(
 
     if config.USE_SEMANTIC_CACHE:
         llmcache.store(
-        prompt=que,
-        response=answer
+            prompt=que,
+            response=answer,
+            metadata={"doc_name": filename}
         )
 
     try:

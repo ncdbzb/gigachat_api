@@ -1,6 +1,6 @@
 from redisvl.extensions.llmcache import SemanticCache
 from redisvl.utils.vectorize.text.custom import CustomTextVectorizer
-from redisvl.urils.vectorize import HFTextVectorizer
+from redisvl.utils.vectorize import HFTextVectorizer
 from gigachatAPI.config_data.config import load_config, Config
 from langchain_community.embeddings.gigachat import GigaChatEmbeddings
 from typing import Optional, Callable, List
@@ -38,7 +38,7 @@ class NewCustomTextVectorizer(CustomTextVectorizer):
             result = self._embed_func(text)
         return self._process_embedding(result, as_buffer, **kwargs)
 
-def init_llmcache(distance_threshold: float):
+def init_llmcache(distance_threshold: float, embedding_model: str):
 
     def get_giga_vectorizer():
         config: Config = load_config()
@@ -57,7 +57,7 @@ def init_llmcache(distance_threshold: float):
         redis_url="redis://redis:6379/0",
         distance_threshold=distance_threshold,
         vectorizer=HFTextVectorizer(
-            model="sentence-transformers/all-mpnet-base-v2"
+            model=embedding_model
         ),
     )
 

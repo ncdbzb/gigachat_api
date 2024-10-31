@@ -12,6 +12,8 @@ RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then poetry install --no-root ; els
 
 RUN poetry run python -m spacy download ru_core_news_sm
 
+RUN poetry add sympy@1.13.1
+RUN poetry add torch@2.5.1
 RUN poetry add sentence-transformers
 
 COPY . .
