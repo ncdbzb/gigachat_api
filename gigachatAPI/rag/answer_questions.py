@@ -4,11 +4,10 @@ from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.prompts.create_prompts import qna_prompt
-from gigachatAPI.metrics.sentence_bleu.sentence_bleu import get_bleu_score
-from gigachatAPI.metrics.sentence_bleu.bleu_config import ques_for_check, references
 from gigachatAPI.logs.logs import logger_info, logger_context
 from gigachatAPI.utils.path_to_doc.path_to_doc import get_path_to_doc
 from gigachatAPI.rag.semantic_cache import init_llmcache
+
 
 async def get_answer(
         filename: str,
@@ -120,13 +119,6 @@ async def get_answer(
             logger_info.warning(f'Время работы tf-idf time: {tf_idf_time}')
         else:
             logger_info.info(f'Время работы tf-idf time: {tf_idf_time}')
-
-    # DEPRECATED
-    # if que in ques_for_check:
-    #     right_answer = references[que]
-    #     bleu_score = get_bleu_score(answer, right_answer)
-    #     metrics_dict.update({"bleu_score": bleu_score})
-    #     logger_info.info(f'bleu score ответа: {bleu_score}')
 
     logger_info.info(f'Similarity scores для выбранных документов: {sim_scores}\n\n')
 

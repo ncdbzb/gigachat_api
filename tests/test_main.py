@@ -2,8 +2,9 @@ import pytest
 import asyncio
 from langchain_community.chat_models.gigachat import GigaChat
 from gigachatAPI.config_data.config import load_config, Config
-from gigachatAPI.metrics.sentence_bleu.sentence_bleu import get_bleu_score
-from gigachatAPI.metrics.rouge.rouge_metrics import calculate_rouge_metrics
+from gigachatAPI.metrics.sentence_bleu import get_bleu_score
+from gigachatAPI.metrics.rouge_metrics import calculate_rouge_metrics
+from gigachatAPI.metrics.meteor import get_meteor_score
 from gigachatAPI.utils.path_to_doc.path_to_doc import get_path_to_doc
 from gigachatAPI.chromadb.vectordb_manager import VectordbManager
 from gigachatAPI.prompts.create_prompts import qna_prompt
@@ -69,8 +70,8 @@ def test_answers(filename, question, expected_answer, expected_dita_path, vector
             upload_doc_info.error(e)
 
         bleu_score = get_bleu_score(answer, expected_answer)
-
         rouge_metrics = calculate_rouge_metrics(expected_answer, answer)
+        meteor_score = get_meteor_score(expected_answer, answer)
 
 
     finally:
@@ -83,5 +84,6 @@ def test_answers(filename, question, expected_answer, expected_dita_path, vector
             rouge_metrics['rouge_1_f1'],
             rouge_metrics['rouge_2_f1'],
             rouge_metrics['rouge_l_f1'],
+            meteor_score,
             answer
         )

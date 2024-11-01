@@ -52,7 +52,7 @@ def log_result_to_csv(*args):
             writer.writerow(
                 ['timestamp', 'filename', 'question', 'similarity_score',
                  'dita_path', 'bleu_score', 'rouge_1_f1', 'rouge_2_f1',
-                 'rouge_l_f1', 'answer'
+                 'rouge_l_f1', 'meteor', 'answer'
                 ]
             )
 
