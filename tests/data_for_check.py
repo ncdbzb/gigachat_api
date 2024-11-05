@@ -51,8 +51,9 @@ def log_result_to_csv(*args):
         if file_is_new:
             writer.writerow(
                 ['timestamp', 'filename', 'question', 'similarity_score',
-                 'dita_path', 'bleu_score', 'rouge_1_f1', 'rouge_2_f1',
-                 'rouge_l_f1', 'meteor', 'answer'
+                 'dita_path', 'rouge_1_recall', 'rouge_1_precision', 'rouge_1_f1',
+                 'rouge_2_recall', 'rouge_2_precision', 'rouge_2_f1',
+                 'rouge_l_recall', 'rouge_l_precision', 'rouge_l_f1', 'meteor', 'answer'
                 ]
             )
 
